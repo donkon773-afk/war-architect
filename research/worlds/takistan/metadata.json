@@ -1,0 +1,4093 @@
+{
+  "name": "Takistan",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\research\\worlds\\takistan\\config.bin",
+  "locations": [
+    {
+      "id": "city_FeeruzAbad",
+      "name": "$STR_EP1_LOCATION_FEERUZABAD",
+      "position": [
+        5072.7099609375,
+        6158.22021484375
+      ],
+      "type": "NameCityCapital",
+      "speech": [
+        "FeeruzAbad"
+      ],
+      "radiusA": 300,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "city_Nagara",
+      "name": "$STR_EP1_LOCATION_NAGARA",
+      "position": [
+        3057.780029296875,
+        9808.4404296875
+      ],
+      "type": "NameCityCapital",
+      "speech": [
+        "Nagara"
+      ],
+      "radiusA": 300,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "city_Rasman",
+      "name": "$STR_EP1_LOCATION_RASMAN",
+      "position": [
+        6092.14990234375,
+        11018.650390625
+      ],
+      "type": "NameCityCapital",
+      "speech": [
+        "Rasman"
+      ],
+      "radiusA": 300,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "city_Garmsar",
+      "name": "$STR_EP1_LOCATION_GARMSAR",
+      "position": [
+        10603.580078125,
+        6410.72021484375
+      ],
+      "type": "NameCityCapital",
+      "speech": [
+        "Garmsar"
+      ],
+      "radiusA": 300,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "city_Bastam",
+      "name": "$STR_EP1_LOCATION_BASTAM",
+      "position": [
+        5989.990234375,
+        8977.4697265625
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Bastam"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Nur",
+      "name": "$STR_EP1_LOCATION_NUR",
+      "position": [
+        1890.699951171875,
+        11867.490234375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Nur"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Zavarak",
+      "name": "$STR_EP1_LOCATION_ZAVARAK",
+      "position": [
+        9951.8095703125,
+        11651.259765625
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Zavarak"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Falar",
+      "name": "$STR_EP1_LOCATION_FALAR",
+      "position": [
+        6063.7998046875,
+        7256.97021484375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Falar"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Anar",
+      "name": "$STR_EP1_LOCATION_ANAR",
+      "position": [
+        6030.72021484375,
+        5659.43017578125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Anar"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_ChakChak",
+      "name": "$STR_EP1_LOCATION_CHAKCHAK",
+      "position": [
+        4375.919921875,
+        754.719970703125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "ChakChak"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Sakhee",
+      "name": "$STR_EP1_LOCATION_SAKHEE",
+      "position": [
+        3588.989990234375,
+        4284.47021484375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Sakhee"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Chaman",
+      "name": "$STR_EP1_LOCATION_CHAMAN",
+      "position": [
+        571.7999877929688,
+        2810.969970703125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Chaman"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_LoyManara",
+      "name": "$STR_EP1_LOCATION_LOYMANARA",
+      "position": [
+        8622.0498046875,
+        2454.219970703125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "LoyManara"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Gospandi",
+      "name": "$STR_EP1_LOCATION_GOSPANDI",
+      "position": [
+        3626.580078125,
+        8510.9697265625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Gospandi"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Mulladoost",
+      "name": "$STR_EP1_LOCATION_MULLADOOST",
+      "position": [
+        2009.2099609375,
+        7675.97021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Mulladoost"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Khushab",
+      "name": "$STR_EP1_LOCATION_KHUSHAB",
+      "position": [
+        1444.1400146484375,
+        5732.22021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Khushab"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Jilavur",
+      "name": "$STR_EP1_LOCATION_JILAVUR",
+      "position": [
+        2537.2099609375,
+        5026.47021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Jilavur"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Shukurkalay",
+      "name": "$STR_EP1_LOCATION_SHUKURKALAY",
+      "position": [
+        1529.1099853515625,
+        3582.719970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Shukurkalay"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Imarat",
+      "name": "$STR_EP1_LOCATION_IMARAT",
+      "position": [
+        8238.3896484375,
+        7847.22021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Imarat"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Ravanay",
+      "name": "$STR_EP1_LOCATION_RAVANAY",
+      "position": [
+        11539.2099609375,
+        8318.9697265625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Ravanay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Timurkalay",
+      "name": "$STR_EP1_LOCATION_TIMURKALAY",
+      "position": [
+        8888.1103515625,
+        5181.47021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Timurkalay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Kakaru",
+      "name": "$STR_EP1_LOCATION_KAKARU",
+      "position": [
+        5313.4599609375,
+        4740.72021484375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Kakaru"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Landay",
+      "name": "$STR_EP1_LOCATION_LANDAY",
+      "position": [
+        1950.8599853515625,
+        349.7200012207031
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Landay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Huzrutimam",
+      "name": "$STR_EP1_LOCATION_HUZRUTIMAM",
+      "position": [
+        5932.740234375,
+        1245.219970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Huzrutimam"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Sultansafee",
+      "name": "$STR_EP1_LOCATION_SULTANSAFEE",
+      "position": [
+        6578.669921875,
+        1955.219970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Sultansafee"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Jaza",
+      "name": "$STR_EP1_LOCATION_JAZA",
+      "position": [
+        9009.330078125,
+        1871.969970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Jaza"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Chardarakht",
+      "name": "$STR_EP1_LOCATION_CHARDARAKHT",
+      "position": [
+        10528.76953125,
+        2429.219970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Chardarakht"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Shamali",
+      "name": "$STR_EP1_LOCATION_SHAMALI",
+      "position": [
+        4078.330078125,
+        11844.2197265625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Shamali"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Karachinar",
+      "name": "$STR_EP1_LOCATION_KARACHINAR",
+      "position": [
+        12243.4501953125,
+        10420.3203125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Karachinar"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_Nagara1Oilfield",
+      "name": "$STR_EP1_LOCATION_NAGARA1OILFIELD",
+      "position": [
+        3642.989990234375,
+        11045.4697265625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_NaygulValley",
+      "name": "$STR_EP1_LOCATION_NAYGULVALLEY",
+      "position": [
+        2439.85009765625,
+        9625.41015625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_BalaPass",
+      "name": "$STR_EP1_LOCATION_BALAPASS",
+      "position": [
+        905.5800170898438,
+        7858.330078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_Lalezar",
+      "name": "$STR_EP1_LOCATION_LALEZAR",
+      "position": [
+        4563.669921875,
+        9354.2197265625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_PareSiahOilField",
+      "name": "$STR_EP1_LOCATION_PARESIAHOILFIELD",
+      "position": [
+        8281.3798828125,
+        11166.4599609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_Nar",
+      "name": "$STR_EP1_LOCATION_NAR",
+      "position": [
+        8112.85986328125,
+        9146.9697265625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_mine",
+      "name": "$STR_EP1_LOCATION_MINE",
+      "position": [
+        5064.02001953125,
+        6865.22021484375
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_DarbangPass",
+      "name": "$STR_EP1_LOCATION_DARBANGPASS",
+      "position": [
+        5278.4599609375,
+        3674.969970703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_SareSangPass",
+      "name": "$STR_EP1_LOCATION_SARESANGPASS",
+      "position": [
+        3960.10009765625,
+        3118.72998046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_Ahmaday",
+      "name": "$STR_EP1_LOCATION_AHMADAY",
+      "position": [
+        3572.919921875,
+        1284.219970703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_LoyManaraOilfield",
+      "name": "$STR_EP1_LOCATION_LOYMANARAOILFIELD",
+      "position": [
+        6821.85986328125,
+        1384.9300537109375
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_HazarBagh",
+      "name": "$STR_EP1_LOCATION_HAZARBAGH",
+      "position": [
+        11858.1904296875,
+        2656.5400390625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_NaranDarrePass",
+      "name": "$STR_EP1_LOCATION_NARANDARREPASS",
+      "position": [
+        9033.669921875,
+        4428.02978515625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "airport_LoyManaraAirfield",
+      "name": "$STR_EP1_LOCATION_LOYMANARAAIRFIELD",
+      "position": [
+        7946.81982421875,
+        1832.550048828125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "airport_RasmanMilitaryBase",
+      "name": "$STR_EP1_LOCATION_RASMANMILITARYBASE",
+      "position": [
+        5638.16015625,
+        11356.330078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "water_Charsu",
+      "name": "$STR_EP1_LOCATION_CHARSU",
+      "position": [
+        4330.52001953125,
+        12036.2197265625
+      ],
+      "type": "NameMarine",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "water_SafidAb",
+      "name": "$STR_EP1_LOCATION_SAFIDAB",
+      "position": [
+        6794.4501953125,
+        12004.1396484375
+      ],
+      "type": "NameMarine",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "water_Daryache",
+      "name": "$STR_EP1_LOCATION_DARYACHE",
+      "position": [
+        5220.5,
+        5032.64013671875
+      ],
+      "type": "NameMarine",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_01",
+      "name": "",
+      "position": [
+        632.9500122070312,
+        10043.6298828125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_JabalAsSaraj",
+      "name": "$STR_EP1_LOCATION_JABALASSARAJ",
+      "position": [
+        2263.89990234375,
+        8583.4697265625
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_Sanginakt",
+      "name": "$STR_EP1_LOCATION_SANGINAKT",
+      "position": [
+        3998.35009765625,
+        6919.2001953125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_02",
+      "name": "",
+      "position": [
+        6511.31005859375,
+        8118.2001953125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_AqTappa",
+      "name": "$STR_EP1_LOCATION_AQTAPPA",
+      "position": [
+        10480.259765625,
+        7523.8701171875
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_03",
+      "name": "",
+      "position": [
+        9833.5703125,
+        7354.02001953125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_GurDur",
+      "name": "$STR_EP1_LOCATION_GURDUR",
+      "position": [
+        8007.27978515625,
+        6187.259765625
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_04",
+      "name": "",
+      "position": [
+        4396.10009765625,
+        5009.27001953125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_05",
+      "name": "",
+      "position": [
+        3120.669921875,
+        4571.14013671875
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_06",
+      "name": "",
+      "position": [
+        1624.47998046875,
+        2332.080078125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_07",
+      "name": "",
+      "position": [
+        3730.580078125,
+        2723.580078125
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_Taj",
+      "name": "$STR_EP1_LOCATION_TAJ",
+      "position": [
+        759.1799926757812,
+        2454.090087890625
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_08",
+      "name": "",
+      "position": [
+        4754.06982421875,
+        2459.31005859375
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_09",
+      "name": "",
+      "position": [
+        5721.580078125,
+        3220.18994140625
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_10",
+      "name": "",
+      "position": [
+        6916.740234375,
+        3914.820068359375
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_11",
+      "name": "",
+      "position": [
+        9777.7001953125,
+        3649.659912109375
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_12",
+      "name": "",
+      "position": [
+        10946.33984375,
+        3582.169921875
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_Bamjahan",
+      "name": "$STR_EP1_LOCATION_BAMJAHAN",
+      "position": [
+        12285.169921875,
+        4801.509765625
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_13",
+      "name": "",
+      "position": [
+        292.7300109863281,
+        387.3399963378906
+      ],
+      "type": "Hill",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "veg_SiahChub",
+      "name": "$STR_EP1_LOCATION_SIAHCHUB",
+      "position": [
+        4888.2099609375,
+        4512.58984375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "veg_Chinari",
+      "name": "$STR_EP1_LOCATION_CHINARI",
+      "position": [
+        1223.2099609375,
+        7663.56005859375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "veg_Durman",
+      "name": "$STR_EP1_LOCATION_DURMAN",
+      "position": [
+        9697.7099609375,
+        5769.02978515625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "veg_Jangali",
+      "name": "$STR_EP1_LOCATION_JANGALI",
+      "position": [
+        11651.009765625,
+        7816.4599609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "veg_HazarDarakht",
+      "name": "$STR_EP1_LOCATION_HAZARDARAKHT",
+      "position": [
+        1193.7900390625,
+        4001.89990234375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_ChakChak",
+      "name": "",
+      "position": [
+        4387.39990234375,
+        688.030029296875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Sakhee",
+        "ACityC_Kakaru",
+        "ACityC_Huzrutimam"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Huzrutimam",
+      "name": "",
+      "position": [
+        6104.509765625,
+        1110.6099853515625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_ChakChak",
+        "ACityC_Loymanara",
+        "ACityC_Timurkalay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Loymanara",
+      "name": "",
+      "position": [
+        8480.099609375,
+        2351.409912109375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Huzrutimam",
+        "ACityC_Timurkalay",
+        "ACityC_Chardarakht"
+      ],
+      "radiusA": 100,
+      "radiusB": 96,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Chardarakht",
+      "name": "",
+      "position": [
+        10130.5498046875,
+        2290.780029296875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Loymanara"
+      ],
+      "radiusA": 381.1400146484375,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Khushab",
+      "name": "",
+      "position": [
+        1537.260009765625,
+        5686.919921875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Mulladoost",
+        "ACityC_FeeruzAbad",
+        "ACityC_Sakhee"
+      ],
+      "radiusA": 100,
+      "radiusB": 163,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Sakhee",
+      "name": "",
+      "position": [
+        3496.139892578125,
+        4092.659912109375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Kakaru",
+        "ACityC_ChakChak",
+        "ACityC_Khushab",
+        "ACityC_FeeruzAbad"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Kakaru",
+      "name": "",
+      "position": [
+        5333,
+        4691.31005859375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_FeeruzAbad",
+        "ACityC_Anar",
+        "ACityC_Sakhee",
+        "ACityC_ChakChak"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_FeeruzAbad",
+      "name": "",
+      "position": [
+        5272.759765625,
+        6149.9599609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Falar",
+        "ACityC_Anar",
+        "ACityC_Kakaru",
+        "ACityC_Sakhee",
+        "ACityC_Khushab"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Anar",
+      "name": "",
+      "position": [
+        5984.77978515625,
+        5780.72021484375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Falar",
+        "ACityC_FeeruzAbad",
+        "ACityC_Kakaru",
+        "ACityC_Timurkalay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Falar",
+      "name": "",
+      "position": [
+        5955.14013671875,
+        7264.14013671875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_FeeruzAbad",
+        "ACityC_Bastam",
+        "ACityC_Anar"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Timurkalay",
+      "name": "",
+      "position": [
+        8868.330078125,
+        5320.2001953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Huzrutimam",
+        "ACityC_Loymanara",
+        "ACityC_Garmarud",
+        "ACityC_Anar"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Garmsar",
+      "name": "",
+      "position": [
+        10587.76953125,
+        6310.4501953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Ravanay",
+        "ACityC_Garmarud"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Imarat",
+      "name": "",
+      "position": [
+        8242.7099609375,
+        7733.8798828125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Garmarud",
+        "ACityC_Sagram",
+        "ACityC_Rasman",
+        "ACityC_Bastam"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Mulladoost",
+      "name": "",
+      "position": [
+        1956.0999755859375,
+        7696.02978515625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Khushab",
+        "ACityC_Gospandi"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Gospandi",
+      "name": "",
+      "position": [
+        3689.489990234375,
+        8534.48046875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Bastam",
+        "ACityC_Nagara",
+        "ACityC_Mulladoost",
+        "ACityC_Rasman"
+      ],
+      "radiusA": 50,
+      "radiusB": 50,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Bastam",
+      "name": "",
+      "position": [
+        5585.72998046875,
+        9090.3203125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Falar",
+        "ACityC_Rasman",
+        "ACityC_Gospandi",
+        "ACityC_Imarat",
+        "ACityC_Shamali"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Nagara",
+      "name": "",
+      "position": [
+        3059.580078125,
+        9909.48046875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Rasman",
+        "ACityC_Gospandi",
+        "ACityC_Nur",
+        "ACityC_Shamali"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Rasman",
+      "name": "",
+      "position": [
+        6292.47998046875,
+        11179.4404296875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Sagram",
+        "ACityC_Bastam",
+        "ACityC_Gospandi",
+        "ACityC_Imarat",
+        "ACityC_Shamali",
+        "ACityC_Nagara"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Nur",
+      "name": "",
+      "position": [
+        1804.2099609375,
+        11845.3603515625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Nagara",
+        "ACityC_Shamali"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Sagram",
+      "name": "",
+      "position": [
+        9287.4501953125,
+        9990.8701171875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Rasman",
+        "ACityC_Zavarak",
+        "ACityC_Imarat"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "ACityC_Zavarak",
+      "name": "",
+      "position": [
+        9839.2099609375,
+        11482.5498046875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Sagram",
+        "ACityC_Ravanay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Ravanay",
+      "name": "",
+      "position": [
+        11511.259765625,
+        8297.7099609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Zavarak",
+        "ACityC_Garmsar"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "local_Sagram",
+      "name": "$STR_EP1_LOCATION_SAGRAM",
+      "position": [
+        9339.240234375,
+        9956.2197265625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_ChakChak_01",
+      "name": "",
+      "position": [
+        4192.2099609375,
+        516.4099731445312
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 267.656005859375
+    },
+    {
+      "id": "AStrong_ChakChak_02",
+      "name": "",
+      "position": [
+        4819.2998046875,
+        675.6900024414062
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 329.97900390625
+    },
+    {
+      "id": "AStrong_ChakChak_03",
+      "name": "",
+      "position": [
+        4357.5,
+        901.1500244140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 342.50299072265625
+    },
+    {
+      "id": "AStrong_Huzrutimam_01",
+      "name": "",
+      "position": [
+        5777.7099609375,
+        842.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 261.3909912109375
+    },
+    {
+      "id": "AStrong_Huzrutimam_02",
+      "name": "",
+      "position": [
+        6212.41015625,
+        1156.030029296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 65.80999755859375
+    },
+    {
+      "id": "AStrong_Huzrutimam_03",
+      "name": "",
+      "position": [
+        6235.81982421875,
+        1340.1500244140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 135.69400024414062
+    },
+    {
+      "id": "AStrong_Huzrutimam_04",
+      "name": "",
+      "position": [
+        6039.240234375,
+        1666.5899658203125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 71.01599884033203
+    },
+    {
+      "id": "AStrong_LoyManara_01",
+      "name": "",
+      "position": [
+        8664.080078125,
+        2395.719970703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 178.10400390625
+    },
+    {
+      "id": "AStrong_LoyManara_02",
+      "name": "",
+      "position": [
+        8345.580078125,
+        2434.090087890625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 151.3350067138672
+    },
+    {
+      "id": "AStrong_LoyManara_03",
+      "name": "",
+      "position": [
+        8431.8203125,
+        2980.070068359375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0.6980000138282776
+    },
+    {
+      "id": "AStrong_LoyManara_04",
+      "name": "",
+      "position": [
+        9072.830078125,
+        2696.969970703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 82.13700103759766
+    },
+    {
+      "id": "AStrong_Chardarakht_01",
+      "name": "",
+      "position": [
+        9804.26953125,
+        2334.010009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 284.76800537109375
+    },
+    {
+      "id": "AStrong_Chardarakht_02",
+      "name": "",
+      "position": [
+        9944.849609375,
+        2431.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 246.46499633789062
+    },
+    {
+      "id": "AStrong_Chardarakht_03",
+      "name": "",
+      "position": [
+        10609.7001953125,
+        2668.93994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145.1269989013672
+    },
+    {
+      "id": "AStrong_Khushab_01",
+      "name": "",
+      "position": [
+        1345.27001953125,
+        5927.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 237.47300720214844
+    },
+    {
+      "id": "AStrong_Khushab_02",
+      "name": "",
+      "position": [
+        1656.75,
+        5313.5498046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 285.7929992675781
+    },
+    {
+      "id": "AStrong_Khushab_03",
+      "name": "",
+      "position": [
+        1748.97998046875,
+        5687.7001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 111.74800109863281
+    },
+    {
+      "id": "AStrong_Sakhee_01",
+      "name": "",
+      "position": [
+        3908.93994140625,
+        4251.490234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 316.63299560546875
+    },
+    {
+      "id": "AStrong_Sakhee_02",
+      "name": "",
+      "position": [
+        3621.080078125,
+        3913.719970703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125.23999786376953
+    },
+    {
+      "id": "AStrong_Sakhee_03",
+      "name": "",
+      "position": [
+        3642.10009765625,
+        4470.490234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0.7609999775886536
+    },
+    {
+      "id": "AStrong_Sakhee_04",
+      "name": "",
+      "position": [
+        3614.469970703125,
+        4430.16015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 184.6199951171875
+    },
+    {
+      "id": "AStrong_Kakaru_01",
+      "name": "",
+      "position": [
+        5375.52001953125,
+        4456.47021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 181.75599670410156
+    },
+    {
+      "id": "AStrong_Kakaru_02",
+      "name": "",
+      "position": [
+        5121.93994140625,
+        5286.3701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 46.73400115966797
+    },
+    {
+      "id": "AStrong_Kakaru_03",
+      "name": "",
+      "position": [
+        5172.39990234375,
+        4865.080078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 132.5469970703125
+    },
+    {
+      "id": "AStrong_Kakaru_04",
+      "name": "",
+      "position": [
+        5099.1201171875,
+        4894.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 16.67099952697754
+    },
+    {
+      "id": "AStrong_FeeruzAbad_01",
+      "name": "",
+      "position": [
+        5004.259765625,
+        6112.490234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 223.96499633789062
+    },
+    {
+      "id": "AStrong_FeeruzAbad_02",
+      "name": "",
+      "position": [
+        5103.27978515625,
+        5812.89013671875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 292.989990234375
+    },
+    {
+      "id": "AStrong_FeeruzAbad_03",
+      "name": "",
+      "position": [
+        5617.169921875,
+        6448.02978515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 47.02799987792969
+    },
+    {
+      "id": "AStrong_Anar_01",
+      "name": "",
+      "position": [
+        6513.41015625,
+        5954.18994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75.75499725341797
+    },
+    {
+      "id": "AStrong_Anar_02",
+      "name": "",
+      "position": [
+        5939.58984375,
+        5119.39990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 83.65899658203125
+    },
+    {
+      "id": "AStrong_Anar_03",
+      "name": "",
+      "position": [
+        5636.6298828125,
+        5785.759765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 73.86000061035156
+    },
+    {
+      "id": "AStrong_Falar_01",
+      "name": "",
+      "position": [
+        5952.490234375,
+        7025.47021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 176.24600219726562
+    },
+    {
+      "id": "AStrong_Falar_02",
+      "name": "",
+      "position": [
+        6265.919921875,
+        7314.47021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 74.03700256347656
+    },
+    {
+      "id": "AStrong_Falar_03",
+      "name": "",
+      "position": [
+        5772.47021484375,
+        7837.009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 33.75400161743164
+    },
+    {
+      "id": "AStrong_Timurkalay_01",
+      "name": "",
+      "position": [
+        8778.76953125,
+        4865.97021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 189.156005859375
+    },
+    {
+      "id": "AStrong_Timurkalay_02",
+      "name": "",
+      "position": [
+        8353.740234375,
+        5106.72998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 1000,
+      "radiusB": 100,
+      "angle": 263.5039978027344
+    },
+    {
+      "id": "AStrong_Timurkalay_03",
+      "name": "",
+      "position": [
+        8500.4697265625,
+        5391.31982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 298.9320068359375
+    },
+    {
+      "id": "AStrong_Timurkalay_04",
+      "name": "",
+      "position": [
+        9009.669921875,
+        5796.89013671875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 18.139999389648438
+    },
+    {
+      "id": "AStrong_Garmsar_01",
+      "name": "",
+      "position": [
+        10285.6904296875,
+        6204.22998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 336.7120056152344
+    },
+    {
+      "id": "AStrong_Garmsar_02",
+      "name": "",
+      "position": [
+        10797.099609375,
+        6531.39013671875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 199.48300170898438
+    },
+    {
+      "id": "AStrong_Garmsar_03",
+      "name": "",
+      "position": [
+        11161.73046875,
+        6102.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 315.2070007324219
+    },
+    {
+      "id": "AStrong_Imarat_01",
+      "name": "",
+      "position": [
+        7984.41015625,
+        7974.009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 288.12200927734375
+    },
+    {
+      "id": "AStrong_Imarat_02",
+      "name": "",
+      "position": [
+        8576.1904296875,
+        7430.43017578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 130.0489959716797
+    },
+    {
+      "id": "AStrong_Imarat_03",
+      "name": "",
+      "position": [
+        8451.349609375,
+        7933.41015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 9.20300006866455
+    },
+    {
+      "id": "AStrong_Mulladoost_01",
+      "name": "",
+      "position": [
+        1933.1199951171875,
+        7497.56005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210.2550048828125
+    },
+    {
+      "id": "AStrong_Mulladoost_02",
+      "name": "",
+      "position": [
+        1824.27001953125,
+        7847.1298828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 288.8489990234375
+    },
+    {
+      "id": "AStrong_Mulladoost_03",
+      "name": "",
+      "position": [
+        2161.239990234375,
+        7791.509765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 97.5009994506836
+    },
+    {
+      "id": "AStrong_Gospandi_01",
+      "name": "",
+      "position": [
+        3525.43994140625,
+        8363.9501953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 225.20199584960938
+    },
+    {
+      "id": "AStrong_Gospandi_02",
+      "name": "",
+      "position": [
+        3699.77001953125,
+        8902.3798828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 359.5849914550781
+    },
+    {
+      "id": "AStrong_Gospandi_03",
+      "name": "",
+      "position": [
+        3842.030029296875,
+        8746.080078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 293.875
+    },
+    {
+      "id": "AStrong_Bastam_01",
+      "name": "",
+      "position": [
+        5926.8798828125,
+        8763.1201171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 1.559999942779541
+    },
+    {
+      "id": "AStrong_Bastam_04",
+      "name": "",
+      "position": [
+        5403.9599609375,
+        8995.8095703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 81.83599853515625
+    },
+    {
+      "id": "AStrong_Bastam_03",
+      "name": "",
+      "position": [
+        5419.240234375,
+        9416.830078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 45.404998779296875
+    },
+    {
+      "id": "AStrong_Nagara_01",
+      "name": "",
+      "position": [
+        3025.47998046875,
+        10225.4296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 306.65399169921875
+    },
+    {
+      "id": "AStrong_Nagara_02",
+      "name": "",
+      "position": [
+        3031.929931640625,
+        9643.830078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 89.81800079345703
+    },
+    {
+      "id": "AStrong_Nagara_03",
+      "name": "",
+      "position": [
+        3289.530029296875,
+        10201.7900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 99.97899627685547
+    },
+    {
+      "id": "AStrong_Rasman_01",
+      "name": "",
+      "position": [
+        5800.52001953125,
+        10720.8798828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 224.67999267578125
+    },
+    {
+      "id": "AStrong_Rasman_02",
+      "name": "",
+      "position": [
+        6390.02001953125,
+        11719.8203125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 254.03700256347656
+    },
+    {
+      "id": "AStrong_Rasman_03",
+      "name": "",
+      "position": [
+        6598.490234375,
+        11053.3603515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 101.5530014038086
+    },
+    {
+      "id": "AStrong_Rasman_04",
+      "name": "",
+      "position": [
+        6628.7001953125,
+        11695.6103515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 53.63999938964844
+    },
+    {
+      "id": "AStrong_Nur_01",
+      "name": "",
+      "position": [
+        2263.159912109375,
+        11641.5595703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 163.125
+    },
+    {
+      "id": "AStrong_Nur_02",
+      "name": "",
+      "position": [
+        1570.1300048828125,
+        11363.3701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200.36199951171875
+    },
+    {
+      "id": "AStrong_Nur_03",
+      "name": "",
+      "position": [
+        2108.340087890625,
+        12218.51953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 35.09600067138672
+    },
+    {
+      "id": "AStrong_Shamali_01",
+      "name": "",
+      "position": [
+        4133.41015625,
+        11591.48046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 169.3260040283203
+    },
+    {
+      "id": "AStrong_Shamali_02",
+      "name": "",
+      "position": [
+        4672.419921875,
+        11847.599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 167.83399963378906
+    },
+    {
+      "id": "AStrong_Shamali_03",
+      "name": "",
+      "position": [
+        4236.52978515625,
+        12194.5
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 181.2760009765625
+    },
+    {
+      "id": "AStrong_Sagrami_01",
+      "name": "",
+      "position": [
+        9662.7099609375,
+        10093.099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 14.614999771118164
+    },
+    {
+      "id": "AStrong_Sagrami_02",
+      "name": "",
+      "position": [
+        9049.1904296875,
+        10090.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 320.9200134277344
+    },
+    {
+      "id": "AStrong_Sagrami_03",
+      "name": "",
+      "position": [
+        9188.33984375,
+        9878.3603515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 182.6999969482422
+    },
+    {
+      "id": "AStrong_Zavarak_01",
+      "name": "",
+      "position": [
+        9498.1201171875,
+        11879.1298828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 319.1440124511719
+    },
+    {
+      "id": "AStrong_Zavarak_02",
+      "name": "",
+      "position": [
+        9974.830078125,
+        11212.900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 271.89300537109375
+    },
+    {
+      "id": "AStrong_Zavarak_03",
+      "name": "",
+      "position": [
+        10145.98046875,
+        11573.9697265625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 166.343994140625
+    },
+    {
+      "id": "AStrong_Ravanay_01",
+      "name": "",
+      "position": [
+        11424.16015625,
+        7977.8701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 9.4350004196167
+    },
+    {
+      "id": "AStrong_Ravanay_02",
+      "name": "",
+      "position": [
+        11600.8701171875,
+        8583.1298828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_001",
+      "name": "",
+      "position": [
+        2948.800048828125,
+        436.2200012207031
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_005",
+      "name": "",
+      "position": [
+        3995.300048828125,
+        1642.719970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_008",
+      "name": "",
+      "position": [
+        4962.3701171875,
+        306.7300109863281
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_009",
+      "name": "",
+      "position": [
+        5331.47021484375,
+        941.4099731445312
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_010",
+      "name": "",
+      "position": [
+        6669.7099609375,
+        973.719970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_011",
+      "name": "",
+      "position": [
+        6901.259765625,
+        1025.75
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_013",
+      "name": "",
+      "position": [
+        7233.85986328125,
+        579.469970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_015",
+      "name": "",
+      "position": [
+        7218.2998046875,
+        2062.75
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_016",
+      "name": "",
+      "position": [
+        7632.35986328125,
+        2287.219970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_018",
+      "name": "",
+      "position": [
+        9508.0400390625,
+        1632.52001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_019",
+      "name": "",
+      "position": [
+        10019.26953125,
+        1858.5
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_020",
+      "name": "",
+      "position": [
+        10848.4501953125,
+        2532.7900390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_021",
+      "name": "",
+      "position": [
+        11202.01953125,
+        2278.719970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_022",
+      "name": "",
+      "position": [
+        11619.080078125,
+        2449.469970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_026",
+      "name": "",
+      "position": [
+        8607.41015625,
+        3831.030029296875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_027",
+      "name": "",
+      "position": [
+        8991.48046875,
+        3636.8701171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_029",
+      "name": "",
+      "position": [
+        9925.1103515625,
+        4045.219970703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_031",
+      "name": "",
+      "position": [
+        6677.7001953125,
+        4848.10986328125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_032",
+      "name": "",
+      "position": [
+        6481.580078125,
+        4879.56005859375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_050",
+      "name": "",
+      "position": [
+        1706.5400390625,
+        10420.1201171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_051",
+      "name": "",
+      "position": [
+        1373.239990234375,
+        11341.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_052",
+      "name": "",
+      "position": [
+        2117.47998046875,
+        12513.900390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_053",
+      "name": "",
+      "position": [
+        3359.699951171875,
+        12232.48046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_054",
+      "name": "",
+      "position": [
+        3332.27001953125,
+        11017.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_055",
+      "name": "",
+      "position": [
+        3750.989990234375,
+        10998.7197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_058",
+      "name": "",
+      "position": [
+        4030.75,
+        10110.400390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_059",
+      "name": "",
+      "position": [
+        4329.27001953125,
+        9580.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 139.02000427246094,
+      "radiusB": 81.0999984741211,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_060",
+      "name": "",
+      "position": [
+        4176.330078125,
+        9160.7197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_061",
+      "name": "",
+      "position": [
+        4520.14013671875,
+        9038.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_062",
+      "name": "",
+      "position": [
+        5121.60986328125,
+        9534.83984375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_064",
+      "name": "",
+      "position": [
+        4817.06982421875,
+        10251.8603515625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_065",
+      "name": "",
+      "position": [
+        4750.41015625,
+        11498.5703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_066",
+      "name": "",
+      "position": [
+        5600.419921875,
+        12624.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_067",
+      "name": "",
+      "position": [
+        5621.990234375,
+        11872.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_070",
+      "name": "",
+      "position": [
+        7164.240234375,
+        10195.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_071",
+      "name": "",
+      "position": [
+        7362.3701171875,
+        9571.099609375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_072",
+      "name": "",
+      "position": [
+        5902.77001953125,
+        9412.7197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_077",
+      "name": "",
+      "position": [
+        9400.669921875,
+        9038.9697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_078",
+      "name": "",
+      "position": [
+        8367.76953125,
+        10665.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_079",
+      "name": "",
+      "position": [
+        7905.0498046875,
+        11700.2197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_080",
+      "name": "",
+      "position": [
+        8809.240234375,
+        11839.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_081",
+      "name": "",
+      "position": [
+        9349.2998046875,
+        12316.2197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_082",
+      "name": "",
+      "position": [
+        9997.6396484375,
+        10358.2197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_083",
+      "name": "",
+      "position": [
+        10574.740234375,
+        9817.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_084",
+      "name": "",
+      "position": [
+        11078.08984375,
+        10439.8095703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_085",
+      "name": "",
+      "position": [
+        11553.0703125,
+        10873.1201171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_086",
+      "name": "",
+      "position": [
+        11452.490234375,
+        10159.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_087",
+      "name": "",
+      "position": [
+        11334.349609375,
+        9532.8095703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_088",
+      "name": "",
+      "position": [
+        11854.240234375,
+        7616.97021484375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_089",
+      "name": "",
+      "position": [
+        12050.169921875,
+        6597.97021484375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_091",
+      "name": "",
+      "position": [
+        9102.509765625,
+        6583.6298828125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Garmarud",
+      "name": "",
+      "position": [
+        9149.0400390625,
+        6668.419921875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Imarat",
+        "ACityC_Garmsar",
+        "ACityC_Timurkalay"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "city_Garmarud",
+      "name": "$STR_EP1_LOCATION_GARMARUD",
+      "position": [
+        9128.25,
+        6864.9501953125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Garmarud"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_ChakChak01",
+      "name": "",
+      "position": [
+        4164.85986328125,
+        557.469970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 197.96099853515625
+    },
+    {
+      "id": "AFlatCS_ChakChak02",
+      "name": "",
+      "position": [
+        4394.77001953125,
+        791.75
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 26.93600082397461
+    },
+    {
+      "id": "AFlatCS_ChakChak03",
+      "name": "",
+      "position": [
+        4508.419921875,
+        699.219970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 91.53299713134766
+    },
+    {
+      "id": "AFlatCS_ChakChak04",
+      "name": "",
+      "position": [
+        4545.490234375,
+        559.469970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50.53499984741211
+    },
+    {
+      "id": "AFlatCS_ChakChak05",
+      "name": "",
+      "position": [
+        4773.85986328125,
+        738.719970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 59.93299865722656
+    },
+    {
+      "id": "AFlatCS_Huzrutimam02",
+      "name": "",
+      "position": [
+        5811.080078125,
+        1501.219970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 133.83999633789062
+    },
+    {
+      "id": "AFlatCS_Huzrutimam01",
+      "name": "",
+      "position": [
+        5876.2998046875,
+        1176.469970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180.39500427246094
+    },
+    {
+      "id": "AFlatCS_Huzrutimam03",
+      "name": "",
+      "position": [
+        6075.8798828125,
+        1023.6099853515625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240.54600524902344
+    },
+    {
+      "id": "AFlatCS_Loymanara01",
+      "name": "",
+      "position": [
+        8353.01953125,
+        2378.219970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160.30499267578125
+    },
+    {
+      "id": "AFlatCS_Loymanara02",
+      "name": "",
+      "position": [
+        8686.150390625,
+        2501.25
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 62.68299865722656
+    },
+    {
+      "id": "AFlatCS_Chardarakht01",
+      "name": "",
+      "position": [
+        10068.990234375,
+        2413.469970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 254.91900634765625
+    },
+    {
+      "id": "AFlatCS_Chardarakht02",
+      "name": "",
+      "position": [
+        10116.6796875,
+        2170.929931640625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 211.82699584960938
+    },
+    {
+      "id": "AFlatCS_Chardarakht03",
+      "name": "",
+      "position": [
+        10330.1103515625,
+        2135.219970703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 33.59400177001953
+    },
+    {
+      "id": "AFlatCS_Khushab01",
+      "name": "",
+      "position": [
+        1387.68994140625,
+        5791.4501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90.0260009765625
+    },
+    {
+      "id": "AFlatCS_Khushab02",
+      "name": "",
+      "position": [
+        1442.3299560546875,
+        5917.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 1.7699999809265137
+    },
+    {
+      "id": "AFlatCS_Sakhee01",
+      "name": "",
+      "position": [
+        3422.139892578125,
+        4117.2998046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 197.87100219726562
+    },
+    {
+      "id": "AFlatCS_Sakhee02",
+      "name": "",
+      "position": [
+        3853.239990234375,
+        4388.47021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 248.56199645996094
+    },
+    {
+      "id": "AFlatCS_Sakhee03",
+      "name": "",
+      "position": [
+        3682.590087890625,
+        4658.009765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 338.76800537109375
+    },
+    {
+      "id": "AFlatCS_Kakaru01",
+      "name": "",
+      "position": [
+        5387.0498046875,
+        4894.47021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 327.2349853515625
+    },
+    {
+      "id": "AFlatCS_Kakaru02",
+      "name": "",
+      "position": [
+        5227.0498046875,
+        4614.759765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 73.14099884033203
+    },
+    {
+      "id": "AFlatCS_FeeruzAbad01",
+      "name": "",
+      "position": [
+        4974.0498046875,
+        6037.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 306.8299865722656
+    },
+    {
+      "id": "AFlatCS_FeeruzAbad02",
+      "name": "",
+      "position": [
+        5494.5498046875,
+        6294.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 53.21900177001953
+    },
+    {
+      "id": "AFlatCS_FeeruzAbad03",
+      "name": "",
+      "position": [
+        5438.580078125,
+        6324.39990234375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145.1529998779297
+    },
+    {
+      "id": "AFlatCS_Anar01",
+      "name": "",
+      "position": [
+        6798.68994140625,
+        6015.81982421875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 126.31400299072266
+    },
+    {
+      "id": "AFlatCS_Anar02",
+      "name": "",
+      "position": [
+        6722.490234375,
+        6150.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 185.17799377441406
+    },
+    {
+      "id": "AFlatCS_Anar03",
+      "name": "",
+      "position": [
+        6775.919921875,
+        6399.47021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_Falar01",
+      "name": "",
+      "position": [
+        5960.330078125,
+        7094.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 274.52099609375
+    },
+    {
+      "id": "AFlatCS_Falar02",
+      "name": "",
+      "position": [
+        5912.85986328125,
+        7404.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 111.74800109863281
+    },
+    {
+      "id": "AFlatCS_Falar03",
+      "name": "",
+      "position": [
+        6085.39013671875,
+        7328.97021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 102.39399719238281
+    },
+    {
+      "id": "AFlatCS_Timurkalay01",
+      "name": "",
+      "position": [
+        8746.1396484375,
+        5096.97021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 280.35198974609375
+    },
+    {
+      "id": "AFlatCS_Timurkalay02",
+      "name": "",
+      "position": [
+        8822.080078125,
+        5143.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 308.2130126953125
+    },
+    {
+      "id": "AFlatCS_Timurkalay03",
+      "name": "",
+      "position": [
+        8993.2001953125,
+        5375.9501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 338.02899169921875
+    },
+    {
+      "id": "AFlatCS_Garmsar01",
+      "name": "",
+      "position": [
+        10457.919921875,
+        6350.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 257.14898681640625
+    },
+    {
+      "id": "AFlatCS_Garmsar02",
+      "name": "",
+      "position": [
+        10627.0400390625,
+        6337.68017578125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180.64500427246094
+    },
+    {
+      "id": "AFlatCS_Garmsar03",
+      "name": "",
+      "position": [
+        11007.990234375,
+        6345.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 242.16099548339844
+    },
+    {
+      "id": "AFlatCS_Imarat01",
+      "name": "",
+      "position": [
+        8316.4599609375,
+        7741.72021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160.6320037841797
+    },
+    {
+      "id": "AFlatCS_Imarat02",
+      "name": "",
+      "position": [
+        8235.580078125,
+        7695.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 124.4209976196289
+    },
+    {
+      "id": "AFlatCS_Imarat03",
+      "name": "",
+      "position": [
+        8117.60986328125,
+        7797.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 314.18499755859375
+    },
+    {
+      "id": "AFlatCS_Mulladoost01",
+      "name": "",
+      "position": [
+        1965.4200439453125,
+        7661.97998046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 89.01000213623047
+    },
+    {
+      "id": "AFlatCS_Mulladoost02",
+      "name": "",
+      "position": [
+        2107.139892578125,
+        7739.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 187.05499267578125
+    },
+    {
+      "id": "AFlatCS_Gospandi01",
+      "name": "",
+      "position": [
+        3633.77001953125,
+        8711.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 22.018999099731445
+    },
+    {
+      "id": "AFlatCS_Gospandi02",
+      "name": "",
+      "position": [
+        3639.639892578125,
+        8459.4697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 215.80099487304688
+    },
+    {
+      "id": "AFlatCS_Gospandi03",
+      "name": "",
+      "position": [
+        3799.550048828125,
+        8419.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 139.72300720214844
+    },
+    {
+      "id": "AFlatCS_Bastam01",
+      "name": "",
+      "position": [
+        5479.06982421875,
+        9232.5595703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30.895999908447266
+    },
+    {
+      "id": "AFlatCS_Bastam02",
+      "name": "",
+      "position": [
+        5531.7001953125,
+        8938.6396484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 234.77000427246094
+    },
+    {
+      "id": "AFlatCS_Bastam03",
+      "name": "",
+      "position": [
+        5737.0498046875,
+        8744.4697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 201.78799438476562
+    },
+    {
+      "id": "AFlatCS_Nagara01",
+      "name": "",
+      "position": [
+        3140.25,
+        9852.259765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 166.17300415039062
+    },
+    {
+      "id": "AFlatCS_Nagara02",
+      "name": "",
+      "position": [
+        2994.080078125,
+        9990.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 24.413999557495117
+    },
+    {
+      "id": "AFlatCS_Nagara03",
+      "name": "",
+      "position": [
+        3314.919921875,
+        10070.7197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 31.95599937438965
+    },
+    {
+      "id": "AFlatCS_Rasman01",
+      "name": "",
+      "position": [
+        6157.919921875,
+        10808.4697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 220.21600341796875
+    },
+    {
+      "id": "AFlatCS_Rasman02",
+      "name": "",
+      "position": [
+        6103.490234375,
+        11178.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 27.21500015258789
+    },
+    {
+      "id": "AFlatCS_Rasman03",
+      "name": "",
+      "position": [
+        6529.5498046875,
+        11285.9697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 214.2989959716797
+    },
+    {
+      "id": "AFlatCS_Rasman04",
+      "name": "",
+      "position": [
+        6608.419921875,
+        11466.4697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 34.62799835205078
+    },
+    {
+      "id": "AFlatCS_Nur01",
+      "name": "",
+      "position": [
+        1699.5699462890625,
+        11739.25
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240.3520050048828
+    },
+    {
+      "id": "AFlatCS_Nur02",
+      "name": "",
+      "position": [
+        1890.010009765625,
+        11766.6904296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "speech": [
+        "Nur"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 99.39399719238281
+    },
+    {
+      "id": "AFlatCS_Nur03",
+      "name": "",
+      "position": [
+        2174.830078125,
+        12118.7197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 345.8429870605469
+    },
+    {
+      "id": "AFlatCS_Shamali01",
+      "name": "",
+      "position": [
+        4105.85986328125,
+        11904.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 171.85299682617188
+    },
+    {
+      "id": "AFlatCS_Shamali02",
+      "name": "",
+      "position": [
+        4211.5498046875,
+        11843.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 323.7099914550781
+    },
+    {
+      "id": "AFlatCS_Shamali03",
+      "name": "",
+      "position": [
+        4688.7099609375,
+        12302.7197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 285.114013671875
+    },
+    {
+      "id": "AFlatCS_Sagram01",
+      "name": "",
+      "position": [
+        9243.2998046875,
+        10009.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 36.40299987792969
+    },
+    {
+      "id": "AFlatCS_Sagram02",
+      "name": "",
+      "position": [
+        9224.26953125,
+        9865.2197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 192.12600708007812
+    },
+    {
+      "id": "AFlatCS_Sagram03",
+      "name": "",
+      "position": [
+        9362.849609375,
+        10136.4501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75.44100189208984
+    },
+    {
+      "id": "AFlatCS_Zavarak01",
+      "name": "",
+      "position": [
+        9619.2099609375,
+        11734.4296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 214.37100219726562
+    },
+    {
+      "id": "AFlatCS_Zavarak02",
+      "name": "",
+      "position": [
+        9801.3896484375,
+        11282.3603515625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 182.1699981689453
+    },
+    {
+      "id": "AFlatCS_Zavarak03",
+      "name": "",
+      "position": [
+        10064.0498046875,
+        11369.1904296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 111.26300048828125
+    },
+    {
+      "id": "AFlatCS_Ravanay01",
+      "name": "",
+      "position": [
+        11606.5498046875,
+        8378.7197265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 351.8009948730469
+    },
+    {
+      "id": "AFlatCS_Ravanay02",
+      "name": "",
+      "position": [
+        11566.6103515625,
+        8093.27978515625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 315.0069885253906
+    },
+    {
+      "id": "AFlatC_ChakChak",
+      "name": "",
+      "position": [
+        4435.47021484375,
+        696.0900268554688
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 88.11000061035156,
+      "radiusB": 58.79999923706055,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Garmarud_01",
+      "name": "",
+      "position": [
+        9135.01953125,
+        6485.2998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 70.16000366210938,
+      "radiusB": 46.79999923706055,
+      "angle": 171.39999389648438
+    },
+    {
+      "id": "AStrong_Garmarud_02",
+      "name": "",
+      "position": [
+        9450.150390625,
+        6561.85986328125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 98.9219970703125
+    },
+    {
+      "id": "AStrong_Garmarud_03",
+      "name": "",
+      "position": [
+        8991.8095703125,
+        6913.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 31.850000381469727,
+      "radiusB": 21.200000762939453,
+      "angle": 321.14898681640625
+    },
+    {
+      "id": "AStrong_Bastam_02",
+      "name": "",
+      "position": [
+        5886.6298828125,
+        8512.7900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 214.5070037841797
+    },
+    {
+      "id": "ACityC_Shamali",
+      "name": "",
+      "position": [
+        4159.759765625,
+        11708.1298828125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Bastam",
+        "ACityC_Rasman",
+        "ACityC_Nagara",
+        "ACityC_Nur"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Huzrutimam",
+      "name": "",
+      "position": [
+        6068.4599609375,
+        1095.260009765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 56.130001068115234,
+      "radiusB": 37.400001525878906,
+      "angle": 344.32598876953125
+    },
+    {
+      "id": "AFlatC_LoyManara",
+      "name": "",
+      "position": [
+        8740.33984375,
+        2502.219970703125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 62.20000076293945,
+      "radiusB": 41.5,
+      "angle": 329.34698486328125
+    },
+    {
+      "id": "AFlatC_Chardarakht",
+      "name": "",
+      "position": [
+        10440.2001953125,
+        2343.35009765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 121.47000122070312,
+      "radiusB": 81,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Khushab",
+      "name": "",
+      "position": [
+        1651.989990234375,
+        5623.0400390625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 61.88999938964844,
+      "radiusB": 41.29999923706055,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Sakhee",
+      "name": "",
+      "position": [
+        3468.199951171875,
+        4146.6201171875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 144.0749969482422
+    },
+    {
+      "id": "AFlatC_Kakaru",
+      "name": "",
+      "position": [
+        5317.39013671875,
+        4772.22021484375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 272.3710021972656
+    },
+    {
+      "id": "AFlatC_FeeruzAbad",
+      "name": "",
+      "position": [
+        5280.4501953125,
+        6187.81005859375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 63.689998626708984,
+      "radiusB": 42.5,
+      "angle": 303.885009765625
+    },
+    {
+      "id": "AFlatC_Anar",
+      "name": "",
+      "position": [
+        6033.75,
+        5710.66015625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 77.75,
+      "radiusB": 51.900001525878906,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Timurkalay",
+      "name": "",
+      "position": [
+        8870.7900390625,
+        5208.2099609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 77.37999725341797,
+      "radiusB": 51.599998474121094,
+      "angle": 317.56201171875
+    },
+    {
+      "id": "AFlatC_Garmsar",
+      "name": "",
+      "position": [
+        10675.8896484375,
+        6360.72021484375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 61.599998474121094,
+      "radiusB": 41.099998474121094,
+      "angle": 179.71299743652344
+    },
+    {
+      "id": "AFlatC_Garmarud",
+      "name": "",
+      "position": [
+        9211.73046875,
+        6671.3798828125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 29.600000381469727
+    },
+    {
+      "id": "AFlatC_Imarat",
+      "name": "",
+      "position": [
+        8217.48046875,
+        7777.3798828125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 62.20000076293945,
+      "radiusB": 41.5,
+      "angle": 37.71900177001953
+    },
+    {
+      "id": "AFlatC_Mulladoost",
+      "name": "",
+      "position": [
+        2013.510009765625,
+        7657.2099609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 62.20000076293945,
+      "radiusB": 41.5,
+      "angle": 20.392000198364258
+    },
+    {
+      "id": "AFlatC_Gospandi",
+      "name": "",
+      "position": [
+        3647.300048828125,
+        8586.3203125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 77.75,
+      "radiusB": 51.900001525878906,
+      "angle": 283.27801513671875
+    },
+    {
+      "id": "AFlatC_Bastam",
+      "name": "",
+      "position": [
+        5607.14013671875,
+        9143.2197265625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 61.900001525878906,
+      "radiusB": 41.29999923706055,
+      "angle": 96.03800201416016
+    },
+    {
+      "id": "AFlatC_Nagara",
+      "name": "",
+      "position": [
+        3148.47998046875,
+        9961.8095703125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 39.79999923706055,
+      "radiusB": 26.600000381469727,
+      "angle": 321.18701171875
+    },
+    {
+      "id": "AFlatC_Rasman",
+      "name": "",
+      "position": [
+        6132.27001953125,
+        11044.7197265625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 118.80599975585938
+    },
+    {
+      "id": "AFlatC_Nur",
+      "name": "",
+      "position": [
+        1890.699951171875,
+        11812.6904296875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 39.79999923706055,
+      "radiusB": 26.600000381469727,
+      "angle": 202.3280029296875
+    },
+    {
+      "id": "AFlatC_Shamali",
+      "name": "",
+      "position": [
+        4163.22021484375,
+        12043.1201171875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 49.7599983215332,
+      "radiusB": 33.20000076293945,
+      "angle": 325.6789855957031
+    },
+    {
+      "id": "AFlatC_Sagram",
+      "name": "",
+      "position": [
+        9412.23046875,
+        10016.76953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 77.75,
+      "radiusB": 51.900001525878906,
+      "angle": 294.5880126953125
+    },
+    {
+      "id": "AFlatC_Zavarak",
+      "name": "",
+      "position": [
+        9797.0302734375,
+        11352.26953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 151.1300048828125,
+      "radiusB": 100.80000305175781,
+      "angle": 81.78500366210938
+    },
+    {
+      "id": "AFlatC_Ravanay",
+      "name": "",
+      "position": [
+        11455.419921875,
+        8266.490234375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 61.599998474121094,
+      "radiusB": 41.099998474121094,
+      "angle": 119.04100036621094
+    },
+    {
+      "id": "AFlatC_Falar",
+      "name": "",
+      "position": [
+        5867.7998046875,
+        7260.4501953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 26.09000015258789,
+      "radiusB": 17.399999618530273,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_049",
+      "name": "",
+      "position": [
+        1442.77001953125,
+        10031.4697265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_002",
+      "name": "",
+      "position": [
+        2410.81005859375,
+        907.760009765625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_033",
+      "name": "",
+      "position": [
+        6861.64013671875,
+        5606.22021484375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    }
+  ],
+  "airports": [
+    {
+      "id": 0,
+      "position": [
+        5250.5,
+        10993.5
+      ],
+      "direction": [
+        -0.707099974155426,
+        0.07999999821186066,
+        -0.707099974155426
+      ]
+    },
+    {
+      "id": 1,
+      "position": [
+        7718,
+        1598
+      ],
+      "direction": [
+        -0.8659999966621399,
+        0.07999999821186066,
+        -0.5
+      ]
+    }
+  ]
+}

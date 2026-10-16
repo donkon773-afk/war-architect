@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "id": "5fbba839-4303-4b7d-bdc5-7ca7441cfb77",
+  "design": {
+    "version": 1,
+    "type": "frontlineCampaign",
+    "campaignKey": "d142bbee-a386-4237-9905-e2f26306cffe",
+    "world": "Australia",
+    "title": "NeroAI — Australia: линия фронта и снабжение [FRONT TEST 3]",
+    "playerRole": "commander",
+    "playerSide": "WEST",
+    "sides": [
+      {
+        "side": "WEST",
+        "base": "S0",
+        "classes": [
+          "rhsusf_army_ocp_rifleman",
+          "rhsusf_army_ocp_autorifleman",
+          "rhsusf_army_ocp_grenadier",
+          "rhsusf_army_ocp_medic",
+          "CUP_B_AFU_Soldier_Engineer",
+          "CUP_B_AFU_Soldier_Marksman",
+          "CUP_B_BAF_Soldier_AA_DDPM",
+          "CUP_B_BAF_Soldier_AT_DDPM"
+        ],
+        "truckClass": "rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy",
+        "active": 6,
+        "reserve": 40,
+        "groupSize": 8,
+        "skill": 0.85
+      },
+      {
+        "side": "EAST",
+        "base": "S6",
+        "classes": [
+          "rhs_msv_rifleman",
+          "rhs_msv_machinegunner",
+          "rhs_msv_grenadier",
+          "rhs_msv_medic",
+          "O_sniper_F",
+          "CUP_O_INS_Soldier_AA",
+          "CUP_O_INS_Soldier_AT",
+          "CUP_O_RU_Engineer_VDV"
+        ],
+        "truckClass": "rhsgref_ins_gaz66o_flat",
+        "active": 6,
+        "reserve": 40,
+        "groupSize": 8,
+        "skill": 0.85
+      }
+    ],
+    "sectors": [
+      {
+        "id": "S0",
+        "name": "База синих",
+        "kind": "base",
+        "owner": "WEST",
+        "position": [
+          30847,
+          11497
+        ],
+        "radius": 600,
+        "stock": 600,
+        "income": 40
+      },
+      {
+        "id": "S1",
+        "name": "Южный склад",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          27596,
+          12275
+        ],
+        "radius": 250,
+        "stock": 150,
+        "income": 10
+      },
+      {
+        "id": "S2",
+        "name": "Южная позиция",
+        "kind": "town",
+        "owner": "WEST",
+        "position": [
+          27705,
+          16852
+        ],
+        "radius": 250,
+        "stock": 90,
+        "income": 0
+      },
+      {
+        "id": "S3",
+        "name": "Международный аэропорт Австралии, Центр",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          22028.7,
+          25609.43
+        ],
+        "radius": 500,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S4",
+        "name": "Северная позиция",
+        "kind": "town",
+        "owner": "EAST",
+        "position": [
+          22564,
+          31808
+        ],
+        "radius": 250,
+        "stock": 90,
+        "income": 0
+      },
+      {
+        "id": "S5",
+        "name": "Северный склад",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          17810,
+          33806
+        ],
+        "radius": 250,
+        "stock": 150,
+        "income": 10
+      },
+      {
+        "id": "S6",
+        "name": "База красных",
+        "kind": "base",
+        "owner": "EAST",
+        "position": [
+          16685,
+          33475
+        ],
+        "radius": 250,
+        "stock": 600,
+        "income": 40
+      },
+      {
+        "id": "S7",
+        "name": "Центральный Вспомогательный Аэродром",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          20395,
+          28959
+        ],
+        "radius": 500,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S8",
+        "name": "Туристический городок",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          22374,
+          19355
+        ],
+        "radius": 200,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S9",
+        "name": "Центральный Вспомогательный Аэродром 2",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          19780,
+          24504
+        ],
+        "radius": 500,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S10",
+        "name": "Склад БП",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          26689,
+          27989
+        ],
+        "radius": 600,
+        "stock": 0,
+        "income": 0
+      }
+    ],
+    "links": [
+      [
+        "S0",
+        "S1"
+      ],
+      [
+        "S1",
+        "S2"
+      ],
+      [
+        "S2",
+        "S3"
+      ],
+      [
+        "S3",
+        "S4"
+      ],
+      [
+        "S4",
+        "S5"
+      ],
+      [
+        "S5",
+        "S6"
+      ],
+      [
+        "S4",
+        "S7"
+      ],
+      [
+        "S2",
+        "S8"
+      ],
+      [
+        "S8",
+        "S9"
+      ],
+      [
+        "S4",
+        "S10"
+      ],
+      [
+        "S7",
+        "S3"
+      ],
+      [
+        "S9",
+        "S3"
+      ],
+      [
+        "S3",
+        "S10"
+      ]
+    ],
+    "playerSlots": 6,
+    "persistence": true,
+    "duration": 90,
+    "captureSeconds": 120,
+    "reinforcementCost": 50,
+    "captureCost": 40,
+    "reinforcementDelay": 60,
+    "convoyCargo": 120,
+    "convoyInterval": 90,
+    "convoyTimeout": 600,
+    "convoyLimit": 2,
+    "hour": 9,
+    "overcast": 0.15
+  },
+  "revision": 7,
+  "createdAt": "2026-10-11T20:50:32.129Z",
+  "updatedAt": "2026-10-11T22:07:08.267Z"
+}

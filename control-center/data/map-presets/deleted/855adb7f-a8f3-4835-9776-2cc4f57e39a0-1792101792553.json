@@ -1,0 +1,145 @@
+{
+  "id": "855adb7f-a8f3-4835-9776-2cc4f57e39a0",
+  "name": "Алтис · сухопутный фронт",
+  "createdAt": "2026-10-15T22:02:33.082Z",
+  "updatedAt": "2026-10-15T22:02:33.082Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Altis",
+    "title": "Алтис · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Коре",
+        "side": "WEST",
+        "position": [
+          6756,
+          16029
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Айос-Георгиос",
+        "side": "EAST",
+        "position": [
+          20424,
+          19054
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Айос-Дионисиос",
+        "side": "GUER",
+        "position": [
+          8725,
+          15924
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Аликампос",
+        "side": "GUER",
+        "position": [
+          10792,
+          15771
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · фабрика",
+        "side": "GUER",
+        "position": [
+          13019,
+          15949
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · электростанция",
+        "side": "GUER",
+        "position": [
+          15075,
+          16197
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Антракия",
+        "side": "GUER",
+        "position": [
+          17115,
+          16121
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · карьер",
+        "side": "GUER",
+        "position": [
+          19266,
+          16180
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Парос",
+        "side": "GUER",
+        "position": [
+          20418,
+          16939
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

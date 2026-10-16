@@ -1,0 +1,10 @@
+params ["_unit","_plane","_flight"];
+if (!isServer || {!isPlayer _unit} || {!alive _unit} || {!alive _plane} || {!isNull driver _plane}) exitWith {};
+private _pos=NeroOP_campPositions#(NeroOP_campRoots#([west,east] find side group _unit));
+_plane enableSimulationGlobal false;_plane allowDamage false;
+_plane setVariable ["NeroOP_equipmentLaunched",false,true];
+_plane setPosATL [_pos#0,_pos#1,if (_plane isKindOf "Helicopter") then {180} else {1400}];
+if (isNull _flight) then {_flight=createGroup [side group _unit,true];_flight setVariable ["NeroOP_campFlight",true,true];};
+_flight setGroupOwner owner _unit;_plane setVariable ["NeroOP_pendingPilot",_unit,true];_plane setVariable ["NeroOP_pendingAt",serverTime];
+_unit setVariable ["NeroOP_groundParent",group _unit,true];[_unit,_plane,_flight] remoteExecCall ["NeroOP_fnc_campaignPilot",owner _unit];
+private _parent=group _unit;if (_parent getVariable ["NeroOP_campGroup",false]) then {_parent setVariable ["NeroOP_claimed",false];_parent setVariable ["NeroOP_slotCommander",objNull,true];};

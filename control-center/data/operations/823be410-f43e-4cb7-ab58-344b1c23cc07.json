@@ -1,0 +1,1490 @@
+{
+  "version": 1,
+  "id": "823be410-f43e-4cb7-ab58-344b1c23cc07",
+  "design": {
+    "version": 1,
+    "type": "frontlineCampaign",
+    "campaignKey": "31d4fefe-48b8-4b12-bf05-47d1d7e0bb72",
+    "world": "Australia",
+    "title": "NeroAI — Australia: фронт и снабжение [EXPANDED]",
+    "playerRole": "commander",
+    "playerSide": "WEST",
+    "sides": [
+      {
+        "side": "WEST",
+        "base": "S13",
+        "classes": [
+          "rhsusf_army_ocp_rifleman",
+          "rhsusf_army_ocp_autorifleman",
+          "rhsusf_army_ocp_grenadier",
+          "rhsusf_army_ocp_medic",
+          "CUP_B_AFU_Soldier_Engineer",
+          "CUP_B_AFU_Soldier_Marksman",
+          "CUP_B_BAF_Soldier_AA_DDPM",
+          "CUP_B_BAF_Soldier_AT_DDPM"
+        ],
+        "truckClass": "rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy",
+        "active": 20,
+        "reserve": 80,
+        "groupSize": 8,
+        "skill": 0.85,
+        "faction": "",
+        "shop": [
+          {
+            "class": "CUP_B_Ural_CDF",
+            "price": 70
+          },
+          {
+            "class": "CUP_B_BMP2_CDF",
+            "price": 220
+          },
+          {
+            "class": "CUP_B_M1A2SEP_Woodland_US_Army",
+            "price": 220
+          },
+          {
+            "class": "JS_JC_FA18E",
+            "price": 260
+          },
+          {
+            "class": "CUP_B_AH64D_DL_USA",
+            "price": 230
+          },
+          {
+            "class": "CUP_B_M270_HE_USA",
+            "price": 190
+          },
+          {
+            "class": "CUP_B_M119_US",
+            "price": 190
+          },
+          {
+            "class": "CUP_B_USMC_DYN_MQ9",
+            "price": 140
+          },
+          {
+            "class": "B_APC_Tracked_01_AA_F",
+            "price": 220
+          },
+          {
+            "class": "B_Radar_System_01_F",
+            "price": 70
+          },
+          {
+            "class": "B_MBT_01_mlrs_F",
+            "price": 190
+          },
+          {
+            "class": "B_MBT_01_arty_F",
+            "price": 190
+          },
+          {
+            "class": "B_SAM_System_01_F",
+            "price": 240
+          }
+        ],
+        "gear": [
+          {
+            "class": "ItemWatch",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemCompass",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemGPS",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemRadio",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemMap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Binocular",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_launch_Javelin",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "CUP_NVG_1PN138",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_hgun_TT",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "rhsusf_weap_m9",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "CUP_V_B_IOTV_MM14_Rifleman_USArmy",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_V_B_IOTV_MM14_SAW_USArmy",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_arifle_AK12_black_flash_1P87",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_hgun_Glock17_blk",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "CUP_Vector21Nite",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_arifle_L85A2_ACOG_Laser",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_launch_FIM92Stinger",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "CUP_srifle_SVD_pso",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_uniform_acu_oefcp",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhsusf_ach_helmet_ocp",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_m4_compm4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_m4_m203_compm4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_m4a1_grip_compm4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_weap_m249_light_L_elcan",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "30Rnd_556x45_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_556x45_Stanag_green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_556x45_Stanag_red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_556x45_Stanag_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_556x45_Stanag_Tracer_Green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Emag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_20Rnd_556x45_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Stanag_Mk16",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Stanag_Mk16_black",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Stanag_Mk16_woodland",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_556x45_Stanag_L85",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK12_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_10Rnd_762x54_SVD_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_17Rnd_9x19_glock17",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_8Rnd_762x25_TT",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_Stinger_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_Javelin_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_HandGrenade_RGD5",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M855_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_Mk318_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_Mk262_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M200_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M193_Stanag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_M433_HEDP",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_100Rnd_556x45_soft_pouch",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_200Rnd_556x45_box",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_200rnd_556x45_mixed_box",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_200rnd_556x45_M855_box",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_200rnd_556x45_M855_mixed_box",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_mag_15Rnd_9x19_FMJ",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhsusf_mag_15Rnd_9x19_JHP",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_m67",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_m18_red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_B_AFU_EngineerPack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhsusf_assault_eagleaiii_ocp_medic",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhsusf_assault_eagleaiii_ocp_ar",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhsusf_falconii_gr",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "B_UavTerminal",
+            "kind": "ITEM",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "side": "EAST",
+        "base": "S14",
+        "classes": [
+          "rhs_msv_rifleman",
+          "rhs_msv_machinegunner",
+          "rhs_msv_grenadier",
+          "rhs_msv_medic",
+          "O_sniper_F",
+          "CUP_O_INS_Soldier_AA",
+          "CUP_O_INS_Soldier_AT",
+          "CUP_O_RU_Engineer_VDV"
+        ],
+        "truckClass": "rhsgref_ins_gaz66o_flat",
+        "active": 20,
+        "reserve": 80,
+        "groupSize": 8,
+        "skill": 0.85,
+        "faction": "",
+        "shop": [
+          {
+            "class": "CUP_O_Ural_RU",
+            "price": 70
+          },
+          {
+            "class": "CUP_O_BMP2_RU",
+            "price": 220
+          },
+          {
+            "class": "CUP_O_T72_RU",
+            "price": 220
+          },
+          {
+            "class": "JS_JC_SU35",
+            "price": 260
+          },
+          {
+            "class": "CUP_O_Mi24_V_Dynamic_RU",
+            "price": 230
+          },
+          {
+            "class": "rhs_2s3_tv",
+            "price": 190
+          },
+          {
+            "class": "CUP_O_D30_RU",
+            "price": 190
+          },
+          {
+            "class": "CUP_O_Pchela1T_RU",
+            "price": 140
+          },
+          {
+            "class": "O_APC_Tracked_02_AA_F",
+            "price": 220
+          },
+          {
+            "class": "O_Radar_System_02_F",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_O_BM21",
+            "price": 70
+          },
+          {
+            "class": "O_MBT_02_arty_F",
+            "price": 190
+          },
+          {
+            "class": "O_SAM_System_04_F",
+            "price": 240
+          }
+        ],
+        "gear": [
+          {
+            "class": "U_O_GhillieSuit",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "V_Chestrig_khk",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemWatch",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemCompass",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemGPS",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemRadio",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemMap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Rangefinder",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "NVGoggles_OPFOR",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "srifle_GM6_camo_LRPS_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "hgun_Rook40_snds_F",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "rhs_6b23",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_arifle_AKM",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_arifle_AKS",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_arifle_AK74M",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_weap_pkm",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_launch_RPG7V_PGO7V",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "CUP_launch_9K32Strela",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_uniform_flora",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_6b27m",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_6b27m_green_ess",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_6b23_medic",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_6b23_rifleman",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_6b23_6sh92_vog",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_weap_ak74m_dtk",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_weap_ak74m_gp25_dtk",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "5Rnd_127x108_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellRed",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellYellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellOrange",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "5Rnd_127x108_APDS_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "APERSTripMine_Wire_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "ClaymoreDirectionalMine_Remote_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_White_Tracer_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_Subsonic_545x39_AK_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_20Rnd_545x39_AKSU_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_20Rnd_Subsonic_545x39_AKSU_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_White_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_Subsonic_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_White_Tracer_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_Subsonic_545x39_AK74_plum_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK74M_camo_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_camo_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_545x39_AK_camo_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_White_Tracer_545x39_AK_camo_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_camo_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_545x39_AK74M_desert_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_desert_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_545x39_AK_desert_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_White_Tracer_545x39_AK_desert_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_desert_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_60Rnd_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_60Rnd_TE1_Green_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_60Rnd_TE1_Red_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_60Rnd_TE1_White_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_60Rnd_TE1_Yellow_Tracer_545x39_AK74M_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_762x39_AK47_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Green_Tracer_762x39_AK47_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_TE1_Red_Tracer_762x39_AK47_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "O_UavTerminal",
+            "kind": "ITEM",
+            "price": 25
+          }
+        ]
+      }
+    ],
+    "sectors": [
+      {
+        "id": "S0",
+        "name": "Coober Pedy 1",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          20265,
+          21256
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S1",
+        "name": "Toowoomba 2",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          29932,
+          18707
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S2",
+        "name": "Victoria 3",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          29220,
+          8738
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S3",
+        "name": "Alice Springs 4",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          24313,
+          30371
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S4",
+        "name": "Darwin Port 5",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          14324,
+          30630
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S5",
+        "name": "Perth 6",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          8025,
+          22886
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S6",
+        "name": "Perth 7",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          4235,
+          13645
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S7",
+        "name": "South OPFOR 8",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          38244,
+          13922
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S8",
+        "name": "Cairns 9",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          33309,
+          27507
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S9",
+        "name": "Perth 10",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          13515,
+          14718
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S10",
+        "name": "Adelaide 11",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          23537,
+          14118
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S11",
+        "name": "Cairns 12",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          29034,
+          36512
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S12",
+        "name": "Brisbane 13",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          38239,
+          21562
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S13",
+        "name": "База синих",
+        "kind": "base",
+        "owner": "WEST",
+        "position": [
+          33419,
+          2473
+        ],
+        "radius": 180,
+        "stock": 4000,
+        "income": 60
+      },
+      {
+        "id": "S14",
+        "name": "База красных",
+        "kind": "base",
+        "owner": "EAST",
+        "position": [
+          19418,
+          36191
+        ],
+        "radius": 180,
+        "stock": 4000,
+        "income": 60
+      },
+      {
+        "id": "S15",
+        "name": "Alice Springs 16",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          26191,
+          24103
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S16",
+        "name": "South OPFOR 17",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          35385,
+          8357
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S17",
+        "name": "Pine Gap 18",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          14375,
+          22770
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S18",
+        "name": "South OPFOR 19",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          32694,
+          13733
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S19",
+        "name": "Coober Pedy 20",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          18551,
+          16212
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S20",
+        "name": "Perth 21",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          8372,
+          16833
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S21",
+        "name": "Darwin Port 22",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          10117,
+          27661
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S22",
+        "name": "Cairns 23",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          31136,
+          32002
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S23",
+        "name": "Alice Springs 24",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          21713,
+          25833
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S24",
+        "name": "Willcania 25",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          34600,
+          18598
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S25",
+        "name": "Toowoomba 26",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          30760,
+          23719
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S26",
+        "name": "Cairns 27",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          28801,
+          27990
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S27",
+        "name": "Adelaide 28",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          28223,
+          13134
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      }
+    ],
+    "links": [
+      [
+        "S0",
+        "S1"
+      ],
+      [
+        "S1",
+        "S2"
+      ],
+      [
+        "S0",
+        "S3"
+      ],
+      [
+        "S3",
+        "S4"
+      ],
+      [
+        "S4",
+        "S5"
+      ],
+      [
+        "S5",
+        "S6"
+      ],
+      [
+        "S1",
+        "S7"
+      ],
+      [
+        "S1",
+        "S8"
+      ],
+      [
+        "S6",
+        "S9"
+      ],
+      [
+        "S2",
+        "S10"
+      ],
+      [
+        "S3",
+        "S11"
+      ],
+      [
+        "S7",
+        "S12"
+      ],
+      [
+        "S2",
+        "S13"
+      ],
+      [
+        "S4",
+        "S14"
+      ],
+      [
+        "S3",
+        "S15"
+      ],
+      [
+        "S2",
+        "S16"
+      ],
+      [
+        "S0",
+        "S17"
+      ],
+      [
+        "S7",
+        "S18"
+      ],
+      [
+        "S9",
+        "S19"
+      ],
+      [
+        "S6",
+        "S20"
+      ],
+      [
+        "S4",
+        "S21"
+      ],
+      [
+        "S11",
+        "S22"
+      ],
+      [
+        "S15",
+        "S23"
+      ],
+      [
+        "S1",
+        "S24"
+      ],
+      [
+        "S8",
+        "S25"
+      ],
+      [
+        "S8",
+        "S26"
+      ],
+      [
+        "S2",
+        "S27"
+      ],
+      [
+        "S0",
+        "S19"
+      ],
+      [
+        "S5",
+        "S21"
+      ],
+      [
+        "S8",
+        "S22"
+      ],
+      [
+        "S9",
+        "S20"
+      ],
+      [
+        "S10",
+        "S19"
+      ],
+      [
+        "S10",
+        "S27"
+      ],
+      [
+        "S12",
+        "S24"
+      ],
+      [
+        "S15",
+        "S25"
+      ],
+      [
+        "S15",
+        "S26"
+      ],
+      [
+        "S18",
+        "S24"
+      ],
+      [
+        "S18",
+        "S27"
+      ],
+      [
+        "S22",
+        "S26"
+      ],
+      [
+        "S25",
+        "S26"
+      ]
+    ],
+    "playerSlots": 20,
+    "persistence": true,
+    "duration": 120,
+    "captureSeconds": 120,
+    "reinforcementCost": 50,
+    "captureCost": 0,
+    "reinforcementDelay": 60,
+    "convoyCargo": 200,
+    "convoyInterval": 60,
+    "convoyTimeout": 1800,
+    "convoyLimit": 10,
+    "hour": 9,
+    "overcast": 0.15,
+    "equipment": {
+      "aiPurchases": true,
+      "cooldown": 90,
+      "groundLimit": 20,
+      "airLimit": 4,
+      "totalPurchases": 150,
+      "pilots": 2,
+      "aaaLimit": 3,
+      "samLimit": 2,
+      "radarLimit": 1,
+      "artilleryLimit": 3,
+      "mlrsLimit": 1
+    },
+    "extraMods": [],
+    "gameplay": {
+      "truckSpeed": 90,
+      "vehicleSpeed": 80,
+      "infantrySpeed": 2,
+      "spotDistance": 0.8,
+      "spotTime": 0.7,
+      "courage": 0.9,
+      "commanding": 0.85,
+      "reloadSpeed": 0.85,
+      "serviceCost": 30,
+      "truckCost": 70,
+      "truckFleet": 6,
+      "supportGroups": 6,
+      "aiGforces": 1
+    }
+  },
+  "revision": 5,
+  "createdAt": "2026-10-12T05:05:35.557Z",
+  "updatedAt": "2026-10-12T06:15:23.009Z"
+}

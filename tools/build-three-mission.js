@@ -1,0 +1,30 @@
+'use strict';
+const fs=require('fs'),path=require('path'),editor=require('../control-center/warlords-editor');
+const q=s=>'"'+String(s).replaceAll('"','""').replace(/[\r\n]/g,' ')+'"';
+const runtimeFunctions=['cqInit','cqLoop','cqClient','cqMenu','cqMenuAction','cqMenuRefresh','cqKey','cqCatalog','cqQuote','cqText','cqTally','cqTargets','cqLedger','cqRequest','cqVote','cqBuy','cqTravel','cqPurchase'];
+function build(d,s,out,cfg,loadedModPaths){const army=editor.validate(s.army),inventory=editor.inventory().assets,n=s.commanders||10;
+const green=inventory.filter(a=>a.side===2&&a.faction===d.greenFaction&&a.kind==='INFANTRY');const greenLeader=(green.find(a=>/squadleader|sergeant|_sl$/i.test(a.class))||green[0]).class;
+const rows=[];let id=100;for(const side of ['WEST','EAST','GUER']){const base=d.bases.find(p=>p.side===side),cls=side==='GUER'?greenLeader:editor.commander(army,side.toLowerCase());for(let i=0;i<n;i++){const uid=id++;rows.push(`class Item${rows.length} { dataType="Group"; side=${q(side==='GUER'?'Independent':side==='WEST'?'West':'East')}; id=${id++}; class Attributes {}; class Entities { items=1; class Item0 { dataType="Object"; side=${q(side==='GUER'?'Independent':side==='WEST'?'West':'East')}; id=${uid}; type=${q(cls)}; flags=7; class PositionInfo { position[]={${base.position[0]+i*3},0,${base.position[1]}}; }; class Attributes { isPlayable=${d.playerRole==="observer"?0:1}; ${d.playerRole!=='observer'&&side===d.playerSide&&i===0?'isPlayer=1;':''} }; }; }; };`);}}
+if(d.playerRole==='observer'){const p=d.bases[0].position;rows.push('class Item'+rows.length+' {dataType="Group"; side="Civilian"; id=900; class Attributes {}; class Entities {items=1; class Item0 {dataType="Object"; side="Civilian"; id=901; type="C_man_1"; flags=7; class PositionInfo {position[]={'+p[0]+',0,'+p[1]+'};}; class Attributes {isPlayer=1;isPlayable=1;description="NeroAI Observer / Zeus";};};};};');}
+const sourceName='NeroAI_Designed_'+d.world.replace(/[^A-Za-z0-9_]/g,'_')+'_Three';
+const w=require('../control-center/scenario-design').world(d.world),provider=editor.inventory().mods.find(m=>m.path===w.modPath);
+const addons=[...new Set(['A3_Characters_F','rhsusf_c_troops','rhs_c_troops','rhsgref_c_troops',...(provider?.patches||[])])];
+fs.writeFileSync(path.join(out,'mission.sqm'),`version=54;
+class EditorData { moveGridStep=1; angleGridStep=0.2617994; scaleGridStep=1; autoGroupingDist=10; class ItemIDProvider { nextID=1000; }; };
+binarizationWanted=0;
+sourceName=${q(sourceName)};
+randomSeed=531508;
+addons[]={${addons.map(q).join(',')}};
+class ScenarioData { author="NeroAI"; gameType="CTI"; respawn=3; respawnDelay=10; class Header { gameType="CTI"; minPlayers=1; maxPlayers=${rows.length}; }; };
+class Mission { class Intel { briefingName=${q(d.title)}; year=2035; month=6; day=24; hour=8; }; class Entities { items=${rows.length}; ${rows.join('\n')} }; };`);
+const preset=editor.preset({...army,greenFaction:d.greenFaction},['west','east','green']);
+fs.mkdirSync(path.join(out,'neroDesign'),{recursive:true});fs.writeFileSync(path.join(out,'neroDesign/preset.hpp'),preset);
+let lobby=fs.readFileSync(path.join(__dirname,'mission-assets/params.hpp'),'utf8');const options=require('./validate-mission').parseConfig(lobby).classes.Params.classes;
+for(const [key,value]of Object.entries(s.parameters||{})){if(key==='NeroWL_Dev')continue;if(!options[key]||!options[key].values.values.includes(value))throw Error('Invalid three-side mission parameter '+key);lobby=lobby.replace(new RegExp('(class '+key+' \\{[^\\n]*default=)[^;]+'),(_,prefix)=>prefix+value);}
+fs.writeFileSync(path.join(out,'neroDesign/params.hpp'),lobby);
+for(const fn of ['start','spawnAsset','observer',...runtimeFunctions]){const file='fn_'+fn+'.sqf';fs.copyFileSync(path.join(__dirname,'designer-assets',file),path.join(out,'neroDesign',file));}
+fs.writeFileSync(path.join(out,'description.ext'),`author="NeroAI"; onLoadName=${q(d.title)}; briefingName=${q(d.title)}; class Header { gameType="CTI"; minPlayers=1; maxPlayers=${rows.length}; }; respawn=3; respawnDelay=10; respawnOnStart=-1; respawnTemplates[]={"MenuPosition"}; disabledAI=0; joinUnassigned=1; enableDebugConsole=2; NeroWL_devMode=1; NeroWL_personalScenario=1; NeroWL_customCatalog=1; NeroWL_cqInterface=2; class CfgNeroArmies { east=${q(army.eastFaction)}; west=${q(army.westFaction)}; westCommander=${q(editor.commander(army,"west"))}; eastCommander=${q(editor.commander(army,"east"))}; greenCommander=${q(greenLeader)}; commanders=${n}; }; corpseManagerMode=1; corpseLimit=20; wreckManagerMode=1; wreckLimit=8;\n${cfg}\n${require("../control-center/dev-mode").config(s)}\n#include "neroDesign\\preset.hpp"\n#include "neroDesign\\params.hpp"\nclass CfgFunctions { class NeroWL_Design { class Runtime { file="neroDesign"; class start {}; class spawnAsset {}; class observer {postInit=1;}; ${runtimeFunctions.map(fn=>"class "+fn+" {"+(fn==="cqInit"?"postInit=1;":"")+"};").join(" ")} }; }; }; class CfgRemoteExec { class Functions {mode=1; jip=0; class NeroAI_fnc_receiveClientCommand {allowedTargets=2;}; class NeroAI_fnc_restorePlayerAuthority {allowedTargets=2;}; class NeroAI_fnc_restoreGroupLeaderLocal {allowedTargets=0;}; class NeroAI_fnc_restoreHighCommandLocal {allowedTargets=0;}; class NeroAI_fnc_clientNotice {allowedTargets=1;}; class NeroAI_fnc_clientSpeech {allowedTargets=1;}; class BIS_fnc_debugConsoleExec {allowedTargets=0;}; class NeroWL_Design_fnc_cqBuy {allowedTargets=2;}; class NeroWL_Design_fnc_cqTravel {allowedTargets=2;}; class NeroWL_Design_fnc_cqVote {allowedTargets=2;}; }; };\n`);
+fs.copyFileSync(path.join(__dirname,'mission-assets/fn_applySettings.sqf'),path.join(out,'neroDesign/fn_applySettings.sqf'));
+fs.writeFileSync(path.join(out,'initServer.sqf'),`call compile preprocessFileLineNumbers "neroDesign\\fn_applySettings.sqf"; NeroAI_maxEnemyArmyGroups=${n*2}; NeroAI_maxEnemyGroups=0; NeroAI_greenGarrisonEnabled=false; NeroAI_warlordsStartFunds=${d.startCP};\n`);
+}
+module.exports={build,runtimeFunctions};

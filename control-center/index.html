@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>War Architect · Центр запуска</title>
+<style>
+:root{color-scheme:dark;--bg:#0d121b;--card:#151e2b;--border:#2a384d;--text:#e8eef7;--muted:#9badc5;--accent:#83aaff;--green:#75d4a9}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 "Segoe UI",sans-serif}main{max-width:1250px;margin:0 auto;padding:32px 28px 90px}header{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:25px}h1{font-size:30px;letter-spacing:-.6px;margin:0}h2{font-size:18px;margin:0 0 18px}p{color:var(--muted);margin:6px 0 12px}.tag{color:var(--green);border:1px solid #365d53;border-radius:30px;padding:5px 13px;white-space:nowrap}.grid{display:grid;grid-template-columns:1fr 1.55fr;gap:20px}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}.row{display:flex;gap:12px;align-items:end}.row>*{flex:1}label{display:block;color:var(--muted);font-size:13px;margin:12px 0 6px}select,input,textarea{width:100%;border:1px solid #34445c;background:#0f1723;color:var(--text);border-radius:8px;padding:10px;font:inherit;min-width:0}select:focus,input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:2px}button{cursor:pointer;border:1px solid #3c506f;border-radius:8px;background:#22314a;color:var(--text);padding:10px 16px;font:600 14px "Segoe UI",sans-serif}button:hover{background:#2e4363}button:disabled{opacity:.45;cursor:default}.primary{background:#7da6ff;color:#0a1529;border-color:#7da6ff}.primary:hover{background:#a0bdff}.check{display:flex;gap:9px;align-items:center;margin:16px 0;color:var(--text);font-size:14px}.check input{width:auto}.node{border-top:1px solid var(--border);padding-top:15px;margin-top:18px}.status{font-size:13px;color:var(--muted);min-height:21px;margin:7px 0}.ok{color:var(--green)}.bad{color:#ffba97}.parameters{margin-top:20px}.paramgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 20px}.bar{position:sticky;bottom:0;background:#101927f2;border-top:1px solid var(--border);padding:18px 25px;display:flex;gap:15px;align-items:center;z-index:2}.bar span{flex:1}.message{margin:18px 0;padding:14px 18px;border-radius:10px;border:1px solid var(--border);background:#172437;white-space:pre-line}.small{font-size:13px}.actions{display:flex;gap:10px;flex-wrap:wrap}details>summary{cursor:pointer;font-weight:600;padding:5px 0}.hidden{display:none!important}.armyAssets{max-height:420px;overflow:auto;padding:0 12px;border:1px solid var(--border);border-radius:8px}.nodes-form{display:grid;gap:10px;margin-top:15px}.nodes-form input{margin:0}footer{margin-top:20px;color:var(--muted);font-size:13px}@media(max-width:850px){.grid{grid-template-columns:1fr}.paramgrid{grid-template-columns:1fr 1fr}header{align-items:flex-start}.bar{flex-wrap:wrap}.bar span{flex-basis:100%}}@media(max-width:550px){.paramgrid{grid-template-columns:1fr}main{padding:18px 14px}.card{padding:18px}.row{flex-direction:column;align-items:stretch}h1{font-size:25px}}
+.editor-link{display:inline-block;background:#7da6ff;color:#0a1529;border-radius:8px;padding:12px 18px;font-weight:600;text-decoration:none}.editor-link:hover{background:#a0bdff}#designerEntry ul{margin:0 0 14px;padding-left:22px}#designerEntry li{margin:5px 0}
+.preset-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:15px}.preset-card{border:1px solid var(--border);border-radius:10px;padding:16px;background:#101927}.preset-card.chosen{border-color:var(--accent)}.preset-card h3{margin:0 0 8px;font-size:16px;overflow-wrap:anywhere}.preset-card p{font-size:13px;overflow-wrap:anywhere}.preset-card button{margin-top:8px}.preset-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.preset-title span{color:var(--muted);font-size:13px}
+.app-tabs{display:flex;gap:10px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:12px}.app-tabs button[aria-selected=true]{background:#83aaff;color:#0a1529;border-color:#83aaff}.preset-create{padding:18px;margin:18px 0;border:1px solid var(--border);border-radius:10px;background:#101927}.preset-create h3{margin:0 0 10px}[role=tabpanel][hidden]{display:none!important}
+
+main{max-width:1440px;padding-top:22px}header{margin-bottom:18px}h1{font-size:28px}.app-tabs{margin-bottom:14px}.message{margin:12px 0 18px;padding:12px 16px;font-size:13px}.launch-summary{display:flex;align-items:center;gap:24px;margin-bottom:20px;padding:20px 24px;border:1px solid #3e5d86;border-radius:14px;background:linear-gradient(115deg,#1b2c45,#142032)}.launch-summary>div:first-child{flex:1;min-width:0}.launch-summary h2{margin:4px 0 6px;font-size:20px;overflow-wrap:anywhere}.launch-summary p{margin:0;font-size:13px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:#94baff}.summary-facts{display:flex;flex-direction:column;gap:5px;font-size:12px;max-width:40%;overflow-wrap:anywhere}.save-status{padding:6px 10px;border-radius:20px;background:#24483e;color:#98e5c5;font-size:12px;white-space:nowrap}.save-status.pending{background:#513e24;color:#ffe0a8}.setup-workspace{display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}.setup-nav{position:sticky;top:18px;display:grid;gap:8px}.setup-nav button{display:flex;flex-direction:column;text-align:left;gap:3px;padding:12px 14px;background:transparent}.setup-nav{max-height:calc(100vh - 110px);overflow:auto}.setup-nav button span{font-size:11px;font-weight:400;color:var(--muted)}.setup-nav button[aria-current=page]{border-color:#83aaff;background:#203858}.setup-page[hidden]{display:none!important}.setup-content{min-width:0}.setup-page>.card{margin-top:0;margin-bottom:18px}.setup-page h2{font-size:20px}.setup-page .row{flex-wrap:wrap}.setup-page .row>div{min-width:150px}.setup-page .armyAssets{max-height:52vh}.bar{position:fixed;bottom:0;left:0;right:0;box-shadow:0 -5px 20px #0004}.bar button{white-space:normal}.param-group{margin:14px 0;padding:14px;border:1px solid var(--border);border-radius:10px}.param-group summary{padding:0 0 8px}.param-group .paramgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.param-group .paramgrid>div[hidden]{display:none!important}#setup-models .node:first-of-type{margin-top:10px}.preset-create{max-width:780px}.preset-list{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.check{line-height:1.4}footer{padding:6px 0 24px}@media(max-width:900px){.setup-workspace{grid-template-columns:1fr}.setup-nav{position:static;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.setup-nav button{padding:9px}.setup-nav button span{display:none}.launch-summary{flex-wrap:wrap;gap:12px}.summary-facts{max-width:100%;flex-basis:100%}.launch-summary>div:first-child{flex-basis:70%}.save-status{order:1}.bar{padding:12px 16px}}@media(max-width:550px){main{padding-bottom:180px}.setup-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.launch-summary{padding:16px}.param-group .paramgrid{grid-template-columns:1fr}.row{flex-direction:column}.setup-page .row>div{width:100%}.preset-list{grid-template-columns:1fr}.bar button{flex:1}.bar span{flex-basis:100%}.tag{font-size:11px}header{gap:10px}.card{padding:18px}}
+
+.theme-control{display:flex;flex-direction:column;gap:4px;margin:0;font-size:12px;color:var(--muted)}.theme-control select{width:160px;font-size:13px;padding:7px 10px}.header-tools{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+body{background:var(--bg);color:var(--text)}p,label,footer{color:var(--muted)}button,input,select,textarea{color:var(--text);border-color:var(--border);background:var(--input)}button:hover{background:var(--hover)}.card{background:var(--card);border-color:var(--border)}.primary,.editor-link,.app-tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}.primary:hover,.editor-link:hover{background:var(--accent-hover)}.bar{background:var(--bar);border-color:var(--border)}.message,.preset-card,.preset-create,.param-group,#selectionInfo{background:var(--input);border-color:var(--border)}.launch-summary{background:linear-gradient(115deg,var(--hover),var(--card));border-color:var(--accent)}.eyebrow,.back{color:var(--accent)}.setup-nav button[aria-current=page],#points button.current,.editor-tabs button[aria-selected=true],.map-controls button.active{background:var(--hover);border-color:var(--accent);color:var(--text)}.armyAssets,.node,.editor-tabs,#garrison{border-color:var(--border)}.preset-card.chosen{border-color:var(--accent)}header,aside,.editor-tabs{background:var(--card);border-color:var(--border)}.editor-status{background:var(--input)}#quality{background:var(--bar);border-color:var(--border);color:var(--text)}.map-controls button{background:var(--bar);color:var(--text)}.save-status{background:var(--success-bg);color:var(--success-text)}.save-status.pending{background:var(--pending-bg);color:var(--pending-text)}.tag,.ok,#status{color:var(--success-text)}.tag{border-color:var(--border)}.bad,.danger{color:var(--error-text)}
+@media(max-width:650px){.header-tools{gap:8px}.header-tools .tag{display:none}.theme-control select{width:140px}}
+#designerFrame{width:100%;height:calc(100vh - 300px);min-height:540px;border:1px solid var(--border);border-radius:10px;background:var(--card);display:block}.designer-intro{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}.designer-intro p{margin:0}.preset-card .row-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.preset-card .row-actions button{font-size:12px;padding:5px 9px}.verified{color:var(--success-text)}.ai-switch{border:1px solid var(--accent);border-radius:10px;padding:10px 14px;margin:16px 0}.ai-switch legend{font-weight:600;padding:0 6px}.ai-switch .check{margin:8px 0;align-items:flex-start}.ai-switch .check input{margin-top:3px}.ai-switch .small{margin:4px 0 0 26px}.vanilla-ai .llm-only,.vanilla-ai [data-llm]{display:none!important}
+</style>
+<!-- military-ui:start -->
+<style>
+/* Shared operations-room theme, embedded in every launcher/editor document. */
+:root,body[data-color-theme]{--bg:#111613!important;--card:#1a211d!important;--input:#121915!important;--border:#3b473d!important;--text:#e2e6db!important;--muted:#a8b2a4!important;--accent:#b3bd89!important;--accent-hover:#c7d1a0!important;--on-accent:#172016!important;--hover:#29362a!important;--bar:#182019!important;--green:#a8c6a2!important;--success-bg:#263c2b!important;--success-text:#b5d5b2!important;--pending-bg:#473d24!important;--pending-text:#e3ce94!important;--error-text:#edb0a3!important;color-scheme:dark!important}
+body{background:#111613!important;color:var(--text);font-family:"Segoe UI",Arial,sans-serif;letter-spacing:.05px}
+button,input,select,textarea,.card,.message,.launch-summary,.preset-card,.preset-create,.param-group,.armyAssets,.editing-box,.preset-row,.ai-switch,.editor-link,.setup-card{border-radius:4px!important}
+button,input,select,textarea{background:var(--input)!important;color:var(--text)!important;border-color:var(--border)!important;min-height:36px}
+button:hover{background:var(--hover)!important;border-color:#78856c!important}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #c0ca9a!important;outline-offset:2px}
+button.primary,.primary,.app-tabs button[aria-selected=true]{background:#b3bd89!important;color:#172016!important;border-color:#b3bd89!important}
+button.primary:hover{background:#c7d1a0!important}
+.card,aside,header,.editor-tabs,.preset-create,.param-group,.preset-card{background:var(--card)!important;border-color:var(--border)!important}
+.tag,.save-status,.badge{border-radius:3px!important}
+header h1{font-size:24px;letter-spacing:1px;font-weight:650}
+header h1 span{color:#b3bd89!important}
+.eyebrow{color:#b3bd89!important;letter-spacing:1.8px}
+.app-tabs{gap:4px;padding:6px;background:#171f19;border:1px solid var(--border);border-radius:4px;position:sticky;top:0;z-index:8}
+.app-tabs button{background:transparent!important;border-color:transparent!important;min-height:43px;flex:1;padding:9px 12px;font-weight:600}
+.app-tabs button[aria-selected=true]{border-color:#727f5d!important;background:#29352a!important;color:#dfe9c3!important;box-shadow:inset 0 -2px #b3bd89}
+.setup-nav{gap:4px;top:72px}.setup-nav button{border-color:transparent!important;border-left:2px solid transparent!important;border-radius:0!important}
+.setup-nav button[aria-current=page]{border-left-color:#b3bd89!important;background:#283429!important}
+.launch-summary{background:#1c271e!important;border-color:#56624c!important;padding:16px 20px;box-shadow:none}
+.launch-summary h2{font-size:19px}.summary-facts{max-width:50%;line-height:1.5}
+.message{background:#172019!important;padding:9px 14px;max-height:90px;overflow:auto;font-size:13px}
+body>main{max-width:1560px;padding:20px 26px 150px}
+.workspace-shell>.bar{background:#151e17!important;border-top:1px solid #536049!important;box-shadow:none!important;display:grid!important;grid-template-columns:1fr auto auto;gap:8px 14px;padding:12px 26px 10px;z-index:12}
+.workspace-shell>.bar>#settingHelp{grid-column:1/-1;display:block;min-height:34px;max-height:54px;overflow:auto;color:#c5cfb9;border-top:1px solid var(--border);padding-top:7px;font-size:12px;line-height:1.4}
+.help-trigger{display:inline-flex;justify-content:center;align-items:center;min-height:18px!important;width:18px;padding:0!important;margin-left:7px;border:1px solid #68755a!important;border-radius:50%!important;color:#c5d2aa!important;font-size:11px;line-height:16px;vertical-align:middle;flex:none}
+.help-trigger:hover,.help-trigger:focus-visible{background:#384733!important}
+.context-help-inline{display:block;grid-column:1/-1;flex-basis:100%;width:100%;box-sizing:border-box;margin-top:8px;padding:10px 12px;border-left:3px solid #a6a074;background:#222c22;color:#e0e5d8;font-size:13px;font-weight:400;line-height:1.5;white-space:normal;overflow-wrap:anywhere;cursor:default}
+label:has(>.context-help-inline:not([hidden])){flex-wrap:wrap}
+label .help-trigger{float:none}.context-note{font-size:12px;color:var(--muted);padding:10px 0;line-height:1.5}
+.scenario-host>section{display:block!important}.scenario-host .tab-panel{border:0!important;padding:0!important}
+.scenario-host:empty{display:none!important}.scenario-host h3{margin-top:0}.scenario-host label{max-width:720px}
+.scenario-host input:not([type=checkbox]),.scenario-host select,.scenario-host textarea{width:100%}
+#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+#designResourcesHost h3{grid-column:1/-1;margin-bottom:0}
+.designed-scenario #mapArmyNotice,.designed-scenario #designerEntry{display:none!important}
+#mapPresetsPanel .designer-intro{padding:4px 0 8px;font-size:13px}
+#designerFrame,#setupsFrame,#operationsFrame{border:1px solid var(--border);border-radius:4px;width:100%;background:var(--bg);display:block;height:calc(100dvh - 280px);min-height:560px}
+body[data-workspace-tab=maps]>main,body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{max-width:none;padding:16px 20px 130px}
+body[data-workspace-tab=maps] #message:empty{display:none}
+body[data-workspace-tab=setups]>.bar,body[data-workspace-tab=operations]>.bar{display:none!important}
+body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{padding-bottom:20px}
+body[data-workspace-tab=setups] #setupsFrame,body[data-workspace-tab=operations] #operationsFrame{height:calc(100dvh - 180px)}
+.workspace-editor{height:100dvh;overflow:hidden;display:grid!important;grid-template-rows:auto auto auto minmax(0,1fr)!important}
+.workspace-editor>header{padding:7px 12px;gap:8px;margin:0;min-height:46px}
+.workspace-editor header>strong{font-size:15px;margin-right:auto}
+.workspace-editor #world,.workspace-editor #save,.workspace-editor #openSetups,.workspace-editor #useOpenPreset,.workspace-editor .theme-control{display:none!important}
+.workspace-editor .editor-status{padding:6px 12px;min-height:32px;font-size:12px;gap:10px}
+.workspace-editor .editor-status #summary{margin-left:auto;white-space:nowrap}
+.workspace-editor .save-banner{margin:0;padding:3px 8px;font-size:12px;max-width:60%;max-height:46px;overflow:auto}
+.workspace-editor>.map-controls{position:static!important;display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:none;gap:4px;margin:0;padding:7px 10px;background:#1d271f;border-radius:0;backdrop-filter:none;border-width:1px 0;align-items:center}
+.workspace-editor>.map-controls button{flex:none;white-space:nowrap;padding:7px 10px;font-size:12px;min-height:32px}
+.workspace-editor>main{display:grid!important;grid-template-columns:minmax(0,1fr) clamp(280px,27vw,360px)!important;height:100%;min-height:0;padding:0;max-width:none}
+.workspace-editor aside{padding:10px 14px;min-height:0;border-left:1px solid var(--border)}
+.workspace-editor .editor-tabs{display:flex;gap:4px;position:sticky;top:-10px;z-index:3;padding:8px 0}
+.workspace-editor .editor-tabs button{flex:1;padding:8px 5px;font-size:12px;white-space:nowrap}
+.workspace-editor .editor-tabs button[hidden]{display:none!important}
+.workspace-editor .map-hint{display:none}.workspace-editor #quality{display:none}
+.workspace-editor #mapCoordinates{bottom:12px;left:12px;background:#131c15ed;border-radius:3px;font-size:11px}
+.workspace-editor .map-legend{bottom:12px;right:12px;padding:5px 8px;border-radius:3px;font-size:11px;gap:9px}
+.workspace-editor #viewport{height:100%;min-height:0;background:#151c17}
+.workspace-editor #map{cursor:grab}.workspace-editor #map:active{cursor:grabbing}
+.workspace-editor #helpBox{display:none}.workspace-editor #points{max-height:36vh;overflow:auto}
+.workspace-editor #panel-points>p:first-child{font-size:12px;line-height:1.5}
+.workspace-editor #garrison{border-top:1px solid var(--border);padding-top:6px}
+.workspace-editor.inspector-collapsed>main{grid-template-columns:1fr!important}.workspace-editor.inspector-collapsed aside{display:none}
+.workspace-setups>.top{padding:10px 18px}.workspace-setups>.top .back{display:none}
+.workspace-setups main{padding-bottom:100px}.workspace-setups .footer{background:#182019!important;border-color:var(--border)!important;box-shadow:none}
+@media(max-width:1000px){body>main{padding:16px 16px 160px}.setup-workspace{grid-template-columns:170px minmax(0,1fr)}.summary-facts{max-width:100%}.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{grid-template-columns:1fr}.workspace-editor>main{grid-template-columns:minmax(0,1fr) 290px!important}}
+@media(max-width:700px){.setup-workspace{grid-template-columns:1fr}.setup-nav{grid-template-columns:repeat(3,1fr)}.setup-nav button{padding:8px}.workspace-shell>.bar{padding:10px 12px;grid-template-columns:1fr 1fr}.workspace-shell>.bar>#launchState{grid-column:1/-1}header .header-tools{display:none}.workspace-editor>main{grid-template-columns:1fr!important;grid-template-rows:minmax(240px,55%) 1fr}.workspace-editor aside{border-left:0;border-top:1px solid var(--border)}#designerFrame{height:calc(100dvh - 270px);min-height:650px}.workspace-editor .map-legend{max-width:60%}}
+
+.theme-control{display:none!important}
+
+.designed-scenario [data-scenario-duplicate]{display:none!important}
+.workspace-setups .footer{flex-wrap:wrap}.workspace-setups .setups-help{flex-basis:100%;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:6px;min-height:30px}
+
+[hidden]{display:none!important}
+.workspace-shell{height:100dvh;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.workspace-shell>main{height:100%;min-height:0;overflow:auto;padding-bottom:24px!important;width:100%}
+.workspace-shell>.bar{position:static!important}
+.workspace-shell[data-workspace-tab=setups],.workspace-shell[data-workspace-tab=operations]{grid-template-rows:minmax(0,1fr)}
+.workspace-shell #designerFrame{height:calc(100dvh - 340px);min-height:430px}
+.ai-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 14px;padding:12px!important}
+.ai-switch .check{margin:4px 0!important;font-size:13px;align-items:center}
+.ai-switch #vanillaLambsRow{grid-column:1/-1;font-size:12px}
+.scenario-host label{margin-top:5px}.scenario-host{padding:20px!important}
+@media(max-width:700px){.ai-switch{grid-template-columns:1fr}.workspace-shell #designerFrame{height:calc(100dvh - 330px);min-height:620px}}
+
+.workspace-shell[data-workspace-tab=maps]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-top:10px!important;padding-bottom:10px!important}
+.workspace-shell[data-workspace-tab=maps]>main>header{min-height:44px;margin-bottom:8px}
+.workspace-shell[data-workspace-tab=maps]>main>header p{display:none}
+.workspace-shell[data-workspace-tab=maps] .app-tabs{position:static;margin-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] .app-tabs button{min-height:36px;padding-top:6px;padding-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] #message{margin:4px 0 6px}
+.workspace-shell[data-workspace-tab=maps] #mapPresetsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell[data-workspace-tab=maps] #designerFrame{height:100%;min-height:0;flex:1}
+.workspace-shell[data-workspace-tab=maps] .designer-intro{font-size:12px;margin:0;padding:6px 0}
+.workspace-shell.map-focus>main>header,.workspace-shell.map-focus #message{display:none!important}
+.workspace-shell.map-focus[data-workspace-tab=maps]>main{grid-template-rows:auto minmax(0,1fr)}
+.map-focus-toggle{font-size:12px;padding:5px 10px;min-height:30px;flex:none}
+@media(max-width:700px){.workspace-shell[data-workspace-tab=maps]>main{overflow:auto}.workspace-shell[data-workspace-tab=maps] #designerFrame{min-height:620px}}
+
+.workspace-operations{--line:#3b473d;--blue:#b3bd89;--red:#edb0a3}
+.workspace-operations>header{padding:14px 24px}.workspace-operations>header p{font-size:13px;margin:6px 0}
+.workspace-operations>main{padding:18px 24px 80px;max-width:1560px}
+.workspace-operations .savebar{background:#182019!important;border-color:var(--border)!important;padding:12px 24px;margin:20px -24px -80px}
+.workspace-operations .operations-help{display:block;max-width:1444px;margin:8px auto 0;border-top:1px solid var(--border);padding-top:6px;min-height:30px;font-size:12px;color:var(--muted)}
+.workspace-operations .template-link{border-radius:4px!important;color:var(--accent);border-color:var(--border)}
+
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-bottom:12px!important}
+.workspace-shell #setupsPanel,.workspace-shell #operationsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell #setupsFrame,.workspace-shell #operationsFrame{flex:1;height:100%!important;min-height:0}
+
+.workspace-shell[data-workspace-tab=setups] #message,.workspace-shell[data-workspace-tab=operations] #message{display:none!important}
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{grid-template-rows:auto auto minmax(0,1fr)}
+.workspace-shell>main>header #openSetups{display:none}
+.workspace-operations #status,.workspace-setups #counts{background:#203025!important;border-color:var(--border)!important}
+.workspace-setups .library,.workspace-setups .editor{border-radius:4px}
+.devmode-panel{max-width:1100px;margin:18px auto}.devmode-features{display:grid;gap:12px;margin:18px 0}.devmode-feature{display:flex;align-items:start;gap:14px;padding:18px;border:1px solid var(--border);border-left:3px solid #a99a64;background:var(--input);border-radius:4px;cursor:pointer}.devmode-feature input{margin:4px 0;width:20px;height:20px;flex:none}.devmode-feature>span{display:grid;gap:8px}.devmode-feature strong{color:var(--text)}.devmode-feature small{color:#c8bb87;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.devmode-feature:has(input:disabled){opacity:.65}.devmode-note{border-top:1px solid var(--border);padding-top:16px}#devModeStatus{min-height:28px;color:var(--accent)}
+
+/* Field equipment: graphite panels, muted sand markings, fine map grid. */
+:root,body[data-color-theme]{--bg:#101413!important;--card:#1b211e!important;--input:#111714!important;--border:#414a40!important;--line:#414a40!important;--text:#ebe9dc!important;--muted:#aeb6a7!important;--accent:#c2ba8a!important;--accent-hover:#d8cf9b!important;--on-accent:#182019!important;--blue:#c2ba8a!important;--hover:#2b342b!important;--bar:#171d18!important}
+body{background-color:var(--bg)!important;background-image:linear-gradient(#b2b89b05 1px,transparent 1px),linear-gradient(90deg,#b2b89b05 1px,transparent 1px)!important;background-size:40px 40px!important;font-size:14px}
+h1,h2,h3,button,.eyebrow{font-family:Bahnschrift,"Arial Narrow","Segoe UI",sans-serif}h1,h2,h3{color:var(--text);font-weight:600}h2{letter-spacing:.3px}a{color:var(--accent)!important;text-underline-offset:3px}
+header{background:#171e19!important;background-image:none!important;border-bottom:1px solid var(--border)}
+.workspace-shell>main>header{padding:18px 22px;border:1px solid var(--border);border-top:3px solid #a8a477;margin-bottom:16px;position:relative}
+header h1 span,.eyebrow{color:var(--accent)!important}.workspace-shell>main>header h1{font-size:25px;letter-spacing:1.3px}.workspace-shell>main>header p{margin:6px 0 0;font-size:12px;letter-spacing:.5px}.header-tools .tag{padding:9px 12px;border:1px solid #777c59;color:#d5cf9f!important;font:11px Consolas,monospace;letter-spacing:1px}
+.app-tabs{background:#171d18!important;border-radius:2px;gap:2px;padding:4px}.app-tabs button{font-size:13px;letter-spacing:.4px;min-height:45px;border-radius:1px!important}.app-tabs button[aria-selected=true]{background:#343d2f!important;color:#f0ebce!important;box-shadow:inset 0 -2px #c2ba8a!important;border-color:#6b7356!important}
+.card,.param-group,.preset-create,.preset-card,.mission-card,.editing-box,.setup-card,.workspace-setups .library,.workspace-setups .editor,.saved article{border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 3px 12px #0002;background:var(--card)!important}
+.card>h2:first-child,.param-group>summary{padding-bottom:12px;border-bottom:1px solid var(--border)}
+button{font-weight:500;letter-spacing:.15px;transition:background-color .12s,border-color .12s}.primary,button.primary{background:#c2ba8a!important;border-color:#c2ba8a!important;color:#182019!important}.primary:hover,button.primary:hover{background:#d8cf9b!important}
+input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:2px!important;box-shadow:inset 0 1px 3px #0003;padding:9px 11px}input[type=checkbox],input[type=radio]{accent-color:#c2ba8a;min-height:0!important;width:17px!important;height:17px!important;box-shadow:none;flex:none}label{line-height:1.55}.check{gap:10px}.check input{margin-right:3px}
+.setup-nav button{padding:13px 12px!important;text-align:left;border-bottom:1px solid #414a4055!important}.setup-nav button[aria-current=page]{border-left-color:#c2ba8a!important;background:#30392d!important}.setup-nav button strong{color:var(--text)}.setup-nav button span{color:var(--muted)}
+.launch-summary{background:#222b21!important;border-left:3px solid #a6a074!important}.save-status,.tag,.badge,.pill{border-radius:2px!important}.message,#status,.editor-status{background:#1c271f!important;border:1px solid #495444!important;color:#cbd1c0}.message{border-left:3px solid #898f68!important}.help-trigger{color:#d1cca7!important;border-color:#7a805c!important}
+.workspace-operations .tabs,.workspace-operations .bar{gap:8px}.workspace-operations .tabs{padding:10px;background:#151c17;border:1px solid var(--border)}.workspace-operations .tabs button[aria-selected=true],.workspace-operations button.active{background:#35402e!important;border-color:#919968!important}.workspace-operations .template-link{padding:8px 12px;background:#222c22!important;border-color:#53604c!important;color:#d3d5b8!important}.workspace-operations .fleet,.armyAssets,.workspace-setups .list{background:#111714!important;border:1px solid var(--border)!important;border-radius:2px!important}.workspace-operations .fleet label{border-bottom-color:#343e33!important}.workspace-operations .fleet label:hover,.workspace-setups .item:hover{background:#2a3529!important}.workspace-operations .pill{background:#303d2d!important;color:#d6ddbb!important}.workspace-operations .summary{color:#dce0ca!important}.workspace-operations .saved article{border-top:2px solid #7d8662!important}.workspace-operations .blue{color:#a6c9dc!important}.workspace-operations .red{color:#dfa997!important}
+.workspace-editor .editor-tabs,.workspace-editor>.map-controls{background:#1c251d!important}.workspace-editor .editor-tabs button[aria-selected=true],.workspace-editor .map-controls button.active{background:#38432f!important;border-color:#969d70!important;color:#e6e9cd!important}.workspace-editor aside{background:#1a211b!important}.workspace-editor #points button.current{background:#303d2b!important;color:var(--text)!important;border-color:#9ea37a!important}.workspace-setups .footer,.workspace-operations .savebar,.workspace-shell>.bar{background:#171e18!important;border-top-color:#7b805c!important}.workspace-setups .item,.workspace-setups .editing-box,.workspace-setups .filterbar{background:#182019!important;border-color:var(--border)!important}
+.mission-brief{display:flex;justify-content:space-between;gap:20px;padding:28px 30px;background:linear-gradient(110deg,#30392b,#1a211b);border:1px solid #5c664d;border-left:4px solid #c2ba8a;margin:18px 0}.mission-brief h2{font-size:29px;margin:12px 0 10px}.mission-brief p{margin:0;max-width:700px}.brief-code{align-self:start;color:#a2ad8d;border:1px solid #616e50;padding:8px;font:11px Consolas,monospace;letter-spacing:1px;white-space:nowrap}
+.mission-modes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 24px}.mission-modes button{display:flex;flex-direction:column;align-items:start;text-align:left;gap:13px;padding:17px 15px!important;border-top:2px solid #7c8560!important;min-width:0;background:#1b241c!important}.mission-modes button small{font:10px Consolas,monospace;letter-spacing:1.4px;color:#a9b190}.mission-modes strong{font-size:17px;font-weight:500}.mission-modes span{font-size:12px;line-height:1.5;color:var(--muted)}.mission-modes button[aria-pressed=true]{background:#303c29!important;border-color:#c2ba8a!important}
+.mission-library{padding:24px}.mission-library-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.mission-library-head h2{margin:8px 0 20px}.mission-search{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:18px;max-width:900px}.mission-search label{display:grid;gap:6px}.mission-search input,.mission-search select{width:100%}.mission-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-top:18px}.mission-card{padding:20px;border-top:2px solid #79815e!important;display:flex;flex-direction:column;align-items:start;gap:8px;min-width:0}.mission-card small{font:10px Consolas,monospace;letter-spacing:1.1px;color:#aeb58e}.mission-card h3{font-size:18px;line-height:1.5;margin:3px 0;overflow-wrap:anywhere}.mission-card p{font-size:12px;line-height:1.5;margin:0}.mission-card .mission-world{color:#d9d7b8}.mission-card button{margin-top:auto;padding-top:9px}.mission-card button:first-of-type{margin-top:15px}#missionCount,#missionLibraryStatus{font-size:12px;color:var(--muted);line-height:1.5}#missionLibraryStatus{margin:20px 0 0}
+.workspace-shell[data-workspace-tab=missions]>.bar{display:none!important}.workspace-shell[data-workspace-tab=missions]{grid-template-rows:minmax(0,1fr)}.workspace-shell[data-workspace-tab=missions] #message{display:none!important}
+@media(max-width:1100px){.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}.mission-modes{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.mission-modes{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-search{grid-template-columns:1fr}.mission-library{padding:16px}.mission-brief{padding:20px}.mission-brief h2{font-size:24px}.brief-code{display:none}.mission-library-head{flex-wrap:wrap}.workspace-shell>main>header{padding:14px}.mission-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+.workspace-operations .capability span,.workspace-operations .ground-badge{background:#293526!important;border-color:#667452!important;color:#d4dbbb!important;border-radius:2px!important}.workspace-operations .preview{background:#202c20!important;border-left-color:#9b9f70!important;color:var(--text)}.workspace-operations .equipment-list{border-color:var(--border)!important;background:var(--input);border-radius:2px!important}.workspace-operations .equipment-row{border-bottom-color:#354132!important}.workspace-operations .equipment-row small{color:var(--muted)!important}.workspace-operations .node-list button[aria-pressed=true]{background:#35422c!important;border-color:#9b9f70!important}
+.workspace-shell[data-workspace-tab=operations]>main>header,.workspace-shell[data-workspace-tab=setups]>main>header{padding:10px 18px;margin-bottom:10px}.workspace-shell[data-workspace-tab=operations]>main>header h1,.workspace-shell[data-workspace-tab=setups]>main>header h1{font-size:20px}.workspace-shell[data-workspace-tab=operations]>main>header p,.workspace-shell[data-workspace-tab=setups]>main>header p{display:none}
+.operations-embedded>header{padding:10px 16px!important}.operations-embedded>header h1{font-size:20px;margin:4px 0 6px}.operations-embedded>header>p,.operations-embedded>header .capability{display:none}.operations-embedded>header .eyebrow{font-size:10px}.operations-embedded>header .bar{margin:0}.operations-embedded .template-link{font-size:12px;padding:5px 9px!important;min-height:28px}.operations-embedded>main{padding:12px 16px 30px!important}.operations-embedded .tabs{margin-bottom:14px;padding:6px}.operations-embedded .tabs button{font-size:12px;min-height:32px;padding:6px 10px}.operations-embedded .savebar{margin:16px -16px -30px!important;padding:8px 12px!important}.operations-embedded .savebar .actions{padding:0;gap:6px}.operations-embedded .savebar button{font-size:12px;min-height:32px}.operations-embedded #status{padding:8px 12px;margin-bottom:12px;border-radius:2px}.operations-embedded .bar{margin-bottom:12px}.operations-embedded .operations-help{min-height:24px}
+
+.mission-brief{padding:20px 24px;margin:14px 0}.mission-brief h2{font-size:26px;margin:8px 0}.mission-modes{margin:14px 0 18px}.mission-modes button{padding:13px 14px!important;gap:8px}.mission-modes strong{font-size:16px}.mission-library-head h2{margin-bottom:12px}.mission-search label{display:block}.mission-search input,.mission-search select{display:block;margin-top:6px}.mission-search .help-trigger{display:inline-flex;margin-top:0}
+
+</style>
+<!-- military-ui:end --></head><body><main>
+<header><div><h1>War Architect <span style="color:var(--accent)">Центр операций</span></h1><p>Подготовка миссии · командование · запуск</p></div><div class="header-tools"><label class="theme-control" for="themeSelect">Цвет страницы<select id="themeSelect"><option value="blue">Синяя</option><option value="green">Зелёная</option><option value="purple">Фиолетовая</option><option value="amber">Янтарная</option><option value="red">Красная</option><option value="graphite">Графитовая</option><option value="light">Светлая</option></select></label><button id="openSetups" type="button">Сетапы войск</button><span class="tag">NERO / CONTROL</span></div></header><nav class="app-tabs" role="tablist" aria-label="Разделы приложения"><button id="launchTab" type="button" role="tab" aria-controls="launchPanel" aria-selected="true">Сценарий</button><button id="presetsTab" type="button" role="tab" aria-controls="presetsPanel" aria-selected="false">Пресеты запуска</button><button id="mapPresetsTab" type="button" role="tab" aria-controls="mapPresetsPanel" aria-selected="false">Карта и секторы</button><button id="setupsTab" type="button" role="tab" aria-controls="setupsPanel" aria-selected="false">Сетапы войск</button><button id="operationsTab" type="button" role="tab" aria-controls="operationsPanel" aria-selected="false">Операции</button></nav><div id="message" class="message" role="status">Загрузка настроек…</div><div id="launchPanel" role="tabpanel"><section class="launch-summary" aria-label="Сводка запуска"><div><span class="eyebrow">Выбранный запуск</span><h2 id="summaryPreset">Настройки запуска</h2><p id="summaryScenario">Загрузка…</p></div><div class="summary-facts"><span id="summaryModels"></span><span id="summaryArmy"></span><span id="summaryAir"></span><span id="addonStatus" role="status"></span><span id="summaryPlayer"></span></div><span id="dirtyStatus" class="save-status">Сохранено</span></section><div class="setup-workspace"><nav class="setup-nav" aria-label="Настройки запуска"><button type="button" data-setup="overview" aria-controls="setup-overview"><strong>Запуск</strong><span>Карта, сценарий и профиль</span></button><button type="button" data-setup="models" aria-controls="setup-models"><strong>Модели LLM</strong><span>Узлы и роли моделей</span></button><button type="button" data-setup="vehicles" aria-controls="setup-vehicles" data-warlords="true"><strong>Стороны и техника</strong><span>Каталоги покупки</span></button><button type="button" data-setup="infantry" aria-controls="setup-infantry" data-warlords="true"><strong>Пехота</strong><span>Бойцы и цены CP</span></button><button type="button" data-setup="rules" aria-controls="setup-rules" data-warlords="true"><strong>Правила боя</strong><span>Ресурсы, ИИ и гарнизоны</span></button><button type="button" data-setup="instructions" aria-controls="setup-instructions" data-warlords="true"><strong>Инструкции LLM</strong><span>Ваши указания перед игрой</span></button><button type="button" data-setup="journal" aria-controls="setup-journal"><strong>Журнал</strong><span>Команды и результаты</span></button></nav><div class="setup-content"><div id="setup-overview" class="setup-page"><section class="card"><h2>Игра и профиль</h2>
+<label for="preset">Сохранённый запуск</label><div class="row"><select id="preset"></select><button id="loadPreset">Применить</button></div>
+<label for="scenario">Сценарий</label><select id="scenario"><option value="warlords">Warlords — секторы и покупки за CP</option><option value="antistasi">Antistasi Ultimate — кампания</option></select>
+<fieldset class="ai-switch" id="aiControlBox"><legend>Кто командует ботами</legend><label class="check"><input type="radio" name="aiControl" id="aiLLM" value="llm" checked> <span><b>NeroAI — LLM-командиры.</b> Модели выбираются во вкладке «Модели и узлы».</span></label><label class="check"><input type="radio" name="aiControl" id="aiVanilla" value="vanilla"> <span><b>Штатный ИИ Arma — без LLM.</b> Мост и модели не запускаются, NeroAI не трогает ботов: командуют родной ИИ Warlords и движок Arma. Карта, стороны, техника, пехота и правила остаются вашими.</span></label><label class="check"><input type="radio" name="aiControl" id="aiTactical" value="tactical"> <span><b>Тактический ИИ NeroAI — без LLM.</b> Стратег стороны выбирает сектор для голосования и делит отряды на атаку, оборону и резерв. Отряды выходят на рубеж, ждут друг друга, штурмуют с разных направлений, отходят при потерях, вызывают огонь и покупают технику. Мост и модели не запускаются. LAMBS используется, если подключён.</span></label><label class="check" id="vanillaLambsRow"><input id="vanillaLambs" type="checkbox"> <span>Оставить мод LAMBS Danger — улучшенное поведение штатного ИИ (укрытия, штурм зданий). Без галочки — полностью стандартный ИИ.</span></label></fieldset><label for="map">Карта Warlords</label><select id="map"><option>Australia</option><option>Takistan</option><option>Altis</option><option>Chernarus</option></select>
+<button id="openDesigner" type="button">Открыть редактор карты</button><label class="check"><input id="useDesign" type="checkbox"> Использовать сохранённый сценарий редактора</label><label for="profile">Постоянный профиль Arma</label><input id="profile" value="donko" maxlength="60">
+<label class="check"><input id="ace" type="checkbox" checked> ACE и его настройки через CBA</label>
+<label class="check"><input id="dev" type="checkbox" checked> Dev Warlords: консоль и Зевс</label>
+<p class="small" id="scenarioHelp">Обычный клиент, затем «Мультиплеер → Создать сервер». Отдельные сервер и HC не запускаются.</p>
+
+
+</section><section id="designScenarioHost" class="card scenario-host" hidden></section><section class="card" id="designerEntry" style="margin-bottom:20px;border-color:var(--accent)">
+<h2>Базы и секторы</h2><p>Откройте карту, расставьте точки и сохраните всё одной кнопкой внизу.</p><div class="actions"><a id="designerLink" class="editor-link" href="/?tab=maps">Редактировать карту</a><a id="operationsLink" class="editor-link" href="http://127.0.0.1:18786/operations">Другие операции</a></div></section></div><div id="setup-models" class="setup-page" hidden><section class="card"><h2>Модели и узлы LLM</h2>
+<p class="small vanilla-note" id="vanillaModelsNote" hidden>Выбран штатный ИИ Arma — модели в этом запуске не используются.</p><label for="mode">Режим LLM</label><select id="mode"><option value="single">Одна LLM — стратегия и тактика</option><option value="dual">Две LLM — командование и тактика</option></select>
+<div class="node"><strong id="primaryTitle">Главная модель</strong><label for="primaryNode">Узел</label><div class="row"><select id="primaryNode"></select><button id="checkPrimary">Проверить модели</button></div><label for="primaryModel">Модель на выбранном узле</label><input id="primaryModel" list="primaryModels" maxlength="200"><datalist id="primaryModels"></datalist><div id="primaryStatus" class="status">Доступность ещё не проверена.</div></div>
+<div class="node hidden" id="secondaryBox"><strong>Тактическая модель</strong><label for="secondaryNode">Узел</label><div class="row"><select id="secondaryNode"></select><button id="checkSecondary">Проверить модели</button></div><label for="secondaryModel">Модель на выбранном узле</label><input id="secondaryModel" list="secondaryModels" maxlength="200"><datalist id="secondaryModels"></datalist><div id="secondaryStatus" class="status">Доступность ещё не проверена.</div></div>
+<div class="node" id="alliedRouting"><strong>Модель союзных отрядов</strong><p class="small">По умолчанию союзниками управляет стратегическая модель. У каждой стороны отдельная память; позиции врага поступают из её разведки.</p><p class="small">В параметрах Warlords ниже выберите ручное или автоматическое подключение. Группа игрока остаётся под вашим командованием.</p><label for="allyRoute">Маршрут союзников</label><select id="allyRoute"><option value="shared">Стратегическая модель (основной узел)</option><option value="separate">Отдельный узел и модель</option></select><div id="allyBox" class="hidden"><label for="allyNode">Узел союзников</label><div class="row"><select id="allyNode"></select><button id="checkAlly">Проверить модели союзников</button></div><label for="allyModel">Модель союзников</label><input id="allyModel" list="allyModels" maxlength="200"><datalist id="allyModels"></datalist><div id="allyStatus" class="status">Доступность ещё не проверена.</div></div></div>
+<div class="row"><div><label for="temperature">Температура — вариативность решений</label><input id="temperature" type="number" min="0" max="1.5" step="0.05" value="0.9"></div><div><label for="maxTokens">Максимум токенов в ответе</label><input id="maxTokens" type="number" min="256" max="4096" step="1" value="900"></div></div>
+<p class="small" style="margin-top:16px">«Проверить модели» читает список из API узла. Перед запуском каждый выбранный LLM также должен вернуть настоящий ответ. Приложение не загружает модель на удалённом компьютере.</p>
+<p class="small">Машинное зрение требует отдельного источника кадров. Выбор второй LLM здесь включает тактические решения; старый источник зрения автоматически не подключается.</p>
+<details style="margin-top:22px"><summary>Добавить узел LLM</summary><div class="nodes-form"><input id="nodeLabel" placeholder="Название: MacBook, RTX 3070…" aria-label="Название нового узла"><input id="nodeUrl" placeholder="http://адрес:1234/v1" aria-label="Адрес API нового узла"><input id="nodeKey" type="password" placeholder="API-ключ, если нужен" aria-label="Ключ API"><button id="addNode">Добавить узел</button></div></details></section><section id="designLLMHost" class="card scenario-host" hidden></section></div><div id="setup-vehicles" class="setup-page" hidden><section class="card parameters" id="armyBox"><h2>Стороны и техника</h2><p id="mapArmyNotice" class="message" hidden>Этот запуск использует армии, сохранённые в карте. Измените их в редакторе карты → «Армии · 3 стороны». Поля ниже задают состав стандартных миссий и новых карт.</p><p class="small">Выберите фракции пехоты и технику из установленных поддерживаемых модов. Приложение добавит нужные моды при запуске. Доступность услуг аэродрома и CP проверяет игра.</p><div class="param-group"><h3>Готовый сетап стороны</h3><div class="row"><div><label for="armySetupSide">Сторона для сетапа</label><select id="armySetupSide"><option value="west">Синие</option><option value="east">Красные</option><option value="green">Зелёные</option></select></div><div><label for="armySetupPick">Сохранённый сетап</label><select id="armySetupPick"></select></div></div><div class="actions"><button id="armySetupApply" type="button">Применить сетап к стороне</button><button id="armySetupRefresh" type="button">Обновить список</button><button id="armyClearAll" type="button">Очистить состав стороны</button><button id="armyUndoClear" type="button" disabled>Отменить очистку</button></div><label for="armySetupName">Сохранить текущий состав стороны</label><div class="row"><input id="armySetupName" maxlength="80" placeholder="Название нового сетапа"><button id="armySetupSave" type="button">Сохранить как сетап</button></div><p class="small">Применение заменяет состав выбранной стороны. Сохраните запуск, чтобы использовать его в игре. Для карты с собственными армиями применяйте сетап в её редакторе.</p></div><label for="commanders">Командиров на сторону (игрок занимает один слот)</label><select id="commanders"><option value="10">10</option><option value="12">12</option><option value="16">16</option></select><div class="row"><div><label for="westFaction">Синие — пехота</label><select id="westFaction"></select></div><div><label for="eastFaction">Красные — пехота</label><select id="eastFaction"></select></div><div><label for="greenFaction">Зелёные — пехота</label><select id="greenFaction"></select></div></div><div class="row"><div><label for="assetShow">Показывать технику</label><select id="assetShow"><option value="all">Вся доступная</option><option value="selected">Только выбранная</option></select></div><div><label for="assetKind">Категория</label><select id="assetKind"><option value="">Все категории</option><option value="CAR">Автомобили</option><option value="APC">БТР и БМП</option><option value="TANK">Танки</option><option value="HELICOPTER">Вертолёты</option><option value="PLANE">Самолёты</option><option value="SHIP">Корабли и лодки</option><option value="STATIC">Стационарные установки</option></select></div><div><label for="assetMod">Мод</label><select id="assetMod"><option value="">Все моды техники</option></select></div></div>
+<label for="assetSearch">Поиск техники по названию, классу или моду</label><input id="assetSearch" placeholder="F-16, Leopard, Су-34…"><div class="row" style="align-items:start"><div><h3>Синие</h3><button id="westClearAssets" type="button">Снять выбор техники</button><div id="westAssets" class="armyAssets"></div><button id="westPrev">Назад</button> <span id="westPage"></span> <button id="westNext">Далее</button></div><div><h3>Красные</h3><button id="eastClearAssets" type="button">Снять выбор техники</button><div id="eastAssets" class="armyAssets"></div><button id="eastPrev">Назад</button> <span id="eastPage"></span> <button id="eastNext">Далее</button></div><div><h3>Зелёные</h3><button id="greenClearAssets" type="button">Снять выбор техники</button><div id="greenAssets" class="armyAssets"></div><button id="greenPrev">Назад</button> <span id="greenPage"></span> <button id="greenNext">Далее</button></div></div><p id="catalogStatus" class="small"></p></section></div><div id="setup-infantry" class="setup-page" hidden><section id="infantryBox" class="card parameters"><h2>Покупка пехоты за CP</h2><p>Для каждой стороны выберите автоматический состав фракции или свой список бойцов из модов. Цены и список общие для игрока и ботов этой стороны. Зелёные покупки используются в трёхстороннем режиме редактора карты.</p><div class="row"><div><label for="infSide">Сторона</label><select id="infSide"><option value="west">Синие</option><option value="east">Красные</option><option value="green">Зелёные</option></select></div><div><label for="infMode">Состав покупки</label><select id="infMode"><option value="auto">Автоматический состав фракции</option><option value="custom">Свой список бойцов</option></select></div><div><label for="infShow">Показывать</label><select id="infShow"><option value="all">Всех бойцов стороны</option><option value="selected">Только выбранных</option></select></div></div><div class="row"><div><label for="infMod">Мод пехоты</label><select id="infMod"></select></div><div><label for="infFaction">Фракция — фильтр списка</label><select id="infFaction"></select></div></div><label for="infSearch">Поиск бойца</label><input id="infSearch" placeholder="Медик, пулемётчик, rifleman…"><p id="infStatus" class="small"></p><div id="infRows" class="armyAssets"></div><div class="actions" style="margin-top:12px"><button id="infPrev">Назад</button><span id="infPage"></span><button id="infNext">Далее</button><button id="infClear" type="button">Снять выбор всей пехоты</button><button id="infPricesReset">Сбросить цены стороны до 100 CP</button></div><p class="small">Цена: 60–50000 CP. Свой список может быть пустым, максимум 256 типов. Автоматический список — до 12 типов; фракции задаются во вкладке «Стороны и техника»; армии сохраняются вместе с открытым сценарием. Сохраните настройки или пресет и запустите новую миссию для применения.</p></section></div><div id="setup-rules" class="setup-page" hidden><section id="designResourcesHost" class="card scenario-host" hidden></section><section id="designStartHost" class="card scenario-host" hidden></section><section class="card parameters" id="parametersBox"><details open><summary>Параметры Warlords перед игрой</summary><p class="small">Станут значениями по умолчанию в лобби выбранной миссии. Их можно изменить в «Параметрах» перед стартом.</p><label for="parameterSearch">Поиск параметра</label><input id="parameterSearch" type="search" placeholder="Гарнизон, авиация, очки…"><div id="parameters"></div></details></section></div><div id="setup-instructions" class="setup-page" hidden><section class="card"><h2>Инструкции перед игрой</h2><label for="instructions">Ваши инструкции LLM перед игрой (Warlords)</label><textarea id="instructions" rows="6" maxlength="3000" placeholder="Например: сначала разведка, затем транспортные вертолёты для дальних целей; сохранять резерв CP."></textarea><p class="small">Сохраняются в пресете. Модель получает их при каждом решении; правила покупки, безопасности и прямые приказы игрока продолжают действовать.</p></section></div><div id="setup-journal" class="setup-page" hidden><section class="card parameters"><details id="journalDetails" open><summary>Журнал LLM и исполнения в Arma</summary><p class="small">Вход игры → выбранная модель → финальный JSON → проверенные команды → результат из RPT. Отправка команды ещё не означает её выполнение. Старые строки отмечены временем.</p><div class="actions"><button id="openConsole">Открыть CMD-консоль журнала</button><button id="refreshJournal">Обновить журнал</button></div><label>Мост LLM</label><pre id="bridgeJournal" style="max-height:350px;overflow:auto;white-space:pre-wrap"></pre><label>Исполнение в игре</label><pre id="engineJournal" style="max-height:250px;overflow:auto;white-space:pre-wrap"></pre></details></section></div></div></div><footer>Настройки ACE и остальных загруженных модов: Esc → Настройки → Настройки дополнений, вкладки «Клиент / Сервер / Миссия».<br>Warlords: удерживайте клавишу инвентаря (обычно I) для покупок и быстрого перемещения. Зевс: обычно Y. Консоль: Esc.</footer></div><div id="presetsPanel" role="tabpanel" hidden><section id="savedPresets" class="card" style="margin-bottom:20px"><div class="preset-title"><h2 style="margin:0">Сохранённые пресеты</h2><span id="presetCount"></span></div><p>Примените сохранённый пресет или создайте новый из настроек вкладки «Запуск и настройки».</p><div class="preset-create"><h3>Создать пресет</h3><p class="small">Сначала настройте карту, стороны, модели и состав войск на вкладке запуска. Затем вернитесь сюда, задайте название и добавьте пресет.</p><button id="configurePreset" type="button">Настроить новый пресет →</button><label for="presetName">Название нового пресета</label><input id="presetName" maxlength="60" placeholder="Например: Australia · Mac · 9 бойцов"><div class="actions" style="margin-top:12px"><button id="savePreset">Добавить новый пресет</button></div></div><label for="presetSearch">Поиск по названию, карте или модели</label><input id="presetSearch" type="search" placeholder="Australia, Antistasi, Mac…"><div id="presetList" class="preset-list"></div></section></div><div id="mapPresetsPanel" role="tabpanel" hidden><div class="designer-intro"><p>Базы и сектора — на карте. Все параметры и армии — в разделе «Сценарий». Ctrl+S сохраняет всё вместе.</p><span id="designerState" class="small"></span></div><iframe id="designerFrame" title="Редактор карты" src="about:blank"></iframe></div><div id="setupsPanel" role="tabpanel" hidden><iframe id="setupsFrame" title="Библиотека сетапов войск" src="about:blank"></iframe></div><div id="operationsPanel" role="tabpanel" hidden><p class="context-note">Отдельные режимы NeroAI. Если раздел недоступен, запустите панель операций привычным ярлыком.</p><iframe id="operationsFrame" title="Операции NeroAI" src="about:blank"></iframe></div></main><div class="bar"><span id="launchState" class="small">Проверка состояния игры…</span><button id="save">Сохранить всё</button><button class="primary" id="launch">Сохранить и запустить Arma</button><output id="settingHelp" role="status" aria-live="polite">Подсказки к настройкам появятся здесь.</output></div>
+<script src="/side-setup-client.js"></script><script>
+"use strict";
+/* Appearance is local to this browser; gameplay presets remain untouched. */
+const NERO_THEMES={"blue":["#0d121b","#151e2b","#2a384d","#83aaff","#9badc5"],"green":["#101913","#19291e","#36513c","#91d3a5","#a6bcac"],"purple":["#17121e","#251c32","#49355e","#c6a1f2","#b6a8c6"],"amber":["#1b1710","#2b2418","#53462e","#edc479","#c5b69b"],"red":["#1c1214","#2d1c20","#58353c","#efa2a9","#c5a8ae"],"graphite":["#121416","#202326","#42474c","#b5c0cc","#abb4bc"],"light":["#f2f4f6","#ffffff","#ced5dd","#35577c","#596979"]};
+function setColorTheme(name,persist=true){if(!Object.hasOwn(NERO_THEMES,name))name='blue';const root=document.documentElement;if(!root?.style)return;const [bg,card,border,accent,muted]=NERO_THEMES[name],light=name==='light';const vars={bg,card,border,accent,muted,text:light?'#202a35':'#edf1f5',input:light?'#f7f9fb':bg,hover:light?'#e0e7ee':card,'accent-hover':light?'#456d96':accent,'on-accent':light?'#ffffff':'#101820',bar:light?'#ffffffed':bg+'ed','success-bg':light?'#deefe4':'#24483e','success-text':light?'#216340':'#98e5c5','pending-bg':light?'#fff0ce':'#513e24','pending-text':light?'#765115':'#ffe0a8','error-text':light?'#a33032':'#ffb4aa'};for(const [k,v] of Object.entries(vars))root.style.setProperty('--'+k,v);root.style.colorScheme=light?'light':'dark';root.dataset.theme=name;const select=document.getElementById('themeSelect');if(select)select.value=name;if(persist){try{localStorage.setItem('neroai-color-theme',name);}catch{}}}
+(function(){let saved='blue';try{saved=localStorage.getItem('neroai-color-theme')||'blue';}catch{}setColorTheme(saved,false);const select=document.getElementById('themeSelect');if(select)select.addEventListener('change',()=>setColorTheme(select.value));if(typeof window!=='undefined')window.addEventListener('storage',e=>{if(e.key==='neroai-color-theme')setColorTheme(e.newValue||'blue',false);});})();
+
+const SESSION="__SESSION_TOKEN__";let API_SESSION=SESSION;let state,dirty=false,catalog,viewedPreset="";let assetPages={west:0,east:0};let armySelected={west:new Set(),east:new Set(),green:new Set()};const by=id=>document.getElementById(id);
+function showAppTab(tab){for(const [name,panel,button] of [['launch','launchPanel','launchTab'],['presets','presetsPanel','presetsTab'],['maps','mapPresetsPanel','mapPresetsTab']]){by(panel).hidden=tab!==name;by(button).setAttribute('aria-selected',String(tab===name));}if(tab==='maps')openDesignerFrame();}
+by('launchTab').onclick=()=>showAppTab('launch');by('presetsTab').onclick=()=>showAppTab('presets');by('configurePreset').onclick=()=>{showAppTab('launch');message('Настройте новый запуск, затем во вкладке «Список пресетов» задайте название и добавьте пресет.');};by('mapPresetsTab').onclick=()=>showAppTab('maps');showAppTab(['presets','maps'].includes(new URLSearchParams(location.search).get('tab'))?new URLSearchParams(location.search).get('tab'):'launch');
+
+let setupPage='overview',designSummaryKey='',designSummaryVersion=0,designArmy=null;
+function showSetup(page){const button=document.querySelector('[data-setup="'+page+'"]');if(!button||button.disabled)page='overview';setupPage=page;for(const p of document.querySelectorAll('.setup-page'))p.hidden=p.id!=='setup-'+page;for(const b of document.querySelectorAll('[data-setup]'))b.setAttribute('aria-current',b.dataset.setup===page?'page':'false');if(page==='journal')readJournal();}
+for(const b of document.querySelectorAll('[data-setup]'))b.onclick=()=>showSetup(b.dataset.setup);showSetup('overview');
+async function updateDesignSummary(){const key=by('scenario').value+'/'+by('map').value+'/'+by('useDesign').checked;if(key===designSummaryKey)return;designSummaryKey=key;const version=++designSummaryVersion;by('summaryPlayer').textContent='';by('mapArmyNotice').hidden=true;if(by('scenario').value!=='warlords'||!by('useDesign').checked)return;try{const d=await api('/api/design?world='+encodeURIComponent(by('map').value));if(version!==designSummaryVersion)return;designArmy=d.army?{world:d.world,army:d.army}:null;by('mapArmyNotice').hidden=!d.army;if(d.army)by('summaryArmy').textContent=by('commanders').value+' командиров на сторону · техника карты: '+['west','east','green'].map(p=>(d.army[p+'Assets']||[]).length).join(' / ');by('summaryPlayer').textContent=d.playerRole==='observer'?'Боты против ботов · наблюдатель и Зевс':'Игрок — командир своей стороны';}catch{if(version===designSummaryVersion)by('summaryPlayer').textContent='Роль игрока уточняется в редакторе карты';}}
+function updateSummary(){if(!state)return;const anti=by('scenario').value==='antistasi',map=state.maps?.find(w=>w.id===by('map').value)?.label||by('map').value;by('summaryPreset').textContent=viewedPreset||'Новый запуск';by('summaryScenario').textContent=(anti?'Antistasi':map+' · Warlords')+' · профиль '+by('profile').value+(by('useDesign').checked&&!anti?' · сценарий редактора':'');by('summaryModels').textContent=aiVanilla()?'Штатный ИИ Arma — без LLM'+(by('vanillaLambs').checked?' · LAMBS':''):aiTactical()?'Тактический ИИ NeroAI — без LLM':(by('mode').value==='dual'?'Две LLM: ':'Одна LLM: ')+(by('primaryModel').value||'модель не выбрана')+(by('mode').value==='dual'?' / '+by('secondaryModel').value:'');by('summaryArmy').textContent=anti?'Параметры кампании задаются в Antistasi':by('commanders').value+' командиров на сторону · техника: '+armySelected.west.size+' / '+armySelected.east.size+' / '+armySelected.green.size+' (синие / красные / зелёные)';if(!anti&&by('useDesign').checked)by('summaryArmy').textContent=by('commanders').value+' командиров на сторону'+(designArmy?.world===by('map').value?' · техника карты: '+['west','east','green'].map(p=>(designArmy.army[p+'Assets']||[]).length).join(' / '):' · состав сохранённой карты');const air=by('NeroWL_Air');by('summaryAir').textContent=anti?'':air?.value==='0'?'Авиация выключена':'Авиация: до '+(air?.value||5)+' на сторону';by('dirtyStatus').textContent=dirty?'Есть изменения':'Сохранено';by('dirtyStatus').classList.toggle('pending',dirty);updateDesignSummary();}
+const LLM_PARAMS=['NeroWL_LLM','NeroWL_FriendlyLLM','NeroWL_FriendlyLimit'];function lobbyParameters(){return (state.parameters||[]).filter(p=>p.id!=='NeroWL_VanillaAI');}
+function aiVanilla(){return by('aiVanilla').checked&&by('scenario').value==='warlords';}
+function aiTactical(){return by('aiTactical').checked&&by('scenario').value==='warlords';}
+function aiNoLLM(){return aiVanilla()||aiTactical();}
+function parameterNodes(){const groups=new Map();for(const p of lobbyParameters()){const name=p.id.startsWith('NeroWL_')?'LLM, сложность и гарнизоны':/CP|VehicleSpan/.test(p.id)?'Очки и ресурсы':/Subordinates|FTEnabled|Scan|AIVoting/.test(p.id)?'Отряды, перемещение и разведка':'Дополнительные правила';if(!groups.has(name))groups.set(name,[]);groups.get(name).push(p);}return [...groups].map(([name,items])=>{const group=document.createElement('details'),title=document.createElement('summary'),grid=document.createElement('div');group.className='param-group';group.open=name!=='Дополнительные правила';title.textContent=name;grid.className='paramgrid';for(const p of items){const div=document.createElement('div'),label=document.createElement('label'),select=document.createElement('select');div.dataset.parameterTitle=p.title.toLowerCase();if(LLM_PARAMS.includes(p.id))div.dataset.llm='1';label.htmlFor=p.id;label.textContent=p.title;select.id=p.id;options(select,p.values.map((v,i)=>({value:v,text:p.texts[i]})));div.append(label,select);grid.append(div);}group.append(title,grid);return group;});}
+by('parameterSearch').oninput=()=>{const q=by('parameterSearch').value.trim().toLowerCase();for(const g of by('parameters').querySelectorAll('.param-group')){let matched=0;for(const row of g.querySelectorAll('[data-parameter-title]')){row.hidden=!!q&&!row.dataset.parameterTitle.includes(q);if(!row.hidden)matched++;}g.hidden=matched===0;if(q&&matched)g.open=true;}};
+
+async function renewSession(){let response;try{response=await fetch('/',{cache:'no-store'});}catch{throw Error('Панель NeroAI недоступна. Запустите ярлык NeroAI Control Center и повторите действие.');}if(!response.ok)throw Error('Не удалось восстановить сессию панели.');const text=await response.text(),match=/const SESSION=["']([a-f0-9]{48})["']/.exec(text);if(!match)throw Error('Не удалось восстановить сессию панели.');API_SESSION=match[1];}
+async function api(url,data,retried=false){let response;try{response=await fetch(url,{method:data?"POST":"GET",headers:{"X-Nero-Session":API_SESSION,"Content-Type":"application/json"},...(data?{body:JSON.stringify(data)}:{})});}catch{throw new Error("Нет связи с локальной панелью NeroAI. Запустите ярлык NeroAI Control Center. Если в этом окне есть несохранённые настройки, оставьте его открытым до восстановления связи.");}const json=await response.json();if(response.status===403&&!retried&&String(json.error).includes('Сессия панели устарела')){await renewSession();return api(url,data,true);}if(!response.ok)throw new Error(json.error||"Ошибка панели.");return json;}
+function message(text,bad=false){if(state?.maps)for(const w of state.maps)if(w.id.length>8)text=String(text).replaceAll(w.id,w.label);by("message").textContent=text;by("message").classList.toggle("bad",bad);}
+/* 8.10: readable faction names (server faction-names.js); the stored value stays the class. */
+function factionText(f){return catalog?.factionLabels?.[f]||f;}
+function options(select,entries){select.replaceChildren(...entries.map(e=>{const option=document.createElement("option");option.value=e.value;option.textContent=e.text;return option;}));}
+function selection(){const s={};for(const k of ["scenario","primaryNode","primaryModel","secondaryNode","secondaryModel","profile","map"])s[k]=by(k).value;for(const k of ["temperature","maxTokens"])s[k]=Number(by(k).value);for(const k of ["ace","dev","useDesign"])s[k]=by(k).checked;s.allyRoute=by("allyRoute").value;s.allyNode=by("allyNode").value;s.allyModel=by("allyModel").value;s.instructions=by("instructions").value;s.commanders=Number(by("commanders").value);s.army=Object.fromEntries(["west","east","green"].flatMap(p=>[[p+"Faction",by(p+"Faction").value],[p+"Assets",[...armySelected[p]]]]));Object.assign(s.army,infantrySelection());s.mode=aiVanilla()?"vanilla":aiTactical()?"tactical":by("mode").value;s.vanillaLambs=by("vanillaLambs").checked;s.parameters={};for(const p of lobbyParameters())s.parameters[p.id]=Number(by(p.id).value);return s;}
+function apply(s){by("allyRoute").value=s.allyRoute||"shared";by("allyNode").value=s.allyNode||s.primaryNode;by("allyModel").value=s.allyModel||s.primaryModel;by("instructions").value=s.instructions||"";by("commanders").value=s.commanders||10;const army={...state.armyDefaults,...s.army};for(const side of ["west","east","green"]){by(side+"Faction").value=army[side+"Faction"];armySelected[side]=new Set(army[side+"Assets"]);}renderAssets();applyInfantry(army);for(const k of ["scenario","primaryNode","primaryModel","secondaryNode","secondaryModel","profile","map","temperature","maxTokens"])by(k).value=s[k];by("mode").value=s.mode==="vanilla"||s.mode==="tactical"?"single":s.mode;by("aiVanilla").checked=s.mode==="vanilla";by("aiTactical").checked=s.mode==="tactical";by("aiLLM").checked=s.mode!=="vanilla"&&s.mode!=="tactical";by("vanillaLambs").checked=!!s.vanillaLambs;for(const k of ["ace","dev","useDesign"])by(k).checked=s[k];for(const p of lobbyParameters())by(p.id).value=s.parameters?.[p.id]??p.default;for(const role of ["primary","secondary","ally"]){by(role+"Models").replaceChildren();by(role+"Status").textContent="Доступность ещё не проверена.";by(role+"Status").className="status";}updateMode();dirty=false;updateSummary();updateDesignerLink();}
+function updateMode(){by("allyBox").classList.toggle("hidden",by("allyRoute").value!=="separate");by("alliedRouting").classList.toggle("hidden",by("scenario").value!=="warlords");const anti=by("scenario").value==="antistasi";for(const b of document.querySelectorAll("[data-warlords]"))b.disabled=anti;if(anti&&["vehicles","infantry","rules","instructions"].includes(setupPage))showSetup("overview");by("designerEntry").hidden=anti;by("secondaryBox").classList.toggle("hidden",by("mode").value!=="dual");by("parametersBox").classList.toggle("hidden",anti);by("armyBox").classList.toggle("hidden",anti);by("infantryBox").classList.toggle("hidden",anti);by("map").disabled=anti;by("dev").disabled=anti;by("primaryTitle").textContent=by("mode").value==="dual"?"Стратегический командир":"Главная модель";const vanilla=aiVanilla(),noLLM=aiNoLLM();document.body.classList.toggle("vanilla-ai",vanilla);by("aiControlBox").hidden=anti;by("vanillaLambsRow").hidden=!vanilla;by("vanillaModelsNote").hidden=!noLLM;by("vanillaModelsNote").textContent=aiTactical()?"Выбран тактический ИИ NeroAI без LLM — модели в этом запуске не используются.":"Выбран штатный ИИ Arma — модели в этом запуске не используются.";const mb=document.querySelector('[data-setup="models"]'),ib=document.querySelector('[data-setup="instructions"]');if(mb){mb.disabled=noLLM;mb.title=noLLM?"Без LLM: модели не нужны":"";}if(ib){ib.disabled=anti||noLLM;ib.title=noLLM?"Инструкции нужны только LLM":"";}if(noLLM&&["models","instructions"].includes(setupPage))showSetup("overview");by("scenarioHelp").textContent=anti?"Клиент с отдельным модом Antistasi. Загрузите свою кампанию из игры; параметры кампании и права Зевса задаёт Antistasi.":"Обычный клиент, затем «Мультиплеер → Создать сервер». Отдельные сервер и HC не запускаются.";}
+const modPages=new Map(),modOpen=new Map();
+function equipmentModOptions(){
+ const kind=by("assetKind").value,previous=by("assetMod").value;
+ const kinds=["CAR","APC","TANK","HELICOPTER","PLANE","SHIP","STATIC"];
+ const providers=new Set(catalog.assets.filter(a=>[0,1,2].includes(a.side)&&kinds.includes(a.kind)&&(!kind||a.kind===kind)).map(a=>a.mod));
+ const available=catalog.mods.filter(m=>providers.has(m.name)).sort((a,b)=>a.name.localeCompare(b.name,'ru'));
+ options(by("assetMod"),[{value:"",text:"Все моды техники"},...available.map(m=>({value:m.name,text:m.name.replace(/^@/,"")}))]);
+ by("assetMod").value=providers.has(previous)?previous:"";
+}
+function renderAssets(){
+ if(!catalog)return;
+ equipmentModOptions();
+ for(const side of ["west","east","green"])for(const d of by(side+"Assets").querySelectorAll("details"))modOpen.set(d.dataset.key,d.open);
+ const q=by("assetSearch").value.trim().toLowerCase(),kind=by("assetKind").value,mod=by("assetMod").value;
+ for(const [side,num] of [["west",1],["east",0],["green",2]]){
+  const selected=armySelected[side],found=catalog.assets.filter(a=>a.side===num&&a.kind!=="INFANTRY"&&(!kind||a.kind===kind)&&(!mod||a.mod===mod)&&(by("assetShow").value!=="selected"||selected.has(a.class))&&(!q||[a.label,a.class,a.mod].join(" ").toLowerCase().includes(q)));
+  const groups=new Map();for(const a of found){if(!groups.has(a.mod))groups.set(a.mod,[]);groups.get(a.mod).push(a);}
+  const sections=[];
+  for(const [name,assets] of [...groups].sort((a,b)=>a[0].localeCompare(b[0]))){
+   assets.sort((a,b)=>a.label.localeCompare(b.label,'ru')||a.class.localeCompare(b.class));
+   const key=side+":"+name,pages=Math.max(1,Math.ceil(assets.length/60)),page=Math.min(modPages.get(key)||0,pages-1);modPages.set(key,page);
+   const d=document.createElement("details"),summary=document.createElement("summary"),rows=document.createElement("div");d.dataset.key=key;
+   d.open=!!q||!!mod||(modOpen.has(key)?modOpen.get(key):false);
+   const heading=()=>summary.textContent=`${name.replace(/^@/,"")} · ${assets.length} · выбрано ${assets.filter(a=>selected.has(a.class)).length}`;heading();
+   const fillRows=()=>{rows.replaceChildren();if(!d.open)return;
+   for(const a of assets.slice(page*60,(page+1)*60)){
+    const l=document.createElement("label"),c=document.createElement("input"),t=document.createElement("span");l.className="check";c.type="checkbox";c.checked=selected.has(a.class);
+    c.onchange=()=>{c.checked?selected.add(a.class):selected.delete(a.class);dirty=true;heading();by("catalogStatus").textContent=`Выбрано: синие ${armySelected.west.size}, красные ${armySelected.east.size}, зелёные ${armySelected.green.size}.`;};
+    t.textContent=a.label;l.append(c,t);rows.append(l);
+   }
+   if(pages>1){const prev=document.createElement("button"),next=document.createElement("button"),status=document.createElement("span");prev.textContent="Назад";next.textContent="Далее";prev.disabled=page===0;next.disabled=page+1>=pages;status.textContent=` ${page+1}/${pages} `;prev.onclick=()=>{modPages.set(key,page-1);renderAssets();};next.onclick=()=>{modPages.set(key,page+1);renderAssets();};rows.append(prev,status,next);}
+   };d.ontoggle=()=>{modOpen.set(key,d.open);fillRows();};fillRows();
+   d.append(summary,rows);sections.push(d);
+  }
+  if(!sections.length){const empty=document.createElement("p");empty.textContent="Техника не найдена";sections.push(empty);}
+  by(side+"Assets").replaceChildren(...sections);
+  for(const suffix of ["Prev","Page","Next"])by(side+suffix).hidden=true;
+ }
+ by("catalogStatus").textContent=`Выбрано: синие ${armySelected.west.size}, красные ${armySelected.east.size}, зелёные ${armySelected.green.size}. Техника сгруппирована по модам. Выбранные моды подключаются при следующем запуске.`;
+}
+function filterAssets(){modPages.clear();renderAssets();}
+by("assetSearch").oninput=filterAssets;for(const id of ["assetShow","assetKind","assetMod"])by(id).onchange=filterAssets;
+const infState={},infSides={west:1,east:0,green:2};let infPage=0;
+function infantrySelection(){const out={};for(const p of Object.keys(infSides)){const v=infState[p];out[p+'Infantry']=v.mode==='auto'?null:[...v.ids];out[p+'InfantryCosts']={...v.costs};}return out;}
+function applyInfantry(army){for(const p of Object.keys(infSides)){const ids=army[p+'Infantry'];infState[p]={mode:Array.isArray(ids)?'custom':'auto',ids:new Set(ids||[]),costs:{...(army[p+'InfantryCosts']||{})}};}infPage=0;renderInfantry();}
+function autoInfantry(p){return catalog.assets.filter(a=>a.kind==='INFANTRY'&&a.side===infSides[p]&&a.faction===by(p+'Faction').value&&!/pilot|crew|officer|unarmed|diver/i.test(a.class)).sort((a,b)=>Number(/_arb_|_desert|_winter/i.test(a.class))-Number(/_arb_|_desert|_winter/i.test(b.class))||a.class.localeCompare(b.class)).slice(0,12);}
+function renderInfantry(){if(!catalog||!infState.west)return;const p=by('infSide').value,v=infState[p],custom=v.mode==='custom';by('infMode').value=v.mode;
+const assets=catalog.assets.filter(a=>a.kind==='INFANTRY'&&a.side===infSides[p]),mod=by('infMod').value,faction=by('infFaction').value;
+options(by('infMod'),[{value:'',text:'Все моды пехоты'},...[...new Set(assets.map(a=>a.mod))].sort().map(m=>({value:m,text:m.replace(/^@/,'')}))]);by('infMod').value=assets.some(a=>a.mod===mod)?mod:'';
+const scoped=assets.filter(a=>!by('infMod').value||a.mod===by('infMod').value);options(by('infFaction'),[{value:'',text:'Все фракции стороны'},...[...new Set(scoped.map(a=>a.faction))].map(f=>({value:f,text:catalog?.factionLabels?.[f]||f})).sort((a,b)=>a.text.localeCompare(b.text,"ru"))]);by('infFaction').value=scoped.some(a=>a.faction===faction)?faction:'';
+const selected=custom?v.ids:new Set(autoInfantry(p).map(a=>a.class)),q=by('infSearch').value.trim().toLowerCase();let rows=scoped.filter(a=>(!by('infFaction').value||a.faction===by('infFaction').value)&&(custom||selected.has(a.class))&&(by('infShow').value!=='selected'||selected.has(a.class))&&(!q||[a.label,a.class,a.mod].join(' ').toLowerCase().includes(q))).sort((a,b)=>a.mod.localeCompare(b.mod)||a.label.localeCompare(b.label,'ru')||a.class.localeCompare(b.class));
+const pages=Math.max(1,Math.ceil(rows.length/60));infPage=Math.min(infPage,pages-1);const elements=[];
+for(const a of rows.slice(infPage*60,(infPage+1)*60)){const line=document.createElement('div');line.className='row';const label=document.createElement('label');label.className='check';const check=document.createElement('input');check.type='checkbox';check.checked=selected.has(a.class);check.disabled=!custom;const name=document.createElement('span');name.textContent=a.label+' · '+a.mod.replace(/^@/,'');name.title=a.class;label.append(check,name);
+const price=document.createElement('input');price.type='number';price.min=60;price.max=50000;price.step=1;price.value=v.costs[a.class]??100;price.disabled=!check.checked;price.setAttribute('aria-label','Цена '+a.label+' в CP');price.style.maxWidth='125px';const unit=document.createElement('span');unit.textContent='CP';unit.style.flex='0';
+check.onchange=()=>{check.checked?v.ids.add(a.class):v.ids.delete(a.class);price.disabled=!check.checked;dirty=true;infStatus(p);};price.onchange=()=>{const n=Number(price.value);if(!Number.isInteger(n)||n<60||n>50000){price.value=v.costs[a.class]??100;message('Цена пехоты: целое число от 60 до 50000 CP.',true);return;}v.costs[a.class]=n;dirty=true;};line.append(label,price,unit);elements.push(line);}
+if(!elements.length){const empty=document.createElement('p');empty.textContent=p==='green'&&!custom?'Автоматический состав зелёных берётся из фракции в редакторе карты. Выберите «Свой список бойцов» для ручного выбора.':'По этим фильтрам бойцы не найдены.';elements.push(empty);}by('infRows').replaceChildren(...elements);by('infPrev').disabled=infPage===0;by('infNext').disabled=infPage+1>=pages;by('infPage').textContent=(infPage+1)+' / '+pages;infStatus(p);}
+function infStatus(p){const v=infState[p];by('infStatus').textContent=v.mode==='custom'?'Выбрано типов бойцов: '+v.ids.size+' / 256. Фильтры не удаляют выбранных бойцов.':'Автоматический состав: '+autoInfantry(p).length+' типов выбранной фракции. Цены можно изменить.';}
+by('infMode').onchange=()=>{const p=by('infSide').value,v=infState[p];if(by('infMode').value==='custom'&&!v.ids.size)v.ids=new Set(autoInfantry(p).map(a=>a.class));v.mode=by('infMode').value;dirty=true;infPage=0;renderInfantry();};
+by('infSide').onchange=()=>{infPage=0;by('infMod').value='';by('infFaction').value='';renderInfantry();};for(const id of ['infMod','infFaction','infShow'])by(id).onchange=()=>{infPage=0;renderInfantry();};by('infSearch').oninput=()=>{infPage=0;renderInfantry();};by('infPrev').onclick=()=>{infPage--;renderInfantry();};by('infNext').onclick=()=>{infPage++;renderInfantry();};by('infPricesReset').onclick=()=>{infState[by('infSide').value].costs={};dirty=true;renderInfantry();};for(const p of ['west','east','green'])by(p+'Faction').addEventListener('change',()=>{infPage=0;renderInfantry();});
+
+async function readJournal(){try{const r=await api("/api/journal");by("bridgeJournal").textContent=(r.bridgeFile||"Нет журнала моста")+"\n"+r.bridge;by("engineJournal").textContent=(r.rptFile||"Нет журнала игры")+"\n"+r.engine;}catch(e){by("bridgeJournal").textContent=e.message;}}
+by("refreshJournal").onclick=readJournal;by("journalDetails").ontoggle=()=>{if(by("journalDetails").open)readJournal();};by("openConsole").onclick=()=>api("/api/console",{}).then(()=>message("Открыто отдельное окно журнала. Оно читает мост и RPT; закрытие окна не останавливает игру или LLM.")).catch(e=>message(e.message,true));setInterval(()=>{if(by("journalDetails").open)readJournal();},2500);
+function renderPresets(){if(!state)return;const entries=Object.entries(state.presets||{}),q=by('presetSearch').value.trim().toLowerCase(),cards=[];for(const [name,p] of entries){const map=state.maps?.find(w=>w.id===p.map)?.label||p.map||'Карта не задана',scenario=p.scenario==='antistasi'?'Antistasi':'Warlords',node=state.nodes.find(n=>n.id===p.primaryNode)?.label||p.primaryNode||'Узел не задан';if(q&&![name,map,scenario,node,p.primaryModel,p.secondaryModel].join(' ').toLowerCase().includes(q))continue;
+const card=document.createElement('article');card.className='preset-card';card.classList.toggle('chosen',viewedPreset===name);const title=document.createElement('h3');title.textContent=name;const description=document.createElement('p');description.textContent=scenario+(p.scenario==='warlords'?' · '+map+' · '+(p.commanders||10)+' командиров на сторону':'')+' · профиль '+(p.profile||'по умолчанию');const model=document.createElement('p');model.textContent=p.mode==='vanilla'?'Штатный ИИ Arma'+(p.vanillaLambs?' · LAMBS':''):p.mode==='tactical'?'Тактический ИИ NeroAI — без LLM':(p.mode==='dual'?'Две LLM':'Одна LLM')+' · '+node+' · '+(p.primaryModel||'Модель не выбрана')+(p.mode==='dual'?' / '+(p.secondaryModel||'Вторая модель не выбрана'):'');const design=document.createElement('p');design.textContent=p.scenario==='warlords'?(p.useDesign?'Использует сохранённый сценарий редактора карты':'Стандартный сценарий Warlords'):'';const button=document.createElement('button');button.type='button';button.textContent=viewedPreset===name?'Применить снова':'Применить пресет';button.onclick=()=>applyPreset(name);const more=document.createElement('div');more.className='row-actions';for(const [label,fn,tip] of [['Сохранить текущие настройки в этот пресет',()=>overwritePreset(name),'Перезаписать пресет тем, что сейчас в полях вкладки запуска'],['Удалить',()=>removePreset(name),'']]){const b=document.createElement('button');b.type='button';b.textContent=label;if(tip)b.title=tip;b.onclick=()=>fn().catch(e=>message('✗ '+e.message,true));more.append(b);}card.append(title,description,model,design,more,button);cards.push(card);}
+by('presetCount').textContent=cards.length+' / '+entries.length;if(!cards.length){const empty=document.createElement('p');empty.textContent=entries.length?'По этому запросу пресеты не найдены.':'Сохранённых пресетов пока нет. Заполните настройки на вкладке запуска и нажмите «Добавить новый пресет».';cards.push(empty);}by('presetList').replaceChildren(...cards);}
+function applyPreset(name){const preset=state.presets?.[name];if(!preset)return;if(dirty&&!confirm('Применить пресет «'+name+'» вместо несохранённых настроек в полях?'))return;apply(preset);viewedPreset=name;by('preset').value=name;dirty=true;renderPresets();updateDesignerLink();showAppTab('launch');showSetup('overview');updateSummary();message('Пресет «'+name+'» применён к полям. Для запуска используйте кнопку «Обновить мод и запустить Arma».');}
+by('presetSearch').oninput=renderPresets;
+
+function render(next){state=next;if(state.selected.scenario==="warlords")state.selected.ace=true;if(state.maps)options(by("map"),state.maps.map(w=>({value:w.id,text:w.label})));for(const [side,num] of [["west",1],["east",0],["green",2]])options(by(side+"Faction"),catalog.factions.filter(f=>catalog.assets.some(a=>a.kind==="INFANTRY"&&a.side===num&&a.faction===f)).map(f=>({value:f,text:catalog?.factionLabels?.[f]||f})).sort((a,b)=>a.text.localeCompare(b.text,"ru")));options(by("preset"),[{value:"",text:"Текущие настройки без именованного пресета"},...Object.keys(state.presets).map(k=>({value:k,text:k}))]);for(const role of ["primary","secondary","ally"])options(by(role+"Node"),state.nodes.map(n=>({value:n.id,text:n.label+" · "+n.baseUrl})));by("parameters").replaceChildren(...parameterNodes());apply(state.selected);by("preset").value=state.activePreset||"";viewedPreset=state.activePreset||"";renderPresets();updateSummary();}
+async function check(role){const button=by("check"+role[0].toUpperCase()+role.slice(1)),status=by(role+"Status");button.disabled=true;status.textContent="Проверка API…";try{const result=await api("/api/check",{id:by(role+"Node").value});by(role+"Models").replaceChildren(...result.models.map(m=>{const option=document.createElement("option");option.value=m.id;return option;}));status.textContent=`Список моделей доступен · ${result.models.length} · ${result.ms} мс. Ответ выбранной LLM будет проверен перед запуском.`;status.className="status ok";}catch(e){status.textContent=e.message;status.className="status bad";}finally{button.disabled=false;}}
+async function save(name){const result=await api("/api/save",{selected:selection(),revision:state.revision,...(name?{name}:{})});state.revision=result.revision;const fresh=await api("/api/state");if(canonJson(fresh.selected)!==canonJson(result.selected)||(name&&canonJson(fresh.presets?.[name])!==canonJson(result.selected)))throw new Error("проверка после записи не совпала. Нажмите «Сохранить» ещё раз.");state.presets=result.presets;state.selected=result.selected;state.activePreset=result.activePreset;options(by("preset"),[{value:"",text:"Текущие настройки без именованного пресета"},...Object.keys(state.presets).map(k=>({value:k,text:k}))]);by("preset").value=state.activePreset||"";dirty=false;viewedPreset=state.activePreset||"";renderPresets();updateSummary();message((name?`✓ Пресет «${name}» сохранён и проверен`:"✓ Настройки сохранены и проверены")+" в "+new Date().toLocaleTimeString()+(name?".":". Применятся при следующем запуске."));}
+function canonJson(v){const st=x=>Array.isArray(x)?x.map(st):x&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,st(x[k])])):x;return JSON.stringify(st(v??null));}
+by("loadPreset").onclick=()=>applyPreset(by("preset").value);
+by("save").onclick=()=>save().catch(e=>message(e.message,true));by("savePreset").onclick=()=>{const name=by("presetName").value.trim();if(!name)return message("Введите имя пресета.",true);if(Object.hasOwn(state.presets,name)&&!confirm("Пресет «"+name+"» уже есть. Сохранить текущие настройки поверх него?"))return;save(name).catch(e=>message(e.message,true));};
+by("checkPrimary").onclick=()=>check("primary");by("checkSecondary").onclick=()=>check("secondary");
+for(const role of ["primary","secondary","ally"])by(role+"Node").onchange=()=>{const node=state.nodes.find(n=>n.id===by(role+"Node").value);by(role+"Model").value=node.model||"";by(role+"Models").replaceChildren();by(role+"Status").textContent="Доступность ещё не проверена.";by(role+"Status").className="status";dirty=true;};
+by("scenario").onchange=()=>{updateMode();poll();};by("mode").onchange=updateMode;for(const id of ["aiLLM","aiVanilla","aiTactical","vanillaLambs"])by(id).addEventListener("change",updateMode);by("allyRoute").onchange=updateMode;by("checkAlly").onclick=()=>check("ally");
+by("addNode").onclick=async()=>{try{const current=selection(),result=await api("/api/nodes",{label:by("nodeLabel").value,baseUrl:by("nodeUrl").value,apiKey:by("nodeKey").value});render(result);apply(current);by("nodeKey").value="";message("Узел добавлен. Выберите его и проверьте список моделей.");}catch(e){message(e.message,true);}};
+by("launch").onclick=async()=>{try{if(!state)throw new Error("Дождитесь загрузки настроек.");const result=await api("/api/launch",{selected:selection(),revision:state.revision});if(result.revision!==undefined)state.revision=result.revision;message(result.job.message);by("launch").disabled=true;}catch(e){message(e.message,true);}};
+document.addEventListener("change",e=>{if(!["themeSelect","mapPresetWorld","mapPresetName","mapPresetSearch","preset","assetShow","assetKind","assetMod","infSide","infShow","infMod","infFaction","presetSearch","assetSearch","infSearch","parameterSearch","presetName","armySetupSide","armySetupPick","armySetupName"].includes(e.target.id))dirty=true;updateSummary();});document.addEventListener("input",e=>{if(!["themeSelect","mapPresetWorld","mapPresetName","mapPresetSearch","presetSearch","assetSearch","infSearch","parameterSearch","presetName","armySetupSide","armySetupPick","armySetupName"].includes(e.target.id))dirty=true;updateSummary();});let lastJob="";
+async function poll(initial=false){try{const next=await api(initial?"/api/state":"/api/state?scenario="+encodeURIComponent(by("scenario").value||"warlords"));if(initial){render(next);message(next.running?"Arma сейчас запущена. Настройки можно сохранить; для обновления и нового запуска закройте игру сами.":"Выберите сценарий и модели. Перед запуском приложение проверит их и подготовит мод.");}if(next.updateScenario===by("scenario").value)by("addonStatus").textContent=(next.updateScenario==="antistasi"?"Antistasi":"Warlords")+(next.updateInstalled?" · установлен текущий кандидат":" · обновление подготовится при запуске");by("launchState").textContent=next.job.status==="running"?next.job.message:next.running?"Arma запущена · новый запуск после закрытия игры":"Arma закрыта · запуск доступен";by("launch").disabled=next.running||next.job.status==="running";const key=next.job.status+next.job.message;if(next.job.status!=="idle"&&key!==lastJob){message(next.job.message,next.job.status==="error");lastJob=key;}}catch(e){message(e.message,true);}}
+function designerHref(){return "/designer?world="+encodeURIComponent(by("map").value||"Australia")+"&v=20261006-2";}
+function updateDesignerLink(){by("designerLink").href=designerHref();}
+by("map").addEventListener("change",updateDesignerLink);
+by("designerLink").addEventListener("click",e=>{e.preventDefault();showAppTab("maps");});
+by("openDesigner").onclick=()=>{showAppTab("maps");};
+/* 8.10: one page — the map editor lives in the "Редактор карт и пресеты" tab.
+ * Saves are verified: the server writes with fsync + read-back, then this page
+ * re-reads and compares; a stale window is refused by the profile revision. */
+let designerDirty=false;
+function openDesignerFrame(){const frame=by('designerFrame');if(!frame||!state||String(frame.src).includes('/designer'))return;frame.src='/designer?embedded=1&workspace=1&world='+encodeURIComponent(by('map').value||'Australia');}
+async function overwritePreset(name){if(!confirm('Сохранить текущие настройки вкладки запуска в пресет «'+name+'»? Старое содержимое пресета будет заменено.'))return;await save(name);}
+async function removePreset(name){if(!confirm('Удалить пресет запуска «'+name+'»?'))return;const result=await api('/api/preset-delete',{name,revision:state.revision});state.presets=result.presets;state.revision=result.revision;state.activePreset=result.activePreset;if(viewedPreset===name)viewedPreset='';options(by("preset"),[{value:"",text:"Текущие настройки без именованного пресета"},...Object.keys(state.presets).map(k=>({value:k,text:k}))]);by("preset").value=state.activePreset||"";renderPresets();message('✓ Пресет «'+name+'» удалён.');}
+window.addEventListener('beforeunload',e=>{if(designerDirty||dirty){e.preventDefault();e.returnValue='';}});
+
+let sideSetupRecords=[],armyClearBackup=null;
+function composeArmy(){const army={};for(const p of ['west','east','green']){army[p+'Faction']=by(p+'Faction').value;army[p+'Assets']=[...armySelected[p]];}return {...army,...infantrySelection()};}
+function putArmy(army){for(const p of ['west','east','green']){by(p+'Faction').value=army[p+'Faction'];armySelected[p]=new Set(army[p+'Assets']||[]);}applyInfantry(army);renderAssets();dirty=true;updateSummary();}
+function renderSideSetupChoices(){const previous=by('armySetupPick').value,p=by('armySetupSide').value||'west',rows=sideSetupRecords.filter(r=>r.side===p);options(by('armySetupPick'),[{value:'',text:rows.length?'Выберите сетап':'Сетапов этой стороны пока нет'},...rows.map(r=>({value:r.id,text:r.name+' · '+r.assets+' машин'}))]);if(rows.some(r=>r.id===previous))by('armySetupPick').value=previous;by('armySetupApply').disabled=!rows.length;}
+async function refreshSideSetups(){sideSetupRecords=(await api('/api/side-setups')).setups;renderSideSetupChoices();}
+function clearArmyPart(p,part){const army=composeArmy();armyClearBackup=structuredClone(army);putArmy(NeroSideSetups.apply(army,NeroSideSetups.clear(NeroSideSetups.draft(army,p),part)));by('armyUndoClear').disabled=false;message('Состав '+({west:'синих',east:'красных',green:'зелёных'})[p]+' очищен. Сняты все выбранные позиции, включая скрытые фильтрами.');}
+for(const p of ['west','east','green'])by(p+'ClearAssets').onclick=()=>clearArmyPart(p,'assets');by('infClear').onclick=()=>clearArmyPart(by('infSide').value,'infantry');by('armyClearAll').onclick=()=>clearArmyPart(by('armySetupSide').value,'all');by('armyUndoClear').onclick=()=>{if(!armyClearBackup)return;putArmy(armyClearBackup);armyClearBackup=null;by('armyUndoClear').disabled=true;message('Предыдущий состав восстановлен.');};
+by('armySetupSide').onchange=renderSideSetupChoices;by('armySetupRefresh').onclick=()=>refreshSideSetups().catch(e=>message(e.message,true));
+by('armySetupApply').onclick=async()=>{try{if(!by('armySetupPick').value)throw Error('Выберите сохранённый сетап.');const r=await api('/api/side-setup?id='+encodeURIComponent(by('armySetupPick').value));putArmy(NeroSideSetups.apply(composeArmy(),r.setup,by('armySetupSide').value));message('Сетап «'+r.name+'» применён к стороне. Сохраните настройки запуска.');}catch(e){message(e.message,true);}};
+by('armySetupSave').onclick=async()=>{try{const r=await api('/api/side-setups',{name:by('armySetupName').value,setup:NeroSideSetups.draft(composeArmy(),by('armySetupSide').value)});await refreshSideSetups();by('armySetupPick').value=r.id;message('Сетап «'+r.name+'» сохранён и проверен. Он доступен в отдельном окне сетапов и редакторе карты.');try{localStorage.setItem('nero-side-setups-updated',String(Date.now()));}catch{}}catch(e){message(e.message,true);}};
+by('openSetups').onclick=()=>window.open('/setups?side='+encodeURIComponent(by('armySetupSide').value||'west'),'nero-side-setups','width=1250,height=850');
+window.addEventListener('focus',()=>refreshSideSetups().catch(()=>{}));window.addEventListener('storage',e=>{if(e.key==='nero-side-setups-updated')refreshSideSetups().catch(()=>{});});window.addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.source==='nero-side-setups')refreshSideSetups().catch(()=>{});});
+
+api("/api/catalog").then(x=>{catalog=x;return poll(true);}).then(refreshSideSetups).catch(e=>message(e.message,true));setInterval(()=>poll(),5000);
+</script><!-- context-help:start -->
+<script>
+/* Click opens an inline explanation; hover/focus also update the status strip. */
+const NeroHelp=(()=>{
+  let output=null,sequence=0;
+  function show(text){if(output)output(text||'Наведите на знак ? или выберите настройку — подсказка появится здесь.');}
+  function bind(doc,texts={},sink){
+    if(sink)output=sink;
+    else if(doc.getElementById('settingHelp'))output=text=>doc.getElementById('settingHelp').textContent=text;
+    function annotate(){
+      for(const label of doc.querySelectorAll('label')){
+        if(label.dataset.helpBound)continue;
+        const field=label.htmlFor?doc.getElementById(label.htmlFor):label.querySelector('input,select,textarea');
+        if(!field?.id || field.type==='search')continue;
+        label.dataset.helpBound='1';
+        const id=field.dataset.editorId||field.id;
+        const caption=label.cloneNode(true);for(const el of caption.querySelectorAll('input,select,textarea,button,.context-help-inline'))el.remove();
+        const title=caption.textContent.trim().replace(/\s+/g,' ')||field.getAttribute('aria-label')||id;
+        const help=texts[id]||field.dataset.help||field.getAttribute('title')||('«'+title+'». Изменения применятся после сохранения сценария.');
+        field.dataset.help=help;field.removeAttribute('title');
+        const button=doc.createElement('button');button.type='button';button.className='help-trigger';button.textContent='?';
+        button.setAttribute('aria-label','Подсказка: '+title);button.dataset.help=help;
+        const panel=doc.createElement('span');panel.className='context-help-inline';panel.id='context-help-'+(++sequence);panel.hidden=true;panel.setAttribute('role','note');
+        button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-expanded','false');
+        button.onclick=e=>{e.preventDefault();e.stopPropagation();const open=panel.hidden;
+          for(const other of doc.querySelectorAll('.context-help-inline'))other.hidden=true;
+          for(const other of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))other.setAttribute('aria-expanded','false');
+          panel.textContent=button.dataset.help;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));show(button.dataset.help);
+          if(open)panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+        };
+        panel.onclick=e=>{e.preventDefault();e.stopPropagation();};
+        if(field.parentElement===label&&!['checkbox','radio'].includes(field.type))label.insertBefore(button,field);else label.append(button);
+        label.append(panel);
+      }
+      for(const el of doc.querySelectorAll('button[title],input[title],select[title]')){el.dataset.help=el.getAttribute('title');el.removeAttribute('title');}
+      for(const [id,text] of Object.entries(texts)){
+        const el=doc.getElementById(id)||doc.getElementById('editor-'+id);if(!el)continue;el.dataset.help=text;
+        const label=el.closest('label')||doc.querySelector('label[for="'+el.id+'"]');const trigger=label?.querySelector('.help-trigger');if(trigger)trigger.dataset.help=text;
+      }
+    }
+    annotate();
+    if(!doc.documentElement.dataset.helpListening){
+      doc.documentElement.dataset.helpListening='1';
+      doc.addEventListener('keydown',e=>{if(e.key!=='Escape')return;for(const panel of doc.querySelectorAll('.context-help-inline'))panel.hidden=true;for(const trigger of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))trigger.setAttribute('aria-expanded','false');});
+      for(const name of ['focusin','pointerover'])doc.addEventListener(name,e=>{const el=e.target.closest?.('[data-help]');if(el)show(el.dataset.help);});
+      let queued=false;
+      new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;annotate();});}).observe(doc.body,{childList:true,subtree:true});
+    }
+    show();
+  }
+  return {bind,show};
+})();
+
+</script>
+<!-- context-help:end -->
+<!-- workspace-module:start -->
+<script>
+const NeroDevCatalog=[{"id":"transportDrop","title":"Десант с транспортного самолёта","description":"ИИ доставляет пополнение вне базы физическим самолётом и выбирает безопасный союзный сектор. На базе бойцы появляются на земле. При отключении вне базы используется обычная доставка Warlords.","stage":"experimental","default":true,"field":"transportDrop"},{"id":"vehicleCrew","title":"Покупка техники с экипажем","description":"Купленная через NeroAI наземная техника получает необходимый экипаж. При отключении бойцы занимают машину обычным способом.","stage":"experimental","default":true,"field":"vehicleCrew"},{"id":"fieldRepair","title":"Самостоятельный ремонт и прикрытие","description":"В тактическом режиме повреждённая техника запрашивает механика или прикрытие, ремонтируется либо отходит по обстановке. При отключении автоматический цикл выключен; ручной приказ ремонта остаётся доступен.","stage":"experimental","default":true,"field":"fieldRepair"}];
+/* Loaded before workspace.js so all preset/save paths use these wrappers. */
+(() => {
+  const entries=NeroDevCatalog.filter(e=>e.stage==='experimental');
+  const tab=document.createElement('button');tab.id='devmodeTab';tab.type='button';tab.textContent='DevMode';tab.setAttribute('aria-selected','false');
+  document.querySelector('.app-tabs').append(tab);
+  const panel=document.createElement('section');panel.id='devmodePanel';panel.hidden=true;panel.className='card devmode-panel';
+  panel.innerHTML='<div class="eyebrow">Испытательный полигон</div><h2>DevMode</h2><p>Новые механики и обновления для проверки в бою. После проверки они будут переноситься в основные настройки сценария.</p><label class="check"><input type="checkbox" id="devModeEnabled"> Включить экспериментальные обновления</label><p id="devModeStatus" role="status"></p><div id="devModeFeatures" class="devmode-features"></div><p class="devmode-note">Сохраняется вместе со сценарием и пресетами запуска кнопкой «Сохранить всё». Применяется при следующем запуске миссии. Отладочная консоль и Зевс включаются отдельно в настройках сценария.</p><p>В старых пресетах текущие механики остаются включёнными. Исправления ошибок покупки, спавна и захвата действуют независимо от DevMode.</p>';
+  document.querySelector('main').append(panel);
+  for(const entry of entries){
+    const card=document.createElement('label');card.className='devmode-feature';
+    const input=document.createElement('input');input.type='checkbox';input.id='experiment-'+entry.id;
+    const text=document.createElement('span'),title=document.createElement('strong'),description=document.createElement('span'),badge=document.createElement('small');
+    title.textContent=entry.title;description.textContent=entry.description;badge.textContent='На испытании';text.append(title,badge,description);card.append(input,text);by('devModeFeatures').append(card);
+  }
+  function refresh(){
+    const supported=by('scenario').value==='warlords';
+    by('devModeEnabled').disabled=!supported;
+    for(const e of entries)by('experiment-'+e.id).disabled=!supported||!by('devModeEnabled').checked;
+    const count=entries.filter(e=>by('experiment-'+e.id).checked).length;
+    by('devModeStatus').textContent=!supported?'Пока доступно для Warlords и сценариев редактора. Для Antistasi выбор сохраняется, но не применяется.':by('devModeEnabled').checked?'При следующем запуске включено обновлений: '+count+' из '+entries.length+'.':'Экспериментальные обновления отключены. Ваш выбор сохранён для повторного включения.';
+  }
+  const originalSelection=selection,originalApply=apply;
+  selection=function(){const s=originalSelection();s.devMode={enabled:by('devModeEnabled').checked,features:{...savedFeatures,...Object.fromEntries(entries.map(e=>[e.id,by('experiment-'+e.id).checked]))}};return s;};
+  let savedFeatures={};
+  apply=function(s){
+    savedFeatures={...s.devMode?.features};
+    by('devModeEnabled').checked=s.devMode?.enabled??true;
+    for(const e of entries)by('experiment-'+e.id).checked=savedFeatures[e.id]??e.default;
+    originalApply(s);refresh();
+  };
+  panel.addEventListener('change',refresh);by('scenario').addEventListener('change',refresh);
+})();
+
+(() => {
+  const tab=document.createElement('button');tab.type='button';tab.id='missionsTab';tab.textContent='Миссии';tab.setAttribute('aria-selected','false');document.querySelector('.app-tabs').prepend(tab);
+  const panel=document.createElement('section');panel.id='missionsPanel';panel.hidden=true;
+  panel.innerHTML='<section class="mission-brief"><div><div class="eyebrow">NERO / ЦЕНТР ОПЕРАЦИЙ</div><h2>Выбор боевой задачи</h2><p>Сохранённые сценарии, карты и пресеты запуска — в одной библиотеке.</p></div><span class="brief-code">OPORD / 01</span></section><div id="missionModes" class="mission-modes"></div><section class="card mission-library"><div class="mission-library-head"><div><div class="eyebrow">Архив операций</div><h2>Все сохранённые сценарии</h2></div><button id="refreshMissions" type="button">Обновить список</button></div><div class="mission-search"><label>Поиск по названию или карте<input id="missionSearch" type="search" placeholder="Аргентина, Farabad, Australia…"></label><label>Режим<select id="missionFilter"></select></label></div><p id="missionCount" role="status">Загружаем библиотеку…</p><div id="missionList" class="mission-list"></div><p id="missionLibraryStatus" role="status"></p></section>';
+  document.querySelector('main').append(panel);
+  const modes=[['all','Все миссии','Общая библиотека'],['warlords','Warlords','Захват связанных секторов'],['airBattle','Воздушное сражение','Авиация и воздушные цели'],['assaultDefense','Штурм и оборона','Наземные боевые операции'],['frontlineCampaign','Фронт и снабжение','Кампания, склады и резервы'],['antistasi','Antistasi','Пресеты запуска кампании']];
+  for(const [id,title,description] of modes){const option=document.createElement('option');option.value=id;option.textContent=title;by('missionFilter').append(option);if(id==='all')continue;const button=document.createElement('button');button.type='button';button.dataset.missionMode=id;const small=document.createElement('small'),strong=document.createElement('strong'),note=document.createElement('span');small.textContent=String(modes.findIndex(m=>m[0]===id)).padStart(2,'0')+' / РЕЖИМ';strong.textContent=title;note.textContent=description;button.append(small,strong,note);button.onclick=()=>{by('missionFilter').value=id;draw();};by('missionModes').append(button);}
+  let items=[],loading=false;
+  function draw(){
+    const q=by('missionSearch').value.trim().toLocaleLowerCase('ru'),mode=by('missionFilter').value;
+    const visible=items.filter(p=>(mode==='all'||p.mode===mode)&&[p.title,p.world,p.worldLabel,p.detail].join(' ').toLocaleLowerCase('ru').includes(q));
+    by('missionList').replaceChildren();by('missionCount').textContent='Показано '+visible.length+' из '+items.length+' · Карты Warlords, операции и пресеты запуска';
+    for(const p of visible){const card=document.createElement('article');card.className='mission-card';card.dataset.missionKey=p.key;const tag=document.createElement('small'),title=document.createElement('h3'),world=document.createElement('p'),detail=document.createElement('p'),button=document.createElement('button');
+      tag.textContent={map:'СЦЕНАРИЙ КАРТЫ',operation:'ОПЕРАЦИЯ',profile:'ПРЕСЕТ ЗАПУСКА'}[p.kind];title.textContent=p.title;world.className='mission-world';world.textContent=p.worldLabel;detail.textContent=p.detail;button.type='button';button.textContent='Открыть сценарий';button.onclick=async()=>{button.disabled=true;try{await NeroWorkspace.openMission(p);}catch(e){by('missionLibraryStatus').textContent=e.message;}finally{button.disabled=false;}};card.append(tag,title,world,detail,button);by('missionList').append(card);}
+    if(!visible.length){const empty=document.createElement('p');empty.textContent='Сценарии не найдены. Измените поиск или выберите другой режим.';by('missionList').append(empty);}
+    for(const button of by('missionModes').children)button.setAttribute('aria-pressed',String(button.dataset.missionMode===mode));
+  }
+  async function refresh(){if(loading)return;loading=true;by('refreshMissions').disabled=true;try{const result=await api('/api/scenario-library');items=result.items;draw();by('missionLibraryStatus').textContent='Выбор открывает сценарий для редактирования. Сохранение и запуск выполняются отдельной кнопкой в редакторе.';}catch(e){by('missionLibraryStatus').textContent='Не удалось загрузить библиотеку: '+e.message;}finally{loading=false;by('refreshMissions').disabled=false;}}
+  by('missionSearch').addEventListener('input',draw);by('missionFilter').addEventListener('change',draw);by('refreshMissions').onclick=refresh;
+  window.NeroMissionLibrary={refresh};
+})();
+
+/* Unified shell. Scenario controls are moved, not copied: the editor's live
+ * elements retain their handlers and are resolved through its scoped lookup. */
+(() => {
+  document.body.classList.add('workspace-shell');
+  const originalTabs=showAppTab, originalRender=render, originalSummary=updateSummary;
+  const originalSave=save, originalApply=apply, originalLaunch=by('launch').onclick;
+  let editor=null, pendingEditor=null, busy=false, activeTab='launch';
+  const extraPanels={setups:'setupsPanel',operations:'operationsPanel',devmode:'devmodePanel',missions:'missionsPanel'};
+  const focusMap=document.createElement('button');focusMap.type='button';focusMap.className='map-focus-toggle';focusMap.textContent='Развернуть карту';focusMap.setAttribute('aria-pressed','false');
+  focusMap.onclick=()=>{const focused=document.body.classList.toggle('map-focus');focusMap.textContent=focused?'Обычный вид':'Развернуть карту';focusMap.setAttribute('aria-pressed',String(focused));};
+  document.querySelector('.designer-intro').append(focusMap);
+  const overview=by('setup-overview');overview.prepend(by('designScenarioHost'));
+  for(const [id,text] of [['aiLLM','LLM-командиры'],['aiVanilla','Штатный ИИ Arma'],['aiTactical','Тактический ИИ NeroAI']]){
+    const input=by(id),label=input.closest('label');input.dataset.help=label.textContent.trim();label.querySelector('span').textContent=text;
+  }
+  const overviewName=document.querySelector('[data-setup="overview"] strong');if(overviewName)overviewName.textContent='Общие параметры';
+  function displayTab(tab){
+    activeTab=tab;
+    if(tab!=='maps'){document.body.classList.remove('map-focus');focusMap.textContent='Развернуть карту';focusMap.setAttribute('aria-pressed','false');}
+    originalTabs(tab);
+    for(const [key,id] of Object.entries(extraPanels))by(id).hidden=key!==tab;
+    for(const key of Object.keys(extraPanels))by(key+'Tab').setAttribute('aria-selected',String(key===tab));
+    document.body.dataset.workspaceTab=tab;
+    if(tab==='missions')NeroMissionLibrary.refresh();
+    if(tab==='setups' && by('setupsFrame').getAttribute('src')==='about:blank')by('setupsFrame').src='/setups?embedded=1';
+    if(tab==='operations' && by('operationsFrame').getAttribute('src')==='about:blank')openOperations();
+    if(tab==='maps' && state){if(!by('useDesign').checked){by('useDesign').checked=true;dirty=true;}updateSummary();}
+  }
+  showAppTab=displayTab;
+  by('setupsTab').onclick=()=>displayTab('setups');
+  by('operationsTab').onclick=()=>displayTab('operations');
+  by('devmodeTab').onclick=()=>displayTab('devmode');
+  by('missionsTab').onclick=()=>displayTab('missions');
+  by('openSetups').onclick=()=>displayTab('setups');
+  by('operationsLink').onclick=e=>{e.preventDefault();displayTab('operations');};
+  let operationsLoading=false;
+  async function openOperations(routeOverride,id){
+    if(operationsLoading)return;operationsLoading=true;const note=by('operationsPanel').querySelector('p');note.textContent='Открываем конструктор операций…';
+    try{const result=await api('/api/operations-panel',{});const requested=routeOverride||new URLSearchParams(location.search).get('operation');const route=['ground','campaign'].includes(requested)?requested:'operations';by('operationsFrame').src=result.origin+'/'+route+'?embedded=1'+(id?'&id='+encodeURIComponent(id):'');note.textContent='Воздушные операции, штурм и кампания — внутри одного центра.';return true;}
+    catch(e){note.textContent=e.message+' Нажмите вкладку «Операции», чтобы повторить.';return false;}
+    finally{operationsLoading=false;}
+  }
+  async function canReplaceOperation(){
+    const frame=by('operationsFrame'),src=frame.getAttribute('src');if(src==='about:blank')return true;
+    const origin=new URL(src).origin,requestId=crypto.randomUUID();
+    const status=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>{window.removeEventListener('message',listen);reject(Error('Редактор операции ещё загружается. Повторите открытие через несколько секунд.'));},2000);function listen(e){if(e.source!==frame.contentWindow||e.origin!==origin||e.data?.source!=='nero-operation-state'||e.data.requestId!==requestId)return;clearTimeout(timer);window.removeEventListener('message',listen);resolve(e.data);}window.addEventListener('message',listen);frame.contentWindow.postMessage({type:'nero-workspace-state-request',requestId},origin);});
+    if(status.busy)throw Error('Дождитесь завершения сохранения или сборки операции.');
+    return !status.dirty||confirm('В операции есть несохранённые изменения. Открыть другой сценарий без их сохранения?');
+  }
+  window.NeroWorkspace={openMission:async p=>{
+    if(p.kind==='profile')return applyPreset(p.id);
+    if(busy)return;
+    if(p.kind==='operation'){
+      if(!await canReplaceOperation())return;
+      if(!await openOperations({airBattle:'operations',assaultDefense:'ground',frontlineCampaign:'campaign'}[p.mode],p.id))throw Error('Не удалось открыть редактор операции. Повторите попытку.');displayTab('operations');return;
+    }
+    if((dirty||designerDirty)&&!confirm('Открыть сценарий «'+p.title+'» вместо несохранённых настроек и карты?'))return;
+    busy=true;document.querySelector('main').inert=true;
+    try{const e=await editorReady();if(await e.openPreset(p.id)){by('useDesign').checked=true;acceptEditor();dirty=true;displayTab('maps');updateSummary();message('Открыт сценарий «'+p.title+'». «Сохранить всё» сохранит выбранную карту и настройки запуска.');}}
+    finally{busy=false;document.querySelector('main').inert=false;}
+  }};
+  function mountPanel(id,host){
+    const node=editor.element(id);
+    if(!node || node.ownerDocument===document)return;
+    for(const el of [node,...node.querySelectorAll('[id]')])if(el.id){el.dataset.editorId=el.id;el.id='editor-'+el.id;}
+    for(const label of node.querySelectorAll('label[for]'))label.htmlFor='editor-'+label.htmlFor;
+    node.hidden=false;
+    by(host).append(node);
+    node.addEventListener('change',()=>{editor.changed();dirty=true;updateSummary();});
+  }
+  function acceptEditor(){
+    editor=by('designerFrame').contentWindow.NeroEditor;
+    if(!editor)return;
+    mountPanel('panel-scenario','designScenarioHost');
+    mountPanel('panel-resources','designResourcesHost');
+    mountPanel('panel-start','designStartHost');
+    mountPanel('panel-llm','designLLMHost');
+    const duplicate=by('editor-greenFaction');if(duplicate)duplicate.closest('label').hidden=true;
+    // The parent catalog is the sole visible army/infantry editor.
+    const snapshot=editor.snapshot();
+    if(snapshot.army){const wasDirty=dirty;putArmy(snapshot.army);dirty=wasDirty;}
+    by('map').value=snapshot.world;
+    designSummaryKey='';updateSummary();
+    pendingEditor?.resolve(editor);pendingEditor=null;
+    const lockACE=()=>{const input=document.getElementById('ace');if(input){const required=document.getElementById('scenario')?.value==='warlords';input.disabled=required;if(required)input.checked=true;input.setAttribute('aria-description',required?'Обязательный мод механик. Подключается всегда.':'Настройка ACE.');}};const previousRender=render;render=function(...args){const result=previousRender.apply(this,args);lockACE();return result;};document.getElementById('scenario')?.addEventListener('change',lockACE);lockACE();
+  NeroHelp.bind(document,helpText);
+  }
+  openDesignerFrame=function(){
+    const frame=by('designerFrame');if(!frame||!state)return;
+    if(frame.getAttribute('src')==='about:blank')frame.src='/designer?embedded=1&workspace=1&world='+encodeURIComponent(by('map').value);
+  };
+  function editorReady(){
+    if(editor)return Promise.resolve(editor);
+    openDesignerFrame();
+    if(!pendingEditor){
+      let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});
+      const timer=setTimeout(()=>{pendingEditor=null;reject(Error('Редактор не загрузился. Сохранение остановлено; изменения остаются на странице.'));},20000);
+      pendingEditor={promise,resolve:value=>{clearTimeout(timer);resolve(value);}};
+    }
+    return pendingEditor.promise;
+  }
+  updateSummary=function(){
+    originalSummary();
+    const designed=by('scenario').value==='warlords'&&by('useDesign').checked;
+    document.body.classList.toggle('designed-scenario',designed);
+    for(const id of ['designScenarioHost','designResourcesHost','designStartHost','designLLMHost'])by(id).hidden=!designed;
+    const startCP=by('BIS_WLStartCP');if(startCP){startCP.parentElement.hidden=designed;startCP.parentElement.dataset.scenarioDuplicate='1';}
+    if(designed&&editor){const d=editor.snapshot();by('summaryPlayer').textContent=d.playerRole==='observer'?'Наблюдатель · бой между ботами':'Игрок — командир';by('summaryArmy').textContent=by('commanders').value+' командиров на сторону · техника: '+['west','east','green'].map(p=>armySelected[p].size).join(' / ');}
+    by('dirtyStatus').textContent=dirty||designerDirty?'Есть изменения':'Сохранено';
+    by('dirtyStatus').classList.toggle('pending',dirty||designerDirty);
+  };
+  updateDesignSummary=async()=>{};
+  render=function(next){originalRender(next);if(next.selected.scenario==='warlords'&&(next.selected.useDesign||activeTab==='maps')){if(activeTab==='maps'){by('useDesign').checked=true;const requested=new URLSearchParams(location.search).get('world');if(next.maps.some(w=>w.id===requested))by('map').value=requested;}openDesignerFrame();updateSummary();}};
+  applyPreset=async function(name){
+    const preset=state.presets?.[name];if(!preset||busy)return;
+    if((dirty||designerDirty)&&!confirm('Применить пресет «'+name+'» вместо несохранённых настроек сценария и карты?'))return;
+    busy=true;document.querySelector('main').inert=true;
+    try{
+      if(preset.scenario==='warlords'&&preset.useDesign){const e=await editorReady();await e.changeWorld(preset.map,{discard:true});}
+      originalApply(preset);
+      if(editor&&preset.scenario==='warlords'&&preset.useDesign){editor.setArmy(composeArmy());acceptEditor();}
+      viewedPreset=name;by('preset').value=name;dirty=true;renderPresets();updateDesignerLink();displayTab('launch');showSetup('overview');updateSummary();
+      message('Пресет «'+name+'» открыт. «Сохранить всё» сохранит карту, армии и запуск вместе.');
+    }catch(error){message(error.message,true);}finally{busy=false;document.querySelector('main').inert=false;}
+  };
+  async function saveAll(name){
+    if(busy)throw Error('Сохранение уже выполняется. Дождитесь завершения.');
+    busy=true;by('save').disabled=true;document.querySelector('main').inert=true;
+    try{
+      if(by('scenario').value==='warlords'&&by('useDesign').checked){
+        const e=await editorReady();
+        const d=await e.saveForPlay(composeArmy());
+        by('map').value=d.world;designerDirty=false;
+      }else if(editor&&designerDirty&&by('scenario').value==='warlords'){await editor.saveDraft();designerDirty=false;}
+      await originalSave(name);
+      designSummaryKey='';updateSummary();
+      message('✓ Сценарий сохранён: карта, армии и настройки запуска. При запуске миссия будет собрана и добавлена в Arma.');
+    }catch(error){dirty=true;updateSummary();throw error;}
+    finally{busy=false;by('save').disabled=false;document.querySelector('main').inert=false;}
+  }
+  save=saveAll;
+  by('save').onclick=()=>saveAll().catch(e=>message('Не сохранено: '+e.message,true));
+  by('launch').onclick=async()=>{try{await saveAll();await originalLaunch();}catch(e){message('Запуск отменён: '+e.message,true);}};
+  by('map').addEventListener('change',async()=>{
+    if(!editor)return;
+    try{const ok=await editor.changeWorld(by('map').value);if(!ok)by('map').value=editor.snapshot().world;else acceptEditor();}
+    catch(e){by('map').value=editor.snapshot().world;message(e.message,true);}
+    finally{updateSummary();}
+  });
+  by('useDesign').addEventListener('change',()=>{if(by('useDesign').checked)openDesignerFrame();updateSummary();});
+  const originalPutArmy=putArmy;
+  putArmy=function(army){originalPutArmy(army);if(editor&&by('useDesign').checked)editor.setArmy(composeArmy());};
+  for(const id of ['armyBox','infantryBox'])for(const event of ['change','click'])by(id).addEventListener(event,()=>queueMicrotask(()=>{if(editor&&by('useDesign').checked)editor.setArmy(composeArmy());}));
+  window.addEventListener('message',async e=>{
+    if(e.origin!==location.origin || e.source!==by('designerFrame').contentWindow || e.data?.source!=='nero-designer')return;
+    const d=e.data;
+    if(d.type==='workspace-ready'||d.type==='opened')acceptEditor();
+    if(d.type==='dirty'||d.type==='saved'){designerDirty=!!d.dirty;updateSummary();}
+    if(d.type==='navigate'){displayTab(d.tab||'launch');if(d.page)showSetup(d.page);}
+    if(d.type==='help')NeroHelp.show(d.text);
+    if(d.type==='save-all')by('save').click();
+    if(d.type==='use-preset'){
+      if(busy)return;busy=true;document.querySelector('main').inert=true;let opened=false;
+      try{const ready=await editorReady();opened=await ready.openPreset(d.id);if(opened){acceptEditor();by('useDesign').checked=true;}}
+      catch(error){message(error.message,true);}
+      finally{busy=false;document.querySelector('main').inert=false;}
+      if(opened)try{await saveAll();}catch(error){message(error.message,true);}
+    }
+  });
+  window.addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.source==='nero-side-setups'&&e.data.type==='navigate')displayTab('launch');});
+  window.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&activeTab!=='setups'){e.preventDefault();by('save').click();}});
+  const helpText={
+    map:'Выберите территорию. При смене карты редактор предложит сохранить несохранённые правки.',
+    useDesign:'Использовать базы, сектора, армии и ресурсы открытого сценария. Кнопка «Сохранить всё» сохранит и карту, и запуск.',
+    profile:'Постоянный профиль Arma: имя, настройки управления и пользовательские параметры игры.',
+    commanders:'Количество самостоятельных командиров на каждую сторону. Каждый командир управляет собственным отрядом.',
+    title:'Название вашей миссии в списке Arma и библиотеке сценариев.',
+    mode:'Два противника в Warlords или собственный режим с тремя воюющими сторонами.',
+    greenRole:'В режиме Warlords зелёные защищают города. В режиме трёх сторон могут захватывать сектора.',
+    playerRole:'Командир участвует в бою. Наблюдатель получает Зевса и наблюдает сражение ботов.',
+    playerSide:'Сторона игрока при входе в миссию. В Warlords доступны синие и красные.',
+    maxNPCs:'Общий бюджет новых бойцов и экипажей сценария. Большие значения увеличивают нагрузку на процессор.',
+    maxVehicles:'Общий бюджет техники сценария; учитывает стартовые машины и новые покупки.',
+    startCP:'Стартовые очки покупки каждого командира. Для сценария карты это единственное поле стартовых CP.',
+    income:'Доход одного удерживаемого сектора в CP за минуту. Множитель дохода в правилах применяется отдельно.',
+    lethalZones:'Ограничивает пребывание за пределами разрешённых целей. Отключите для свободного манёвра.',
+    radius:'Радиус зоны сектора в метрах. На карте показан цветным кругом.',
+    infantry:'Число защитников сектора. Экипажи техники считаются отдельно.',
+    vehicles:'Сколько машин добавить в гарнизон выбранного сектора.',
+    pointX:'Координата X в метрах Arma. Точку также можно перетащить мышью.',
+    pointY:'Координата Y в метрах Arma. Верх карты соответствует большему Y.',
+    gEnabled:'Подключить модель к гарнизонам, которые сейчас атакуются. Основной ИИ выбирается в разделе сценария.',
+    gLimit:'Предел одновременно управляемых моделью гарнизонных групп. Снижайте при медленных ответах модели.',
+    BIS_WLCPMultiplier:'Множитель дохода CP от сектора: применяется к базовому доходу, заданному в ресурсах сценария.',
+    BIS_WLMaxSubordinates:'Лимит бойцов одного отряда, помимо его командира. Влияет на пехотные закупки.',
+    NeroWL_Air:'Максимум авиации стороны. Значение 0 отключает её закупку и использование.',
+    save:'Сохраняет карту, её пресет и весь запуск одной командой. Сочетание клавиш: Ctrl+S.',
+    launch:'Сначала сохраняет все правки, затем собирает миссию, обновляет мод и запускает Arma.',
+    ace:'В Warlords ACE подключается обязательно вместе с CBA. Медицинские и прочие параметры настраиваются в игре через CBA.',
+    dev:'Разрешить отладочную консоль и Зевса в создаваемой миссии.'
+  };
+  NeroHelp.bind(document,helpText);
+  displayTab(['launch','maps','presets','setups','operations','devmode','missions'].includes(new URLSearchParams(location.search).get('tab'))?new URLSearchParams(location.search).get('tab'):'missions');
+})();
+
+</script>
+<!-- workspace-module:end -->
+</body></html>
+
+
+
+

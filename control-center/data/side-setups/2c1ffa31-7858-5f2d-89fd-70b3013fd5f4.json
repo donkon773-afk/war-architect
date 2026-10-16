@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "id": "2c1ffa31-7858-5f2d-89fd-70b3013fd5f4",
+  "name": "Национальная полиция Украины (UFP) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "b_uapolice",
+    "assets": [
+      "b_uapolice_boat_01",
+      "b_uapolice_kozak5_turret_F",
+      "b_uapolice_plane01_01"
+    ],
+    "infantry": [
+      "b_uapoliceman_m88_blue_01"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.866Z",
+  "updatedAt": "2026-10-15T16:43:29.866Z"
+}

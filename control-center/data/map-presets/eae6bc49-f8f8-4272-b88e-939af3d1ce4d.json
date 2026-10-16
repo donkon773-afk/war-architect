@@ -1,0 +1,145 @@
+{
+  "id": "eae6bc49-f8f8-4272-b88e-939af3d1ce4d",
+  "name": "Farabad · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:14.269Z",
+  "updatedAt": "2026-10-15T22:03:14.269Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Farabad",
+    "title": "Farabad · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Awena Resevoir",
+        "side": "WEST",
+        "position": [
+          3628,
+          6359
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Shirazan",
+        "side": "EAST",
+        "position": [
+          8000,
+          1071
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Belle Foille Hotel",
+        "side": "GUER",
+        "position": [
+          4616,
+          6124
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · military",
+        "side": "GUER",
+        "position": [
+          7512,
+          7611
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · military",
+        "side": "GUER",
+        "position": [
+          7445,
+          7109
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Shahruk",
+        "side": "GUER",
+        "position": [
+          8579,
+          6689
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Ali Kala",
+        "side": "GUER",
+        "position": [
+          8579,
+          5135
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Hamza",
+        "side": "GUER",
+        "position": [
+          8579,
+          3581
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Kahak River",
+        "side": "GUER",
+        "position": [
+          8495,
+          2111
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

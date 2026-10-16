@@ -1,0 +1,11 @@
+{
+  "installedSha256": "080660cbdcc1f6bedcc915db9e32426a2045c2855186a6410fe46ce520c6ef7a",
+  "candidateSha256": "d9a5835c635700bbef9ec4f881913997e182c4e0143f40b2db58fd968c6c5353",
+  "changedEntries": [
+    "functions/native/fn_WLAICore.fsm",
+    "functions/native/fn_WLAirdrop.sqf"
+  ],
+  "removedEntries": [],
+  "installed": false,
+  "gameTested": false
+}

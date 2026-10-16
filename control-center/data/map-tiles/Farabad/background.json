@@ -1,0 +1,28 @@
+{
+  "world": "Farabad",
+  "worldSize": 10752,
+  "strideX": 2519.999953061343,
+  "strideY": 2519.999953061343,
+  "columns": 5,
+  "rows": 5,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -83.9999984353781,
+      "worldTop": 10835.999798163775,
+      "extentX": 2687.9999499320993,
+      "extentY": 2687.9999499320993
+    }
+  },
+  "sourceSize": 119337738,
+  "sourceModified": 1790780648868.6062,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.3124999755527829,
+  "tileCount": 25,
+  "seconds": 3.06,
+  "coarsestPixelSize": 1.3124999755527829
+}

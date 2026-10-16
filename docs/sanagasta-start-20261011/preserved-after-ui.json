@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "file": "control-center/data/profiles.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/designs/btrx_sngt.json",
+      "unchanged": true
+    }
+  ],
+  "installedAddonSha256": "AEBFC4582B230129534880535662B121FDC9856E6E598AEDBB01E3D5EBFB5E1E",
+  "activeTestMissionSha256": "0C08112E694F1D14657CEB9EFD64B5DAB4D7AD56C05B32F987F6848AE972BD76"
+}

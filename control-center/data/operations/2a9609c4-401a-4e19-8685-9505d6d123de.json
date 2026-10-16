@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "2a9609c4-401a-4e19-8685-9505d6d123de",
+  "design": {
+    "version": 1,
+    "type": "airBattle",
+    "world": "Australia",
+    "title": "NeroAI — Australia: воздушное сражение [EXPANDED]",
+    "playerRole": "pilot",
+    "playerSide": "WEST",
+    "playerClass": "JS_JC_FA18E",
+    "sides": [
+      {
+        "side": "WEST",
+        "classes": [
+          "F16C_BLU",
+          "CUP_B_F35B_Stealth_BAF",
+          "CUP_B_F35B_BAF",
+          "CUP_B_JAS39_HIL",
+          "JS_JC_FA18E",
+          "F16_B52_BLU",
+          "F4E_BLU",
+          "F4E_BLU_AG"
+        ],
+        "active": 20,
+        "reserve": 25,
+        "entry": [
+          11469,
+          25395
+        ],
+        "skill": 0.8
+      },
+      {
+        "side": "EAST",
+        "classes": [
+          "JS_JC_SU35",
+          "CUP_O_SU34_CSAT",
+          "rhs_mig29sm_vmf",
+          "RHS_T50_vvs_blueonblue",
+          "rhssaf_airforce_o_l_18",
+          "TT_J10"
+        ],
+        "active": 20,
+        "reserve": 25,
+        "entry": [
+          29491,
+          15565
+        ],
+        "skill": 0.75
+      }
+    ],
+    "zone": {
+      "position": [
+        20838,
+        21781
+      ],
+      "radius": 14000
+    },
+    "altitude": 1800,
+    "duration": 40,
+    "scoreTarget": 24,
+    "reinforcementDelay": 30,
+    "pilotSlots": 20,
+    "hour": 6,
+    "overcast": 0.15,
+    "autoAirLoadout": true,
+    "extraMods": []
+  },
+  "revision": 1,
+  "createdAt": "2026-10-12T05:05:35.569Z",
+  "updatedAt": "2026-10-12T05:05:35.569Z"
+}

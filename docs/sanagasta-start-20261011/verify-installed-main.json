@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\MPMissions\\NeroAI_Designed_btrx_sngt_Three.btrx_sngt.pbo",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\missions\\NeroAI_Designed_btrx_sngt_Three.btrx_sngt",
+  "displayName": null,
+  "fileCount": 17,
+  "pboFileCount": 17,
+  "manifestMatchesSource": true,
+  "contentsMatchSource": true,
+  "missingFromPbo": [],
+  "unexpectedInPbo": [],
+  "changedFromSource": [],
+  "sizeBytes": 98901,
+  "sha1Body": "F98EED7040297132C8D8C274FE94F27D3875A9A7",
+  "sha256": "042CAC48C0DCE640CED7520FA217E0AAB30776CDFFD335D354558E9EABDE013E"
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "id": "9119d722-50ba-50ca-b29c-15e6614c3df3",
+  "name": "ССО Украины (UFP) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "b_afousf",
+    "assets": [
+      "b_afousf_uav_bdzhmil",
+      "b_afousf_uav_hrusch"
+    ],
+    "infantry": [
+      "b_afougf_rifleman_sso_lsh_ak74",
+      "b_afougf_rifleman_sso_sard_ak74",
+      "b_sso_sniper_z10"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.860Z",
+  "updatedAt": "2026-10-15T16:43:29.860Z"
+}

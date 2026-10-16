@@ -1,0 +1,398 @@
+[
+  {
+    "id": "Altis",
+    "ok": true,
+    "mb": 6,
+    "counts": {
+      "main": 12,
+      "road": 14,
+      "track": 14,
+      "house": 17917,
+      "building": 512,
+      "poi": 40,
+      "wall": 89619,
+      "rail": 0,
+      "power": 2224,
+      "roadline": 1414
+    },
+    "s": 9
+  },
+  {
+    "id": "archie",
+    "ok": true,
+    "mb": 1.5,
+    "counts": {
+      "main": 25,
+      "road": 15,
+      "track": 0,
+      "house": 7367,
+      "building": 407,
+      "poi": 166,
+      "wall": 22499,
+      "rail": 132,
+      "power": 409,
+      "roadline": 358
+    },
+    "s": 4
+  },
+  {
+    "id": "archie_w",
+    "ok": true,
+    "mb": 1.4,
+    "counts": {
+      "main": 25,
+      "road": 15,
+      "track": 0,
+      "house": 7367,
+      "building": 407,
+      "poi": 166,
+      "wall": 22371,
+      "rail": 132,
+      "power": 409,
+      "roadline": 358
+    },
+    "s": 4
+  },
+  {
+    "id": "Australia",
+    "ok": true,
+    "mb": 6.8,
+    "counts": {
+      "main": 27055,
+      "road": 3808,
+      "track": 844,
+      "house": 26896,
+      "building": 1057,
+      "poi": 98,
+      "wall": 68640,
+      "rail": 157,
+      "power": 7,
+      "roadline": 148
+    },
+    "s": 10
+  },
+  {
+    "id": "btrx_sngt",
+    "ok": true,
+    "mb": 1.5,
+    "counts": {
+      "main": 55,
+      "road": 1104,
+      "track": 94,
+      "house": 4263,
+      "building": 173,
+      "poi": 69,
+      "wall": 19217,
+      "rail": 0,
+      "power": 203,
+      "roadline": 445
+    },
+    "s": 9
+  },
+  {
+    "id": "Chernarus",
+    "ok": true,
+    "mb": 2.9,
+    "counts": {
+      "main": 20,
+      "road": 0,
+      "track": 1,
+      "house": 8772,
+      "building": 241,
+      "poi": 129,
+      "wall": 46480,
+      "rail": 1092,
+      "power": 866,
+      "roadline": 527
+    },
+    "s": 7
+  },
+  {
+    "id": "Enoch",
+    "ok": true,
+    "mb": 3.1,
+    "counts": {
+      "main": 9,
+      "road": 12,
+      "track": 0,
+      "house": 6763,
+      "building": 1308,
+      "poi": 348,
+      "wall": 52844,
+      "rail": 843,
+      "power": 2671,
+      "roadline": 407
+    },
+    "s": 6
+  },
+  {
+    "id": "Farabad",
+    "ok": true,
+    "mb": 1.2,
+    "counts": {
+      "main": 77,
+      "road": 86,
+      "track": 0,
+      "house": 5775,
+      "building": 161,
+      "poi": 33,
+      "wall": 19808,
+      "rail": 0,
+      "power": 135,
+      "roadline": 0
+    },
+    "s": 3
+  },
+  {
+    "id": "go_map_fjord",
+    "ok": true,
+    "mb": 0.4,
+    "counts": {
+      "main": 8,
+      "road": 17,
+      "track": 18,
+      "house": 796,
+      "building": 283,
+      "poi": 28,
+      "wall": 4199,
+      "rail": 160,
+      "power": 265,
+      "roadline": 432
+    },
+    "s": 6
+  },
+  {
+    "id": "IslaPera",
+    "ok": true,
+    "mb": 0.5,
+    "counts": {
+      "main": 82,
+      "road": 39,
+      "track": 0,
+      "house": 2450,
+      "building": 127,
+      "poi": 33,
+      "wall": 5354,
+      "rail": 49,
+      "power": 0,
+      "roadline": 795
+    },
+    "s": 2
+  },
+  {
+    "id": "K9S_Bastek",
+    "ok": true,
+    "mb": 0.8,
+    "counts": {
+      "main": 156,
+      "road": 12,
+      "track": 0,
+      "house": 5077,
+      "building": 187,
+      "poi": 34,
+      "wall": 10373,
+      "rail": 0,
+      "power": 0,
+      "roadline": 280
+    },
+    "s": 2
+  },
+  {
+    "id": "Malden",
+    "ok": true,
+    "mb": 1.5,
+    "counts": {
+      "main": 3,
+      "road": 0,
+      "track": 3,
+      "house": 4149,
+      "building": 79,
+      "poi": 85,
+      "wall": 25803,
+      "rail": 0,
+      "power": 3427,
+      "roadline": 212
+    },
+    "s": 4
+  },
+  {
+    "id": "m_36tuu484111s99",
+    "ok": true,
+    "mb": 0.8,
+    "counts": {
+      "main": 3,
+      "road": 111,
+      "track": 1087,
+      "house": 2597,
+      "building": 1019,
+      "poi": 45,
+      "wall": 10909,
+      "rail": 0,
+      "power": 59,
+      "roadline": 252
+    },
+    "s": 3
+  },
+  {
+    "id": "Stratis",
+    "ok": true,
+    "mb": 0.2,
+    "counts": {
+      "main": 0,
+      "road": 0,
+      "track": 3,
+      "house": 692,
+      "building": 17,
+      "poi": 15,
+      "wall": 3114,
+      "rail": 0,
+      "power": 0,
+      "roadline": 73
+    },
+    "s": 4
+  },
+  {
+    "id": "Takistan",
+    "ok": true,
+    "mb": 1,
+    "counts": {
+      "main": 0,
+      "road": 0,
+      "track": 0,
+      "house": 4349,
+      "building": 66,
+      "poi": 34,
+      "wall": 14553,
+      "rail": 0,
+      "power": 154,
+      "roadline": 113
+    },
+    "s": 5
+  },
+  {
+    "id": "tanoa",
+    "ok": true,
+    "mb": 2.2,
+    "counts": {
+      "main": 0,
+      "road": 123,
+      "track": 0,
+      "house": 13746,
+      "building": 231,
+      "poi": 89,
+      "wall": 24179,
+      "rail": 2138,
+      "power": 3985,
+      "roadline": 719
+    },
+    "s": 6
+  },
+  {
+    "id": "uzbin",
+    "ok": true,
+    "mb": 1.4,
+    "counts": {
+      "main": 16,
+      "road": 8,
+      "track": 187,
+      "house": 5073,
+      "building": 70,
+      "poi": 37,
+      "wall": 21097,
+      "rail": 0,
+      "power": 12,
+      "roadline": 399
+    },
+    "s": 8
+  },
+  {
+    "id": "Vereskovo",
+    "ok": true,
+    "mb": 3.1,
+    "counts": {
+      "main": 8,
+      "road": 561,
+      "track": 4289,
+      "house": 7073,
+      "building": 3773,
+      "poi": 276,
+      "wall": 46403,
+      "rail": 665,
+      "power": 222,
+      "roadline": 174
+    },
+    "s": 7
+  },
+  {
+    "id": "vt7",
+    "ok": true,
+    "mb": 1.3,
+    "counts": {
+      "main": 2,
+      "road": 11,
+      "track": 0,
+      "house": 5313,
+      "building": 165,
+      "poi": 35,
+      "wall": 5486,
+      "rail": 0,
+      "power": 0,
+      "roadline": 7149
+    },
+    "s": 7
+  },
+  {
+    "id": "VTF_Lybor",
+    "ok": true,
+    "mb": 0.4,
+    "counts": {
+      "main": 0,
+      "road": 24,
+      "track": 0,
+      "house": 795,
+      "building": 56,
+      "poi": 18,
+      "wall": 3764,
+      "rail": 0,
+      "power": 24,
+      "roadline": 349
+    },
+    "s": 3
+  },
+  {
+    "id": "VTF_Lybor_Winter",
+    "ok": true,
+    "mb": 0.4,
+    "counts": {
+      "main": 0,
+      "road": 24,
+      "track": 0,
+      "house": 795,
+      "building": 56,
+      "poi": 18,
+      "wall": 3764,
+      "rail": 0,
+      "power": 24,
+      "roadline": 349
+    },
+    "s": 3
+  },
+  {
+    "id": "WINTERURBAN",
+    "ok": true,
+    "mb": 0.5,
+    "counts": {
+      "main": 12,
+      "road": 25,
+      "track": 0,
+      "house": 2218,
+      "building": 299,
+      "poi": 10,
+      "wall": 6102,
+      "rail": 4,
+      "power": 2,
+      "roadline": 415
+    },
+    "s": 2
+  }
+]

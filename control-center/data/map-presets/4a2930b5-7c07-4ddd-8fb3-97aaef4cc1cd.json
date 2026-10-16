@@ -1,0 +1,145 @@
+{
+  "id": "4a2930b5-7c07-4ddd-8fb3-97aaef4cc1cd",
+  "name": "Australia · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:13.721Z",
+  "updatedAt": "2026-10-15T22:03:13.721Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Australia",
+    "title": "Australia · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Узел маршрута",
+        "side": "WEST",
+        "position": [
+          12782,
+          24710
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Узел маршрута",
+        "side": "EAST",
+        "position": [
+          20834,
+          13612
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          15160,
+          24680
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          17560,
+          24680
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Pine Gap",
+        "side": "GUER",
+        "position": [
+          19960,
+          24680
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          20755,
+          21702
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          20344,
+          21296
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Coober Pedy",
+        "side": "GUER",
+        "position": [
+          21412,
+          19995
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          20726,
+          15556
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

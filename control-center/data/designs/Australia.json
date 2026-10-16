@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "world": "Australia",
+  "title": "NeroAI — Australia",
+  "mode": "native",
+  "greenRole": "defender",
+  "playerSide": "WEST",
+  "lethalZones": false,
+  "bases": [
+    {
+      "id": "c916310f-f86f-422e-a0e0-bccbf8954109",
+      "name": "Новая точка",
+      "side": "WEST",
+      "position": [
+        19547,
+        24792
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "12685b10-a6b5-4774-a6dc-149758073456",
+      "name": "Новая точка",
+      "side": "EAST",
+      "position": [
+        30535,
+        11546
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    }
+  ],
+  "sectors": [
+    {
+      "id": "70030c8f-9b17-4cf3-b73a-0c3645244f8d",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        22101,
+        25568
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "7db1abd8-e59c-4a6a-9ae5-986770a1abcf",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        26723,
+        27991
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "d7355845-0460-4cbe-ab85-c21ba898f3a4",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        33281,
+        21729
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "ad5e9d70-4ab7-4ab4-b193-2493ebccc67d",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        38248,
+        20419
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "f91d179a-a4c7-4140-8278-fdf9e76593a1",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        31635,
+        16752
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "f3de9382-37f6-44c4-ae64-cd40eb067549",
+      "name": "Новая точка",
+      "side": "GUER",
+      "position": [
+        35295,
+        12379
+      ],
+      "radius": 200,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    }
+  ],
+  "spawns": [],
+  "startAssets": [],
+  "garrisonLLM": {
+    "enabled": false,
+    "route": "shared",
+    "node": "mac",
+    "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive@q4_k_m",
+    "limit": 4,
+    "instructions": ""
+  },
+  "maxNPCs": 160,
+  "maxVehicles": 32,
+  "startCP": 6000,
+  "income": 100,
+  "greenFaction": "rhsgref_faction_cdf_ng",
+  "playerRole": "commander",
+  "savedAt": "2026-10-10T18:38:29.819Z"
+}

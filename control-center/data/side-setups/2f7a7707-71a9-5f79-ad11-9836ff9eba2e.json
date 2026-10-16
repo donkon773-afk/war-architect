@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "id": "2f7a7707-71a9-5f79-ad11-9836ff9eba2e",
+  "name": "ВВС Сербии (RHS SAF, зелёные) · обеспечение",
+  "setup": {
+    "side": "green",
+    "faction": "rhssaf_faction_airforce",
+    "assets": [
+      "rhssaf_airforce_ht40",
+      "rhssaf_airforce_ht48",
+      "rhssaf_airforce_l_18",
+      "rhssaf_airforce_l_18_101"
+    ],
+    "infantry": [
+      "rhssaf_airforce_pilot_mig29",
+      "rhssaf_airforce_pilot_transport_heli"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.031Z",
+  "updatedAt": "2026-10-15T16:43:30.031Z"
+}

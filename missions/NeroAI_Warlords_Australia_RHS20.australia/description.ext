@@ -1,0 +1,27 @@
+author = "NeroAI";
+onLoadName = "NeroAI Warlords - Australia (Mac RHS 10v10)";
+onLoadMission = "Native Warlords on australia. AI commanders, CP requisition and host Zeus.";
+briefingName = "NeroAI Warlords - Australia (Mac RHS 10v10)";
+class Header { gameType="CTI"; minPlayers=1; maxPlayers=20; };
+respawn = 3;
+respawnDelay = 10;
+respawnOnStart = -1;
+disabledAI = 0;
+joinUnassigned = 1;
+enableDebugConsole = 2;
+NeroWL_devMode = 1;
+NeroWL_modShopEnabled = 1;
+NeroWL_customCatalog = 1;
+NeroWL_personalScenario = 1;
+corpseManagerMode = 1;
+corpseLimit = 20;
+corpseRemovalMinTime = 120;
+corpseRemovalMaxTime = 300;
+wreckManagerMode = 1;
+wreckLimit = 8;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 600;
+#include "neroWL\params.hpp"
+#include "neroWL\startPreset.hpp"
+NeroWL_archivePreset="BFX_RHS_D";
+class CfgFunctions { class NeroWL_Mission { class Runtime { file="neroWL"; class findOpenGround {}; class prepareBase {}; class placeCommander {}; class aiPurchases { ext=".fsm"; }; class configureNative { preInit=1; }; class waitReady { postInit=1; }; }; class Catalog { file="neroWL"; class expandPreset { postInit=1; }; }; }; };

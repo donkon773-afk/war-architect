@@ -1,0 +1,145 @@
+{
+  "id": "bcb49fe3-bd53-458d-a30e-bd4e6870338d",
+  "name": "Malden · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:26.627Z",
+  "updatedAt": "2026-10-15T22:03:26.627Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Malden",
+    "title": "Malden · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · $STR A3 Malden L Arette0",
+        "side": "WEST",
+        "position": [
+          2106,
+          4713
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · $STR A3 Malden C Airport0",
+        "side": "EAST",
+        "position": [
+          8182,
+          10391
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · $STR A3 Malden L Corton0",
+        "side": "GUER",
+        "position": [
+          3730,
+          4885
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · $STR A3 Malden L Dorres0",
+        "side": "GUER",
+        "position": [
+          5051,
+          4700
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · $STR A3 Malden H DentsduMidi0",
+        "side": "GUER",
+        "position": [
+          6350,
+          5335
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · $STR A3 Malden M GolfeVert0",
+        "side": "GUER",
+        "position": [
+          7214,
+          5450
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · $STR A3 Malden V Houdan0",
+        "side": "GUER",
+        "position": [
+          7653,
+          6471
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · $STR A3 Malden H LeRoi0",
+        "side": "GUER",
+        "position": [
+          8261,
+          7786
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · $STR A3 Malden L Bosquet0",
+        "side": "GUER",
+        "position": [
+          8092,
+          8895
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

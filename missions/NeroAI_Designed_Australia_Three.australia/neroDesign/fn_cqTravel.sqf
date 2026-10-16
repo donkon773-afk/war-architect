@@ -1,0 +1,20 @@
+params[["_unit",objNull,[objNull]],["_target",objNull,[objNull]],["_mode","TRAVEL",[""]],["_id","",[""]]];
+if(_mode=="TARGET")exitWith{[_unit,_target,_id]call NeroWL_Design_fnc_cqVote;};
+if(!isServer || {isNull _unit} || {!alive _unit} || {!isPlayer _unit} || {!(_unit in (missionNamespace getVariable["BIS_WL_allWarlords",[]]))})exitWith{};
+if(isRemoteExecuted && {remoteExecutedOwner!=owner _unit})exitWith{};
+if(!(["BEGIN",_unit,_id]call NeroWL_Design_fnc_cqRequest))exitWith{};
+private _result=[false,"Перемещение недоступно.",0];
+isNil{
+ if(_mode!="TRAVEL" || {isNull _target} || {!(_target in (missionNamespace getVariable["BIS_WL_sectors",[]]))})exitWith{};
+ private _side=side group _unit;
+ if((_target getVariable["BIS_WL_sectorSide",sideUnknown])!=_side)exitWith{_result=[false,"Сектор больше не принадлежит вашей стороне.",0];};
+ if(vehicle _unit!=_unit)exitWith{_result=[false,"Перед перемещением выйдите из техники.",0];};
+ private _left=60-(serverTime-(_unit getVariable["NeroWL_lastTravel",-100]));
+ if(_left>0)exitWith{_result=[false,format["Перемещение будет доступно через %1 с.",ceil _left],0];};
+ if((allUnits findIf{alive _x && {(_side getFriend side group _x)<0.6} && {(_x distance2D _unit<300)||{_x distance2D _target<300}}})>=0)exitWith{_result=[false,"Перемещение заблокировано близким боем.",0];};
+ private _pos=(getPosATL _target)findEmptyPosition[15,100,typeOf _unit];
+ if(_pos isEqualTo [])exitWith{_result=[false,"В секторе нет безопасного места для перемещения.",0];};
+ _unit setPosATL _pos;_unit setVariable["NeroWL_lastTravel",serverTime,true];
+ _result=[true,format["Вы перемещены в сектор «%1».",_target getVariable["Name",""]],0];
+};
+["END",_unit,_id,_result]call NeroWL_Design_fnc_cqRequest;

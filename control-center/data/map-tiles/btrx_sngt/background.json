@@ -1,0 +1,28 @@
+{
+  "world": "btrx_sngt",
+  "worldSize": 20480,
+  "strideX": 480,
+  "strideY": 480,
+  "columns": 43,
+  "rows": 43,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -16,
+      "worldTop": 20496,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 1051191036,
+  "sourceModified": 1790780648963.34,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 1849,
+  "seconds": 19.08,
+  "coarsestPixelSize": 1.0
+}

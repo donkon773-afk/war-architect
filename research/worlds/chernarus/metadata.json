@@ -1,0 +1,8523 @@
+{
+  "name": "Chernarus",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\research\\worlds\\chernarus\\config.bin",
+  "locations": [
+    {
+      "id": "city_Chernogorsk",
+      "name": "$STR_LOCATION_CHERNOGORSK",
+      "position": [
+        6731.2099609375,
+        2554.1298828125
+      ],
+      "type": "NameCityCapital",
+      "speech": [
+        "Chernogorsk"
+      ],
+      "radiusA": 300,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "city_Elektrozavodsk",
+      "name": "$STR_LOCATION_ELEKTROZAVODSK",
+      "position": [
+        10313.7197265625,
+        2159.409912109375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Elektrozavodsk"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Tulga",
+      "name": "$STR_LOCATION_TULGA",
+      "position": [
+        12802.4599609375,
+        4369.490234375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Tulga"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "city_Solnychniy",
+      "name": "$STR_LOCATION_SOLNICHNIY",
+      "position": [
+        13397.41015625,
+        6336.83984375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Solnichniy"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Berezino",
+      "name": "$STR_LOCATION_BEREZINO",
+      "position": [
+        12014.009765625,
+        9090.83984375
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Berezino"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_StarySobor",
+      "name": "$STR_LOCATION_STARYSOBOR",
+      "position": [
+        6169.009765625,
+        7793.669921875
+      ],
+      "type": "NameCity",
+      "speech": [
+        "StarySobor"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Msta",
+      "name": "$STR_LOCATION_MSTA",
+      "position": [
+        11333.7900390625,
+        5421.39990234375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Msta"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Staroye",
+      "name": "$STR_LOCATION_STAROYE",
+      "position": [
+        10212.51953125,
+        5385.0400390625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Staroye"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Shakhovka",
+      "name": "$STR_LOCATION_SHAKHOVKA",
+      "position": [
+        9728.6396484375,
+        6567.2998046875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Shakhovka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Dolina",
+      "name": "$STR_LOCATION_DOLINA",
+      "position": [
+        11285.169921875,
+        6633.580078125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Dolina"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Orlovets",
+      "name": "$STR_LOCATION_ORLOVETS",
+      "position": [
+        12131,
+        7189.7900390625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Orlovets"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Bor",
+      "name": "$STR_LOCATION_BOR",
+      "position": [
+        3326.739990234375,
+        3886.72998046875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Bor"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "city_Gorka",
+      "name": "$STR_LOCATION_GORKA",
+      "position": [
+        9616.0595703125,
+        8914.3798828125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Gorka"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_NovySobor",
+      "name": "$STR_LOCATION_NOVYSOBOR",
+      "position": [
+        7123.6298828125,
+        7774.6298828125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "NovySobor"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Kabanino",
+      "name": "$STR_LOCATION_KABANINO",
+      "position": [
+        5300.7099609375,
+        8645.900390625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Kabanino"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Mogilevka",
+      "name": "$STR_LOCATION_MOGILEVKA",
+      "position": [
+        7650.41015625,
+        5096.4599609375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Mogilevka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Nadezhdino",
+      "name": "$STR_LOCATION_NADEZHDINO",
+      "position": [
+        5876.66015625,
+        4696.93017578125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Nadezhdino"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill_Pik_Kozlova",
+      "name": "$STR_LOCATION_MT_PIKKOZLOVA",
+      "position": [
+        8850.169921875,
+        2880.530029296875
+      ],
+      "type": "Hill",
+      "radiusA": 50,
+      "radiusB": 50,
+      "angle": 0
+    },
+    {
+      "id": "hill_Altar",
+      "name": "$STR_LOCATION_MT_ALTAR",
+      "position": [
+        8137.81982421875,
+        9139.099609375
+      ],
+      "type": "Hill",
+      "radiusA": 50,
+      "radiusB": 50,
+      "angle": 0
+    },
+    {
+      "id": "hill_Ridge_Postoy",
+      "name": "$STR_LOCATION_MT_RIDGEPOSTOY",
+      "position": [
+        10725.2001953125,
+        5670.669921875
+      ],
+      "type": "Hill",
+      "radiusA": 50,
+      "radiusB": 50,
+      "angle": 0
+    },
+    {
+      "id": "vill_Guglovo",
+      "name": "$STR_LOCATION_GUGLOVO",
+      "position": [
+        8431.080078125,
+        6703.18994140625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Guglovo"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Kamyshovo",
+      "name": "$STR_LOCATION_KAMYSHOVO",
+      "position": [
+        12063.099609375,
+        3515.580078125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Kamyshovo"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Pusta",
+      "name": "$STR_LOCATION_PUSTA",
+      "position": [
+        9127.1796875,
+        3954.469970703125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Pusta"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "city_Zelenogorsk",
+      "name": "$STR_LOCATION_ZELENOGORSK",
+      "position": [
+        2774.260009765625,
+        5380.3798828125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Zelenogorsk"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "city_Vybor",
+      "name": "$STR_LOCATION_VYBOR",
+      "position": [
+        3833.169921875,
+        8918.919921875
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Vybor"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Dubrovka",
+      "name": "$STR_LOCATION_DUBROVKA",
+      "position": [
+        10382.1298828125,
+        9938.349609375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Dubrovka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Khelm",
+      "name": "$STR_LOCATION_KHELM",
+      "position": [
+        12329.26953125,
+        10771.009765625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Khelm"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Olsha",
+      "name": "$STR_LOCATION_OLSHA",
+      "position": [
+        13331.0498046875,
+        12900.0498046875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Olsha"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Gvozdno",
+      "name": "$STR_LOCATION_GVOZDNO",
+      "position": [
+        8614.6201171875,
+        11890.3203125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Gvozdno"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "city_Krasnostav",
+      "name": "$STR_LOCATION_KRASNOSTAV",
+      "position": [
+        11224.259765625,
+        12274.51953125
+      ],
+      "type": "NameCity",
+      "speech": [
+        "Krasnostav"
+      ],
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "vill_Petrovka",
+      "name": "$STR_LOCATION_PETROVKA",
+      "position": [
+        5016.4501953125,
+        12490.75
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Petrovka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Grishino",
+      "name": "$STR_LOCATION_GRISHINO",
+      "position": [
+        5959.93994140625,
+        10335.669921875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Grishino"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Skalka",
+      "name": "$STR_LOCATION_LOC_SKALKA",
+      "position": [
+        2060.159912109375,
+        12809.330078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Rogovo",
+      "name": "$STR_LOCATION_ROGOVO",
+      "position": [
+        4770.9599609375,
+        6835.259765625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Rogovo"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Pogorevka",
+      "name": "$STR_LOCATION_POGOREVKA",
+      "position": [
+        4435.35986328125,
+        6425.580078125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Pogorevka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Pustoshka",
+      "name": "$STR_LOCATION_PUSTOSHKA",
+      "position": [
+        3070.22998046875,
+        7940.47998046875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Pustoshka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Kozlovka",
+      "name": "$STR_LOCATION_KOZLOVKA",
+      "position": [
+        4477.56982421875,
+        4597.7900390625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Kozlovka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Polana",
+      "name": "$STR_LOCATION_POLANA",
+      "position": [
+        10707.0595703125,
+        8053.2900390625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Polana"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Balota",
+      "name": "$STR_LOCATION_BALOTA",
+      "position": [
+        4527.580078125,
+        2465.320068359375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Balota"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Komarovo",
+      "name": "$STR_LOCATION_KOMAROVO",
+      "position": [
+        3664.31005859375,
+        2499
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Komarovo"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Kamenka",
+      "name": "$STR_LOCATION_KAMENKA",
+      "position": [
+        1853.0899658203125,
+        2249.85009765625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Kamenka"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Myshkino",
+      "name": "$STR_LOCATION_MYSHKINO",
+      "position": [
+        1998.1800537109375,
+        7355.1298828125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Myshkino"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Pavlovo",
+      "name": "$STR_LOCATION_PAVLOVO",
+      "position": [
+        1693.97998046875,
+        3858.64990234375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Pavlovo"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Dichina",
+      "name": "$STR_LOCATION_LOC_DICHINA",
+      "position": [
+        4626.16015625,
+        7906.5498046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Devils_Castle",
+      "name": "$STR_LOCATION_LOC_DEVILSCASTLE",
+      "position": [
+        6816.39013671875,
+        11551.58984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Zub",
+      "name": "$STR_LOCATION_LOC_ZUB",
+      "position": [
+        6574.27978515625,
+        5573.85009765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Rog",
+      "name": "$STR_LOCATION_LOC_ROG",
+      "position": [
+        11221.8603515625,
+        4353.3798828125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Local_Power_Plant",
+      "name": "$STR_LOCATION_POWERPLANT",
+      "position": [
+        10254.9697265625,
+        2639.050048828125
+      ],
+      "type": "NameLocal",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Lopatino",
+      "name": "$STR_LOCATION_LOPATINO",
+      "position": [
+        2750,
+        10004.98046875
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Lopatino"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Vyshnoye",
+      "name": "$STR_LOCATION_VYSHNOE",
+      "position": [
+        6561.91015625,
+        6078.77001953125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Vyshnoe"
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "vill_Prigorodki",
+      "name": "$STR_LOCATION_PRIGORODKI",
+      "position": [
+        8015.580078125,
+        3419.260009765625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Prigorodki"
+      ],
+      "radiusA": 144.91000366210938,
+      "radiusB": 81.43000030517578,
+      "angle": 0
+    },
+    {
+      "id": "vill_Drozhino",
+      "name": "$STR_LOCATION_DROZHINO",
+      "position": [
+        3382.02001953125,
+        4925.8798828125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Drozhino"
+      ],
+      "radiusA": 57.810001373291016,
+      "radiusB": 66.94000244140625,
+      "angle": 0
+    },
+    {
+      "id": "vill_Sosnovka",
+      "name": "$STR_LOCATION_SOSNOVKA",
+      "position": [
+        2539.260009765625,
+        6358.7099609375
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Sosnovka"
+      ],
+      "radiusA": 57.459999084472656,
+      "radiusB": 62.619998931884766,
+      "angle": 0
+    },
+    {
+      "id": "vill_Nizhnoye",
+      "name": "$STR_LOCATION_NIZHNOYE",
+      "position": [
+        12824.8798828125,
+        8097.7001953125
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Nizhnoye"
+      ],
+      "radiusA": 97.77999877929688,
+      "radiusB": 111.66000366210938,
+      "angle": 0
+    },
+    {
+      "id": "vill_Pulkovo",
+      "name": "$STR_LOCATION_PULKOVO",
+      "position": [
+        4950.81982421875,
+        5627.10009765625
+      ],
+      "type": "NameVillage",
+      "speech": [
+        "Pulkovo"
+      ],
+      "radiusA": 60.0099983215332,
+      "radiusB": 48.11000061035156,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Chernogorsk_01",
+      "name": "",
+      "position": [
+        6329.81005859375,
+        2867.800048828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AStrong_Chernogorsk_02",
+      "name": "",
+      "position": [
+        6478.43994140625,
+        3036.280029296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_Chernogorsk_03",
+      "name": "",
+      "position": [
+        7181.43994140625,
+        3314.530029296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Chernogorsk_04",
+      "name": "",
+      "position": [
+        7318.47021484375,
+        2691.97998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 40
+    },
+    {
+      "id": "AStrong_Chernogorsk_05",
+      "name": "",
+      "position": [
+        6486.7998046875,
+        2233.070068359375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Chernogorsk_06",
+      "name": "",
+      "position": [
+        6311.7998046875,
+        2253.60009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Chernogorsk_07",
+      "name": "",
+      "position": [
+        6013.3798828125,
+        2170.93994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 260
+    },
+    {
+      "id": "AFlatC_Chernogorsk",
+      "name": "",
+      "position": [
+        6881.43994140625,
+        2781.030029296875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 15
+    },
+    {
+      "id": "AFlat_001",
+      "name": "",
+      "position": [
+        5811.58984375,
+        2081.1201171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_002",
+      "name": "",
+      "position": [
+        6632.68017578125,
+        3550.570068359375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_003",
+      "name": "",
+      "position": [
+        7330.56982421875,
+        3404.080078125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_Chernogorsk_01",
+      "name": "",
+      "position": [
+        6504.64013671875,
+        2403.030029296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 130
+    },
+    {
+      "id": "AFlatCS_Chernogorsk_02",
+      "name": "",
+      "position": [
+        6994.2001953125,
+        2605.590087890625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AFlatCS_Chernogorsk_03",
+      "name": "",
+      "position": [
+        6662.41015625,
+        2976.610107421875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 325
+    },
+    {
+      "id": "AFlat_004",
+      "name": "",
+      "position": [
+        4925.81005859375,
+        2154.929931640625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Balota_01",
+      "name": "",
+      "position": [
+        4363.75,
+        2299.27001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Balota_02",
+      "name": "",
+      "position": [
+        4357.22998046875,
+        2561.820068359375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Balota_03",
+      "name": "",
+      "position": [
+        4613.52978515625,
+        2565.56005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AStrong_Balota_04",
+      "name": "",
+      "position": [
+        4607.47021484375,
+        2405.780029296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "ACityC_Chernogorsk",
+      "name": "",
+      "position": [
+        6735.830078125,
+        2626.60009765625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Prigorodki",
+        "ACityC_Balota",
+        "ACityC_Nadezhdino",
+        "ACityC_Mogilevka"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Balota",
+      "name": "",
+      "position": [
+        4498.06982421875,
+        2449.389892578125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Chernogorsk",
+        "ACityC_Komarovo",
+        "ACityC_Kozlovka"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_Balota_01",
+      "name": "",
+      "position": [
+        4591.080078125,
+        2450.669921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 10
+    },
+    {
+      "id": "AFlat_005",
+      "name": "",
+      "position": [
+        4063.18994140625,
+        2850.320068359375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_006",
+      "name": "",
+      "position": [
+        3177.659912109375,
+        2047.280029296875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_007",
+      "name": "",
+      "position": [
+        1173.9200439453125,
+        2445.610107421875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_008",
+      "name": "",
+      "position": [
+        2014.02001953125,
+        2848.6298828125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_009",
+      "name": "",
+      "position": [
+        2670.97998046875,
+        3375.570068359375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_010",
+      "name": "",
+      "position": [
+        2051.360107421875,
+        4343.919921875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_011",
+      "name": "",
+      "position": [
+        2107.030029296875,
+        5051.169921875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_012",
+      "name": "",
+      "position": [
+        3129.510009765625,
+        4469.72998046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_013",
+      "name": "",
+      "position": [
+        3408.550048828125,
+        5433.56005859375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_014",
+      "name": "",
+      "position": [
+        4053.070068359375,
+        4864.02001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_015",
+      "name": "",
+      "position": [
+        2330.27001953125,
+        5980.009765625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_016",
+      "name": "",
+      "position": [
+        2869.659912109375,
+        6690.1298828125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_017",
+      "name": "",
+      "position": [
+        3339.919921875,
+        6597.18017578125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_018",
+      "name": "",
+      "position": [
+        3264.860107421875,
+        7266.2001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_019",
+      "name": "",
+      "position": [
+        3766.449951171875,
+        8114.3701171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_020",
+      "name": "",
+      "position": [
+        3325.9599609375,
+        8736.5
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_021",
+      "name": "",
+      "position": [
+        2735.219970703125,
+        9423.33984375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_022",
+      "name": "",
+      "position": [
+        3732.010009765625,
+        10153.900390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_023",
+      "name": "",
+      "position": [
+        2192.239990234375,
+        10800.419921875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_024",
+      "name": "",
+      "position": [
+        3865.449951171875,
+        11133.41015625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_025",
+      "name": "",
+      "position": [
+        4529.93994140625,
+        9147.240234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_026",
+      "name": "",
+      "position": [
+        5315.169921875,
+        10960.3095703125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_027",
+      "name": "",
+      "position": [
+        5810.39013671875,
+        11338.2802734375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_028",
+      "name": "",
+      "position": [
+        5610.60986328125,
+        12283.2802734375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_029",
+      "name": "",
+      "position": [
+        7476.93017578125,
+        11361.009765625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_030",
+      "name": "",
+      "position": [
+        8283.830078125,
+        10607.150390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_031",
+      "name": "",
+      "position": [
+        9089.9501953125,
+        11354
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_032",
+      "name": "",
+      "position": [
+        9418.08984375,
+        12168.5
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_033",
+      "name": "",
+      "position": [
+        10390.41015625,
+        12470.419921875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_034",
+      "name": "",
+      "position": [
+        10933.3603515625,
+        11472.2998046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_035",
+      "name": "",
+      "position": [
+        12318.5595703125,
+        13055.080078125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_036",
+      "name": "",
+      "position": [
+        13122.76953125,
+        11274.7998046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_037",
+      "name": "",
+      "position": [
+        13170.5,
+        10722.490234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_038",
+      "name": "",
+      "position": [
+        11813.9501953125,
+        9903.66015625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_039",
+      "name": "",
+      "position": [
+        12653.990234375,
+        9031.650390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_040",
+      "name": "",
+      "position": [
+        12163.5,
+        8549.900390625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_041",
+      "name": "",
+      "position": [
+        13137.6201171875,
+        7470
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_042",
+      "name": "",
+      "position": [
+        13442.900390625,
+        5248.39990234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_043",
+      "name": "",
+      "position": [
+        12880.4501953125,
+        5582.35009765625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_044",
+      "name": "",
+      "position": [
+        12597.9404296875,
+        3598.699951171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_045",
+      "name": "",
+      "position": [
+        11180.990234375,
+        4754.64990234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_046",
+      "name": "",
+      "position": [
+        11773.2802734375,
+        5662.77978515625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_047",
+      "name": "",
+      "position": [
+        10007.4599609375,
+        6010.35009765625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_048",
+      "name": "",
+      "position": [
+        10694.8798828125,
+        6889.3701171875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 320
+    },
+    {
+      "id": "AFlat_049",
+      "name": "",
+      "position": [
+        11150.2998046875,
+        7874.83984375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_050",
+      "name": "",
+      "position": [
+        10481.08984375,
+        8641.4404296875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_051",
+      "name": "",
+      "position": [
+        10896.8095703125,
+        9058.490234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_052",
+      "name": "",
+      "position": [
+        9987.099609375,
+        10544.830078125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_053",
+      "name": "",
+      "position": [
+        10133.48046875,
+        8392.4599609375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_054",
+      "name": "",
+      "position": [
+        7253.1298828125,
+        9838.099609375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_055",
+      "name": "",
+      "position": [
+        8174.1201171875,
+        9026.4296875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_056",
+      "name": "",
+      "position": [
+        7958.58984375,
+        8264.0498046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_057",
+      "name": "",
+      "position": [
+        8517.9404296875,
+        7973.77978515625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_058",
+      "name": "",
+      "position": [
+        8850.2001953125,
+        6330.10986328125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_059",
+      "name": "",
+      "position": [
+        8215.919921875,
+        5800.97998046875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_060",
+      "name": "",
+      "position": [
+        7857.14013671875,
+        7154.31005859375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_061",
+      "name": "",
+      "position": [
+        5610.08984375,
+        8205.990234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_062",
+      "name": "",
+      "position": [
+        4865.2099609375,
+        8087.60986328125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_063",
+      "name": "",
+      "position": [
+        4523.31005859375,
+        7190.39990234375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_064",
+      "name": "",
+      "position": [
+        5569.9599609375,
+        7228.22021484375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_065",
+      "name": "",
+      "position": [
+        6247.75,
+        6869.7001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_066",
+      "name": "",
+      "position": [
+        6943.64990234375,
+        5718.2001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_067",
+      "name": "",
+      "position": [
+        5775.64013671875,
+        9179.83984375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_068",
+      "name": "",
+      "position": [
+        6672.02978515625,
+        8983.2197265625
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_069",
+      "name": "",
+      "position": [
+        5015.759765625,
+        3667.3798828125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_070",
+      "name": "",
+      "position": [
+        8520.400390625,
+        2681.919921875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_071",
+      "name": "",
+      "position": [
+        6542,
+        4730.7001953125
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_072",
+      "name": "",
+      "position": [
+        7772.43994140625,
+        4483.83984375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_073",
+      "name": "",
+      "position": [
+        9103.759765625,
+        3447.820068359375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_074",
+      "name": "",
+      "position": [
+        8744.6201171875,
+        2275
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlat_075",
+      "name": "",
+      "position": [
+        11088.91015625,
+        3051.860107421875
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Komarovo_01",
+      "name": "",
+      "position": [
+        3498.06005859375,
+        2502.1298828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AStrong_Komarovo_02",
+      "name": "",
+      "position": [
+        3421.860107421875,
+        2355.139892578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 230
+    },
+    {
+      "id": "AStrong_Komarovo_03",
+      "name": "",
+      "position": [
+        3610,
+        2277.0400390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Komarovo_04",
+      "name": "",
+      "position": [
+        3813.8798828125,
+        2539.6201171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AStrong_Kamenka_01",
+      "name": "",
+      "position": [
+        2174.050048828125,
+        2231.889892578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_Kamenka_02",
+      "name": "",
+      "position": [
+        1574.2099609375,
+        2225.27001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 310
+    },
+    {
+      "id": "AStrong_Kamenka_03",
+      "name": "",
+      "position": [
+        1738.02001953125,
+        2364.5400390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AStrong_Kamenka_04",
+      "name": "",
+      "position": [
+        1985.02001953125,
+        2169.760009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 175
+    },
+    {
+      "id": "AStrong_Pavlovo_01",
+      "name": "",
+      "position": [
+        1772.949951171875,
+        3578.5400390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Pavlovo_02",
+      "name": "",
+      "position": [
+        1917.219970703125,
+        3801.090087890625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Pavlovo_03",
+      "name": "",
+      "position": [
+        1818.7099609375,
+        4089.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Zelenogorsk_01",
+      "name": "",
+      "position": [
+        2468.85009765625,
+        4991.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 215
+    },
+    {
+      "id": "AStrong_Zelenogorsk_02",
+      "name": "",
+      "position": [
+        2451.340087890625,
+        5229.31982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 285
+    },
+    {
+      "id": "AStrong_Zelenogorsk_03",
+      "name": "",
+      "position": [
+        2710.610107421875,
+        5778.91015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AStrong_Zelenogorsk_04",
+      "name": "",
+      "position": [
+        3191.5400390625,
+        5566.72021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Zelenogorsk_05",
+      "name": "",
+      "position": [
+        3020.77001953125,
+        5257.97998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_Bor_01",
+      "name": "",
+      "position": [
+        3229.909912109375,
+        4270.7900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "AStrong_Bor_02",
+      "name": "",
+      "position": [
+        3342.39990234375,
+        3823.52001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AStrong_Bor_03",
+      "name": "",
+      "position": [
+        3589.889892578125,
+        3915.10009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AStrong_Kozlovka_01",
+      "name": "",
+      "position": [
+        4073.1298828125,
+        4669.06005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 140
+    },
+    {
+      "id": "AStrong_Kozlovka_02",
+      "name": "",
+      "position": [
+        4126.81982421875,
+        4884.66015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AStrong_Kozlovka_03",
+      "name": "",
+      "position": [
+        4740.740234375,
+        4751.81005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 25
+    },
+    {
+      "id": "AStrong_Kozlovka_04",
+      "name": "",
+      "position": [
+        4557.41015625,
+        4372.10009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_Pogorevka_01",
+      "name": "",
+      "position": [
+        4274.77978515625,
+        6518.43994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 310
+    },
+    {
+      "id": "AStrong_Pogorevka_02",
+      "name": "",
+      "position": [
+        4437.0498046875,
+        6287.0400390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AStrong_Pogorevka_03",
+      "name": "",
+      "position": [
+        4591.22998046875,
+        6467.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145
+    },
+    {
+      "id": "AStrong_Rogovo_01",
+      "name": "",
+      "position": [
+        4799.27001953125,
+        6678.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AStrong_Rogovo_02",
+      "name": "",
+      "position": [
+        4860.91015625,
+        6815.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 105
+    },
+    {
+      "id": "AStrong_Rogovo_03",
+      "name": "",
+      "position": [
+        4863.6201171875,
+        7073.7998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_Rogovo_04",
+      "name": "",
+      "position": [
+        4581.2900390625,
+        6928.56982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 310
+    },
+    {
+      "id": "AStrong_Pustoshka_01",
+      "name": "",
+      "position": [
+        3017.85009765625,
+        7602.56982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AStrong_Pustoshka_02",
+      "name": "",
+      "position": [
+        3298.030029296875,
+        7913.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Pustoshka_03",
+      "name": "",
+      "position": [
+        3250.010009765625,
+        8262.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 65
+    },
+    {
+      "id": "AStrong_Pustoshka_04",
+      "name": "",
+      "position": [
+        2969.699951171875,
+        8044.08984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 335
+    },
+    {
+      "id": "AStrong_Vybor_01",
+      "name": "",
+      "position": [
+        3625.179931640625,
+        8511.4296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AStrong_Vybor_02",
+      "name": "",
+      "position": [
+        3600.31005859375,
+        9074.23046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Vybor_03",
+      "name": "",
+      "position": [
+        4054.090087890625,
+        8757.919921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Lopatino_01",
+      "name": "",
+      "position": [
+        2944.760009765625,
+        9715.8203125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 130
+    },
+    {
+      "id": "AStrong_Lopatino_02",
+      "name": "",
+      "position": [
+        2553.580078125,
+        9836.9404296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 175
+    },
+    {
+      "id": "AStrong_Lopatino_03",
+      "name": "",
+      "position": [
+        2633.659912109375,
+        10202.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 295
+    },
+    {
+      "id": "AStrong_Lopatino_04",
+      "name": "",
+      "position": [
+        2945.7900390625,
+        9936.5302734375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_AirField_01",
+      "name": "",
+      "position": [
+        4083.949951171875,
+        10287.3896484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 230
+    },
+    {
+      "id": "AStrong_AirField_02",
+      "name": "",
+      "position": [
+        4522.240234375,
+        9793.23046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_AirField_03",
+      "name": "",
+      "position": [
+        4465.91015625,
+        9498.5
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AStrong_AirField_04",
+      "name": "",
+      "position": [
+        5058.490234375,
+        9670.990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AStrong_AirField_05",
+      "name": "",
+      "position": [
+        4826.64990234375,
+        10294.7802734375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_AirField_06",
+      "name": "",
+      "position": [
+        4484.990234375,
+        10867.9697265625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_AirField_07",
+      "name": "",
+      "position": [
+        4110.9501953125,
+        11125.75
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Grishino_01",
+      "name": "",
+      "position": [
+        5858.9599609375,
+        10075.259765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Grishino_02",
+      "name": "",
+      "position": [
+        5968.5498046875,
+        10062.8095703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 150
+    },
+    {
+      "id": "AStrong_Grishino_03",
+      "name": "",
+      "position": [
+        5705.31005859375,
+        10251.3896484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Grishino_04",
+      "name": "",
+      "position": [
+        6072.27001953125,
+        10598.6796875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AStrong_Grishino_05",
+      "name": "",
+      "position": [
+        6247.72998046875,
+        10397.8701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Gvozdno_01",
+      "name": "",
+      "position": [
+        8287.8701171875,
+        12081.6904296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AStrong_Gvozdno_02",
+      "name": "",
+      "position": [
+        8708.4404296875,
+        11603.8701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 275
+    },
+    {
+      "id": "AStrong_Gvozdno_03",
+      "name": "",
+      "position": [
+        9061.0400390625,
+        11774.48046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Gvozdno_04",
+      "name": "",
+      "position": [
+        8794.400390625,
+        11903.6796875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Krasnostav_01",
+      "name": "",
+      "position": [
+        10642.849609375,
+        12384.8203125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 275
+    },
+    {
+      "id": "AStrong_Krasnostav_02",
+      "name": "",
+      "position": [
+        11181.3798828125,
+        12067.76953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 220
+    },
+    {
+      "id": "AStrong_Krasnostav_03",
+      "name": "",
+      "position": [
+        11761.73046875,
+        12281.26953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Krasnostav_04",
+      "name": "",
+      "position": [
+        11628.6796875,
+        12546.4404296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AStrong_Krasnostav_05",
+      "name": "",
+      "position": [
+        11166.3603515625,
+        12507.26953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AStrong_Olsha_01",
+      "name": "",
+      "position": [
+        13247.150390625,
+        12765.66015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 115
+    },
+    {
+      "id": "AStrong_Khelm_01",
+      "name": "",
+      "position": [
+        12091.990234375,
+        10594.8701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Khelm_02",
+      "name": "",
+      "position": [
+        12378.009765625,
+        10564.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 150
+    },
+    {
+      "id": "AStrong_Khelm_03",
+      "name": "",
+      "position": [
+        12373.509765625,
+        11020.490234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_Dubrovka_01",
+      "name": "",
+      "position": [
+        10878.25,
+        9939.8798828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Dubrovka_02",
+      "name": "",
+      "position": [
+        10249.98046875,
+        9951.0400390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 25
+    },
+    {
+      "id": "AStrong_Dubrovka_03",
+      "name": "",
+      "position": [
+        10504.580078125,
+        10074.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Dubrovka_04",
+      "name": "",
+      "position": [
+        10517.919921875,
+        9578.3603515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 115
+    },
+    {
+      "id": "AStrong_Dubrovka_05",
+      "name": "",
+      "position": [
+        10392.51953125,
+        9537.8095703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AStrong_Berezino_01",
+      "name": "",
+      "position": [
+        11424.3603515625,
+        9388.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Berezino_02",
+      "name": "",
+      "position": [
+        11889.3203125,
+        9354.6201171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 320
+    },
+    {
+      "id": "AStrong_Berezino_03",
+      "name": "",
+      "position": [
+        11932.9599609375,
+        8701.1298828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_Berezino_04",
+      "name": "",
+      "position": [
+        12291.0595703125,
+        8924.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Berezino_05",
+      "name": "",
+      "position": [
+        12097.7197265625,
+        9292.3701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Polana_02",
+      "name": "",
+      "position": [
+        10887.91015625,
+        8048.7900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AStrong_Polana_01",
+      "name": "",
+      "position": [
+        10645.830078125,
+        8317.9404296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "AStrong_Polana_03",
+      "name": "",
+      "position": [
+        10625.9599609375,
+        7771.06982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AStrong_Polana_04",
+      "name": "",
+      "position": [
+        10394.669921875,
+        7760.10009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 280
+    },
+    {
+      "id": "AStrong_Gorka_01",
+      "name": "",
+      "position": [
+        9056.9404296875,
+        8889.7900390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Gorka_02",
+      "name": "",
+      "position": [
+        9530.4599609375,
+        8970.73046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_Gorka_03",
+      "name": "",
+      "position": [
+        9217.849609375,
+        8755.509765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 185
+    },
+    {
+      "id": "AStrong_Gorka_04",
+      "name": "",
+      "position": [
+        9943.650390625,
+        8850.8603515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 80
+    },
+    {
+      "id": "AStrong_Gorka_05",
+      "name": "",
+      "position": [
+        9982.8896484375,
+        8663.2001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Orlovets_01",
+      "name": "",
+      "position": [
+        11918.5595703125,
+        7250.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 305
+    },
+    {
+      "id": "AStrong_Orlovets_02",
+      "name": "",
+      "position": [
+        12399.08984375,
+        7370.419921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "AStrong_Dolina_01",
+      "name": "",
+      "position": [
+        11030.0703125,
+        6704.27978515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 275
+    },
+    {
+      "id": "AStrong_Dolina_02",
+      "name": "",
+      "position": [
+        11640.4296875,
+        6583.64990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Solnichniy_01",
+      "name": "",
+      "position": [
+        13115.4697265625,
+        6256
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Solnichniy_02",
+      "name": "",
+      "position": [
+        13425.080078125,
+        6460.3798828125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AStrong_Solnichniy_03",
+      "name": "",
+      "position": [
+        13395.2099609375,
+        5932.02001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Shakhovka_01",
+      "name": "",
+      "position": [
+        9702.099609375,
+        6248.43017578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 70
+    },
+    {
+      "id": "AStrong_Shakhovka_02",
+      "name": "",
+      "position": [
+        9782.58984375,
+        6543.7001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 85
+    },
+    {
+      "id": "AStrong_Shakhovka_03",
+      "name": "",
+      "position": [
+        9471.98046875,
+        6808.3701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AStrong_Shakhovka_04",
+      "name": "",
+      "position": [
+        9668.3603515625,
+        6779.10986328125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 10
+    },
+    {
+      "id": "AStrong_Staroye_01",
+      "name": "",
+      "position": [
+        10172.2099609375,
+        5228.89013671875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 150
+    },
+    {
+      "id": "AStrong_Staroye_02",
+      "name": "",
+      "position": [
+        9820.58984375,
+        5467.5498046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Staroye_03",
+      "name": "",
+      "position": [
+        9928.9296875,
+        5927.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 340
+    },
+    {
+      "id": "AStrong_Staroye_04",
+      "name": "",
+      "position": [
+        10505.48046875,
+        5480.97998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AStrong_Staroye_05",
+      "name": "",
+      "position": [
+        10325.5498046875,
+        5734.02978515625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AStrong_Tulga_01",
+      "name": "",
+      "position": [
+        12907.58984375,
+        4457.43017578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 280
+    },
+    {
+      "id": "AStrong_Tulga_02",
+      "name": "",
+      "position": [
+        12541.75,
+        4552.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_Tulga_03",
+      "name": "",
+      "position": [
+        12508.400390625,
+        4462.72998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 260
+    },
+    {
+      "id": "AStrong_Kamyshovo_01",
+      "name": "",
+      "position": [
+        11852.0302734375,
+        3480.010009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 255
+    },
+    {
+      "id": "AStrong_Kamyshovo_02",
+      "name": "",
+      "position": [
+        12383.76953125,
+        3552.52001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 85
+    },
+    {
+      "id": "AStrong_Kamyshovo_03",
+      "name": "",
+      "position": [
+        12004.599609375,
+        3800.469970703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 320
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_01",
+      "name": "",
+      "position": [
+        10924.1103515625,
+        2779.449951171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_02",
+      "name": "",
+      "position": [
+        10379.75,
+        1971.4599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_03",
+      "name": "",
+      "position": [
+        10383.5400390625,
+        2718.409912109375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_04",
+      "name": "",
+      "position": [
+        10196.26953125,
+        2358.27001953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_05",
+      "name": "",
+      "position": [
+        9555.83984375,
+        2250.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 70
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_06",
+      "name": "",
+      "position": [
+        9868.599609375,
+        1894.97998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AStrong_Elektrozavodsk_07",
+      "name": "",
+      "position": [
+        9182.599609375,
+        2101.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 280
+    },
+    {
+      "id": "AStrong_Pusta_01",
+      "name": "",
+      "position": [
+        9126.33984375,
+        3620.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 95
+    },
+    {
+      "id": "AStrong_Pusta_02",
+      "name": "",
+      "position": [
+        8843.8603515625,
+        4021.919921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 315
+    },
+    {
+      "id": "AStrong_Pusta_03",
+      "name": "",
+      "position": [
+        9362.759765625,
+        4025.280029296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AStrong_Mogilevka_01",
+      "name": "",
+      "position": [
+        7522.6298828125,
+        4706.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AStrong_Mogilevka_02",
+      "name": "",
+      "position": [
+        7592.56005859375,
+        4915.0498046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 105
+    },
+    {
+      "id": "AStrong_Mogilevka_03",
+      "name": "",
+      "position": [
+        7432.330078125,
+        5104.580078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AStrong_Mogilevka_04",
+      "name": "",
+      "position": [
+        7362.0498046875,
+        5292.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 335
+    },
+    {
+      "id": "AStrong_Mogilevka_05",
+      "name": "",
+      "position": [
+        7802.830078125,
+        5218.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AStrong_Vyshnoye_01",
+      "name": "",
+      "position": [
+        6638.91015625,
+        5857.39013671875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 110
+    },
+    {
+      "id": "AStrong_Vyshnoye_02",
+      "name": "",
+      "position": [
+        6348.2099609375,
+        6241.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 310
+    },
+    {
+      "id": "AStrong_Vyshnoye_03",
+      "name": "",
+      "position": [
+        6602.14013671875,
+        6204.10986328125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_NovySobor_01",
+      "name": "",
+      "position": [
+        7351.72998046875,
+        7694.9599609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 140
+    },
+    {
+      "id": "AStrong_NovySobor_02",
+      "name": "",
+      "position": [
+        6911.06982421875,
+        7856.0498046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AStrong_NovySobor_03",
+      "name": "",
+      "position": [
+        6880.22021484375,
+        7579.580078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 10,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_NovySobor_04",
+      "name": "",
+      "position": [
+        7086.97021484375,
+        7438.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AStrong_StarySobor_01",
+      "name": "",
+      "position": [
+        6373.77001953125,
+        7555.68994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160
+    },
+    {
+      "id": "AStrong_StarySobor_02",
+      "name": "",
+      "position": [
+        5855.669921875,
+        7529.080078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200
+    },
+    {
+      "id": "AStrong_StarySobor_03",
+      "name": "",
+      "position": [
+        6257.9599609375,
+        7839.419921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_StarySobor_04",
+      "name": "",
+      "position": [
+        6243.91015625,
+        8026.06005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_StarySobor_05",
+      "name": "",
+      "position": [
+        5824.8701171875,
+        8121.5
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 325
+    },
+    {
+      "id": "AStrong_Kabanino_01",
+      "name": "",
+      "position": [
+        5532.60986328125,
+        8397.4697265625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 140
+    },
+    {
+      "id": "AStrong_Kabanino_02",
+      "name": "",
+      "position": [
+        5169.41015625,
+        8542.3095703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Kabanino_03",
+      "name": "",
+      "position": [
+        5277.35986328125,
+        8765.7099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_Kabanino_04",
+      "name": "",
+      "position": [
+        5488.47998046875,
+        8712.33984375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AStrong_Bor_04",
+      "name": "",
+      "position": [
+        2795.239990234375,
+        4119.72998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 15
+    },
+    {
+      "id": "AStrong_Nadezhdino_01",
+      "name": "",
+      "position": [
+        5796.27001953125,
+        4825.2998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 295
+    },
+    {
+      "id": "AStrong_Nadezhdino_02",
+      "name": "",
+      "position": [
+        6025.22021484375,
+        4886.990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 115
+    },
+    {
+      "id": "AStrong_Nadezhdino_03",
+      "name": "",
+      "position": [
+        5799.27978515625,
+        5036.47021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 15
+    },
+    {
+      "id": "AStrong_Nadezhdino_04",
+      "name": "",
+      "position": [
+        5800.68994140625,
+        4417.759765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 260
+    },
+    {
+      "id": "AStrong_Drozhino_01",
+      "name": "",
+      "position": [
+        3254.260009765625,
+        5052.2099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 315
+    },
+    {
+      "id": "AStrong_Drozhino_02",
+      "name": "",
+      "position": [
+        3525.199951171875,
+        4888.4501953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Pulkovo_01",
+      "name": "",
+      "position": [
+        4833.52001953125,
+        5719.490234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AStrong_Pulkovo_02",
+      "name": "",
+      "position": [
+        5018.9501953125,
+        5597.009765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 110
+    },
+    {
+      "id": "AStrong_Sosnovka_01",
+      "name": "",
+      "position": [
+        2818.840087890625,
+        6647.56005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Sosnovka_02",
+      "name": "",
+      "position": [
+        2501.56005859375,
+        6080.72021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 135
+    },
+    {
+      "id": "AStrong_Myshkino_01",
+      "name": "",
+      "position": [
+        2316.4599609375,
+        7201.919921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 40
+    },
+    {
+      "id": "AStrong_Myshkino_02",
+      "name": "",
+      "position": [
+        1868.52001953125,
+        7547.35986328125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Vybor_04",
+      "name": "",
+      "position": [
+        4113.06005859375,
+        9088.759765625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AStrong_Petrovka_01",
+      "name": "",
+      "position": [
+        4849.89990234375,
+        12570.3701171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 175
+    },
+    {
+      "id": "AStrong_Petrovka_02",
+      "name": "",
+      "position": [
+        5105.77001953125,
+        12497.3095703125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145
+    },
+    {
+      "id": "AStrong_Olsha_02",
+      "name": "",
+      "position": [
+        13306.23046875,
+        12958.6201171875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AStrong_Berezino_06",
+      "name": "",
+      "position": [
+        13141.91015625,
+        10473.349609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AStrong_Berezino_07",
+      "name": "",
+      "position": [
+        12816.150390625,
+        10254.669921875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AStrong_Berezino_08",
+      "name": "",
+      "position": [
+        12678.7900390625,
+        9892.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AStrong_Berezino_09",
+      "name": "",
+      "position": [
+        12913.9697265625,
+        9683.6904296875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AStrong_Nizhnoye_01",
+      "name": "",
+      "position": [
+        12658.1796875,
+        8395.9501953125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "AStrong_Nizhnoye_02",
+      "name": "",
+      "position": [
+        12933.7802734375,
+        8423.150390625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 345
+    },
+    {
+      "id": "AStrong_Nizhnoye_03",
+      "name": "",
+      "position": [
+        12751.6298828125,
+        7996.580078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AStrong_Nizhnoye_04",
+      "name": "",
+      "position": [
+        13063.240234375,
+        7975.240234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 185
+    },
+    {
+      "id": "AStrong_Solnichniy_04",
+      "name": "",
+      "position": [
+        13145.08984375,
+        7190.31982421875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 355
+    },
+    {
+      "id": "AStrong_Solnichniy_05",
+      "name": "",
+      "position": [
+        13137.0302734375,
+        6913.16015625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AStrong_Orlovets_03",
+      "name": "",
+      "position": [
+        12157.330078125,
+        7400.25
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 65
+    },
+    {
+      "id": "AStrong_Orlovets_04",
+      "name": "",
+      "position": [
+        12182.5703125,
+        6980.580078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145
+    },
+    {
+      "id": "AStrong_Dolina_03",
+      "name": "",
+      "position": [
+        12041.26953125,
+        6348.7099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AStrong_Dolina_04",
+      "name": "",
+      "position": [
+        12424.509765625,
+        6251.06005859375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AStrong_Msta_01",
+      "name": "",
+      "position": [
+        11041.6796875,
+        5347.39990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AStrong_Msta_02",
+      "name": "",
+      "position": [
+        11079.7802734375,
+        5142.39990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 135
+    },
+    {
+      "id": "AStrong_Msta_03",
+      "name": "",
+      "position": [
+        11440.3095703125,
+        5497.7998046875
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AStrong_Tulga_04",
+      "name": "",
+      "position": [
+        12398.8701171875,
+        4376.35986328125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Prigorodki_01",
+      "name": "",
+      "position": [
+        7579.7001953125,
+        3215.7099609375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 265
+    },
+    {
+      "id": "AStrong_Prigorodki_02",
+      "name": "",
+      "position": [
+        7989.64013671875,
+        3131.909912109375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 85
+    },
+    {
+      "id": "AStrong_Prigorodki_03",
+      "name": "",
+      "position": [
+        7637.419921875,
+        3499.39990234375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AStrong_Prigorodki_04",
+      "name": "",
+      "position": [
+        7880.1201171875,
+        3532.43994140625
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 135
+    },
+    {
+      "id": "AStrong_Guglovo_01",
+      "name": "",
+      "position": [
+        8563.01953125,
+        6589.22021484375
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 105
+    },
+    {
+      "id": "AStrong_Guglovo_02",
+      "name": "",
+      "position": [
+        8295.73046875,
+        6775.43017578125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 315
+    },
+    {
+      "id": "AFlat_076",
+      "name": "",
+      "position": [
+        13180.6103515625,
+        3987.409912109375
+      ],
+      "type": "FlatArea",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Komarovo",
+      "name": "",
+      "position": [
+        3670.81005859375,
+        2385.7900390625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Bor",
+        "ACityC_Pavlovo",
+        "ACityC_Kamenka",
+        "ACityC_Balota"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Kamenka",
+      "name": "",
+      "position": [
+        1860.739990234375,
+        2220.659912109375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Komarovo",
+        "ACityC_Pavlovo"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Pavlovo",
+      "name": "",
+      "position": [
+        1691.949951171875,
+        3838.989990234375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Bor",
+        "ACityC_Zelenogorsk",
+        "ACityC_Kamenka",
+        "ACityC_Komarovo"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Bor",
+      "name": "",
+      "position": [
+        3351.679931640625,
+        3950.18994140625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Pavlovo",
+        "ACityC_Kozlovka",
+        "ACityC_Drozhino",
+        "ACityC_Komarovo"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Zelenogorsk",
+      "name": "",
+      "position": [
+        2754.429931640625,
+        5270.97998046875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Drozhino",
+        "ACityC_Pulkovo",
+        "ACityC_Pavlovo",
+        "ACityC_Sosnovka",
+        "ACityC_Pogorevka"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Drozhino",
+      "name": "",
+      "position": [
+        3379.6201171875,
+        4922.14990234375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Bor",
+        "ACityC_Kozlovka",
+        "ACityC_Zelenogorsk",
+        "ACityC_Pulkovo"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Kozlovka",
+      "name": "",
+      "position": [
+        4467.60986328125,
+        4626.5498046875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Drozhino",
+        "ACityC_Balota",
+        "ACityC_Bor",
+        "ACityC_Nadezhdino"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Sosnovka",
+      "name": "",
+      "position": [
+        2527.60009765625,
+        6336.10986328125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Pustoshka",
+        "ACityC_Myshkino",
+        "ACityC_Zelenogorsk",
+        "ACityC_Pogorevka"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Pulkovo",
+      "name": "",
+      "position": [
+        4931.5498046875,
+        5612.52978515625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Zelenogorsk",
+        "ACityC_Rogovo",
+        "ACityC_Pogorevka",
+        "ACityC_Drozhino"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Pogorevka",
+      "name": "",
+      "position": [
+        4464.14990234375,
+        6420.89013671875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Rogovo",
+        "ACityC_Zelenogorsk",
+        "ACityC_Pustoshka",
+        "ACityC_Pulkovo",
+        "ACityC_Sosnovka"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Rogovo",
+      "name": "",
+      "position": [
+        4742.93994140625,
+        6775.919921875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Pogorevka",
+        "ACityC_Kabanino",
+        "ACityC_StarySobor",
+        "ACityC_Nadezhdino",
+        "ACityC_Pulkovo",
+        "ACityC_Vyshnoye"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Myshkino",
+      "name": "",
+      "position": [
+        2002.449951171875,
+        7322.60986328125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Pustoshka",
+        "ACityC_Sosnovka",
+        "ACityC_Lopatino"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Pustoshka",
+      "name": "",
+      "position": [
+        3048.06005859375,
+        7885.56005859375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Vybor",
+        "ACityC_Myshkino",
+        "ACityC_Pogorevka",
+        "ACityC_Sosnovka",
+        "ACityC_Kabanino",
+        "ACityC_Lopatino"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Vybor",
+      "name": "",
+      "position": [
+        3904.06005859375,
+        8932.7099609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Lopatino",
+        "ACityC_Pustoshka",
+        "ACityC_Kabanino"
+      ],
+      "demography": [
+        "CIV",
+        0.699999988079071,
+        "CIV_RU",
+        0.30000001192092896
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Lopatino",
+      "name": "",
+      "position": [
+        2767.780029296875,
+        9935.9697265625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Vybor",
+        "ACityC_Pustoshka",
+        "ACityC_Grishino",
+        "ACityC_Myshkino"
+      ],
+      "demography": [
+        "CIV",
+        0.30000001192092896,
+        "CIV_RU",
+        0.699999988079071
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Kabanino",
+      "name": "",
+      "position": [
+        5347.5,
+        8595.3603515625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Rogovo",
+        "ACityC_StarySobor",
+        "ACityC_Grishino",
+        "ACityC_Vybor",
+        "ACityC_Pustoshka"
+      ],
+      "demography": [
+        "CIV",
+        0.6000000238418579,
+        "CIV_RU",
+        0.4000000059604645
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Grishino",
+      "name": "",
+      "position": [
+        5980.06005859375,
+        10289.599609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Kabanino",
+        "ACityC_Petrovka",
+        "ACityC_NovySobor",
+        "ACityC_Gvozdno",
+        "ACityC_Gorka",
+        "ACityC_Lopatino"
+      ],
+      "demography": [
+        "CIV",
+        0.30000001192092896,
+        "CIV_RU",
+        0.699999988079071
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Petrovka",
+      "name": "",
+      "position": [
+        4987.7900390625,
+        12510.5703125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Grishino"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_StarySobor",
+      "name": "",
+      "position": [
+        6115.919921875,
+        7747.75
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Kabanino",
+        "ACityC_NovySobor",
+        "ACityC_Rogovo",
+        "ACityC_Vyshnoye"
+      ],
+      "demography": [
+        "CIV",
+        0.699999988079071,
+        "CIV_RU",
+        0.30000001192092896
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_NovySobor",
+      "name": "",
+      "position": [
+        7061.18994140625,
+        7718.0400390625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Guglovo",
+        "ACityC_StarySobor",
+        "ACityC_Gorka",
+        "ACityC_Mogilevka",
+        "ACityC_Grishino"
+      ],
+      "demography": [
+        "CIV",
+        0.30000001192092896,
+        "CIV_RU",
+        0.699999988079071
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Guglovo",
+      "name": "",
+      "position": [
+        8466.5498046875,
+        6662.4501953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_NovySobor",
+        "ACityC_Staroye",
+        "ACityC_Shakhovka"
+      ],
+      "demography": [
+        "CIV",
+        0.5,
+        "CIV_RU",
+        0.5
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Vyshnoye",
+      "name": "",
+      "position": [
+        6565.10986328125,
+        6104.91015625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Rogovo",
+        "ACityC_StarySobor",
+        "ACityC_Mogilevka"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Mogilevka",
+      "name": "",
+      "position": [
+        7576.97998046875,
+        5177.14013671875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Vyshnoye",
+        "ACityC_NovySobor",
+        "ACityC_Pusta",
+        "ACityC_Chernogorsk"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Nadezhdino",
+      "name": "",
+      "position": [
+        5871.47021484375,
+        4774.93994140625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Kozlovka",
+        "ACityC_Rogovo",
+        "ACityC_Chernogorsk"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Prigorodki",
+      "name": "",
+      "position": [
+        7982.7099609375,
+        3382.39990234375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Chernogorsk",
+        "ACityC_Elektrozavodsk"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Elektrozavodsk",
+      "name": "",
+      "position": [
+        10436.25,
+        2138.389892578125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Pusta",
+        "ACityC_Prigorodki",
+        "ACityC_Kamyshovo",
+        "ACityC_Staroye"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Pusta",
+      "name": "",
+      "position": [
+        9169.6201171875,
+        3857.7099609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Mogilevka",
+        "ACityC_Elektrozavodsk"
+      ],
+      "demography": [
+        "CIV",
+        0.8999999761581421,
+        "CIV_RU",
+        0.10000000149011612
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Staroye",
+      "name": "",
+      "position": [
+        10167.0498046875,
+        5572.3798828125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Shakhovka",
+        "ACityC_Guglovo",
+        "ACityC_Msta",
+        "ACityC_Elektrozavodsk",
+        "",
+        "ACityC_Dolina"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Msta",
+      "name": "",
+      "position": [
+        11273.1298828125,
+        5471.18017578125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Staroye",
+        "ACityC_Dolina",
+        "ACityC_Tulga"
+      ],
+      "demography": [
+        "CIV",
+        0.4000000059604645,
+        "CIV_RU",
+        0.6000000238418579
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Tulga",
+      "name": "",
+      "position": [
+        12775.7900390625,
+        4416.77001953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Kamyshovo",
+        "ACityC_Solnychniy",
+        "ACityC_Msta"
+      ],
+      "demography": [
+        "CIV",
+        0.6000000238418579,
+        "CIV_RU",
+        0.4000000059604645
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Kamyshovo",
+      "name": "",
+      "position": [
+        12074.990234375,
+        3583.77001953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Solnychniy",
+        "ACityC_Tulga",
+        "ACityC_Elektrozavodsk"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Solnychniy",
+      "name": "",
+      "position": [
+        13328.8603515625,
+        6255.6201171875
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Dolina",
+        "ACityC_Nizhnoye",
+        "ACityC_Tulga",
+        "ACityC_Kamyshovo"
+      ],
+      "demography": [
+        "CIV",
+        0.6000000238418579,
+        "CIV_RU",
+        0.4000000059604645
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Dolina",
+      "name": "",
+      "position": [
+        11281.4599609375,
+        6581.77001953125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Polana",
+        "ACityC_Shakhovka",
+        "ACityC_Staroye",
+        "ACityC_Solnychniy",
+        "ACityC_Msta"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Shakhovka",
+      "name": "",
+      "position": [
+        9624.3896484375,
+        6565.68994140625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Dolina",
+        "ACityC_Guglovo",
+        "ACityC_Polana",
+        "ACityC_Staroye"
+      ],
+      "demography": [
+        "CIV",
+        0.6000000238418579,
+        "CIV_RU",
+        0.4000000059604645
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Orlovets",
+      "name": "",
+      "position": [
+        12155.8896484375,
+        7266.4599609375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Polana",
+        "ACityC_Berezino"
+      ],
+      "demography": [
+        "CIV",
+        0.10000000149011612,
+        "CIV_RU",
+        0.8999999761581421
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Polana",
+      "name": "",
+      "position": [
+        10674.2197265625,
+        8033.22021484375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Dolina",
+        "ACityC_Shakhovka",
+        "ACityC_Orlovets",
+        "ACityC_Gorka",
+        "ACityC_Dubrovka"
+      ],
+      "demography": [
+        "CIV",
+        0.10000000149011612,
+        "CIV_RU",
+        0.8999999761581421
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Gorka",
+      "name": "",
+      "position": [
+        9598.5595703125,
+        8833.330078125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Polana",
+        "ACityC_Dubrovka",
+        "ACityC_NovySobor",
+        "ACityC_Grishino",
+        "ACityC_Gvozdno"
+      ],
+      "demography": [
+        "CIV",
+        0.800000011920929,
+        "CIV_RU",
+        0.20000000298023224
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Berezino",
+      "name": "",
+      "position": [
+        12480.400390625,
+        9650.33984375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Dubrovka",
+        "ACityC_Orlovets",
+        "ACityC_Nizhnoye",
+        "ACityC_Khelm"
+      ],
+      "demography": [
+        "CIV",
+        1,
+        "CIV_RU",
+        0
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Dubrovka",
+      "name": "",
+      "position": [
+        10430.2802734375,
+        9799.580078125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Gorka",
+        "ACityC_Berezino",
+        "ACityC_Krasnostav",
+        "ACityC_Gvozdno",
+        "ACityC_Polana"
+      ],
+      "demography": [
+        "CIV",
+        0.10000000149011612,
+        "CIV_RU",
+        0.8999999761581421
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Gvozdno",
+      "name": "",
+      "position": [
+        8573.3701171875,
+        11948.009765625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Gorka",
+        "ACityC_Krasnostav",
+        "ACityC_Dubrovka",
+        "ACityC_Grishino"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Krasnostav",
+      "name": "",
+      "position": [
+        11175.1904296875,
+        12282.7900390625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Olsha",
+        "ACityC_Dubrovka",
+        "ACityC_Gvozdno",
+        "ACityC_Khelm"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Olsha",
+      "name": "",
+      "position": [
+        13359.669921875,
+        12873.08984375
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Krasnostav"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Khelm",
+      "name": "",
+      "position": [
+        12302.73046875,
+        10796.3203125
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Berezino",
+        "ACityC_Krasnostav"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ACityC_Nizhnoye",
+      "name": "",
+      "position": [
+        12945.76953125,
+        8169.60009765625
+      ],
+      "type": "CityCenter",
+      "neighbors": [
+        "ACityC_Berezino",
+        "ACityC_Solnychniy"
+      ],
+      "demography": [
+        "CIV",
+        0,
+        "CIV_RU",
+        1
+      ],
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Balota",
+      "name": "",
+      "position": [
+        4388.25,
+        2538.510009765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AFlatC_Komarovo",
+      "name": "",
+      "position": [
+        3760.110107421875,
+        2473.72998046875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 150
+    },
+    {
+      "id": "AFlatC_Kamenka",
+      "name": "",
+      "position": [
+        1684.6800537109375,
+        2234.780029296875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AFlatC_Pavlovo",
+      "name": "",
+      "position": [
+        1732.25,
+        3740.9599609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AFlatC_Bor",
+      "name": "",
+      "position": [
+        3481.35009765625,
+        3997.93994140625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 25
+    },
+    {
+      "id": "AFlatC_Kozlovka",
+      "name": "",
+      "position": [
+        4465.9599609375,
+        4570.830078125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatC_Drozhino",
+      "name": "",
+      "position": [
+        3406.360107421875,
+        4872.27001953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 220
+    },
+    {
+      "id": "AFlatC_Zelenogorsk",
+      "name": "",
+      "position": [
+        2671.14990234375,
+        5320.509765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 280
+    },
+    {
+      "id": "AFlatC_Sosnovka",
+      "name": "",
+      "position": [
+        2399.679931640625,
+        6303.759765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 205
+    },
+    {
+      "id": "AFlatC_Pulkovo",
+      "name": "",
+      "position": [
+        4892.72998046875,
+        5712.4501953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 65
+    },
+    {
+      "id": "AFlatC_Nadezhdino",
+      "name": "",
+      "position": [
+        5807.60986328125,
+        4998.41015625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AFlatC_Pogorevka",
+      "name": "",
+      "position": [
+        4519.02978515625,
+        6324.5
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 360
+    },
+    {
+      "id": "AFlatC_Rogovo",
+      "name": "",
+      "position": [
+        4811.72998046875,
+        6728.0498046875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 355
+    },
+    {
+      "id": "AFlatC_Vyshnoye",
+      "name": "",
+      "position": [
+        6522.85009765625,
+        6149.58984375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AFlatC_NovySobor",
+      "name": "",
+      "position": [
+        7015.66015625,
+        7645.47021484375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160
+    },
+    {
+      "id": "AFlatC_StarySobor",
+      "name": "",
+      "position": [
+        6306.919921875,
+        7540
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AFlatC_Kabanino",
+      "name": "",
+      "position": [
+        5449.2900390625,
+        8608.5400390625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 265
+    },
+    {
+      "id": "AFlatC_Vybor",
+      "name": "",
+      "position": [
+        3635.419921875,
+        8897.6396484375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 225
+    },
+    {
+      "id": "AFlatC_Pustoshka",
+      "name": "",
+      "position": [
+        2934.610107421875,
+        7780.66015625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 275
+    },
+    {
+      "id": "AFlatC_Myshkino",
+      "name": "",
+      "position": [
+        1916.0999755859375,
+        7439.7001953125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 250
+    },
+    {
+      "id": "AFlatC_Lopatino",
+      "name": "",
+      "position": [
+        2636.010009765625,
+        10089.0498046875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AFlatC_Grishino",
+      "name": "",
+      "position": [
+        6008.8798828125,
+        10420.349609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AFlatC_Petrovka",
+      "name": "",
+      "position": [
+        4977.830078125,
+        12583.0498046875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AFlatC_Elektrozavodsk",
+      "name": "",
+      "position": [
+        10248.830078125,
+        2163.760009765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 345
+    },
+    {
+      "id": "AFlatC_Prigorodki",
+      "name": "",
+      "position": [
+        7831.2099609375,
+        3340.260009765625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatC_Kamyshovo",
+      "name": "",
+      "position": [
+        12300.6396484375,
+        3541.929931640625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AFlatC_Pusta",
+      "name": "",
+      "position": [
+        9081.8798828125,
+        3753.139892578125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 85
+    },
+    {
+      "id": "AFlatC_Mogilevka",
+      "name": "",
+      "position": [
+        7641.6201171875,
+        4966.9599609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 35
+    },
+    {
+      "id": "AFlatC_Tulga",
+      "name": "",
+      "position": [
+        12593.8701171875,
+        4356.490234375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AFlatC_Msta",
+      "name": "",
+      "position": [
+        11387.1904296875,
+        5503.740234375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 10
+    },
+    {
+      "id": "AFlatC_Staroye",
+      "name": "",
+      "position": [
+        10278.8203125,
+        5539.1201171875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AFlatC_Shakhovka",
+      "name": "",
+      "position": [
+        9708.3095703125,
+        6479.31982421875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AFlatC_Dolina",
+      "name": "",
+      "position": [
+        11442.919921875,
+        6555.93017578125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160
+    },
+    {
+      "id": "AFlatC_Orlovets",
+      "name": "",
+      "position": [
+        12166.419921875,
+        7150
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 175
+    },
+    {
+      "id": "AFlatC_Solnychniy",
+      "name": "",
+      "position": [
+        13459.2802734375,
+        6064.02978515625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 95
+    },
+    {
+      "id": "AFlatC_Guglovo",
+      "name": "",
+      "position": [
+        8428.349609375,
+        6800.75
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 15
+    },
+    {
+      "id": "AFlatC_Polana",
+      "name": "",
+      "position": [
+        10911.23046875,
+        8136.77978515625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AFlatC_Berezino",
+      "name": "",
+      "position": [
+        12181.830078125,
+        9397.3095703125
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 135
+    },
+    {
+      "id": "AFlatC_Gorka",
+      "name": "",
+      "position": [
+        9810.16015625,
+        8776.4599609375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 185
+    },
+    {
+      "id": "AFlatC_Dubrovka",
+      "name": "",
+      "position": [
+        10483.01953125,
+        9836.0302734375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145
+    },
+    {
+      "id": "AFlatC_Khelm",
+      "name": "",
+      "position": [
+        12260.58984375,
+        10782.73046875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatC_Olsha",
+      "name": "",
+      "position": [
+        13387.8095703125,
+        12858.1904296875
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AFlatC_Krasnostav",
+      "name": "",
+      "position": [
+        10982.8701171875,
+        12377.3603515625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AFlatC_Gvozdno",
+      "name": "",
+      "position": [
+        8510.66015625,
+        12007.6103515625
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 225
+    },
+    {
+      "id": "AFlatC_Nizhnoye",
+      "name": "",
+      "position": [
+        13034.0595703125,
+        8336.33984375
+      ],
+      "type": "FlatAreaCity",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AFlatCS_Balota_02",
+      "name": "",
+      "position": [
+        4384.5498046875,
+        2380.820068359375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 35
+    },
+    {
+      "id": "AFlatCS_Komarovo_01",
+      "name": "",
+      "position": [
+        3531.159912109375,
+        2415.699951171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 160
+    },
+    {
+      "id": "AFlatCS_Komarovo_02",
+      "name": "",
+      "position": [
+        3669.81005859375,
+        2412.330078125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 95
+    },
+    {
+      "id": "AFlatCS_Kamenka_01",
+      "name": "",
+      "position": [
+        1835.8599853515625,
+        2275.419921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AFlatCS_Pavlovo_01",
+      "name": "",
+      "position": [
+        1637.989990234375,
+        3942
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Bor_01",
+      "name": "",
+      "position": [
+        3235.449951171875,
+        4011.75
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 25
+    },
+    {
+      "id": "AFlatCS_Nadezhdino_01",
+      "name": "",
+      "position": [
+        5868.47021484375,
+        4806.1298828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Kozlovka_01",
+      "name": "",
+      "position": [
+        4301.77001953125,
+        4751.35009765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AFlatCS_Kozlovka_02",
+      "name": "",
+      "position": [
+        4401.22998046875,
+        4666.25
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AFlatCS_Kozlovka_03",
+      "name": "",
+      "position": [
+        4469.240234375,
+        4595.3701171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 260
+    },
+    {
+      "id": "AFlatCS_Drozhino_01",
+      "name": "",
+      "position": [
+        3323.820068359375,
+        5002.93017578125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 215
+    },
+    {
+      "id": "AFlatCS_Drozhino_02",
+      "name": "",
+      "position": [
+        3487.010009765625,
+        4892.4501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 205
+    },
+    {
+      "id": "AFlatCS_Zelenogorsk_01",
+      "name": "",
+      "position": [
+        2544.679931640625,
+        5045.1298828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 320
+    },
+    {
+      "id": "AFlatCS_Zelenogorsk_02",
+      "name": "",
+      "position": [
+        2752.2900390625,
+        5113.419921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 105
+    },
+    {
+      "id": "AFlatCS_Zelenogorsk_03",
+      "name": "",
+      "position": [
+        2692.449951171875,
+        5427.91015625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200
+    },
+    {
+      "id": "AFlatCS_Zelenogorsk_04",
+      "name": "",
+      "position": [
+        2878.56005859375,
+        5370.31982421875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Pulkovo_01",
+      "name": "",
+      "position": [
+        4856.25,
+        5629.7099609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AFlatCS_Pogorevka_01",
+      "name": "",
+      "position": [
+        4346.97998046875,
+        6463.27978515625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 220
+    },
+    {
+      "id": "AFlatCS_Rogovo_01",
+      "name": "",
+      "position": [
+        4619.02978515625,
+        6863.35986328125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 205
+    },
+    {
+      "id": "AFlatCS_Vyshnoye_01",
+      "name": "",
+      "position": [
+        6422.009765625,
+        6170.91015625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 205
+    },
+    {
+      "id": "AFlatCS_Vyshnoye_02",
+      "name": "",
+      "position": [
+        6502.490234375,
+        6108.759765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 240
+    },
+    {
+      "id": "AFlatCS_Sosnovka_01",
+      "name": "",
+      "position": [
+        2567.800048828125,
+        6290.77001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 150
+    },
+    {
+      "id": "AFlatCS_Sosnovka_02",
+      "name": "",
+      "position": [
+        2502.93994140625,
+        6460.31005859375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Myshkino_01",
+      "name": "",
+      "position": [
+        2123.760009765625,
+        7321.47021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AFlatCS_Pustoshka_01",
+      "name": "",
+      "position": [
+        3158.449951171875,
+        8044.4501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AFlatCS_Pustoshka_02",
+      "name": "",
+      "position": [
+        3140.7099609375,
+        8101.6298828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 10,
+      "angle": 325
+    },
+    {
+      "id": "AFlatCS_NovySobor_01",
+      "name": "",
+      "position": [
+        7147.77001953125,
+        7573.7099609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 95
+    },
+    {
+      "id": "AFlatCS_StarySobor_01",
+      "name": "",
+      "position": [
+        6226.9599609375,
+        7753.009765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AFlatCS_Kabanino_01",
+      "name": "",
+      "position": [
+        5348.68994140625,
+        8731.3095703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200
+    },
+    {
+      "id": "AFlatCS_Vybor_01",
+      "name": "",
+      "position": [
+        3903.0400390625,
+        8799.0498046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200
+    },
+    {
+      "id": "AFlatCS_Vybor_02",
+      "name": "",
+      "position": [
+        3752.260009765625,
+        8639.150390625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AFlatCS_Lopatino_01",
+      "name": "",
+      "position": [
+        2788.909912109375,
+        9833.7998046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AFlatCS_Lopatino_02",
+      "name": "",
+      "position": [
+        2620.330078125,
+        9880.6298828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AFlatCS_Lopatino_03",
+      "name": "",
+      "position": [
+        2710.260009765625,
+        10132.7900390625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 50
+    },
+    {
+      "id": "AFlatCS_Grishino_01",
+      "name": "",
+      "position": [
+        5834.990234375,
+        10170.3701171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AFlatCS_Grishino_02",
+      "name": "",
+      "position": [
+        5912.02978515625,
+        10272.73046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 300
+    },
+    {
+      "id": "AFlatCS_Grishino_03",
+      "name": "",
+      "position": [
+        6043.3701171875,
+        10404.7001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Grishino_04",
+      "name": "",
+      "position": [
+        6039.7099609375,
+        10525.33984375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 295
+    },
+    {
+      "id": "AFlatCS_Petrovka_01",
+      "name": "",
+      "position": [
+        5032.64990234375,
+        12449.919921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AFlatCS_Krasnostav_01",
+      "name": "",
+      "position": [
+        11336.41015625,
+        12276.48046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 115
+    },
+    {
+      "id": "AFlatCS_Krasnostav_02",
+      "name": "",
+      "position": [
+        11248.3603515625,
+        12170.7001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 30
+    },
+    {
+      "id": "AFlatCS_Krasnostav_03",
+      "name": "",
+      "position": [
+        11551.7900390625,
+        12250.48046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 355
+    },
+    {
+      "id": "AFlatCS_Krasnostav_04",
+      "name": "",
+      "position": [
+        11162.0498046875,
+        12140.0703125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AFlatCS_Krasnostav_05",
+      "name": "",
+      "position": [
+        10738.650390625,
+        12407.919921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 165
+    },
+    {
+      "id": "AFlatCS_Gvozdno_01",
+      "name": "",
+      "position": [
+        8601.2802734375,
+        11857.9296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AFlatCS_Gvozdno_02",
+      "name": "",
+      "position": [
+        8773.8798828125,
+        11697.919921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 80
+    },
+    {
+      "id": "AFlatCS_Gvozdno_03",
+      "name": "",
+      "position": [
+        8435.8603515625,
+        12008.5498046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 180
+    },
+    {
+      "id": "AFlatCS_Gvozdno_04",
+      "name": "",
+      "position": [
+        8691,
+        11841.1396484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 45
+    },
+    {
+      "id": "AFlatCS_Khelm_01",
+      "name": "",
+      "position": [
+        12319.740234375,
+        10729.599609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AFlatCS_Khelm_02",
+      "name": "",
+      "position": [
+        12378.8603515625,
+        10792.6201171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 90
+    },
+    {
+      "id": "AFlatCS_Dubrovka_01",
+      "name": "",
+      "position": [
+        10459.169921875,
+        9967.900390625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Dubrovka_02",
+      "name": "",
+      "position": [
+        10557.0302734375,
+        9597.83984375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 195
+    },
+    {
+      "id": "AFlatCS_Dubrovka_03",
+      "name": "",
+      "position": [
+        10273.5302734375,
+        9622.66015625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 245
+    },
+    {
+      "id": "AFlatCS_Berezino_01",
+      "name": "",
+      "position": [
+        11785.51953125,
+        9224.76953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AFlatCS_Berezino_02",
+      "name": "",
+      "position": [
+        11758.2001953125,
+        9119.8798828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 235
+    },
+    {
+      "id": "AFlatCS_Berezino_03",
+      "name": "",
+      "position": [
+        12020.599609375,
+        8912.4404296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 145
+    },
+    {
+      "id": "AFlatCS_Berezino_04",
+      "name": "",
+      "position": [
+        12136.4697265625,
+        9071.3896484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 20
+    },
+    {
+      "id": "AFlatCS_Berezino_05",
+      "name": "",
+      "position": [
+        12291.1103515625,
+        9049.66015625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AFlatCS_Berezino_06",
+      "name": "",
+      "position": [
+        12058.919921875,
+        9258.5
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Berezino_07",
+      "name": "",
+      "position": [
+        12221.3798828125,
+        9564.580078125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 15
+    },
+    {
+      "id": "AFlatCS_Berezino_08",
+      "name": "",
+      "position": [
+        12371.830078125,
+        9652.3798828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Berezino_09",
+      "name": "",
+      "position": [
+        12658.7197265625,
+        9792.3798828125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 330
+    },
+    {
+      "id": "AFlatCS_Berezino_10",
+      "name": "",
+      "position": [
+        12915.91015625,
+        10067.4697265625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 120
+    },
+    {
+      "id": "AFlatCS_Berezino_11",
+      "name": "",
+      "position": [
+        12953.169921875,
+        10243
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 290
+    },
+    {
+      "id": "AFlatCS_Berezino_12",
+      "name": "",
+      "position": [
+        12943.400390625,
+        9826.83984375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 285
+    },
+    {
+      "id": "AFlatCS_Gorka_01",
+      "name": "",
+      "position": [
+        9809.330078125,
+        8822.6796875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AFlatCS_Gorka_02",
+      "name": "",
+      "position": [
+        9225.919921875,
+        8787.830078125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 205
+    },
+    {
+      "id": "AFlatCS_Gorka_03",
+      "name": "",
+      "position": [
+        9319.5,
+        8929.3896484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 325
+    },
+    {
+      "id": "AFlatCS_Nizhnoye_01",
+      "name": "",
+      "position": [
+        12964.75,
+        8347.7900390625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 250
+    },
+    {
+      "id": "AFlatCS_Nizhnoye_02",
+      "name": "",
+      "position": [
+        12990.7900390625,
+        8245.669921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 255
+    },
+    {
+      "id": "AFlatCS_Nizhnoye_03",
+      "name": "",
+      "position": [
+        13056,
+        8061.93994140625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 85
+    },
+    {
+      "id": "AFlatCS_Polana_01",
+      "name": "",
+      "position": [
+        10705.0498046875,
+        7982.89013671875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AFlatCS_Polana_02",
+      "name": "",
+      "position": [
+        10773.7998046875,
+        8212.9404296875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 215
+    },
+    {
+      "id": "AFlatCS_Orlovets_01",
+      "name": "",
+      "position": [
+        12331.0400390625,
+        7402.009765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 305
+    },
+    {
+      "id": "AFlatCS_Orlovets_02",
+      "name": "",
+      "position": [
+        11988.740234375,
+        7241.97998046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AFlatCS_Dolina_01",
+      "name": "",
+      "position": [
+        11127.16015625,
+        6622.72998046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 200
+    },
+    {
+      "id": "AFlatCS_Dolina_02",
+      "name": "",
+      "position": [
+        11360.849609375,
+        6583.02001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_Shakhovka_01",
+      "name": "",
+      "position": [
+        9667.990234375,
+        6449.83984375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AFlatCS_Shakhovka_02",
+      "name": "",
+      "position": [
+        9584.25,
+        6641.259765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AFlatCS_Guglovo_01",
+      "name": "",
+      "position": [
+        8343.990234375,
+        6766.490234375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 190
+    },
+    {
+      "id": "AFlatCS_Staroye_01",
+      "name": "",
+      "position": [
+        10295.509765625,
+        5578.509765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 65
+    },
+    {
+      "id": "AFlatCS_Staroye_02",
+      "name": "",
+      "position": [
+        10111.3203125,
+        5550.66015625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 75
+    },
+    {
+      "id": "AFlatCS_Staroye_03",
+      "name": "",
+      "position": [
+        10020.669921875,
+        5705.52001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AFlatCS_Staroye_04",
+      "name": "",
+      "position": [
+        10123.76953125,
+        5377.0498046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Msta_01",
+      "name": "",
+      "position": [
+        11431.669921875,
+        5564.0498046875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 35
+    },
+    {
+      "id": "AFlatCS_Msta_02",
+      "name": "",
+      "position": [
+        11124.6904296875,
+        5310.3701171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 115
+    },
+    {
+      "id": "AFlatCS_Solnychniy_01",
+      "name": "",
+      "position": [
+        13163.8203125,
+        6249.83984375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AFlatCS_Solnychniy_02",
+      "name": "",
+      "position": [
+        13443.5400390625,
+        5939.22021484375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 100
+    },
+    {
+      "id": "AFlatCS_Solnychniy_03",
+      "name": "",
+      "position": [
+        13438.490234375,
+        6411.259765625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Prigorodki_01",
+      "name": "",
+      "position": [
+        7793.31005859375,
+        3496.9599609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 165
+    },
+    {
+      "id": "AFlatCS_Mogilevka_01",
+      "name": "",
+      "position": [
+        7512.97998046875,
+        5054.14013671875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 295
+    },
+    {
+      "id": "AFlatCS_Mogilevka_02",
+      "name": "",
+      "position": [
+        7529.1201171875,
+        5291.3701171875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 245
+    },
+    {
+      "id": "AFlatCS_Pusta_01",
+      "name": "",
+      "position": [
+        9180.6201171875,
+        3928.18994140625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 325
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_01",
+      "name": "",
+      "position": [
+        9650.8798828125,
+        2000.2099609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 185
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_02",
+      "name": "",
+      "position": [
+        10089.740234375,
+        2114.4599609375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 350
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_03",
+      "name": "",
+      "position": [
+        10321.7001953125,
+        1953.9200439453125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 270
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_04",
+      "name": "",
+      "position": [
+        10369.6904296875,
+        2048.25
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 125
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_05",
+      "name": "",
+      "position": [
+        10511.66015625,
+        2154.330078125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 335
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_06",
+      "name": "",
+      "position": [
+        10393.01953125,
+        2265.14990234375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 305
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_07",
+      "name": "",
+      "position": [
+        10512.1103515625,
+        2024.9000244140625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 60
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_08",
+      "name": "",
+      "position": [
+        10391.919921875,
+        2516.39990234375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AFlatCS_Elektrozavodsk_09",
+      "name": "",
+      "position": [
+        10685.3095703125,
+        2469.68994140625
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 325
+    },
+    {
+      "id": "AFlatCS_Kamyshovo_01",
+      "name": "",
+      "position": [
+        11960.740234375,
+        3515.919921875
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 355
+    },
+    {
+      "id": "AFlatCS_Kamyshovo_02",
+      "name": "",
+      "position": [
+        12253.1796875,
+        3494.5
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 175
+    },
+    {
+      "id": "AFlatCS_Tulga_01",
+      "name": "",
+      "position": [
+        12566.9296875,
+        4402.68017578125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 210
+    },
+    {
+      "id": "AFlatCS_Tulga_02",
+      "name": "",
+      "position": [
+        12791.6396484375,
+        4466.9501953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 5
+    },
+    {
+      "id": "AAirport_1",
+      "name": "",
+      "position": [
+        4783.72021484375,
+        2564.25
+      ],
+      "type": "Airport",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AAirport_2",
+      "name": "",
+      "position": [
+        4828.25,
+        10205.3095703125
+      ],
+      "type": "Airport",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "AStrong_Sosnovka_03",
+      "name": "",
+      "position": [
+        2497.280029296875,
+        6803.580078125
+      ],
+      "type": "StrongpointArea",
+      "radiusA": 207.5800018310547,
+      "radiusB": 177.44000244140625,
+      "angle": 40
+    },
+    {
+      "id": "AFlatCS_StarySobor_02",
+      "name": "",
+      "position": [
+        6212.4599609375,
+        7805
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 219.39999389648438,
+      "radiusB": 189.25999450683594,
+      "angle": 310
+    },
+    {
+      "id": "AFlatCS_NovySobor_02",
+      "name": "",
+      "position": [
+        7241.919921875,
+        7646.02001953125
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 155.6199951171875,
+      "radiusB": 133.16000366210938,
+      "angle": 195
+    },
+    {
+      "id": "AFlatCS_NovySobor_03",
+      "name": "",
+      "position": [
+        7044.93017578125,
+        7609.06005859375
+      ],
+      "type": "FlatAreaCitySmall",
+      "radiusA": 135.14999389648438,
+      "radiusB": 115.94000244140625,
+      "angle": 175
+    },
+    {
+      "id": "hill_Lysina",
+      "name": "$STR_LOCATION_MT_LYSINA",
+      "position": [
+        2655.949951171875,
+        14170.7001953125
+      ],
+      "type": "Hill",
+      "radiusA": 125.33999633789062,
+      "radiusB": 141.6699981689453,
+      "angle": 0
+    },
+    {
+      "id": "hill_Misty_Peak",
+      "name": "$STR_LOCATION_MT_MISTYPEAK",
+      "position": [
+        3727.949951171875,
+        14491.599609375
+      ],
+      "type": "Hill",
+      "radiusA": 188.6300048828125,
+      "radiusB": 214.2100067138672,
+      "angle": 0
+    },
+    {
+      "id": "hill_Bashnya",
+      "name": "$STR_LOCATION_MT_BASHNYA",
+      "position": [
+        4178.27001953125,
+        11771.2197265625
+      ],
+      "type": "Hill",
+      "radiusA": 276.9700012207031,
+      "radiusB": 315.4700012207031,
+      "angle": 0
+    },
+    {
+      "id": "hill_Veresnik",
+      "name": "$STR_LOCATION_MT_VERESNIK",
+      "position": [
+        4440.169921875,
+        8070.5400390625
+      ],
+      "type": "Hill",
+      "radiusA": 85.13999938964844,
+      "radiusB": 95.58999633789062,
+      "angle": 0
+    },
+    {
+      "id": "hill_Kurgan",
+      "name": "$STR_LOCATION_MT_KURGAN",
+      "position": [
+        3368.52001953125,
+        5296.8701171875
+      ],
+      "type": "Hill",
+      "radiusA": 125.63999938964844,
+      "radiusB": 142.00999450683594,
+      "angle": 0
+    },
+    {
+      "id": "hill_Kustryk",
+      "name": "$STR_LOCATION_MT_KUSTRYK",
+      "position": [
+        4912.8798828125,
+        5063.4501953125
+      ],
+      "type": "Hill",
+      "radiusA": 232.89999389648438,
+      "radiusB": 264.95001220703125,
+      "angle": 0
+    },
+    {
+      "id": "hill_Windy_Mountain",
+      "name": "$STR_LOCATION_MT_WINDYMT",
+      "position": [
+        3892.739990234375,
+        4200.58984375
+      ],
+      "type": "Hill",
+      "radiusA": 338.7699890136719,
+      "radiusB": 386.29998779296875,
+      "angle": 0
+    },
+    {
+      "id": "hill_Little_Hill",
+      "name": "$STR_LOCATION_MT_LITTLEHILL",
+      "position": [
+        6903.77978515625,
+        4919.66015625
+      ],
+      "type": "Hill",
+      "radiusA": 391.9800109863281,
+      "radiusB": 447.2900085449219,
+      "angle": 0
+    },
+    {
+      "id": "hill_Pop_Ivan",
+      "name": "$STR_LOCATION_MT_POPIVAN",
+      "position": [
+        6420.259765625,
+        6570.66015625
+      ],
+      "type": "Hill",
+      "radiusA": 157.10000610351562,
+      "radiusB": 178.07000732421875,
+      "angle": 0
+    },
+    {
+      "id": "hill_Ridge_Lesnoy",
+      "name": "$STR_LOCATION_MT_RIDGELESNOY",
+      "position": [
+        8122.77001953125,
+        7815.5400390625
+      ],
+      "type": "Hill",
+      "radiusA": 287.7900085449219,
+      "radiusB": 327.8699951171875,
+      "angle": 0
+    },
+    {
+      "id": "hill_Vysoky_Kamen",
+      "name": "$STR_LOCATION_MT_VYSOKYKAMEN",
+      "position": [
+        8940.1904296875,
+        4380.52001953125
+      ],
+      "type": "Hill",
+      "radiusA": 279.9100036621094,
+      "radiusB": 318.8399963378906,
+      "angle": 0
+    },
+    {
+      "id": "hill_Dobryy",
+      "name": "$STR_LOCATION_MT_DOBRYY",
+      "position": [
+        10552.900390625,
+        3061.030029296875
+      ],
+      "type": "Hill",
+      "radiusA": 149.99000549316406,
+      "radiusB": 169.9199981689453,
+      "angle": 0
+    },
+    {
+      "id": "hill_Baranchik",
+      "name": "$STR_LOCATION_MT_BARANCHIK",
+      "position": [
+        10104.669921875,
+        6202.2099609375
+      ],
+      "type": "Hill",
+      "radiusA": 263.05999755859375,
+      "radiusB": 296.32000732421875,
+      "angle": 0
+    },
+    {
+      "id": "hill_Malinovka",
+      "name": "$STR_LOCATION_MT_MALINOVKA",
+      "position": [
+        10897.7001953125,
+        7575.58984375
+      ],
+      "type": "Hill",
+      "radiusA": 472.67999267578125,
+      "radiusB": 539.7899780273438,
+      "angle": 0
+    },
+    {
+      "id": "hill_Dubina",
+      "name": "$STR_LOCATION_MT_DUBINA",
+      "position": [
+        11107.900390625,
+        8474.830078125
+      ],
+      "type": "Hill",
+      "radiusA": 351.489990234375,
+      "radiusB": 400.8900146484375,
+      "angle": 0
+    },
+    {
+      "id": "hill_Klen",
+      "name": "$STR_LOCATION_MT_KLEN",
+      "position": [
+        11544,
+        11381.099609375
+      ],
+      "type": "Hill",
+      "radiusA": 510.489990234375,
+      "radiusB": 582.22998046875,
+      "angle": 0
+    },
+    {
+      "id": "hill_Black_Mountain",
+      "name": "$STR_LOCATION_MT_BLACKMT",
+      "position": [
+        10277.6298828125,
+        12024.5703125
+      ],
+      "type": "Hill",
+      "radiusA": 469.7300109863281,
+      "radiusB": 536.4099731445312,
+      "angle": 0
+    },
+    {
+      "id": "hill_Ostry",
+      "name": "$STR_LOCATION_MT_OSTRY",
+      "position": [
+        10807.599609375,
+        12848.400390625
+      ],
+      "type": "Hill",
+      "radiusA": 349.3900146484375,
+      "radiusB": 398.4700012207031,
+      "angle": 0
+    },
+    {
+      "id": "hill_Olsha",
+      "name": "$STR_LOCATION_MT_OLSHA",
+      "position": [
+        12975.7001953125,
+        12775.2001953125
+      ],
+      "type": "Hill",
+      "radiusA": 141.52000427246094,
+      "radiusB": 160.2100067138672,
+      "angle": 0
+    },
+    {
+      "id": "w_Tikhaya",
+      "name": "$STR_LOCATION_W_BAYTIKHAYA",
+      "position": [
+        1221.489990234375,
+        2111.889892578125
+      ],
+      "type": "NameMarine",
+      "radiusA": 255.7899932861328,
+      "radiusB": 291.19000244140625,
+      "angle": 0
+    },
+    {
+      "id": "w_Mutnaya",
+      "name": "$STR_LOCATION_W_BAYMUTNAYA",
+      "position": [
+        5659.93994140625,
+        1919.18994140625
+      ],
+      "type": "NameMarine",
+      "radiusA": 196.47999572753906,
+      "radiusB": 223.2100067138672,
+      "angle": 0
+    },
+    {
+      "id": "w_Chyornaya_Bay",
+      "name": "$STR_LOCATION_W_BAYCHYORNAYA",
+      "position": [
+        7620.490234375,
+        3024.64990234375
+      ],
+      "type": "NameMarine",
+      "radiusA": 130.6699981689453,
+      "radiusB": 147.77000427246094,
+      "angle": 0
+    },
+    {
+      "id": "w_Zelenaya",
+      "name": "$STR_LOCATION_W_BAYZELENAYA",
+      "position": [
+        11303.6904296875,
+        3060.389892578125
+      ],
+      "type": "NameMarine",
+      "radiusA": 241.66000366210938,
+      "radiusB": 275,
+      "angle": 0
+    },
+    {
+      "id": "w_Skalisty_Proliv",
+      "name": "$STR_LOCATION_W_SKALISTYPROLIV",
+      "position": [
+        13385.919921875,
+        3613.93994140625
+      ],
+      "type": "NameMarine",
+      "radiusA": 186.3800048828125,
+      "radiusB": 211.63999938964844,
+      "angle": 0
+    },
+    {
+      "id": "w_Nizhnaya",
+      "name": "$STR_LOCATION_W_BAYNIZHNAYA",
+      "position": [
+        12989.2998046875,
+        8515.759765625
+      ],
+      "type": "NameMarine",
+      "radiusA": 180.17999267578125,
+      "radiusB": 204.52000427246094,
+      "angle": 0
+    },
+    {
+      "id": "w_Rify",
+      "name": "$STR_LOCATION_W_RIFY",
+      "position": [
+        13802.2001953125,
+        11185.6103515625
+      ],
+      "type": "NameMarine",
+      "radiusA": 214.8800048828125,
+      "radiusB": 244.3000030517578,
+      "angle": 0
+    },
+    {
+      "id": "w_Willow_Lake",
+      "name": "$STR_LOCATION_W_LAKEWILLOW",
+      "position": [
+        13285.0498046875,
+        11560
+      ],
+      "type": "NameMarine",
+      "radiusA": 320.32000732421875,
+      "radiusB": 364.17999267578125,
+      "angle": 0
+    },
+    {
+      "id": "w_Black_Lake",
+      "name": "$STR_LOCATION_W_LAKEBLACK",
+      "position": [
+        13322.599609375,
+        12050
+      ],
+      "type": "NameMarine",
+      "radiusA": 296.4100036621094,
+      "radiusB": 341.6700134277344,
+      "angle": 0
+    },
+    {
+      "id": "w_Pobeda_Dam",
+      "name": "$STR_LOCATION_W_DAMPOBEDA",
+      "position": [
+        9464.5302734375,
+        13623.580078125
+      ],
+      "type": "NameMarine",
+      "radiusA": 159.58999633789062,
+      "radiusB": 180.9199981689453,
+      "angle": 0
+    },
+    {
+      "id": "w_Topolka_Dam",
+      "name": "$STR_LOCATION_W_DAMTOPOLKA",
+      "position": [
+        10231.330078125,
+        3691.14990234375
+      ],
+      "type": "NameMarine",
+      "radiusA": 72.05999755859375,
+      "radiusB": 80.5999984741211,
+      "angle": 0
+    },
+    {
+      "id": "w_Ozerko",
+      "name": "$STR_LOCATION_W_OZERKO",
+      "position": [
+        6777.6298828125,
+        4492.419921875
+      ],
+      "type": "NameMarine",
+      "radiusA": 94.13999938964844,
+      "radiusB": 105.91000366210938,
+      "angle": 0
+    },
+    {
+      "id": "w_Prud",
+      "name": "$STR_LOCATION_W_PRUD",
+      "position": [
+        6566.97998046875,
+        9254.5703125
+      ],
+      "type": "NameMarine",
+      "radiusA": 67.5,
+      "radiusB": 75.36000061035156,
+      "angle": 0
+    },
+    {
+      "id": "w_Guba",
+      "name": "$STR_LOCATION_W_GUBA",
+      "position": [
+        14303.16015625,
+        13162.990234375
+      ],
+      "type": "NameMarine",
+      "radiusA": 344.6700134277344,
+      "radiusB": 393.07000732421875,
+      "angle": 0
+    },
+    {
+      "id": "Local_Pass_Grozovoy",
+      "name": "$STR_LOCATION_LOC_PASSGROZOVOY",
+      "position": [
+        1451.8199462890625,
+        14421.9404296875
+      ],
+      "type": "NameLocal",
+      "radiusA": 427.42999267578125,
+      "radiusB": 487.9200134277344,
+      "angle": 0
+    },
+    {
+      "id": "Local_Pass_Sosnovy",
+      "name": "$STR_LOCATION_LOC_PASSSOSNOVY",
+      "position": [
+        2687.39990234375,
+        6590.27978515625
+      ],
+      "type": "NameLocal",
+      "radiusA": 168.6199951171875,
+      "radiusB": 191.27999877929688,
+      "angle": 0
+    },
+    {
+      "id": "Local_Green_Mountain",
+      "name": "$STR_LOCATION_LOC_GREENMOUNTAIN",
+      "position": [
+        3767.169921875,
+        6010.5400390625
+      ],
+      "type": "NameLocal",
+      "radiusA": 256.1400146484375,
+      "radiusB": 290.55999755859375,
+      "angle": 0
+    },
+    {
+      "id": "Local_Airstrip1",
+      "name": "$STR_LOCATION_AIRSTRIP",
+      "position": [
+        4955.75,
+        2427.68994140625
+      ],
+      "type": "NameLocal",
+      "radiusA": 130.8300018310547,
+      "radiusB": 147.9600067138672,
+      "angle": 0
+    },
+    {
+      "id": "Local_Cement_Factory",
+      "name": "$STR_LOCATION_FACTORY",
+      "position": [
+        6515.4599609375,
+        2683.52001953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 107.16999816894531,
+      "radiusB": 120.83999633789062,
+      "angle": 0
+    },
+    {
+      "id": "Local_Vysota",
+      "name": "$STR_LOCATION_LOC_VYSOTA",
+      "position": [
+        6591.6298828125,
+        3400
+      ],
+      "type": "NameLocal",
+      "radiusA": 160.8000030517578,
+      "radiusB": 182.6699981689453,
+      "angle": 0
+    },
+    {
+      "id": "Local_Kopyto",
+      "name": "$STR_LOCATION_LOC_KOPYTO",
+      "position": [
+        7879.16015625,
+        3904.419921875
+      ],
+      "type": "NameLocal",
+      "radiusA": 174.97000122070312,
+      "radiusB": 198.5500030517578,
+      "angle": 0
+    },
+    {
+      "id": "Local_Cap_Golova",
+      "name": "$STR_LOCATION_LOC_CAPGOLOVA",
+      "position": [
+        8322.080078125,
+        2450
+      ],
+      "type": "NameLocal",
+      "radiusA": 370.6099853515625,
+      "radiusB": 422.79998779296875,
+      "angle": 0
+    },
+    {
+      "id": "Local_Drakon",
+      "name": "$STR_LOCATION_LOC_DRAKON",
+      "position": [
+        11160.509765625,
+        2477.5
+      ],
+      "type": "NameLocal",
+      "radiusA": 85.13999938964844,
+      "radiusB": 95.58999633789062,
+      "angle": 0
+    },
+    {
+      "id": "Local_Otmel",
+      "name": "$STR_LOCATION_LOC_OTMEL",
+      "position": [
+        11581.25,
+        3213.239990234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 199.36000061035156,
+      "radiusB": 226.50999450683594,
+      "angle": 0
+    },
+    {
+      "id": "Local_Skalisty_Island",
+      "name": "$STR_LOCATION_LOC_ISLANDSKALISTY",
+      "position": [
+        13728.900390625,
+        2919.6201171875
+      ],
+      "type": "NameLocal",
+      "radiusA": 153.25999450683594,
+      "radiusB": 173.6699981689453,
+      "angle": 0
+    },
+    {
+      "id": "Local_Cap_Krutnoy",
+      "name": "$STR_LOCATION_LOC_CAPKRUTOY",
+      "position": [
+        13578.1904296875,
+        3976.820068359375
+      ],
+      "type": "NameLocal",
+      "radiusA": 124.20999908447266,
+      "radiusB": 140.3699951171875,
+      "angle": 0
+    },
+    {
+      "id": "Local_Three_Valleys",
+      "name": "$STR_LOCATION_LOC_THREEVALLEYS",
+      "position": [
+        12764.4697265625,
+        5412.2099609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 629.6400146484375,
+      "radiusB": 718.8300170898438,
+      "angle": 0
+    },
+    {
+      "id": "Local_Quarry",
+      "name": "$STR_LOCATION_QUARRY",
+      "position": [
+        13102.98046875,
+        6072.10009765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 239.50999450683594,
+      "radiusB": 271.4700012207031,
+      "angle": 0
+    },
+    {
+      "id": "Local_Factory1",
+      "name": "$STR_LOCATION_FACTORY",
+      "position": [
+        13057.0400390625,
+        7120
+      ],
+      "type": "NameLocal",
+      "radiusA": 286.29998779296875,
+      "radiusB": 326.1700134277344,
+      "angle": 0
+    },
+    {
+      "id": "Local_Factory2",
+      "name": "$STR_LOCATION_FACTORY",
+      "position": [
+        11497.7197265625,
+        7490
+      ],
+      "type": "NameLocal",
+      "radiusA": 186.88999938964844,
+      "radiusB": 211.05999755859375,
+      "angle": 0
+    },
+    {
+      "id": "Local_Lumber_Mill",
+      "name": "$STR_LOCATION_LUMBERMILL",
+      "position": [
+        12676.66015625,
+        9658.4599609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 68.37999725341797,
+      "radiusB": 76.37999725341797,
+      "angle": 0
+    },
+    {
+      "id": "Local_Blunt_Rocks",
+      "name": "$STR_LOCATION_LOC_BLUNTROCKS",
+      "position": [
+        13115.0595703125,
+        11900
+      ],
+      "type": "NameLocal",
+      "radiusA": 215.1300048828125,
+      "radiusB": 244.58999633789062,
+      "angle": 0
+    },
+    {
+      "id": "Local_Airstrip",
+      "name": "$STR_LOCATION_AIRSTRIP",
+      "position": [
+        12034.3203125,
+        12788.4404296875
+      ],
+      "type": "NameLocal",
+      "radiusA": 136.6699981689453,
+      "radiusB": 154.66000366210938,
+      "angle": 0
+    },
+    {
+      "id": "Local_Novy_Lug",
+      "name": "$STR_LOCATION_LOC_NOVYLUG",
+      "position": [
+        9491.6298828125,
+        11219.8701171875
+      ],
+      "type": "NameLocal",
+      "radiusA": 166.2899932861328,
+      "radiusB": 188.61000061035156,
+      "angle": 0
+    },
+    {
+      "id": "Local_Black_Forest",
+      "name": "$STR_LOCATION_LOC_BLACKFOREST",
+      "position": [
+        9067.51953125,
+        7600
+      ],
+      "type": "NameLocal",
+      "radiusA": 231.77999877929688,
+      "radiusB": 263.6700134277344,
+      "angle": 0
+    },
+    {
+      "id": "Local_Pass_Oreshka",
+      "name": "$STR_LOCATION_LOC_PASSORESHKA",
+      "position": [
+        9935.0302734375,
+        6044.509765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 146.19000244140625,
+      "radiusB": 165.57000732421875,
+      "angle": 0
+    },
+    {
+      "id": "Local_Kumyrna",
+      "name": "$STR_LOCATION_LOC_KUMYRNA",
+      "position": [
+        8288.5498046875,
+        6058.33984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 97.25,
+      "radiusB": 109.47000122070312,
+      "angle": 0
+    },
+    {
+      "id": "Local_Old_Fields",
+      "name": "$STR_LOCATION_LOC_OLDFIELDS",
+      "position": [
+        6847.5,
+        9219.0595703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 149.4199981689453,
+      "radiusB": 169.27000427246094,
+      "angle": 0
+    },
+    {
+      "id": "Local_Airfield",
+      "name": "$STR_LOCATION_AIRFIELD",
+      "position": [
+        4631.52001953125,
+        10192.23046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 171.47000122070312,
+      "radiusB": 193.33999633789062,
+      "angle": 0
+    },
+    {
+      "id": "V_fir",
+      "name": "",
+      "position": [
+        8906.1298828125,
+        5500
+      ],
+      "type": "VegetationFir",
+      "radiusA": 176.64999389648438,
+      "radiusB": 204.39999389648438,
+      "angle": 0
+    },
+    {
+      "id": "V_broad",
+      "name": "",
+      "position": [
+        8212.6298828125,
+        3782.340087890625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 171.47999572753906,
+      "radiusB": 194.5500030517578,
+      "angle": 0
+    },
+    {
+      "id": "V_broad1",
+      "name": "",
+      "position": [
+        10543.009765625,
+        2992.659912109375
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 136.22000122070312,
+      "radiusB": 154.13999938964844,
+      "angle": 0
+    },
+    {
+      "id": "V_broad2",
+      "name": "",
+      "position": [
+        12739.669921875,
+        4638.1201171875
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 135.3699951171875,
+      "radiusB": 153.16000366210938,
+      "angle": 0
+    },
+    {
+      "id": "V_broad3",
+      "name": "",
+      "position": [
+        12826.01953125,
+        7534.7900390625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 134.60000610351562,
+      "radiusB": 152.27999877929688,
+      "angle": 0
+    },
+    {
+      "id": "V_broad4",
+      "name": "",
+      "position": [
+        11308.669921875,
+        9942.009765625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 133.9199981689453,
+      "radiusB": 151.5,
+      "angle": 0
+    },
+    {
+      "id": "V_broad5",
+      "name": "",
+      "position": [
+        11626.6103515625,
+        13559.4404296875
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 163.2100067138672,
+      "radiusB": 185.0800018310547,
+      "angle": 0
+    },
+    {
+      "id": "V_broad6",
+      "name": "",
+      "position": [
+        2141.27001953125,
+        3363.080078125
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 159.47999572753906,
+      "radiusB": 180.8000030517578,
+      "angle": 0
+    },
+    {
+      "id": "V_broad7",
+      "name": "",
+      "position": [
+        1242.3199462890625,
+        3161.050048828125
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 236.5500030517578,
+      "radiusB": 268.8500061035156,
+      "angle": 0
+    },
+    {
+      "id": "V_broad8",
+      "name": "",
+      "position": [
+        9615.740234375,
+        4585.60009765625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 149.08999633789062,
+      "radiusB": 168.7100067138672,
+      "angle": 0
+    },
+    {
+      "id": "V_broad9",
+      "name": "",
+      "position": [
+        5950.6298828125,
+        4072.75
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 222.02999877929688,
+      "radiusB": 252.22999572753906,
+      "angle": 0
+    },
+    {
+      "id": "V_broad10",
+      "name": "",
+      "position": [
+        6375.9599609375,
+        3988.699951171875
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 330.6700134277344,
+      "radiusB": 375.6300048828125,
+      "angle": 0
+    },
+    {
+      "id": "V_broad11",
+      "name": "",
+      "position": [
+        5340.66015625,
+        11380.009765625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 165.11000061035156,
+      "radiusB": 187.0500030517578,
+      "angle": 0
+    },
+    {
+      "id": "V_broad12",
+      "name": "",
+      "position": [
+        9495.7099609375,
+        10822.400390625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 161.35000610351562,
+      "radiusB": 182.75,
+      "angle": 0
+    },
+    {
+      "id": "V_broad13",
+      "name": "",
+      "position": [
+        10562.66015625,
+        12070.5
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 194.07000732421875,
+      "radiusB": 220.2100067138672,
+      "angle": 0
+    },
+    {
+      "id": "V_broad15",
+      "name": "",
+      "position": [
+        1563.8800048828125,
+        2593.7900390625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 187.25999450683594,
+      "radiusB": 212.41000366210938,
+      "angle": 0
+    },
+    {
+      "id": "V_broad14",
+      "name": "",
+      "position": [
+        1995.3599853515625,
+        2390.719970703125
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 181.1699981689453,
+      "radiusB": 205.44000244140625,
+      "angle": 0
+    },
+    {
+      "id": "V_broad16",
+      "name": "",
+      "position": [
+        2453.139892578125,
+        2741.070068359375
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 216.22999572753906,
+      "radiusB": 245.5800018310547,
+      "angle": 0
+    },
+    {
+      "id": "V_broad17",
+      "name": "",
+      "position": [
+        2464.72998046875,
+        2269.389892578125
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 207.0800018310547,
+      "radiusB": 235.10000610351562,
+      "angle": 0
+    },
+    {
+      "id": "V_broad18",
+      "name": "",
+      "position": [
+        6644.52978515625,
+        3307.909912109375
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 161.85000610351562,
+      "radiusB": 183.32000732421875,
+      "angle": 0
+    },
+    {
+      "id": "V_fir1",
+      "name": "",
+      "position": [
+        8961.8798828125,
+        4721.06005859375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 211.1699981689453,
+      "radiusB": 239.7899932861328,
+      "angle": 0
+    },
+    {
+      "id": "V_fir2",
+      "name": "",
+      "position": [
+        10100.73046875,
+        4908.68017578125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 202.55999755859375,
+      "radiusB": 229.92999267578125,
+      "angle": 0
+    },
+    {
+      "id": "V_fir3",
+      "name": "",
+      "position": [
+        10996.8701171875,
+        4539.14013671875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 194.85000610351562,
+      "radiusB": 221.10000610351562,
+      "angle": 0
+    },
+    {
+      "id": "V_fir4",
+      "name": "",
+      "position": [
+        11850.91015625,
+        4173.9501953125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 153.10000610351562,
+      "radiusB": 173.3000030517578,
+      "angle": 0
+    },
+    {
+      "id": "V_fir5",
+      "name": "",
+      "position": [
+        12336.919921875,
+        3801.760009765625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 234.9600067138672,
+      "radiusB": 265.9599914550781,
+      "angle": 0
+    },
+    {
+      "id": "V_fir7",
+      "name": "",
+      "position": [
+        12898.4599609375,
+        4065.3798828125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 360.57000732421875,
+      "radiusB": 408.1499938964844,
+      "angle": 0
+    },
+    {
+      "id": "V_fir8",
+      "name": "",
+      "position": [
+        13167.4296875,
+        4309.47998046875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 220.0800018310547,
+      "radiusB": 249.99000549316406,
+      "angle": 0
+    },
+    {
+      "id": "V_fir9",
+      "name": "",
+      "position": [
+        11515.3798828125,
+        4184.56005859375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 171.14999389648438,
+      "radiusB": 193.97000122070312,
+      "angle": 0
+    },
+    {
+      "id": "V_fir10",
+      "name": "",
+      "position": [
+        12063.3798828125,
+        4914.4501953125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 259.9700012207031,
+      "radiusB": 294.6300048828125,
+      "angle": 0
+    },
+    {
+      "id": "V_fir11",
+      "name": "",
+      "position": [
+        12061.41015625,
+        7804.22021484375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 162.49000549316406,
+      "radiusB": 184.05999755859375,
+      "angle": 0
+    },
+    {
+      "id": "V_fir12",
+      "name": "",
+      "position": [
+        11472.240234375,
+        8657.759765625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 159.00999450683594,
+      "radiusB": 180.07000732421875,
+      "angle": 0
+    },
+    {
+      "id": "V_fir13",
+      "name": "",
+      "position": [
+        11780.2998046875,
+        11645.9599609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 155.89999389648438,
+      "radiusB": 176.50999450683594,
+      "angle": 0
+    },
+    {
+      "id": "V_fir14",
+      "name": "",
+      "position": [
+        10853.669921875,
+        13219.080078125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 231.55999755859375,
+      "radiusB": 263.1300048828125,
+      "angle": 0
+    },
+    {
+      "id": "V_fir15",
+      "name": "",
+      "position": [
+        10247.4404296875,
+        12874.76953125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 343.9200134277344,
+      "radiusB": 390.82000732421875,
+      "angle": 0
+    },
+    {
+      "id": "V_fir16",
+      "name": "",
+      "position": [
+        7185.06005859375,
+        12000.3203125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 171.17999267578125,
+      "radiusB": 194,
+      "angle": 0
+    },
+    {
+      "id": "V_fir17",
+      "name": "",
+      "position": [
+        6287.2099609375,
+        11720.8095703125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 205.05999755859375,
+      "radiusB": 232.7899932861328,
+      "angle": 0
+    },
+    {
+      "id": "V_fir18",
+      "name": "",
+      "position": [
+        3659.110107421875,
+        11561.8203125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 307.04998779296875,
+      "radiusB": 348.5799865722656,
+      "angle": 0
+    },
+    {
+      "id": "V_fir19",
+      "name": "",
+      "position": [
+        2353.780029296875,
+        12590.91015625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 233.3800048828125,
+      "radiusB": 265.2200012207031,
+      "angle": 0
+    },
+    {
+      "id": "V_fir20",
+      "name": "",
+      "position": [
+        1662.6400146484375,
+        6534.22021484375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 274.6099853515625,
+      "radiusB": 312.4200134277344,
+      "angle": 0
+    },
+    {
+      "id": "V_broad19",
+      "name": "",
+      "position": [
+        1898.6099853515625,
+        6035.52978515625
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 403.8800048828125,
+      "radiusB": 459.489990234375,
+      "angle": 0
+    },
+    {
+      "id": "V_broad20",
+      "name": "",
+      "position": [
+        1671.5799560546875,
+        7014.02001953125
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 244.8699951171875,
+      "radiusB": 278.3699951171875,
+      "angle": 0
+    },
+    {
+      "id": "V_fir21",
+      "name": "",
+      "position": [
+        6181.740234375,
+        4665.8798828125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 188.88999938964844,
+      "radiusB": 214.27999877929688,
+      "angle": 0
+    },
+    {
+      "id": "V_fir22",
+      "name": "",
+      "position": [
+        6808.52001953125,
+        6225.47021484375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 182.6300048828125,
+      "radiusB": 207.11000061035156,
+      "angle": 0
+    },
+    {
+      "id": "V_fir23",
+      "name": "",
+      "position": [
+        6766.8798828125,
+        6820.2099609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 177.02000427246094,
+      "radiusB": 200.69000244140625,
+      "angle": 0
+    },
+    {
+      "id": "V_fir24",
+      "name": "",
+      "position": [
+        8847.7197265625,
+        3573.39990234375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 140.35000610351562,
+      "radiusB": 158.6999969482422,
+      "angle": 0
+    },
+    {
+      "id": "V_fir25",
+      "name": "",
+      "position": [
+        9056.1396484375,
+        2851.60009765625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 139.2100067138672,
+      "radiusB": 157.39999389648438,
+      "angle": 0
+    },
+    {
+      "id": "V_fir26",
+      "name": "",
+      "position": [
+        10359.01953125,
+        6426.5
+      ],
+      "type": "VegetationFir",
+      "radiusA": 138.19000244140625,
+      "radiusB": 156.22999572753906,
+      "angle": 0
+    },
+    {
+      "id": "V_fir27",
+      "name": "",
+      "position": [
+        9399.0595703125,
+        8022.2099609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 137.27999877929688,
+      "radiusB": 155.19000244140625,
+      "angle": 0
+    },
+    {
+      "id": "V_fir28",
+      "name": "",
+      "position": [
+        8146.7900390625,
+        7870.68994140625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 213.08999633789062,
+      "radiusB": 240.88999938964844,
+      "angle": 0
+    },
+    {
+      "id": "V_fir29",
+      "name": "",
+      "position": [
+        10197.01953125,
+        11847.419921875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 204.27000427246094,
+      "radiusB": 231.8800048828125,
+      "angle": 0
+    },
+    {
+      "id": "V_fir30",
+      "name": "",
+      "position": [
+        8118.64990234375,
+        12492.169921875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 130.61000061035156,
+      "radiusB": 147.5500030517578,
+      "angle": 0
+    },
+    {
+      "id": "V_fir31",
+      "name": "",
+      "position": [
+        7351.64990234375,
+        4198.64990234375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 184.27000427246094,
+      "radiusB": 208.99000549316406,
+      "angle": 0
+    },
+    {
+      "id": "V_fir32",
+      "name": "",
+      "position": [
+        5508.169921875,
+        5208.8701171875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 119.16000366210938,
+      "radiusB": 134.4499969482422,
+      "angle": 0
+    },
+    {
+      "id": "V_fir33",
+      "name": "",
+      "position": [
+        5446.2099609375,
+        6182.2900390625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 188.1300048828125,
+      "radiusB": 212.25999450683594,
+      "angle": 0
+    },
+    {
+      "id": "V_broad21",
+      "name": "",
+      "position": [
+        5086.7001953125,
+        6132.5
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 188.88999938964844,
+      "radiusB": 214.27999877929688,
+      "angle": 0
+    },
+    {
+      "id": "V_fir34",
+      "name": "",
+      "position": [
+        4580.990234375,
+        5151.7099609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 148.83999633789062,
+      "radiusB": 168.4199981689453,
+      "angle": 0
+    },
+    {
+      "id": "V_fir35",
+      "name": "",
+      "position": [
+        3536.919921875,
+        5865.8701171875
+      ],
+      "type": "VegetationFir",
+      "radiusA": 221.67999267578125,
+      "radiusB": 251.82000732421875,
+      "angle": 0
+    },
+    {
+      "id": "V_fir36",
+      "name": "",
+      "position": [
+        3879.610107421875,
+        6059.509765625
+      ],
+      "type": "VegetationFir",
+      "radiusA": 172.3000030517578,
+      "radiusB": 195.2899932861328,
+      "angle": 0
+    },
+    {
+      "id": "V_fir37",
+      "name": "",
+      "position": [
+        3750.7900390625,
+        3444.9599609375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 206.30999755859375,
+      "radiusB": 234.22999572753906,
+      "angle": 0
+    },
+    {
+      "id": "V_fir38",
+      "name": "",
+      "position": [
+        3877.260009765625,
+        4151.60986328125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 198.2100067138672,
+      "radiusB": 224.9499969482422,
+      "angle": 0
+    },
+    {
+      "id": "V_fir39",
+      "name": "",
+      "position": [
+        1484.4000244140625,
+        8440.1396484375
+      ],
+      "type": "VegetationFir",
+      "radiusA": 190.9600067138672,
+      "radiusB": 216.64999389648438,
+      "angle": 0
+    },
+    {
+      "id": "V_fir40",
+      "name": "",
+      "position": [
+        6423.22021484375,
+        5522.85986328125
+      ],
+      "type": "VegetationFir",
+      "radiusA": 150.32000732421875,
+      "radiusB": 170.1199951171875,
+      "angle": 0
+    },
+    {
+      "id": "V_broad22",
+      "name": "",
+      "position": [
+        5155.89990234375,
+        6557.89013671875
+      ],
+      "type": "VegetationBroadleaf",
+      "radiusA": 290.8399963378906,
+      "radiusB": 329.0899963378906,
+      "angle": 0
+    }
+  ],
+  "airports": [
+    {
+      "id": 0,
+      "position": [
+        4887.5,
+        9660
+      ],
+      "direction": [
+        0.5074999928474426,
+        0.07999999821186066,
+        -0.8615999817848206
+      ]
+    },
+    {
+      "id": 1,
+      "position": [
+        12461,
+        12585
+      ],
+      "direction": [
+        0.9395999908447266,
+        0.07999999821186066,
+        -0.34200000762939453
+      ]
+    },
+    {
+      "id": 2,
+      "position": [
+        5223,
+        2220.5
+      ],
+      "direction": [
+        0.8659999966621399,
+        0.07999999821186066,
+        -0.5
+      ]
+    }
+  ]
+}

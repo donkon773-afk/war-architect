@@ -1,0 +1,28 @@
+{
+  "world": "Takistan",
+  "worldSize": 12800,
+  "strideX": 400,
+  "strideY": 400,
+  "columns": 32,
+  "rows": 32,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -56,
+      "worldTop": 12856,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 437440411,
+  "sourceModified": 1790780649123.683,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 1024,
+  "seconds": 8.62,
+  "coarsestPixelSize": 1.0
+}

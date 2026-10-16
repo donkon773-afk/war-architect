@@ -1,0 +1,126 @@
+{
+  "id": "5ac7404e-c893-4ba1-a663-22ac9a470a75",
+  "name": "Farabad",
+  "updatedAt": "2026-10-08T18:03:09.702Z",
+  "design": {
+    "version": 1,
+    "world": "Farabad",
+    "title": "NeroAI — Farabad",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "c589f446-3d02-465f-a0be-66d1a9021668",
+        "name": "Jazira Oil",
+        "side": "WEST",
+        "position": [
+          454,
+          6335
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": [],
+        "type": "bases"
+      },
+      {
+        "id": "c542836a-4131-465c-a23a-cbc8b0601c9f",
+        "name": "Новая точка",
+        "side": "EAST",
+        "position": [
+          8459,
+          1630
+        ],
+        "radius": 400,
+        "infantry": 10,
+        "vehicles": 0,
+        "vehicleClasses": [
+          "UK3CB_O_G_BMP2"
+        ],
+        "type": "bases"
+      }
+    ],
+    "sectors": [
+      {
+        "id": "81c3f14f-468b-4b89-b267-8dbd0fe6c451",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          2474,
+          6137
+        ],
+        "radius": 500,
+        "infantry": 10,
+        "vehicles": 2,
+        "vehicleClasses": [
+          "UK3CB_B_G_Hilux_Vulcan_Front"
+        ],
+        "type": "sectors"
+      },
+      {
+        "id": "bedb1132-e154-439d-a50f-be203eb09a4a",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          4535,
+          5309
+        ],
+        "radius": 400,
+        "infantry": 10,
+        "vehicles": 1,
+        "vehicleClasses": [],
+        "type": "sectors"
+      },
+      {
+        "id": "ec894ec2-9d4f-4a1f-80ea-c56c06e723e2",
+        "name": "Новая точка",
+        "side": "EAST",
+        "position": [
+          2426,
+          727
+        ],
+        "radius": 400,
+        "infantry": 10,
+        "vehicles": 1,
+        "vehicleClasses": [
+          "UK3CB_O_G_BMP2"
+        ],
+        "type": "sectors"
+      },
+      {
+        "id": "115765da-7402-482f-bf3d-53f055125e71",
+        "name": "Новая точка",
+        "side": "EAST",
+        "position": [
+          5636,
+          1996
+        ],
+        "radius": 400,
+        "infantry": 10,
+        "vehicles": 0,
+        "vehicleClasses": [
+          "UK3CB_O_G_BMP2"
+        ],
+        "type": "sectors"
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "node": "mac",
+      "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive@q4_k_m",
+      "limit": 4,
+      "instructions": ""
+    },
+    "maxNPCs": 160,
+    "maxVehicles": 32,
+    "startCP": 6000,
+    "income": 300,
+    "greenFaction": "rhsgref_faction_cdf_ng",
+    "playerRole": "commander"
+  }
+}

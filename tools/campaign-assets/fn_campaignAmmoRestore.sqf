@@ -1,0 +1,10 @@
+params ["_vehicle"];
+if (!local _vehicle) exitWith {};
+private _saved=_vehicle getVariable ["NeroOP_savedAmmo",[]];if (count _saved!=2 || {!([_saved#0,_saved#1] call NeroOP_fnc_campaignAmmoSnapshot)}) exitWith {};
+private _pylonMags=getPylonMagazines _vehicle;private _available=magazinesAllTurrets [_vehicle,true];private _cleared=[];
+{private _key=[_x#0,_x#1];if (!((_x#0) in _pylonMags) && {!(_key in _cleared)} && {_vehicle turretLocal (_x#1)}) then {_vehicle removeMagazinesTurret _key;_cleared pushBack _key;};} forEach _available;
+{private _entry=_x;
+ if (_available findIf {(_x#0)==(_entry#0) && {(_x#1) isEqualTo (_entry#1)}}>=0 && {_vehicle turretLocal (_entry#1)}) then {_vehicle addMagazineTurret [_entry#0,_entry#1,_entry#2];};
+} forEach (_saved#0);
+{_x params ["_i","_mag","_ammo"];if (_i<=count getAllPylonsInfo _vehicle && {_mag=="" || {_mag in (_vehicle getCompatiblePylonMagazines _i)}}) then {_vehicle setPylonLoadOut [_i,_mag,true];_vehicle setAmmoOnPylon [_i,_ammo];};} forEach (_saved#1);
+_vehicle setVariable ["NeroOP_savedAmmo",[],true];

@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "pbo": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\docs\\sanagasta-start-20261011\\NeroAI_Sanagasta_Three_StartupFix.btrx_sngt.pbo",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\docs\\sanagasta-start-20261011\\candidate\\NeroAI_Sanagasta_Three_StartupFix.btrx_sngt",
+  "displayName": null,
+  "fileCount": 17,
+  "pboFileCount": 17,
+  "manifestMatchesSource": true,
+  "contentsMatchSource": true,
+  "missingFromPbo": [],
+  "unexpectedInPbo": [],
+  "changedFromSource": [],
+  "sizeBytes": 98951,
+  "sha1Body": "5434F3BF09FA58EE2B8C263C26130B7759E348E3",
+  "sha256": "0C08112E694F1D14657CEB9EFD64B5DAB4D7AD56C05B32F987F6848AE972BD76"
+}

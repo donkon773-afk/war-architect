@@ -1,0 +1,299 @@
+{
+  "id": "b7351f64-3c91-4b02-96d3-eafdaffb2332",
+  "name": "ArG",
+  "createdAt": "2026-10-14T16:37:22.913Z",
+  "updatedAt": "2026-10-14T16:37:37.535Z",
+  "revision": 2,
+  "design": {
+    "version": 1,
+    "world": "btrx_sngt",
+    "title": "NeroAI — Sanagasta, Argentina",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "69a80682-c050-4789-928d-22547c391d1c",
+        "name": "Barrio Del Rio",
+        "side": "WEST",
+        "position": [
+          17909,
+          5548
+        ],
+        "radius": 300,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "af2144f0-867d-49c9-b39f-fa7de5568ae2",
+        "name": "FOB Red",
+        "side": "EAST",
+        "position": [
+          8161,
+          19480
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "sectors": [
+      {
+        "id": "6348511e-a6e1-484e-91f2-b6182e2f5871",
+        "name": "Barrio Del Rio",
+        "side": "GUER",
+        "position": [
+          16244,
+          6409
+        ],
+        "radius": 150,
+        "infantry": 12,
+        "vehicles": 1,
+        "vehicleClasses": [
+          "CUP_I_D30_AT_TK_GUE"
+        ]
+      },
+      {
+        "id": "acaf0ff4-6b99-493e-bf54-ddf1f4071f0d",
+        "name": "Ri Grande",
+        "side": "GUER",
+        "position": [
+          15060,
+          9089
+        ],
+        "radius": 700,
+        "infantry": 15,
+        "vehicles": 1,
+        "vehicleClasses": [
+          "UK3CB_I_G_Hilux_Igla_Chair"
+        ]
+      },
+      {
+        "id": "1cc9ccb4-cdcb-4599-8154-58184aa62ab2",
+        "name": "Rio Grande",
+        "side": "GUER",
+        "position": [
+          14049,
+          14231
+        ],
+        "radius": 700,
+        "infantry": 35,
+        "vehicles": 2,
+        "vehicleClasses": [
+          "UK3CB_I_G_BMP2K"
+        ]
+      },
+      {
+        "id": "3bca1399-a7cb-4133-820e-71374d4efc9d",
+        "name": "Red",
+        "side": "GUER",
+        "position": [
+          14807,
+          17623
+        ],
+        "radius": 600,
+        "infantry": 8,
+        "vehicles": 1,
+        "vehicleClasses": [
+          "CUP_I_AGS_UN"
+        ]
+      },
+      {
+        "id": "d56e6a4c-4cac-4df9-832e-ec5ec89fa274",
+        "name": "Campo Tigre",
+        "side": "GUER",
+        "position": [
+          11436,
+          16218
+        ],
+        "radius": 300,
+        "infantry": 14,
+        "vehicles": 2,
+        "vehicleClasses": [
+          "CUP_I_D30_AT_TK_GUE"
+        ]
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "node": "mac",
+      "model": "google/gemma-4-26b-a4b-qat",
+      "limit": 4,
+      "instructions": ""
+    },
+    "army": {
+      "westFaction": "rhs_faction_socom",
+      "eastFaction": "rhs_faction_vdv",
+      "westAssets": [
+        "CUP_B_M2A3Bradley_AFU",
+        "CUP_B_BTR60_AFU",
+        "CUP_B_BRDM2_AFU",
+        "CUP_B_UAZ_AMB_AFU",
+        "CUP_B_BAF_Coyote_GMG_D",
+        "CUP_B_BAF_Coyote_GMG_W",
+        "CUP_B_BAF_Coyote_L2A1_D",
+        "CUP_B_BAF_Coyote_L2A1_W",
+        "UK3CB_BAF_Coyote_Logistics_L134A1_D",
+        "UK3CB_BAF_Coyote_Logistics_L111A1_W",
+        "UK3CB_BAF_Coyote_Logistics_L111A1_G",
+        "CUP_B_HMMWV_Crows_M2_NATO_T",
+        "CUP_B_HMMWV_AGS_GPK_ACR",
+        "CUP_B_LAV25_desert_USMC",
+        "CUP_B_nM1025_M240_DF_NATO_T",
+        "CUP_B_nM1025_Mk19_DF_USA_WDL",
+        "CUP_B_nM1036_TOW_NATO_T",
+        "rhsusf_m1025_w_s_Mk19",
+        "CUP_B_nM1025_SOV_Mk19_USMC_DES",
+        "CUP_B_nM1025_SOV_M2_USMC_WDL",
+        "CUP_B_nM1038_Ammo_USA_DES",
+        "CUP_B_nM1038_Repair_USMC_DES",
+        "CUP_B_M1167_DSRT_USMC",
+        "CUP_B_FV432_Bulldog_GB_W",
+        "CUP_B_FV510_GB_D_SLAT",
+        "TT_Badger",
+        "TT_Rooikat_MTTD",
+        "GX_B_THEMIS_UGV_HUNTER_LAUNCHER",
+        "CUP_B_M6LineBacker_AFU",
+        "RHS_AH1Z",
+        "RHS_MELB_AH6M",
+        "CUP_B_AH6X_USA",
+        "CUP_B_AH6M_USA",
+        "RHS_CH_47F",
+        "GX_B_MQ8B_UAV_ARMED",
+        "UK3CB_BAF_Wildcat_AH1_6_Armed",
+        "b_afougf_m119",
+        "CUP_B_2b14_82mm_ACR",
+        "CUP_B_M2StaticMG_USMC",
+        "b_afougf_M2_TriPod_high",
+        "CUP_B_L134A1_TriPod_BAF_WDL",
+        "CUP_B_L134A1_TriPod_BAF_DDPM",
+        "RHS_Stinger_AA_pod_D",
+        "b_afougf_lcmr_radar",
+        "CUP_B_RBS70_HIL"
+      ],
+      "eastAssets": [
+        "rhs_t72be_msv",
+        "RHS_Ural_MSV_01",
+        "rhs_KORD_high_MSV",
+        "RHS_AGS30_TriPod_MSV",
+        "CUP_O_UAZ_METIS_RU",
+        "CUP_O_UAZ_AA_CHDKZ",
+        "CUP_O_UAZ_SPG9_CHDKZ",
+        "rhsgref_BRDM2_ATGM_msv",
+        "RHS_Ural_Repair_VMF_01",
+        "RHS_Ural_Fuel_VV_01",
+        "CUP_O_Tigr_233014_TKA",
+        "CUP_O_Tigr_233014_RU",
+        "CUP_O_Tigr_233014_PK_RU",
+        "UK3CB_O_G_Hilux_Igla_Chair",
+        "UK3CB_O_G_Hilux_Vulcan_Front",
+        "rhs_bmd1",
+        "rhs_bmd1k",
+        "rhs_bmd2",
+        "rhs_bmd2m",
+        "rhs_bmd4_vdv",
+        "rhs_bmd4m_vdv",
+        "rhs_bmd4ma_vdv",
+        "rhs_bmp3m_msv",
+        "rhs_bmp3mera_msv",
+        "rhs_btr80a_vv",
+        "CUP_O_BMP2_ZU_CSAT",
+        "CUP_O_BTR90_RU",
+        "tbd_mtlb_shturm_sm",
+        "tbd_mtlb_nona",
+        "tbd_mtlb_s8",
+        "tbd_mtlb_strela_m2",
+        "tbd_mtlb_strela_m4",
+        "rhssaf_army_o_2s1",
+        "rhs_2s3_tv",
+        "rhsgref_ins_zsu234",
+        "rhs_t90a_tv",
+        "CUP_O_Ka60_GL_Whale_CSAT",
+        "CUP_O_Ka52_RU",
+        "CUP_O_Ka50_DL_SLA",
+        "CUP_O_Mi24_Mk4_CSAT_T",
+        "RHS_Mi8mt_vdv",
+        "rhs_pchela1t_vvsc",
+        "JS_JC_SU35",
+        "RHS_Su25SM_vvsc",
+        "rhs_D30_vdv_des",
+        "rhs_D30_at_msv",
+        "CUP_O_AGS_ChDKZ",
+        "CUP_O_DSHkM_MiniTriPod_ChDKZ",
+        "rhs_2b14_82mm_vdv",
+        "CUP_O_Metis_TK",
+        "rhs_Metis_9k115_2_vdv",
+        "RHS_NSV_TriPod_MSV",
+        "UK3CB_O_Static_PKM_High_MSV"
+      ],
+      "greenFaction": "rhsgref_faction_nationalist",
+      "greenAssets": [],
+      "westInfantry": [
+        "CUP_B_AFU_Soldier_Rifleman",
+        "CUP_B_AFU_Soldier_Rifleman_Ammo",
+        "CUP_B_AFU_Soldier_Grenadier",
+        "CUP_B_AFU_Soldier_Machinegunner",
+        "CUP_B_AFU_Soldier_Marksman",
+        "CUP_B_AFU_Soldier_Medic",
+        "CUP_B_AFU_Soldier_Engineer",
+        "CUP_B_AFU_Soldier_Sapper",
+        "CUP_B_AFU_Soldier_Rifleman_AT",
+        "CUP_B_AFU_Soldier_ATSpecialist",
+        "CUP_B_AFU_Soldier_ATSpecialist_METIS",
+        "CUP_B_AFU_Soldier_TeamLeader"
+      ],
+      "westInfantryCosts": {
+        "CUP_B_AFU_Soldier_Rifleman": 100,
+        "CUP_B_AFU_Soldier_Rifleman_Ammo": 100,
+        "CUP_B_AFU_Soldier_Grenadier": 100,
+        "CUP_B_AFU_Soldier_Machinegunner": 160,
+        "CUP_B_AFU_Soldier_Marksman": 160,
+        "CUP_B_AFU_Soldier_Medic": 140,
+        "CUP_B_AFU_Soldier_Engineer": 140,
+        "CUP_B_AFU_Soldier_Sapper": 140,
+        "CUP_B_AFU_Soldier_Rifleman_AT": 100,
+        "CUP_B_AFU_Soldier_ATSpecialist": 200,
+        "CUP_B_AFU_Soldier_ATSpecialist_METIS": 200,
+        "CUP_B_AFU_Soldier_TeamLeader": 100
+      },
+      "eastInfantry": [
+        "rhs_msv_emr_rifleman",
+        "rhs_msv_emr_grenadier",
+        "rhs_msv_emr_machinegunner",
+        "rhs_msv_emr_arifleman",
+        "rhs_msv_emr_marksman",
+        "rhs_msv_emr_medic",
+        "rhs_msv_emr_engineer",
+        "rhs_msv_emr_LAT",
+        "rhs_msv_emr_at",
+        "rhs_msv_emr_sergeant"
+      ],
+      "eastInfantryCosts": {
+        "rhs_msv_emr_rifleman": 100,
+        "rhs_msv_emr_grenadier": 100,
+        "rhs_msv_emr_machinegunner": 160,
+        "rhs_msv_emr_arifleman": 100,
+        "rhs_msv_emr_marksman": 160,
+        "rhs_msv_emr_medic": 140,
+        "rhs_msv_emr_engineer": 140,
+        "rhs_msv_emr_LAT": 200,
+        "rhs_msv_emr_at": 200,
+        "rhs_msv_emr_sergeant": 100
+      },
+      "greenInfantry": null,
+      "greenInfantryCosts": {}
+    },
+    "greenFaction": "rhsgref_faction_nationalist",
+    "maxNPCs": 160,
+    "maxVehicles": 48,
+    "startCP": 6000,
+    "income": 100,
+    "playerRole": "commander"
+  }
+}

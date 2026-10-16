@@ -1,0 +1,7 @@
+'use strict';const fs=require('fs'),path=require('path');
+const root=path.join(__dirname,'data/map-tiles');
+function metadata(world){const file=path.join(root,world.id,'background.json');if(!fs.existsSync(file))return null;try{const m=JSON.parse(fs.readFileSync(file,'utf8'));if(m.version!==1||m.ready!==true||m.world!==world.id||m.worldSize!==world.size||![m.strideX,m.strideY,m.columns,m.rows,m.detailPixelSize].every(n=>Number.isFinite(n)&&n>0))return null;const dir=path.join(root,world.id),has8k=fs.existsSync(path.join(dir,'overview8k.jpg')),vector=fs.existsSync(path.join(dir,'vector.json'));return {worldSize:m.worldSize,strideX:m.strideX,strideY:m.strideY,columns:m.columns,rows:m.rows,detailPixelSize:m.detailPixelSize,overviewWidth:has8k?8192:m.overviewWidth,tileCount:m.tileCount,missingTiles:m.missingTiles||[],vector};}catch(e){return null;}}
+function file(world,x=null,y=null){const m=metadata(world);if(!m)return null;/* 8.10: the 8K overview (satellite + roads/buildings from the terrain file) when it was built */
+ if(x===null){const big=path.join(root,world.id,'overview8k.jpg');return fs.existsSync(big)?big:path.join(root,world.id,'overview.jpg');}if(!Number.isInteger(x)||!Number.isInteger(y)||x<0||y<0||x>=m.columns||y>=m.rows)throw Error('Фрагмент за пределами карты.');if(m.missingTiles.includes(x+'_'+y))return null;return path.join(root,world.id,'tiles',x+'_'+y+'.jpg');}
+function vectorFile(world){const f=path.join(root,world.id,'vector.json');return fs.existsSync(f)?f:null;}
+module.exports={metadata,file,vectorFile};

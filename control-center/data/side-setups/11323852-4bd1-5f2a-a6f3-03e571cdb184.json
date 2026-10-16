@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "id": "11323852-4bd1-5f2a-a6f3-03e571cdb184",
+  "name": "ВМС США (RHS) · пустыня",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usn",
+    "assets": [],
+    "infantry": [
+      "rhsusf_navy_marpat_d_medic"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.982Z",
+  "updatedAt": "2026-10-15T16:43:29.982Z"
+}

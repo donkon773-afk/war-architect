@@ -1,0 +1,145 @@
+{
+  "id": "937db5f9-cbd5-4a5f-ae43-c82b8cce21df",
+  "name": "Chernarus · сухопутный фронт",
+  "createdAt": "2026-10-15T22:02:46.077Z",
+  "updatedAt": "2026-10-15T22:02:46.077Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Chernarus",
+    "title": "Chernarus · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · AStrong_Myshkino_02",
+        "side": "WEST",
+        "position": [
+          1644,
+          7772
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · AFlatC_Msta",
+        "side": "EAST",
+        "position": [
+          11361,
+          5480
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · ACityC_Pustoshka",
+        "side": "GUER",
+        "position": [
+          3068,
+          7797
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · $STR_LOCATION_LOC_DICHINA",
+        "side": "GUER",
+        "position": [
+          4719,
+          7723
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · ACityC_StarySobor",
+        "side": "GUER",
+        "position": [
+          6114,
+          7736
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · AStrong_NovySobor_01",
+        "side": "GUER",
+        "position": [
+          7455,
+          7590
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · $STR_LOCATION_LOC_BLACKFOREST",
+        "side": "GUER",
+        "position": [
+          9202,
+          7809
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · AStrong_Polana_03",
+        "side": "GUER",
+        "position": [
+          10549,
+          7845
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · $STR_LOCATION_DOLINA",
+        "side": "GUER",
+        "position": [
+          11307,
+          6625
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

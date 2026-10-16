@@ -1,0 +1,119 @@
+{
+  "id": "809fd303-4b68-4634-af3e-8cb158699872",
+  "name": "Стратис · сухопутный фронт",
+  "createdAt": "2026-10-15T22:02:33.147Z",
+  "updatedAt": "2026-10-15T22:02:33.147Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Stratis",
+    "title": "Стратис · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · База ВВС в Стратисе",
+        "side": "WEST",
+        "position": [
+          1863,
+          5704
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Стрельбище в Камино",
+        "side": "EAST",
+        "position": [
+          6562,
+          5193
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Маринская бухта",
+        "side": "GUER",
+        "position": [
+          2902,
+          5867
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Военный полигон",
+        "side": "GUER",
+        "position": [
+          3582,
+          5664
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Лагерь Рогэйн",
+        "side": "GUER",
+        "position": [
+          4417,
+          5814
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Лагерь Рогэйн",
+        "side": "GUER",
+        "position": [
+          5348,
+          5743
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Стрельбище в Камино",
+        "side": "GUER",
+        "position": [
+          6056,
+          5597
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

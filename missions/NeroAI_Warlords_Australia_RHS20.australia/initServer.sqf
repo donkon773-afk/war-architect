@@ -1,0 +1,4 @@
+diag_log format ["[NeroWL Mission] NeroAI_Warlords_Australia_RHS20: world=%1 multiplayer=%2 server=%3", worldName, isMultiplayer, isServer];
+NeroAI_maxEnemyArmyGroups=10;
+NeroAI_maxEnemyGroups=3;
+call compile preprocessFileLineNumbers "neroWL\fn_applySettings.sqf";

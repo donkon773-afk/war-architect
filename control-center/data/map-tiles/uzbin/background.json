@@ -1,0 +1,28 @@
+{
+  "world": "uzbin",
+  "worldSize": 18432,
+  "strideX": 432,
+  "strideY": 432,
+  "columns": 43,
+  "rows": 43,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -40,
+      "worldTop": 18472,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 875870811,
+  "sourceModified": 1790780648893.8477,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 1849,
+  "seconds": 15.28,
+  "coarsestPixelSize": 1.0
+}

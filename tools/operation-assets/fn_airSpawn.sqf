@@ -1,0 +1,56 @@
+params ["_sideIndex",["_pilot",objNull],["_requested",""]];
+if (!isServer || {_sideIndex!=0 && {_sideIndex!=1}} || {NeroOP_finished}) exitWith {objNull};
+private _side=[west,east]#_sideIndex;
+private _humanPilot=!isNull _pilot && {isPlayer _pilot};
+private _cfg=missionConfigFile >> "CfgNeroOperation" >> (["WEST","EAST"]#_sideIndex);
+private _rows=(NeroOP_account#0)#_sideIndex;
+private _limit=getNumber(_cfg >> "active");
+private _active=NeroOP_planes select {alive _x && {(_x getVariable ["NeroOP_side",-1])==_sideIndex} && {!(_x getVariable ["NeroOP_lost",false])}};
+if (count _active>=_limit || {(_rows#0)>=(NeroOP_budgets#_sideIndex)}) exitWith {objNull};
+private _classes=getArray(_cfg >> "classes");
+private _class=if (_requested=="") then {_classes select ((_rows#0) mod count _classes)} else {_requested};
+if !(_class in _classes) exitWith {objNull};
+if (!isClass(configFile >> "CfgVehicles" >> _class) || {getNumber(configFile >> "CfgVehicles" >> _class >> "isUav")==1}) exitWith {objNull};
+private _entry=getArray(_cfg >> "entry");
+private _zone=getArray(missionConfigFile >> "CfgNeroOperation" >> "zone");
+private _heading=_entry getDir _zone;
+private _slot=(_rows#0) mod _limit;
+private _position=[_entry,_heading,_slot,getNumber(missionConfigFile >> "CfgNeroOperation" >> "altitude")] call NeroOP_fnc_airPosition;
+private _tries=0;
+while {count (_position nearEntities ["Air",400])>0 && {_tries<_limit}} do {_slot=(_slot+1) mod _limit;_tries=_tries+1;_position=[_entry,_heading,_slot,getNumber(missionConfigFile >> "CfgNeroOperation" >> "altitude")] call NeroOP_fnc_airPosition;};
+if (_tries>=_limit) exitWith {objNull};
+private _plane=createVehicle [_class,_position,[],0,"FLY"];
+if (isNull _plane) exitWith {objNull};
+_plane setDir _heading; _plane setPosATL _position; _plane setFuel 1;
+_plane setVariable ["NeroOP_heading",_heading,true];
+_plane setVariable ["NeroOP_side",_sideIndex,true];
+_plane setVariable ["NeroOP_player",if (_humanPilot) then {_pilot} else {objNull},true];
+if (!isNull _pilot && {!_humanPilot}) then {_plane setVariable ["NeroOP_lobbyPilot",_pilot,true];};
+[_plane] call NeroOP_fnc_airArm;
+if (!_humanPilot) then {
+ if (isNull _pilot) then {createVehicleCrew _plane;} else {_pilot assignAsDriver _plane;_pilot moveInDriver _plane;};
+ private _driver=driver _plane;
+ if (!isNull _driver) then {
+  private _group=group _driver;
+  if (side _group!=_side) then {private _replacement=createGroup [_side,true];(crew _plane) joinSilent _replacement;_group=_replacement;};
+  _plane setVariable ["NeroOP_group",_group];
+  {_x setSkill getNumber(_cfg >> "skill");} forEach crew _plane;
+  _group setBehaviourStrong "COMBAT";_group setCombatMode "RED";
+  _plane flyInHeight (_position#2);_plane engineOn true;_plane setVelocity [sin _heading*180,cos _heading*180,0];
+  private _wp=_group addWaypoint [_zone,1200];_wp setWaypointType "SAD";_wp setWaypointSpeed "FULL";_wp setWaypointCombatMode "RED";
+  private _cycle=_group addWaypoint [_zone,1200];_cycle setWaypointType "CYCLE";
+ };
+} else {
+ _plane enableSimulationGlobal false; _plane allowDamage false;
+ _plane setVariable ["NeroOP_pendingAt",serverTime];
+};
+if (!_humanPilot && {isNull driver _plane}) exitWith {{deleteVehicle _x;} forEach crew _plane;deleteVehicle _plane;objNull};
+private _flight=format ["%1:%2",_sideIndex,(_rows#0)+1];
+private _claim=[NeroOP_account,"SPAWN",_sideIndex,_flight,-1,NeroOP_budgets] call NeroOP_fnc_airLedger;
+if !(_claim#1) exitWith {{deleteVehicle _x;} forEach crew _plane;deleteVehicle _plane;objNull};
+NeroOP_account=_claim#0;
+_plane setVariable ["NeroOP_flight",_flight,true];
+NeroOP_planes pushBack _plane;
+diag_log format ["[NeroOP AIR] SPAWN id=%1 side=%2 class=%3 player=%4",_flight,_side,_class,_humanPilot];
+if (!isNull _pilot && {!_humanPilot}) then {diag_log format ["[NeroOP AIR] LOBBY BOT READY id=%1 side=%2",_flight,_side];};
+_plane

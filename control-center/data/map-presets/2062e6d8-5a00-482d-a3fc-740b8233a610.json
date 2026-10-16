@@ -1,0 +1,145 @@
+{
+  "id": "2062e6d8-5a00-482d-a3fc-740b8233a610",
+  "name": "Virolahti · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:28.969Z",
+  "updatedAt": "2026-10-15T22:03:28.969Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "vt7",
+    "title": "Virolahti · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Karkorvenvuori",
+        "side": "WEST",
+        "position": [
+          2011,
+          9168
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Koivuniemi",
+        "side": "EAST",
+        "position": [
+          13690,
+          8474
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Kivusmäki",
+        "side": "GUER",
+        "position": [
+          3562,
+          9251
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Kuusela",
+        "side": "GUER",
+        "position": [
+          5153,
+          9333
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Harju",
+        "side": "GUER",
+        "position": [
+          6753,
+          9192
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Hyypiänvuori",
+        "side": "GUER",
+        "position": [
+          8207,
+          9156
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Ala-Pihlaja",
+        "side": "GUER",
+        "position": [
+          9795,
+          9145
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Ala-Pihlaja",
+        "side": "GUER",
+        "position": [
+          11283,
+          9079
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Koivuniemi",
+        "side": "GUER",
+        "position": [
+          12826,
+          9141
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

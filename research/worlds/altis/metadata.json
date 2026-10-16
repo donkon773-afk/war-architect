@@ -1,0 +1,2239 @@
+{
+  "name": "Altis",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\research\\worlds\\altis\\config.bin",
+  "locations": [
+    {
+      "id": "CityC_Kavala",
+      "name": "",
+      "position": [
+        3620.389892578125,
+        13092.8203125
+      ],
+      "type": "CityCenter",
+      "demography": "CIV",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Aggelochori",
+      "name": "$STR_A3_Aggelochori0",
+      "position": [
+        3687.780029296875,
+        13776.08984375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Neri",
+      "name": "$STR_A3_Neri0",
+      "position": [
+        4116.10986328125,
+        11736.099609375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 170,
+      "angle": 0
+    },
+    {
+      "id": "Panochori",
+      "name": "$STR_A3_Panochori0",
+      "position": [
+        5033.31005859375,
+        11245.2197265625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Zaros",
+      "name": "$STR_A3_Zaros0",
+      "position": [
+        9091.8095703125,
+        11961.8701171875
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Therisa",
+      "name": "$STR_A3_Therisa0",
+      "position": [
+        10618.8798828125,
+        12237.259765625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Katalaki",
+      "name": "$STR_A3_Katalaki0",
+      "position": [
+        11701.0595703125,
+        13672.1396484375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 450,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Neochori",
+      "name": "$STR_A3_Neochori0",
+      "position": [
+        12501.9697265625,
+        14337.0302734375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Stavros",
+      "name": "$STR_A3_Stavros0",
+      "position": [
+        12950.0595703125,
+        15041.6298828125
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Lakka",
+      "name": "$STR_A3_Lakka0",
+      "position": [
+        12281.9697265625,
+        15732.26953125
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Alikampos",
+      "name": "$STR_A3_Alikampos0",
+      "position": [
+        11112.6298828125,
+        14573.650390625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 450,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "AgiosDionysios",
+      "name": "$STR_A3_AgiosDionysios0",
+      "position": [
+        9187.9501953125,
+        15947.83984375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Kore",
+      "name": "$STR_A3_Kore0",
+      "position": [
+        7062.419921875,
+        16472.119140625
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 371.9100036621094,
+      "radiusB": 447.25,
+      "angle": 0
+    },
+    {
+      "id": "Negades",
+      "name": "$STR_A3_Negades0",
+      "position": [
+        4885.97998046875,
+        16171.330078125
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "AgiosKonstantinos",
+      "name": "$STR_A3_AgiosKonstantinos0",
+      "position": [
+        3948.77001953125,
+        17277.849609375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Topolia",
+      "name": "$STR_A3_Topolia0",
+      "position": [
+        7375.81005859375,
+        15429.509765625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Gravia",
+      "name": "$STR_A3_Gravia0",
+      "position": [
+        14479.8095703125,
+        17614.30078125
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 734.489990234375,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Athira",
+      "name": "$STR_A3_Athira0",
+      "position": [
+        13993,
+        18709.380859375
+      ],
+      "type": "NameCityCapital",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 306.8800048828125,
+      "angle": 0
+    },
+    {
+      "id": "Frini",
+      "name": "$STR_A3_Frini0",
+      "position": [
+        14612.4501953125,
+        20786.7109375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 270.5799865722656,
+      "radiusB": 325.3800048828125,
+      "angle": 0
+    },
+    {
+      "id": "Ifestiona",
+      "name": "$STR_A3_Ifestiona0",
+      "position": [
+        12786.98046875,
+        19679.310546875
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 176.63999938964844,
+      "angle": 0
+    },
+    {
+      "id": "Syrta",
+      "name": "$STR_A3_Syrta0",
+      "position": [
+        8625.1298828125,
+        18301.560546875
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Galati",
+      "name": "$STR_A3_Galati0",
+      "position": [
+        10270.2802734375,
+        19036.009765625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 629.9600219726562,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Koroni",
+      "name": "$STR_A3_Koroni0",
+      "position": [
+        11786.73046875,
+        18372.390625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 329.010009765625,
+      "angle": 0
+    },
+    {
+      "id": "Abdera",
+      "name": "$STR_A3_Abdera0",
+      "position": [
+        9425.419921875,
+        20284.029296875
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 453.2699890136719,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Telos",
+      "name": "$STR_A3_Telos0",
+      "position": [
+        16207.01953125,
+        17296.7109375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Anthrakia",
+      "name": "$STR_A3_Anthrakia0",
+      "position": [
+        16584.259765625,
+        16103.9599609375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Kalithea",
+      "name": "$STR_A3_Kalithea0",
+      "position": [
+        17826.509765625,
+        18129.369140625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 300,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "AgiosPetros",
+      "name": "$STR_A3_AgiosPetros0",
+      "position": [
+        19339.419921875,
+        17641.619140625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Paros",
+      "name": "$STR_A3_Paros0",
+      "position": [
+        20885.390625,
+        16958.759765625
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 450,
+      "radiusB": 180,
+      "angle": 0
+    },
+    {
+      "id": "Kalochori",
+      "name": "$STR_A3_Kalochori0",
+      "position": [
+        21351.580078125,
+        16361.8798828125
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Sofia",
+      "name": "$STR_A3_Sofia0",
+      "position": [
+        25680.529296875,
+        21365.080078125
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Molos",
+      "name": "$STR_A3_Molos0",
+      "position": [
+        26943.859375,
+        23170.6796875
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 350,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Ioannina",
+      "name": "$STR_A3_Ioannina0",
+      "position": [
+        23199.6796875,
+        19986.599609375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 350,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "Delfinaki",
+      "name": "$STR_A3_Delfinaki0",
+      "position": [
+        23908.599609375,
+        20144.73046875
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 350,
+      "radiusB": 140,
+      "angle": 0
+    },
+    {
+      "id": "Nifi",
+      "name": "$STR_A3_Nifi0",
+      "position": [
+        19473.330078125,
+        15453.650390625
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Charkia",
+      "name": "$STR_A3_Charkia0",
+      "position": [
+        18049.080078125,
+        15264.0703125
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Dorida",
+      "name": "$STR_A3_Dorida0",
+      "position": [
+        19336.869140625,
+        13252.2802734375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Chalkeia",
+      "name": "$STR_A3_Chalkeia0",
+      "position": [
+        20194.640625,
+        11660.6904296875
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Panagia",
+      "name": "$STR_A3_Panagia0",
+      "position": [
+        20490.1796875,
+        8907.1201171875
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 300,
+      "radiusB": 110,
+      "angle": 0
+    },
+    {
+      "id": "Feres",
+      "name": "$STR_A3_Feres0",
+      "position": [
+        21640.720703125,
+        7583.93017578125
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Selakano",
+      "name": "$STR_A3_Selakano0",
+      "position": [
+        20769.779296875,
+        6736.4599609375
+      ],
+      "type": "NameVillage",
+      "demography": "CIV",
+      "radiusA": 350,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "Pyrgos",
+      "name": "$STR_A3_Pyrgos0",
+      "position": [
+        16780.609375,
+        12604.4697265625
+      ],
+      "type": "NameCityCapital",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "CityC_Neri",
+      "name": "",
+      "position": [
+        4183.1298828125,
+        11743.9501953125
+      ],
+      "type": "CityCenter",
+      "demography": "CIV",
+      "radiusA": 100,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "CityC_AgiosDionysios",
+      "name": "",
+      "position": [
+        9287.66015625,
+        15858.0703125
+      ],
+      "type": "CityCenter",
+      "demography": "CIV",
+      "radiusA": 235.05999755859375,
+      "radiusB": 264.04998779296875,
+      "angle": 0
+    },
+    {
+      "id": "CityC_Katalakes",
+      "name": "",
+      "position": [
+        9459.6201171875,
+        20281.9296875
+      ],
+      "type": "CityCenter",
+      "demography": "CIV",
+      "radiusA": 213.4499969482422,
+      "radiusB": 239.77999877929688,
+      "angle": 0
+    },
+    {
+      "id": "Kavala",
+      "name": "$STR_A3_Kavala0",
+      "position": [
+        3458.949951171875,
+        12966.3701171875
+      ],
+      "type": "NameCityCapital",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Poliakko",
+      "name": "$STR_A3_Poliakko0",
+      "position": [
+        10966.4697265625,
+        13435.2802734375
+      ],
+      "type": "NameCity",
+      "demography": "CIV",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Bomos",
+      "name": "$STR_A3_Bomos0",
+      "position": [
+        2307.31005859375,
+        22165.1796875
+      ],
+      "type": "NameLocal",
+      "radiusA": 600,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Oreokastro",
+      "name": "$STR_A3_Oreokastro0",
+      "position": [
+        4560.4501953125,
+        21460.640625
+      ],
+      "type": "NameVillage",
+      "radiusA": 800,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "castle",
+      "name": "$STR_A3_castle0",
+      "position": [
+        4802.990234375,
+        21855.490234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "Thronos",
+      "name": "$STR_A3_Thronos0",
+      "position": [
+        4919.31982421875,
+        21951.740234375
+      ],
+      "type": "Hill",
+      "radiusA": 346.5899963378906,
+      "radiusB": 263.0400085449219,
+      "angle": 0
+    },
+    {
+      "id": "Faros",
+      "name": "$STR_A3_Faros0",
+      "position": [
+        6565.2998046875,
+        22639.109375
+      ],
+      "type": "NameLocal",
+      "radiusA": 433.239990234375,
+      "radiusB": 328.79998779296875,
+      "angle": 0
+    },
+    {
+      "id": "dump",
+      "name": "$STR_A3_dump0",
+      "position": [
+        5887.1298828125,
+        20236.48046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 277.2699890136719,
+      "radiusB": 210.42999267578125,
+      "angle": 0
+    },
+    {
+      "id": "Synneforos",
+      "name": "$STR_A3_Synneforos0",
+      "position": [
+        6513.7900390625,
+        21604.69921875
+      ],
+      "type": "Hill",
+      "radiusA": 600,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Aristi",
+      "name": "$STR_A3_Aristi0",
+      "position": [
+        7914.0498046875,
+        21305.189453125
+      ],
+      "type": "NameLocal",
+      "radiusA": 277.2699890136719,
+      "radiusB": 210.42999267578125,
+      "angle": 0
+    },
+    {
+      "id": "Fotia",
+      "name": "$STR_A3_Fotia0",
+      "position": [
+        2993.47998046875,
+        18517.359375
+      ],
+      "type": "NameLocal",
+      "radiusA": 260.9599914550781,
+      "radiusB": 198.0500030517578,
+      "angle": 0
+    },
+    {
+      "id": "hill01",
+      "name": "",
+      "position": [
+        4162.72998046875,
+        19455.529296875
+      ],
+      "type": "Hill",
+      "radiusA": 350,
+      "radiusB": 350,
+      "angle": 0
+    },
+    {
+      "id": "Hill02",
+      "name": "$STR_A3_Hill020",
+      "position": [
+        4808.18017578125,
+        17694.349609375
+      ],
+      "type": "Hill",
+      "radiusA": 500,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "Gori",
+      "name": "$STR_A3_Gori0",
+      "position": [
+        5455.72021484375,
+        17553.66015625
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "AgiosMinas",
+      "name": "$STR_A3_AgiosMinas0",
+      "position": [
+        7846.9599609375,
+        18005.439453125
+      ],
+      "type": "Hill",
+      "radiusA": 600,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "Pyrsos",
+      "name": "$STR_A3_Pyrsos0",
+      "position": [
+        9127.099609375,
+        19271.650390625
+      ],
+      "type": "Hill",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "hill03",
+      "name": "",
+      "position": [
+        10748.8896484375,
+        20401
+      ],
+      "type": "Hill",
+      "radiusA": 250,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "KryaNera",
+      "name": "$STR_A3_KryaNera0",
+      "position": [
+        9681.580078125,
+        22294.490234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "hill04",
+      "name": "",
+      "position": [
+        14574.4296875,
+        21994.80078125
+      ],
+      "type": "Hill",
+      "radiusA": 250,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "CapAgrios",
+      "name": "$STR_A3_CapAgrios0",
+      "position": [
+        14688.23046875,
+        23496.23046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Nychi",
+      "name": "$STR_A3_Nychi0",
+      "position": [
+        16837.419921875,
+        21889.990234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "factory01",
+      "name": "$STR_A3_factory040",
+      "position": [
+        14294.58984375,
+        18928.490234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 250,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "AgiaTriada",
+      "name": "$STR_A3_AgiaTriada0",
+      "position": [
+        16668.5,
+        20487.029296875
+      ],
+      "type": "NameVillage",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Orino",
+      "name": "$STR_A3_Orino0",
+      "position": [
+        10410.3603515625,
+        17243.119140625
+      ],
+      "type": "NameVillage",
+      "radiusA": 450,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "military01",
+      "name": "$STR_A3_military010",
+      "position": [
+        12771.580078125,
+        16694.2890625
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "factory02",
+      "name": "$STR_A3_factory040",
+      "position": [
+        12577.3603515625,
+        16352.75
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "airbase01",
+      "name": "$STR_A3_airbase010",
+      "position": [
+        14037.580078125,
+        16143.330078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "terminal01",
+      "name": "$STR_A3_terminal010",
+      "position": [
+        14522.41015625,
+        16833.94921875
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "military02",
+      "name": "$STR_A3_military010",
+      "position": [
+        15137.16015625,
+        17297.80078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "military03",
+      "name": "$STR_A3_military010",
+      "position": [
+        16030.419921875,
+        17004.83984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "PowerPlant01",
+      "name": "$STR_A3_PowerPlant020",
+      "position": [
+        15420.830078125,
+        16223.6396484375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Amfissa",
+      "name": "$STR_A3_Amfissa0",
+      "position": [
+        8088.81005859375,
+        17257.66015625
+      ],
+      "type": "NameLocal",
+      "radiusA": 200,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Amoni",
+      "name": "$STR_A3_Amoni0",
+      "position": [
+        7859.97998046875,
+        16673.560546875
+      ],
+      "type": "Hill",
+      "radiusA": 300,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "factory03",
+      "name": "$STR_A3_factory040",
+      "position": [
+        6109.490234375,
+        16246.1796875
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Stadium",
+      "name": "$STR_A3_Stadium0",
+      "position": [
+        5429.68994140625,
+        14996.6796875
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "factory04",
+      "name": "$STR_A3_factory040",
+      "position": [
+        5307.1201171875,
+        14500.1103515625
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "hill05",
+      "name": "$STR_A3_hill050",
+      "position": [
+        9187.740234375,
+        11502.5302734375
+      ],
+      "type": "Hill",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "XirolimniDam",
+      "name": "$STR_A3_XirolimniDam0",
+      "position": [
+        9115.2197265625,
+        13959.849609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "AgiaStemma",
+      "name": "$STR_A3_AgiaStemma0",
+      "position": [
+        7883.580078125,
+        14626.41015625
+      ],
+      "type": "Hill",
+      "radiusA": 509.67999267578125,
+      "radiusB": 386.82000732421875,
+      "angle": 0
+    },
+    {
+      "id": "AACairfield",
+      "name": "$STR_A3_AACairfield0",
+      "position": [
+        11461.1904296875,
+        11661.669921875
+      ],
+      "type": "NameLocal",
+      "radiusA": 350,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Drimea",
+      "name": "$STR_A3_Drimea0",
+      "position": [
+        10781.8896484375,
+        10881.58984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 450,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Kastro",
+      "name": "$STR_A3_Kastro0",
+      "position": [
+        3041.39990234375,
+        13162.75
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "KavalaPier",
+      "name": "$STR_A3_KavalaPier0",
+      "position": [
+        3014.830078125,
+        12587.33984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "PowerPlant02",
+      "name": "$STR_A3_PowerPlant020",
+      "position": [
+        4163.60009765625,
+        15047.23046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Magos",
+      "name": "$STR_A3_Magos0",
+      "position": [
+        4564.72021484375,
+        15393.25
+      ],
+      "type": "Hill",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "quarry01",
+      "name": "$STR_A3_quarry020",
+      "position": [
+        4379.14990234375,
+        12594.3701171875
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "SavriIsland",
+      "name": "$STR_A3_SavriIsland0",
+      "position": [
+        2370.949951171875,
+        11507.009765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "CapDrakontas",
+      "name": "$STR_A3_CapDrakontas0",
+      "position": [
+        2657.320068359375,
+        11461.4501953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "FournosIsland",
+      "name": "$STR_A3_FournosIsland0",
+      "position": [
+        2313.669921875,
+        9289.3095703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Athanos",
+      "name": "$STR_A3_Athanos0",
+      "position": [
+        3571.219970703125,
+        10243.740234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Edoris",
+      "name": "$STR_A3_Edoris0",
+      "position": [
+        6002.75,
+        10511.3701171875
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "hill06",
+      "name": "",
+      "position": [
+        4188.990234375,
+        10754.8603515625
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "hill07",
+      "name": "",
+      "position": [
+        5320.31005859375,
+        10316.0302734375
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Tafos",
+      "name": "$STR_A3_Tafos0",
+      "position": [
+        5588.85986328125,
+        11749.6904296875
+      ],
+      "type": "Hill",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill08",
+      "name": "",
+      "position": [
+        6405.68994140625,
+        12365.6298828125
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "AgiosPanagiotis",
+      "name": "$STR_A3_AgiosPanagiotis0",
+      "position": [
+        6272.75,
+        12173.900390625
+      ],
+      "type": "NameLocal",
+      "radiusA": 450,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "dump02",
+      "name": "$STR_A3_dump0",
+      "position": [
+        5900.47021484375,
+        12454.4296875
+      ],
+      "type": "NameLocal",
+      "radiusA": 200,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Kavirida",
+      "name": "$STR_A3_Kavirida0",
+      "position": [
+        7324.240234375,
+        12125.41015625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Edessa",
+      "name": "$STR_A3_Edessa0",
+      "position": [
+        7194.22998046875,
+        11043.9501953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 130,
+      "angle": 0
+    },
+    {
+      "id": "hill09",
+      "name": "",
+      "position": [
+        7048.10009765625,
+        14070.400390625
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "AtsalisIsland",
+      "name": "$STR_A3_AtsalisIsland0",
+      "position": [
+        8304.830078125,
+        25081.220703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Vikos",
+      "name": "$STR_A3_Vikos0",
+      "position": [
+        11556.8896484375,
+        9417.0595703125
+      ],
+      "type": "NameLocal",
+      "radiusA": 250,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Agela",
+      "name": "$STR_A3_Agela0",
+      "position": [
+        9186.33984375,
+        8388.4404296875
+      ],
+      "type": "Hill",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "hill10",
+      "name": "",
+      "position": [
+        10729.75,
+        7615.7099609375
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Skopos",
+      "name": "$STR_A3_Skopos0",
+      "position": [
+        11668.9501953125,
+        7579.91015625
+      ],
+      "type": "Hill",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "CapMakrinos",
+      "name": "$STR_A3_CapMakrinos0",
+      "position": [
+        14225.8701171875,
+        6237.990234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "PyrgiIsland",
+      "name": "$STR_A3_PyrgiIsland0",
+      "position": [
+        14489.9404296875,
+        5871.7001953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Eginio",
+      "name": "$STR_A3_Eginio0",
+      "position": [
+        11549.169921875,
+        7088.39013671875
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Sfaka",
+      "name": "$STR_A3_Sfaka0",
+      "position": [
+        9213.9501953125,
+        8079.02978515625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "AgiosKosmas",
+      "name": "$STR_A3_AgiosKosmas0",
+      "position": [
+        8555.3203125,
+        7335.509765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 260.9599914550781,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "MonisiIsland",
+      "name": "$STR_A3_MonisiIsland0",
+      "position": [
+        7813.35986328125,
+        7641.18994140625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "MakrynisiIsland",
+      "name": "$STR_A3_MakrynisiIsland0",
+      "position": [
+        13471.9404296875,
+        12018.509765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "SagonisiIsland",
+      "name": "$STR_A3_SagonisiIsland0",
+      "position": [
+        14281.169921875,
+        13469.26953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "ChelonisiIsland",
+      "name": "$STR_A3_ChelonisiIsland0",
+      "position": [
+        16636.5390625,
+        13582.2001953125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Faronaki",
+      "name": "$STR_A3_Faronaki0",
+      "position": [
+        14934.419921875,
+        11079.48046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Ekali",
+      "name": "$STR_A3_Ekali0",
+      "position": [
+        17059.7109375,
+        9992.3203125
+      ],
+      "type": "NameVillage",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "hill11",
+      "name": "",
+      "position": [
+        16535.98046875,
+        10787.1796875
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Didymos",
+      "name": "$STR_A3_Didymos0",
+      "position": [
+        17768.880859375,
+        9914.41015625
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "hill12",
+      "name": "",
+      "position": [
+        18832.080078125,
+        10222.0302734375
+      ],
+      "type": "Hill",
+      "radiusA": 200,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Aktinarki",
+      "name": "$STR_A3_Aktinarki0",
+      "position": [
+        21449.939453125,
+        10873.759765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Trachia",
+      "name": "$STR_A3_Trachia0",
+      "position": [
+        22128.140625,
+        8453.98046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 200,
+      "radiusB": 80,
+      "angle": 0
+    },
+    {
+      "id": "AgiaPelagia",
+      "name": "$STR_A3_AgiaPelagia0",
+      "position": [
+        22707.58984375,
+        6930.56982421875
+      ],
+      "type": "NameLocal",
+      "radiusA": 350,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "Mazi",
+      "name": "$STR_A3_Mazi0",
+      "position": [
+        21772.4296875,
+        6014.52978515625
+      ],
+      "type": "NameLocal",
+      "radiusA": 150,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Livadi",
+      "name": "$STR_A3_Livadi0",
+      "position": [
+        18410.509765625,
+        8098.2998046875
+      ],
+      "type": "NameLocal",
+      "radiusA": 150,
+      "radiusB": 60,
+      "angle": 0
+    },
+    {
+      "id": "CapKategidis",
+      "name": "$STR_A3_CapKategidis0",
+      "position": [
+        22792,
+        13638.3798828125
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "SufrClub",
+      "name": "$STR_A3_SufrClub0",
+      "position": [
+        21339.369140625,
+        10434.009765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Limni",
+      "name": "$STR_A3_Limni0",
+      "position": [
+        20920.7890625,
+        14775.3798828125
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Ochrolimni",
+      "name": "$STR_A3_Ochrolimni0",
+      "position": [
+        23650.080078125,
+        16227.259765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "CapThelos",
+      "name": "$STR_A3_CapThelos0",
+      "position": [
+        24067.599609375,
+        15560.25
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Zeloran",
+      "name": "$STR_A3_Zeloran0",
+      "position": [
+        17043.4609375,
+        19592.150390625
+      ],
+      "type": "NameLocal",
+      "radiusA": 150,
+      "radiusB": 60,
+      "angle": 0
+    },
+    {
+      "id": "quarry02",
+      "name": "$STR_A3_quarry020",
+      "position": [
+        17060.5390625,
+        11339.099609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 260.9599914550781,
+      "radiusB": 198.0500030517578,
+      "angle": 0
+    },
+    {
+      "id": "storage01",
+      "name": "$STR_A3_storage010",
+      "position": [
+        18260.609375,
+        15551.2197265625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "quarry03",
+      "name": "$STR_A3_quarry020",
+      "position": [
+        19566.390625,
+        15617.259765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "Rodopoli",
+      "name": "$STR_A3_Rodopoli0",
+      "position": [
+        18753.41015625,
+        16597.119140625
+      ],
+      "type": "NameCity",
+      "radiusA": 500,
+      "radiusB": 300,
+      "angle": 0
+    },
+    {
+      "id": "CapZefyris",
+      "name": "$STR_A3_CapZefyris0",
+      "position": [
+        18049.33984375,
+        19186.58984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 450,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "AgiosGeorgios",
+      "name": "$STR_A3_AgiosGeorgios0",
+      "position": [
+        20296.26953125,
+        18635.08984375
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Almyra",
+      "name": "$STR_A3_Almyra0",
+      "position": [
+        23495.560546875,
+        18392.599609375
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 250,
+      "angle": 0
+    },
+    {
+      "id": "Iraklia",
+      "name": "$STR_A3_Iraklia0",
+      "position": [
+        21628.3203125,
+        21274.939453125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "military04",
+      "name": "$STR_A3_military010",
+      "position": [
+        23533.16015625,
+        21107.990234375
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 120,
+      "angle": 0
+    },
+    {
+      "id": "Nidasos",
+      "name": "$STR_A3_Nidasos0",
+      "position": [
+        23662.900390625,
+        21796.080078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 300,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "military05",
+      "name": "$STR_A3_military010",
+      "position": [
+        25350.640625,
+        21790.859375
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Skiptro",
+      "name": "$STR_A3_Skiptro0",
+      "position": [
+        24833.859375,
+        21802.099609375
+      ],
+      "type": "Hill",
+      "radiusA": 250,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "PowerPlant03",
+      "name": "$STR_A3_PowerPlant020",
+      "position": [
+        25462.630859375,
+        20357.66015625
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "Gatolia",
+      "name": "$STR_A3_Gatolia0",
+      "position": [
+        26723.009765625,
+        21230.330078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 220,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Polemistia",
+      "name": "$STR_A3_Polemistia0",
+      "position": [
+        27998.5703125,
+        23775.75
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "MolosAirfield",
+      "name": "$STR_A3_MolosAirfield0",
+      "position": [
+        26939.8203125,
+        24743.810546875
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "Limnichori",
+      "name": "$STR_A3_Limnichori0",
+      "position": [
+        25703.650390625,
+        23561.580078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "CapStrigla",
+      "name": "$STR_A3_CapStrigla0",
+      "position": [
+        28059.23046875,
+        25626.369140625
+      ],
+      "type": "NameLocal",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Sideras",
+      "name": "$STR_A3_Sideras0",
+      "position": [
+        23274.5390625,
+        24198.30078125
+      ],
+      "type": "NameLocal",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "AgiosAndreas",
+      "name": "$STR_A3_AgiosAndreas0",
+      "position": [
+        23682.880859375,
+        24239.259765625
+      ],
+      "type": "Hill",
+      "radiusA": 400,
+      "radiusB": 100,
+      "angle": 0
+    },
+    {
+      "id": "NeriBay",
+      "name": "$STR_A3_NeriBay0",
+      "position": [
+        3166,
+        11234.169921875
+      ],
+      "type": "NameMarine",
+      "radiusA": 400,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "KavalaBay",
+      "name": "$STR_A3_KavalaBay0",
+      "position": [
+        3004.580078125,
+        13675.91015625
+      ],
+      "type": "NameMarine",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "NegadesBay",
+      "name": "$STR_A3_NegadesBay0",
+      "position": [
+        3458.0400390625,
+        16859.630859375
+      ],
+      "type": "NameMarine",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "PanochoriBay",
+      "name": "$STR_A3_PanochoriBay0",
+      "position": [
+        4005.2900390625,
+        9908.58984375
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "IremiBay",
+      "name": "$STR_A3_IremiBay0",
+      "position": [
+        5117.6298828125,
+        9761.5
+      ],
+      "type": "NameMarine",
+      "radiusA": 400,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "EdessaBay",
+      "name": "$STR_A3_EdessaBay0",
+      "position": [
+        6862.330078125,
+        10614.1396484375
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "ZarosBay",
+      "name": "$STR_A3_ZarosBay0",
+      "position": [
+        9210.66015625,
+        10250.4501953125
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "NaftiaBay",
+      "name": "$STR_A3_NaftiaBay0",
+      "position": [
+        12157.58984375,
+        6376.240234375
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "MelaneraBay",
+      "name": "$STR_A3_MelaneraBay0",
+      "position": [
+        11226.1904296875,
+        10574.7001953125
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "KatalakiBay",
+      "name": "$STR_A3_KatalakiBay0",
+      "position": [
+        12269.849609375,
+        13659.33984375
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "PyrgosGulf",
+      "name": "$STR_A3_PyrgosGulf0",
+      "position": [
+        15139.240234375,
+        14229.9404296875
+      ],
+      "type": "NameMarine",
+      "radiusA": 600,
+      "radiusB": 200,
+      "angle": 0
+    },
+    {
+      "id": "MaziBay",
+      "name": "$STR_A3_MaziBay0",
+      "position": [
+        22181.439453125,
+        6154.22998046875
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "ChalkeiaBay",
+      "name": "$STR_A3_ChalkeiaBay0",
+      "position": [
+        21859.609375,
+        12594.8798828125
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "ThelosBay",
+      "name": "$STR_A3_ThelosBay0",
+      "position": [
+        22979.689453125,
+        14938.9501953125
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "MolosBay",
+      "name": "$STR_A3_MolosBay0",
+      "position": [
+        27826.849609375,
+        24244.44921875
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "GalanaNeraBay",
+      "name": "$STR_A3_GalanaNeraBay0",
+      "position": [
+        24924.080078125,
+        24206.55078125
+      ],
+      "type": "NameMarine",
+      "radiusA": 690,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "PefkasBay",
+      "name": "$STR_A3_PefkasBay0",
+      "position": [
+        21204.69921875,
+        20464.640625
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "KalitheaBay",
+      "name": "$STR_A3_KalitheaBay0",
+      "position": [
+        18160.9609375,
+        18676.630859375
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "TonosBay",
+      "name": "$STR_A3_TonosBay0",
+      "position": [
+        11988.2998046875,
+        22985.669921875
+      ],
+      "type": "NameMarine",
+      "radiusA": 260.9599914550781,
+      "radiusB": 198.0500030517578,
+      "angle": 0
+    },
+    {
+      "id": "AmmolofiBay",
+      "name": "$STR_A3_AmmolofiBay0",
+      "position": [
+        9525.4404296875,
+        22649.009765625
+      ],
+      "type": "NameMarine",
+      "radiusA": 500,
+      "radiusB": 150,
+      "angle": 0
+    },
+    {
+      "id": "Mine01",
+      "name": "$STR_A3_Mine010",
+      "position": [
+        18435.119140625,
+        14301.759765625
+      ],
+      "type": "NameLocal",
+      "radiusA": 200,
+      "radiusB": 100,
+      "angle": 0
+    }
+  ],
+  "airports": [
+    {
+      "id": 0,
+      "position": [
+        14382.400390625,
+        15924.599609375
+      ],
+      "direction": [
+        -0.6947000026702881,
+        0.05233599990606308,
+        -0.7192999720573425
+      ]
+    },
+    {
+      "id": 1,
+      "position": [
+        11358.5,
+        11441.2001953125
+      ],
+      "direction": [
+        -0.5504999756813049,
+        0.06105000153183937,
+        -0.8349000215530396
+      ]
+    },
+    {
+      "id": 2,
+      "position": [
+        9268.16015625,
+        21575.099609375
+      ],
+      "direction": [
+        0.8026999831199646,
+        0.07000000029802322,
+        0.5964000225067139
+      ]
+    },
+    {
+      "id": 3,
+      "position": [
+        21075.5,
+        7098.75
+      ],
+      "direction": [
+        -0.1907999962568283,
+        0.07800000160932541,
+        -0.9815999865531921
+      ]
+    },
+    {
+      "id": 4,
+      "position": [
+        27162.30078125,
+        24910.69921875
+      ],
+      "direction": [
+        0.6546000242233276,
+        0.07999999821186066,
+        0.7559999823570251
+      ]
+    },
+    {
+      "id": 5,
+      "position": [
+        23149.599609375,
+        18400
+      ],
+      "direction": [
+        0,
+        0.05233599990606308,
+        -1
+      ]
+    }
+  ]
+}

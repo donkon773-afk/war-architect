@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "id": "31c3d732-0b05-41b8-a2f9-610ce72e11f0",
+  "design": {
+    "version": 1,
+    "type": "assaultDefense",
+    "world": "Australia",
+    "title": "NeroAI — Australia: штурм и оборона [FULL ZEUS FINAL]",
+    "playerRole": "commander",
+    "playerSide": "WEST",
+    "attackerSide": "WEST",
+    "sides": [
+      {
+        "side": "WEST",
+        "classes": [
+          "rhsusf_army_ocp_rifleman",
+          "rhsusf_army_ocp_autorifleman",
+          "rhsusf_army_ocp_grenadier",
+          "rhsusf_army_ocp_medic",
+          "B_G_Story_Guerilla_01_F",
+          "CUP_B_AFU_Soldier_ATSpecialist_METIS",
+          "CUP_B_BAF_Sniper_AS50_DDPM",
+          "CUP_B_BAF_Soldier_AA_MTP"
+        ],
+        "active": 6,
+        "reserve": 12,
+        "groupSize": 8,
+        "skill": 0.85,
+        "entry": [
+          20919.721,
+          25110.58
+        ]
+      },
+      {
+        "side": "EAST",
+        "classes": [
+          "rhs_msv_rifleman",
+          "rhs_msv_machinegunner",
+          "rhs_msv_grenadier",
+          "rhs_msv_medic",
+          "CUP_O_INS_Sniper",
+          "CUP_O_INS_Soldier_AA",
+          "CUP_O_INS_Soldier_AT",
+          "CUP_O_INS_Soldier_Engineer"
+        ],
+        "active": 6,
+        "reserve": 12,
+        "groupSize": 8,
+        "skill": 0.65,
+        "entry": [
+          23019.721,
+          26210.58
+        ]
+      }
+    ],
+    "zone": {
+      "position": [
+        22119.721,
+        25610.58
+      ],
+      "radius": 250
+    },
+    "playerSlots": 4,
+    "duration": 30,
+    "captureSeconds": 120,
+    "reinforcementDelay": 45,
+    "hour": 6,
+    "overcast": 0.15
+  },
+  "revision": 3,
+  "createdAt": "2026-10-12T00:01:45.449Z",
+  "updatedAt": "2026-10-12T00:17:31.474Z"
+}

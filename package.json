@@ -1,0 +1,26 @@
+{
+  "name": "war-architect",
+  "version": "0.1.0",
+  "private": true,
+  "description": "War Architect for Arma 3: scenario editor, faction presets, tactical AI, logistics and the optional NeroAI LLM module.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/warlords-dual.test.js tests/protocol.test.js tests/bridge.test.js tests/sqf-transport.test.js tests/lambs-templates.test.js tests/roads-air-boarding.test.js tests/purchase-infantry.test.js tests/side-memory.test.js tests/vision.test.js tests/runtime-ownership.test.js",
+    "test:mobility": "node --test tests/mobility.test.js",
+    "test:combat": "node --test tests/combat.test.js",
+    "test:frontline": "node --test tests/frontline.test.js",
+    "test:logistics": "node --test tests/logistics.test.js",
+    "test:tactical": "node --test tests/tactical-ai.test.js",
+    "test:legacy": "node --test tests/*.test.js",
+    "test:static": "node tests/static-sqf.test.js",
+    "bridge:debug": "node bridge/server.js --debug",
+    "verify:pbo": "node tools/verify-pbo.js",
+    "bench:llm": "node tools/benchmark-local-llm.js",
+    "test:control": "node --test control-center/core.test.js tests/control-options.test.js tests/control-launch.test.js tests/panel-connection.test.js tests/designer-ui.test.js tests/color-themes.test.js tests/control-editor-regressions.test.js tests/side-setups.test.js tests/three-side-startup.test.js tests/cq-interface.test.js",
+    "test:cq": "node --test tests/cq-interface.test.js",
+    "test:operations": "node --test tests/operations.test.js tests/ground-operations.test.js tests/campaign-operations.test.js tests/campaign-equipment.test.js tests/air-defense-network.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

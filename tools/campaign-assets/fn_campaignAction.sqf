@@ -1,0 +1,10 @@
+params [["_unit",objNull,[objNull]],["_mode","",[""]],["_target",-1,[0]]];
+if (!isServer || {NeroOP_campFinished} || {!NeroOP_campReady} || {isNull _unit} || {!isPlayer _unit} || {!alive _unit}) exitWith {};
+if (isRemoteExecuted && {remoteExecutedOwner!=owner _unit}) exitWith {};
+if !(_mode in ["SAVE","CONVOY"]) exitWith {};
+if (serverTime-(_unit getVariable ["NeroOP_campActionAt",-100])<10) exitWith {};_unit setVariable ["NeroOP_campActionAt",serverTime];
+if (_mode=="SAVE") exitWith {private _saved=[] call NeroOP_fnc_campaignSave;_unit setVariable ["NeroOP_notice",if (_saved) then {"Кампания сохранена"} else {"Сохранение не выполнено; проверьте режим кампании и журнал"},true];};
+private _side=[west,east] find side group _unit;if (_side<0 || {floor _target!=_target} || {_target<0} || {_target>=count NeroOP_campOwners}) exitWith {};
+private _path=[NeroOP_campOwners,NeroOP_campLinks,NeroOP_campRoots#_side,_target,_side] call NeroOP_fnc_campaignPath;
+if (count _path<2) exitWith {_unit setVariable ["NeroOP_notice","Колонна может идти только в собственный сектор, связанный с базой.",true];};
+[_side,_target] spawn NeroOP_fnc_campaignConvoy;_unit setVariable ["NeroOP_notice","Запрошена доставка: нужны свободный грузовик, запасы на базе и дорожный маршрут.",true];

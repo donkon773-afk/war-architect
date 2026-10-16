@@ -1,0 +1,5171 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 6.09
+//'now' is Wed Mar 29 02:37:56 2017 : 'file' last modified on Wed Mar 29 02:17:10 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//ndefs=13
+enum {
+	DESTRUCTENGINE = 2,
+	DESTRUCTDEFAULT = 6,
+	DESTRUCTWRECK = 7,
+	DESTRUCTTREE = 3,
+	DESTRUCTTENT = 4,
+	STABILIZEDINAXISX = 1,
+	STABILIZEDINAXESXYZ = 4,
+	STABILIZEDINAXISY = 2,
+	STABILIZEDINAXESBOTH = 3,
+	DESTRUCTNO = 0,
+	STABILIZEDINAXESNONE = 0,
+	DESTRUCTMAN = 5,
+	DESTRUCTBUILDING = 1
+};
+
+//Class australia : config.cpp{
+class CfgPatches
+{
+	class australia
+	{
+		requiredAddons[] = {"A3_Data_F","A3_Roads_F","A3_Structures_F","ausroads","brg_africa","CAStructures","CAStructures_e","CABuildings2","CAMISC2","CAMISC3","CAPlants","CARocks","CARoads2","CArocks2","CAPlants","xcam_metal","xcam_objects","xcam_pipe","xcam_wood","plp_containers","shb","mm_civilengineering","CADATA"};
+		requiredVersion = 0.1;
+		units[] = {};
+		weapons[] = {};
+	};
+};
+class CfgLocationTypes
+{
+	class Airportblue;
+	class myairportblue: Airportblue
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 18;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 3;
+		texture = "australia\data\icons\Airport32blue_ca.paa";
+		font = "PuristaMedium";
+	};
+	class Airportgreen;
+	class myairportgreen: Airportgreen
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 22;
+		textSize = 0.08;
+		shadow = 0;
+		importance = 2;
+		texture = "australia\data\icons\Airport32green_ca.paa";
+		font = "PuristaMedium";
+	};
+	class Airstripblack;
+	class myairstripblack: Airstripblack
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 12;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 3;
+		texture = "australia\data\icons\airstripblack_ca.paa";
+		font = "PuristaMedium";
+	};
+	class ausshipwreck;
+	class myshipwreck: ausshipwreck
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 10;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 2;
+		texture = "australia\data\icons\shipwreck_ca.paa";
+		font = "PuristaMedium";
+	};
+	class ausmountain;
+	class mymountainicon: ausmountain
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 10;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 2;
+		texture = "australia\data\icons\mountainicon_ca.paa";
+		font = "PuristaMedium";
+	};
+	class auscopshop;
+	class myauscopshopicon: auscopshop
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 15;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\policesign_ca.paa";
+		font = "PuristaMedium";
+	};
+	class aushospital;
+	class myhospitalicon: aushospital
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 18;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\plp_mark_civ_hospitalA.pac";
+		font = "PuristaMedium";
+	};
+	class ausprison;
+	class myprisonicon: ausprison
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 18;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\prison_ca.paa";
+		font = "PuristaMedium";
+	};
+	class ausindustrial;
+	class myindustrialicon: ausindustrial
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 17;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\plp_mark_as_industrial.pac";
+		font = "PuristaMedium";
+	};
+	class ausoilrig;
+	class myoilrigicon: ausoilrig
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 17;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\oilrig.paa";
+		font = "PuristaMedium";
+	};
+	class ausbustop;
+	class mybustopicon: ausbustop
+	{
+		name = "";
+		drawStyle = "icon";
+		color[] = {1,1,1,1};
+		size = 17;
+		textSize = 0.03;
+		shadow = 0;
+		importance = 1;
+		texture = "australia\data\icons\busstopsign.paa";
+		font = "PuristaMedium";
+	};
+};
+class CfgVehicles
+{
+	class All;
+	class AllVehicles: All{};
+	class Land: AllVehicles{};
+	class LandVehicle: Land{};
+	class car: LandVehicle
+	{
+		rightDustEffects[] = {{"aus_desertSurface","RDirtEffects"},{"aus_desertSurface","RDustEffects"},{"aus_desertSurface","RStonesEffects"},{"aus_desertSurface","RSandEffects"},{"ausreddesertsurface","RDustEffects"},{"ausreddesertsurface","RSandEffects"},{"ausreddesertsurface","RDirtEffects"},{"ausreddesertsurface","RStonesEffects"},{"aus_greengrassSurface","RDustEffects"},{"aus_greengrassSurface","RSandEffects"},{"aus_greengrassSurface","RDirtEffects"},{"aus_greengrassSurface","RStonesEffects"},{"aus_tropicalSurface","RDustEffects"},{"aus_tropicalSurface","RSandEffects"},{"aus_tropicalSurface","RDirtEffects"},{"aus_tropicalSurface","RStonesEffects"},{"aus_grassdirtSurface","RDustEffects"},{"aus_grassdirtSurface","RSandEffects"},{"aus_grassdirtSurface","RDirtEffects"},{"aus_grassdirtSurface","RStonesEffects"},{"aus_WildFieldsurface","RDirtEffects"},{"aus_WildFieldsurface","RDustEffects"},{"aus_WildFieldsurface","RStonesEffects"},{"aus_WildFieldsurface","RSandEffects"},{"aus_stonysurface","RDirtEffects"},{"aus_stonysurface","RDustEffects"},{"aus_stonysurface","RStonesEffects"},{"aus_stonysurface","RSandEffects"},{"aus_dryriverbed_surface","RDirtEffects"},{"aus_dryriverbed_surface","RDustEffects"},{"aus_dryriverbed_surface","RStonesEffects"},{"aus_dryriverbed_surface","RSandEffects"},{"ausdirtroad","RDustEffects"},{"ausdirtroad","RDirtEffects"},{"ausdirtroad","RStonesEffects"},{"ausdirtroad","RSandEffects"},{"ausgravroad","RDustEffects"},{"ausgravroad","RDirtEffects"},{"ausgravroad","RStonesEffects"},{"ausgravroad","RSandEffects"}};
+		leftDustEffects[] = {{"aus_desertSurface","LDirtEffects"},{"aus_desertSurface","LDustEffects"},{"aus_desertSurface","LStonesEffects"},{"aus_desertSurface","LSandEffects"},{"ausreddesertsurface","LDustEffects"},{"ausreddesertsurface","LSandEffects"},{"ausreddesertsurface","LDirtEffects"},{"ausreddesertsurface","LStonesEffects"},{"aus_greengrassSurface","LDustEffects"},{"aus_greengrassSurface","LSandEffects"},{"aus_greengrassSurface","LDirtEffects"},{"aus_greengrassSurface","LStonesEffects"},{"aus_tropicalSurface","LDustEffects"},{"aus_tropicalSurface","LSandEffects"},{"aus_tropicalSurface","LDirtEffects"},{"aus_tropicalSurface","LStonesEffects"},{"aus_grassdirtSurface","LDustEffects"},{"aus_grassdirtSurface","LSandEffects"},{"aus_grassdirtSurface","LDirtEffects"},{"aus_grassdirtSurface","LStonesEffects"},{"aus_WildFieldsurface","LDirtEffects"},{"aus_WildFieldsurface","LDustEffects"},{"aus_WildFieldsurface","LStonesEffects"},{"aus_WildFieldsurface","LSandEffects"},{"aus_stonysurface","LDirtEffects"},{"aus_stonysurface","LDustEffects"},{"aus_stonysurface","LStonesEffects"},{"aus_stonysurface","LSandEffects"},{"aus_dryriverbed_surface","LDirtEffects"},{"aus_dryriverbed_surface","LDustEffects"},{"aus_dryriverbed_surface","LStonesEffects"},{"aus_dryriverbed_surface","LSandEffects"},{"ausdirtroad","LDirtEffects"},{"ausdirtroad","LDustEffects"},{"ausdirtroad","LStonesEffects"},{"ausdirtroad","LSandEffects"},{"ausgravroad","LDirtEffects"},{"ausgravroad","LDustEffects"},{"ausgravroad","LStonesEffects"},{"ausgravroad","LSandEffects"}};
+	};
+	class tank: LandVehicle
+	{
+		rightDustEffects[] = {{"aus_desertSurface","RDustEffects"},{"aus_desertSurface","RDirtEffectsBig"},{"aus_desertSurface","RStonesEffectsBig"},{"ausreddesertsurface","RDustEffects"},{"ausreddesertsurface","RDirtEffectsBig"},{"ausreddesertsurface","RStonesEffectsBig"},{"aus_greengrassSurface","RDustEffects"},{"aus_greengrassSurface","RDirtEffectsBig"},{"aus_greengrassSurface","RStonesEffectsBig"},{"aus_tropicalSurface","RStonesEffectsBig"},{"aus_tropicalSurface","RDustEffects"},{"aus_tropicalSurface","RDirtEffectsBig"},{"aus_grassdirtSurface","RStonesEffectsBig"},{"aus_grassdirtSurface","RDustEffects"},{"aus_grassdirtSurface","RDirtEffectsBig"},{"aus_WildFieldsurface","RDustEffects"},{"aus_WildFieldsurface","RDirtEffectsBig"},{"aus_WildFieldsurface","RStonesEffectsBig"},{"aus_stonysurface","RDustEffects"},{"aus_stonysurface","RDirtEffectsBig"},{"aus_stonysurface","RStonesEffectsBig"},{"aus_dryriverbed_surface","RDustEffects"},{"aus_dryriverbed_surface","RDirtEffectsBig"},{"aus_dryriverbed_surface","RStonesEffectsBig"},{"ausdirtroad","RDustEffects"},{"ausdirtroad","RDirtEffectsBig"},{"ausdirtroad","RStonesEffectsBig"},{"ausgravroad","RDustEffects"},{"ausgravroad","RDirtEffectsBig"},{"ausgravroad","RStonesEffectsBig"}};
+		leftDustEffects[] = {{"aus_desertSurface","LDustEffects"},{"aus_desertSurface","LDirtEffectsBig"},{"aus_desertSurface","LStonesEffectsBig"},{"ausreddesertsurface","LDustEffects"},{"ausreddesertsurface","LDirtEffectsBig"},{"ausreddesertsurface","LStonesEffectsBig"},{"aus_greengrassSurface","LDustEffects"},{"aus_greengrassSurface","LDirtEffectsBig"},{"aus_greengrassSurface","LStonesEffectsBig"},{"aus_tropicalSurface","LStonesEffectsBig"},{"aus_tropicalSurface","LDustEffects"},{"aus_tropicalSurface","LDirtEffectsBig"},{"aus_grassdirtSurface","LStonesEffectsBig"},{"aus_grassdirtSurface","LDustEffects"},{"aus_grassdirtSurface","LDirtEffectsBig"},{"aus_WildFieldsurface","LDustEffects"},{"aus_WildFieldsurface","LDirtEffectsBig"},{"aus_WildFieldsurface","LStonesEffectsBig"},{"aus_stonysurface","LDustEffects"},{"aus_stonysurface","LDirtEffectsBig"},{"aus_stonysurface","LStonesEffectsBig"},{"aus_dryriverbed_surface","LDustEffects"},{"aus_dryriverbed_surface","LDirtEffectsBig"},{"aus_dryriverbed_surface","LStonesEffectsBig"},{"ausdirtroad","LDustEffects"},{"ausdirtroad","LDirtEffectsBig"},{"ausdirtroad","LStonesEffectsBig"},{"ausgravroad","LDustEffects"},{"ausgravroad","LDirtEffectsBig"},{"ausgravroad","LStonesEffectsBig"}};
+	};
+	class Air: AllVehicles
+	{
+		rightDustEffects[] = {{"aus_soilsurface","RDustEffectsAir"},{"aus_soilsurface","RGrassDryEffects"},{"aus_soilsurface","RDirtEffects"},{"ausbeachsurface","RDustEffectsAir"},{"ausbeachsurface","RGrassEffects"},{"ausbeachsurface","RDirtEffects"},{"aus_desertSurface","RDirtEffects"},{"aus_desertSurface","RDustEffectsAir"},{"aus_desertSurface","RStonesEffects"},{"ausreddesertsurface","RDustEffectsAir"},{"ausreddesertsurface","RSandEffects"},{"ausreddesertsurface","RDirtEffects"},{"ausreddesertsurface","RStonesEffects"},{"aus_greengrassSurface","RDustEffectsAir"},{"aus_greengrassSurface","RSandEffects"},{"aus_greengrassSurface","RDirtEffects"},{"aus_greengrassSurface","RStonesEffects"},{"aus_tropicalSurface","RDustEffectsAir"},{"aus_tropicalSurface","RSandEffects"},{"aus_tropicalSurface","RDirtEffects"},{"aus_tropicalSurface","RStonesEffects"},{"aus_grassdirtSurface","RDustEffectsAir"},{"aus_grassdirtSurface","RSandEffects"},{"aus_grassdirtSurface","RDirtEffects"},{"aus_grassdirtSurface","RStonesEffects"},{"aus_WildFieldsurface","RDustEffectsAir"},{"aus_WildFieldsurface","RGrassDryEffects"},{"aus_WildFieldsurface","RDirtEffects"},{"aus_stonysurface","RDustEffectsAir"},{"aus_stonysurface","RGrassDryEffects"},{"aus_stonysurface","RDirtEffects"},{"aus_dryriverbed_surface","RDustEffectsAir"},{"aus_dryriverbed_surface","RGrassDryEffects"},{"aus_dryriverbed_surface","RDirtEffects"}};
+		leftDustEffects[] = {{"aus_soilsurface","LDustEffectsAir"},{"aus_soilsurface","LGrassDryEffects"},{"aus_soilsurface","LDirtEffects"},{"ausbeachsurface","LDustEffectsAir"},{"ausbeachsurface","LGrassEffects"},{"ausbeachsurface","LDirtEffects"},{"aus_desertSurface","LDirtEffects"},{"aus_desertSurface","LDustEffectsAir"},{"aus_desertSurface","LStonesEffects"},{"ausreddesertsurface","LDustEffectsAir"},{"ausreddesertsurface","LSandEffects"},{"ausreddesertsurface","LDirtEffects"},{"ausreddesertsurface","LStonesEffects"},{"aus_greengrassSurface","LDustEffectsAir"},{"aus_greengrassSurface","LSandEffects"},{"aus_greengrassSurface","LDirtEffects"},{"aus_greengrassSurface","LStonesEffects"},{"aus_tropicalSurface","LDustEffectsAir"},{"aus_tropicalSurface","LSandEffects"},{"aus_tropicalSurface","LDirtEffects"},{"aus_tropicalSurface","LStonesEffects"},{"aus_grassdirtSurface","LDustEffectsAir"},{"aus_grassdirtSurface","LSandEffects"},{"aus_grassdirtSurface","LDirtEffects"},{"aus_grassdirtSurface","LStonesEffects"},{"aus_WildFieldsurface","LDustEffectsAir"},{"aus_WildFieldsurface","LGrassDryEffects"},{"aus_WildFieldsurface","LDirtEffects"},{"aus_stonysurface","LDustEffectsAir"},{"aus_stonysurface","LGrassDryEffects"},{"aus_stonysurface","LDirtEffects"},{"aus_dryriverbed_surface","LDustEffectsAir"},{"aus_dryriverbed_surface","LGrassDryEffects"},{"aus_dryriverbed_surface","LDirtEffects"}};
+	};
+};
+class CfgWorlds
+{
+	class DefaultLighting;
+	class defaultworld
+	{
+		cutscenes[] = {};
+	};
+	class CAWorld: DefaultWorld
+	{
+		class DefaultClutter;
+		class Sea;
+		class Underwater;
+		class SeaWaterShaderPars;
+		class WaterExPars;
+		class HDRNewPars{};
+		class Lighting: DefaultLighting{};
+		class DayLightingBrightAlmost;
+		class DayLightingRainy;
+		class Weather;
+		class SimulWeather;
+		class EnvMaps;
+		class OutsideTerrain;
+		class Grid
+		{
+			class Zoom1;
+			class Zoom2;
+			class Zoom3;
+		};
+	};
+	class australia: CAWorld
+	{
+		access = 3;
+		worldId = 81;
+		cutscenes[] = {};
+		description = "Australia v5.09";
+		icon = "\australia\data\icons\logo.paa";
+		worldName = "\australia\australia.wrp";
+		pictureMap = "\australia\data\aus_sat.paa";
+		pictureShot = "\australia\data\icons\logo.paa";
+		previewVideo = "\australia\scene\preview.ogv";
+		Author = "Aussie";
+		plateFormat = "AUS-ISLE";
+		plateLetters = "ABCDEGHIKLMNOPRSTVXZ";
+		mapSize = 40960;
+		mapZone = 35;
+		mapArea[] = {25.012,39.7185,25.4815,40.0946};
+		longitude = 17.352;
+		latitude = -35.964;
+		elevationOffset = 0;
+		envTexture = "A3\Data_f\env_land_ca.paa";
+		newRoadsShape = "\australia\data\roads\roads.shp";
+		class Sea
+		{
+			seaTexture = "a3\data_f\seatexture_co.paa";
+			seaMaterial = "#water";
+			shoreMaterial = "#shore";
+			shoreFoamMaterial = "#shorefoam";
+			shoreWetMaterial = "#shorewet";
+			WaterMapScale = 20;
+			WaterGrid = 50;
+			MaxTide = 0;
+			MaxWave = 0.25;
+			SeaWaveXScale = "2.0/50";
+			SeaWaveZScale = "1.0/50";
+			SeaWaveHScale = 1.0;
+			SeaWaveXDuration = 5000;
+			SeaWaveZDuration = 10000;
+		};
+		class Underwater: Underwater
+		{
+			noWaterFog = -0.001;
+			fullWaterFog = 0.001;
+			deepWaterFog = 40;
+			waterFogDistanceNear = 10;
+			waterFogDistance = 5;
+			waterColor[] = {0.04,0.16,0.22};
+			deepWaterColor[] = {0.0,0.001,0.009};
+			surfaceColor[] = {0.04,0.16,0.22};
+			deepSurfaceColor[] = {0.0,0.001,0.009};
+		};
+		class SeaWaterShaderPars: SeaWaterShaderPars{};
+		class WaterExPars: WaterExPars{};
+		class HDRNewPars: HDRNewPars{};
+		class SimulWeather: SimulWeather{};
+		class OutsideTerrain
+		{
+			satellite = "";
+			enableTerrainSynth = 0;
+			class Layers
+			{
+				class Layer0
+				{
+					nopx = "A3\Map_Data\gdt_grass_green_nopx.paa";
+					texture = "A3\Map_Data\gdt_grass_green_co.paa";
+				};
+			};
+			colorOutside[] = {0.294118,0.333333,0.372549,1};
+		};
+		class Grid: Grid
+		{
+			offsetX = 0;
+			offsetY = 40960;
+			class Zoom1
+			{
+				zoomMax = 0.02;
+				format = "XY";
+				formatX = "000";
+				formatY = "000";
+				stepX = 100;
+				stepY = -100;
+			};
+			class Zoom2
+			{
+				zoomMax = 0.95;
+				format = "XY";
+				formatX = "00";
+				formatY = "00";
+				stepX = 1000;
+				stepY = -1000;
+			};
+			class Zoom3
+			{
+				zoomMax = 1e+030;
+				format = "XY";
+				formatX = "0";
+				formatY = "0";
+				stepX = 10000;
+				stepY = -10000;
+			};
+		};
+		startTime = "14:15";
+		startDate = "6/1/2014";
+		startWeather = 0.3;
+		startFog = 0.0;
+		forecastWeather = 0.3;
+		forecastFog = 0.0;
+		centerPosition[] = {20480,20480,550};
+		seagullPos[] = {37825,17087,140};
+		ilsPosition[] = {30483,11243};
+		ilsDirection[] = {0,0.08,-1};
+		ilsTaxiOff[] = {30483,11243,30483,12516,30596,12462,30596,11766,30596,11608};
+		ilsTaxiIn[] = {30596,11608,30596,11297,30487,11221,30560.6,11246.3,30493.8,11272};
+		drawTaxiway = 1;
+		class SecondaryAirports
+		{
+			class ausrunwaysydney
+			{
+				ilsPosition[] = {35316,12380};
+				ilsDirection[] = {-0.754709,0.08,0.756059};
+				ilsTaxiOff[] = {35316,12380,36218,11490,36215,11431,36179,11409,36188,11410,35373,12173};
+				ilsTaxiIn[] = {35373,12173,35186,12352,35172,12401,35240,12429,35295,12405};
+				drawTaxiway = 1;
+			};
+			class ausrunwayadelaide
+			{
+				ilsPosition[] = {24888.6,13053.1};
+				ilsDirection[] = {0.524709,0.08,-0.958059};
+				ilsTaxiOff[] = {24888.6,13053.1,24396,13943,24451,13960,24511,13942,24677,13651};
+				ilsTaxiIn[] = {24677,13651,24960,13141,24927,13076};
+				drawTaxiway = 1;
+			};
+			class ausrunwayBrisbekistan
+			{
+				ilsPosition[] = {37469,20222};
+				ilsDirection[] = {-0.9659,0.08,-0.2588};
+				ilsTaxiOff[] = {37469,20222,38476,20498,38482,20533,38418,20588,38229,20540};
+				ilsTaxiIn[] = {38229,20540,37838,20430,37422,20318,37359,20191};
+				drawTaxiway = 1;
+			};
+			class ausrunwaydarwin
+			{
+				ilsPosition[] = {16428,34117.3};
+				ilsDirection[] = {-0.9563,0.08,0.336};
+				ilsTaxiOff[] = {16428,34117.3,17290.8,33820.3,17323.8,33784.5,17298.3,33710.4,17273.3,33697.7,16637,33916.8};
+				ilsTaxiIn[] = {16637,33916.8,16310.6,34028.7,16295.5,34057.7,16321,34133,16365.8,34139.5};
+				drawTaxiway = 1;
+			};
+			class ausrunwayalice
+			{
+				ilsPosition[] = {21984,24930.7};
+				ilsDirection[] = {-0.866,0.08,0.5};
+				ilsTaxiOff[] = {21984,24930.7,22759,24500.6,22802.5,24506.7,22836.7,24568.4,22822.9,24606.3,22550,24760};
+				ilsTaxiIn[] = {22550,24760,21987.8,25071.8,21940,25059.3,21912,25007,21930,24964};
+				drawTaxiway = 1;
+			};
+			class ausrunwayperth
+			{
+				ilsPosition[] = {6113,17938};
+				ilsDirection[] = {-0.891,0.08,-0.4539};
+				ilsTaxiOff[] = {6113,17938,6746,18261,6913,18344,6892,18238,6795,18196};
+				ilsTaxiIn[] = {6795,18196,6493,18034,6243,17907,6180,17938};
+				drawTaxiway = 1;
+			};
+		};
+		class ReplaceObjects{};
+		class Sounds
+		{
+			sounds[] = {};
+		};
+		class Animation
+		{
+			vehicles[] = {};
+		};
+		class CfgEnvSounds;
+		class EnvSounds: CfgEnvSounds
+		{
+			class Trees
+			{
+				name = "Trees";
+				sound[] = {"australia\data\sounds\allbirds.wss",0.0386567,1};
+				volume = "trees*(1-rain)*(1-night)";
+			};
+			class DayLightingBrightAlmost: DayLightingBrightAlmost
+			{
+				deepNight[] = {-15,{0.005,0.01,0.01},{0.0,0.002,0.003},{0.0,0.0,0.0},{0.0,0.0,0.0},{0.0,0.002,0.003},{0.0,0.002,0.003},0};
+				fullNight[] = {-5,{0.182,0.213,0.25},{0.05,0.111,0.221},{0.04,0.034,0.004},{0.039,0.049,0.072},{0.082,0.128,0.185},{0.283,0.35,0.431},0};
+				sunMoon[] = {-3.75,{0.377,0.441,0.518},{0.103,0.227,0.453},{0.04,0.034,0.004},{0.039,0.049,0.072},{0.174,0.274,0.395},{0.582,0.72,0.887},0.5};
+				earlySun[] = {-2.5,{0.675,0.69,0.784},{0.22,0.322,0.471},{0.04,0.034,0.004},{0.039,0.049,0.072},{0.424,0.549,0.745},{0.698,0.753,0.894},1};
+				sunrise[] = {0,{0.675,0.69,0.784},{0.478,0.51,0.659},{0.2,0.19,0.07},{0.124,0.161,0.236},{{0.847,0.855,0.965},0.2},{{0.933,0.949,0.996},2},1};
+				earlyMorning[] = {3,{{0.844,0.61,0.469},0.8},{0.424,0.557,0.651},{{1,0.45,0.2},1},{0.12,0.26,0.38},{{0.428,0.579,0.743},2},{{0.844,0.61,0.469},2.7},1};
+				midMorning[] = {8,{{0.822,0.75,0.646},3.8},{{0.383,0.58,0.858},1.3},{{1.3,0.9,0.61},2.8},{{0.12,0.18,0.28},0.5},{{0.322,0.478,0.675},3.5},{{1.0,0.929,0.815},4.7},1};
+				morning[] = {16,{{1,0.95,0.91},12.2},{{0.12,0.18,0.28},9.2},{{1,0.95,0.91},11.2},{{0.12,0.18,0.28},8.5},{{0.14,0.18,0.24},11.0},{{0.5,0.6,0.9},13.2},1};
+				noon[] = {45,{{0.98,0.94,0.94},13.8},{{0.2,0.27,0.35},10.8},{{0.98,0.94,0.94},13.8},{{0.2,0.27,0.35},10.8},{{0.5,0.64,1.0},12.0},{{0.5,0.5,0.5},14.8},1,0.5,0.4,0.5,0.4};
+			};
+			class DayLightingRainy: DayLightingRainy
+			{
+				deepNight[] = {-15,{0.005,0.01,0.01},{0.0,0.002,0.003},{0.0,0.0,0.0},{0.0,0.0,0.0},{0.0,0.002,0.003},{0.0,0.002,0.003},0};
+				fullNight[] = {-5,{0.023,0.023,0.023},{0.02,0.02,0.02},{0.023,0.023,0.023},{0.02,0.02,0.02},{0.01,0.01,0.02},{0.08,0.06,0.06},0};
+				sunMoon[] = {-3.75,{0.04,0.04,0.05},{0.04,0.04,0.05},{0.04,0.04,0.05},{0.04,0.04,0.05},{0.04,0.035,0.04},{0.11,0.08,0.09},0.5};
+				earlySun[] = {-2.5,{0.0689,0.0689,0.0804},{0.06,0.06,0.07},{0.0689,0.0689,0.0804},{0.06,0.06,0.07},{0.08,0.07,0.08},{0.14,0.1,0.12},0.5};
+				earlyMorning[] = {3,{{1,1,1},"-4)+3.95"},{{1,1,1},"-4)+3.0"},{{1,1,1},"-4)+3.95"},{{1,1,1},"-4)+3.0"},{{1,1,1},"-4)+4"},{{1,1,1},"-4)+5.5"},1};
+				morning[] = {16,{{1,1,1},"-4)+5.7"},{{1,1,1},"-4)+4.5"},{{1,1,1},"-4)+5.7"},{{1,1,1},"-4)+4.5"},{{1,1,1},"-4)+7"},{{1,1,1},"-4)+8"},1};
+				lateMorning[] = {25,{{1,1,1},"-4)+10.45"},{{1,1,1},"-4)+9.75"},{{1,1,1},"-4)+10.45"},{{1,1,1},"-4)+9.75"},{{1,1,1},"-4)+12"},{{1,1,1},"-4)+12.75"},1};
+				noon[] = {45,{{1,1,1},10.0},{{1,1,1},9.0},{{1,1,1},9.0},{{1,1,1},8.0},{{0.5,0.64,1},12.0},{{0.5,0.5,0.5},14.8},1};
+			};
+			class Weather: Weather
+			{
+				class LightingNew
+				{
+					class Lighting0
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -24;
+						sunOrMoon = 0;
+						diffuse[] = {{0.14,0.19,0.3},4};
+						diffuseCloud[] = {{0.14,0.19,0.3},0.2};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},0.05};
+						ambientMid[] = {{0.1384,0.1912,0.2984},0.88};
+						ambientMidCloud[] = {{0.1384,0.1912,0.2984},0.044};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.04224};
+						bidirect[] = {0.025,0.025,0.023};
+						bidirectCloud[] = {0.0125,0.0125,0.0115};
+						sky[] = {0.231,0.314,0.467};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.09,0.137,0.22},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{0.5,0.65,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting1
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -12;
+						sunOrMoon = 0;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting2
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -11;
+						sunOrMoon = 0.5;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting3
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -10;
+						sunOrMoon = 1;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {{0.2,0.25,0.45},4.73491};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting4
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -5;
+						sunOrMoon = 1;
+						diffuse[] = {{0.16,0.18,0.28},3};
+						diffuseCloud[] = {{0.16,0.18,0.28},3};
+						ambient[] = {{0.173,0.239,0.373},4.6};
+						ambientCloud[] = {{0.173,0.239,0.373},4.6};
+						ambientMid[] = {{0.173,0.239,0.373},4.048};
+						ambientMidCloud[] = {{0.173,0.239,0.373},4.048};
+						groundReflection[] = {{0.173,0.239,0.373},3.88608};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},3.88608};
+						bidirect[] = {0.0115,0.012,0.0125};
+						bidirectCloud[] = {0.0115,0.012,0.0125};
+						sky[] = {{0.2,0.298,0.541},4.6};
+						skyAroundSun[] = {{0.7,0.35,0.28},7.63695};
+						fogColor[] = {{0.106,0.161,0.267},4.715};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting5
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = -2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.25,0.21,0.2},5};
+						diffuseCloud[] = {{0.25,0.21,0.2},5};
+						ambient[] = {{0.196,0.275,0.42},6.9};
+						ambientCloud[] = {{0.196,0.275,0.42},6.9};
+						ambientMid[] = {{0.196,0.275,0.42},6.072};
+						ambientMidCloud[] = {{0.196,0.275,0.42},6.072};
+						groundReflection[] = {{0.196,0.275,0.42},5.82912};
+						groundReflectionCloud[] = {{0.196,0.275,0.42},5.82912};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.188,0.29,0.576},6.9};
+						skyAroundSun[] = {{1.8,0.42,0.2},12.3177};
+						fogColor[] = {{0.11,0.169,0.286},7.0725};
+						apertureMin = 7;
+						apertureStandard = 8;
+						apertureMax = 20;
+						standardAvgLum = 20;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting6
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 0;
+						sunOrMoon = 1;
+						diffuse[] = {{0.75,0.38,0.22},6};
+						diffuseCloud[] = {{0.75,0.38,0.22},6};
+						ambient[] = {{0.2497,0.31,0.467},7.8};
+						ambientCloud[] = {{0.2497,0.31,0.467},7.8};
+						ambientMid[] = {{0.2541,0.314,0.467},6.864};
+						ambientMidCloud[] = {{0.2541,0.314,0.467},6.864};
+						groundReflection[] = {{0.235,0.318,0.467},6.58944};
+						groundReflectionCloud[] = {{0.235,0.318,0.467},6.58944};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.173,0.282,0.612},7.8};
+						skyAroundSun[] = {{2,0.42,0.2},13.3888};
+						fogColor[] = {{0.118,0.18,0.31},7.995};
+						apertureMin = 8;
+						apertureStandard = 9;
+						apertureMax = 22;
+						standardAvgLum = 45;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting7
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.95,0.42,0.22},8.4};
+						diffuseCloud[] = {{0.95,0.42,0.22},8.4};
+						ambient[] = {{0.306,0.357,0.463},8.4};
+						ambientCloud[] = {{0.306,0.357,0.463},8.4};
+						ambientMid[] = {{0.365,0.361,0.396},7.392};
+						ambientMidCloud[] = {{0.365,0.361,0.396},7.392};
+						groundReflection[] = {{0.416,0.38,0.388},7.09632};
+						groundReflectionCloud[] = {{0.416,0.38,0.388},7.09632};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.157,0.275,0.651},8.4};
+						skyAroundSun[] = {{2.2,0.8,0.2},13.3888};
+						fogColor[] = {{0.125,0.192,0.329},8.61};
+						apertureMin = 8;
+						apertureStandard = 10;
+						apertureMax = 24;
+						standardAvgLum = 50;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting8
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 6;
+						sunOrMoon = 1;
+						diffuse[] = {{0.95,0.55,0.35},10.2};
+						diffuseCloud[] = {{0.95,0.55,0.35},10.2};
+						ambient[] = {{0.337,0.404,0.525},9.6};
+						ambientCloud[] = {{0.337,0.404,0.525},9.6};
+						ambientMid[] = {{0.412,0.408,0.443},8.448};
+						ambientMidCloud[] = {{0.412,0.408,0.443},8.448};
+						groundReflection[] = {{0.475,0.435,0.431},8.11008};
+						groundReflectionCloud[] = {{0.475,0.435,0.431},8.11008};
+						bidirect[] = {0.01375,0.0132,0.01265};
+						bidirectCloud[] = {0.01375,0.0132,0.01265};
+						sky[] = {{0.145,0.263,0.686},9.6};
+						skyAroundSun[] = {{0.4,0.32,0.6},13.3888};
+						fogColor[] = {{0.133,0.204,0.357},9.84};
+						apertureMin = 8;
+						apertureStandard = 16;
+						apertureMax = 26;
+						standardAvgLum = 100;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.027,0.045};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting9
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 12;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.65,0.45},12.3};
+						diffuseCloud[] = {{1,0.65,0.45},12.3};
+						ambient[] = {{0.388,0.471,0.612},10.9};
+						ambientCloud[] = {{0.388,0.471,0.612},10.9};
+						ambientMid[] = {{0.482,0.475,0.506},9.81};
+						ambientMidCloud[] = {{0.482,0.475,0.506},9.81};
+						groundReflection[] = {{0.557,0.51,0.494},9.4176};
+						groundReflectionCloud[] = {{0.557,0.51,0.494},9.4176};
+						bidirect[] = {0.01875,0.018,0.01725};
+						bidirectCloud[] = {0.01875,0.018,0.01725};
+						sky[] = {{0.129,0.259,0.722},10.9};
+						skyAroundSun[] = {{0.13,0.25,0.8},13.524};
+						fogColor[] = {{0.145,0.224,0.396},11.1725};
+						apertureMin = 20;
+						apertureStandard = 25;
+						apertureMax = 35;
+						standardAvgLum = 250;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.018,0.04};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},12.24};
+						swBrightness = 1;
+					};
+					class Lighting10
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 24;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.75,0.62},15.8};
+						diffuseCloud[] = {{1,0.75,0.62},15.8};
+						ambient[] = {{0.435,0.533,0.698},13.8};
+						ambientCloud[] = {{0.435,0.533,0.698},13.8};
+						ambientMid[] = {{0.545,0.541,0.569},12.696};
+						ambientMidCloud[] = {{0.545,0.541,0.569},12.696};
+						groundReflection[] = {{0.635,0.58,0.557},12.1882};
+						groundReflectionCloud[] = {{0.635,0.58,0.557},12.1882};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.118,0.251,0.753},13.8};
+						skyAroundSun[] = {{0.115,0.245,0.8},13.662};
+						fogColor[] = {{0.15,0.251,0.488},14.145};
+						apertureMin = 45;
+						apertureStandard = 60;
+						apertureMax = 80;
+						standardAvgLum = 800;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.4};
+						swBrightness = 1;
+					};
+					class Lighting11
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 45;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.87,0.85},17.2};
+						diffuseCloud[] = {{1,0.87,0.85},17.2};
+						ambient[] = {{0.498,0.602,0.77},14.8};
+						ambientCloud[] = {{0.498,0.602,0.77},14.8};
+						ambientMid[] = {{0.635,0.635,0.663},14.504};
+						ambientMidCloud[] = {{0.635,0.635,0.663},14.504};
+						groundReflection[] = {{0.745,0.671,0.643},14.2139};
+						groundReflectionCloud[] = {{0.745,0.671,0.643},14.2139};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.3,0.44,0.74},15};
+						apertureMin = 70;
+						apertureStandard = 120;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting12
+					{
+						height = 0;
+						overcast = 0.25;
+						sunAngle = 90;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.87,0.85},17.2};
+						diffuseCloud[] = {{1,0.87,0.85},17.2};
+						ambient[] = {{0.498,0.602,0.77},14.8};
+						ambientCloud[] = {{0.498,0.602,0.77},14.8};
+						ambientMid[] = {{0.635,0.635,0.663},14.504};
+						ambientMidCloud[] = {{0.635,0.635,0.663},14.504};
+						groundReflection[] = {{0.745,0.671,0.643},14.2139};
+						groundReflectionCloud[] = {{0.745,0.671,0.643},14.2139};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.3,0.44,0.74},15};
+						apertureMin = 70;
+						apertureStandard = 120;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting13
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -24;
+						sunOrMoon = 0;
+						diffuse[] = {{0.14,0.19,0.3},4};
+						diffuseCloud[] = {{0.14,0.19,0.3},3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.1384,0.1912,0.2984},0.88};
+						ambientMidCloud[] = {{0.1384,0.1912,0.2984},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0.025,0.025,0.023};
+						bidirectCloud[] = {0.0245,0.0245,0.02254};
+						sky[] = {0.231,0.314,0.467};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.09,0.137,0.22},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{0.5,0.65,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting14
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -12;
+						sunOrMoon = 0;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting15
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -11;
+						sunOrMoon = 0.5;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting16
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -10;
+						sunOrMoon = 1;
+						diffuse[] = {0.1,0.18,0.3};
+						diffuseCloud[] = {0.1,0.18,0.3};
+						ambient[] = {{0.173,0.239,0.373},1};
+						ambientCloud[] = {{0.173,0.239,0.373},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.88};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.88};
+						groundReflection[] = {{0.173,0.239,0.373},0.8448};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},0.8448};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {{0.2,0.25,0.45},4.73491};
+						fogColor[] = {{0.094,0.141,0.231},0.025};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting17
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -5;
+						sunOrMoon = 1;
+						diffuse[] = {{0.16,0.18,0.28},2.25};
+						diffuseCloud[] = {{0.16,0.18,0.28},1.6875};
+						ambient[] = {{0.173,0.239,0.373},4.6};
+						ambientCloud[] = {{0.173,0.239,0.373},4.6};
+						ambientMid[] = {{0.173,0.239,0.373},4.048};
+						ambientMidCloud[] = {{0.173,0.239,0.373},4.048};
+						groundReflection[] = {{0.173,0.239,0.373},3.88608};
+						groundReflectionCloud[] = {{0.173,0.239,0.373},3.88608};
+						bidirect[] = {0.0115,0.012,0.0125};
+						bidirectCloud[] = {0.01127,0.01176,0.01225};
+						sky[] = {{0.2,0.298,0.541},4.6};
+						skyAroundSun[] = {{0.7,0.35,0.28},7.63695};
+						fogColor[] = {{0.106,0.161,0.267},4.715};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting18
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = -2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.25,0.21,0.2},3.75};
+						diffuseCloud[] = {{0.25,0.21,0.2},2.8125};
+						ambient[] = {{0.196,0.275,0.42},6.9};
+						ambientCloud[] = {{0.196,0.275,0.42},6.9};
+						ambientMid[] = {{0.196,0.275,0.42},6.072};
+						ambientMidCloud[] = {{0.196,0.275,0.42},6.072};
+						groundReflection[] = {{0.196,0.275,0.42},5.82912};
+						groundReflectionCloud[] = {{0.196,0.275,0.42},5.82912};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.188,0.29,0.576},6.9};
+						skyAroundSun[] = {{1.8,0.42,0.2},12.3177};
+						fogColor[] = {{0.11,0.169,0.286},7.0725};
+						apertureMin = 7;
+						apertureStandard = 8;
+						apertureMax = 20;
+						standardAvgLum = 20;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting19
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 0;
+						sunOrMoon = 1;
+						diffuse[] = {{0.75,0.38,0.22},4.5};
+						diffuseCloud[] = {{0.75,0.38,0.22},3.375};
+						ambient[] = {{0.2497,0.31,0.467},7.8};
+						ambientCloud[] = {{0.2497,0.31,0.467},7.8};
+						ambientMid[] = {{0.2541,0.314,0.467},6.864};
+						ambientMidCloud[] = {{0.2541,0.314,0.467},6.864};
+						groundReflection[] = {{0.235,0.318,0.467},6.58944};
+						groundReflectionCloud[] = {{0.235,0.318,0.467},6.58944};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.173,0.282,0.612},7.8};
+						skyAroundSun[] = {{2,0.42,0.2},13.3888};
+						fogColor[] = {{0.118,0.18,0.31},7.995};
+						apertureMin = 8;
+						apertureStandard = 9;
+						apertureMax = 22;
+						standardAvgLum = 45;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting20
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.95,0.42,0.22},6.72};
+						diffuseCloud[] = {{0.95,0.42,0.22},5.04};
+						ambient[] = {{0.306,0.357,0.463},8.4};
+						ambientCloud[] = {{0.306,0.357,0.463},8.4};
+						ambientMid[] = {{0.365,0.361,0.396},7.392};
+						ambientMidCloud[] = {{0.365,0.361,0.396},7.392};
+						groundReflection[] = {{0.416,0.38,0.388},7.09632};
+						groundReflectionCloud[] = {{0.416,0.38,0.388},7.09632};
+						bidirect[] = {0.023,0.024,0.025};
+						bidirectCloud[] = {0.023,0.024,0.025};
+						sky[] = {{0.157,0.275,0.651},8.4};
+						skyAroundSun[] = {{2.2,0.8,0.2},13.3888};
+						fogColor[] = {{0.125,0.192,0.329},8.61};
+						apertureMin = 8;
+						apertureStandard = 10;
+						apertureMax = 24;
+						standardAvgLum = 50;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting21
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 6;
+						sunOrMoon = 1;
+						diffuse[] = {{0.95,0.55,0.35},10.2};
+						diffuseCloud[] = {{0.95,0.55,0.35},7.65};
+						ambient[] = {{0.337,0.404,0.525},9.6};
+						ambientCloud[] = {{0.337,0.404,0.525},9.6};
+						ambientMid[] = {{0.412,0.408,0.443},8.448};
+						ambientMidCloud[] = {{0.412,0.408,0.443},8.448};
+						groundReflection[] = {{0.475,0.435,0.431},8.11008};
+						groundReflectionCloud[] = {{0.475,0.435,0.431},8.11008};
+						bidirect[] = {0.01375,0.0132,0.01265};
+						bidirectCloud[] = {0.01375,0.0132,0.01265};
+						sky[] = {{0.145,0.263,0.686},9.6};
+						skyAroundSun[] = {{0.4,0.32,0.6},13.3888};
+						fogColor[] = {{0.133,0.204,0.357},9.84};
+						apertureMin = 8;
+						apertureStandard = 16;
+						apertureMax = 26;
+						standardAvgLum = 100;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.027,0.045};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting22
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 12;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.65,0.45},12.3};
+						diffuseCloud[] = {{1,0.65,0.45},9.225};
+						ambient[] = {{0.388,0.471,0.612},10.9};
+						ambientCloud[] = {{0.388,0.471,0.612},10.9};
+						ambientMid[] = {{0.482,0.475,0.506},9.81};
+						ambientMidCloud[] = {{0.482,0.475,0.506},9.81};
+						groundReflection[] = {{0.557,0.51,0.494},9.4176};
+						groundReflectionCloud[] = {{0.557,0.51,0.494},9.4176};
+						bidirect[] = {0.01875,0.018,0.01725};
+						bidirectCloud[] = {0.01875,0.018,0.01725};
+						sky[] = {{0.129,0.259,0.722},10.9};
+						skyAroundSun[] = {{0.13,0.25,0.8},13.524};
+						fogColor[] = {{0.145,0.224,0.396},11.1725};
+						apertureMin = 20;
+						apertureStandard = 25;
+						apertureMax = 35;
+						standardAvgLum = 250;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.018,0.04};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},12.24};
+						swBrightness = 1;
+					};
+					class Lighting23
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 24;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.75,0.62},15.8};
+						diffuseCloud[] = {{1,0.75,0.62},11.85};
+						ambient[] = {{0.435,0.533,0.698},13.8};
+						ambientCloud[] = {{0.435,0.533,0.698},13.8};
+						ambientMid[] = {{0.545,0.541,0.569},12.696};
+						ambientMidCloud[] = {{0.545,0.541,0.569},12.696};
+						groundReflection[] = {{0.635,0.58,0.557},12.1882};
+						groundReflectionCloud[] = {{0.635,0.58,0.557},12.1882};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.118,0.251,0.753},13.8};
+						skyAroundSun[] = {{0.115,0.245,0.8},13.662};
+						fogColor[] = {{0.15,0.251,0.488},14.145};
+						apertureMin = 45;
+						apertureStandard = 60;
+						apertureMax = 80;
+						standardAvgLum = 800;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.4};
+						swBrightness = 1;
+					};
+					class Lighting24
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 45;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.87,0.85},17};
+						diffuseCloud[] = {{1,0.87,0.85},12.75};
+						ambient[] = {{0.498,0.602,0.77},14.8};
+						ambientCloud[] = {{0.498,0.602,0.77},14.8};
+						ambientMid[] = {{0.635,0.635,0.663},13.616};
+						ambientMidCloud[] = {{0.635,0.635,0.663},13.616};
+						groundReflection[] = {{0.745,0.671,0.643},14.2139};
+						groundReflectionCloud[] = {{0.745,0.671,0.643},14.2139};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.3,0.44,0.74},13.9564};
+						apertureMin = 70;
+						apertureStandard = 120;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting25
+					{
+						height = 0;
+						overcast = 0.6;
+						sunAngle = 90;
+						sunOrMoon = 1;
+						diffuse[] = {{1,0.87,0.85},17};
+						diffuseCloud[] = {{1,0.87,0.85},13.94};
+						ambient[] = {{0.498,0.602,0.77},14.8};
+						ambientCloud[] = {{0.498,0.602,0.77},14.8};
+						ambientMid[] = {{0.635,0.635,0.663},14.504};
+						ambientMidCloud[] = {{0.635,0.635,0.663},14.504};
+						groundReflection[] = {{0.745,0.671,0.643},14.2139};
+						groundReflectionCloud[] = {{0.745,0.671,0.643},14.2139};
+						bidirect[] = {0.025,0.024,0.018};
+						bidirectCloud[] = {0.025,0.024,0.018};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.3,0.44,0.74},15};
+						apertureMin = 70;
+						apertureStandard = 120;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting26
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -24;
+						sunOrMoon = 0;
+						diffuse[] = {{0.09,0.137,0.22},1};
+						diffuseCloud[] = {{0,0,0},0.75};
+						ambient[] = {{0.09,0.137,0.22},1};
+						ambientCloud[] = {{0.09,0.137,0.22},1};
+						ambientMid[] = {{0.09,0.137,0.22},0.8624};
+						ambientMidCloud[] = {{0.09,0.137,0.22},0.8624};
+						groundReflection[] = {{0.09,0.137,0.22},0.758912};
+						groundReflectionCloud[] = {{0.09,0.137,0.22},0.758912};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {0.231,0.314,0.467};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {0.09,0.137,0.22};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting27
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -12;
+						sunOrMoon = 0;
+						diffuse[] = {0.16954,0.239,0.37673};
+						diffuseCloud[] = {0.042385,0.05975,0.094183};
+						ambient[] = {{0.16954,0.239,0.37673},1};
+						ambientCloud[] = {{0.16954,0.239,0.37673},1};
+						ambientMid[] = {{0.173,0.239,0.373},0.8624};
+						ambientMidCloud[] = {{0.173,0.239,0.373},0.8624};
+						groundReflection[] = {{0.14705,0.20315,0.31705},0.758912};
+						groundReflectionCloud[] = {{0.14705,0.20315,0.31705},0.758912};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {0.122,0.169,0.255};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting28
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -11;
+						sunOrMoon = 0.5;
+						diffuse[] = {0.129,0.18,0.271};
+						diffuseCloud[] = {0.03225,0.045,0.06775};
+						ambient[] = {{0.129,0.18,0.271},1};
+						ambientCloud[] = {{0.129,0.18,0.271},1};
+						ambientMid[] = {{0.129,0.184,0.267},0.8624};
+						ambientMidCloud[] = {{0.129,0.184,0.267},0.8624};
+						groundReflection[] = {{0.125,0.176,0.263},0.758912};
+						groundReflectionCloud[] = {{0.125,0.176,0.263},0.758912};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {0.2,0.25,0.45};
+						fogColor[] = {0.122,0.169,0.255};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting29
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -10;
+						sunOrMoon = 1;
+						diffuse[] = {0.129,0.18,0.271};
+						diffuseCloud[] = {0.03225,0.045,0.06775};
+						ambient[] = {{0.129,0.18,0.271},1};
+						ambientCloud[] = {{0.129,0.18,0.271},1};
+						ambientMid[] = {{0.129,0.184,0.267},0.8624};
+						ambientMidCloud[] = {{0.129,0.184,0.267},0.8624};
+						groundReflection[] = {{0.125,0.176,0.263},0.758912};
+						groundReflectionCloud[] = {{0.125,0.176,0.263},0.758912};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.212,0.302,0.51},1};
+						skyAroundSun[] = {{0.2,0.25,0.45},4.73491};
+						fogColor[] = {0.122,0.169,0.255};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting30
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -5;
+						sunOrMoon = 1;
+						diffuse[] = {{0.157,0.212,0.306},0.5625};
+						diffuseCloud[] = {{0.03925,0.053,0.0765},0.39375};
+						ambient[] = {{0.157,0.212,0.306},3.22};
+						ambientCloud[] = {{0.157,0.212,0.306},3.22};
+						ambientMid[] = {{0.157,0.208,0.298},3.96704};
+						ambientMidCloud[] = {{0.157,0.208,0.298},3.96704};
+						groundReflection[] = {{0.149,0.204,0.29},3.64968};
+						groundReflectionCloud[] = {{0.149,0.204,0.29},3.64968};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.2,0.298,0.541},4.6};
+						skyAroundSun[] = {{0.7,0.35,0.28},7.63695};
+						fogColor[] = {{0.141,0.192,0.282},3.96704};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting31
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = -2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.184,0.247,0.341},0.9375};
+						diffuseCloud[] = {{0.046,0.06175,0.08525},0.65625};
+						ambient[] = {{0.184,0.247,0.341},6.9};
+						ambientCloud[] = {{0.184,0.247,0.341},6.9};
+						ambientMid[] = {{0.184,0.243,0.329},5.95056};
+						ambientMidCloud[] = {{0.184,0.243,0.329},5.95056};
+						groundReflection[] = {{0.176,0.231,0.322},5.59353};
+						groundReflectionCloud[] = {{0.176,0.231,0.322},5.59353};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.188,0.29,0.576},6.9};
+						skyAroundSun[] = {{1.8,0.42,0.2},12.3177};
+						fogColor[] = {{0.165,0.22,0.31},5.95056};
+						apertureMin = 7;
+						apertureStandard = 7;
+						apertureMax = 20;
+						standardAvgLum = 20;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting32
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 0;
+						sunOrMoon = 1;
+						diffuse[] = {{0.216,0.286,0.384},1.125};
+						diffuseCloud[] = {{0.054,0.0715,0.096},0.7875};
+						ambient[] = {{0.216,0.286,0.384},7.8};
+						ambientCloud[] = {{0.216,0.286,0.384},7.8};
+						ambientMid[] = {{0.22,0.278,0.365},6.72672};
+						ambientMidCloud[] = {{0.22,0.278,0.365},6.72672};
+						groundReflection[] = {{0.204,0.267,0.353},6.45765};
+						groundReflectionCloud[] = {{0.204,0.267,0.353},6.45765};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.173,0.282,0.612},7.8};
+						skyAroundSun[] = {{2,0.42,0.2},13.3888};
+						fogColor[] = {{0.188,0.247,0.341},6.72672};
+						apertureMin = 8;
+						apertureStandard = 8;
+						apertureMax = 22;
+						standardAvgLum = 45;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting33
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.255,0.325,0.42},1.68};
+						diffuseCloud[] = {{0.06375,0.08125,0.105},1.176};
+						ambient[] = {{0.255,0.325,0.42},8.4};
+						ambientCloud[] = {{0.255,0.325,0.42},8.4};
+						ambientMid[] = {{0.259,0.314,0.396},7.24416};
+						ambientMidCloud[] = {{0.259,0.314,0.396},7.24416};
+						groundReflection[] = {{0.239,0.294,0.376},7.09928};
+						groundReflectionCloud[] = {{0.239,0.294,0.376},7.09928};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.157,0.275,0.651},8.4};
+						skyAroundSun[] = {{2.2,0.8,0.2},13.3888};
+						fogColor[] = {{0.216,0.275,0.373},7.24416};
+						apertureMin = 8;
+						apertureStandard = 8;
+						apertureMax = 24;
+						standardAvgLum = 50;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting34
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 6;
+						sunOrMoon = 1;
+						diffuse[] = {{0.298,0.365,0.451},2.55};
+						diffuseCloud[] = {{0.0745,0.09125,0.11275},1.785};
+						ambient[] = {{0.298,0.365,0.451},9.6};
+						ambientCloud[] = {{0.298,0.365,0.451},9.6};
+						ambientMid[] = {{0.302,0.349,0.416},8.27904};
+						ambientMidCloud[] = {{0.302,0.349,0.416},8.27904};
+						groundReflection[] = {{0.275,0.318,0.384},8.11346};
+						groundReflectionCloud[] = {{0.275,0.318,0.384},8.11346};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.145,0.263,0.686},9.6};
+						skyAroundSun[] = {{0.4,0.32,0.6},13.3888};
+						fogColor[] = {{0.243,0.306,0.408},8.27904};
+						apertureMin = 8;
+						apertureStandard = 14;
+						apertureMax = 26;
+						standardAvgLum = 100;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.027,0.045};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting35
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 12;
+						sunOrMoon = 1;
+						diffuse[] = {{0.376,0.431,0.506},3.075};
+						diffuseCloud[] = {{0.094,0.10775,0.1265},2.1525};
+						ambient[] = {{0.376,0.431,0.506},10.9};
+						ambientCloud[] = {{0.376,0.431,0.506},10.9};
+						ambientMid[] = {{0.38,0.408,0.447},9.6138};
+						ambientMidCloud[] = {{0.38,0.408,0.447},9.6138};
+						groundReflection[] = {{0.329,0.361,0.396},9.42152};
+						groundReflectionCloud[] = {{0.329,0.361,0.396},9.42152};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.129,0.259,0.722},10.9};
+						skyAroundSun[] = {{0.13,0.25,0.8},13.524};
+						fogColor[] = {{0.286,0.353,0.463},9.6138};
+						apertureMin = 20;
+						apertureStandard = 22;
+						apertureMax = 35;
+						standardAvgLum = 250;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.018,0.04};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},12.24};
+						swBrightness = 1;
+					};
+					class Lighting36
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 24;
+						sunOrMoon = 1;
+						diffuse[] = {{0.447,0.494,0.557},3.95};
+						diffuseCloud[] = {{0,0,0},2.765};
+						ambient[] = {{0.447,0.494,0.557},13.8};
+						ambientCloud[] = {{0.447,0.494,0.557},13.8};
+						ambientMid[] = {{0.455,0.467,0.475},12.4421};
+						ambientMidCloud[] = {{0.455,0.467,0.475},12.4421};
+						groundReflection[] = {{0.388,0.396,0.408},12.1932};
+						groundReflectionCloud[] = {{0.388,0.396,0.408},12.1932};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.118,0.251,0.753},13.8};
+						skyAroundSun[] = {{0.115,0.245,0.8},13.662};
+						fogColor[] = {{0.333,0.404,0.518},12.4421};
+						apertureMin = 45;
+						apertureStandard = 50;
+						apertureMax = 80;
+						standardAvgLum = 800;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.4};
+						swBrightness = 1;
+					};
+					class Lighting37
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 45;
+						sunOrMoon = 1;
+						diffuse[] = {{0.506,0.553,0.608},4.25};
+						diffuseCloud[] = {0.1265,0.13825,0.152};
+						ambient[] = {{0.506,0.553,0.608},14.8};
+						ambientCloud[] = {{0.506,0.553,0.608},14.8};
+						ambientMid[] = {{0.514,0.518,0.514},13.3437};
+						ambientMidCloud[] = {{0.514,0.518,0.514},13.3437};
+						groundReflection[] = {{0.435,0.439,0.439},13.0768};
+						groundReflectionCloud[] = {{0.435,0.439,0.439},13.0768};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.369,0.447,0.565},13.3437};
+						apertureMin = 70;
+						apertureStandard = 100;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting38
+					{
+						height = 0;
+						overcast = 0.85;
+						sunAngle = 90;
+						sunOrMoon = 1;
+						diffuse[] = {{0.549,0.596,0.651},4.25};
+						diffuseCloud[] = {0.13725,0.149,0.16275};
+						ambient[] = {{0.549,0.596,0.651},14.8};
+						ambientCloud[] = {{0.549,0.596,0.651},14.8};
+						ambientMid[] = {{0.557,0.557,0.585},14.2139};
+						ambientMidCloud[] = {{0.557,0.557,0.585},14.2139};
+						groundReflection[] = {{0.471,0.471,0.463},13.9296};
+						groundReflectionCloud[] = {{0.471,0.471,0.463},13.9296};
+						bidirect[] = {0.0117,0.0117,0.0117};
+						bidirectCloud[] = {0.0117,0.0117,0.0117};
+						sky[] = {{0.02,0.12,0.8},13.8};
+						skyAroundSun[] = {{0.02,0.12,0.8},13.8};
+						fogColor[] = {{0.4,0.48,0.6},15};
+						apertureMin = 70;
+						apertureStandard = 110;
+						apertureMax = 120;
+						standardAvgLum = 8000;
+						desiredLuminanceCoef = 1;
+						desiredLuminanceCoefCloud = 1;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 0.5;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting39
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = -24;
+						sunOrMoon = 0;
+						diffuse[] = {{0.6,0.8,1},2.8};
+						diffuseCloud[] = {{0.6,0.8,1},2.8};
+						ambient[] = {{0.4,0.9,1},0.84};
+						ambientCloud[] = {{0.4,0.9,1},0.84};
+						ambientMid[] = {{0.24,0.63,1},0.9072};
+						ambientMidCloud[] = {{0.24,0.63,1},0.9072};
+						groundReflection[] = {{0.24,0.63,1},0.870912};
+						groundReflectionCloud[] = {{0.24,0.63,1},0.870912};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {0,0.2355,0.2335};
+						skyAroundSun[] = {0,0.2355,0.2335};
+						fogColor[] = {{0.09,0.137,0.22},0.0275};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting40
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = -5;
+						sunOrMoon = 1;
+						diffuse[] = {{0.6,0.8,1},2.1};
+						diffuseCloud[] = {{0.6,0.8,1},2.1};
+						ambient[] = {{0.4,0.9,1},3.68};
+						ambientCloud[] = {{0.4,0.9,1},3.68};
+						ambientMid[] = {{0.24,0.63,1},3.9744};
+						ambientMidCloud[] = {{0.24,0.63,1},3.9744};
+						groundReflection[] = {{0.24,0.63,1},3.81542};
+						groundReflectionCloud[] = {{0.24,0.63,1},3.81542};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0,0.2235,0.2705},4.232};
+						skyAroundSun[] = {{0,0.2235,0.2705},7.63695};
+						fogColor[] = {{0.106,0.161,0.267},4.715};
+						apertureMin = 6;
+						apertureStandard = 6;
+						apertureMax = 18;
+						standardAvgLum = 4;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting41
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = -2;
+						sunOrMoon = 1;
+						diffuse[] = {{0.6,0.8,1},3.5};
+						diffuseCloud[] = {{0.6,0.8,1},3.5};
+						ambient[] = {{0.4,0.9,1},5.52};
+						ambientCloud[] = {{0.4,0.9,1},5.52};
+						ambientMid[] = {{0.24,0.63,1},5.9616};
+						ambientMidCloud[] = {{0.24,0.63,1},5.9616};
+						groundReflection[] = {{0.24,0.63,1},5.72314};
+						groundReflectionCloud[] = {{0.24,0.63,1},5.72314};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0,0.2175,0.288},6.348};
+						skyAroundSun[] = {{0,0.2175,0.288},12.3177};
+						fogColor[] = {{0.11,0.169,0.286},7.0725};
+						apertureMin = 7;
+						apertureStandard = 8;
+						apertureMax = 20;
+						standardAvgLum = 20;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting42
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = 0;
+						sunOrMoon = 1;
+						diffuse[] = {{0.6,0.8,1},4.2};
+						diffuseCloud[] = {{0.6,0.8,1},4.2};
+						ambient[] = {{0.4,0.9,1},6.24};
+						ambientCloud[] = {{0.4,0.9,1},6.24};
+						ambientMid[] = {{0.24,0.63,1},6.7392};
+						ambientMidCloud[] = {{0.24,0.63,1},6.7392};
+						groundReflection[] = {{0.24,0.63,1},6.46963};
+						groundReflectionCloud[] = {{0.24,0.63,1},6.46963};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0,0.2115,0.306},7.176};
+						skyAroundSun[] = {{0,0.2115,0.306},13.3888};
+						fogColor[] = {{0.118,0.18,0.31},7.995};
+						apertureMin = 8;
+						apertureStandard = 9;
+						apertureMax = 22;
+						standardAvgLum = 45;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.038,0.0675};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},11.016};
+						swBrightness = 1;
+					};
+					class Lighting43
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = 45;
+						sunOrMoon = 1;
+						diffuse[] = {{0.6,0.8,1},12.04};
+						diffuseCloud[] = {{0.6,0.8,1},12.04};
+						ambient[] = {{0.4,0.9,1},11.84};
+						ambientCloud[] = {{0.4,0.9,1},11.84};
+						ambientMid[] = {{0.36,0.72,1},11.4848};
+						ambientMidCloud[] = {{0.36,0.72,1},11.4848};
+						groundReflection[] = {{0.36,0.72,1},11.0254};
+						groundReflectionCloud[] = {{0.36,0.72,1},11.0254};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0,0.09,0.4},13.8};
+						skyAroundSun[] = {{0,0.09,0.4},13.8};
+						fogColor[] = {{0.3,0.44,0.74},16.5};
+						apertureMin = 12;
+						apertureStandard = 18;
+						apertureMax = 25;
+						standardAvgLum = 150;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+					class Lighting44
+					{
+						height = -0.1;
+						overcast = 0.8;
+						sunAngle = 90;
+						sunOrMoon = 1;
+						diffuse[] = {{0.6,0.8,1},12.04};
+						diffuseCloud[] = {{0.6,0.8,1},12.04};
+						ambient[] = {{0.4,0.9,1},11.84};
+						ambientCloud[] = {{0.4,0.9,1},11.84};
+						ambientMid[] = {{0.36,0.72,1},11.4848};
+						ambientMidCloud[] = {{0.36,0.72,1},11.4848};
+						groundReflection[] = {{0.36,0.72,1},11.0254};
+						groundReflectionCloud[] = {{0.36,0.72,1},11.0254};
+						bidirect[] = {0,0,0};
+						bidirectCloud[] = {0,0,0};
+						sky[] = {{0,0.09,0.4},13.8};
+						skyAroundSun[] = {{0,0.09,0.4},13.8};
+						fogColor[] = {{0.3,0.44,0.74},16.5};
+						apertureMin = 12;
+						apertureStandard = 18;
+						apertureMax = 25;
+						standardAvgLum = 150;
+						desiredLuminanceCoef = 0;
+						desiredLuminanceCoefCloud = 0;
+						luminanceRectCoef = 1;
+						luminanceRectCoefCloud = 1;
+						rayleigh[] = {0.007,0.01388,0.035};
+						mie[] = {0.005,0.005,0.005};
+						cloudsColor[] = {{1,1,1},14.8};
+						swBrightness = 1;
+					};
+				};
+			};
+			class Default
+			{
+				name = "$STR_CFG_ENVSOUNDS_DEFAULT";
+				sound[] = {"$DEFAULT$",0,1};
+				soundNight[] = {"$DEFAULT$",0,1};
+			};
+			class Rain
+			{
+				name = "$STR_DN_RAIN";
+				sound[] = {"A3\sounds_f\ambient\rain\rain_new_1",0.25118864,1,200};
+				soundNight[] = {"A3\sounds_f\ambient\rain\rain_new_2",0.31622776,1,200};
+			};
+			class Sea
+			{
+				name = "$STR_DN_SEA";
+				sound[] = {"A3\sounds_f\ambient\waves\sea-1-sand-beach-stereo",0.08912509,1,200};
+				soundNight[] = {"A3\sounds_f\ambient\waves\sea-1-sand-beach-stereo",0.070794575,1,200};
+				volume = "sea*(1-coast)";
+			};
+			class Coast
+			{
+				name = "$STR_A3_CfgEnvSounds_Coast0";
+				sound[] = {"A3\sounds_f\ambient\waves\beach_sand_small_waves1",0.08912509,1,200};
+				soundNight[] = {"A3\sounds_f\ambient\waves\beach_sand_small_waves1",0.05623413,1,200};
+				volume = "coast";
+			};
+			class WindSlow
+			{
+				name = "$STR_A3_CfgEnvSounds_WindSlow0";
+				sound[] = {"A3\sounds_f\ambient\winds\wind-synth-slow",0.019952621,1};
+				volume = "((windy factor[0,0.25])*(windy factor[0.5, 0.25]))-(night*0.25)";
+			};
+			class WindMedium
+			{
+				name = "$STR_A3_CfgEnvSounds_WindMedium0";
+				sound[] = {"A3\sounds_f\ambient\winds\wind-synth-middle",0.025118863,1};
+				volume = "((windy factor[0.33,0.5])*(windy factor[0.8, 0.5]))-(night*0.25)";
+			};
+			class WindFast
+			{
+				name = "$STR_A3_CfgEnvSounds_WindFast0";
+				sound[] = {"A3\sounds_f\ambient\winds\wind-synth-fast",0.031622775,1};
+				volume = "(windy factor[0.66,1])-(night*0.25)";
+			};
+			class Forest
+			{
+				name = "$STR_A3_CfgEnvSounds_Forest0";
+				sound[] = {"A3\Sounds_F\environment\ambient\day_insects_winds5",0.017782792,1};
+				volume = "forest*trees*(1-night)";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.099999994,12,100,0.1,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.099999994,12,100,0.1,10,35,60};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.099999994,12,100,0.1,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.099999994,12,100,0.1,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_5",0.05623413,1,100,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_9",0.05623413,1,80,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\fly_3",0.031622775,1,20,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,40,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,50,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class ForestNight
+			{
+				name = "$STR_A3_CfgEnvSounds_ForestNight0";
+				sound[] = {"A3\Sounds_F\environment\ambient\night_insects_birds_winds4",0.011220184,1};
+				volume = "forest*trees*night";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.099999994,1,100,0.12,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.099999994,1,100,0.12,10,35,60};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.099999994,1,100,0.12,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.099999994,1,100,0.12,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_night_6",0.05623413,1,100,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_night_2",0.031622775,1,70,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\fly_3",0.05623413,1,10,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,40,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,30,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class Houses
+			{
+				name = "$STR_A3_CfgEnvSounds_Houses0";
+				sound[] = {"A3\Sounds_F\environment\ambient\day_insects_winds4",0.01584893,1};
+				volume = "(houses-0.75)*4";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.099999994,1,100,0.12,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.099999994,1,100,0.12,10,35,60};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.099999994,1,100,0.12,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.099999994,1,100,0.12,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_7",0.05623413,1,100,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_8",0.031622775,1,100,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\fly_4",0.05623413,1,15,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,20,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,25,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class HousesNight
+			{
+				name = "$STR_A3_CfgEnvSounds_HousesNight0";
+				sound[] = {"A3\Sounds_F\environment\ambient\night_insects_birds_nowinds2",0.014125374,1};
+				volume = "(houses-0.75)*4*night";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.099999994,1,100,0.12,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.099999994,1,100,0.12,10,35,60};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.099999994,1,100,0.12,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.099999994,1,100,0.12,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_night_2",0.05623413,1,80,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_night_5",0.031622775,1,80,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\insect_2",0.05623413,1,15,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,15,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,30,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class Meadows
+			{
+				name = "$STR_A3_CfgEnvSounds_Meadows0";
+				sound[] = {"A3\Sounds_F\environment\ambient\day_insects_winds5",0.01584893,1};
+				volume = "(1-forest)*(1-houses)*(1-night)*(1-sea)";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.06309573,1,70,0.12,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.06309573,1,100,0.12,15,25,30};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.06309573,1,100,0.12,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.06309573,1,100,0.12,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_7",0.05623413,1,100,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_8",0.031622775,1,100,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\fly_4",0.05623413,1,20,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,20,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,20,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class MeadowsNight
+			{
+				name = "$STR_A3_CfgEnvSounds_MeadowsNight0";
+				sound[] = {"A3\Sounds_F\environment\ambient\night_insects_birds_winds1",0.011220184,1};
+				volume = "(1-forest)*(1-houses)*night*(1-sea)";
+				randSamp0[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_01",0.099999994,1,100,0.12,10,25,40};
+				randSamp1[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_02",0.099999994,1,100,0.12,10,35,60};
+				randSamp2[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_03",0.099999994,1,100,0.12,10,25,40};
+				randSamp3[] = {"A3\Sounds_F\environment\animals\insect\meadow_single_04",0.099999994,1,100,0.12,10,25,40};
+				randSamp4[] = {"A3\Sounds_F\environment\animals\birds\bird_night_2",0.05623413,1,80,0.12,10,25,40};
+				randSamp5[] = {"A3\Sounds_F\environment\animals\birds\bird_night_5",0.031622775,1,80,0.1,10,25,40};
+				randSamp6[] = {"A3\Sounds_F\environment\animals\insect\insect_2",0.05623413,1,20,0.1,10,25,50};
+				randSamp7[] = {"A3\Sounds_F\environment\animals\insect\insect_3",0.05623413,1,20,0.1,10,25,40};
+				randSamp8[] = {"A3\Sounds_F\environment\animals\insect\insect_1",0.05623413,1,20,0.1,10,25,40};
+				random[] = {"randSamp0","randSamp1","randSamp2","randSamp3","randSamp4","randSamp5","randSamp6","randSamp7","randSamp8"};
+			};
+			class BattlefieldExplosions
+			{
+				sound0[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions1",0.31622776,1.0,1000,0.2,5,10,15};
+				sound1[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions2",0.31622776,1.0,1000,0.2,5,10,15};
+				sound2[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions3",0.31622776,1.0,1000,0.2,5,10,15};
+				sound3[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions4",0.31622776,1.0,1000,0.2,5,10,15};
+				sound4[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions5",0.31622776,1.0,1000,0.2,5,10,15};
+				random[] = {"sound0","sound1","sound2","sound3","sound4"};
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions5",0.31622776,1.0};
+			};
+			class BattlefieldExplosions1
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions1",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldExplosions2
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions2",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldExplosions3
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions3",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldExplosions4
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions4",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldExplosions5
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_explosions5",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldFirefight1
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_firefight1",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldFirefight2
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_firefight2",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldFirefight3
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_firefight3",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldFirefight4
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_firefight4",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldHeli1
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_heli1",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldHeli2
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_heli2",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldHeli3
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_heli3",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldJet1
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_jet1",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldJet2
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_jet2",0.31622776,1.0};
+				titles[] = {};
+			};
+			class BattlefieldJet3
+			{
+				sound[] = {"A3\Sounds_F\environment\ambient\battlefield\battlefield_jet3",0.31622776,1.0};
+				titles[] = {};
+			};
+			class Earthquake_01
+			{
+				sound[] = {"\a3\Sounds_F\environment\ambient\quakes\earthquake1",3.1622777,1.0};
+				name = "$STR_A3_SOUNDS_EARTHQUAKE1";
+				titles[] = {};
+			};
+			class Earthquake_02
+			{
+				sound[] = {"\a3\Sounds_F\environment\ambient\quakes\earthquake2",3.1622777,1.0};
+				name = "$STR_A3_SOUNDS_EARTHQUAKE2";
+				titles[] = {};
+			};
+			class Earthquake_03
+			{
+				sound[] = {"\a3\Sounds_F\environment\ambient\quakes\earthquake3",3.1622777,1.0};
+				name = "$STR_A3_SOUNDS_EARTHQUAKE3";
+				titles[] = {};
+			};
+			class Earthquake_04
+			{
+				sound[] = {"\a3\Sounds_F\environment\ambient\quakes\earthquake4",3.1622777,1.0};
+				name = "$STR_A3_SOUNDS_EARTHQUAKE4";
+				titles[] = {};
+			};
+		};
+		clutterGrid = 1.2;
+		clutterDist = 80;
+		noDetailDist = 65;
+		fullDetailDist = 10;
+		midDetailTexture = "australia\data\middle_mco.paa";
+		minTreesInForestSquare = 3;
+		minRocksInRockSquare = 3;
+		hazeDistCoef = 0.1;
+		hazeFogCoef = 0.98;
+		hazeBaseHeight = 0;
+		hazeBaseBeta0 = 8e-005;
+		hazeDensityDecay = 0.00036;
+		horizonParallaxCoef = 0.0;
+		horizonFogColorationStart = "0.8f";
+		skyFogColorationStart = "0.7f";
+		horizonSunColorationIntensity = 0.001;
+		aroundSunCoefMultiplier = "1.4f";
+		aroundSunCoefExponent = "12f";
+		soundMapSizeCoef = 4;
+		satelliteNormalBlendStart = 10;
+		satelliteNormalBlendEnd = 100;
+		terrainBlendMaxDarkenCoef = "0.85f";
+		terrainBlendMaxBrightenCoef = "0.15f";
+		class clutter
+		{
+			class aus_grassgreen: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrasscrookedGreen.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_grassbunch: DefaultClutter
+			{
+				model = "ca\plants2\clutter\C_grassbunch.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.0;
+			};
+			class aus_grasstall: Defaultclutter
+			{
+				model = "ca\plants2\Clutter\C_grasstall.p3d";
+				affectedByWind = 0.8;
+				swLighting = 1;
+				scaleMin = 0.9;
+				scaleMax = 1.2;
+			};
+			class aus_fernsmall: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_fern.p3d";
+				affectedByWind = 0.7;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
+			};
+			class aus_ferntall: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_ferntall.p3d";
+				affectedByWind = 0.7;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
+			};
+			class aus_wideleafplant: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_wideleafplant.p3d";
+				affectedByWind = 0.1;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.6;
+			};
+			class aus_weed2: DefaultClutter
+			{
+				model = "ca\plants2\clutter\C_weed2.p3d";
+				affectedByWind = 0.5;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
+			};
+			class aus_weed3: DefaultClutter
+			{
+				model = "ca\plants2\clutter\C_weed3.p3d";
+				affectedByWind = 0.5;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
+			};
+			class aus_mushroom: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_MushroomBabka.p3d";
+				affectedByWind = 0.1;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.2;
+			};
+			class aus_smallpinetree: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_picea.p3d";
+				affectedByWind = 0.05;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 2.1;
+			};
+			class aus_Stubble: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_stubble.p3d";
+				affectedByWind = 0.03;
+				swLighting = 1;
+				scaleMin = 1.6;
+				scaleMax = 3.0;
+			};
+			class aus_GrassCrookedForest: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrassCrookedForest.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.8;
+				scaleMax = 1.4;
+			};
+			class aus_WeedDead: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_WeedDead.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.75;
+				scaleMax = 1.1;
+			};
+			class aus_WeedDeadSmall: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_WeedDead2.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.75;
+				scaleMax = 0.9;
+			};
+			class aus_GrassCrooked: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrassCrooked.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_desertgrass: DefaultClutter
+			{
+				model = "ca\plants\clutter_grass_desert.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_deadgrassbunch: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_deadGrassBunch.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_WeedBrownTallgroup: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrWeedBrownTall_group.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_thistlesmall: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Thistle_Small.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_grassdryC: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrGrassDry.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.9;
+				scaleMax = 1.4;
+			};
+			class aus_GrassDrymediumgroup: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrGrassDry_group.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_weedgreentall: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrWeedGreenTall.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_ThistleYellowShrub: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrThistleYellowShrub.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_mullein: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_StrPlantMullein.p3d";
+				affectedByWind = 0.3;
+				swLighting = 1;
+				scaleMin = 0.7;
+				scaleMax = 1.4;
+			};
+			class aus_GrassBrushHighGreen: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Grass_BrushHigh_Green.p3d";
+				affectedByWind = 0.8;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.8;
+			};
+			class aus_GrassDry: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Grass_Dry.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.3;
+				scaleMax = 0.9;
+			};
+			class aus_ThistleHigh: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Thistle_High.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_GrassDesertGroupSoft: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_GrassGreen_GroupSoft.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.7;
+			};
+			class aus_grasstalldead: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Grass_Tall_Dead.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.55;
+				scaleMax = 0.78;
+			};
+			class aus_flowertansy: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Flower_Tansy.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.45;
+				scaleMax = 0.6;
+			};
+			class aus_grassautummbrown: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrassAutumnBrown.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.35;
+				scaleMax = 0.6;
+			};
+			class aus_grassbunchsmall: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Grass_Bunch_Small.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.45;
+				scaleMax = 0.75;
+			};
+			class aus_plantdoc: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Plant_Dock.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.45;
+				scaleMax = 0.65;
+			};
+			class aus_greengrass: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Grass_Green.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.7;
+			};
+			class aus_Flower_BrushMedium_Blue: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Flower_BrushMedium_Blue.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.85;
+			};
+			class aus_wideleaf: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_wideLeafPlant.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.9;
+			};
+			class aus_GrassGreen_GroupHard: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_GrassGreen_GroupHard.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.65;
+			};
+			class aus_grasslong_drybunch: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_GrassLong_DryBunch.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.65;
+			};
+			class aus_PlantGreenShrub: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_StrPlantGreenShrub.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.65;
+			};
+			class aus_greengrasslong: DefaultClutter
+			{
+				model = "ca\plants_e\Clutter\c_GrassGreenLong_EP1.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 0.95;
+			};
+			class aus_grassdesertlongclutter: DefaultClutter
+			{
+				model = "ca\plants_e\Clutter\c_grass_desert_long_EP1.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 0.75;
+			};
+			class aus_autummgrasstall: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrassAutumn_t.p3d";
+				affectedByWind = 0.1;
+				swLighting = 1;
+				scaleMin = 0.35;
+				scaleMax = 1.4;
+			};
+			class aus_flowermix: DefaultClutter
+			{
+				model = "ca\plants\clutter_flower_mix.p3d";
+				affectedByWind = 0.1;
+				swLighting = 1;
+				scaleMin = 0.95;
+				scaleMax = 1.45;
+			};
+			class aus_tuftdry: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Grass_TuftDry.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.55;
+				scaleMax = 0.78;
+			};
+			class aus_Grassdesert_GroupHard: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Grassdesert_GroupHard.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.4;
+				scaleMax = 1.95;
+			};
+			class aus_PlantGreenSmall: DefaultClutter
+			{
+				model = "a3\plants_f\clutter\c_Plant_Green_Small.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.75;
+			};
+			class aus_grassautumm: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_GrassAutumn.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.8;
+				scaleMax = 1.65;
+			};
+			class GrassDesertGrouphard: DefaultClutter
+			{
+				model = "A3\plants_f\Clutter\c_GrassDesert_GroupHard.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 0.5;
+				scaleMax = 0.8;
+			};
+			class brushhigh: DefaultClutter
+			{
+				model = "A3\plants_f\Clutter\c_Grass_BrushHigh_Dry.p3d";
+				affectedByWind = 0.65;
+				swLighting = 1;
+				scaleMin = 0.65;
+				scaleMax = 1.0;
+			};
+			class ThistleSmallYellow: DefaultClutter
+			{
+				model = "A3\plants_f\Clutter\c_Thistle_Small_Yellow.p3d";
+				affectedByWind = 0.3;
+				swLighting = "true";
+				scaleMin = 0.3;
+				scaleMax = 0.9;
+			};
+			class ThistleHighDead: DefaultClutter
+			{
+				model = "A3\plants_f\Clutter\c_Thistle_High_Dead.p3d";
+				affectedByWind = 1.0;
+				swLighting = "true";
+				scaleMin = 0.4;
+				scaleMax = 0.8;
+			};
+			class GrassCrookedDead
+			{
+				model = "A3\plants_f\Clutter\c_GrassCrooked.p3d";
+				affectedByWind = 0.6;
+				swLighting = "true";
+				scaleMin = 0.8;
+				scaleMax = 1.1;
+			};
+			class ausSeaWeed1: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_SeaWeed1.p3d";
+				affectedByWind = 0.2;
+				swLighting = "false";
+				scaleMin = 0.4;
+				scaleMax = 1.0;
+			};
+			class ausSeaWeed2: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_SeaWeed2.p3d";
+				affectedByWind = 0.2;
+				swLighting = "false";
+				scaleMin = 0.3;
+				scaleMax = 1.0;
+			};
+			class ausCoral1: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_Coral1.p3d";
+				affectedByWind = 0.0;
+				swLighting = "false";
+				scaleMin = 0.3;
+				scaleMax = 1.0;
+			};
+			class ausCoral2: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_Coral2.p3d";
+				affectedByWind = 0.0;
+				swLighting = "false";
+				scaleMin = 0.3;
+				scaleMax = 1.0;
+			};
+			class ausCoral3: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_Coral3.p3d";
+				affectedByWind = 0.1;
+				swLighting = "false";
+				scaleMin = 0.3;
+				scaleMax = 0.5;
+			};
+			class ausCoral4: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_Coral4.p3d";
+				affectedByWind = 0.1;
+				swLighting = "false";
+				scaleMin = 0.3;
+				scaleMax = 1.0;
+			};
+			class ausCoral5: DefaultClutter
+			{
+				model = "A3\Plants_F\Clutter\c_Coral5.p3d";
+				affectedByWind = 0.05;
+				swLighting = "false";
+				scaleMin = 0.2;
+				scaleMax = 0.6;
+			};
+			class bigbrain: DefaultClutter
+			{
+				model = "A3\Plants_F\bush\bw_SetBig_Brains_F.p3d";
+				affectedByWind = 0.05;
+				swLighting = "false";
+				scaleMin = 0.2;
+				scaleMax = 0.6;
+			};
+			class ausstones1: DefaultClutter
+			{
+				model = "A3\rocks_F\sharpStones_erosion.p3d";
+				affectedByWind = 0.05;
+				swLighting = "false";
+				scaleMin = 0.2;
+				scaleMax = 0.6;
+			};
+			class ausblueberry: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_blueberry.p3d";
+				affectedByWind = 0.05;
+				swLighting = "false";
+				scaleMin = 0.4;
+				scaleMax = 1.8;
+			};
+			class aus_tassiegrassgreen: DefaultClutter
+			{
+				model = "ca\plants_e2\clutter\c_GrasscrookedGreen_summer.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 1.0;
+				scaleMax = 2.3;
+			};
+			class aus_tassieyellowplant: DefaultClutter
+			{
+				model = "ca\plants_e\clutter\c_Plants_Yellow_EP1.p3d";
+				affectedByWind = 1.0;
+				swLighting = 1;
+				scaleMin = 1.0;
+				scaleMax = 1.9;
+			};
+			class aus_ThistleHighDead: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Thistle_High_dead.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_seaplantclutter: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Coral_plant_set1.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_autummflowers: DefaultClutter
+			{
+				model = "ca\plants2\clutter\c_autumn_flowers.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_flowersmediumwhite: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Flower_BrushMedium_White.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_flowercakile: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Flower_Cakile.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+			class aus_flowerlowyellow2: DefaultClutter
+			{
+				model = "a3\plants_f\Clutter\c_Flower_Low_Yellow2.p3d";
+				affectedByWind = 0.6;
+				swLighting = 1;
+				scaleMin = 0.6;
+				scaleMax = 1.0;
+			};
+		};
+		class Subdivision
+		{
+			class Fractal
+			{
+				rougness = 5;
+				maxRoad = 0.02;
+				maxTrack = 0.5;
+				maxSlopeFactor = 0.05;
+			};
+			class WhiteNoise
+			{
+				rougness = 2;
+				maxRoad = 0.01;
+				maxTrack = 0.05;
+				maxSlopeFactor = 0.0025;
+			};
+			minY = -0.0;
+			minSlope = 0.02;
+		};
+		class Ambient{};
+		class AmbientA3
+		{
+			maxCost = 500;
+			class Radius440_500
+			{
+				areaSpawnRadius = 440.0;
+				areaMaxRadius = 500.0;
+				spawnCircleRadius = 30.0;
+				spawnInterval = 4.7;
+				class Species
+				{
+					class Seagull
+					{
+						maxCircleCount = "sea * 1 - night)) + 2 * houses * sea)) * 1 - night)";
+						maxWorldCount = 12;
+						cost = 3;
+						spawnCount = 1;
+						groupSpawnRadius = 10;
+						maxAlt = 100;
+						minAlt = 0;
+					};
+					class Rabbit_F
+					{
+						maxCircleCount = "20 * 0.1 - houses)) * 1 - sea)";
+						maxWorldCount = 4;
+						cost = 5;
+						spawnCount = 1;
+						groupSpawnRadius = 10;
+						maxAlt = 300;
+						minAlt = 100;
+					};
+				};
+			};
+			class Radius40_60
+			{
+				areaSpawnRadius = 40.0;
+				areaMaxRadius = 60.0;
+				spawnCircleRadius = 10.0;
+				spawnInterval = 1.5;
+				class Species
+				{
+					class CatShark_F
+					{
+						maxCircleCount = "4 * WaterDepth interpolate [1,30,0,1]))";
+						maxWorldCount = 10;
+						cost = 6;
+						spawnCount = 1;
+						groupSpawnRadius = 10;
+						maxAlt = -0.2;
+						minAlt = -480;
+					};
+					class Turtle_F
+					{
+						maxCircleCount = "2 * waterDepth interpolate [1,16,0,1]) * 1-houses) * 1-houses)))";
+						maxWorldCount = 6;
+						cost = 5;
+						spawnCount = 1;
+						groupSpawnRadius = 10;
+						maxAlt = -0.2;
+						minAlt = -370;
+					};
+					class Snake_random_F
+					{
+						maxCircleCount = "1 - houses) * 2 * 1 - sea)) + 2 * meadow)))";
+						maxWorldCount = 2;
+						cost = 5;
+						spawnCount = 1;
+						groupSpawnRadius = 25;
+						maxAlt = 340;
+						minAlt = 100;
+					};
+					class Salema_F
+					{
+						maxCircleCount = "12 * WaterDepth interpolate [1,30,0,1]) + 0.07))";
+						maxWorldCount = 40;
+						cost = 5;
+						spawnCount = 2;
+						groupSpawnRadius = 5;
+						maxAlt = -0.2;
+						minAlt = -380;
+					};
+					class Ornate_random_F
+					{
+						maxCircleCount = "12 * WaterDepth interpolate [1,30,0,1]) + 0.05))";
+						maxWorldCount = 30;
+						cost = 5;
+						spawnCount = 3;
+						groupSpawnRadius = 5;
+						maxAlt = -0.2;
+						minAlt = -380;
+					};
+					class Mackerel_F
+					{
+						maxCircleCount = "8 * WaterDepth interpolate [1,30,0,1]) + 0.07))";
+						maxWorldCount = 20;
+						cost = 5;
+						spawnCount = 2;
+						groupSpawnRadius = 5;
+						maxAlt = -0.2;
+						minAlt = -580;
+					};
+					class Mullet_F
+					{
+						maxCircleCount = "8 * WaterDepth interpolate [1,30,0,1]) + 0.07))";
+						maxWorldCount = 24;
+						cost = 5;
+						spawnCount = 2;
+						groupSpawnRadius = 5;
+						maxAlt = -0.2;
+						minAlt = -380;
+					};
+					class Tuna_F
+					{
+						maxCircleCount = "8 * WaterDepth interpolate [1,30,0,1]) - 0.2))";
+						maxWorldCount = 20;
+						cost = 5;
+						spawnCount = 2;
+						groupSpawnRadius = 5;
+						maxAlt = -0.2;
+						minAlt = -80;
+					};
+				};
+			};
+			class Radius30_40
+			{
+				areaSpawnRadius = 30.0;
+				areaMaxRadius = 40.0;
+				spawnCircleRadius = 3.0;
+				spawnInterval = 3.75;
+				class Species
+				{
+					class DragonFly
+					{
+						maxCircleCount = "4 * 1 - night) * 1 - WaterDepth interpolate [1,30,0,1])) * sea * 1 - windy)";
+						maxWorldCount = 4;
+						cost = 1;
+						spawnCount = 1;
+						groupSpawnRadius = 1;
+						maxAlt = 330;
+						minAlt = 0;
+					};
+					class ButterFly_random
+					{
+						maxCircleCount = "3 * 1 - night) * 1 - WaterDepth interpolate [1,30,0,1])) * 1 - windy)";
+						maxWorldCount = 6;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 1;
+						maxAlt = 330;
+						minAlt = 0;
+					};
+				};
+			};
+			class Radius15_20
+			{
+				areaSpawnRadius = 15.0;
+				areaMaxRadius = 20.0;
+				spawnCircleRadius = 2.0;
+				spawnInterval = 2.85;
+				class Species
+				{
+					class FxWindGrass1
+					{
+						maxCircleCount = "2 * 1 - WaterDepth interpolate [1,30,0,1])) * windy interpolate [0.1,0.25,0,1])";
+						maxWorldCount = 3;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 2.5;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+					class FxWindGrass2
+					{
+						maxCircleCount = "2 * 1 - WaterDepth interpolate [1,30,0,1])) * windy interpolate [0.1,0.25,0,1])";
+						maxWorldCount = 3;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 2.5;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+					class FxWindLeaf1
+					{
+						maxCircleCount = "2 * trees + 0.5) * windy interpolate [0.1,0.25,0,1])";
+						maxWorldCount = 3;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 2.5;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+					class FxWindLeaf2
+					{
+						maxCircleCount = "2 * trees + 0.5) * windy interpolate [0.1,0.25,0,1])";
+						maxWorldCount = 3;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 2.5;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+					class FxWindLeaf3
+					{
+						maxCircleCount = "2 * trees + 0.5) * windy interpolate [0.1,0.25,0,1])";
+						maxWorldCount = 3;
+						cost = 1;
+						spawnCount = 3;
+						groupSpawnRadius = 2.5;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+					class FxWindPollen1
+					{
+						maxCircleCount = "3 * 1 - WaterDepth interpolate [1,30,0,1]))) * windy interpolate [0.05,0.15,0,1])";
+						maxWorldCount = 6;
+						cost = 1;
+						spawnCount = 1;
+						groupSpawnRadius = 1;
+						maxAlt = 30;
+						minAlt = -5;
+					};
+				};
+			};
+			class Radius6_10
+			{
+				areaSpawnRadius = 6.0;
+				areaMaxRadius = 10.0;
+				spawnCircleRadius = 1.0;
+				spawnInterval = 0.1;
+				class Species
+				{
+					class HoneyBee
+					{
+						maxCircleCount = "4 * 1 - night) * 1 - sea) * 1 - houses) * 1 - windy)";
+						maxWorldCount = 8;
+						cost = 1;
+						spawnCount = 1;
+						groupSpawnRadius = 1;
+						maxAlt = 330;
+						minAlt = 0;
+					};
+					class HouseFly
+					{
+						maxCircleCount = "3 + 3 * houses)) * 1 - night) * 1 - WaterDepth interpolate [1,30,0,1])) * 1 - windy)";
+						maxWorldCount = 10;
+						cost = 1;
+						spawnCount = 13;
+						groupSpawnRadius = 1;
+						maxAlt = 330;
+						minAlt = 0;
+					};
+					class Mosquito
+					{
+						maxCircleCount = "3 * 1 - WaterDepth interpolate [1,30,0,1])) * 1 - windy)";
+						maxWorldCount = 2;
+						cost = 1;
+						spawnCount = 1;
+						groupSpawnRadius = 1;
+						maxAlt = 330;
+						minAlt = 0;
+					};
+				};
+			};
+		};
+		class Names
+		{
+			class NT
+			{
+				name = "NORTHERN TERRITORY";
+				position[] = {19968,29119};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class qld
+			{
+				name = "QUEENSLAND";
+				position[] = {31795,22274};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class nsw
+			{
+				name = "NEW SOUTH WALES";
+				position[] = {36404,15413};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class vic
+			{
+				name = "VICTORIA";
+				position[] = {31445,11550};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class sa
+			{
+				name = "SOUTH AUSTRALIA";
+				position[] = {23574,17611};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class Melbourne
+			{
+				name = "Melbourne";
+				position[] = {31096,10425};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class alice
+			{
+				name = "Alice Springs";
+				position[] = {22068,25733};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class Adelaide
+			{
+				name = "Adelaide";
+				position[] = {24998,12799};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class Perth
+			{
+				name = "Perth";
+				position[] = {5445,18695};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class darwin
+			{
+				name = "Darwin";
+				position[] = {16792,33699};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class Brisbane
+			{
+				name = "Brisbane";
+				position[] = {37954,19933};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class sydney
+			{
+				name = "Sydney";
+				position[] = {36573,12935};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 300.0;
+				radiusB = 300.0;
+				angle = 0.0;
+			};
+			class van_dieman
+			{
+				name = "Van Dieman Gulf";
+				position[] = {19063,35606};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class port_darwin
+			{
+				name = "Port Darwin";
+				position[] = {15520,32691};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class dundee_beach
+			{
+				name = "Dundee Beach";
+				position[] = {10101,29805};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class Gas_river
+			{
+				name = "Gascoyne River";
+				position[] = {2456,22910};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class Timor_Sea
+			{
+				name = "Timor Sea";
+				position[] = {7015,37150};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 400.0;
+				radiusB = 400.0;
+				angle = 0.0;
+			};
+			class swan_river
+			{
+				name = "Swan River";
+				position[] = {5012,17421};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class geo_bay
+			{
+				name = "Geographe Bay";
+				position[] = {3689,13356};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class aus_bight
+			{
+				name = "Great Australian Bight";
+				position[] = {15467,11892};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class Carpenteria
+			{
+				name = "Gulf of Carpentaria";
+				position[] = {25870,33936};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class Coral_sea
+			{
+				name = "Coral Sea";
+				position[] = {39071,31053};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class charlotte_bay
+			{
+				name = "Princess Charlotte Bay";
+				position[] = {30414,33382};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class boston_bay
+			{
+				name = "Boston Bay";
+				position[] = {21036,12613};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class spencer_gulf
+			{
+				name = "Spencer Gulf";
+				position[] = {22049,13218};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class investigator_strait
+			{
+				name = "Investigator Strait";
+				position[] = {22649,11546};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class gulf_stvincent
+			{
+				name = "Gulf St Vincent";
+				position[] = {23988,12501};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class lake_alex
+			{
+				name = "Lake Alexandrina";
+				position[] = {25492,11373};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 80.0;
+				radiusB = 80.0;
+				angle = 0.0;
+			};
+			class port_phillip
+			{
+				name = "Port Phillip Bay";
+				position[] = {30742,9280};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class bass_strait
+			{
+				name = "Bass Strait";
+				position[] = {30047,7517};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class arafura_sea
+			{
+				name = "Arafura Sea";
+				position[] = {23394,39407};
+				type = "Namemarine";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class tiwi_island
+			{
+				name = "Tiwi Island";
+				position[] = {17961,36400};
+				type = "Namecity";
+				demography = "CIV";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class rottnest_island
+			{
+				name = "Rottnest Island";
+				position[] = {2445,16153};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class garden_island
+			{
+				name = "Garden Island";
+				position[] = {3333,15441};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class cape_peron
+			{
+				name = "Cape Peron";
+				position[] = {3739,14857};
+				type = "Namecity";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Nullabor_Plains
+			{
+				name = "Nullabor Plains";
+				position[] = {15495,16138};
+				type = "Namelocal";
+				demography = "CIV";
+				radiusA = 150.0;
+				radiusB = 150.0;
+				angle = 0.0;
+			};
+			class leonara
+			{
+				name = "Leonara";
+				position[] = {9596,21421};
+				type = "Namelocal";
+				demography = "CIV";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class West_australia
+			{
+				name = "WEST AUSTRALIA";
+				position[] = {9496,24709};
+				type = "NameCityCapital";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class pinegap
+			{
+				name = "Pine Gap";
+				position[] = {19764,24355};
+				type = "NameCity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class saltlake
+			{
+				name = "Salt Lake";
+				position[] = {16245,23250};
+				type = "Namelocal";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class groote_Eylandt
+			{
+				name = "Groote Eylandt";
+				position[] = {23649,33015};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class Toowoomba
+			{
+				name = "Toowoomba";
+				position[] = {30955,19997};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class moreton_island
+			{
+				name = "Moreton Island";
+				position[] = {39359,22096};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class cairns
+			{
+				name = "Cairns";
+				position[] = {32101,29843};
+				type = "Namecity";
+				radiusA = 150.0;
+				radiusB = 150.0;
+				angle = 0.0;
+			};
+			class Cape_Melville
+			{
+				name = "Cape Melville";
+				position[] = {30767,32797};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Lake_Eyre
+			{
+				name = "Lake Eyre";
+				position[] = {23349,22141};
+				type = "Namelocal";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class Kangaroo_island
+			{
+				name = "Kangaroo Island";
+				position[] = {22742,10794};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class Broken_hill
+			{
+				name = "Broken Hill";
+				position[] = {27548,16972};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Tailem_bend
+			{
+				name = "Tailem bend";
+				position[] = {26184,11077};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class King_island
+			{
+				name = "King Island";
+				position[] = {30413,6132};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class flinders_island
+			{
+				name = "Flinders Island";
+				position[] = {34269,5779};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class Tasmania
+			{
+				name = "TASMANIA";
+				position[] = {32948,3675};
+				type = "NameCityCapital";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class phillip_island
+			{
+				name = "Phillip Island";
+				position[] = {31544,8264};
+				type = "Namecity";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class mount_isa
+			{
+				name = "Mount Isa";
+				position[] = {26741,28045};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class stuart_hwy
+			{
+				name = "Stuart Hwy";
+				position[] = {22142,21799};
+				type = "Namevillage";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 180.0;
+			};
+			class hill01
+			{
+				name = "Mount Baw Baw";
+				position[] = {33310,8484};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class broadleaf01
+			{
+				name = "";
+				position[] = {29490,13935};
+				type = "VegetationBroadleaf";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class fir01
+			{
+				name = "";
+				position[] = {32995,15034};
+				type = "Vegetationfir";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class fir02
+			{
+				name = "";
+				position[] = {36602,21965};
+				type = "Vegetationfir";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class Tullamarine_airport
+			{
+				name = "";
+				position[] = {30672,11961};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class perth_airport
+			{
+				name = "";
+				position[] = {6896,18165};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class brisbane_airport
+			{
+				name = "";
+				position[] = {37948,20432};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class sydney_airport
+			{
+				name = "";
+				position[] = {35411,12218};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class darwin_airport
+			{
+				name = "";
+				position[] = {16749,33878};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class tassie_airport
+			{
+				name = "";
+				position[] = {32207,2737};
+				type = "myairportblue";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class adelaide_airport
+			{
+				name = "";
+				position[] = {24714,13780};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class Alice_airport
+			{
+				name = "";
+				position[] = {22366,24797};
+				type = "myairportgreen";
+				radiusA = 200.0;
+				radiusB = 200.0;
+				angle = 0.0;
+			};
+			class cairns_airport
+			{
+				name = "";
+				position[] = {31595,31029};
+				type = "myairportblue";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class ShipWreck
+			{
+				name = "HMVS Cerberus";
+				position[] = {30906,8921};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck1
+			{
+				name = "Trawler";
+				position[] = {10129,29840};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck2
+			{
+				name = "Florence D";
+				position[] = {16253,36794};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck3
+			{
+				name = "";
+				position[] = {30369,34835};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck4
+			{
+				name = "";
+				position[] = {32793,28536};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class Weipa
+			{
+				name = "Weipa";
+				position[] = {28533,35202};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Eden
+			{
+				name = "Eden";
+				position[] = {35455,8515};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class port_lincoln
+			{
+				name = "Port Lincoln";
+				position[] = {20885,12877};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Lumber_yard1
+			{
+				name = "Lumber Yard";
+				position[] = {33027,14123};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class bathurst
+			{
+				name = "Bathurst";
+				position[] = {33886,13318};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class sydneypolice
+			{
+				name = "";
+				position[] = {36430.4,13063.2};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class sydneyhospital
+			{
+				name = "";
+				position[] = {36294.7,12751.8};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class darwinhospital
+			{
+				name = "";
+				position[] = {16621.7,33568.8};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class tasmaniapolice
+			{
+				name = "";
+				position[] = {33133,4001};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class melbournepolice
+			{
+				name = "";
+				position[] = {31007,10721};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class melbournehospital
+			{
+				name = "";
+				position[] = {31179.8,10221.4};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class adelaidepolice
+			{
+				name = "";
+				position[] = {25147,12847};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class adelaidehospital
+			{
+				name = "";
+				position[] = {25368.7,12695.1};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class perthhospital
+			{
+				name = "";
+				position[] = {5593.05,18328.3};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class perthpolice
+			{
+				name = "";
+				position[] = {5621.11,18613.4};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class darwinpolice
+			{
+				name = "";
+				position[] = {15870.8,33292.3};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class palm01
+			{
+				name = "";
+				position[] = {30411,31452};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm02
+			{
+				name = "";
+				position[] = {29064,33338};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm03
+			{
+				name = "";
+				position[] = {29091,35588};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm04
+			{
+				name = "";
+				position[] = {32961,27159};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm05
+			{
+				name = "";
+				position[] = {28005,30362};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm06
+			{
+				name = "";
+				position[] = {25396,30055};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm07
+			{
+				name = "";
+				position[] = {23611,31756};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm08
+			{
+				name = "";
+				position[] = {23683,32681};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm09
+			{
+				name = "";
+				position[] = {23736,33277};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm10
+			{
+				name = "";
+				position[] = {22804,34889};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm11
+			{
+				name = "";
+				position[] = {21580,35190};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class palm12
+			{
+				name = "";
+				position[] = {19914,35621};
+				type = "Vegetationpalm";
+				radiusA = 134.6;
+				radiusB = 152.28;
+				angle = 0.0;
+			};
+			class melbournepolice01
+			{
+				name = "";
+				position[] = {31047,10728};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class alicepolice
+			{
+				name = "";
+				position[] = {22295,25561};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class brisbanepolice
+			{
+				name = "";
+				position[] = {38143,20188};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class cairnspolice
+			{
+				name = "";
+				position[] = {32103,29920};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class alicehospital
+			{
+				name = "";
+				position[] = {22081,25420};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class tasshospital
+			{
+				name = "";
+				position[] = {33761,3415};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class brishospital
+			{
+				name = "";
+				position[] = {38100,20075};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class aliceprison
+			{
+				name = "";
+				position[] = {22232,25548};
+				type = "myprisonicon";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class sydneyprison
+			{
+				name = "";
+				position[] = {36370,13055};
+				type = "myprisonicon";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class brisbaneprison
+			{
+				name = "";
+				position[] = {38211,20182};
+				type = "myprisonicon";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class hill02
+			{
+				name = "";
+				position[] = {34341,9163};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill03
+			{
+				name = "";
+				position[] = {34699,9560};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill04
+			{
+				name = "";
+				position[] = {34559,9399};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill05
+			{
+				name = "";
+				position[] = {35240,10439};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill06
+			{
+				name = "";
+				position[] = {36421,14163};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill07
+			{
+				name = "";
+				position[] = {34780,16680};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill08
+			{
+				name = "";
+				position[] = {15420,17342};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill09
+			{
+				name = "";
+				position[] = {10337,19942};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill10
+			{
+				name = "";
+				position[] = {13456,21599};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill11
+			{
+				name = "";
+				position[] = {20961,33920};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill12
+			{
+				name = "";
+				position[] = {9317,13783};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill13
+			{
+				name = "";
+				position[] = {30922,28644};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill14
+			{
+				name = "";
+				position[] = {32518,24799};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill15
+			{
+				name = "";
+				position[] = {34534,22001};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill16
+			{
+				name = "";
+				position[] = {37817,17204};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill17
+			{
+				name = "";
+				position[] = {37859,16880};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class hill18
+			{
+				name = "";
+				position[] = {9319,13781};
+				type = "mymountainicon";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class ShipWreck5
+			{
+				name = "";
+				position[] = {26822,36505};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck6
+			{
+				name = "";
+				position[] = {29425,37155};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck7
+			{
+				name = "";
+				position[] = {39389,11343};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck8
+			{
+				name = "";
+				position[] = {21521,12419};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck9
+			{
+				name = "";
+				position[] = {1351,20704};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class ShipWreck10
+			{
+				name = "";
+				position[] = {2483,22856};
+				type = "myshipwreck";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class brokenpolice
+			{
+				name = "";
+				position[] = {27585,17042};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class toowpolice
+			{
+				name = "";
+				position[] = {31011,19988};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class quarry
+			{
+				name = "Quarry";
+				position[] = {31642,16358};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class willcania
+			{
+				name = "Willcania";
+				position[] = {31302,16764};
+				type = "Namecity";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class army_base1
+			{
+				name = "Army Base";
+				position[] = {33762,15651};
+				type = "Namevillage";
+				radiusA = 50.0;
+				radiusB = 50.0;
+				angle = 0.0;
+			};
+			class outpost
+			{
+				name = "Outpost";
+				position[] = {29008,36648};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class outpost1
+			{
+				name = "Outpost";
+				position[] = {23442,35148};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class willare
+			{
+				name = "Willare";
+				position[] = {12808,27778};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class airstrip
+			{
+				name = "Airstrip";
+				position[] = {26518,18300};
+				type = "myairstripblack";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class airstrip1
+			{
+				name = "Airstrip";
+				position[] = {27115,28294};
+				type = "myairstripblack";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class powerstation1
+			{
+				name = "Powerstation";
+				position[] = {34866,11737};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class Lumber_yard2
+			{
+				name = "Lumber Yard";
+				position[] = {37967,21702};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class abandoned_camp
+			{
+				name = "Abandoned Camp";
+				position[] = {21237,28643};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class abandoned_camp1
+			{
+				name = "Abandoned Camp";
+				position[] = {10492,27387};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class winery
+			{
+				name = "";
+				position[] = {33337,17572};
+				type = "vegetationvineyard";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class hobart
+			{
+				name = "Hobart";
+				position[] = {33716,3419};
+				type = "NameCityCapital";
+				demography = "CIV";
+				radiusA = 500.0;
+				radiusB = 500.0;
+				angle = 0.0;
+			};
+			class Launceston
+			{
+				name = "Launceston";
+				position[] = {33135,4076};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class smithton
+			{
+				name = "Smithton";
+				position[] = {31754,4920};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class perthprison
+			{
+				name = "";
+				position[] = {5561,18562};
+				type = "myprisonicon";
+				radiusA = 30.0;
+				radiusB = 30.0;
+				angle = 0.0;
+			};
+			class factory1
+			{
+				name = "Factory";
+				position[] = {24793,16042};
+				type = "myindustrialicon";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class factory2
+			{
+				name = "Factory";
+				position[] = {30561,8568};
+				type = "myindustrialicon";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class support_base
+			{
+				name = "Support Base";
+				position[] = {31692,25036};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class SuperMaxicon
+			{
+				name = "";
+				position[] = {30000,17447};
+				type = "myprisonicon";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class tassiedocks
+			{
+				name = "Docks";
+				position[] = {31109,5296};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class SuperMaxtext
+			{
+				name = "SuperMax";
+				position[] = {30000,17447};
+				type = "Namelocal";
+				radiusA = 7.0;
+				radiusB = 7.0;
+				angle = 0.0;
+			};
+			class rockhampton
+			{
+				name = "Rockhampton";
+				position[] = {34946,26147};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class Coober
+			{
+				name = "Coober Pedy";
+				position[] = {22300,19289};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class willpolice
+			{
+				name = "";
+				position[] = {31391,16897};
+				type = "myauscopshopicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class willhospital
+			{
+				name = "";
+				position[] = {31475,16901};
+				type = "myhospitalicon";
+				radiusA = 10.0;
+				radiusB = 10.0;
+				angle = 0.0;
+			};
+			class spuds_roadhouse
+			{
+				name = "Spuds Roadhouse";
+				position[] = {5550.27,19318.3};
+				type = "Namelocal";
+				radiusA = 4.0;
+				radiusB = 4.0;
+				angle = 0.0;
+			};
+			class Mil
+			{
+				name = "Mildura";
+				position[] = {27619,12139};
+				type = "Namecity";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class rockarea1
+			{
+				name = "RockArea";
+				position[] = {26380,13303};
+				type = "rockarea";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class rockarea2
+			{
+				name = "RockArea";
+				position[] = {26401,12617};
+				type = "rockarea";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class viewpoint1
+			{
+				name = "Viewpoint";
+				position[] = {38688,16932};
+				type = "viewpoint";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class airstrip2
+			{
+				name = "Airstrip";
+				position[] = {8639.09,26518.7};
+				type = "myairstripblack";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class airstrip3
+			{
+				name = "Airstrip";
+				position[] = {18021,21922};
+				type = "myairstripblack";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class airstrip4
+			{
+				name = "Airstrip";
+				position[] = {35414,8759};
+				type = "myairstripblack";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class airstrip5
+			{
+				name = "Airstrip";
+				position[] = {29951,27117};
+				type = "myairstripblack";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class airstrip6
+			{
+				name = "Airstrip";
+				position[] = {20364,28781};
+				type = "myairstripblack";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig1
+			{
+				name = "Oil Rig";
+				position[] = {35430,6630.4};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig2
+			{
+				name = "Oil Rig";
+				position[] = {38376,29387};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig3
+			{
+				name = "Oil Rig";
+				position[] = {25695,33821};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig4
+			{
+				name = "Oil Rig";
+				position[] = {10016,32835};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig5
+			{
+				name = "Oil Rig";
+				position[] = {2924,39050};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig6
+			{
+				name = "Oil Rig";
+				position[] = {10325,8743};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class oilrig7
+			{
+				name = "Oil Rig";
+				position[] = {27325,5498};
+				type = "myoilrigicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class bustop1
+			{
+				name = "";
+				position[] = {36530,13026};
+				type = "mybustopicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class bustop2
+			{
+				name = "";
+				position[] = {36793,12954};
+				type = "mybustopicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+			class bustop3
+			{
+				name = "";
+				position[] = {30943.1,10695.6};
+				type = "mybustopicon";
+				radiusA = 100.0;
+				radiusB = 100.0;
+				angle = 0.0;
+			};
+		};
+		skyObject = "A3\Map_Stratis\data\obloha.p3d";
+		horizontObject = "A3\Map_Stratis\data\horizont.p3d";
+		skyTexture = "A3\Map_Stratis\data\sky_semicloudy_sky.paa";
+		skyTextureR = "A3\Map_Stratis\data\sky_semicloudy_lco.paa";
+		safePositionAnchor[] = {20480,20480};
+		safePositionRadius = 7000;
+		loadingTexts[] = {"If you like the island please consider donatating via my Twitch channel ausisland or aussmeister@gmail.com so I can continue to improve it and add more Features.","This Version no longer requires CUP addons","Did you know? Australia is as wide as the distance between London to Moscow.","Did you know? The biggest property in Australia is bigger than Belgium.","Did you know? Australias first police force was made up of the most well-behaved convicts.","Did you know? If you visited one new beach in Australia every day, it would take over 27 years to see them all.","If you like the island please consider donatating via Paypal @ aussmeister@gmail.com so I can continue to improve it and add more Features.","Did you know? There have been no deaths in Australia from a spider bite since 1979.","Did you know? An Australian man once tried to sell New Zealand on eBay.","Did you know? The Australian Alps receive more snowfall than Switzerland.","Did you know? The average Aussie drinks 96 litres of beer per year.","Green Airport Icons on Map indicate Autolanding facilities are available.","Did you know? The name Australia comes from the Latin Terra Australis Incognito which means the Unknown Southern Land.","Did you know? All Australian Politicians are useless.","Did you know? Australians are the worlds biggest buyers of 4WD vehicles.","Did you know? In 1880 Melbourne was the richest city in the world","Did you know? In 1979 debris from NASAs space station Skylab crashed in Esperance WA.The town then fined NASA $400 for littering","There are 5 Christmas trees hidden on the island, can you find them?"};
+	};
+	initWorld = "australia";
+	demoWorld = "australia";
+};
+class CfgWorldList
+{
+	class australia{};
+};
+class CfgSurfaces
+{
+	class Default{};
+	class Water{};
+	class aus_desertSurface: Default
+	{
+		access = 2;
+		files = "aus_desert_*";
+		character = "aus_desertgrassClutter";
+		soundEnviron = "dirt";
+		soundHit = "soft_ground";
+		rough = 0.09;
+		maxSpeedCoef = 1.4;
+		lucidity = 1.0;
+		grassCover = 0.03;
+		impact = "hitGroundSoft";
+		surfaceFriction = 1.8;
+	};
+	class ausbeachsurface: Default
+	{
+		access = 2;
+		files = "aus_beach_*";
+		character = "EMPTY";
+		soundEnviron = "sand";
+		soundHit = "soft_ground";
+		rough = 0.1;
+		maxSpeedCoef = 1.3;
+		dust = 0.5;
+		lucidity = 1.25;
+		grassCover = 0.0;
+		impact = "hitGroundSoft";
+		surfaceFriction = 1.6;
+	};
+	class auspineforestSurface: Default
+	{
+		access = 2;
+		files = "aus_pineforest_*";
+		character = "aus_pineforestClutter";
+		soundEnviron = "drygrass";
+		soundHit = "soft_ground";
+		rough = 0.12;
+		maxSpeedCoef = 1.3;
+		dust = 0.4;
+		lucidity = 1;
+		grassCover = 0.04;
+		impact = "Hit_Foliage_Pine";
+		surfaceFriction = 1.7;
+	};
+	class aus_wheatstubbleSurface: Default
+	{
+		access = 2;
+		files = "aus_wheat_*";
+		character = "aus_wheatClutter";
+		soundEnviron = "drygrass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.6;
+		lucidity = 1;
+		grassCover = 0.1;
+		surfaceFriction = 1.8;
+	};
+	class aus_Deadsurface: Default
+	{
+		access = 2;
+		files = "aus_saltlake_*";
+		character = "Empty";
+		soundEnviron = "sand";
+		soundHit = "soft_ground";
+		rough = 0.07;
+		maxSpeedCoef = 1.9;
+		dust = 1.0;
+		lucidity = 1.4;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.1;
+	};
+	class aus_soilsurface: Default
+	{
+		access = 2;
+		files = "aus_soil_*";
+		character = "aus_soilclutter";
+		soundEnviron = "dirt";
+		soundHit = "soft_ground";
+		rough = 0.09;
+		maxSpeedCoef = 1.4;
+		lucidity = 1.3;
+		grassCover = 0.03;
+		impact = "hitGroundSoft";
+		surfaceFriction = 1.8;
+	};
+	class ausreddesertsurface: Default
+	{
+		access = 2;
+		files = "aus_reddesert_*";
+		character = "EMPTY";
+		soundEnviron = "sand";
+		soundHit = "soft_ground";
+		rough = 0.11;
+		maxSpeedCoef = 0.9;
+		dust = 9.83;
+		lucidity = 2.25;
+		grassCover = 0.0;
+		impact = "hitGroundSoft";
+		surfaceFriction = 1.6;
+	};
+	class aus_dryriverbed_surface: Default
+	{
+		access = 2;
+		files = "aus_dryriverbed_*";
+		character = "Empty";
+		soundEnviron = "dirt";
+		soundHit = "soft_ground";
+		rough = 0.09;
+		maxSpeedCoef = 1.4;
+		lucidity = 1;
+		grassCover = 0.03;
+		impact = "hitGroundSoft";
+		surfaceFriction = 1.8;
+	};
+	class aus_hay_surface: Default
+	{
+		access = 2;
+		files = "aus_thistlestony_*";
+		character = "aus_hayClutter";
+		soundEnviron = "dirt";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.3;
+		lucidity = 1.4;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.75;
+	};
+	class aus_ploughedgroundSurface: Default
+	{
+		access = 2;
+		files = "aus_ploughed_*";
+		character = "EMPTY";
+		soundEnviron = "dirt";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.2;
+		lucidity = 1.2;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.75;
+	};
+	class aus_marshgroundSurface: Default
+	{
+		access = 2;
+		files = "aus_marsh_*";
+		rough = 0.01;
+		maxSpeedCoef = 0.8;
+		lucidity = 0.6;
+		soundEnviron = "sand";
+		character = "EMPTY";
+		soundHit = "soft_ground";
+	};
+	class aus_forestpineyellowSurface: Default
+	{
+		access = 2;
+		files = "aus_forestpineyellow_*";
+		character = "aus_yellowpineclutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.3;
+		dust = 0.5;
+		lucidity = 1.2;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.45;
+	};
+	class aus_concretesurface: Default
+	{
+		access = 2;
+		files = "aus_concrete_*";
+		character = "Empty";
+		soundEnviron = "concrete";
+		soundHit = "concrete";
+		rough = 0.05;
+		maxSpeedCoef = 1;
+		lucidity = 0.3;
+		grassCover = 0.0;
+		impact = "hitConcrete";
+		surfaceFriction = 1.6;
+	};
+	class aus_rockfacesurface: Default
+	{
+		access = 2;
+		files = "aus_rockface_*";
+		character = "Empty";
+		soundEnviron = "rock";
+		soundHit = "hard_ground";
+		rough = 0.2;
+		maxSpeedCoef = 1.8;
+		lucidity = 1;
+		grassCover = 0.0;
+		impact = "hitGroundHard";
+		surfaceFriction = 1.6;
+	};
+	class aus_grassdirtSurface: Default
+	{
+		access = 2;
+		files = "aus_dirtgreen_*";
+		character = "aus_dirtgreengrassclutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.3;
+		lucidity = 1;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.75;
+	};
+	class aus_tropicalSurface: Default
+	{
+		access = 2;
+		files = "aus_dirttropical_*";
+		character = "aus_tropicalClutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.3;
+		dust = 0.5;
+		lucidity = 1;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.75;
+	};
+	class aus_stonysurface: Default
+	{
+		access = 2;
+		files = "aus_stony_*";
+		character = "aus_stonyclutter";
+		soundEnviron = "rock";
+		soundHit = "hard_ground";
+		rough = 0.1;
+		maxSpeedCoef = 1.3;
+		dust = 0.5;
+		lucidity = 1.25;
+		grassCover = 0.0;
+		impact = "hitGroundHard";
+		surfaceFriction = 1.6;
+	};
+	class aus_ovalgrassSurface: Default
+	{
+		access = 2;
+		files = "aus_ovalgrass_*";
+		character = "aus_ovalgrassclutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.3;
+		dust = 0.5;
+		lucidity = 1.2;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.75;
+	};
+	class aus_sandstonesurface: Default
+	{
+		access = 2;
+		files = "aus_sandstone_*";
+		character = "Empty";
+		soundEnviron = "rock";
+		soundHit = "hard_ground";
+		rough = 0.2;
+		maxSpeedCoef = 0.8;
+		dust = 0.5;
+		lucidity = 1;
+		grassCover = 0.0;
+		impact = "hitGroundHard";
+		surfaceFriction = 1.9;
+	};
+	class aus_WildFieldsurface: Default
+	{
+		access = 2;
+		files = "aus_wildfield_*";
+		character = "aus_wildfieldClutter";
+		soundEnviron = "drygrass";
+		soundHit = "soft_ground";
+		rough = 0.1;
+		maxSpeedCoef = 1.3;
+		dust = 0.58;
+		lucidity = 1;
+		grassCover = 0.05;
+		impact = "Hit_Foliage_green";
+		surfaceFriction = 1.7;
+	};
+	class aus_Seabedsurface: Default
+	{
+		access = 2;
+		files = "aus_seabed_*";
+		character = "aus_SeabedClutter";
+		soundEnviron = "gravel";
+		soundHit = "hard_ground";
+		rough = 0.15;
+		maxSpeedCoef = 0.85;
+		dust = 0.75;
+		lucidity = 1.3;
+		grassCover = 0.0;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.4;
+	};
+	class aus_broadleafSurface: Default
+	{
+		access = 2;
+		files = "aus_broadleaf_*";
+		character = "aus_broadleafclutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.2;
+		dust = 0.5;
+		lucidity = 1;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.75;
+	};
+	class aus_grass_tassieSurface: Default
+	{
+		access = 2;
+		files = "aus_grass_tassie_*";
+		character = "aus_tassieClutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.2;
+		dust = 0.5;
+		lucidity = 1;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.75;
+	};
+	class aus_canolaSurface: Default
+	{
+		access = 2;
+		files = "aus_canola_*";
+		character = "aus_canolaClutter";
+		soundEnviron = "grass";
+		soundHit = "soft_ground";
+		rough = 0.08;
+		maxSpeedCoef = 1.2;
+		dust = 0.5;
+		lucidity = 1;
+		grassCover = 0.1;
+		impact = "Hit_Foliage_Dead";
+		surfaceFriction = 1.75;
+	};
+	class aus_aus_ausphault2surface: Default
+	{
+		access = 2;
+		files = "aus_ausphault2_*";
+		character = "Empty";
+		soundEnviron = "concrete";
+		soundHit = "concrete";
+		rough = 0.05;
+		maxSpeedCoef = 1;
+		lucidity = 0.3;
+		grassCover = 0.0;
+		impact = "hitConcrete";
+		surfaceFriction = 1.6;
+	};
+	class ausdirtroad: Default
+	{
+		files = "dirt_*";
+	};
+	class ausasf1road: Default
+	{
+		files = "asf1_dashedline_*";
+	};
+	class aussilroad: Default
+	{
+		files = "sil_new_ara_*";
+	};
+	class ausgravroad: Default
+	{
+		files = "grav_*";
+	};
+};
+class CfgSurfaceCharacters
+{
+	class aus_pineforestClutter
+	{
+		probability[] = {0.07,0.2,0.2,0.2};
+		names[] = {"aus_smallpinetree","aus_fernsmall","aus_ferntall","aus_wideleafplant"};
+	};
+	class aus_wheatClutter
+	{
+		probability[] = {0.5};
+		names[] = {"aus_Stubble"};
+	};
+	class aus_desertgrassClutter
+	{
+		probability[] = {0.1,0.24,0.3,0.15,0.04,0.1,0.03};
+		names[] = {"aus_grasstalldead","aus_grassdesertlongclutter","aus_flowertansy","aus_deadgrassbunch","aus_weed2","aus_plantdoc","aus_GrassBrushHighGreen"};
+	};
+	class aus_hayClutter
+	{
+		probability[] = {0.28,0.3};
+		names[] = {"aus_GrassTall","aus_grassgreen"};
+	};
+	class aus_greengrassclutter
+	{
+		probability[] = {0.3,0.1,0.1};
+		names[] = {"aus_Flower_BrushMedium_Blue","aus_greengrasslong","aus_flowermix"};
+	};
+	class aus_yellowpineClutter
+	{
+		probability[] = {0.1,0.4,0.1,0.1,0.4};
+		names[] = {"aus_wideleaf","aus_fernsmall","aus_mushroom","aus_autummgrasstall","aus_flowermix"};
+	};
+	class aus_dirtgreengrassclutter
+	{
+		probability[] = {0.4,0.2,0.16,0.2,0.2,0.1,0.1,0.1,0.2};
+		names[] = {"GrassDesertGrouphard","aus_GrassCrookedForest","brushhigh","aus_autummgrasstall","aus_GrassBrushHighGreen","aus_ThistleYellowShrub","aus_PlantGreenShrub","aus_GrassDry","aus_weed3"};
+	};
+	class aus_tropicalClutter
+	{
+		probability[] = {0.4,0.25,0.31,0.12};
+		names[] = {"aus_Grassdesert_GroupHard","aus_autummgrasstall","aus_PlantGreenSmall","aus_wideleaf"};
+	};
+	class aus_ovalgrassclutter
+	{
+		probability[] = {0.5};
+		names[] = {"aus_grassgreen"};
+	};
+	class aus_stonyclutter
+	{
+		probability[] = {0.26,0.16,0.36,0.16,0.17};
+		names[] = {"aus_WeedBrownTallgroup","aus_thistlesmall","aus_GrassDry","aus_plantdoc","aus_tuftdry"};
+	};
+	class aus_wildfieldClutter
+	{
+		probability[] = {0.3,0.1,0.1,0.4,0.3,0.2,0.015,0.035,0.4};
+		names[] = {"aus_GrassBrushHighGreen","ThistleSmallYellow","aus_weedgreentall","aus_GrassDry","ThistleHighDead","aus_GrassTall","aus_GrassDesertGroupSoft","GrassCrookedDead","aus_grassgreen"};
+	};
+	class aus_SeabedClutter
+	{
+		probability[] = {0.03,0.1,0.2,0.2,0.2,0.1,0.02,0.02,0.02};
+		names[] = {"ausSeaWeed1","ausSeaWeed2","ausCoral4","ausCoral1","ausCoral5","ausCoral3","ausCoral2","bigbrain","aus_seaplantclutter"};
+	};
+	class aus_broadleafClutter
+	{
+		probability[] = {0.4,0.35};
+		names[] = {"aus_wideleaf","aus_grassgreen"};
+	};
+	class aus_tassieClutter
+	{
+		probability[] = {0.2,0.3,0.5,0.3};
+		names[] = {"aus_grassautumm","ausblueberry","aus_tassiegrassgreen","aus_tassieyellowplant"};
+	};
+	class aus_canolaClutter
+	{
+		probability[] = {0.4};
+		names[] = {"aus_flowermix"};
+	};
+	class aus_soilclutter
+	{
+		probability[] = {0.1,0.1,0.1,0.1,0.1,0.07,0.1,0.1,0.1,0.1,0.1};
+		names[] = {"aus_flowermix","aus_ThistleHighDead","ausblueberry","aus_autummflowers","aus_flowercakile","GrassDesertGrouphard","aus_flowerlowyellow2","aus_GrassDrymediumgroup","aus_grassautumm","aus_grassbunch","aus_PlantGreenSmall"};
+	};
+};
+//};

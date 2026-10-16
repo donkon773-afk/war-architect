@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "id": "dddaea62-e182-550c-9920-58b00f68ddf7",
+  "name": "Миротворцы ООН (RHS GREF) · каталог фракции",
+  "setup": {
+    "side": "green",
+    "faction": "rhsgref_faction_un",
+    "assets": [
+      "rhs_uh1h_un",
+      "rhsgref_un_btr70",
+      "rhsgref_un_m1117",
+      "rhsgref_un_Mi24V",
+      "rhsgref_un_Mi8amt",
+      "rhsgref_un_uaz",
+      "rhsgref_un_ural",
+      "rhsgref_un_zil131",
+      "rhsgref_un_zil131_flatbed",
+      "rhsgref_un_zil131_flatbed_cover",
+      "rhsgref_un_zil131_open"
+    ],
+    "infantry": [
+      "rhsgref_cdf_un_arifleman_rpk",
+      "rhsgref_cdf_un_engineer",
+      "rhsgref_cdf_un_general",
+      "rhsgref_cdf_un_grenadier",
+      "rhsgref_cdf_un_grenadier_rpg",
+      "rhsgref_cdf_un_machinegunner",
+      "rhsgref_cdf_un_medic",
+      "rhsgref_cdf_un_rifleman",
+      "rhsgref_cdf_un_rifleman_lite",
+      "rhsgref_cdf_un_squadleader"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.029Z",
+  "updatedAt": "2026-10-15T16:43:30.029Z"
+}

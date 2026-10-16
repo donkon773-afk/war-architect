@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "id": "94e005b8-ba0d-5aae-a92d-da86e64287d9",
+  "name": "Национальная гвардия Чернаруси (RHS GREF, синие) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "rhsgref_faction_cdf_ng_b",
+    "assets": [
+      "UK3CB_B_BRDM2_ATGM_CDF",
+      "UK3CB_B_BRDM2_CDF",
+      "UK3CB_B_BRDM2_HQ_CDF",
+      "UK3CB_B_BRDM2_UM_CDF"
+    ],
+    "infantry": [
+      "rhsgref_cdf_b_ngd_engineer",
+      "rhsgref_cdf_b_ngd_grenadier",
+      "rhsgref_cdf_b_ngd_grenadier_rpg",
+      "rhsgref_cdf_b_ngd_machinegunner",
+      "rhsgref_cdf_b_ngd_medic",
+      "rhsgref_cdf_b_ngd_rifleman",
+      "rhsgref_cdf_b_ngd_rifleman_ak74",
+      "rhsgref_cdf_b_ngd_rifleman_lite",
+      "rhsgref_cdf_b_ngd_rifleman_rpg75",
+      "rhsgref_cdf_b_ngd_squadleader"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.007Z",
+  "updatedAt": "2026-10-15T16:43:30.007Z"
+}

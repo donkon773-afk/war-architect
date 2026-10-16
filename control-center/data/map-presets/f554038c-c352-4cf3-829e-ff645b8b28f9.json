@@ -1,0 +1,145 @@
+{
+  "id": "f554038c-c352-4cf3-829e-ff645b8b28f9",
+  "name": "Isla Pera · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:26.056Z",
+  "updatedAt": "2026-10-15T22:03:26.056Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "IslaPera",
+    "title": "Isla Pera · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · factory",
+        "side": "WEST",
+        "position": [
+          6551,
+          4629
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · military",
+        "side": "EAST",
+        "position": [
+          7773,
+          6910
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · military",
+        "side": "GUER",
+        "position": [
+          7038,
+          4668
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · military",
+        "side": "GUER",
+        "position": [
+          7129,
+          4435
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Presa Alta",
+        "side": "GUER",
+        "position": [
+          7681,
+          4977
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Air Station Mike-69",
+        "side": "GUER",
+        "position": [
+          7850,
+          5195
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Air Station Mike-69",
+        "side": "GUER",
+        "position": [
+          7783,
+          5767
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Air Station Mike-69",
+        "side": "GUER",
+        "position": [
+          7759,
+          6034
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · military",
+        "side": "GUER",
+        "position": [
+          7735,
+          6446
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

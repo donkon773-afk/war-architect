@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "id": "0ff554e7-1ca9-43fb-a66e-b9417870ddb0",
+  "design": {
+    "version": 1,
+    "type": "frontlineCampaign",
+    "campaignKey": "97e71d35-0af0-4224-bd41-ff9e8f99a85c",
+    "world": "Australia",
+    "title": "NeroAI — Australia: линия фронта и снабжение [CAMPAIGN TEST]",
+    "playerRole": "commander",
+    "playerSide": "WEST",
+    "sides": [
+      {
+        "side": "WEST",
+        "base": "S0",
+        "classes": [
+          "rhsusf_army_ocp_rifleman",
+          "rhsusf_army_ocp_autorifleman",
+          "rhsusf_army_ocp_grenadier",
+          "rhsusf_army_ocp_medic"
+        ],
+        "truckClass": "CUP_B_Ural_CDF",
+        "active": 3,
+        "reserve": 24,
+        "groupSize": 6,
+        "skill": 0.65
+      },
+      {
+        "side": "EAST",
+        "base": "S6",
+        "classes": [
+          "rhs_msv_rifleman",
+          "rhs_msv_machinegunner",
+          "rhs_msv_grenadier",
+          "rhs_msv_medic"
+        ],
+        "truckClass": "CUP_O_Ural_RU",
+        "active": 3,
+        "reserve": 24,
+        "groupSize": 6,
+        "skill": 0.65
+      }
+    ],
+    "sectors": [
+      {
+        "id": "S0",
+        "name": "База синих",
+        "kind": "base",
+        "owner": "WEST",
+        "position": [
+          22119.721,
+          22610.58
+        ],
+        "radius": 250,
+        "stock": 600,
+        "income": 40
+      },
+      {
+        "id": "S1",
+        "name": "Южный склад",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          22119.721,
+          23610.58
+        ],
+        "radius": 250,
+        "stock": 150,
+        "income": 10
+      },
+      {
+        "id": "S2",
+        "name": "Южная позиция",
+        "kind": "town",
+        "owner": "WEST",
+        "position": [
+          22119.721,
+          24610.58
+        ],
+        "radius": 250,
+        "stock": 90,
+        "income": 0
+      },
+      {
+        "id": "S3",
+        "name": "Центральный узел",
+        "kind": "depot",
+        "owner": "NONE",
+        "position": [
+          22119.721,
+          25610.58
+        ],
+        "radius": 250,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S4",
+        "name": "Северная позиция",
+        "kind": "town",
+        "owner": "EAST",
+        "position": [
+          22119.721,
+          26610.58
+        ],
+        "radius": 250,
+        "stock": 90,
+        "income": 0
+      },
+      {
+        "id": "S5",
+        "name": "Северный склад",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          22119.721,
+          27610.58
+        ],
+        "radius": 250,
+        "stock": 150,
+        "income": 10
+      },
+      {
+        "id": "S6",
+        "name": "База красных",
+        "kind": "base",
+        "owner": "EAST",
+        "position": [
+          22119.721,
+          28610.58
+        ],
+        "radius": 250,
+        "stock": 600,
+        "income": 40
+      }
+    ],
+    "links": [
+      [
+        "S0",
+        "S1"
+      ],
+      [
+        "S1",
+        "S2"
+      ],
+      [
+        "S2",
+        "S3"
+      ],
+      [
+        "S3",
+        "S4"
+      ],
+      [
+        "S4",
+        "S5"
+      ],
+      [
+        "S5",
+        "S6"
+      ]
+    ],
+    "playerSlots": 2,
+    "persistence": true,
+    "duration": 90,
+    "captureSeconds": 120,
+    "reinforcementCost": 50,
+    "captureCost": 40,
+    "reinforcementDelay": 60,
+    "convoyCargo": 120,
+    "convoyInterval": 90,
+    "convoyTimeout": 600,
+    "convoyLimit": 1,
+    "hour": 9,
+    "overcast": 0.15
+  },
+  "revision": 1,
+  "createdAt": "2026-10-11T20:39:47.560Z",
+  "updatedAt": "2026-10-11T20:39:47.560Z"
+}

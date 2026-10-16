@@ -1,0 +1,145 @@
+{
+  "id": "1719fe1c-aa96-4441-900b-911e1dacb7de",
+  "name": "Archie, Summer · сухопутный фронт",
+  "createdAt": "2026-10-15T22:02:33.235Z",
+  "updatedAt": "2026-10-15T22:02:33.235Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "archie",
+    "title": "Archie, Summer · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Hargfjell Keep",
+        "side": "WEST",
+        "position": [
+          251,
+          3771
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Svartö",
+        "side": "EAST",
+        "position": [
+          7120,
+          1472
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Grimtorp sand quarry",
+        "side": "GUER",
+        "position": [
+          1074,
+          3767
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Aserum",
+        "side": "GUER",
+        "position": [
+          2698,
+          3878
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Kopparvik Mine",
+        "side": "GUER",
+        "position": [
+          3726,
+          3860
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Kopparvik Mine",
+        "side": "GUER",
+        "position": [
+          4776,
+          3885
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Mönsterås Bruk",
+        "side": "GUER",
+        "position": [
+          5440,
+          3359
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Mönsterås Bruk",
+        "side": "GUER",
+        "position": [
+          6257,
+          2882
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Stenbacken limestone quarry",
+        "side": "GUER",
+        "position": [
+          6578,
+          2321
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

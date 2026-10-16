@@ -1,0 +1,6 @@
+ 6:53:25  Mission file: NeroAI_Sanagasta_Three_StartupFix (__cur_mp)
+ 6:53:25  Mission world: btrx_sngt
+ 6:53:28 "[NeroWL Settings] applied: vanilla=true LLM=false airLimit=0 skill=2 aggression=1"
+ 6:53:28 "[NeroWL CQ] INIT world=btrx_sngt server=true interface=true"
+ 6:53:29 "[NeroWL CQ] READY world=btrx_sngt sectors=25 commanders=30"
+ 6:53:29 "[NeroAI4][INFO] Standard Arma AI mode: NeroAI bridge, planner and group control are not started; Warlords AI commands every group."

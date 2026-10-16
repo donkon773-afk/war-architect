@@ -1,0 +1,33 @@
+{
+  "saved": [
+    {
+      "id": "ee1084f4-a4b3-44eb-ae3e-50c33062ec20",
+      "name": "Из запуска · красные",
+      "side": "east",
+      "assets": 60,
+      "infantry": 41
+    },
+    {
+      "id": "2d77712c-53d0-41d2-9584-cae49c4bfcd0",
+      "name": "Из запуска · зелёные",
+      "side": "green",
+      "assets": 0,
+      "infantry": "auto"
+    }
+  ],
+  "tests": [
+    {
+      "test": "unauthorized write",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "test": "empty infantry saved and read back",
+      "passed": true
+    },
+    {
+      "test": "temporary test setup removed to local bin",
+      "passed": true
+    }
+  ]
+}

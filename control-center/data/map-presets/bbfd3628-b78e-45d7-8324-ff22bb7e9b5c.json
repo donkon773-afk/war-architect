@@ -1,0 +1,145 @@
+{
+  "id": "bbfd3628-b78e-45d7-8324-ff22bb7e9b5c",
+  "name": "uzbin Valley · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:28.143Z",
+  "updatedAt": "2026-10-15T22:03:28.143Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "uzbin",
+    "title": "uzbin Valley · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Узел маршрута",
+        "side": "WEST",
+        "position": [
+          4442,
+          9552
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Padzhan",
+        "side": "EAST",
+        "position": [
+          16087,
+          12357
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          4771,
+          9461
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          8046,
+          9558
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          9846,
+          9558
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Versek",
+        "side": "GUER",
+        "position": [
+          12164,
+          11101
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Yarkanay",
+        "side": "GUER",
+        "position": [
+          13512,
+          9548
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Cop Rocco",
+        "side": "GUER",
+        "position": [
+          15183,
+          9538
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Cop Rocco",
+        "side": "GUER",
+        "position": [
+          15911,
+          10661
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

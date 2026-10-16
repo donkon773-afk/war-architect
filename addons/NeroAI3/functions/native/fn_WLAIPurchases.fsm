@@ -1,0 +1,597 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, WL: AI Purchases">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"INIT",0,250,-75.000000,-1225.000000,25.000000,-1175.000000,0.000000,"INIT"};
+item1[] = {"AI",4,218,125.000000,-1000.000000,225.000000,-950.000000,0.000000,"AI"};
+item2[] = {"pause",4,218,-200.000000,-1000.000000,-100.000000,-950.000000,3.000000,"pause"};
+item3[] = {"nothing",2,250,-75.000000,-1000.000000,25.000000,-950.000000,0.000000,"nothing"};
+item4[] = {"check_funds",2,250,125.000000,-925.000000,225.000000,-875.000000,0.000000,"check funds"};
+item5[] = {"purchase_units",4,218,50.000000,-850.000000,150.000000,-800.000000,2.000000,"purchase" \n "units"};
+item6[] = {"purchase",2,250,50.000000,-550.000000,150.000000,-500.000000,0.000000,"purchase"};
+item7[] = {"",7,210,-153.999969,-529.000000,-146.000015,-521.000000,0.000000,""};
+item8[] = {"",7,210,-154.000000,-904.000000,-146.000000,-896.000000,0.000000,""};
+item9[] = {"dead",4,218,-75.000000,-850.000000,25.000000,-800.000000,1.000000,"dead"};
+item10[] = {"terminate",1,250,-75.000000,-775.000000,25.000000,-725.000000,0.000000,"terminate"};
+item11[] = {"run_timer",2,250,50.000000,-700.000000,150.000000,-650.000000,0.000000,"run timer"};
+item12[] = {"timeout",6,250,50.000000,-625.000000,150.000000,-575.000000,0.000000,"timeout"};
+item13[] = {"",7,210,171.000000,-529.000000,179.000000,-521.000000,0.000000,""};
+item14[] = {"",7,210,171.000000,-829.000000,179.000000,-821.000000,0.000000,""};
+item15[] = {"",7,210,-153.999969,-679.000000,-146.000015,-671.000000,0.000000,""};
+item16[] = {"purchase_vehicle",4,218,200.000000,-850.000000,300.000000,-800.000000,1.000000,"purchase" \n "vehicles"};
+item17[] = {"purchase_1",2,250,200.000000,-550.000000,300.000000,-500.000000,0.000000,"purchase"};
+item18[] = {"",7,210,246.000000,-479.000000,254.000000,-471.000000,0.000000,""};
+item19[] = {"",7,210,-154.000000,-479.000000,-146.000000,-471.000000,0.000000,""};
+item20[] = {"airdrop_done",4,218,50.000000,-400.000000,150.000000,-350.000000,0.000000,"airdrop done"};
+item21[] = {"reset_var",2,250,-200.000000,-450.000000,-100.000000,-400.000000,0.000000,"reset var"};
+item22[] = {"airdrop_done",4,218,200.000000,-450.000000,300.000000,-400.000000,0.000000,"airdrop done"};
+item23[] = {"timeout",6,250,-200.000000,-350.000000,-100.000000,-300.000000,1.000000,"timeout"};
+item24[] = {"",7,210,321.000000,-329.000000,329.000000,-321.000000,0.000000,""};
+item25[] = {"",7,210,321.000000,-904.000000,329.000000,-896.000000,0.000000,""};
+item26[] = {"",7,210,-154.000000,-1054.000000,-146.000000,-1046.000000,0.000000,""};
+item27[] = {"",7,210,171.000000,-1054.000000,179.000000,-1046.000000,0.000000,""};
+item28[] = {"asset_list_ready",4,218,-75.000000,-1150.000000,25.000000,-1100.000000,0.000000,"asset list" \n "ready"};
+item29[] = {"set_up_vars",2,4346,-75.000000,-1075.000000,25.000000,-1025.000000,0.000000,"set up vars"};
+link0[] = {0,28};
+link1[] = {1,4};
+link2[] = {2,3};
+link3[] = {3,1};
+link4[] = {3,9};
+link5[] = {4,8};
+link6[] = {4,14};
+link7[] = {5,11};
+link8[] = {6,7};
+link9[] = {6,13};
+link10[] = {6,20};
+link11[] = {7,15};
+link12[] = {8,2};
+link13[] = {9,10};
+link14[] = {11,12};
+link15[] = {11,15};
+link16[] = {12,6};
+link17[] = {13,14};
+link18[] = {14,5};
+link19[] = {14,16};
+link20[] = {15,8};
+link21[] = {16,17};
+link22[] = {17,13};
+link23[] = {17,18};
+link24[] = {18,19};
+link25[] = {18,22};
+link26[] = {19,7};
+link27[] = {20,21};
+link28[] = {21,19};
+link29[] = {21,23};
+link30[] = {22,21};
+link31[] = {23,24};
+link32[] = {24,25};
+link33[] = {25,4};
+link34[] = {26,2};
+link35[] = {27,1};
+link36[] = {28,29};
+link37[] = {29,26};
+link38[] = {29,27};
+globals[] = {0.000000,0,0,0,0,640,480,1,291,6316128,1,-237.727798,521.427612,-331.878845,-1218.145264,860,1004,1};
+window[] = {2,-1,-1,-1,-1,1027,260,1474,260,3,878};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "WL: AI Purchases";
+        class States
+        {
+                /*%FSM<STATE "INIT">*/
+                class INIT
+                {
+                        name = "INIT";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "asset_list_ready">*/
+                                class asset_list_ready
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="set_up_vars";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil {_this getVariable ""BIS_WL_purchasable""};"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "nothing">*/
+                class nothing
+                {
+                        name = "nothing";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="check_funds";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isPlayer _this)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "check_funds">*/
+                class check_funds
+                {
+                        name = "check_funds";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_this setVariable [""BIS_WL_dropPos"", _this];" \n
+                         "_dropCost = BIS_WL_dropCost * 40;" \n
+                         "_tgtSector = objNull;" \n
+                         "" \n
+                         "{" \n
+                         "	if (_x distance _this < 200 && ((_x getVariable ""BIS_WL_sectorSide"") == side group _this)) exitWith {_tgtSector = _x};" \n
+                         "} forEach BIS_WL_sectors;" \n
+                         "" \n
+                         "if !(isNull _tgtSector) then {" \n
+                         "	_dropCost = BIS_WL_dropCost;" \n
+                         "	_this setVariable [""BIS_WL_dropPos"", _tgtSector];" \n
+                         "};" \n
+                         "" \n
+                         "_maxToPurchase = ((BIS_WL_maxSubordinates) - (count units _this) + 1) min (_maxCrew - count units _this); _reservePilot = if (([_this,_this getVariable [""BIS_WL_dropPos"",_this],[typeOf _this]] call NeroAI_fnc_baseDeliveryContext) # 0) then {0} else {1}; _maxToPurchase = _maxToPurchase min ((([""INFANTRY""] call NeroAI_fnc_designPurchaseCapacity)-_reservePilot) max 0); _maxToPurchase = _maxToPurchase min 8;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_units">*/
+                                class purchase_units
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""BIS_WL_AI_airdropping"") && count _purchasableUnits > 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapestInf # 1) + _dropCost) && _maxToPurchase > 0 && !((group _this) getVariable [""NeroAI_active"",FALSE]) && ([_this] call NeroAI_fnc_nativeInfantryPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_vehicle">*/
+                                class purchase_vehicle
+                                {
+                                        itemno = 16;
+                                        priority = 1.000000;
+                                        to="purchase_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_cheapest # 1) >= 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapest # 1) + (_dropCost * 40)) && count ((group _this) getVariable [""BIS_WL_groupVehs"", []]) < 1 && ([group _this] call NeroAI_fnc_nativeGroundPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "purchase">*/
+                class purchase
+                {
+                        name = "purchase";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"if ([_this] call NeroAI_fnc_nativeInfantryPurchaseAllowed) then {" \n
+"_this setVariable [""BIS_WL_dropPos"", _this];" \n
+"_dropCost = BIS_WL_dropCost * 40;" \n
+"_tgtSector = objNull;" \n
+"" \n
+"{" \n
+"	if (_x distance _this < 200 && ((_x getVariable ""BIS_WL_sectorSide"") == side group _this)) exitWith {_tgtSector = _x};" \n
+"} forEach BIS_WL_sectors;" \n
+"" \n
+"if !(isNull _tgtSector) then {" \n
+"	_dropCost = BIS_WL_dropCost;" \n
+"	_this setVariable [""BIS_WL_dropPos"", _tgtSector];" \n
+"};" \n
+"" \n
+"_dropPool = [];" \n
+"_funds = (_this getVariable ""BIS_WL_funds"") - _dropCost - BIS_WL_FTCost;" \n
+"_cost = 0;" \n
+"_costFinal = 0;" \n
+"_cnt = 0;" \n
+"_maxToPurchase = ((BIS_WL_maxSubordinates) - (count units _this) + 1) min (_maxCrew - count units _this); _reservePilot = if (([_this,_this getVariable [""BIS_WL_dropPos"",_this],[typeOf _this]] call NeroAI_fnc_baseDeliveryContext) # 0) then {0} else {1}; _maxToPurchase = _maxToPurchase min ((([""INFANTRY""] call NeroAI_fnc_designPurchaseCapacity)-_reservePilot) max 0); _maxToPurchase = _maxToPurchase min 8;" \n
+"" \n
+"while {_funds >= _cost && _cnt < _maxToPurchase} do {" \n
+"	_i = floor random count _purchasableUnits;" \n
+"	_bought = _purchasableUnits # _i;" \n
+"	_cost = _cost + (_bought # 1);" \n
+"	if (_funds >= _cost) then {" \n
+"		_cnt = _cnt + 1;" \n
+"		_dropPool pushBack (_bought # 0);" \n
+"		_costFinal = _costFinal + (_bought # 1);" \n
+"	};" \n
+"};" \n
+"" \n
+"if (count _dropPool > 0) then {" \n
+"	_this setVariable [""BIS_WL_funds"", (_funds - _costFinal + _dropCost + BIS_WL_FTCost) min BIS_WL_maxCP, TRUE];" \n
+"" \n
+"	[_this, _dropPool] call BIS_fnc_WLAirdrop;" \n
+"" \n
+"	[""%1 purchased %2 (now has %3 CPs and %4 subordinates)"", _this, _dropPool, _this getVariable ""BIS_WL_funds"", (count units _this) - 1] call BIS_fnc_WLDebug;" \n
+"};" \n
+"" \n
+"} else {" \n
+"_this setVariable [""BIS_WL_AI_airdropping"", FALSE];" \n
+"};" \n
+"_t = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_units">*/
+                                class purchase_units
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""BIS_WL_AI_airdropping"") && count _purchasableUnits > 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapestInf # 1) + _dropCost) && _maxToPurchase > 0 && !((group _this) getVariable [""NeroAI_active"",FALSE]) && ([_this] call NeroAI_fnc_nativeInfantryPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_vehicle">*/
+                                class purchase_vehicle
+                                {
+                                        itemno = 16;
+                                        priority = 1.000000;
+                                        to="purchase_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_cheapest # 1) >= 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapest # 1) + (_dropCost * 40)) && count ((group _this) getVariable [""BIS_WL_groupVehs"", []]) < 1 && ([group _this] call NeroAI_fnc_nativeGroundPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "airdrop_done">*/
+                                class airdrop_done
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="reset_var";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _t + 2 && {typeOf vehicle _x == ""Steerable_Parachute_F""} count units _this == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "terminate">*/
+                class terminate
+                {
+                        name = "terminate";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "run_timer">*/
+                class run_timer
+                {
+                        name = "run_timer";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_tPurch = time + 5 + random 10;" \n
+                         "" \n
+                         "_this setVariable [""BIS_WL_AI_airdropping"", TRUE];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="purchase";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tPurch"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "purchase_1">*/
+                class purchase_1
+                {
+                        name = "purchase_1";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"_this setVariable [""BIS_WL_dropPos"", _this];" \n
+                         "_dropCost = BIS_WL_dropCost * 40;" \n
+                         "_tgtSector = objNull;" \n
+                         "" \n
+                         "_groupVehs = (group _this) getVariable [""BIS_WL_groupVehs"", []];" \n
+                         "" \n
+                         "{" \n
+                         "	if (_x distance _this < 200 && ((_x getVariable ""BIS_WL_sectorSide"") == side group _this)) exitWith {_tgtSector = _x};" \n
+                         "} forEach BIS_WL_sectors;" \n
+                         "" \n
+                         "if !(isNull _tgtSector) then {" \n
+                         "	_dropCost = BIS_WL_dropCost;" \n
+                         "	_this setVariable [""BIS_WL_dropPos"", _tgtSector];" \n
+                         "};" \n
+                         "" \n
+                         "_dropPool = [];" \n
+                         "_funds = (_this getVariable ""BIS_WL_funds"") - _dropCost;" \n
+                         "_cost = 0;" \n
+                         "_costFinal = 0;" \n
+                         "_cnt = 0;" \n
+                         "" \n
+                         "while {_funds >= (_cost + (_cheapest # 1)) && (_cnt + count _groupVehs) < 1} do {" \n
+                         "	_i = floor random count _purchasableVehs;" \n
+                         "	_bought = _purchasableVehs # _i;" \n
+                         "	_cost = _cost + (_bought # 1);" \n
+                         "	_cnt = _cnt + 1;" \n
+                         "	if (_funds >= _cost) then {" \n
+                         "		_dropPool pushBack (_bought # 0);" \n
+                         "		_costFinal = _costFinal + (_bought # 1);" \n
+                         "	} else {" \n
+                         "		_cost = _cost - (_bought # 1);" \n
+                         "		_cost = _cost + (_cheapest # 1);" \n
+                         "		_dropPool pushBack (_cheapest # 0);" \n
+                         "		_costFinal = _costFinal + (_cheapest # 1);" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "if (count _dropPool > 0) then {" \n
+                         "	_this setVariable [""BIS_WL_funds"", (_funds - _costFinal + _dropCost) min BIS_WL_maxCP, TRUE];" \n
+                         "" \n
+                         "	_vehs = [_this, _dropPool, TRUE] call BIS_fnc_WLAirdrop;" \n
+                         "	_groupVehs = _groupVehs + _vehs;" \n
+                         "	(group _this) setVariable [""BIS_WL_groupVehs"", _groupVehs, TRUE];" \n
+                         "" \n
+                         "	[""%1 purchased %2 for %3 CPs (now has %4 CPs)"", _this, _dropPool, _costFinal, _this getVariable ""BIS_WL_funds""] call BIS_fnc_WLDebug;" \n
+                         "" \n
+                         "	_veh = _vehs select 0;" \n
+                         "	_maxCrew = (_veh emptyPositions ""Commander"") + (_veh emptyPositions ""Driver"") + (_veh emptyPositions ""Gunner"") + (_veh emptyPositions ""Cargo""); _maxCrew = _maxCrew max (BIS_WL_maxSubordinates + 1);" \n
+                         "" \n
+                         "	[_this, _vehs, _maxCrew] spawn {" \n
+                         "		scriptName ""WLAIPurchases (adding vehicle)"";" \n
+                         "		_unit = _this # 0;" \n
+                         "		_purchased = _this # 1;" \n
+                         "		_maxCrew = _this # 2;" \n
+                         "		sleep 30;" \n
+                         "		waitUntil {{(typeOf vehicle _x) == ""Steerable_Parachute_F""} count units group _unit == 0 && {((position _x) select 2) > 0.5} count _purchased == 0};" \n
+                         "		sleep 3;" \n
+                         "		//{(group _unit) addVehicle _x} forEach _purchased;" \n
+                         "		_unit setVariable [""BIS_WL_curWP"", [group _unit, currentWaypoint group _unit]];" \n
+                         "		_wp = (group _unit) addWaypoint [position (_purchased select 0), 0];" \n
+                         "		_wp waypointAttachVehicle (_purchased select 0);" \n
+                         "		_wp setWaypointType ""GETIN"";" \n
+                         "		(group _unit) setCurrentWaypoint _wp;" \n
+                         "		_wp setWaypointStatements [""TRUE"", ""(group this) setCurrentWaypoint (this getVariable ['BIS_WL_curWP', [group this, 0]])""];" \n
+                         "		while {count ((units _unit) select {alive _x}) > 1 && count units _unit > _maxCrew} do {" \n
+                         "			_unit = (((units _unit) select {alive _x}) select 1);" \n
+                         "			if (vehicle _unit == _unit) then {deleteVehicle _unit} else {(vehicle _unit) deleteVehicleCrew _unit}" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "_t = time;" \n
+                         "" \n
+                         "_maxToPurchase = ((BIS_WL_maxSubordinates) - (count units _this) + 1) min (_maxCrew - count units _this); _reservePilot = if (([_this,_this getVariable [""BIS_WL_dropPos"",_this],[typeOf _this]] call NeroAI_fnc_baseDeliveryContext) # 0) then {0} else {1}; _maxToPurchase = _maxToPurchase min ((([""INFANTRY""] call NeroAI_fnc_designPurchaseCapacity)-_reservePilot) max 0); _maxToPurchase = _maxToPurchase min 8;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_units">*/
+                                class purchase_units
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""BIS_WL_AI_airdropping"") && count _purchasableUnits > 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapestInf # 1) + _dropCost) && _maxToPurchase > 0 && !((group _this) getVariable [""NeroAI_active"",FALSE]) && ([_this] call NeroAI_fnc_nativeInfantryPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "purchase_vehicle">*/
+                                class purchase_vehicle
+                                {
+                                        itemno = 16;
+                                        priority = 1.000000;
+                                        to="purchase_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_cheapest # 1) >= 0 && (_this getVariable ""BIS_WL_funds"") >= ((_cheapest # 1) + (_dropCost * 40)) && count ((group _this) getVariable [""BIS_WL_groupVehs"", []]) < 1 && ([group _this] call NeroAI_fnc_nativeGroundPurchaseAllowed)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "airdrop_done">*/
+                                class airdrop_done
+                                {
+                                        itemno = 22;
+                                        priority = 0.000000;
+                                        to="reset_var";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _t + 2 && {!isNull attachedTo _x} count ((group _this) getVariable [""BIS_WL_groupVehs"", []]) == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "reset_var">*/
+                class reset_var
+                {
+                        name = "reset_var";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"_this setVariable [""BIS_WL_AI_airdropping"", FALSE];" \n
+                         "_tRecheck = time + 30;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 23;
+                                        priority = 1.000000;
+                                        to="check_funds";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _tRecheck"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "set_up_vars">*/
+                class set_up_vars
+                {
+                        name = "set_up_vars";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"[group _this] call NeroAI_fnc_assignDefaultRole; _purchasable = _this getVariable ""BIS_WL_purchasable"";" \n
+                         "_maxCrew = BIS_WL_maxSubordinates + 1;" \n
+                         "" \n
+                         "_this setVariable [""BIS_WL_AI_airdropping"", FALSE];" \n
+                         "" \n
+                         "_purchasableUnits = +(_purchasable # 0);" \n
+                         "" \n
+                         "{" \n
+                         "	if ((_x # 0) in getArray (missionConfigFile >> ""WLAIRequisitonBlacklist"")) then {" \n
+                         "		_purchasableUnits set [_forEachIndex, -1];" \n
+                         "	};" \n
+                         "} forEach _purchasableUnits;" \n
+                         "_purchasableUnits = _purchasableUnits - [-1];" \n
+                         "" \n
+                         "_purchasableVehs = [];" \n
+                         "" \n
+                         "{" \n
+                         "	_class = _x # 0;" \n
+                         "	_cost = _x # 1;" \n
+                         "	_req = _x # 2;" \n
+                         "	_threat = getArray (BIS_WL_cfgVehs >> _class >> ""threat"");" \n
+                         "	{" \n
+                         "		if (typeName _x != typeName 0) then {" \n
+                         "			_threat set [_forEachIndex, -1];" \n
+                         "		};" \n
+                         "	} forEach _threat;" \n
+                         "	if ((toLower getText (BIS_WL_cfgVehs >> _class >> ""simulation"")) in [""carx"", ""tankx"", ""car"", ""tank""] && {_x > 0.5} count _threat > 0 && count (""TRUE"" configClasses (BIS_WL_cfgVehs >> _class >> ""Turrets"")) > 0) then {_purchasableVehs pushBack [_class, _cost, _req]};" \n
+                         "} forEach (_purchasable # 1);" \n
+                         "" \n
+                         "_cheapest = ["""", -1];" \n
+                         "" \n
+                         "if (count _purchasableVehs > 0) then {" \n
+                         "	_cheapest = ["""", 10e10];" \n
+                         "	_cheapest = (_purchasableVehs # 0);" \n
+                         "" \n
+                         "	{" \n
+                         "		if ((_x # 1) < (_cheapest # 1)) then {_cheapest = _x};" \n
+                         "	} forEach _purchasableVehs;" \n
+                         "};" \n
+                         "" \n
+                         "_cheapestInf = ["""", -1];" \n
+                         "" \n
+                         "if (count _purchasableUnits > 0) then {" \n
+                         "	_cheapestInf = ["""", 10e10];" \n
+                         "	_cheapestInf = (_purchasableUnits # 0);" \n
+                         "" \n
+                         "	{" \n
+                         "		if ((_x # 1) < (_cheapestInf # 1)) then {_cheapestInf = _x};" \n
+                         "	} forEach _purchasableUnits;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "pause">*/
+                                class pause
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="check_funds";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isPlayer _this)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="INIT";
+        finalStates[] =
+        {
+                "terminate",
+        };
+};
+/*%FSM</COMPILE>*/

@@ -1,0 +1,9 @@
+[
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_aps.pbo",
+    "entries": [
+      "scripts\\rhs_fnc_aps_missileFired.sqf"
+    ]
+  }
+]

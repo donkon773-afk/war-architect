@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "1f2d665c-550a-554f-a398-d9963e865ce1",
+  "name": "Россия · спецназ CUP · лёгкая группа",
+  "setup": {
+    "side": "east",
+    "faction": "CUP_O_RU",
+    "assets": [
+      "CUP_O_2b14_82mm_RU",
+      "CUP_O_AGS_RU",
+      "CUP_O_KORD_high_RU",
+      "CUP_O_KORD_RU",
+      "CUP_O_Kornet_RU",
+      "CUP_O_GAZ_Vodnik_AGS_RU",
+      "CUP_O_GAZ_Vodnik_BPPU_RU",
+      "CUP_O_GAZ_Vodnik_KPVT_RU",
+      "CUP_O_GAZ_Vodnik_MedEvac_RU",
+      "CUP_O_GAZ_Vodnik_PK_RU",
+      "CUP_O_GAZ_Vodnik_Unarmed_RU",
+      "CUP_O_Mi8_medevac_RU",
+      "CUP_O_Mi8_RU",
+      "CUP_O_Mi8_VIV_RU",
+      "CUP_O_Mi8AMT_RU",
+      "CUP_O_UAZ_AA_RU",
+      "CUP_O_UAZ_AGS30_RU",
+      "CUP_O_UAZ_AMB_RU",
+      "CUP_O_UAZ_METIS_RU",
+      "CUP_O_UAZ_MG_RU",
+      "CUP_O_UAZ_Open_RU",
+      "CUP_O_UAZ_SPG9_RU",
+      "CUP_O_UAZ_Unarmed_RU"
+    ],
+    "infantry": [
+      "CUP_O_RUS_SpecOps",
+      "CUP_O_RUS_SpecOps_Autumn",
+      "CUP_O_RUS_SpecOps_Night",
+      "CUP_O_RUS_SpecOps_Night_Autumn",
+      "CUP_O_RUS_SpecOps_Scout",
+      "CUP_O_RUS_SpecOps_Scout_Autumn",
+      "CUP_O_RUS_SpecOps_Scout_Night",
+      "CUP_O_RUS_SpecOps_Scout_Night_Autumn",
+      "CUP_O_RUS_SpecOps_SD",
+      "CUP_O_RUS_SpecOps_SD_Autumn"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 2,
+  "createdAt": "2026-10-15T16:43:30.066Z",
+  "updatedAt": "2026-10-16T21:15:50.395Z"
+}

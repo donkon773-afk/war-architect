@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "id": "d18e4ca0-ce66-5a0a-934e-c396d5ee5f75",
+  "name": "РВСН / артиллерия РФ (RHS) · обеспечение",
+  "setup": {
+    "side": "east",
+    "faction": "rhs_faction_rva",
+    "assets": [
+      "rhs_9k79",
+      "rhs_9k79_B",
+      "rhs_9k79_K"
+    ],
+    "infantry": [
+      "rhs_rva_crew",
+      "rhs_rva_crew_armored",
+      "rhs_rva_crew_officer",
+      "rhs_rva_crew_officer_armored"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.950Z",
+  "updatedAt": "2026-10-15T16:43:29.950Z"
+}

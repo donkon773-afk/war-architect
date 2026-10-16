@@ -1,0 +1,28 @@
+{
+  "world": "VTF_Lybor",
+  "worldSize": 6144,
+  "strideX": 384,
+  "strideY": 384,
+  "columns": 16,
+  "rows": 16,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -64,
+      "worldTop": 6208,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 216292407,
+  "sourceModified": 1790780648946.082,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 256,
+  "seconds": 2.76,
+  "coarsestPixelSize": 1.0
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "world": "Australia",
+  "title": "NeroAI — Australia",
+  "mode": "three",
+  "greenRole": "defender",
+  "playerSide": "WEST",
+  "lethalZones": false,
+  "bases": [
+    {
+      "id": "west",
+      "name": "База синих",
+      "side": "WEST",
+      "position": [
+        8192,
+        32768
+      ],
+      "radius": 200
+    },
+    {
+      "id": "east",
+      "name": "База красных",
+      "side": "EAST",
+      "position": [
+        32768,
+        8192
+      ],
+      "radius": 200
+    },
+    {
+      "id": "green",
+      "name": "Green",
+      "side": "GUER",
+      "position": [
+        20000,
+        20000
+      ],
+      "radius": 200
+    }
+  ],
+  "sectors": [
+    {
+      "id": "town",
+      "name": "Town",
+      "side": "GUER",
+      "position": [
+        12000,
+        16000
+      ],
+      "radius": 250,
+      "infantry": 12,
+      "vehicles": 0,
+      "vehicleClasses": []
+    }
+  ],
+  "spawns": [],
+  "startAssets": [],
+  "garrisonLLM": {
+    "enabled": false,
+    "route": "shared",
+    "instructions": "",
+    "limit": 4
+  },
+  "playerRole": "observer",
+  "maxNPCs": 160,
+  "maxVehicles": 32,
+  "startCP": 6000,
+  "income": 100,
+  "greenFaction": "rhsgref_faction_cdf_ng"
+}

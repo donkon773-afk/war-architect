@@ -1,0 +1,68 @@
+
+> neroai-warlords-dual-llm@0.1.0 test:control
+> node --test control-center/core.test.js tests/control-options.test.js tests/control-launch.test.js tests/panel-connection.test.js tests/designer-ui.test.js tests/color-themes.test.js tests/control-editor-regressions.test.js tests/side-setups.test.js tests/three-side-startup.test.js
+
+✔ single Mac routing removes stale nodes and leaves transport independent (1126.6018ms)
+✔ two LLM routing binds strategy and tactics to selected roles (23.8995ms)
+✔ invalid launch arguments, URLs and unsupported settings are rejected (47.094ms)
+✔ model discovery validates HTTP and does not pretend to verify a completion (88.8903ms)
+✔ active preset label describes selected settings and ignores object key order (224.5001ms)
+✔ saving a changed selection clears stale names without rewriting presets, including special object keys (105.7689ms)
+✔ launch script guards live game and installs only isolated scenario artifacts (0.3975ms)
+✔ index.html restores theme, accepts seven choices and stores appearance only (8.329ms)
+✔ index.html handles unavailable storage and synchronizes other windows without rewriting preference (10.8759ms)
+✔ designer.html restores theme, accepts seven choices and stores appearance only (26.3971ms)
+✔ designer.html handles unavailable storage and synchronizes other windows without rewriting preference (5.2779ms)
+✔ vanilla preset card identifies standard AI and does not advertise the unused model (4.9105ms)
+✔ collapsed mod catalogs create rows on demand and retain green selections after filtering (4.6302ms)
+✔ green armies validate their faction and equipment, rejecting red equipment (1318.0795ms)
+✔ third side generated shop contains exactly the selected green equipment, including naval (246.6921ms)
+✔ map presets round-trip three armies and reject a stale editor revision (55.1163ms)
+✔ installed status checks the selected scenario, with different addon names and paths (11.9125ms)
+✔ real PowerShell installer backs up and installs either scenario; failed verification keeps old addon (3161.1243ms)
+✔ ordinary Warlords launch constructs its mission list and extra mods without undeclared variables (26.2301ms)
+✔ designer launch constructs only its designed mission and selected map mods (2.4641ms)
+✔ Antistasi launch has an empty Warlords mission list and no leaked designer state (2.2224ms)
+✔ addon packaging follows all mission generation and verification, for ordinary and designed maps (3.9702ms)
+✔ Antistasi packs and verifies its own candidate before launch (2.137ms)
+✔ failed addon verification blocks the launch helper (6.6985ms)
+✔ uniform candidate filtering excludes weapons while preserving public uniform classes (14.7078ms)
+✔ tracked IFVs and MBTs in installed catalog retain distinct purchase roles (1174.6041ms)
+✔ native purchase availability binds a local category and rejects incomplete asset rows (3.9195ms)
+✔ city caps and separate allied route are validated and bound without changing enemy route (84.2917ms)
+✔ all vehicle categories can be selected and appear in the correct native shop category (43.9325ms)
+✔ journal is bounded, redacts secrets, and skips an incomplete first line (4.9761ms)
+✔ garrison adaptation preserves native source when uncapped and caps only spawned defenders (8.6316ms)
+✔ reset stays a reversible draft; save uses the explicit existing action (1223.5828ms)
+✔ tabs, search, focus and coordinates operate on selected points (31.0474ms)
+✔ switching to native mode removes third base and invalid green player selection (43.4196ms)
+✔ green army edits persist in collected design and undo/redo restores its catalog (57.7491ms)
+✔ side and type filters select only matching points without deleting anything (27.7541ms)
+✔ collected map army is already normalized for verified save/read-back (43.4756ms)
+✔ map clears a whole side including infantry and prices, with undo preserving the original setup (58.8193ms)
+✔ applying a library setup to the map replaces only its side and saves the reusable composition (48.1543ms)
+✔ index.html reports network failure without retrying an uncertain POST (6.1393ms)
+✔ index.html renews rejected session once and preserves request data without refreshing page (3.1941ms)
+✔ index.html refuses unrelated 403 and limits renewal retries (17.7111ms)
+✔ designer.html reports network failure without retrying an uncertain POST (4.6423ms)
+✔ designer.html renews rejected session once and preserves request data without refreshing page (1.9302ms)
+✔ designer.html refuses unrelated 403 and limits renewal retries (8.9825ms)
+✔ clear removes the whole selected catalog and distinguishes empty infantry from auto (1165.1425ms)
+✔ applying a setup replaces one side and preserves the other two (13.2411ms)
+✔ empty saved infantry produces an empty shop instead of automatically adding the faction roster (37.3835ms)
+✔ disk library round-trips catalogs and prices; revisions and recoverable deletion protect saved data (53.2493ms)
+✔ library rejects foreign equipment, bad prices, duplicate names and path traversal (54.0997ms)
+✔ library UI clears hidden selections, restores them, and keeps a deliberately empty custom list (123.108ms)
+✔ library UI saves and reloads the real store; a stale save keeps the unsaved draft (163.0936ms)
+✔ main launcher clear actions operate on the selected side and have an undo (23.6547ms)
+✔ import locks editing and saving until the saved side is loaded (84.8101ms)
+✔ Sanagasta three-side mission declares its terrain and multiplayer metadata before entering the lobby (1189.0145ms)
+✔ each combat side has one playable default player and the observer has a separate civilian slot (232.1247ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4976.254

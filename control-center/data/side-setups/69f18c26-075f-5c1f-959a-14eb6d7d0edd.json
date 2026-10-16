@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "id": "69f18c26-075f-5c1f-959a-14eb6d7d0edd",
+  "name": "Армия США — пустыня (RHS) · зима",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usarmy_d",
+    "assets": [],
+    "infantry": [
+      "rhsusf_army_ocp_arb_autorifleman",
+      "rhsusf_army_ocp_arb_autoriflemana",
+      "rhsusf_army_ocp_arb_engineer",
+      "rhsusf_army_ocp_arb_grenadier",
+      "rhsusf_army_ocp_arb_maaws",
+      "rhsusf_army_ocp_arb_machinegunner",
+      "rhsusf_army_ocp_arb_machinegunnera",
+      "rhsusf_army_ocp_arb_marksman",
+      "rhsusf_army_ocp_arb_medic",
+      "rhsusf_army_ocp_arb_rifleman",
+      "rhsusf_army_ocp_arb_rifleman_m590",
+      "rhsusf_army_ocp_arb_riflemanat",
+      "rhsusf_army_ocp_arb_riflemanl",
+      "rhsusf_army_ocp_arb_sniper_m107",
+      "rhsusf_army_ocp_arb_squadleader",
+      "rhsusf_army_ocp_arb_teamleader",
+      "rhsusf_army_ocp_rifleman_arb_m16"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.964Z",
+  "updatedAt": "2026-10-15T16:43:29.964Z"
+}

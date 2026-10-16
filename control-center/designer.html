@@ -1,0 +1,533 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>War Architect — редактор сценария</title>
+<style>body{margin:0;background:#0e1723;color:#e5eef8;font:14px Segoe UI}header{padding:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}button,select,input,textarea{font:inherit;color:inherit;background:#172537;border:1px solid #40556f;border-radius:6px;padding:8px}button{cursor:pointer}main{display:grid;grid-template-columns:minmax(400px,1fr) 380px;height:calc(100vh - 90px)}aside{overflow:auto;padding:14px;background:#131f2e}label{display:block;margin:12px 0 5px}input,textarea,aside select{box-sizing:border-box;width:100%}#viewport{position:relative;overflow:hidden;touch-action:none;background:#101c2c}svg{width:100%;height:100%;cursor:crosshair}#status{color:#8ddfc2}#quality{position:absolute;left:10px;bottom:10px;background:#0e1723d9;padding:8px;pointer-events:none}h3{margin:14px 0}p{color:#aabbce}#points button{display:block;margin:5px 0;width:100%;text-align:left}.danger{color:#ffc0aa}@media(max-width:800px){main{grid-template-columns:1fr;height:auto}#viewport{height:65vh}aside{max-height:none}}
+:root{color-scheme:dark;--border:#30465f;--muted:#a5b5c9}*{box-sizing:border-box}body{height:100vh;overflow:hidden}header{min-height:72px;background:#121f30;border-bottom:1px solid var(--border);padding:12px 18px}header select{min-width:180px;max-width:330px;flex:1}.back{color:#9ebeff;text-decoration:none;padding-right:8px}.primary{background:#82abff;color:#102038;border-color:#82abff}.editor-status{min-height:36px;padding:8px 18px;background:#0c1420;display:flex;gap:15px;justify-content:space-between;font-size:12px}#summary{color:var(--muted)}main{height:calc(100vh - 108px);grid-template-columns:minmax(0,1fr) 410px;min-height:0}aside{padding:0 18px 24px;border-left:1px solid var(--border)}.editor-tabs{position:sticky;top:0;z-index:3;background:#131f2e;padding:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:7px;border-bottom:1px solid var(--border)}.editor-tabs button{text-align:left;padding:9px;font-size:13px}.editor-tabs button[aria-selected=true]{background:#2a4669;border-color:#86b0ff;color:#fff}.tab-panel[hidden]{display:none}.tab-panel{padding-top:8px}.map-controls{position:absolute;top:12px;left:12px;right:12px;display:flex;flex-wrap:wrap;gap:6px}.map-controls button{background:#102137ed;box-shadow:0 2px 8px #0005;font-size:12px}.map-controls button.active{border-color:#a8c6ff;background:#2a4669}#quality{font-size:12px;max-width:80%;border:1px solid var(--border);border-radius:7px}.coordinates{display:grid;grid-template-columns:1fr 1fr;gap:10px}button:disabled{opacity:.45;cursor:default}input:focus,select:focus,textarea:focus{outline:2px solid #82abff;outline-offset:1px}.point-row{display:flex;gap:6px;margin:6px 0}.point-row button{margin:0!important}.point-row button:first-child{flex:1}.point-row .locate{width:auto!important}#points button.current{background:#2a4669;border-color:#a8c6ff}#selectionInfo{padding:10px;background:#1c2c40;border-radius:7px}.actions{display:flex;gap:7px;margin-bottom:10px}.tab-panel>h3:first-child{margin-top:0}#garrison{border-top:1px solid var(--border);margin-top:18px}#startList button{display:block;width:100%;margin:8px 0;text-align:left}@media(max-width:850px){body{height:auto;overflow:auto}main{height:auto;grid-template-columns:1fr}#viewport{height:65vh;min-height:400px}aside{border-left:0;border-top:1px solid var(--border)}.editor-status{flex-wrap:wrap}.editor-tabs{grid-template-columns:repeat(3,1fr)}header select{max-width:none}.map-controls{right:8px;left:8px}}
+
+.theme-control{display:flex;flex-direction:column;gap:4px;margin:0;font-size:12px;color:var(--muted)}.theme-control select{width:160px;font-size:13px;padding:7px 10px}.header-tools{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+body{background:var(--bg);color:var(--text)}p,label,footer{color:var(--muted)}button,input,select,textarea{color:var(--text);border-color:var(--border);background:var(--input)}button:hover{background:var(--hover)}.card{background:var(--card);border-color:var(--border)}.primary,.editor-link,.app-tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}.primary:hover,.editor-link:hover{background:var(--accent-hover)}.bar{background:var(--bar);border-color:var(--border)}.message,.preset-card,.preset-create,.param-group,#selectionInfo{background:var(--input);border-color:var(--border)}.launch-summary{background:linear-gradient(115deg,var(--hover),var(--card));border-color:var(--accent)}.eyebrow,.back{color:var(--accent)}.setup-nav button[aria-current=page],#points button.current,.editor-tabs button[aria-selected=true],.map-controls button.active{background:var(--hover);border-color:var(--accent);color:var(--text)}.armyAssets,.node,.editor-tabs,#garrison{border-color:var(--border)}.preset-card.chosen{border-color:var(--accent)}header,aside,.editor-tabs{background:var(--card);border-color:var(--border)}.editor-status{background:var(--input)}#quality{background:var(--bar);border-color:var(--border);color:var(--text)}.map-controls button{background:var(--bar);color:var(--text)}.save-status{background:var(--success-bg);color:var(--success-text)}.save-status.pending{background:var(--pending-bg);color:var(--pending-text)}.tag,.ok,#status{color:var(--success-text)}.tag{border-color:var(--border)}.bad,.danger{color:var(--error-text)}
+@media(max-width:650px){.header-tools{gap:8px}.header-tools .tag{display:none}.theme-control select{width:140px}}
+.save-banner{flex:1;margin:0 10px;padding:4px 10px;border-radius:6px;font-weight:600;font-size:13px}.save-banner.ok{background:#173d2a;color:#b9f5cf}.save-banner.bad{background:#4a1d1d;color:#ffd0c8}.save-banner.pending{background:#3a3418;color:#ffe9a6}.save-banner.info{background:#1b2f4a;color:#cfe0ff}.save-banner.warn{background:#3d2f12;color:#ffe2a8}
+.editing-box{padding:10px 12px;border:1px solid var(--accent);border-radius:8px;margin:10px 0;background:var(--input)}.editing-box strong{display:block;font-size:15px;margin-top:2px}.dirty-flag{color:#ffd27a;font-weight:600}
+.preset-row{border:1px solid var(--border);border-radius:8px;padding:10px;margin:8px 0;background:var(--input)}.preset-row.open{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}.preset-row .meta{font-size:12px;color:var(--muted);margin-top:3px}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;margin-left:6px;background:var(--hover);vertical-align:middle}.badge.game{background:#1f5d3a;color:#c9f7da}.badge.open{background:#2a4669;color:#dbe8ff}
+.row-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.row-actions button{padding:5px 9px;font-size:12px}.save-actions{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0}
+details.help{border:1px dashed var(--border);border-radius:8px;padding:8px 12px;margin:10px 0}details.help summary{cursor:pointer;font-weight:600}details.help ol{margin:8px 0 4px 18px;padding:0}details.help li{margin:4px 0;color:var(--muted)}
+body{display:grid;grid-template-rows:auto auto minmax(0,1fr)}main{height:auto;min-height:0}header{gap:8px}header>strong{font-size:18px}.editor-status{align-items:center;min-height:44px}.editor-status .theme-control{flex-direction:row;align-items:center}.map-controls{right:auto;max-width:calc(100% - 24px);padding:7px;background:var(--bar);border:1px solid var(--border);border-radius:12px;backdrop-filter:blur(8px)}.map-controls button{box-shadow:none}.map-legend{position:absolute;right:14px;bottom:14px;display:flex;gap:12px;flex-wrap:wrap;background:var(--bar);padding:9px 12px;border:1px solid var(--border);border-radius:9px;font-size:12px;pointer-events:none}.map-hint{position:absolute;top:108px;left:14px;max-width:calc(100% - 28px);padding:6px 10px;background:var(--bar);border-radius:6px;font-size:12px;pointer-events:none}.army-row{display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--border);padding:9px 0;margin:0}.army-row input{width:auto}.army-row span{overflow-wrap:anywhere}.army-list{max-height:42vh;overflow:auto}.side-dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:4px}.side-blue{background:#68aaff}.side-red{background:#ff706c}.side-green{background:#6de09c}#mapCoordinates{position:absolute;left:14px;bottom:66px;background:var(--bar);padding:5px 8px;border-radius:5px;font-size:12px;pointer-events:none}#quality{bottom:14px;max-width:48%;font-size:11px}.point-filters{display:grid;grid-template-columns:1fr 1fr;gap:8px}.editor-tabs button{min-height:38px}button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:850px){body{display:block;height:auto;overflow:auto}main{display:grid;grid-template-columns:1fr}#viewport{height:60vh;min-height:380px}.map-legend{left:14px;right:auto;bottom:14px}#quality{bottom:56px;max-width:90%}#mapCoordinates{bottom:90px}.editor-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:500px){.editor-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.editor-status .theme-control{display:none}header>select{min-width:120px}.map-hint{top:146px}}
+.editor-tabs{grid-template-columns:repeat(3,minmax(0,1fr));padding:10px 0;gap:6px}.editor-tabs button{padding:7px 5px;font-size:12px;line-height:1.3;text-align:center}#panel-armies>p{margin:6px 0;font-size:12px}#panel-armies details.help{margin:6px 0;padding:6px 9px;font-size:12px}@media(max-width:500px){.editor-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
+<!-- military-ui:start -->
+<style>
+/* Shared operations-room theme, embedded in every launcher/editor document. */
+:root,body[data-color-theme]{--bg:#111613!important;--card:#1a211d!important;--input:#121915!important;--border:#3b473d!important;--text:#e2e6db!important;--muted:#a8b2a4!important;--accent:#b3bd89!important;--accent-hover:#c7d1a0!important;--on-accent:#172016!important;--hover:#29362a!important;--bar:#182019!important;--green:#a8c6a2!important;--success-bg:#263c2b!important;--success-text:#b5d5b2!important;--pending-bg:#473d24!important;--pending-text:#e3ce94!important;--error-text:#edb0a3!important;color-scheme:dark!important}
+body{background:#111613!important;color:var(--text);font-family:"Segoe UI",Arial,sans-serif;letter-spacing:.05px}
+button,input,select,textarea,.card,.message,.launch-summary,.preset-card,.preset-create,.param-group,.armyAssets,.editing-box,.preset-row,.ai-switch,.editor-link,.setup-card{border-radius:4px!important}
+button,input,select,textarea{background:var(--input)!important;color:var(--text)!important;border-color:var(--border)!important;min-height:36px}
+button:hover{background:var(--hover)!important;border-color:#78856c!important}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #c0ca9a!important;outline-offset:2px}
+button.primary,.primary,.app-tabs button[aria-selected=true]{background:#b3bd89!important;color:#172016!important;border-color:#b3bd89!important}
+button.primary:hover{background:#c7d1a0!important}
+.card,aside,header,.editor-tabs,.preset-create,.param-group,.preset-card{background:var(--card)!important;border-color:var(--border)!important}
+.tag,.save-status,.badge{border-radius:3px!important}
+header h1{font-size:24px;letter-spacing:1px;font-weight:650}
+header h1 span{color:#b3bd89!important}
+.eyebrow{color:#b3bd89!important;letter-spacing:1.8px}
+.app-tabs{gap:4px;padding:6px;background:#171f19;border:1px solid var(--border);border-radius:4px;position:sticky;top:0;z-index:8}
+.app-tabs button{background:transparent!important;border-color:transparent!important;min-height:43px;flex:1;padding:9px 12px;font-weight:600}
+.app-tabs button[aria-selected=true]{border-color:#727f5d!important;background:#29352a!important;color:#dfe9c3!important;box-shadow:inset 0 -2px #b3bd89}
+.setup-nav{gap:4px;top:72px}.setup-nav button{border-color:transparent!important;border-left:2px solid transparent!important;border-radius:0!important}
+.setup-nav button[aria-current=page]{border-left-color:#b3bd89!important;background:#283429!important}
+.launch-summary{background:#1c271e!important;border-color:#56624c!important;padding:16px 20px;box-shadow:none}
+.launch-summary h2{font-size:19px}.summary-facts{max-width:50%;line-height:1.5}
+.message{background:#172019!important;padding:9px 14px;max-height:90px;overflow:auto;font-size:13px}
+body>main{max-width:1560px;padding:20px 26px 150px}
+.workspace-shell>.bar{background:#151e17!important;border-top:1px solid #536049!important;box-shadow:none!important;display:grid!important;grid-template-columns:1fr auto auto;gap:8px 14px;padding:12px 26px 10px;z-index:12}
+.workspace-shell>.bar>#settingHelp{grid-column:1/-1;display:block;min-height:34px;max-height:54px;overflow:auto;color:#c5cfb9;border-top:1px solid var(--border);padding-top:7px;font-size:12px;line-height:1.4}
+.help-trigger{display:inline-flex;justify-content:center;align-items:center;min-height:18px!important;width:18px;padding:0!important;margin-left:7px;border:1px solid #68755a!important;border-radius:50%!important;color:#c5d2aa!important;font-size:11px;line-height:16px;vertical-align:middle;flex:none}
+.help-trigger:hover,.help-trigger:focus-visible{background:#384733!important}
+.context-help-inline{display:block;grid-column:1/-1;flex-basis:100%;width:100%;box-sizing:border-box;margin-top:8px;padding:10px 12px;border-left:3px solid #a6a074;background:#222c22;color:#e0e5d8;font-size:13px;font-weight:400;line-height:1.5;white-space:normal;overflow-wrap:anywhere;cursor:default}
+label:has(>.context-help-inline:not([hidden])){flex-wrap:wrap}
+label .help-trigger{float:none}.context-note{font-size:12px;color:var(--muted);padding:10px 0;line-height:1.5}
+.scenario-host>section{display:block!important}.scenario-host .tab-panel{border:0!important;padding:0!important}
+.scenario-host:empty{display:none!important}.scenario-host h3{margin-top:0}.scenario-host label{max-width:720px}
+.scenario-host input:not([type=checkbox]),.scenario-host select,.scenario-host textarea{width:100%}
+#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+#designResourcesHost h3{grid-column:1/-1;margin-bottom:0}
+.designed-scenario #mapArmyNotice,.designed-scenario #designerEntry{display:none!important}
+#mapPresetsPanel .designer-intro{padding:4px 0 8px;font-size:13px}
+#designerFrame,#setupsFrame,#operationsFrame{border:1px solid var(--border);border-radius:4px;width:100%;background:var(--bg);display:block;height:calc(100dvh - 280px);min-height:560px}
+body[data-workspace-tab=maps]>main,body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{max-width:none;padding:16px 20px 130px}
+body[data-workspace-tab=maps] #message:empty{display:none}
+body[data-workspace-tab=setups]>.bar,body[data-workspace-tab=operations]>.bar{display:none!important}
+body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{padding-bottom:20px}
+body[data-workspace-tab=setups] #setupsFrame,body[data-workspace-tab=operations] #operationsFrame{height:calc(100dvh - 180px)}
+.workspace-editor{height:100dvh;overflow:hidden;display:grid!important;grid-template-rows:auto auto auto minmax(0,1fr)!important}
+.workspace-editor>header{padding:7px 12px;gap:8px;margin:0;min-height:46px}
+.workspace-editor header>strong{font-size:15px;margin-right:auto}
+.workspace-editor #world,.workspace-editor #save,.workspace-editor #openSetups,.workspace-editor #useOpenPreset,.workspace-editor .theme-control{display:none!important}
+.workspace-editor .editor-status{padding:6px 12px;min-height:32px;font-size:12px;gap:10px}
+.workspace-editor .editor-status #summary{margin-left:auto;white-space:nowrap}
+.workspace-editor .save-banner{margin:0;padding:3px 8px;font-size:12px;max-width:60%;max-height:46px;overflow:auto}
+.workspace-editor>.map-controls{position:static!important;display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:none;gap:4px;margin:0;padding:7px 10px;background:#1d271f;border-radius:0;backdrop-filter:none;border-width:1px 0;align-items:center}
+.workspace-editor>.map-controls button{flex:none;white-space:nowrap;padding:7px 10px;font-size:12px;min-height:32px}
+.workspace-editor>main{display:grid!important;grid-template-columns:minmax(0,1fr) clamp(280px,27vw,360px)!important;height:100%;min-height:0;padding:0;max-width:none}
+.workspace-editor aside{padding:10px 14px;min-height:0;border-left:1px solid var(--border)}
+.workspace-editor .editor-tabs{display:flex;gap:4px;position:sticky;top:-10px;z-index:3;padding:8px 0}
+.workspace-editor .editor-tabs button{flex:1;padding:8px 5px;font-size:12px;white-space:nowrap}
+.workspace-editor .editor-tabs button[hidden]{display:none!important}
+.workspace-editor .map-hint{display:none}.workspace-editor #quality{display:none}
+.workspace-editor #mapCoordinates{bottom:12px;left:12px;background:#131c15ed;border-radius:3px;font-size:11px}
+.workspace-editor .map-legend{bottom:12px;right:12px;padding:5px 8px;border-radius:3px;font-size:11px;gap:9px}
+.workspace-editor #viewport{height:100%;min-height:0;background:#151c17}
+.workspace-editor #map{cursor:grab}.workspace-editor #map:active{cursor:grabbing}
+.workspace-editor #helpBox{display:none}.workspace-editor #points{max-height:36vh;overflow:auto}
+.workspace-editor #panel-points>p:first-child{font-size:12px;line-height:1.5}
+.workspace-editor #garrison{border-top:1px solid var(--border);padding-top:6px}
+.workspace-editor.inspector-collapsed>main{grid-template-columns:1fr!important}.workspace-editor.inspector-collapsed aside{display:none}
+.workspace-setups>.top{padding:10px 18px}.workspace-setups>.top .back{display:none}
+.workspace-setups main{padding-bottom:100px}.workspace-setups .footer{background:#182019!important;border-color:var(--border)!important;box-shadow:none}
+@media(max-width:1000px){body>main{padding:16px 16px 160px}.setup-workspace{grid-template-columns:170px minmax(0,1fr)}.summary-facts{max-width:100%}.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{grid-template-columns:1fr}.workspace-editor>main{grid-template-columns:minmax(0,1fr) 290px!important}}
+@media(max-width:700px){.setup-workspace{grid-template-columns:1fr}.setup-nav{grid-template-columns:repeat(3,1fr)}.setup-nav button{padding:8px}.workspace-shell>.bar{padding:10px 12px;grid-template-columns:1fr 1fr}.workspace-shell>.bar>#launchState{grid-column:1/-1}header .header-tools{display:none}.workspace-editor>main{grid-template-columns:1fr!important;grid-template-rows:minmax(240px,55%) 1fr}.workspace-editor aside{border-left:0;border-top:1px solid var(--border)}#designerFrame{height:calc(100dvh - 270px);min-height:650px}.workspace-editor .map-legend{max-width:60%}}
+
+.theme-control{display:none!important}
+
+.designed-scenario [data-scenario-duplicate]{display:none!important}
+.workspace-setups .footer{flex-wrap:wrap}.workspace-setups .setups-help{flex-basis:100%;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:6px;min-height:30px}
+
+[hidden]{display:none!important}
+.workspace-shell{height:100dvh;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.workspace-shell>main{height:100%;min-height:0;overflow:auto;padding-bottom:24px!important;width:100%}
+.workspace-shell>.bar{position:static!important}
+.workspace-shell[data-workspace-tab=setups],.workspace-shell[data-workspace-tab=operations]{grid-template-rows:minmax(0,1fr)}
+.workspace-shell #designerFrame{height:calc(100dvh - 340px);min-height:430px}
+.ai-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 14px;padding:12px!important}
+.ai-switch .check{margin:4px 0!important;font-size:13px;align-items:center}
+.ai-switch #vanillaLambsRow{grid-column:1/-1;font-size:12px}
+.scenario-host label{margin-top:5px}.scenario-host{padding:20px!important}
+@media(max-width:700px){.ai-switch{grid-template-columns:1fr}.workspace-shell #designerFrame{height:calc(100dvh - 330px);min-height:620px}}
+
+.workspace-shell[data-workspace-tab=maps]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-top:10px!important;padding-bottom:10px!important}
+.workspace-shell[data-workspace-tab=maps]>main>header{min-height:44px;margin-bottom:8px}
+.workspace-shell[data-workspace-tab=maps]>main>header p{display:none}
+.workspace-shell[data-workspace-tab=maps] .app-tabs{position:static;margin-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] .app-tabs button{min-height:36px;padding-top:6px;padding-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] #message{margin:4px 0 6px}
+.workspace-shell[data-workspace-tab=maps] #mapPresetsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell[data-workspace-tab=maps] #designerFrame{height:100%;min-height:0;flex:1}
+.workspace-shell[data-workspace-tab=maps] .designer-intro{font-size:12px;margin:0;padding:6px 0}
+.workspace-shell.map-focus>main>header,.workspace-shell.map-focus #message{display:none!important}
+.workspace-shell.map-focus[data-workspace-tab=maps]>main{grid-template-rows:auto minmax(0,1fr)}
+.map-focus-toggle{font-size:12px;padding:5px 10px;min-height:30px;flex:none}
+@media(max-width:700px){.workspace-shell[data-workspace-tab=maps]>main{overflow:auto}.workspace-shell[data-workspace-tab=maps] #designerFrame{min-height:620px}}
+
+.workspace-operations{--line:#3b473d;--blue:#b3bd89;--red:#edb0a3}
+.workspace-operations>header{padding:14px 24px}.workspace-operations>header p{font-size:13px;margin:6px 0}
+.workspace-operations>main{padding:18px 24px 80px;max-width:1560px}
+.workspace-operations .savebar{background:#182019!important;border-color:var(--border)!important;padding:12px 24px;margin:20px -24px -80px}
+.workspace-operations .operations-help{display:block;max-width:1444px;margin:8px auto 0;border-top:1px solid var(--border);padding-top:6px;min-height:30px;font-size:12px;color:var(--muted)}
+.workspace-operations .template-link{border-radius:4px!important;color:var(--accent);border-color:var(--border)}
+
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-bottom:12px!important}
+.workspace-shell #setupsPanel,.workspace-shell #operationsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell #setupsFrame,.workspace-shell #operationsFrame{flex:1;height:100%!important;min-height:0}
+
+.workspace-shell[data-workspace-tab=setups] #message,.workspace-shell[data-workspace-tab=operations] #message{display:none!important}
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{grid-template-rows:auto auto minmax(0,1fr)}
+.workspace-shell>main>header #openSetups{display:none}
+.workspace-operations #status,.workspace-setups #counts{background:#203025!important;border-color:var(--border)!important}
+.workspace-setups .library,.workspace-setups .editor{border-radius:4px}
+.devmode-panel{max-width:1100px;margin:18px auto}.devmode-features{display:grid;gap:12px;margin:18px 0}.devmode-feature{display:flex;align-items:start;gap:14px;padding:18px;border:1px solid var(--border);border-left:3px solid #a99a64;background:var(--input);border-radius:4px;cursor:pointer}.devmode-feature input{margin:4px 0;width:20px;height:20px;flex:none}.devmode-feature>span{display:grid;gap:8px}.devmode-feature strong{color:var(--text)}.devmode-feature small{color:#c8bb87;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.devmode-feature:has(input:disabled){opacity:.65}.devmode-note{border-top:1px solid var(--border);padding-top:16px}#devModeStatus{min-height:28px;color:var(--accent)}
+
+/* Field equipment: graphite panels, muted sand markings, fine map grid. */
+:root,body[data-color-theme]{--bg:#101413!important;--card:#1b211e!important;--input:#111714!important;--border:#414a40!important;--line:#414a40!important;--text:#ebe9dc!important;--muted:#aeb6a7!important;--accent:#c2ba8a!important;--accent-hover:#d8cf9b!important;--on-accent:#182019!important;--blue:#c2ba8a!important;--hover:#2b342b!important;--bar:#171d18!important}
+body{background-color:var(--bg)!important;background-image:linear-gradient(#b2b89b05 1px,transparent 1px),linear-gradient(90deg,#b2b89b05 1px,transparent 1px)!important;background-size:40px 40px!important;font-size:14px}
+h1,h2,h3,button,.eyebrow{font-family:Bahnschrift,"Arial Narrow","Segoe UI",sans-serif}h1,h2,h3{color:var(--text);font-weight:600}h2{letter-spacing:.3px}a{color:var(--accent)!important;text-underline-offset:3px}
+header{background:#171e19!important;background-image:none!important;border-bottom:1px solid var(--border)}
+.workspace-shell>main>header{padding:18px 22px;border:1px solid var(--border);border-top:3px solid #a8a477;margin-bottom:16px;position:relative}
+header h1 span,.eyebrow{color:var(--accent)!important}.workspace-shell>main>header h1{font-size:25px;letter-spacing:1.3px}.workspace-shell>main>header p{margin:6px 0 0;font-size:12px;letter-spacing:.5px}.header-tools .tag{padding:9px 12px;border:1px solid #777c59;color:#d5cf9f!important;font:11px Consolas,monospace;letter-spacing:1px}
+.app-tabs{background:#171d18!important;border-radius:2px;gap:2px;padding:4px}.app-tabs button{font-size:13px;letter-spacing:.4px;min-height:45px;border-radius:1px!important}.app-tabs button[aria-selected=true]{background:#343d2f!important;color:#f0ebce!important;box-shadow:inset 0 -2px #c2ba8a!important;border-color:#6b7356!important}
+.card,.param-group,.preset-create,.preset-card,.mission-card,.editing-box,.setup-card,.workspace-setups .library,.workspace-setups .editor,.saved article{border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 3px 12px #0002;background:var(--card)!important}
+.card>h2:first-child,.param-group>summary{padding-bottom:12px;border-bottom:1px solid var(--border)}
+button{font-weight:500;letter-spacing:.15px;transition:background-color .12s,border-color .12s}.primary,button.primary{background:#c2ba8a!important;border-color:#c2ba8a!important;color:#182019!important}.primary:hover,button.primary:hover{background:#d8cf9b!important}
+input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:2px!important;box-shadow:inset 0 1px 3px #0003;padding:9px 11px}input[type=checkbox],input[type=radio]{accent-color:#c2ba8a;min-height:0!important;width:17px!important;height:17px!important;box-shadow:none;flex:none}label{line-height:1.55}.check{gap:10px}.check input{margin-right:3px}
+.setup-nav button{padding:13px 12px!important;text-align:left;border-bottom:1px solid #414a4055!important}.setup-nav button[aria-current=page]{border-left-color:#c2ba8a!important;background:#30392d!important}.setup-nav button strong{color:var(--text)}.setup-nav button span{color:var(--muted)}
+.launch-summary{background:#222b21!important;border-left:3px solid #a6a074!important}.save-status,.tag,.badge,.pill{border-radius:2px!important}.message,#status,.editor-status{background:#1c271f!important;border:1px solid #495444!important;color:#cbd1c0}.message{border-left:3px solid #898f68!important}.help-trigger{color:#d1cca7!important;border-color:#7a805c!important}
+.workspace-operations .tabs,.workspace-operations .bar{gap:8px}.workspace-operations .tabs{padding:10px;background:#151c17;border:1px solid var(--border)}.workspace-operations .tabs button[aria-selected=true],.workspace-operations button.active{background:#35402e!important;border-color:#919968!important}.workspace-operations .template-link{padding:8px 12px;background:#222c22!important;border-color:#53604c!important;color:#d3d5b8!important}.workspace-operations .fleet,.armyAssets,.workspace-setups .list{background:#111714!important;border:1px solid var(--border)!important;border-radius:2px!important}.workspace-operations .fleet label{border-bottom-color:#343e33!important}.workspace-operations .fleet label:hover,.workspace-setups .item:hover{background:#2a3529!important}.workspace-operations .pill{background:#303d2d!important;color:#d6ddbb!important}.workspace-operations .summary{color:#dce0ca!important}.workspace-operations .saved article{border-top:2px solid #7d8662!important}.workspace-operations .blue{color:#a6c9dc!important}.workspace-operations .red{color:#dfa997!important}
+.workspace-editor .editor-tabs,.workspace-editor>.map-controls{background:#1c251d!important}.workspace-editor .editor-tabs button[aria-selected=true],.workspace-editor .map-controls button.active{background:#38432f!important;border-color:#969d70!important;color:#e6e9cd!important}.workspace-editor aside{background:#1a211b!important}.workspace-editor #points button.current{background:#303d2b!important;color:var(--text)!important;border-color:#9ea37a!important}.workspace-setups .footer,.workspace-operations .savebar,.workspace-shell>.bar{background:#171e18!important;border-top-color:#7b805c!important}.workspace-setups .item,.workspace-setups .editing-box,.workspace-setups .filterbar{background:#182019!important;border-color:var(--border)!important}
+.mission-brief{display:flex;justify-content:space-between;gap:20px;padding:28px 30px;background:linear-gradient(110deg,#30392b,#1a211b);border:1px solid #5c664d;border-left:4px solid #c2ba8a;margin:18px 0}.mission-brief h2{font-size:29px;margin:12px 0 10px}.mission-brief p{margin:0;max-width:700px}.brief-code{align-self:start;color:#a2ad8d;border:1px solid #616e50;padding:8px;font:11px Consolas,monospace;letter-spacing:1px;white-space:nowrap}
+.mission-modes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 24px}.mission-modes button{display:flex;flex-direction:column;align-items:start;text-align:left;gap:13px;padding:17px 15px!important;border-top:2px solid #7c8560!important;min-width:0;background:#1b241c!important}.mission-modes button small{font:10px Consolas,monospace;letter-spacing:1.4px;color:#a9b190}.mission-modes strong{font-size:17px;font-weight:500}.mission-modes span{font-size:12px;line-height:1.5;color:var(--muted)}.mission-modes button[aria-pressed=true]{background:#303c29!important;border-color:#c2ba8a!important}
+.mission-library{padding:24px}.mission-library-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.mission-library-head h2{margin:8px 0 20px}.mission-search{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:18px;max-width:900px}.mission-search label{display:grid;gap:6px}.mission-search input,.mission-search select{width:100%}.mission-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-top:18px}.mission-card{padding:20px;border-top:2px solid #79815e!important;display:flex;flex-direction:column;align-items:start;gap:8px;min-width:0}.mission-card small{font:10px Consolas,monospace;letter-spacing:1.1px;color:#aeb58e}.mission-card h3{font-size:18px;line-height:1.5;margin:3px 0;overflow-wrap:anywhere}.mission-card p{font-size:12px;line-height:1.5;margin:0}.mission-card .mission-world{color:#d9d7b8}.mission-card button{margin-top:auto;padding-top:9px}.mission-card button:first-of-type{margin-top:15px}#missionCount,#missionLibraryStatus{font-size:12px;color:var(--muted);line-height:1.5}#missionLibraryStatus{margin:20px 0 0}
+.workspace-shell[data-workspace-tab=missions]>.bar{display:none!important}.workspace-shell[data-workspace-tab=missions]{grid-template-rows:minmax(0,1fr)}.workspace-shell[data-workspace-tab=missions] #message{display:none!important}
+@media(max-width:1100px){.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}.mission-modes{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.mission-modes{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-search{grid-template-columns:1fr}.mission-library{padding:16px}.mission-brief{padding:20px}.mission-brief h2{font-size:24px}.brief-code{display:none}.mission-library-head{flex-wrap:wrap}.workspace-shell>main>header{padding:14px}.mission-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+.workspace-operations .capability span,.workspace-operations .ground-badge{background:#293526!important;border-color:#667452!important;color:#d4dbbb!important;border-radius:2px!important}.workspace-operations .preview{background:#202c20!important;border-left-color:#9b9f70!important;color:var(--text)}.workspace-operations .equipment-list{border-color:var(--border)!important;background:var(--input);border-radius:2px!important}.workspace-operations .equipment-row{border-bottom-color:#354132!important}.workspace-operations .equipment-row small{color:var(--muted)!important}.workspace-operations .node-list button[aria-pressed=true]{background:#35422c!important;border-color:#9b9f70!important}
+.workspace-shell[data-workspace-tab=operations]>main>header,.workspace-shell[data-workspace-tab=setups]>main>header{padding:10px 18px;margin-bottom:10px}.workspace-shell[data-workspace-tab=operations]>main>header h1,.workspace-shell[data-workspace-tab=setups]>main>header h1{font-size:20px}.workspace-shell[data-workspace-tab=operations]>main>header p,.workspace-shell[data-workspace-tab=setups]>main>header p{display:none}
+.operations-embedded>header{padding:10px 16px!important}.operations-embedded>header h1{font-size:20px;margin:4px 0 6px}.operations-embedded>header>p,.operations-embedded>header .capability{display:none}.operations-embedded>header .eyebrow{font-size:10px}.operations-embedded>header .bar{margin:0}.operations-embedded .template-link{font-size:12px;padding:5px 9px!important;min-height:28px}.operations-embedded>main{padding:12px 16px 30px!important}.operations-embedded .tabs{margin-bottom:14px;padding:6px}.operations-embedded .tabs button{font-size:12px;min-height:32px;padding:6px 10px}.operations-embedded .savebar{margin:16px -16px -30px!important;padding:8px 12px!important}.operations-embedded .savebar .actions{padding:0;gap:6px}.operations-embedded .savebar button{font-size:12px;min-height:32px}.operations-embedded #status{padding:8px 12px;margin-bottom:12px;border-radius:2px}.operations-embedded .bar{margin-bottom:12px}.operations-embedded .operations-help{min-height:24px}
+
+.mission-brief{padding:20px 24px;margin:14px 0}.mission-brief h2{font-size:26px;margin:8px 0}.mission-modes{margin:14px 0 18px}.mission-modes button{padding:13px 14px!important;gap:8px}.mission-modes strong{font-size:16px}.mission-library-head h2{margin-bottom:12px}.mission-search label{display:block}.mission-search input,.mission-search select{display:block;margin-top:6px}.mission-search .help-trigger{display:inline-flex;margin-top:0}
+
+</style>
+<!-- military-ui:end -->
+<header><a class="back" href="/">← Центр запуска</a><strong>Редактор карты</strong><select id="world" aria-label="Карта"></select><button id="openSetups" type="button">Сетапы сторон ↗</button><button id="save" class="primary" title="Ctrl+S — сохранить то, что сейчас открыто, с проверкой записи">Сохранить карту</button><button id="useOpenPreset" type="button" hidden>Использовать этот пресет в игре</button><button id="reset" class="danger">Сбросить настройки карты</button><button id="undoReset" hidden>Отменить сброс</button></header><div class="editor-status"><span id="status" role="status">Загрузка карты…</span><span id="saveBanner" class="save-banner" role="alert" hidden></span><span id="summary"></span><label class="theme-control" for="themeSelect">Цвет страницы<select id="themeSelect"><option value="blue">Синяя</option><option value="green">Зелёная</option><option value="purple">Фиолетовая</option><option value="amber">Янтарная</option><option value="red">Красная</option><option value="graphite">Графитовая</option><option value="light">Светлая</option></select></label></div>
+<main><section id="viewport"><svg id="map" xmlns="http://www.w3.org/2000/svg"><g id="drawing"></g></svg><div class="map-controls"><button id="zoomIn" aria-label="Приблизить">＋</button><button id="zoomOut" aria-label="Отдалить">−</button><button id="fit">Вся карта</button><button id="panTool">Перемещать / выбирать</button><button id="sectorTool">＋ Сектор</button><button id="baseTool">＋ База</button><button id="spawnTool">＋ Спавн</button><button id="undoEdit" title="Ctrl+Z — отменить правку" disabled>↶ Отменить</button><button id="redoEdit" title="Ctrl+Shift+Z — повторить правку" disabled>↷ Повторить</button><button id="vectorToggle" title="Дороги, дома и стены из файла карты">Улицы и здания</button></div><div class="map-hint" id="mapHint">Перемещайте карту и выберите точку</div><div id="mapCoordinates"></div><div class="map-legend" aria-label="Стороны конфликта"><span><i class="side-dot side-blue"></i>Синие</span><span><i class="side-dot side-red"></i>Красные</span><span id="greenLegend"><i class="side-dot side-green"></i>Зелёные · гарнизоны</span></div><div id="quality"></div></section><aside>
+<nav class="editor-tabs" role="tablist" aria-label="Разделы редактора"><button type="button" role="tab" aria-controls="panel-presets" data-tab="presets">★ Пресеты карт</button><button type="button" role="tab" aria-controls="panel-scenario" data-tab="scenario">Сценарий</button><button type="button" role="tab" aria-controls="panel-armies" data-tab="armies">Армии · 3 стороны</button><button type="button" role="tab" aria-controls="panel-points" data-tab="points">Точки и гарнизоны</button><button type="button" role="tab" aria-controls="panel-start" data-tab="start">Стартовая техника</button><button type="button" role="tab" aria-controls="panel-resources" data-tab="resources">Ресурсы и лимиты</button><button type="button" role="tab" aria-controls="panel-llm" data-tab="llm">LLM гарнизонов</button><button type="button" role="tab" aria-controls="panel-background" data-tab="background">Фон карты</button></nav><section class="tab-panel" role="tabpanel" id="panel-presets" data-panel="presets">
+<details class="help" id="helpBox" open><summary>Как сохранить карту — 3 шага</summary><ol>
+<li><b>Выберите</b> пресет из списка ниже (кнопка «Открыть») или начните с рабочей карты.</li>
+<li><b>Измените</b> карту: базы, секторы и гарнизоны — во вкладке «Точки и гарнизоны», остальное — в соседних вкладках.</li>
+<li><b>Сохраните</b> кнопкой «Сохранить…» вверху (или Ctrl+S). Зелёная строка «Сохранено и проверено» значит, что файл записан и перечитан с диска. Чтобы играть на пресете — «Использовать в игре».</li></ol></details>
+<div class="editing-box"><span>Сейчас открыто:</span><strong id="editingName">Рабочая карта</strong><span id="editingNote" class="meta"></span> <span id="dirtyFlag" class="dirty-flag" hidden>● есть несохранённые изменения</span></div>
+<div class="save-actions"><button id="editWorking" type="button" title="Открыть карту, которая сейчас используется в игре">Открыть рабочую карту (используется в игре)</button></div>
+<label>Сохранить как новый пресет<input id="mapPresetName" maxlength="80" placeholder="Название, например «Сидней — штурм с моря»"></label><button id="saveMapPreset" type="button">＋ Сохранить как новый пресет</button>
+<h3>Сохранённые пресеты <span id="presetCount" class="meta"></span></h3>
+<label>Поиск<input id="presetFilter" placeholder="Название, карта или сценарий"></label>
+<label><input type="checkbox" id="presetOnlyWorld" style="width:auto" checked> Только для выбранной карты</label>
+<div id="presetRows"></div>
+</section><section class="tab-panel" role="tabpanel" id="panel-scenario" data-panel="scenario" hidden><label>Название сценария<input id="title" maxlength="100"></label>
+<label>Режим<select id="mode"><option value="native">Warlords: синие против красных</option><option value="three">NeroAI: три стороны конфликта</option></select></label>
+<label>Зелёная сторона<select id="greenRole"><option value="defender">Обороняет города</option><option value="invader">Третья сторона захвата</option></select></label>
+<label>Роль игрока<select id="playerRole"><option value="commander">Игрок командует своей стороной</option><option value="observer">Только боты · игрок наблюдатель и Зевс</option></select></label><label>Начальная сторона игрока<select id="playerSide"><option value="WEST">Синие</option><option value="EAST">Красные</option><option value="GUER">Зелёные</option></select></label>
+<label><input type="checkbox" id="lethalZones" style="width:auto"> Смертельная зона вне выбранной цели</label>
+</section><section class="tab-panel" role="tabpanel" id="panel-armies" data-panel="armies" hidden><h3>Армии сценария</h3><p>Фракции и техника сохраняются вместе с картой.</p><details class="help"><summary>Роль зелёной стороны</summary><p>В режиме трёх сторон зелёные получают свою базу и каталог покупки; в Warlords они защищают секторы.</p></details><label>Синие — фракция<select id="armyWestFaction"></select></label><label>Красные — фракция<select id="armyEastFaction"></select></label><label>Зелёные — фракция<select id="armyGreenFaction"></select></label><label>Каталог техники стороны<select id="armySide"><option value="west">Синие</option><option value="east">Красные</option><option value="green">Зелёные</option></select></label><label>Готовый сетап выбранной стороны<select id="armySetupPick"></select></label><div class="actions"><button id="armySetupApply">Применить сетап</button><button id="armySetupRefresh">Обновить</button></div><div class="actions"><button id="armyClearAssets">Снять выбор техники</button><button id="armyClearInfantry">Снять выбор пехоты</button><button id="armyClearAll">Очистить сторону</button></div><label>Сохранить сторону как сетап<input id="armySetupName" maxlength="80" placeholder="Название сетапа"></label><button id="armySetupSave">Сохранить как сетап</button><p id="armyInfantrySummary"></p><div class="point-filters"><label>Категория<select id="armyKind"><option value="">Все категории</option><option value="CAR">Автомобили</option><option value="APC">БТР / БМП</option><option value="TANK">Танки</option><option value="HELICOPTER">Вертолёты</option><option value="PLANE">Самолёты</option><option value="STATIC">Установки</option><option value="SHIP">Корабли</option></select></label><label>Показывать<select id="armyShow"><option value="all">Вся техника</option><option value="selected">Выбранная</option></select></label></div><label>Найти технику<input id="armySearch" type="search" placeholder="Название, класс или мод"></label><p id="armyStatus"></p><div id="armyRows" class="army-list"></div><div class="actions"><button id="armyPrev">Назад</button><span id="armyPage"></span><button id="armyNext">Далее</button></div><p>Список и цены пехоты берутся из настроек запуска при открытии карты и сохраняются в её армии.</p></section><section class="tab-panel" role="tabpanel" id="panel-points" data-panel="points"><p>Перетащите точку, чтобы переместить её. Пробел + мышь — сдвиг карты. Shift — добавить несколько точек подряд. Esc — выбор.</p>
+<label>Добавить на карту<select id="tool"><option value="select">Выбрать точку</option><option value="bases">Главную базу</option><option value="sectors">Цель захвата</option><option value="spawns">Дополнительный спавн</option></select></label>
+<label>Сторона точки<select id="side"><option value="WEST">Синие</option><option value="EAST">Красные</option><option value="GUER">Зелёные</option></select></label>
+<label>Название точки<input id="name" maxlength="80"></label><label>Радиус, м<input id="radius" type="number" min="30" max="1500" value="200"></label>
+<div id="garrison"><h3>Гарнизон выбранного сектора</h3><label>Пехота (экипажи отдельно)<input id="infantry" type="number" min="0" max="60" value="12"></label><label>Количество машин<input id="vehicles" type="number" min="0" max="8" value="0"></label><label>Поиск наземной техники<input id="vehicleSearch"></label><select id="vehicleClasses" multiple size="6" aria-label="Техника гарнизона"></select></div>
+<p id="selectionInfo">Выберите точку на карте или в списке.</p><div class="coordinates"><label>X, м<input id="pointX" type="number" min="0" step="1"></label><label>Y, м<input id="pointY" type="number" min="0" step="1"></label></div><div class="actions"><button id="focusPoint">Показать точку</button></div><button id="apply">Применить к точке</button> <button id="remove">Удалить точку</button><label>Поиск точки<input id="pointSearch" placeholder="Название базы или города"></label><div class="point-filters"><select id="pointSideFilter" aria-label="Фильтр стороны точек"><option value="">Все стороны</option><option value="WEST">Синие</option><option value="EAST">Красные</option><option value="GUER">Зелёные</option></select><select id="pointTypeFilter" aria-label="Фильтр типа точек"><option value="">Все точки</option><option value="bases">Базы</option><option value="sectors">Секторы</option><option value="spawns">Спавны</option></select></div><div id="points"></div>
+</section><section class="tab-panel" role="tabpanel" id="panel-start" data-panel="start" hidden><h3>Стартовая техника</h3><label>Сторона<select id="startSide"><option value="WEST">Синие</option><option value="EAST">Красные</option><option value="GUER">Зелёные</option></select></label><input id="startSearch" placeholder="Поиск техники"><select id="startClass" aria-label="Стартовая техника"></select><label>Количество<input id="startCount" type="number" min="1" max="5" value="1"></label><button id="addStart">Добавить</button><div id="startList"></div>
+</section><section class="tab-panel" role="tabpanel" id="panel-resources" data-panel="resources" hidden><h3>Ресурсы сценария</h3><label>Лимит NPC (новые гарнизоны, старт и режим трёх сторон)<input id="maxNPCs" type="number" min="1" step="1" value="160"></label><label>Общий лимит техники<input id="maxVehicles" type="number" min="1" step="1" value="32"></label><label>Стартовые CP<input id="startCP" type="number" min="0" max="50000" value="6000"></label><label>Доход сектора CP/мин<input id="income" type="number" min="0" max="1000" value="100"></label><label>Фракция зелёной стороны<select id="greenFaction"></select></label></section><section class="tab-panel" role="tabpanel" id="panel-llm" data-panel="llm" hidden><h3>LLM для атакуемых гарнизонов</h3><label><input id="gEnabled" type="checkbox" style="width:auto"> Включить управление</label><label>Маршрут<select id="gRoute"><option value="shared">Общая LLM</option><option value="separate">Отдельная LLM гарнизонов</option></select></label><label>Узел<select id="gNode"></select></label><label>Модель<input id="gModel" maxlength="200"></label><label>Одновременно управляемых групп<input id="gLimit" type="number" min="1" max="8" value="4"></label><label>Инструкция гарнизонам<textarea id="gInstructions" maxlength="2000" rows="5"></textarea></label>
+</section><section class="tab-panel" role="tabpanel" id="panel-background" data-panel="background" hidden><h3>Карта из установленных файлов</h3><p>Спутниковые фрагменты собираются один раз. В обзоре показывается вся карта; при увеличении подгружаются подробные фрагменты. Подготовленные карты открываются сразу после выбора. Разрешение зависит от исходных текстур каждого мода.</p><label><input type="checkbox" id="vectorLayer" style="width:auto" checked> Улицы и здания из файла карты (резкие при любом увеличении)</label><label>Источник фона<select id="backgroundSource"><option value="satellite">Спутниковая карта из файлов</option><option value="imported">Импортированная карта / экспорт из игры</option></select></label><button id="buildBackground">Собрать фон из файлов выбранной карты</button><h3>Топографическая карта из Arma</h3><p>Один раз загрузите нужную карту с обновлённым NeroAI и выполните в отладочной консоли на сервере:<br><code>[] spawn NeroAI_fnc_exportMap;</code><br>После сообщения об окончании экспортирования импортируйте рельеф, дороги и здания. Экспорт работает порциями; не запускайте его во время боя. Векторные дороги и здания сохраняют чёткость при увеличении.</p><button id="importSurvey">Импортировать экспорт из игры</button><h3>Изображение карты</h3><p>Загрузите изображение полной карты PNG/JPEG. Оно должно покрывать весь квадрат местности, без рамок. Масштаб координат задаёт установленная карта. Пока изображения нет, показываются только известные населённые пункты — это схема, а не подробная топографическая карта.</p><input id="image" type="file" accept="image/png,image/jpeg"><button id="upload">Использовать изображение</button>
+</section></aside></main>
+<script src="/side-setup-client.js"></script><script>
+/* Appearance is local to this browser; gameplay presets remain untouched. */
+const NERO_THEMES={"blue":["#0d121b","#151e2b","#2a384d","#83aaff","#9badc5"],"green":["#101913","#19291e","#36513c","#91d3a5","#a6bcac"],"purple":["#17121e","#251c32","#49355e","#c6a1f2","#b6a8c6"],"amber":["#1b1710","#2b2418","#53462e","#edc479","#c5b69b"],"red":["#1c1214","#2d1c20","#58353c","#efa2a9","#c5a8ae"],"graphite":["#121416","#202326","#42474c","#b5c0cc","#abb4bc"],"light":["#f2f4f6","#ffffff","#ced5dd","#35577c","#596979"]};
+function setColorTheme(name,persist=true){if(!Object.hasOwn(NERO_THEMES,name))name='blue';const root=document.documentElement;if(!root?.style)return;const [bg,card,border,accent,muted]=NERO_THEMES[name],light=name==='light';const vars={bg,card,border,accent,muted,text:light?'#202a35':'#edf1f5',input:light?'#f7f9fb':bg,hover:light?'#e0e7ee':card,'accent-hover':light?'#456d96':accent,'on-accent':light?'#ffffff':'#101820',bar:light?'#ffffffed':bg+'ed','success-bg':light?'#deefe4':'#24483e','success-text':light?'#216340':'#98e5c5','pending-bg':light?'#fff0ce':'#513e24','pending-text':light?'#765115':'#ffe0a8','error-text':light?'#a33032':'#ffb4aa'};for(const [k,v] of Object.entries(vars))root.style.setProperty('--'+k,v);root.style.colorScheme=light?'light':'dark';root.dataset.theme=name;const select=document.getElementById('themeSelect');if(select)select.value=name;if(persist){try{localStorage.setItem('neroai-color-theme',name);}catch{}}}
+(function(){let saved='blue';try{saved=localStorage.getItem('neroai-color-theme')||'blue';}catch{}setColorTheme(saved,false);const select=document.getElementById('themeSelect');if(select)select.addEventListener('change',()=>setColorTheme(select.value));if(typeof window!=='undefined')window.addEventListener('storage',e=>{if(e.key==='neroai-color-theme')setColorTheme(e.newValue||'blue',false);});})();
+
+const SESSION='__SESSION_TOKEN__',by=id=>document.getElementById(id)||(window.parent!==window?window.parent.document.getElementById('editor-'+id):null);let API_SESSION=SESSION;let worlds,catalog,state,design,selected=null,view,down;let dirty=false,resetBackup=null;
+const colors={WEST:'#68aaff',EAST:'#ff706c',GUER:'#6de09c'};
+async function renewSession(){let response;try{response=await fetch('/',{cache:'no-store'});}catch{throw Error('Панель NeroAI недоступна. Запустите ярлык NeroAI Control Center и повторите действие.');}if(!response.ok)throw Error('Не удалось восстановить сессию панели.');const text=await response.text(),match=/const SESSION=["']([a-f0-9]{48})["']/.exec(text);if(!match)throw Error('Не удалось восстановить сессию панели.');API_SESSION=match[1];}
+async function api(url,data,retried=false){let r;try{r=await fetch(url,{method:data?'POST':'GET',headers:{'x-nero-session':API_SESSION,'Content-Type':'application/json'},body:data?JSON.stringify(data):undefined});}catch{throw Error('Нет связи с локальной панелью NeroAI. Запустите ярлык NeroAI Control Center. Если карта ещё не сохранена, оставьте это окно открытым до восстановления связи.');}const j=await r.json();if(r.status===403&&!retried&&String(j.error).includes('Сессия панели устарела')){await renewSession();return api(url,data,true);}if(!r.ok)throw Error(j.error);return j;}
+function options(el,rows){el.replaceChildren(...rows.map(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;return o;}));}
+function currentWorld(){return worlds.find(w=>w.id===design.world);}
+function assetOptions(){const num={WEST:1,EAST:0,GUER:2}[by('side').value],q=by('vehicleSearch').value.toLowerCase();const chosen=selected?.vehicleClasses||[];options(by('vehicleClasses'),catalog.assets.filter(a=>a.side===num&&['CAR','APC','TANK','STATIC'].includes(a.kind)&&(chosen.includes(a.class)||[a.label,a.mod].join(' ').toLowerCase().includes(q))).sort((a,b)=>Number(chosen.includes(b.class))-Number(chosen.includes(a.class))).slice(0,150).map(a=>[a.class,a.label+' · '+a.mod.replace(/^@/,'')]));for(const o of by('vehicleClasses').options)o.selected=chosen.includes(o.value);const n={WEST:1,EAST:0,GUER:2}[by('startSide').value],sq=by('startSearch').value.toLowerCase();options(by('startClass'),catalog.assets.filter(a=>a.side===n&&a.kind!=='INFANTRY'&&[a.label,a.mod].join(' ').toLowerCase().includes(sq)).slice(0,150).map(a=>[a.class,a.label+' · '+a.mod.replace(/^@/,'')]));}
+function paint(){const w=currentWorld(),svg=by('map'),g=by('drawing');svg.setAttribute('viewBox',view.join(' '));g.replaceChildren();function el(type,attrs,text){const e=document.createElementNS(svg.namespaceURI,type);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(text)e.textContent=text;g.append(e);return e;}
+ const s=w.size;el('rect',{x:0,y:0,width:s,height:s,fill:'#173047'});const background=by('backgroundSource').value==='satellite'?w.background:null;
+ if(background){el('image',{href:'/map-background/'+encodeURIComponent(w.id)+'.jpg',x:0,y:0,width:s,height:s,preserveAspectRatio:'none'});
+  const dx=background.strideX,dy=background.strideY,x0=Math.max(0,Math.floor(view[0]/dx)),x1=Math.min(background.columns-1,Math.floor((view[0]+view[2])/dx)),y0=Math.max(0,Math.floor(view[1]/dy)),y1=Math.min(background.rows-1,Math.floor((view[1]+view[3])/dy));
+  if(view[2]<s*.5&&(x1-x0+1)*(y1-y0+1)<=100)for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++)if(!(background.missingTiles||[]).includes(x+'_'+y))el('image',{href:'/map-tile/'+encodeURIComponent(w.id)+'/'+x+'/'+y+'.jpg',x:x*dx,y:y*dy,width:Math.min(dx,s-x*dx),height:Math.min(dy,s-y*dy),preserveAspectRatio:'none'});
+ }else{const image=el('image',{href:'/map-image/'+encodeURIComponent(w.id),x:0,y:0,width:s,height:s,preserveAspectRatio:'none'});image.onerror=()=>image.remove();}
+ if(background?.vector)loadVector();drawVector(el,s);
+ const step=s/10;for(let i=0;i<=10;i++){el('path',{d:`M ${i*step} 0 V ${s} M 0 ${i*step} H ${s}`,stroke:'#6b8daa',opacity:.35,'stroke-width':view[2]/900});}
+ for(const l of w.locations.slice(0,300)){el('text',{x:l.position[0],y:s-l.position[1],fill:'#b8c9d9','font-size':view[2]/85},l.name);}
+ for(const type of ['bases','sectors','spawns'])for(const p of design[type]){const x=p.position[0],y=s-p.position[1];if(selected?.id===p.id)el('circle',{cx:x,cy:y,r:Math.max(p.radius,view[2]/100),fill:'none',stroke:'#fff','stroke-width':view[2]/250});el('circle',{cx:x,cy:y,r:p.radius,stroke:colors[p.side],fill:colors[p.side],'fill-opacity':.12,'stroke-width':view[2]/350});el('text',{x,y:y-view[2]/180,fill:colors[p.side],'font-size':view[2]/65},(type==='bases'?'★ ':type==='spawns'?'↗ ':'● ')+p.name);}
+ by('quality').textContent='Координаты: метры Arma · '+w.label+' · '+(background?(background.overviewWidth>=8192?'Обзор 8K · ':'')+(vector&&by('vectorLayer').checked?(view[2]<=VECTOR_SPAN?'улицы и здания из файла карты · ':'приблизьте для улиц и зданий · '):'')+'Спутниковый фон из файлов · подробные фрагменты '+Number(background.detailPixelSize.toFixed(2))+' м/пиксель' + ((background.missingTiles||[]).length?' · участки без исходных изображений показаны однотонным фоном':''):w.hasImage?'Импортированная карта':'Схема населённых пунктов; фон карты ещё не загружен');
+}
+/* 8.10: crisp street-level layer from the terrain file (tools/map-assets/build-vector-map.js).
+ * Drawn as one SVG path per layer for the visible 256 m cells once the view is
+ * narrower than VECTOR_SPAN; stays sharp at any zoom (the satellite source is 1–2 m/px). */
+const VECTOR_SPAN=8000,VECTOR_CELL=2560,VECTOR_STYLE=[['track','#b0966a',null],['road','#dedbd2',null],['main','#ecca78',null],['wall','#d7d7d2',null],['building','#804e40','#3c221c'],['house','#4a4c56','#1c1d22']];
+let vector=null,vectorGrid=null,vectorWorld='';
+async function loadVector(){const w=currentWorld();if(!w||vectorWorld===w.id)return;vectorWorld=w.id;vector=null;vectorGrid=null;try{const r=await fetch('/map-vector/'+encodeURIComponent(w.id)+'.json',{cache:'no-cache'});if(!r.ok||vectorWorld!==w.id)return;const v=await r.json();if(vectorWorld!==w.id||v.world!==w.id)return;vector=v;vectorGrid=new Map();/* shapefile road polylines [n,widthDm,kind,x,y…]: indexed in every cell their bbox touches */
+ const rl=v.layers.roadline||[];for(let i=0;i<rl.length;){const n=rl[i];let ax=Infinity,ay=Infinity,bx=-Infinity,by_=-Infinity;for(let k=0;k<n;k++){const x=rl[i+3+2*k],y=rl[i+4+2*k];ax=Math.min(ax,x);bx=Math.max(bx,x);ay=Math.min(ay,y);by_=Math.max(by_,y);}for(let gx=Math.floor(ax/VECTOR_CELL);gx<=Math.floor(bx/VECTOR_CELL);gx++)for(let gy=Math.floor(ay/VECTOR_CELL);gy<=Math.floor(by_/VECTOR_CELL);gy++){const k=gx+'_'+gy;let c=vectorGrid.get(k);if(!c){c={};vectorGrid.set(k,c);}(c.roadline||(c.roadline=[])).push(i);}i+=3+2*n;}
+ for(const [name,flat] of Object.entries(v.layers)){if(name==='roadline')continue;const step={rail:6,power:4,poi:3}[name]||8;for(let i=0;i<flat.length;i+=step){const k=Math.floor(flat[i]/VECTOR_CELL)+'_'+Math.floor(flat[i+1]/VECTOR_CELL);let c=vectorGrid.get(k);if(!c){c={};vectorGrid.set(k,c);}(c[name]||(c[name]=[])).push(i);}}paint();}catch{}}
+function drawVector(el,s){if(!vector||!vectorGrid||!by('vectorLayer').checked||view[2]>VECTOR_SPAN)return;const cell=VECTOR_CELL/10,xa=Math.floor(view[0]/cell)-1,xb=Math.floor((view[0]+view[2])/cell)+1,ya=Math.floor((s-view[1]-view[3])/cell)-1,yb=Math.floor((s-view[1])/cell)+1,d={};
+ const X=v=>(v/10).toFixed(1),Y=v=>(s-v/10).toFixed(1),seenRoad=new Set(),roadGroups={};
+ for(let gx=xa;gx<=xb;gx++)for(let gy=ya;gy<=yb;gy++){const c=vectorGrid.get(gx+'_'+gy);if(!c)continue;for(const [name,idx] of Object.entries(c)){if(name==='poi')continue;if(name==='roadline'){const f=vector.layers.roadline;for(const i of idx){if(seenRoad.has(i))continue;seenRoad.add(i);const n=f[i],key=f[i+2]+'_'+f[i+1];let p='M'+X(f[i+3])+' '+Y(f[i+4]);for(let k=1;k<n;k++)p+='L'+X(f[i+3+2*k])+' '+Y(f[i+4+2*k]);(roadGroups[key]||(roadGroups[key]=[])).push(p);}continue;}const f=vector.layers[name],parts=d[name]||(d[name]=[]);for(const i of idx){if(name==='rail')parts.push('M'+X(f[i])+' '+Y(f[i+1])+'L'+X(f[i+2])+' '+Y(f[i+3])+'L'+X(f[i+4])+' '+Y(f[i+5]));else if(name==='power')parts.push('M'+X(f[i])+' '+Y(f[i+1])+'L'+X(f[i+2])+' '+Y(f[i+3]));else parts.push('M'+X(f[i])+' '+Y(f[i+1])+'L'+X(f[i+2])+' '+Y(f[i+3])+'L'+X(f[i+6])+' '+Y(f[i+7])+'L'+X(f[i+4])+' '+Y(f[i+5])+'Z');}}}
+ /* real road width in metres = SVG units; tracks under roads under main roads */
+ for(const kind of [2,1,0])for(const [key,parts] of Object.entries(roadGroups))if(key.startsWith(kind+'_'))el('path',{d:parts.join(''),fill:'none',stroke:['#ecca78','#dedbd2','#b0966a'][kind],'stroke-width':Math.max(Number(key.split('_')[1])/10,view[2]/900),'stroke-linecap':'round','stroke-linejoin':'round'});
+ for(const [name,fill,stroke] of VECTOR_STYLE)if(d[name])el('path',{d:d[name].join(''),fill,stroke:stroke||'none','stroke-width':view[2]/2500,'fill-opacity':name==='wall'?.85:.95});
+ if(d.rail)el('path',{d:d.rail.join(''),fill:'none',stroke:'#3c2828','stroke-width':view[2]/700});if(d.power)el('path',{d:d.power.join(''),fill:'none',stroke:'#e6d23c','stroke-width':view[2]/1400});}
+function list(){by('points').replaceChildren();const query=by('pointSearch').value.trim().toLowerCase();for(const type of ['bases','sectors','spawns']){if(by('pointTypeFilter').value&&by('pointTypeFilter').value!==type)continue;const rows=design[type].filter(p=>(!by('pointSideFilter').value||p.side===by('pointSideFilter').value)&&(!query||p.name.toLowerCase().includes(query)));if(!rows.length)continue;const title=document.createElement('h3');title.textContent=({bases:'Главные базы',sectors:'Секторы захвата',spawns:'Дополнительные спавны'})[type]+' · '+rows.length;by('points').append(title);for(const p of rows){const row=document.createElement('div');row.className='point-row';const b=document.createElement('button');b.textContent=p.name+' · '+({WEST:'Синие',EAST:'Красные',GUER:'Зелёные'})[p.side];b.style.color=colors[p.side];b.classList.toggle('current',selected?.id===p.id);b.onclick=()=>choose(p,type);const focus=document.createElement('button');focus.className='locate';focus.textContent='◎';focus.title='Найти на карте';focus.onclick=()=>{choose(p,type);focusSelected();};row.append(b,focus);by('points').append(row);}}
+by('startList').replaceChildren();design.startAssets.forEach((a,i)=>{const b=document.createElement('button');b.textContent=({WEST:'Синие',EAST:'Красные',GUER:'Зелёные'})[a.side]+' · '+(catalog.assets.find(x=>x.class===a.class)?.label||a.class)+' × '+a.count+' — удалить';b.onclick=()=>{design.startAssets.splice(i,1);markDirty();list();};by('startList').append(b);});by('summary').textContent=design.bases.length+' баз · '+design.sectors.length+' секторов · '+design.spawns.length+' спавнов';}
+function choose(p,type){if(selected&&selected!==p){try{applyPoint();}catch(e){by('status').textContent=e.message;return;}}selected=p;selected.type=type;showTab('points');by('pointX').value=p.position[0];by('pointY').value=p.position[1];by('selectionInfo').textContent=({bases:'Главная база',sectors:'Сектор захвата',spawns:'Дополнительный спавн'})[type]+': '+p.name;by('name').value=p.name;by('side').value=p.side;by('radius').value=p.radius;by('infantry').value=p.infantry??12;by('vehicles').value=p.vehicles??0;by('garrison').hidden=type!=='sectors';by('apply').disabled=false;by('remove').disabled=false;by('focusPoint').disabled=false;assetOptions();list();paint();}
+async function load(id){const value=await api('/api/design?world='+encodeURIComponent(id));renderDesign(value);editing={kind:'design'};updateEditing();}
+function renderDesign(value){design=value;initArmies();historyPast=[];historyFuture=[];historyCurrent=null;selected=null;by('apply').disabled=true;by('remove').disabled=true;by('focusPoint').disabled=true;by('selectionInfo').textContent='Выберите точку на карте или в списке.';by('pointX').value='';by('pointY').value='';by('garrison').hidden=true;const w=currentWorld();view=[0,0,w.size,w.size];by('world').value=design.world;by('greenLegend').textContent=design.mode==='three'?'● Зелёные · третья армия':'● Зелёные · гарнизоны';for(const id of ['title','mode','greenRole','playerSide','playerRole'])by(id).value=design[id]??(id==="playerRole"?"commander":design[id]);for(const option of by('playerSide').options)option.disabled=design.mode!=='three'&&option.value==='GUER';by('lethalZones').checked=design.lethalZones;for(const id of ['maxNPCs','maxVehicles','startCP','income'])by(id).value=design[id]??({maxNPCs:160,maxVehicles:32,startCP:6000,income:100}[id]);by('greenFaction').value=design.greenFaction||'rhsgref_faction_cdf_ng';const g=design.garrisonLLM;by('gEnabled').checked=g.enabled;by('gRoute').value=g.route;by('gNode').value=g.node||state.nodes[0]?.id;by('gModel').value=g.model||state.selected.primaryModel;by('gLimit').value=g.limit;by('gInstructions').value=g.instructions;dirty=false;if(by('dirtyFlag'))by('dirtyFlag').hidden=true;sideNames();assetOptions();list();paint();by('status').textContent='Карта загружена.';historyCurrent=structuredClone(collectDesign());historyBase=structuredClone(historyCurrent);historyButtons();}
+function xy(e){const p=by('map').createSVGPoint();p.x=e.clientX;p.y=e.clientY;const w=p.matrixTransform(by('map').getScreenCTM().inverse());return [w.x,currentWorld().size-w.y];}
+by('map').onwheel=e=>{e.preventDefault();const factor=e.deltaY>0?1.2:.83;const pos=xy(e),y=currentWorld().size-pos[1];view=[pos[0]-(pos[0]-view[0])*factor,y-(y-view[1])*factor,Math.max(100,view[2]*factor),Math.max(100,view[3]*factor)];paint();};
+by('map').onpointerdown=e=>{down={x:e.clientX,y:e.clientY,view:[...view],scale:by('map').getScreenCTM().a};by('map').setPointerCapture(e.pointerId);};by('map').onpointermove=e=>{if(!design)return;const pos=xy(e).map(Math.round);by('mapCoordinates').textContent='X '+pos[0]+' · Y '+pos[1]+' м';if(!down)return;const r=by('map').getBoundingClientRect();view[0]=down.view[0]-(e.clientX-down.x)/down.scale;view[1]=down.view[1]-(e.clientY-down.y)/down.scale;paint();};
+by('map').onpointerup=e=>{if(!down)return;const moved=Math.hypot(e.clientX-down.x,e.clientY-down.y)>5;down=null;if(moved)return;const pos=xy(e).map(Math.round),s=currentWorld().size;if(pos.some(n=>n<0||n>s))return;const type=by('tool').value;if(type==='select'){let nearest;for(const t of ['bases','sectors','spawns'])for(const p of design[t])if(Math.hypot(p.position[0]-pos[0],p.position[1]-pos[1])<view[2]/30)nearest=[p,t];if(nearest)choose(...nearest);return;}const side=by('side').value;if(type==='bases'){design.bases=design.bases.filter(p=>p.side!==side);}const p={id:crypto.randomUUID(),name:by('name').value||'Новая точка',side,position:pos,radius:+by('radius').value,infantry:+by('infantry').value,vehicles:+by('vehicles').value,vehicleClasses:[...by('vehicleClasses').selectedOptions].map(o=>o.value)};design[type].push(p);choose(p,type);markDirty();list();paint();};
+function applyPoint(){if(!selected)return;const position=[Number(by('pointX').value),Number(by('pointY').value)];if(position.some(n=>!Number.isFinite(n)||n<0||n>currentWorld().size))throw Error('Координаты точки выходят за пределы карты.');Object.assign(selected,{name:by('name').value,side:by('side').value,position,radius:+by('radius').value,infantry:+by('infantry').value,vehicles:+by('vehicles').value,vehicleClasses:[...by('vehicleClasses').selectedOptions].map(o=>o.value)});}
+by('apply').onclick=()=>{try{applyPoint();markDirty();list();paint();}catch(e){by('status').textContent=e.message;}};by('remove').onclick=()=>{if(selected){design[selected.type]=design[selected.type].filter(p=>p!==selected);selected=null;by('apply').disabled=true;by('remove').disabled=true;by('focusPoint').disabled=true;by('selectionInfo').textContent='Точка удалена. Выберите следующую.';markDirty();list();paint();}};
+by('addStart').onclick=()=>{if(by('startClass').value){design.startAssets.push({side:by('startSide').value,class:by('startClass').value,count:+by('startCount').value});markDirty();list();}};
+function collectDesign(){if(selected)applyPoint();if(design.army)design.army.greenFaction=by('greenFaction').value;for(const id of ['maxNPCs','maxVehicles','startCP','income'])design[id]=+by(id).value;design.greenFaction=by('greenFaction').value;for(const id of ['title','mode','greenRole','playerSide','playerRole'])design[id]=by(id).value;design.lethalZones=by('lethalZones').checked;design.garrisonLLM={enabled:by('gEnabled').checked,route:by('gRoute').value,node:by('gNode').value,model:by('gModel').value,limit:+by('gLimit').value,instructions:by('gInstructions').value};return design;}
+by('saveMapPreset').onclick=()=>saveAsNewPreset().catch(e=>banner('bad','✗ Не сохранено: '+e.message));
+by('save').onclick=()=>saveCurrent().catch(e=>banner('bad','✗ Не сохранено: '+e.message));
+function markDirty(){recordHistory();dirty=true;by('status').textContent='Есть несохранённые изменения — «Сохранить…» или Ctrl+S.';by('dirtyFlag').hidden=false;if(String(by('saveBanner').className||'').includes('ok'))by('saveBanner').hidden=true;notifyParent({type:'dirty',dirty:true});}
+function showTab(name){for(const el of document.querySelectorAll('[data-panel]'))el.hidden=el.dataset.panel!==name;for(const el of document.querySelectorAll('[data-tab]'))el.setAttribute('aria-selected',String(el.dataset.tab===name));}
+for(const el of document.querySelectorAll('[data-tab]'))el.onclick=()=>showTab(el.dataset.tab);showTab('presets');
+function focusSelected(){if(!selected)return;const span=Math.min(currentWorld().size,Math.max(1500,selected.radius*6));view=[selected.position[0]-span/2,currentWorld().size-selected.position[1]-span/2,span,span];paint();}by('focusPoint').onclick=focusSelected;by('pointSearch').oninput=list;
+by('reset').onclick=async()=>{if(!confirm('Сбросить настройки выбранной карты? Базы вернутся в исходные позиции; сектора, спавны, стартовая техника и параметры будут сброшены. Изменения сохранятся только после кнопки «Сохранить сценарий».'))return;try{const defaults=await api('/api/design-defaults?world='+encodeURIComponent(design.world));resetBackup=structuredClone(collectDesign());renderDesign(defaults);by('mode').onchange();markDirty();by('undoReset').hidden=false;by('status').textContent='Настройки сброшены в черновике. Добавьте хотя бы один сектор перед сохранением. Можно отменить сброс.';}catch(e){by('status').textContent=e.message;}};
+by('undoReset').onclick=()=>{if(!resetBackup)return;renderDesign(resetBackup);resetBackup=null;by('undoReset').hidden=true;markDirty();};
+for(const [id,tool] of [['panTool','select'],['sectorTool','sectors'],['baseTool','bases'],['spawnTool','spawns']])by(id).onclick=()=>{by('tool').value=tool;by('tool').onchange();showTab('points');};by('tool').onchange=()=>{by('mapHint').textContent=by('tool').value==='select'?'Колесо — масштаб · перетаскивание — сдвиг · щелчок — выбор':'Щёлкните по карте, чтобы добавить '+({bases:'базу',sectors:'сектор',spawns:'спавн'})[by('tool').value];for(const [id,tool] of [['panTool','select'],['sectorTool','sectors'],['baseTool','bases'],['spawnTool','spawns']])by(id).classList.toggle('active',by('tool').value===tool);by('status').textContent=by('tool').value==='select'?'Перетаскивайте карту; щёлкните по точке для выбора.':'Щёлкните по карте, чтобы поставить точку. Сторона выбирается справа.';};by('tool').onchange();
+function zoom(factor){const size=Math.min(currentWorld().size*2,Math.max(100,view[2]*factor)),cx=view[0]+view[2]/2,cy=view[1]+view[3]/2;view=[cx-size/2,cy-size/2,size,size];paint();}by('zoomIn').onclick=()=>zoom(.75);by('zoomOut').onclick=()=>zoom(1.33);
+document.querySelector('aside').addEventListener('change',e=>{if(!['themeSelect','vehicleSearch','startSearch','backgroundSource','tool','pointSearch','presetFilter','presetOnlyWorld','mapPresetName','vectorLayer','armySearch','armySide','armyKind','armyShow','pointSideFilter','pointTypeFilter','armySetupPick','armySetupName'].includes(e.target.id))markDirty();});window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+by('map').onpointercancel=()=>down=null;by('mode').onchange=()=>{const three=by('mode').value==='three';if(three&&!design.bases.some(p=>p.side==='GUER')){const n=currentWorld().size;design.bases.push({id:crypto.randomUUID(),name:'База зелёных',side:'GUER',position:[Math.round(n/2),Math.round(n/2)],radius:200});}if(!three){design.bases=design.bases.filter(p=>p.side!=='GUER');if(by('playerSide').value==='GUER')by('playerSide').value='WEST';}for(const o of by('playerSide').options)o.disabled=!three&&o.value==='GUER';design.mode=by('mode').value;by('greenLegend').textContent=three?'● Зелёные · третья армия':'● Зелёные · гарнизоны';if(selected&&!design[selected.type].includes(selected)){selected=null;by('apply').disabled=true;by('remove').disabled=true;by('focusPoint').disabled=true;}markDirty();list();paint();};
+by('fit').onclick=()=>{const s=currentWorld().size;view=[0,0,s,s];paint();};by('world').onchange=async()=>{if(dirty&&!confirm('Переключить карту без сохранения изменений?')){by('world').value=design.world;return;}try{await load(by('world').value);resetBackup=null;by('undoReset').hidden=true;renderPresetRows();}catch(e){by('status').textContent=e.message;}};for(const id of ['side','vehicleSearch','startSide','startSearch'])by(id).addEventListener(id.includes('Search')?'input':'change',assetOptions);
+by('backgroundSource').onchange=paint;by('vectorLayer').onchange=paint;by('vectorToggle').onclick=()=>{by('vectorLayer').checked=!by('vectorLayer').checked;by('vectorToggle').classList.toggle('active',by('vectorLayer').checked);paint();};by('vectorToggle').classList.toggle('active',true);
+by('buildBackground').onclick=async()=>{try{const r=await api('/api/build-background',{world:design.world});by('status').textContent=r.message;by('buildBackground').disabled=true;const timer=setInterval(async()=>{try{const j=await api('/api/background-job');by('status').textContent=j.message;if(j.status!=='running'){clearInterval(timer);by('buildBackground').disabled=false;if(j.status==='done'){const fresh=await api('/api/worlds');worlds=fresh;by('backgroundSource').value='satellite';paint();}}}catch(e){clearInterval(timer);by('buildBackground').disabled=false;by('status').textContent=e.message;}},2000);}catch(e){by('status').textContent=e.message;}};
+by('importSurvey').onclick=async()=>{try{const r=await api('/api/import-survey',{world:design.world});currentWorld().hasImage=true;by('backgroundSource').value='imported';paint();by('status').textContent='Импортировано: зданий '+r.houses+', дорог '+r.roads+(r.truncated?' · достигнут предел, геометрия неполная':'');}catch(e){by('status').textContent=e.message;}};
+by('upload').onclick=async()=>{try{const f=by('image').files[0];if(!f||f.size>20*1024*1024)throw Error('Выберите PNG/JPEG до 20 МБ.');const data=await new Promise((r,j)=>{const a=new FileReader();a.onload=()=>r(a.result);a.onerror=j;a.readAsDataURL(f);});await api('/api/map-image',{world:design.world,data});currentWorld().hasImage=true;by('backgroundSource').value='imported';paint();}catch(e){by('status').textContent=e.message;}};
+/* 8.10: presets inside the editor + verified saves. "Saved" is shown only after
+ * the server wrote the file (fsync + read-back) AND this page re-read it and
+ * found exactly what is on screen. A stale window gets a clear refusal. */
+let editing={kind:'design'},presetRows=[];
+const embedded=(()=>{try{return window.top!==window.self||new URLSearchParams(location.search).get('embedded')==='1';}catch{return true;}})();
+function canon(d){const c=structuredClone(d||{});delete c.savedAt;for(const l of ['bases','sectors','spawns'])for(const p of c[l]||[])delete p.type;const st=v=>Array.isArray(v)?v.map(st):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,st(v[k])])):v;return JSON.stringify(st(c));}
+function banner(kind,text){const b=by('saveBanner');b.className='save-banner '+kind;b.textContent=text;b.hidden=false;by('status').textContent=kind==='bad'?'Ошибка — подробности справа.':kind==='ok'?'Готово.':by('status').textContent;}
+function notifyParent(msg){try{if(embedded&&window.parent&&window.parent!==window)window.parent.postMessage({source:'nero-designer',...msg},location.origin);}catch{}}
+/* 8.10: readable sides — colour plus the faction actually fighting for it. */
+function sideNames(){const fl=f=>f?(catalog?.factionLabels?.[f]||f):'',a=design?.army||state?.selected?.army||{},t={WEST:['Синие',fl(a.westFaction)],EAST:['Красные',fl(a.eastFaction)],GUER:['Зелёные',fl(design?.greenFaction||by('greenFaction').value)]};for(const id of ['side','startSide','playerSide'])for(const o of by(id).options||[])if(t[o.value])o.textContent=t[o.value][0]+(t[o.value][1]?' — '+t[o.value][1]:'');}
+function worldLabel(id){return (worlds||[]).find(w=>w.id===id)?.label||id;}
+function updateEditing(){const p=editing.kind==='preset';by('editingName').textContent=p?'Пресет «'+editing.name+'»':'Рабочая карта · '+worldLabel(design?.world);by('editingNote').textContent=p?(editing.inGame?' · сейчас используется в игре — сохранение обновит и игру':' · библиотека; для игры нажмите «Использовать в игре»'):' · эту карту получит игра при запуске';by('save').textContent=p?'Сохранить пресет':'Сохранить карту';by('dirtyFlag').hidden=!dirty;by('useOpenPreset').hidden=!p;by('useOpenPreset').disabled=!!editing.inGame&&!dirty;}
+async function verifySaved(expected){const fresh=editing.kind==='preset'?(await api('/api/map-preset?id='+encodeURIComponent(editing.id))).design:await api('/api/design?world='+encodeURIComponent(expected.world));if(canon(fresh)!==canon(expected))throw Error('проверка после записи не совпала с редактором. Нажмите «Сохранить» ещё раз.');return fresh;}
+function savedOk(what){historyBase=structuredClone(collectDesign());historyCurrent=structuredClone(historyBase);dirty=false;by('dirtyFlag').hidden=true;banner('ok','✓ Сохранено и проверено в '+new Date().toLocaleTimeString()+' — '+what);notifyParent({type:'saved',dirty:false});updateEditing();}
+async function saveCurrent(){const d=collectDesign();banner('pending','Сохранение…');
+ if(editing.kind==='preset'){const r=await api('/api/map-preset-update',{id:editing.id,design:d,revision:editing.revision});editing.revision=r.revision;editing.inGame=!!r.inGame;await verifySaved(d);if(r.appliedToGame&&design.world===d.world){const g=await api('/api/design?world='+encodeURIComponent(d.world));design.savedAt=g.savedAt;}savedOk('пресет «'+editing.name+'»'+(r.appliedToGame?' и карта в игре':''));}
+ else{const saved=await api('/api/design',{design:d,expectedSavedAt:d.savedAt||''});design.savedAt=saved?.savedAt;await verifySaved(d);savedOk('рабочая карта «'+worldLabel(d.world)+'» (используется в игре)');notifyParent({type:'in-game',world:d.world,name:d.title});}
+ await refreshPresets();}
+async function saveAsNewPreset(){const name=by('mapPresetName').value.trim();if(!name){by('mapPresetName').focus();throw Error('введите название нового пресета.');}const d=collectDesign();banner('pending','Сохранение…');const r=await api('/api/map-presets',{name,design:d});editing={kind:'preset',id:r.id,name:r.name,revision:r.revision,inGame:!!r.inGame};await verifySaved(d);by('mapPresetName').value='';savedOk('новый пресет «'+r.name+'»');await refreshPresets();}
+async function refreshPresets(){try{const r=await api('/api/map-presets');presetRows=r.presets||[];const mine=presetRows.find(p=>p.id===editing.id);if(mine){editing.inGame=mine.inGame;editing.revision=mine.revision;}renderPresetRows();updateEditing();}catch(e){by('presetRows').textContent='Список пресетов недоступен: '+e.message;}}
+function renderPresetRows(){const q=by('presetFilter').value.trim().toLowerCase(),only=by('presetOnlyWorld').checked;const rows=presetRows.filter(p=>(!only||p.world===design?.world)&&(!q||(p.name+' '+p.title+' '+worldLabel(p.world)).toLowerCase().includes(q)));
+ by('presetCount').textContent='· показано '+rows.length+' из '+presetRows.length;
+ if(!rows.length){const e=document.createElement('p');e.textContent=presetRows.length?'Ничего не найдено. Снимите флажок «Только для выбранной карты» или измените поиск.':'Пресетов пока нет. Расставьте точки и нажмите «Сохранить как новый пресет».';by('presetRows').replaceChildren(e);return;}
+ by('presetRows').replaceChildren(...rows.map(p=>{const row=document.createElement('div');row.className='preset-row'+(editing.id===p.id?' open':'');const t=document.createElement('strong');t.textContent=p.name;row.append(t);
+  for(const [cond,cls,text] of [[p.inGame,'game','в игре'],[editing.id===p.id,'open','открыт']])if(cond){const b=document.createElement('span');b.className='badge '+cls;b.textContent=text;row.append(b);}
+  const m=document.createElement('div');m.className='meta';m.textContent=worldLabel(p.world)+' · баз '+p.bases+' · секторов '+p.sectors+' · спавнов '+p.spawns+' · '+(p.mode==='three'?'три стороны':'синие против красных')+' · изменён '+new Date(p.updatedAt).toLocaleString();row.append(m);
+  const a=document.createElement('div');a.className='row-actions';
+  for(const [label,fn,title] of [['Открыть',()=>openPresetById(p.id),'Загрузить в редактор для правки'],['Использовать в игре',()=>useInGame(p),'Сделать картой, которую получит игра'],['Переименовать',()=>renamePreset(p),''],['Удалить',()=>deletePreset(p),'Файл переносится в корзину data/map-presets/deleted']]){const b=document.createElement('button');b.type='button';b.textContent=label;if(title)b.title=title;if(label==='Удалить')b.className='danger';if(label==='Использовать в игре'&&p.inGame)b.disabled=true;b.onclick=()=>fn().catch(e=>banner('bad','✗ '+e.message));a.append(b);}
+  row.append(a);return row;}));}
+async function openPresetById(id,initial=false){if(!initial&&dirty&&!confirm('Есть несохранённые изменения. Открыть пресет без их сохранения?'))return;const p=await api('/api/map-preset?id='+encodeURIComponent(id));renderDesign(p.design);const s=presetRows.find(x=>x.id===id);editing={kind:'preset',id:p.id,name:p.name,revision:p.revision||1,inGame:!!s?.inGame};updateEditing();renderPresetRows();banner('info','Открыт пресет «'+p.name+'». Правки сохраняются в него кнопкой «Сохранить пресет».');notifyParent({type:'opened',world:p.design.world});}
+by('useOpenPreset').onclick=()=>{const p=presetRows.find(p=>p.id===editing.id);if(p)useInGame(p).catch(e=>banner('bad','✗ '+e.message));};
+async function useInGame(p){if(editing.id===p.id&&dirty){if(!confirm('Сначала сохранить изменения пресета «'+p.name+'»?'))return;await saveCurrent();}if(!confirm('Использовать «'+p.name+'» в игре? Текущая рабочая карта «'+worldLabel(p.world)+'» сохранится в резервную копию.'))return;banner('pending','Применение…');await api('/api/map-preset-apply',{id:p.id});const g=await api('/api/design?world='+encodeURIComponent(p.world));if(canon(g)!==canon((await api('/api/map-preset?id='+encodeURIComponent(p.id))).design))throw Error('проверка после применения не совпала.');if(editing.kind==='design'&&design.world===p.world&&!dirty)renderDesign(g);banner('ok','✓ «'+p.name+'» теперь используется в игре (проверено '+new Date().toLocaleTimeString()+').');notifyParent({type:'saved'});notifyParent({type:'in-game',world:p.world,name:p.name});await refreshPresets();}
+async function renamePreset(p){const name=prompt('Новое название пресета',p.name);if(!name||name.trim()===p.name)return;const r=await api('/api/map-preset-update',{id:p.id,name:name.trim(),revision:p.revision});if(editing.id===p.id){editing.name=r.name;editing.revision=r.revision;}banner('ok','✓ Переименовано: «'+r.name+'».');await refreshPresets();}
+async function deletePreset(p){if(!confirm('Удалить пресет «'+p.name+'»? Файл перенесётся в корзину data/map-presets/deleted, его можно вернуть.'))return;await api('/api/map-preset-delete',{id:p.id,revision:p.revision});if(editing.id===p.id){editing={kind:'design'};markDirty();}banner('ok','✓ Пресет «'+p.name+'» удалён (в корзине).');await refreshPresets();}
+by('editWorking').onclick=async()=>{if(dirty&&!confirm('Открыть рабочую карту без сохранения изменений?'))return;try{await load(design.world);renderPresetRows();banner('info','Открыта рабочая карта — её получит игра.');}catch(e){banner('bad','✗ '+e.message);}};
+by('presetFilter').oninput=renderPresetRows;by('greenFaction').addEventListener('change',()=>{design.greenFaction=by('greenFaction').value;if(design.army)design.army.greenFaction=design.greenFaction;by('armyGreenFaction').value=design.greenFaction;sideNames();});by('presetOnlyWorld').onchange=renderPresetRows;
+window.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&String(e.key).toLowerCase()==='s'){e.preventDefault();by('save').onclick();}});
+window.addEventListener('message',e=>{if(e.origin!==location.origin||e.data?.source!=='nero-panel')return;if(e.data.type==='open-preset')openPresetById(e.data.id).catch(x=>banner('bad','✗ '+x.message));if(e.data.type==='open-world'&&e.data.world&&e.data.world!==design?.world){by('world').value=e.data.world;by('world').onchange();}});
+if(embedded){const back=document.querySelector('.back');back?.remove?.();const theme=document.querySelector('.theme-control');theme?.remove?.();}
+try{const box=by('helpBox');if(localStorage.getItem('neroai-designer-help')==='closed')box.open=false;box.addEventListener('toggle',()=>{try{localStorage.setItem('neroai-designer-help',box.open?'open':'closed');}catch{}});}catch{}
+// Armies belong to the saved map; old maps inherit the current launch armies once.
+let armyPage=0,historyPast=[],historyFuture=[],historyCurrent=null,historyBase=null;
+const armySides={west:1,east:0,green:2},armyField=p=>'army'+p[0].toUpperCase()+p.slice(1)+'Faction';
+function initArmies(){
+  const fallback=state.armyDefaults||{};
+  design.army=structuredClone(design.army||{...fallback,...state.selected.army,greenFaction:design.greenFaction||state.selected.army?.greenFaction||fallback.greenFaction});
+  for(const [p,n] of Object.entries(armySides)){
+    design.army[p+'Assets']??=[];design.army[p+'Infantry']??=null;design.army[p+'InfantryCosts']??={};
+    const rows=[...new Set(catalog.assets.filter(a=>a.side===n&&a.kind==='INFANTRY').map(a=>a.faction))];
+    options(by(armyField(p)),rows.map(f=>[f,catalog.factionLabels?.[f]||f]).sort((a,b)=>a[1].localeCompare(b[1],'ru')));
+    by(armyField(p)).value=design.army[p+'Faction']||rows[0]||'';
+  }
+  design.greenFaction=design.army.greenFaction;armyPage=0;renderArmy();
+}
+function renderArmy(){
+  if(!design?.army)return;
+  const p=by('armySide').value||'west',n=armySides[p],chosen=new Set(design.army[p+'Assets']||[]),q=by('armySearch').value.trim().toLowerCase();
+  const rows=catalog.assets.filter(a=>a.side===n&&a.kind!=='INFANTRY'&&(!by('armyKind').value||a.kind===by('armyKind').value)&&(by('armyShow').value!=='selected'||chosen.has(a.class))&&(!q||[a.label,a.class,a.mod].join(' ').toLowerCase().includes(q))).sort((a,b)=>a.label.localeCompare(b.label,'ru'));
+  const pages=Math.max(1,Math.ceil(rows.length/40));armyPage=Math.max(0,Math.min(armyPage,pages-1));by('armyRows').replaceChildren();
+  for(const a of rows.slice(armyPage*40,(armyPage+1)*40)){
+    const label=document.createElement('label'),check=document.createElement('input'),span=document.createElement('span');label.className='army-row';check.type='checkbox';check.checked=chosen.has(a.class);
+    span.textContent=a.label+' · '+a.price+' CP · '+a.mod.replace(/^@/,'');span.title=a.class;check.setAttribute('aria-label','Купить '+a.label);
+    check.onchange=()=>{check.checked?chosen.add(a.class):chosen.delete(a.class);design.army[p+'Assets']=[...chosen];markDirty();renderArmy();};label.append(check,span);by('armyRows').append(label);
+  }
+  if(!rows.length){const empty=document.createElement('p');empty.textContent='По этим фильтрам техника не найдена.';by('armyRows').append(empty);}
+  renderSideSetupChoices();by('armyInfantrySummary').textContent='Пехота стороны: '+(design.army[p+'Infantry']===null?'автоматический состав':(design.army[p+'Infantry']||[]).length+' типов');by('armyStatus').textContent='Выбрано '+chosen.size+' типов · найдено '+rows.length;by('armyPage').textContent=(armyPage+1)+' / '+pages;by('armyPrev').disabled=armyPage===0;by('armyNext').disabled=armyPage+1>=pages;
+}
+for(const p of Object.keys(armySides))by(armyField(p)).onchange=()=>{design.army[p+'Faction']=by(armyField(p)).value;if(p==='green'){design.greenFaction=design.army.greenFaction;by('greenFaction').value=design.greenFaction;}sideNames();markDirty();};
+for(const id of ['armySide','armyKind','armyShow','armySearch'])by(id)[id==='armySearch'?'oninput':'onchange']=()=>{armyPage=0;renderArmy();};
+by('armyPrev').onclick=()=>{armyPage--;renderArmy();};by('armyNext').onclick=()=>{armyPage++;renderArmy();};
+for(const id of ['pointSideFilter','pointTypeFilter'])by(id).onchange=list;
+function historyButtons(){by('undoEdit').disabled=!historyPast.length;by('redoEdit').disabled=!historyFuture.length;}
+function recordHistory(){if(!design||!historyCurrent)return;const next=structuredClone(collectDesign());if(canon(next)!==canon(historyCurrent)){historyPast.push(historyCurrent);if(historyPast.length>50)historyPast.shift();historyCurrent=next;historyFuture=[];}historyButtons();}
+function restoreHistory(redo=false){
+  const from=redo?historyFuture:historyPast,to=redo?historyPast:historyFuture;if(!from.length)return;
+  to.push(structuredClone(collectDesign()));const value=from.pop(),past=historyPast,future=historyFuture,base=historyBase,savedAt=design.savedAt;
+  renderDesign(value);design.savedAt=savedAt;historyPast=past;historyFuture=future;historyCurrent=structuredClone(collectDesign());historyBase=base;dirty=canon(historyCurrent)!==canon(historyBase);by('dirtyFlag').hidden=!dirty;historyButtons();
+  by('status').textContent=(redo?'Правка повторена.':'Правка отменена.')+(dirty?' Сохраните карту.':' Изменений для сохранения нет.');notifyParent({type:'dirty',dirty});
+}
+by('undoEdit').onclick=()=>restoreHistory();by('redoEdit').onclick=()=>restoreHistory(true);
+window.addEventListener('keydown',e=>{const input=['INPUT','TEXTAREA','SELECT'].includes(e.target?.tagName);if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'&&!input){e.preventDefault();restoreHistory(e.shiftKey);}else if(!input&&!e.ctrlKey&&!e.metaKey){if(e.key==='+')zoom(.75);if(e.key==='-')zoom(1.33);if(!e.shiftKey&&e.key.toLowerCase()==='f')by('fit').onclick();}});
+
+
+let sideSetupRecords=[];
+function renderSideSetupChoices(){const p=by('armySide').value||'west',previous=by('armySetupPick').value,rows=sideSetupRecords.filter(r=>r.side===p);options(by('armySetupPick'),[['',rows.length?'Выберите сетап':'Сетапов этой стороны пока нет'],...rows.map(r=>[r.id,r.name+' · '+r.assets+' машин'])]);if(rows.some(r=>r.id===previous))by('armySetupPick').value=previous;by('armySetupApply').disabled=!rows.length;}
+async function refreshSideSetups(){sideSetupRecords=(await api('/api/side-setups')).setups;renderSideSetupChoices();}
+function putArmySetup(value){design.army=value;design.greenFaction=value.greenFaction;by('greenFaction').value=value.greenFaction;for(const p of Object.keys(armySides))by(armyField(p)).value=value[p+'Faction'];sideNames();markDirty();renderArmy();}
+for(const [id,part] of [['armyClearAssets','assets'],['armyClearInfantry','infantry'],['armyClearAll','all']])by(id).onclick=()=>{const p=by('armySide').value||'west';putArmySetup(NeroSideSetups.apply(design.army,NeroSideSetups.clear(NeroSideSetups.draft(design.army,p),part)));by('status').textContent='Состав стороны очищен. Отменить можно кнопкой ↶.';};
+by('armySetupRefresh').onclick=()=>refreshSideSetups().catch(e=>banner('bad',e.message));by('armySetupApply').onclick=async()=>{try{if(!by('armySetupPick').value)throw Error('Выберите сетап.');const r=await api('/api/side-setup?id='+encodeURIComponent(by('armySetupPick').value));putArmySetup(NeroSideSetups.apply(design.army,r.setup,by('armySide').value||'west'));by('status').textContent='Сетап «'+r.name+'» применён. Сохраните карту.';}catch(e){banner('bad',e.message);}};
+by('armySetupSave').onclick=async()=>{try{const r=await api('/api/side-setups',{name:by('armySetupName').value,setup:NeroSideSetups.draft(design.army,by('armySide').value||'west')});await refreshSideSetups();by('armySetupPick').value=r.id;banner('ok','Сетап «'+r.name+'» сохранён в библиотеке.');try{localStorage.setItem('nero-side-setups-updated',String(Date.now()));}catch{}}catch(e){banner('bad',e.message);}};
+by('openSetups').onclick=()=>window.open('/setups?side='+encodeURIComponent(by('armySide').value||'west'),'nero-side-setups','width=1250,height=850');window.addEventListener('focus',()=>refreshSideSetups().catch(()=>{}));window.addEventListener('storage',e=>{if(e.key==='nero-side-setups-updated')refreshSideSetups().catch(()=>{});});window.addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.source==='nero-side-setups')refreshSideSetups().catch(()=>{});});
+
+Promise.all([api('/api/worlds'),api('/api/catalog'),api('/api/state')]).then(async([w,c,s])=>{worlds=w;catalog=c;state=s;options(by('world'),worlds.map(w=>[w.id,w.label+' · '+w.mod.replace(/^@/,'')+(w.background?' · фон готов':'')]));options(by('greenFaction'),[...new Set(catalog.assets.filter(a=>a.side===2&&a.kind==='INFANTRY').map(a=>a.faction))].map(f=>[f,catalog.factionLabels?.[f]||f]).sort((a,b)=>a[1].localeCompare(b[1],'ru')));options(by('gNode'),s.nodes.map(n=>[n.id,n.label]));const id=new URLSearchParams(location.search).get('world')||s.selected.map;by('world').value=id;const presetId=new URLSearchParams(location.search).get('preset');if(presetId)await openPresetById(presetId,true);else await load(id);await refreshPresets();await refreshSideSetups();}).catch(e=>by('status').textContent=e.message);
+</script><!-- context-help:start -->
+<script>
+/* Click opens an inline explanation; hover/focus also update the status strip. */
+const NeroHelp=(()=>{
+  let output=null,sequence=0;
+  function show(text){if(output)output(text||'Наведите на знак ? или выберите настройку — подсказка появится здесь.');}
+  function bind(doc,texts={},sink){
+    if(sink)output=sink;
+    else if(doc.getElementById('settingHelp'))output=text=>doc.getElementById('settingHelp').textContent=text;
+    function annotate(){
+      for(const label of doc.querySelectorAll('label')){
+        if(label.dataset.helpBound)continue;
+        const field=label.htmlFor?doc.getElementById(label.htmlFor):label.querySelector('input,select,textarea');
+        if(!field?.id || field.type==='search')continue;
+        label.dataset.helpBound='1';
+        const id=field.dataset.editorId||field.id;
+        const caption=label.cloneNode(true);for(const el of caption.querySelectorAll('input,select,textarea,button,.context-help-inline'))el.remove();
+        const title=caption.textContent.trim().replace(/\s+/g,' ')||field.getAttribute('aria-label')||id;
+        const help=texts[id]||field.dataset.help||field.getAttribute('title')||('«'+title+'». Изменения применятся после сохранения сценария.');
+        field.dataset.help=help;field.removeAttribute('title');
+        const button=doc.createElement('button');button.type='button';button.className='help-trigger';button.textContent='?';
+        button.setAttribute('aria-label','Подсказка: '+title);button.dataset.help=help;
+        const panel=doc.createElement('span');panel.className='context-help-inline';panel.id='context-help-'+(++sequence);panel.hidden=true;panel.setAttribute('role','note');
+        button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-expanded','false');
+        button.onclick=e=>{e.preventDefault();e.stopPropagation();const open=panel.hidden;
+          for(const other of doc.querySelectorAll('.context-help-inline'))other.hidden=true;
+          for(const other of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))other.setAttribute('aria-expanded','false');
+          panel.textContent=button.dataset.help;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));show(button.dataset.help);
+          if(open)panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+        };
+        panel.onclick=e=>{e.preventDefault();e.stopPropagation();};
+        if(field.parentElement===label&&!['checkbox','radio'].includes(field.type))label.insertBefore(button,field);else label.append(button);
+        label.append(panel);
+      }
+      for(const el of doc.querySelectorAll('button[title],input[title],select[title]')){el.dataset.help=el.getAttribute('title');el.removeAttribute('title');}
+      for(const [id,text] of Object.entries(texts)){
+        const el=doc.getElementById(id)||doc.getElementById('editor-'+id);if(!el)continue;el.dataset.help=text;
+        const label=el.closest('label')||doc.querySelector('label[for="'+el.id+'"]');const trigger=label?.querySelector('.help-trigger');if(trigger)trigger.dataset.help=text;
+      }
+    }
+    annotate();
+    if(!doc.documentElement.dataset.helpListening){
+      doc.documentElement.dataset.helpListening='1';
+      doc.addEventListener('keydown',e=>{if(e.key!=='Escape')return;for(const panel of doc.querySelectorAll('.context-help-inline'))panel.hidden=true;for(const trigger of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))trigger.setAttribute('aria-expanded','false');});
+      for(const name of ['focusin','pointerover'])doc.addEventListener(name,e=>{const el=e.target.closest?.('[data-help]');if(el)show(el.dataset.help);});
+      let queued=false;
+      new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;annotate();});}).observe(doc.body,{childList:true,subtree:true});
+    }
+    show();
+  }
+  return {bind,show};
+})();
+
+</script>
+<!-- context-help:end -->
+<!-- workspace-module:start -->
+<script>
+/* Same-origin editor integration: the shell mounts each settings element once. */
+(() => {
+  const integrated=new URLSearchParams(location.search).get('workspace')==='1'&&embedded;
+  if(!embedded){location.replace('/?tab=maps&world='+encodeURIComponent(new URLSearchParams(location.search).get('world')||''));return;}
+  if(!integrated)return;
+  document.body.classList.add('workspace-editor');
+  const element=id=>document.getElementById(id)||window.parent.document.getElementById('editor-'+id);
+  async function changeWorld(id,{discard=false}={}){
+    if(design?.world===id&&!discard)return true;
+    if(dirty&&!discard&&!confirm('В карте есть несохранённые изменения. Переключить карту без их сохранения?'))return false;
+    await load(id);await refreshPresets();return true;
+  }
+  async function saveForPlay(army){
+    if(canon(design.army)!==canon(army))putArmySetup(structuredClone(army));
+    if(by('mapPresetName').value.trim())await saveAsNewPreset();
+    if(dirty)await saveCurrent();
+    else if(editing.kind==='design'&&!design.savedAt)await saveCurrent();
+    if(editing.kind==='preset'){
+      let applied=await api('/api/design?world='+encodeURIComponent(design.world));
+      if(canon(applied)!==canon(collectDesign())){await api('/api/map-preset-apply',{id:editing.id});applied=await api('/api/design?world='+encodeURIComponent(design.world));}
+      if(canon(applied)!==canon(collectDesign()))throw Error('Карта не совпала с сохранённым пресетом. Запуск остановлен.');
+      design.savedAt=applied.savedAt;editing.inGame=true;
+      await refreshPresets();
+    }
+    return structuredClone(collectDesign());
+  }
+  window.NeroEditor={element,snapshot:()=>structuredClone(collectDesign()),changed:()=>{if(design)markDirty();},saveDraft:saveCurrent,
+    setArmy:army=>{if(canon(design.army)!==canon(army))putArmySetup(structuredClone(army));},
+    changeWorld,saveForPlay,openPreset:async id=>{await openPresetById(id);return editing.id===id;}};
+  const originalRestore=restoreHistory;
+  restoreHistory=function(redo){originalRestore(redo);notifyParent({type:'opened',world:design.world});};
+  by('openSetups').onclick=()=>notifyParent({type:'navigate',tab:'setups'});
+  by('save').onclick=()=>notifyParent({type:'save-all'});
+  by('useOpenPreset').onclick=()=>notifyParent({type:'save-all'});
+  useInGame=async p=>notifyParent({type:'use-preset',id:p.id});
+  by('world').hidden=true;by('save').hidden=true;by('useOpenPreset').hidden=true;by('openSetups').hidden=true;
+  const settings=document.createElement('button');settings.type='button';settings.textContent='Параметры сценария';settings.onclick=()=>notifyParent({type:'navigate',tab:'launch',page:'overview'});document.querySelector('header').append(settings);
+  for(const tab of ['scenario','resources','start','llm','armies'])document.querySelector('[data-tab="'+tab+'"]').hidden=true;
+  showTab('points');
+  const toolbar=document.querySelector('.map-controls');document.body.insertBefore(toolbar,document.querySelector('main'));
+  const fit=document.createElement('button');fit.type='button';fit.id='fitPoints';fit.textContent='К точкам';fit.dataset.help='Показать все базы и сектора крупным планом. Shift+F.';
+  function fitPoints(){
+    const points=design.bases.concat(design.sectors,design.spawns);if(!points.length)return by('fit').click();
+    const xs=points.map(p=>p.position[0]),ys=points.map(p=>currentWorld().size-p.position[1]);
+    const span=Math.min(currentWorld().size*1.2,Math.max(400,Math.max(Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys))*1.3));
+    view=[(Math.min(...xs)+Math.max(...xs)-span)/2,(Math.min(...ys)+Math.max(...ys)-span)/2,span,span];paint();
+  }
+  fit.onclick=fitPoints;toolbar.insertBefore(fit,by('panTool'));
+  const inspector=document.createElement('button');inspector.type='button';inspector.textContent='Панель точек';inspector.setAttribute('aria-expanded','true');inspector.onclick=()=>{const hidden=document.body.classList.toggle('inspector-collapsed');inspector.setAttribute('aria-expanded',String(!hidden));};toolbar.append(inspector);
+  function nearest(pos){
+    let result=null,best=Infinity;const scale=by('map').getScreenCTM()?.a||1;
+    for(const type of ['bases','sectors','spawns'])for(const p of design[type]){
+      const distance=Math.hypot(p.position[0]-pos[0],p.position[1]-pos[1]);
+      if(distance<=Math.max(p.radius,18/scale)&&distance<best){best=distance;result={point:p,type};}
+    }
+    return result;
+  }
+  let space=false,frame=0;
+  const repaint=()=>{if(!frame)frame=requestAnimationFrame(()=>{frame=0;paint();});};
+  by('map').onwheel=e=>{
+    if(!design)return;e.preventDefault();
+    const span=Math.min(currentWorld().size*2,Math.max(80,view[2]*(e.deltaY>0?1.15:1/1.15))),factor=span/view[2];
+    const pos=xy(e),y=currentWorld().size-pos[1];
+    view=[pos[0]-(pos[0]-view[0])*factor,y-(y-view[1])*factor,span,span];repaint();
+  };
+  by('map').onpointerdown=e=>{
+    if(!design||![0,1].includes(e.button))return;
+    const hit=!space&&e.button===0&&by('tool').value==='select'?nearest(xy(e)):null;
+    if(hit)choose(hit.point,hit.type);
+    down={x:e.clientX,y:e.clientY,view:[...view],scale:by('map').getScreenCTM().a,
+      point:hit?.point,origin:hit?[...hit.point.position]:null,pan:space||e.button===1};
+    by('map').setPointerCapture(e.pointerId);e.preventDefault();
+  };
+  by('map').onpointermove=e=>{
+    if(!design)return;
+    const pos=xy(e).map(Math.round);by('mapCoordinates').textContent='X '+pos[0]+' · Y '+pos[1]+' м';
+    if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)<=5)return;
+    down.moved=true;
+    if(down.point){
+      down.point.position=[down.origin[0]+(e.clientX-down.x)/down.scale,down.origin[1]-(e.clientY-down.y)/down.scale].map(v=>Math.round(Math.min(currentWorld().size,Math.max(0,v))));
+      by('pointX').value=down.point.position[0];by('pointY').value=down.point.position[1];
+    }else{view[0]=down.view[0]-(e.clientX-down.x)/down.scale;view[1]=down.view[1]-(e.clientY-down.y)/down.scale;}
+    repaint();
+  };
+  by('map').onpointerup=e=>{
+    if(!down)return;const action=down;down=null;
+    if(action.point){if(action.moved){markDirty();list();paint();}return;}
+    if(action.moved||action.pan)return;
+    const pos=xy(e).map(Math.round),size=currentWorld().size,type=by('tool').value;
+    if(pos.some(v=>v<0||v>size))return;
+    if(type==='select'){const hit=nearest(pos);if(hit)choose(hit.point,hit.type);return;}
+    const side=by('side').value;
+    if(type==='bases')design.bases=design.bases.filter(p=>p.side!==side);
+    const point={id:crypto.randomUUID(),name:by('name').value||({bases:'База',sectors:'Сектор',spawns:'Спавн'})[type],side,position:pos,radius:+by('radius').value,infantry:+by('infantry').value,vehicles:+by('vehicles').value,vehicleClasses:[...by('vehicleClasses').selectedOptions].map(o=>o.value)};
+    design[type].push(point);choose(point,type);markDirty();list();paint();
+    if(!e.shiftKey){by('tool').value='select';by('tool').onchange();}
+  };
+  function cancelDrag(){if(down?.point){down.point.position=down.origin;by('pointX').value=down.origin[0];by('pointY').value=down.origin[1];paint();}down=null;}
+  by('map').onpointercancel=cancelDrag;
+  window.addEventListener('blur',()=>{space=false;cancelDrag();});
+  window.addEventListener('keyup',e=>{if(e.code==='Space')space=false;});
+  window.addEventListener('keydown',e=>{
+    if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;
+    if(e.code==='Space'){space=true;e.preventDefault();}
+    if(e.key==='Escape'){cancelDrag();by('tool').value='select';by('tool').onchange();}
+    if(e.key==='Delete'&&selected){e.preventDefault();by('remove').click();}
+    if(e.shiftKey&&e.key.toLowerCase()==='f'){e.preventDefault();fitPoints();}
+  });
+  NeroHelp.bind(document,{},text=>notifyParent({type:'help',text}));
+  const ready=setInterval(()=>{if(!design)return;clearInterval(ready);notifyParent({type:'workspace-ready',world:design.world});},100);
+})();
+
+</script>
+<!-- workspace-module:end -->
+</html>
+

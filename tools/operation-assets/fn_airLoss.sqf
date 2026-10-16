@@ -1,0 +1,10 @@
+params ["_plane",["_killer",objNull],["_instigator",objNull]];
+if (!isServer || {isNull _plane} || {_plane getVariable ["NeroOP_lost",false]}) exitWith {};
+private _id=_plane getVariable ["NeroOP_flight",""];
+private _victim=_plane getVariable ["NeroOP_side",-1];
+if (_id=="" || {!(_victim in [0,1])}) exitWith {};
+private _source=if (!isNull _instigator) then {_instigator} else {_killer};
+private _credit=-1;
+if (!isNull _source) then {private _side=side group _source;if (_source isKindOf "Air") then {_side=side group driver _source;};if (_side==west) then {_credit=0;};if (_side==east) then {_credit=1;};};
+private _result=[NeroOP_account,"LOSS",_victim,_id,_credit,NeroOP_budgets] call NeroOP_fnc_airLedger;
+if (_result#1) then {NeroOP_account=_result#0;_plane setVariable ["NeroOP_lost",true,true];_plane setVariable ["NeroOP_lostAt",serverTime];diag_log format ["[NeroOP AIR] LOSS id=%1 side=%2 credit=%3",_id,_victim,_credit];};

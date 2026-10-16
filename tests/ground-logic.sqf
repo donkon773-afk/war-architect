@@ -1,0 +1,21 @@
+private _checks=0;private _assert={params ["_ok","_name"];_checks=_checks+1;if (!_ok) then {throw ("Ground assertion failed: "+_name);};};
+private _p=[0,3,0,2,120] call NeroOP_fnc_groundProgress;[_p isEqualTo [2,"capturing"],"capture starts"] call _assert;
+_p=[10,3,2,2,120] call NeroOP_fnc_groundProgress;[_p isEqualTo [10,"contested"],"contest freezes"] call _assert;
+_p=[10,0,2,2,120] call NeroOP_fnc_groundProgress;[_p isEqualTo [8,"defended"],"defender recovery"] call _assert;
+_p=[10,0,0,2,120] call NeroOP_fnc_groundProgress;[_p isEqualTo [8,"empty"],"empty decay"] call _assert;
+_p=[1,0,0,10,120] call NeroOP_fnc_groundProgress;[(_p#0)==0,"no negative progress"] call _assert;
+_p=[119,2,0,100,120] call NeroOP_fnc_groundProgress;[(_p#0)==120,"no capture overflow"] call _assert;
+for "_side" from 0 to 1 do {
+ private _defender=1-_side;
+ private _winner=[120,120,1800,[10,10],[3,3],_side] call NeroOP_fnc_groundOutcome;[_winner==_side,"capture winner both sides"] call _assert;
+ _winner=[119,120,0,[10,10],[3,3],_side] call NeroOP_fnc_groundOutcome;[_winner==_defender,"timeout defender"] call _assert;
+ _winner=[120,120,0,[10,10],[3,3],_side] call NeroOP_fnc_groundOutcome;[_winner==_side,"capture at deadline takes precedence"] call _assert;
+ private _living=[10,10];_living set [_side,0];private _reserve=[3,3];_reserve set [_side,0];
+ _winner=[0,120,1800,_living,_reserve,_side] call NeroOP_fnc_groundOutcome;[_winner==_defender,"attacker exhausted"] call _assert;
+ _reserve set [_side,1];_winner=[0,120,1800,_living,_reserve,_side] call NeroOP_fnc_groundOutcome;[_winner==-1,"pending reserve prevents defeat"] call _assert;
+ _living set [_side,1];_reserve set [_side,0];_winner=[0,120,1800,_living,_reserve,_side] call NeroOP_fnc_groundOutcome;[_winner==-1,"living attacker prevents defeat"] call _assert;
+ _living set [_defender,0];_winner=[0,120,1800,_living,[0,0],_side] call NeroOP_fnc_groundOutcome;[_winner==-1,"no free win without capturing"] call _assert;
+};
+private _progress=0;for "_tick" from 1 to 60 do {_progress=([_progress,1,0,2,120] call NeroOP_fnc_groundProgress)#0;};[_progress==120,"whole capture sequence"] call _assert;
+private _held=([_progress,1,1,60,120] call NeroOP_fnc_groundProgress)#0;[_held==120,"contest does not add progress"] call _assert;
+diag_log format ["OP_TESTS_OK %1",_checks];

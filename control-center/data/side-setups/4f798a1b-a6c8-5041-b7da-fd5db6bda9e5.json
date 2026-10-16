@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "4f798a1b-a6c8-5041-b7da-fd5db6bda9e5",
+  "name": "Армия освобождения Такистана (RHS GREF, зелёные) · каталог фракции",
+  "setup": {
+    "side": "green",
+    "faction": "rhsgref_faction_tla_g",
+    "assets": [
+      "rhsgref_tla_g_2b14",
+      "rhsgref_tla_g_btr60",
+      "rhsgref_tla_g_DSHKM",
+      "rhsgref_tla_g_DSHKM_Mini_TriPod",
+      "rhsgref_tla_g_kraz255b1_cargo_open",
+      "rhsgref_tla_g_SPG9",
+      "rhsgref_tla_g_ZU23"
+    ],
+    "infantry": [
+      "rhsgref_tla_g_grenadier",
+      "rhsgref_tla_g_grenadier_m79",
+      "rhsgref_tla_g_machinegunner",
+      "rhsgref_tla_g_machinegunner_mg42",
+      "rhsgref_tla_g_marksman_m14",
+      "rhsgref_tla_g_mechanic",
+      "rhsgref_tla_g_medic",
+      "rhsgref_tla_g_rifleman",
+      "rhsgref_tla_g_rifleman_akms",
+      "rhsgref_tla_g_rifleman_l1a1",
+      "rhsgref_tla_g_rifleman_m1",
+      "rhsgref_tla_g_rifleman_m14",
+      "rhsgref_tla_g_rifleman_M16",
+      "rhsgref_tla_g_rifleman_pm63",
+      "rhsgref_tla_g_rifleman_rpg75",
+      "rhsgref_tla_g_rifleman_vz58",
+      "rhsgref_tla_g_saboteur",
+      "rhsgref_tla_g_specialist_at",
+      "rhsgref_tla_g_squadleader",
+      "rhsgref_tla_g_warlord"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.026Z",
+  "updatedAt": "2026-10-15T16:43:30.026Z"
+}

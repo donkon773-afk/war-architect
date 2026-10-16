@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "9091eba7-2d0f-50e7-b8dd-a20da4b7d376",
+  "name": "ВКС России — авиация (RHS) · обеспечение",
+  "setup": {
+    "side": "east",
+    "faction": "rhs_faction_vvs",
+    "assets": [
+      "RHS_Ka52_vvs",
+      "RHS_Mi24P_vvs",
+      "RHS_Mi24V_vvs",
+      "RHS_Mi24Vt_vvs",
+      "rhs_mi28n_vvs",
+      "RHS_Mi8AMT_vvs",
+      "RHS_Mi8AMTSh_vvs",
+      "RHS_Mi8mt_Cargo_vvs",
+      "RHS_Mi8mt_vvs",
+      "RHS_Mi8MTV3_heavy_vvs",
+      "RHS_Mi8MTV3_vvs",
+      "RHS_Mi8T_vvs",
+      "rhs_mig29s_vvs",
+      "rhs_mig29sm_vvs",
+      "rhs_pchela1t_vvs",
+      "RHS_Su25SM_vvs",
+      "RHS_T50_vvs_051",
+      "RHS_T50_vvs_052",
+      "RHS_T50_vvs_053",
+      "RHS_T50_vvs_054",
+      "RHS_T50_vvs_blueonblue",
+      "RHS_T50_vvs_generic",
+      "RHS_T50_vvs_generic_ext",
+      "RHS_TU95MS_vvs_chelyabinsk",
+      "RHS_TU95MS_vvs_dubna",
+      "RHS_TU95MS_vvs_irkutsk",
+      "RHS_TU95MS_vvs_old",
+      "RHS_TU95MS_vvs_tambov"
+    ],
+    "infantry": [
+      "rhs_pilot",
+      "rhs_pilot_combat_heli",
+      "rhs_pilot_tan",
+      "rhs_pilot_transport_heli"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.995Z",
+  "updatedAt": "2026-10-15T16:43:29.995Z"
+}

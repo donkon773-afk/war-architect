@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "4a4faa9f-f8b8-4c3a-b737-0ba42001cb0a",
+  "name": "TEST — empty round trip",
+  "setup": {
+    "side": "west",
+    "faction": "CUP_B_GB",
+    "assets": [],
+    "infantry": [],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-11T02:23:45.233Z",
+  "updatedAt": "2026-10-11T02:23:45.233Z"
+}

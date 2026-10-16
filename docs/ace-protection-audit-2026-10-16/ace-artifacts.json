@@ -1,0 +1,27 @@
+[
+  {
+    "path": "H:/SteamLibrary/steamapps/common/Arma 3/!Workshop/@ace/addons/ace_main.pbo",
+    "sha256": "f53d944967efaf287e6c08a6f3549e5e35c657fc1a1e011d707e2663413f744b",
+    "bytes": 17582
+  },
+  {
+    "path": "H:/SteamLibrary/steamapps/common/Arma 3/!Workshop/@ace/addons/ace_missileguidance.pbo",
+    "sha256": "af4c3c1782ce36bcdd7c5cb14a8c776a1d0502827969304cd2fcaca2f1a15aab",
+    "bytes": 477389
+  },
+  {
+    "path": "H:/SteamLibrary/steamapps/common/Arma 3/!Workshop/@ace/addons/ace_missile_sam.pbo",
+    "sha256": "30028df1698037cbb56926616cd102701619f43cad4302e1cc4a7b7a0c1dbd16",
+    "bytes": 10574
+  },
+  {
+    "path": "H:/SteamLibrary/steamapps/common/Arma 3/!Workshop/@ace/addons/ace_repair.pbo",
+    "sha256": "e8953f52f880d2b916ddea6d9b00a3703ff3ec96a91cc9b5f8a6771c2834ca1a",
+    "bytes": 9082576
+  },
+  {
+    "path": "H:/SteamLibrary/steamapps/common/Arma 3/!Workshop/@ace/addons/ace_medical_engine.pbo",
+    "sha256": "9599c422739351144a6bde4ebabe50fca1a3cda8ffd64b4b29e2aedb60ef3f20",
+    "bytes": 161307
+  }
+]

@@ -1,0 +1,1529 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, WL: AI Core">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"INIT",0,250,-75.000000,-1050.000000,25.000000,-1000.000000,0.000000,"INIT"};
+item1[] = {"AI",4,218,50.000000,-975.000000,150.000000,-925.000000,0.000000,"AI"};
+item2[] = {"player_or_dead",4,218,-225.000000,-975.000000,-125.000000,-925.000000,0.000000,"player" \n "or dead"};
+item3[] = {"status_",2,250,-75.000000,-750.000000,25.000000,-700.000000,0.000000,"status?"};
+item4[] = {"debug_info",2,250,-75.000000,-975.000000,25.000000,-925.000000,0.000000,"debug info"};
+item5[] = {"selection",4,218,-75.000000,-675.000000,25.000000,-625.000000,2.000000,"selection"};
+item6[] = {"skirmish",4,218,125.000000,-750.000000,225.000000,-700.000000,0.000000,"skirmish"};
+item7[] = {"vote",2,250,-75.000000,-350.000000,25.000000,-300.000000,0.000000,"vote"};
+item8[] = {"fight",2,250,375.000000,-750.000000,475.000000,-700.000000,0.000000,"fight"};
+item9[] = {"run_timer",2,250,-75.000000,-525.000000,25.000000,-475.000000,0.000000,"run timer"};
+item10[] = {"timeout",6,250,-75.000000,-425.000000,25.000000,-375.000000,0.000000,"timeout"};
+item11[] = {"",7,210,-179.000000,-329.000000,-170.999985,-321.000000,0.000000,""};
+item12[] = {"",7,210,-179.000015,-504.000000,-171.000000,-496.000000,0.000000,""};
+item13[] = {"",7,210,421.000000,-453.999969,429.000000,-446.000031,0.000000,""};
+item14[] = {"",7,210,-179.000000,-454.000000,-170.999985,-446.000031,0.000000,""};
+item15[] = {"",7,210,171.000000,-329.000000,179.000000,-321.000000,0.000000,""};
+item16[] = {"",7,210,171.000000,-579.000000,179.000015,-571.000061,0.000000,""};
+item17[] = {"timeout",6,250,375.000000,-375.000000,475.000000,-325.000000,0.000000,"timeout"};
+item18[] = {"FT_availability",2,250,375.000000,-250.000000,475.000000,-200.000000,0.000000,"FT availability" \n "check start"};
+item19[] = {"fast_travel",2,250,250.000000,500.000000,350.000000,550.000000,0.000000,"fast travel"};
+item20[] = {"",7,210,-179.000015,-228.999985,-170.999985,-221.000031,0.000000,""};
+item21[] = {"",7,210,-104.000008,-229.000015,-95.999985,-221.000000,0.000000,""};
+item22[] = {"",7,210,-104.000000,-654.000000,-96.000000,-646.000000,0.000000,""};
+item23[] = {"dead",4,218,-75.000000,-900.000000,25.000000,-850.000000,1.000000,"dead"};
+item24[] = {"terminate",1,250,-75.000000,-825.000000,25.000000,-775.000000,0.000000,"terminate"};
+item25[] = {"sector_seized_or",4,218,250.000000,625.000000,350.000000,675.000000,3.000000,"sector seized" \n "or reset"};
+item26[] = {"reset_var__run_t",2,250,125.000000,625.000000,225.000000,675.000000,0.000000,"reset var," \n "run timer"};
+item27[] = {"",7,210,-328.999939,-229.000061,-321.000061,-220.999954,0.000000,""};
+item28[] = {"",7,210,-329.000000,-579.000000,-321.000000,-571.000000,0.000000,""};
+item29[] = {"run_timer_1",2,250,250.000000,350.000000,350.000000,400.000000,0.000000,"run timer"};
+item30[] = {"timeout",6,250,250.000000,425.000000,350.000000,475.000000,0.000000,"timeout"};
+item31[] = {"timeout",6,250,125.000000,550.000000,225.000000,600.000000,0.000000,"timeout"};
+item32[] = {"continue",2,250,125.000000,-300.000000,225.000000,-250.000000,0.000000,"continue"};
+item33[] = {"someone_voted",4,218,50.000000,-525.000000,150.000000,-475.000000,0.000000,"someone" \n "voted"};
+item34[] = {"",7,210,95.999985,646.000000,104.000023,654.000000,0.000000,""};
+item35[] = {"",7,210,-254.000015,646.000000,-245.999985,654.000000,0.000000,""};
+item36[] = {"voting_cancelled",4,218,-300.000000,-525.000000,-200.000000,-475.000000,0.000000,"voting" \n "cancelled"};
+item37[] = {"base_vulnerable",4,218,-300.000000,-600.000000,-200.000000,-550.000000,3.000000,"base" \n "vulnerable"};
+item38[] = {"defend",2,250,-300.000000,-675.000000,-200.000000,-625.000000,0.000000,"defend"};
+item39[] = {"",7,210,-179.000000,-654.000000,-170.999985,-646.000000,0.000000,""};
+item40[] = {"",7,210,421.000000,-654.000000,429.000000,-646.000000,0.000000,""};
+item41[] = {"vehicles_or_disa",4,218,550.000000,-250.000000,650.000000,-200.000000,2.000000,"vehicles" \n "or disabled"};
+item42[] = {"nothing",2,250,550.000000,625.000000,650.000000,675.000000,0.000000,"nothing"};
+item43[] = {"base_vulnerable",4,218,-300.000000,-750.000000,-200.000000,-700.000000,3.000000,"base" \n "vulnerable"};
+item44[] = {"defend_1",1,250,-300.000000,-825.000000,-200.000000,-775.000000,0.000000,"defend"};
+item45[] = {"",7,210,96.000000,-1029.000000,104.000000,-1021.000000,0.000000,""};
+item46[] = {"",7,210,-179.000000,-1029.000000,-171.000000,-1021.000000,0.000000,""};
+item47[] = {"",7,210,96.000000,-729.000000,104.000000,-721.000000,0.000000,""};
+item48[] = {"",7,210,-179.000000,-729.000000,-171.000000,-721.000000,0.000000,""};
+item49[] = {"",7,210,171.000000,-504.000000,179.000000,-496.000000,0.000000,""};
+item50[] = {"",7,210,-329.000000,696.000000,-321.000000,704.000000,0.000000,""};
+item51[] = {"",7,210,296.000000,695.999939,304.000000,704.000000,0.000000,""};
+item52[] = {"",7,210,-179.000000,-279.000000,-171.000000,-271.000000,0.000000,""};
+item53[] = {"",7,210,-179.000000,521.000000,-171.000000,529.000000,0.000000,""};
+item54[] = {"",7,210,-179.000000,371.000031,-171.000000,378.999939,0.000000,""};
+item55[] = {"",7,210,-104.000000,371.000031,-96.000000,378.999939,0.000000,""};
+item56[] = {"",7,210,-104.000000,521.000000,-96.000000,529.000000,0.000000,""};
+item57[] = {"",7,210,-104.000000,-279.000000,-96.000000,-271.000000,0.000000,""};
+item58[] = {"not_airdropping",4,218,250.000000,-175.000000,350.000000,-125.000000,1.000000,"not airdropping"};
+item59[] = {"airdropping",4,218,375.000000,-175.000000,475.000000,-125.000000,0.000000,"airdropping"};
+item60[] = {"next_check",2,250,250.000000,-100.000000,350.000000,-50.000000,0.000000,"next check"};
+item61[] = {"enough_funds",4,218,250.000000,-25.000000,350.000000,25.000000,1.000000,"enough funds"};
+item62[] = {"low_funds",4,218,375.000000,-100.000000,475.000000,-50.000000,0.000000,"low funds"};
+item63[] = {"combat",4,218,375.000000,50.000000,475.000000,100.000000,0.000000,"combat"};
+item64[] = {"base_far__units",4,218,375.000000,200.000000,475.000000,250.000000,0.000000,"base far," \n "units far"};
+item65[] = {"next_check_1",2,250,250.000000,50.000000,350.000000,100.000000,0.000000,"next check"};
+item66[] = {"not_combat",4,218,250.000000,125.000000,350.000000,175.000000,2.000000,"not combat"};
+item67[] = {"",7,210,421.000000,-304.000000,429.000000,-296.000000,0.000000,""};
+item68[] = {"next_check_2",2,250,250.000000,200.000000,350.000000,250.000000,0.000000,"next check"};
+item69[] = {"",7,210,521.000000,-154.000000,529.000000,-146.000000,0.000000,""};
+item70[] = {"base_near",4,218,250.000000,275.000000,350.000000,325.000000,2.000000,"base near"};
+item71[] = {"units_close",4,218,375.000000,275.000000,475.000000,325.000000,1.000000,"units close"};
+item72[] = {"",7,210,521.000000,-304.000000,529.000000,-296.000000,0.000000,""};
+item73[] = {"",7,210,521.000000,-79.000000,529.000000,-71.000000,0.000000,""};
+item74[] = {"",7,210,521.000000,71.000000,529.000000,79.000000,0.000000,""};
+item75[] = {"",7,210,521.000000,221.000000,529.000000,229.000000,0.000000,""};
+item76[] = {"",7,210,496.000000,371.000000,504.000000,379.000000,0.000000,""};
+item77[] = {"",7,210,496.000000,246.000000,504.000000,254.000000,0.000000,""};
+item78[] = {"",7,210,496.000000,96.000000,504.000000,104.000000,0.000000,""};
+item79[] = {"",7,210,496.000000,-54.000000,504.000000,-46.000000,0.000000,""};
+item80[] = {"",7,210,496.000000,-129.000000,504.000000,-121.000000,0.000000,""};
+item81[] = {"",7,210,-254.000000,-279.000000,-246.000000,-271.000000,0.000000,""};
+item82[] = {"vehicles_lost",4,218,475.000000,550.000000,575.000000,600.000000,0.000000,"vehicles" \n "lost"};
+item83[] = {"",7,210,-254.000015,-329.000000,-245.999985,-321.000000,0.000000,""};
+item84[] = {"",7,210,596.000000,721.000000,604.000000,729.000000,0.000000,""};
+item85[] = {"",7,210,-179.000000,720.999939,-171.000000,729.000000,0.000000,""};
+item86[] = {"",7,210,521.000000,646.000000,529.000000,654.000000,0.000000,""};
+item87[] = {"nothing_1",2,250,475.000000,475.000000,575.000000,525.000000,0.000000,"nothing"};
+item88[] = {"timeout",6,250,475.000000,400.000000,575.000000,450.000000,0.000000,"timeout"};
+item89[] = {"",7,210,446.000000,496.000000,454.000000,504.000000,0.000000,""};
+item90[] = {"",7,210,446.000000,721.000000,454.000000,729.000000,0.000000,""};
+item91[] = {"check_last_query",4,218,-25.000000,-100.000000,75.000000,-50.000000,3.000000,"check last" \n "query"};
+item92[] = {"refresh_target_q",2,250,-25.000000,-25.000000,75.000000,25.000000,0.000000,"refresh" \n "target query"};
+item93[] = {"always",8,218,-25.000000,50.000000,75.000000,100.000000,0.000000,"always"};
+item94[] = {"",7,210,296.000000,721.000061,304.000000,729.000000,0.000000,""};
+item95[] = {"",7,210,296.000000,696.000000,304.000000,704.000000,0.000000,""};
+link0[] = {0,45};
+link1[] = {0,46};
+link2[] = {1,47};
+link3[] = {2,4};
+link4[] = {3,5};
+link5[] = {3,6};
+link6[] = {3,43};
+link7[] = {3,48};
+link8[] = {4,1};
+link9[] = {4,23};
+link10[] = {5,9};
+link11[] = {6,8};
+link12[] = {7,11};
+link13[] = {7,15};
+link14[] = {8,40};
+link15[] = {9,10};
+link16[] = {9,12};
+link17[] = {9,36};
+link18[] = {9,49};
+link19[] = {10,7};
+link20[] = {11,14};
+link21[] = {11,83};
+link22[] = {12,39};
+link23[] = {13,14};
+link24[] = {13,17};
+link25[] = {14,12};
+link26[] = {15,49};
+link27[] = {16,6};
+link28[] = {16,37};
+link29[] = {17,67};
+link30[] = {18,21};
+link31[] = {18,41};
+link32[] = {18,58};
+link33[] = {18,59};
+link34[] = {19,25};
+link35[] = {19,56};
+link36[] = {20,27};
+link37[] = {20,52};
+link38[] = {21,20};
+link39[] = {21,57};
+link40[] = {22,5};
+link41[] = {23,24};
+link42[] = {25,26};
+link43[] = {26,31};
+link44[] = {26,34};
+link45[] = {27,28};
+link46[] = {27,50};
+link47[] = {28,37};
+link48[] = {29,30};
+link49[] = {29,55};
+link50[] = {29,76};
+link51[] = {30,19};
+link52[] = {31,32};
+link53[] = {32,15};
+link54[] = {32,57};
+link55[] = {33,9};
+link56[] = {34,33};
+link57[] = {34,35};
+link58[] = {35,81};
+link59[] = {36,9};
+link60[] = {37,38};
+link61[] = {38,39};
+link62[] = {39,48};
+link63[] = {40,5};
+link64[] = {40,13};
+link65[] = {41,42};
+link66[] = {42,84};
+link67[] = {42,86};
+link68[] = {43,44};
+link69[] = {45,1};
+link70[] = {46,2};
+link71[] = {47,3};
+link72[] = {48,2};
+link73[] = {49,16};
+link74[] = {50,51};
+link75[] = {51,25};
+link76[] = {52,11};
+link77[] = {53,54};
+link78[] = {54,20};
+link79[] = {55,21};
+link80[] = {55,54};
+link81[] = {56,53};
+link82[] = {56,55};
+link83[] = {57,22};
+link84[] = {57,52};
+link85[] = {58,60};
+link86[] = {59,69};
+link87[] = {60,61};
+link88[] = {60,62};
+link89[] = {61,65};
+link90[] = {62,73};
+link91[] = {63,74};
+link92[] = {64,75};
+link93[] = {65,63};
+link94[] = {65,66};
+link95[] = {65,91};
+link96[] = {66,68};
+link97[] = {67,18};
+link98[] = {68,64};
+link99[] = {68,70};
+link100[] = {68,71};
+link101[] = {69,72};
+link102[] = {70,29};
+link103[] = {71,29};
+link104[] = {72,67};
+link105[] = {73,69};
+link106[] = {74,73};
+link107[] = {75,74};
+link108[] = {76,77};
+link109[] = {77,64};
+link110[] = {77,78};
+link111[] = {78,63};
+link112[] = {78,79};
+link113[] = {79,62};
+link114[] = {79,80};
+link115[] = {80,59};
+link116[] = {81,52};
+link117[] = {82,87};
+link118[] = {83,36};
+link119[] = {84,90};
+link120[] = {85,53};
+link121[] = {86,82};
+link122[] = {87,88};
+link123[] = {87,89};
+link124[] = {88,75};
+link125[] = {89,90};
+link126[] = {90,94};
+link127[] = {91,92};
+link128[] = {92,93};
+link129[] = {93,65};
+link130[] = {94,85};
+link131[] = {94,95};
+globals[] = {0.000000,0,0,0,0,640,480,1,385,6316128,1,-79.308319,759.438721,982.087769,-81.682007,697,884,1};
+window[] = {2,-1,-1,-1,-1,949,182,1396,182,3,715};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "WL: AI Core";
+        class States
+        {
+                /*%FSM<STATE "INIT">*/
+                class INIT
+                {
+                        name = "INIT";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_currentSectorVarID = format [""BIS_WL_currentSector_%1"", side group _this];" \n
+"_conqueredSectorsVarID = format [""BIS_WL_conqueredSectors_%1"", side group _this];" \n
+"_sectorVotingResetVarID = format [""BIS_WL_sectorVotingReset_%1"", side group _this];" \n
+"" \n
+"_this setVariable [""BIS_WL_AI_airdropping"", FALSE];" \n
+"" \n
+"_this setVariable [""BIS_WL_AIPurchasesHandle"", _this call BIS_fnc_WLAIPurchases];" \n
+"" \n
+"_curSector = objNull;" \n
+"_base = objNull;" \n
+"_enemyBase = objNull;" \n
+"if (side group _this == EAST) then {" \n
+"	_curSector = BIS_WL_base_EAST;" \n
+"	_base = BIS_WL_base_EAST;" \n
+"	_enemyBase = BIS_WL_base_WEST;" \n
+"} else {" \n
+"	_curSector = BIS_WL_base_WEST;" \n
+"	_base = BIS_WL_base_WEST;" \n
+"	_enemyBase = BIS_WL_base_EAST;" \n
+"};" \n
+"" \n
+"while {count waypoints group _this > 1} do {" \n
+"	{_wp = _x; if ((_wp # 1) != 0) then {deleteWaypoint _wp}} forEach waypoints group _this;" \n
+"};" \n
+"" \n
+"_this spawn {" \n
+"	_stuckStack = 0;" \n
+"	while {alive _this} do {" \n
+"		_oldPos = position _this;" \n
+"		sleep 90;" \n
+"		if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])}) && {!isPlayer _this} && {alive _this} && {_this distance _oldPos < 1} && {vehicle _this == _this}) then {" \n
+"			if (_stuckStack < 5) then {" \n
+"				[""%1 is stuck on foot, trying to unstuck"", _this] call BIS_fnc_WLdebug;" \n
+"				_this setPos ([_this, 2, random 360] call BIS_fnc_relPos);" \n
+"				_stuckStack = _stuckStack + 1;" \n
+"			} else {" \n
+"				[""%1 was stuck indefinitely, was forced to respawn"", _this] call BIS_fnc_WLdebug;" \n
+"				_this setDamage 1;" \n
+"			};" \n
+"		} else {" \n
+"			_stuckStack = 0;" \n
+"		};" \n
+"	};" \n
+"};" \n
+"" \n
+"_tLastQuery = time - 20;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="status_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isPlayer _this)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "status_">*/
+                class status_
+                {
+                        name = "status_";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"[""Starting AI routine for %1"", _this] call BIS_fnc_WLdebug;" \n
+"" \n
+"if ({alive _x} count units _this > 1 && !(_base in [BIS_WL_currentSector_WEST, BIS_WL_currentSector_EAST])) then {" \n
+"	_this setPos ((position (((units _this) select {alive _x}) # 1)) vectorAdd [10, random 10, 0]);" \n
+"};" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 43;
+                                        priority = 3.000000;
+                                        to="defend_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "skirmish">*/
+                                class skirmish
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="fight";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull ([_this,missionNamespace getVariable _currentSectorVarID] call NeroAI_fnc_wlNativeAttackTarget) && !(_this getVariable ""BIS_WL_AI_airdropping"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "debug_info">*/
+                class debug_info
+                {
+                        name = "debug_info";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"[""Pausing AI routine for %1"", _this] call BIS_fnc_WLdebug;" \n
+                         "" \n
+                         "if (isPlayer _this) then {" \n
+                         "	while {count waypoints group _this > 1} do {" \n
+                         "		{_wp = _x; if ((_wp # 1) != 0) then {deleteWaypoint _wp}} forEach waypoints group _this;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 23;
+                                        priority = 1.000000;
+                                        to="terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="status_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isPlayer _this)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "vote">*/
+                class vote
+                {
+                        name = "vote";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"if (BIS_WL_AICanVote == 1 || ({isPlayer _x && side group _x == side group _this} count BIS_WL_allWarlords == 0)) then {" \n
+"	if (isNull (_this getVariable ""BIS_WL_selectedSector"")) then {" \n
+"		_sectorsListed = missionNamespace getVariable format [""BIS_WL_sectorsArray%1"", side group _this];" \n
+"		_owned = _sectorsListed # 0;" \n
+"		_available = _sectorsListed # 1;" \n
+"		_votedFor = objNull;" \n
+"		if (_enemyBase in _available) then {" \n
+"			_votedFor = _enemyBase;" \n
+"		} else {" \n
+"			_votedFor = _available # floor random count _available;" \n
+"		};" \n
+"		_this setVariable [""BIS_WL_selectedSector"", _votedFor, TRUE];" \n
+"		[""%1 voted for %2"", _this, _votedFor getVariable ""Name""] call BIS_fnc_WLDebug;" \n
+"	};" \n
+"" \n
+"	[_this, _currentSectorVarID] spawn {" \n
+"		scriptName ""WLAICore (voting)"";" \n
+"		waitUntil {!isNull (missionNamespace getVariable (_this # 1))};" \n
+"		(_this # 0) setVariable [""BIS_WL_selectedSector"", objNull, TRUE];" \n
+"	};" \n
+"};" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "skirmish">*/
+                                class skirmish
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="fight";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull ([_this,missionNamespace getVariable _currentSectorVarID] call NeroAI_fnc_wlNativeAttackTarget) && !(_this getVariable ""BIS_WL_AI_airdropping"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fight">*/
+                class fight
+                {
+                        name = "fight";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_tFight = time + 3;" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"_curSector = [_this,missionNamespace getVariable _currentSectorVarID] call NeroAI_fnc_wlNativeAttackTarget;" \n
+"" \n
+"[group _this, _curSector] call BIS_fnc_WLAIPathSegmentation;" \n
+"" \n
+"" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tFight"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "run_timer">*/
+                class run_timer
+                {
+                        name = "run_timer";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"_tVoting = (call BIS_fnc_WLSyncedTime) + (BIS_WL_selectionTimeout * 0.2) + random (BIS_WL_selectionTimeout * 0.5);" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"" \n
+"BIS_WL_AIVotingReset = TRUE;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "skirmish">*/
+                                class skirmish
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="fight";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull ([_this,missionNamespace getVariable _currentSectorVarID] call NeroAI_fnc_wlNativeAttackTarget) && !(_this getVariable ""BIS_WL_AI_airdropping"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="vote";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(call BIS_fnc_WLSyncedTime) > _tVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "FT_availability">*/
+                class FT_availability
+                {
+                        name = "FT_availability";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "sector_seized_or">*/
+                                class sector_seized_or
+                                {
+                                        itemno = 25;
+                                        priority = 3.000000;
+                                        to="reset_var__run_t";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this && (_curSector in (missionNamespace getVariable _conqueredSectorsVarID))) || (missionNamespace getVariable _sectorVotingResetVarID)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "vehicles_or_disa">*/
+                                class vehicles_or_disa
+                                {
+                                        itemno = 41;
+                                        priority = 2.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (((group _this) getVariable ""BIS_WL_groupVehs"") select {_x distance _this < 500}) > 0 || !(BIS_WL_FTEnabled in [1, 3]) || !(_curSector getVariable [""FastTravelEnabled"", TRUE])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "not_airdropping">*/
+                                class not_airdropping
+                                {
+                                        itemno = 58;
+                                        priority = 1.000000;
+                                        to="next_check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""BIS_WL_AI_airdropping"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "airdropping">*/
+                                class airdropping
+                                {
+                                        itemno = 59;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this getVariable ""BIS_WL_AI_airdropping"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fast_travel">*/
+                class fast_travel
+                {
+                        name = "fast_travel";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"_this setVariable [""BIS_WL_funds"", (_this getVariable ""BIS_WL_funds"") - BIS_WL_FTCost, TRUE];" \n
+"" \n
+"[""AI group %1 initializing FT"", group _this] call BIS_fnc_WLdebug;" \n
+"" \n
+"_sectorsListed = missionNamespace getVariable format [""BIS_WL_sectorsArray%1"", side group _this];" \n
+"_owned = (_sectorsListed # 0) select {_x getVariable [""FastTravelEnabled"", TRUE]};" \n
+"_available = (_sectorsListed # 1) select {_x getVariable [""FastTravelEnabled"", TRUE]};" \n
+"_allLinked =  (_sectorsListed # 2);" \n
+"" \n
+"_oldPos = position _this;" \n
+"_pos = [];" \n
+"_nearest = objNull;" \n
+"" \n
+"if (_curSector == _enemyBase) then {" \n
+"	_linkedToBase = _enemyBase getVariable ""BIS_WL_connectedSectors"";" \n
+"	_linkedOwned = _linkedToBase select {_x in _owned};" \n
+"	if (count _linkedOwned == 0) then {" \n
+"		_pos = position _this;" \n
+"	} else {" \n
+"		_nearest = _linkedOwned # 0;" \n
+"		{if ((_x distance _enemyBase) < (_nearest distance _enemyBase)) then {_nearest = _x}} forEach _linkedOwned;" \n
+"		_pos = position _nearest;" \n
+"	};" \n
+"} else {" \n
+"	if (_curSector in _available) then {" \n
+"		_dist = 200 + ((_curSector getVariable ""Size"") / 2);" \n
+"		_dir = [_curSector, _this] call BIS_fnc_dirTo;" \n
+"		_pos = [_curSector, _dist, _dir] call BIS_fnc_relPos;" \n
+"		_i = 5;" \n
+"		while {surfaceIsWater _pos && _i < 180} do {" \n
+"			_pos = [_curSector, _dist, _dir + _i] call BIS_fnc_relPos;" \n
+"			if (_i > 0) then {_i = _i + 5} else {_i = -_i};" \n
+"		};" \n
+"		if (_i >= 180) then {" \n
+"			_pos = [_curSector, _dist, _dir] call BIS_fnc_relPos;" \n
+"		};" \n
+"	} else {" \n
+"		_linkedToCur = _curSector getVariable ""BIS_WL_connectedSectors"";" \n
+"		_linkedOwned = _linkedToCur select {(_x in _allLinked)};" \n
+"		if (count _linkedOwned == 0) then {" \n
+"			_pos = position _this;" \n
+"		} else {" \n
+"			_nearest = _linkedOwned # 0;" \n
+"			{if ((_x distance _curSector) < (_nearest distance _curSector)) then {_nearest = _x}} forEach _linkedOwned;" \n
+"			_pos = position _nearest;" \n
+"		};" \n
+"	};" \n
+"};" \n
+"" \n
+"if (_this distance _pos > 300) then {" \n
+"	_toFT = [];" \n
+"" \n
+"	if (_nearest != _curSector) then {" \n
+"		_toFT = (units _this) select {vehicle _x == _x};" \n
+"		_notReady = _toFT select {leader _x != _x && !unitReady _x};" \n
+"		_toFT = _toFT - _notReady;" \n
+"		{if (vehicle _x == _x) then {deleteVehicle _x} else {(vehicle _x) deleteVehicleCrew _x}} forEach _notReady;" \n
+"		{" \n
+"			_findPos = _pos findEmptyPosition [0, 50, typeOf _x];" \n
+"			if (count _findPos == 0) then {" \n
+"				_dummy = createVehicle [typeOf _x, _pos, [], 30, ""NONE""];" \n
+"				_pos = position _dummy;" \n
+"				deleteVehicle _dummy;" \n
+"			} else {" \n
+"				_pos = _findPos;" \n
+"			};" \n
+"			_x setDir ([_oldPos, _pos] call BIS_fnc_dirTo);" \n
+"			_pos set [2, 0];" \n
+"			_x setPos (_pos vectorAdd [-10 + random 20,-10 + random 20,50]);" \n
+"			_zDif = ((getPosATL _x) # 2) - ((getPos _x) # 2);" \n
+"			_x setPosATL ([(position _x) # 0, (position _x) # 1, 0] vectorAdd [0,0,_zDif + 0.1]);" \n
+"		} forEach _toFT;" \n
+"	};" \n
+"" \n
+"	_toFT spawn {" \n
+"		sleep 2;" \n
+"		{" \n
+"			if (_x distance leader _x > 100) then {" \n
+"				_x setPosATL ((getPosATL leader _x) vectorAdd [-1 + random 2,-1 + random 2,0]);" \n
+"			};" \n
+"			sleep 5;" \n
+"			_x setPosATL getPosATL _x;" \n
+"			_x doMove position leader _x;" \n
+"		} forEach _this;" \n
+"	};" \n
+"};" \n
+"" \n
+"[group _this, _curSector] call BIS_fnc_WLAIPathSegmentation;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "sector_seized_or">*/
+                                class sector_seized_or
+                                {
+                                        itemno = 25;
+                                        priority = 3.000000;
+                                        to="reset_var__run_t";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this && (_curSector in (missionNamespace getVariable _conqueredSectorsVarID))) || (missionNamespace getVariable _sectorVotingResetVarID)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "terminate">*/
+                class terminate
+                {
+                        name = "terminate";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "reset_var__run_t">*/
+                class reset_var__run_t
+                {
+                        name = "reset_var__run_t";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"_tDebrief = time + 20;" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "someone_voted">*/
+                                class someone_voted
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{side group _x == side group _this && !isNull (_x getVariable ""BIS_WL_selectedSector"")} count BIS_WL_allWarlords > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="continue";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tDebrief && {_x distance _this > 400 && alive _x} count units _this == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "run_timer_1">*/
+                class run_timer_1
+                {
+                        name = "run_timer_1";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"_tFT = time + 5 + random 10;" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "sector_seized_or">*/
+                                class sector_seized_or
+                                {
+                                        itemno = 25;
+                                        priority = 3.000000;
+                                        to="reset_var__run_t";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this && (_curSector in (missionNamespace getVariable _conqueredSectorsVarID))) || (missionNamespace getVariable _sectorVotingResetVarID)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="fast_travel";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tFT"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "base_far__units">*/
+                                class base_far__units
+                                {
+                                        itemno = 64;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"//{_x distance _this > 400 || vehicle _x != _x} count units _this > 0 && _this distance _base > 200" \n
+"FALSE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "combat">*/
+                                class combat
+                                {
+                                        itemno = 63;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_enemiesNear && behaviour _this == ""COMBAT"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "low_funds">*/
+                                class low_funds
+                                {
+                                        itemno = 62;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_funds"") < BIS_WL_FTCost"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "airdropping">*/
+                                class airdropping
+                                {
+                                        itemno = 59;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this getVariable ""BIS_WL_AI_airdropping"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "continue">*/
+                class continue
+                {
+                        name = "continue";
+                        itemno = 32;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "selection">*/
+                                class selection
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > 0 && (isNull (missionNamespace getVariable _currentSectorVarID) && (((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this) || isNull _curSector))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "skirmish">*/
+                                class skirmish
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="fight";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull ([_this,missionNamespace getVariable _currentSectorVarID] call NeroAI_fnc_wlNativeAttackTarget) && !(_this getVariable ""BIS_WL_AI_airdropping"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "defend">*/
+                class defend
+                {
+                        name = "defend";
+                        itemno = 38;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"if (BIS_WL_FTEnabled in [1, 3, 4]) then {" \n
+"	_oldPos = position _this;" \n
+"" \n
+"	_toFT = (units _this) select {_x distance _this < 500 && vehicle _x == _x};" \n
+"	" \n
+"	{" \n
+"		_dummy = createVehicle [typeOf _x, position _base, [], 30, ""NONE""];" \n
+"		_pos = position _dummy;" \n
+"		deleteVehicle _dummy;" \n
+"		_x setDir ([_oldPos, position _base] call BIS_fnc_dirTo);" \n
+"		_x setPos _pos;" \n
+"	} forEach _toFT;" \n
+"};" \n
+"" \n
+"[group _this, _base] call BIS_fnc_WLAIPathSegmentation;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class reconsider {priority=5;to="status_";condition="!([_this,_base] call NeroAI_fnc_wlNativeDefense)";action="";};
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "nothing">*/
+                class nothing
+                {
+                        name = "nothing";
+                        itemno = 42;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "sector_seized_or">*/
+                                class sector_seized_or
+                                {
+                                        itemno = 25;
+                                        priority = 3.000000;
+                                        to="reset_var__run_t";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this && (_curSector in (missionNamespace getVariable _conqueredSectorsVarID))) || (missionNamespace getVariable _sectorVotingResetVarID)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "vehicles_lost">*/
+                                class vehicles_lost
+                                {
+                                        itemno = 82;
+                                        priority = 0.000000;
+                                        to="nothing_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (((group _this) getVariable ""BIS_WL_groupVehs"") select {_x distance _this < 500}) == 0 && (BIS_WL_FTEnabled in [1, 3]) && (_curSector getVariable [""FastTravelEnabled"", TRUE])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "defend_1">*/
+                class defend_1
+                {
+                        name = "defend_1";
+                        itemno = 44;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"[group _this, _base] call BIS_fnc_WLAIPathSegmentation;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class reconsider {priority=5;to="status_";condition="!([_this,_base] call NeroAI_fnc_wlNativeDefense)";action="";};
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "next_check">*/
+                class next_check
+                {
+                        name = "next_check";
+                        itemno = 60;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "enough_funds">*/
+                                class enough_funds
+                                {
+                                        itemno = 61;
+                                        priority = 1.000000;
+                                        to="next_check_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_funds"") >= BIS_WL_FTCost"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "low_funds">*/
+                                class low_funds
+                                {
+                                        itemno = 62;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_funds"") < BIS_WL_FTCost"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "next_check_1">*/
+                class next_check_1
+                {
+                        name = "next_check_1";
+                        itemno = 65;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "check_last_query">*/
+                                class check_last_query
+                                {
+                                        itemno = 91;
+                                        priority = 3.000000;
+                                        to="refresh_target_q";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tLastQuery + 10"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "not_combat">*/
+                                class not_combat
+                                {
+                                        itemno = 66;
+                                        priority = 2.000000;
+                                        to="next_check_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_enemiesNear || behaviour _this != ""COMBAT"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "combat">*/
+                                class combat
+                                {
+                                        itemno = 63;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_enemiesNear && behaviour _this == ""COMBAT"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "next_check_2">*/
+                class next_check_2
+                {
+                        name = "next_check_2";
+                        itemno = 68;
+                        init = /*%FSM<STATEINIT"" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "base_near">*/
+                                class base_near
+                                {
+                                        itemno = 70;
+                                        priority = 2.000000;
+                                        to="run_timer_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"//_this distance _base < 200" \n
+"TRUE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "units_close">*/
+                                class units_close
+                                {
+                                        itemno = 71;
+                                        priority = 1.000000;
+                                        to="run_timer_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"//{_x distance _this > 400 || vehicle _x != _x} count units _this == 0" \n
+"TRUE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "base_far__units">*/
+                                class base_far__units
+                                {
+                                        itemno = 64;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"//{_x distance _this > 400 || vehicle _x != _x} count units _this > 0 && _this distance _base > 200" \n
+"FALSE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "nothing_1">*/
+                class nothing_1
+                {
+                        name = "nothing_1";
+                        itemno = 87;
+                        init = /*%FSM<STATEINIT""">*/"_tVLost = time + 10;" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "sector_seized_or">*/
+                                class sector_seized_or
+                                {
+                                        itemno = 25;
+                                        priority = 3.000000;
+                                        to="reset_var__run_t";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_curSector getVariable ""BIS_WL_sectorSide"") == side group _this && (_curSector in (missionNamespace getVariable _conqueredSectorsVarID))) || (missionNamespace getVariable _sectorVotingResetVarID)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "base_vulnerable">*/
+                                class base_vulnerable
+                                {
+                                        itemno = 37;
+                                        priority = 3.000000;
+                                        to="defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[_this,_base] call NeroAI_fnc_wlNativeDefense"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "player_or_dead">*/
+                                class player_or_dead
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="debug_info";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _this || !alive _this"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "voting_cancelled">*/
+                                class voting_cancelled
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="run_timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_WL_resetVoting"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "timeout">*/
+                                class timeout
+                                {
+                                        itemno = 88;
+                                        priority = 0.000000;
+                                        to="FT_availability";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _tVLost"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "refresh_target_q">*/
+                class refresh_target_q
+                {
+                        name = "refresh_target_q";
+                        itemno = 92;
+                        init = /*%FSM<STATEINIT""">*/"_tLastQuery = time;" \n
+"_enemiesNear = (_this nearObjects 200) findIf {(side _x in BIS_WL_sidesPool) && count crew _x > 0 && ((side group _x) getFriend (side group _this)) == 0} >= 0;" \n
+"if (!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})) then {" \n
+"" \n
+"" \n
+"" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links {
+class nero_owned {priority=20;to="nero_controlled";condition="(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+                                /*%FSM<LINK "always">*/
+                                class always
+                                {
+                                        itemno = 93;
+                                        priority = 0.000000;
+                                        to="next_check_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"TRUE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+class nero_controlled {
+ name="NeroAI control";
+ init="_tVoting = (call BIS_fnc_WLSyncedTime) + (BIS_WL_selectionTimeout * 0.2) + random (BIS_WL_selectionTimeout * 0.5);" \n
+"_neroNext = time+1;" \n
+"[_this] call NeroAI_fnc_wlControlledTick;";
+ class Links {
+ class dead {priority=30;to="debug_info";condition="isPlayer _this || {!alive _this}";action="";};
+ class released {priority=20;to="status_";condition="!(((group _this) getVariable [""NeroAI_active"",false]) || {(group _this) getVariable [""NeroAI_playerHold"",false]} || {diag_tickTime < ((group _this) getVariable [""NeroAI_manualOrderUntil"",0])})";action="";};
+ class tick {priority=0;to="nero_controlled";condition="time >= _neroNext";action="";};
+ } };
+
+};
+initState="INIT";
+        finalStates[]={"terminate"};
+};
+/*%FSM</COMPILE>*/

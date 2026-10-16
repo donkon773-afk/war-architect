@@ -1,0 +1,124 @@
+respawn = 3;
+Respawndelay = 5;
+class Params
+{
+	class JEZ_WLStartingDaytime
+	{
+		title = "Starting time of day";
+		values[] = {-6, 0, 6, -12};
+		texts[] = {"Morning", "Noon", "Evening", "Night"};
+		default = -6;
+	};
+	class JEZ_WLTimeAcceleration
+	{
+		title = "Time acceleration";
+		values[] = {1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24};
+		texts[] = {"None", "x2", "x4", "x6", "x8", "x10", "x12", "x14", "x16", "x18", "x20", "x22", "x24"};
+		default = 20;
+	};
+	class JEZ_WLProgress
+	{
+		title = "Sectors progress";
+		values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+		texts[] = {"BLUFOR 0%, OPFOR 0%","BLUFOR 25%, OPFOR 25%","BLUFOR 50%, OPFOR 50%","BLUFOR 25%, OPFOR 0%","BLUFOR 0%, OPFOR 25%","BLUFOR 50%, OPFOR 25%","BLUFOR 25%, OPFOR 50%","BLUFOR 75%, OPFOR 25%","BLUFOR 25%, OPFOR 75%","BLUFOR 50%, OPFOR 0%","BLUFOR 0%, OPFOR 50%","BLUFOR 75%, OPFOR 0%","BLUFOR 0%, OPFOR 75%"};
+		default = 1;
+	};
+	class JEZ_WLFTEnabled
+	{
+		title = "Fast travel";
+		values[] = {1, 0, 2, 3, 4};
+		texts[] = {"Enabled for everyone", "Disabled for everyone", "Disabled for AI", "Disabled for players", "Enabled only to owned sectors"};
+		default = 1;
+	};
+	class JEZ_WLScanEnabled
+	{
+		title = "Sector scan";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 1;
+	};
+	class JEZ_WLAIVoting
+	{
+		title = "AI sector voting";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 1;
+	};
+	class JEZ_WLArsenalEnabled
+	{
+		title = "Arsenal";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 1;
+	};
+	class JEZ_WLMarkersTransparency
+	{
+		title = "HUD sector icons transparency";
+		values[] = {4, 3, 2, 1, 0};
+		texts[] = {"0% (fully visible)", "25%", "50%", "75%", "100% (invisible)"};
+		default = 4;
+	};
+	class JEZ_WLPlayersTransparency
+	{
+		title = "HUD player icons transparency";
+		values[] = {4, 3, 2, 1, 0};
+		texts[] = {"0% (fully visible)", "25%", "50%", "75%", "100% (invisible)"};
+		default = 4;
+	};
+	class JEZ_WLFatigueEnabled
+	{
+		title = "Fatigue";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 0;
+	};
+	class JEZ_WLMusic
+	{
+		title = "Music";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 0;
+	};
+	class JEZ_WLVoice
+	{
+		title = "Voice notifications";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 1;
+	};
+	class JEZ_WLStartCP
+	{
+		title = "Starting Command Points";
+		values[] = {0, 100, 250, 500, 1000, 2500, 5000};
+		texts[] = {"0", "100", "250", "500", "1000", "2500", "5000"};
+		default = 500;
+	};
+	class JEZ_WLCPMultiplier
+	{
+		title = "CP Income Multiplier";
+		values[] = {1, 2, 3, 4, 5};
+		texts[] = {"1x", "2x", "3x", "4x", "5x"};
+		default = 1;
+	};
+	class JEZ_WLVotingTimeout
+	{
+		title = "Voting Timeout";
+		values[] = {5, 10, 15, 20, 25, 30};
+		texts[] = {"5 sec", "10 sec", "15 sec", "20 sec", "25 sec", "30 sec"};
+		default = 15;
+	};
+	class JEZ_WLVehicleSpan
+	{
+		title = "Vehicle Removal Timeout";
+		values[] = {900, 1800, 3600, 5400, 7200, 1000000};
+		texts[] = {"15 min", "30 min", "60 min", "90 min", "120 min", "Never"};
+		default = 3600;
+	};
+	class JEZ_WLLoadProgress
+	{
+		title = "Load progress from last session";
+		values[] = {1, 0};
+		texts[] = {"Enabled", "Disabled"};
+		default = 0;
+	};
+};

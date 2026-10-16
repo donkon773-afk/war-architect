@@ -1,0 +1,27 @@
+params [["_unit",objNull,[objNull]],["_class","",[""]]];
+if (!isServer || {isNull _unit} || {!isPlayer _unit} || {!alive _unit} || {!(_unit in allPlayers)}) exitWith {};
+if (isRemoteExecuted && {remoteExecutedOwner!=owner _unit}) exitWith {};
+if (!(missionNamespace getVariable ["NeroOP_ready",false]) || {NeroOP_finished}) exitWith {};
+private _sideIndex=[west,east] find side group _unit;
+if (_sideIndex<0) exitWith {};
+if (serverTime-(_unit getVariable ["NeroOP_requestAt",-100])<3) exitWith {};
+_unit setVariable ["NeroOP_requestAt",serverTime];
+private _classes=getArray(missionConfigFile >> "CfgNeroOperation" >> (["WEST","EAST"]#_sideIndex) >> "classes");
+if (_class=="") then {_class=if ((["WEST","EAST"]#_sideIndex)==getText(missionConfigFile >> "CfgNeroOperation" >> "playerSide")) then {getText(missionConfigFile >> "CfgNeroOperation" >> "playerClass")} else {_classes#0};};
+if !(_class in _classes) exitWith {};
+private _plane=_unit getVariable ["NeroOP_plane",objNull];
+if (!isNull _plane && {alive _plane} && {!(_plane getVariable ["NeroOP_lost",false])}) exitWith {if (driver _plane!=_unit) then {[_unit,_plane] remoteExec ["NeroOP_fnc_airBoard",owner _unit];};};
+if (vehicle _unit!=_unit) exitWith {};
+private _adopt=NeroOP_planes select {alive _x && {typeOf _x==_class} && {(_x getVariable ["NeroOP_side",-1])==_sideIndex} && {!(_x getVariable ["NeroOP_lost",false])} && {isNull (_x getVariable ["NeroOP_player",objNull])} && {isNull (_x getVariable ["NeroOP_lobbyPilot",objNull])} && {(crew _x findIf {isPlayer _x})<0}};
+if !(_adopt isEqualTo []) then {
+ _plane=_adopt#0; private _ai=driver _plane;
+ if (!isNull _ai && {!isPlayer _ai}) then {deleteVehicle _ai;};
+ _plane setVariable ["NeroOP_adopted",true,true];
+ _plane setVariable ["NeroOP_heading",getDir _plane,true];
+ _plane setVariable ["NeroOP_player",_unit,true];_plane setVariable ["NeroOP_pendingAt",serverTime];
+ _plane enableSimulationGlobal false; _plane allowDamage false;
+} else {isNil {_plane=[_sideIndex,_unit,_class] call NeroOP_fnc_airSpawn;};};
+if (isNull _plane) exitWith {_unit setVariable ["NeroOP_notice","Нет свободного самолёта: дождитесь подкрепления или освобождения лимита.",true];};
+_unit setVariable ["NeroOP_plane",_plane,true];
+_unit setVariable ["NeroOP_notice","Самолёт готов. Подключение к кабине…",true];
+[_unit,_plane] remoteExec ["NeroOP_fnc_airBoard",owner _unit];

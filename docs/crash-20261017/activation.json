@@ -1,0 +1,11 @@
+{
+  "backup": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\backups\\missile-activation-20261017-1792187561534",
+  "installedMission": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\MPMissions\\NeroAI_Frontline_Australia_974d7a083824.australia.pbo",
+  "sha256": "40F79C47DD401A82C5542ACB67220C45DD399A3681A8768DAC774B2115061F17",
+  "campaignKey": "9e8de489-4693-475a-a32c-21974040c761",
+  "previousMissileModule": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\dist\\missile-profile-candidates\\@NeroAI_Missiles_395c0b64af5e",
+  "missileModule": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\dist\\missile-profile-candidates\\@NeroAI_Missiles_f3594cf88f1c",
+  "launchRequestUpdated": true,
+  "servicesRestarted": false,
+  "gameTested": false
+}

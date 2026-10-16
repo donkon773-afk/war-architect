@@ -1,0 +1,28 @@
+{
+  "world": "Malden",
+  "worldSize": 12800,
+  "strideX": 1000,
+  "strideY": 1000,
+  "columns": 13,
+  "rows": 13,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -12,
+      "worldTop": 12812,
+      "extentX": 1024,
+      "extentY": 1024
+    }
+  },
+  "sourceSize": 55492713,
+  "sourceModified": 1790777529114.226,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 169,
+  "seconds": 5.8,
+  "coarsestPixelSize": 1.0
+}

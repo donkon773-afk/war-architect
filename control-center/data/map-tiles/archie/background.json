@@ -1,0 +1,28 @@
+{
+  "world": "archie",
+  "worldSize": 12288,
+  "strideX": 1920,
+  "strideY": 1920,
+  "columns": 7,
+  "rows": 7,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -64,
+      "worldTop": 12352,
+      "extentX": 2048,
+      "extentY": 2048
+    }
+  },
+  "sourceSize": 292572050,
+  "sourceModified": 1790780648904.5186,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 49,
+  "seconds": 6.23,
+  "coarsestPixelSize": 1.0
+}

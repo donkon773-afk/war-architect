@@ -1,0 +1,102 @@
+{
+  "id": "e985a7a5-80a1-4179-856d-ef84471d53e9",
+  "name": "TEMP свободный сценарий 1792086633331",
+  "createdAt": "2026-10-15T17:50:33.852Z",
+  "updatedAt": "2026-10-15T17:50:33.852Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Australia",
+    "title": "NeroAI — Australia",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих",
+        "side": "WEST",
+        "position": [
+          8192,
+          32768
+        ],
+        "radius": 200
+      },
+      {
+        "id": "east",
+        "name": "База красных",
+        "side": "EAST",
+        "position": [
+          32768,
+          8192
+        ],
+        "radius": 200
+      }
+    ],
+    "sectors": [],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "maxVehicles": 128,
+    "maxNPCs": 1000,
+    "army": {
+      "westFaction": "rhs_faction_usarmy_d",
+      "eastFaction": "rhs_faction_msv",
+      "westAssets": [
+        "CUP_B_F35B_USMC",
+        "F4E_BLU",
+        "F16C_BLU",
+        "F16_B52_BLU",
+        "rhsusf_m1a2sep1wd_usarmy",
+        "rhsusf_m1a2sep2wd_usarmy",
+        "CUP_B_M1A2C_TUSK_II_Woodland_US_Army",
+        "TT_Merkava_Mk4M",
+        "CUP_B_Challenger2_Woodland_BAF",
+        "CUP_B_Leopard_1A3_GER",
+        "CUP_B_Leopard2A6_GER",
+        "CUP_B_FV510_GB_W",
+        "RHS_CH_47F",
+        "RHS_UH60M",
+        "RHS_AH64D",
+        "CUP_B_LAV25_USMC"
+      ],
+      "eastAssets": [
+        "CUP_O_SU34_RU",
+        "JS_JC_SU35",
+        "rhs_t80bv",
+        "rhs_t72bd_tv",
+        "CUP_O_T90M_RU",
+        "rhs_t14_tv",
+        "CUP_O_Mi8AMT_RU",
+        "RHS_Mi8mt_vdv",
+        "RHS_Mi24V_vdv",
+        "rhs_mi28n_vvs",
+        "rhs_bmp2_msv",
+        "rhs_btr80a_msv",
+        "rhs_zsu234_aa"
+      ],
+      "greenFaction": "rhsgref_faction_cdf_ng",
+      "greenAssets": [
+        "B_MBT_01_cannon_F",
+        "O_MBT_02_cannon_F",
+        "Missing_Mod_Tank"
+      ],
+      "westInfantry": null,
+      "westInfantryCosts": {},
+      "eastInfantry": null,
+      "eastInfantryCosts": {},
+      "greenInfantry": null,
+      "greenInfantryCosts": {}
+    },
+    "greenFaction": "rhsgref_faction_cdf_ng",
+    "playerRole": "commander",
+    "startCP": 6000,
+    "income": 100
+  }
+}

@@ -1,0 +1,32 @@
+/* Called in the server transaction. Stage locally, then join the existing player group. */
+params ["_unit","_side","_index"];
+if (!isServer || {!NeroOP_campReady} || {NeroOP_campFinished} || {!alive _unit} || {!isPlayer _unit} || {_unit getVariable ["ACE_isUnconscious",false]} || {!(_side in [0,1])}) exitWith {false};
+private _group=group _unit;private _key=_group getVariable ["NeroOP_groupKey",-1];
+if (leader _group!=_unit || {!(_group in NeroOP_campGroups)} || {!(_group getVariable ["NeroOP_campGroup",false])} || {(_group getVariable ["NeroOP_side",-1])!=_side} || {_key<1}) exitWith {false};
+private _cfg=missionConfigFile >> "CfgNeroOperation";private _army=_cfg >> (["WEST","EAST"]#_side);private _classes=getArray(_army >> "classes");
+private _size=getNumber(_army >> "groupSize");private _cost=getNumber(_cfg >> "reinforcementCost");private _price=(ceil (_cost/_size)) max 5;
+private _source=[_unit,_side,_price] call NeroOP_fnc_campaignWarehouse;if (_source<0) exitWith {false};
+private _ground=({alive _x && {!isPlayer _x}} count units _group)+(_group getVariable ["NeroOP_pendingRecruits",0]);private _loans=0;
+{if ((_x#1)==_side && {(_x#10)==_key} && {alive (_x#4)} && {!((_x#4) getVariable ["NeroOP_independentCrew",false])}) then {_loans=_loans+({alive _x && {!isPlayer _x} && {_x getVariable ["NeroOP_campUnit",false]} && {group _x!=_group}} count crew (_x#4));};} forEach NeroOP_campEquipment;
+private _budget=[NeroOP_campRecruitCredits,NeroOP_campIssued,NeroOP_campBudget,[getNumber(_cfg >> "WEST" >> "groupSize"),getNumber(_cfg >> "EAST" >> "groupSize")]] call NeroOP_fnc_campaignRecruitBudget;
+private _gate=[_classes,_index,_cost,_size,_ground,_loans,NeroOP_campStocks#_source,(_budget#1)#_side,(NeroOP_campBudget#_side)*_size,_budget#0] call NeroOP_fnc_campaignRecruitGate;
+if !(_gate#0) exitWith {false};private _class=_classes#_index;
+if (!isClass(configFile >> "CfgVehicles" >> _class) || {!(_class isKindOf "CAManBase")} || {getNumber(configFile >> "CfgVehicles" >> _class >> "side")!=([1,0]#_side)} || {allUnits findIf {alive _x && {!captive _x} && {([west,east]#_side) getFriend side group _x<.6} && {_x distance2D _unit<200}}>=0}) exitWith {false};
+private _plan=[_side,_source,1] call NeroOP_fnc_campaignDropPlan;if (count _plan==0) exitWith {false};
+private _origin=if (isNull (_plan#0)) then {getPosATL _unit} else {NeroOP_campPositions#(NeroOP_campRoots#_side)};
+private _pos=[_origin,5,35,2,0,.4,0,[],[]] call BIS_fnc_findSafePos;
+if (count _pos<2 || {surfaceIsWater _pos} || {_pos distance2D _origin>50}) exitWith {[_plan] call NeroOP_fnc_campaignDeliveryAbort;false};
+private _staging=createGroup [[west,east]#_side,true];if (isNull _staging) exitWith {[_plan] call NeroOP_fnc_campaignDeliveryAbort;false};
+private _recruit=_staging createUnit [_class,_pos,[],0,"NONE"];
+if (isNull _recruit) exitWith {deleteGroup _staging;[_plan] call NeroOP_fnc_campaignDeliveryAbort;false};
+_recruit setSkill getNumber(_army >> "skill");{_recruit setSkill [_x,getNumber(_cfg >> "Gameplay" >> _x)];} forEach ["spotDistance","spotTime","courage","commanding","reloadSpeed"];
+_recruit setVariable ["NeroOP_campUnit",true,true];_recruit setRank "PRIVATE";if (isNull (_plan#0)) then {[_recruit] joinSilent _group;} else {_recruit moveInCargo (_plan#0);};
+if ((isNull (_plan#0) && {group _recruit!=_group}) || {(!isNull (_plan#0)) && {vehicle _recruit!=(_plan#0)}} || {!alive _unit} || {group _unit!=_group} || {leader _group!=_unit}) exitWith {deleteVehicle _recruit;deleteGroup _staging;[_plan] call NeroOP_fnc_campaignDeliveryAbort;false};
+NeroOP_campSeq=NeroOP_campSeq+1;private _result=[NeroOP_campStocks,NeroOP_campLedger,"spend","recruit:"+str NeroOP_campSeq,_source,-1,_gate#1] call NeroOP_fnc_campaignStock;
+if !(_result#2) exitWith {deleteVehicle _recruit;deleteGroup _staging;[_plan] call NeroOP_fnc_campaignDeliveryAbort;false};
+NeroOP_campStocks=_result#0;NeroOP_campLedger=_result#1;if (isNull (_plan#0)) then {deleteGroup _staging;} else {_group setVariable ["NeroOP_pendingRecruits",1+(_group getVariable ["NeroOP_pendingRecruits",0]),true];[_plan,[_recruit],_group] spawn NeroOP_fnc_campaignDropFlight;};
+private _credit=NeroOP_campRecruitCredits findIf {(_x#0)==_side && {(_x#1)==_key}};
+if (_credit<0) then {NeroOP_campRecruitCredits pushBack [_side,_key,1];} else {private _r=NeroOP_campRecruitCredits#_credit;_r set [2,(_r#2)+1];};
+NeroOP_campRecruitState=[_budget#1,[0,1] apply {(NeroOP_campBudget#_x)*getNumber(_cfg >> (["WEST","EAST"]#_x) >> "groupSize")}];(NeroOP_campRecruitState#0) set [_side,((NeroOP_campRecruitState#0)#_side)+1];publicVariable "NeroOP_campRecruitState";
+_unit setVariable ["NeroOP_notice",format ["%1 оплачен: на базе присоединяется сразу, вне базы прибывает десантом · %2 снаб. · состав %3/12 (с экипажами).",getText(configFile >> "CfgVehicles" >> _class >> "displayName"),_gate#1,_ground+_loans+1],true];
+diag_log format ["[NeroOP RECRUIT] BUY side=%1 parent=%2 class=%3 price=%4 source=%5 roster=%6 loans=%7",_side,_key,_class,_gate#1,_source,_ground+1,_loans];true

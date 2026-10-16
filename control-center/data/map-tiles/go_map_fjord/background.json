@@ -1,0 +1,28 @@
+{
+  "world": "go_map_fjord",
+  "worldSize": 14336,
+  "strideX": 448,
+  "strideY": 448,
+  "columns": 32,
+  "rows": 32,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -32,
+      "worldTop": 14368,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 260169607,
+  "sourceModified": 1790780648869.6172,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 1024,
+  "seconds": 9.19,
+  "coarsestPixelSize": 1.0
+}

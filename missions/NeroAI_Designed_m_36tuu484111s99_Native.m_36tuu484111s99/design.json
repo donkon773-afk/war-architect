@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "world": "m_36tuu484111s99",
+  "title": "NeroAI Warlords — Посадково: ВСУ против РФ",
+  "mode": "native",
+  "greenRole": "defender",
+  "playerSide": "WEST",
+  "lethalZones": false,
+  "bases": [
+    {
+      "id": "west",
+      "name": "База ВСУ",
+      "side": "WEST",
+      "position": [
+        1996.8000000000002,
+        7987.200000000001
+      ],
+      "radius": 200
+    },
+    {
+      "id": "east",
+      "name": "База РФ",
+      "side": "EAST",
+      "position": [
+        7987.200000000001,
+        1996.8000000000002
+      ],
+      "radius": 200
+    }
+  ],
+  "sectors": [
+    {
+      "id": "80716cdd-a4a3-4a77-ac94-a109ac8efb6d",
+      "name": "Akirovka",
+      "side": "WEST",
+      "position": [
+        1030,
+        5445
+      ],
+      "radius": 200,
+      "infantry": 6,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "75beff12-cee6-4942-8700-23f715ef533f",
+      "name": "Ozerovka",
+      "side": "EAST",
+      "position": [
+        5095,
+        3604
+      ],
+      "radius": 200,
+      "infantry": 6,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "2a0c7442-e241-4a7b-ab52-7c5c8d8473e9",
+      "name": "Posadkovo",
+      "side": "EAST",
+      "position": [
+        8493,
+        4142
+      ],
+      "radius": 200,
+      "infantry": 6,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "bcc4e698-3fe0-4dfd-8aa7-d80fa24eb7d0",
+      "name": "Leopardovka",
+      "side": "EAST",
+      "position": [
+        9598,
+        7215
+      ],
+      "radius": 200,
+      "infantry": 6,
+      "vehicles": 0,
+      "vehicleClasses": []
+    },
+    {
+      "id": "52272c20-78bd-4204-9fed-92c0f6bc4660",
+      "name": "Центральные поля",
+      "side": "EAST",
+      "position": [
+        5520,
+        6592
+      ],
+      "radius": 200,
+      "infantry": 6,
+      "vehicles": 0,
+      "vehicleClasses": []
+    }
+  ],
+  "spawns": [],
+  "startAssets": [
+    {
+      "side": "WEST",
+      "class": "kba_bm_oplot",
+      "count": 1
+    },
+    {
+      "side": "WEST",
+      "class": "kba_t84_120",
+      "count": 1
+    },
+    {
+      "side": "WEST",
+      "class": "CUP_B_M2A3Bradley_AFU",
+      "count": 1
+    },
+    {
+      "side": "WEST",
+      "class": "CUP_B_Ural_AFU",
+      "count": 1
+    },
+    {
+      "side": "EAST",
+      "class": "rhs_t72bd_msv",
+      "count": 1
+    },
+    {
+      "side": "EAST",
+      "class": "rhs_t80bv",
+      "count": 1
+    },
+    {
+      "side": "EAST",
+      "class": "rhs_bmp2_msv",
+      "count": 1
+    },
+    {
+      "side": "EAST",
+      "class": "RHS_Ural_MSV_01",
+      "count": 1
+    }
+  ],
+  "garrisonLLM": {
+    "enabled": false,
+    "route": "shared",
+    "node": "mac",
+    "model": "google/gemma-4-26b-a4b-qat",
+    "limit": 4,
+    "instructions": ""
+  },
+  "maxNPCs": 160,
+  "maxVehicles": 32,
+  "startCP": 6000,
+  "income": 100,
+  "greenFaction": "rhsgref_faction_cdf_ng",
+  "playerRole": "observer"
+}

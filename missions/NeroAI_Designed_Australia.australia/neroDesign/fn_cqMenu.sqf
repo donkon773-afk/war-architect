@@ -1,0 +1,11 @@
+if(!hasInterface || {dialog} || {isNull player})exitWith{};
+disableSerialization;
+private _d=(findDisplay 46)createDisplay "RscDisplayEmpty";
+private _list=_d ctrlCreate["RscListbox",87102];_list ctrlSetPosition[0.12,0.12,0.76,0.60];_list ctrlCommit 0;
+private _rows=[];private _cat=player getVariable["BIS_WL_purchasable",[]];
+{private _name=["Пехота","Наземная техника","","Оборона","Авиация","Флот"]param[_forEachIndex,""];{private _i=_list lbAdd format["Купить · %1 · %2 · %3 CP",_name,_x param[3,_x#0],_x#1];_rows pushBack["BUY",_x#0];}forEach _x;}forEach _cat;
+{private _name=_x getVariable["Name",""];_list lbAdd("Назначить цель · "+_name);_rows pushBack["TARGET",_x];if((_x getVariable["BIS_WL_sectorSide",sideUnknown])==side group player)then{_list lbAdd("Быстрое перемещение · "+_name);_rows pushBack["TRAVEL",_x];};}forEach(missionNamespace getVariable["BIS_WL_sectors",[]]);
+_d setVariable["NeroCQ_rows",_rows];
+private _buy=_d ctrlCreate["RscButton",87103];_buy ctrlSetText "Выполнить";_buy ctrlSetPosition[0.12,0.75,0.36,0.07];_buy ctrlCommit 0;
+_buy ctrlAddEventHandler["ButtonClick",{private _d=ctrlParent(_this#0);private _i=lbCurSel(_d displayCtrl 87102);if(_i<0)exitWith{};private _row=(_d getVariable["NeroCQ_rows",[]])#_i;if((_row#0)=="BUY")then{[player,_row#1]remoteExecCall["NeroWL_Design_fnc_cqBuy",2];}else{[player,_row#1,_row#0]remoteExecCall["NeroWL_Design_fnc_cqTravel",2];};_d closeDisplay 1;}];
+private _close=_d ctrlCreate["RscButton",87104];_close ctrlSetText "Закрыть";_close ctrlSetPosition[0.52,0.75,0.36,0.07];_close ctrlCommit 0;_close ctrlAddEventHandler["ButtonClick",{(ctrlParent(_this#0))closeDisplay 1;}];

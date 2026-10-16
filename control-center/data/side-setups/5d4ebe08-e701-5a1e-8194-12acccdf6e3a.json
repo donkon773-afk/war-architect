@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "id": "5d4ebe08-e701-5a1e-8194-12acccdf6e3a",
+  "name": "Партизаны FIA (Arma 3, красные) · каталог фракции",
+  "setup": {
+    "side": "east",
+    "faction": "OPF_G_F",
+    "assets": [],
+    "infantry": [
+      "O_G_engineer_F",
+      "O_G_medic_F",
+      "O_G_Sharpshooter_F",
+      "O_G_Soldier_A_F",
+      "O_G_Soldier_AR_F",
+      "O_G_Soldier_exp_F",
+      "O_G_Soldier_F",
+      "O_G_Soldier_GL_F",
+      "O_G_Soldier_LAT_F",
+      "O_G_Soldier_lite_F",
+      "O_G_Soldier_M_F",
+      "O_G_Soldier_SL_F",
+      "O_G_Soldier_TL_F"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.946Z",
+  "updatedAt": "2026-10-15T16:43:29.946Z"
+}

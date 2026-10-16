@@ -1,0 +1,520 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, WL: Sector Handle (Server)">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"INIT",0,4346,-50.000000,-1425.000000,50.000000,-1375.000000,0.000000,"INIT"};
+item1[] = {"selected_by_some",4,218,-175.000000,-975.000000,-75.000000,-925.000000,0.000000,"selected" \n "by someone"};
+item2[] = {"populate",2,250,-175.000000,-900.000000,-75.000000,-850.000000,0.000000,"populate"};
+item3[] = {"preset_side_",2,250,-50.000000,-1125.000000,50.000000,-1075.000000,0.000000,"preset side?"};
+item4[] = {"setup_vars",2,250,75.000000,-1200.000000,175.000000,-1150.000000,0.000000,"setup" \n "vars"};
+item5[] = {"side_changed",4,218,-175.000000,-825.000000,-75.000000,-775.000000,0.000000,"side" \n "changed"};
+item6[] = {"reposition",2,250,-175.000000,-750.000000,-75.000000,-700.000000,0.000000,"reposition"};
+item7[] = {"vulnerable",4,218,75.000000,-1125.000000,175.000000,-1075.000000,0.000000,"vulnerable"};
+item8[] = {"move_respawn_mar",2,250,75.000000,-1050.000000,175.000000,-1000.000000,0.000000,"move respawn" \n "markers"};
+item9[] = {"nothing",2,250,-175.000000,-1050.000000,-75.000000,-1000.000000,0.000000,"nothing"};
+item10[] = {"nothing_1",2,250,-50.000000,-675.000000,50.000000,-625.000000,0.000000,"nothing"};
+item11[] = {"selected_by_other",4,218,-175.000000,-675.000000,-75.000000,-625.000000,0.000000,"selected" \n "by other side"};
+item12[] = {"spawn_guards",2,250,-175.000000,-600.000000,-75.000000,-550.000000,0.000000,"spawn guards"};
+item13[] = {"",7,210,-203.999969,-579.000000,-196.000031,-571.000000,0.000000,""};
+item14[] = {"",7,210,-203.999969,-804.000000,-196.000031,-796.000000,0.000000,""};
+item15[] = {"always",8,218,-50.000000,-1350.000000,50.000000,-1300.000000,0.000000,"always"};
+item16[] = {"base_",2,250,-50.000000,-1275.000000,50.000000,-1225.000000,0.000000,"base?"};
+item17[] = {"yes",4,218,75.000000,-1275.000000,175.000000,-1225.000000,1.000000,"yes"};
+item18[] = {"no",4,218,-50.000000,-1200.000000,50.000000,-1150.000000,0.000000,"no"};
+item19[] = {"yes",4,218,-50.000000,-1050.000000,50.000000,-1000.000000,1.000000,"yes"};
+item20[] = {"no",4,218,-175.000000,-1125.000000,-75.000000,-1075.000000,0.000000,"no"};
+item21[] = {"safe",4,218,75.000000,-975.000000,175.000000,-925.000000,0.000000,"safe"};
+item22[] = {"move_respawn_mar_1",2,250,75.000000,-900.000000,175.000000,-850.000000,0.000000,"move respawn" \n "markers"};
+item23[] = {"",7,210,196.000000,-879.000000,204.000000,-871.000000,0.000000,""};
+item24[] = {"",7,210,196.000000,-1104.000000,204.000000,-1096.000000,0.000000,""};
+link0[] = {0,15};
+link1[] = {1,2};
+link2[] = {2,5};
+link3[] = {3,19};
+link4[] = {3,20};
+link5[] = {4,7};
+link6[] = {5,6};
+link7[] = {6,5};
+link8[] = {6,11};
+link9[] = {7,8};
+link10[] = {8,21};
+link11[] = {9,1};
+link12[] = {10,11};
+link13[] = {11,12};
+link14[] = {12,13};
+link15[] = {13,14};
+link16[] = {14,5};
+link17[] = {15,16};
+link18[] = {16,17};
+link19[] = {16,18};
+link20[] = {17,4};
+link21[] = {18,3};
+link22[] = {19,10};
+link23[] = {20,9};
+link24[] = {21,22};
+link25[] = {22,23};
+link26[] = {23,24};
+link27[] = {24,7};
+globals[] = {0.000000,0,0,0,0,640,480,1,260,6316128,1,-166.317963,337.304718,-712.343140,-1472.699341,665,1004,1};
+window[] = {2,-1,-1,-1,-1,845,78,1292,78,3,683};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "WL: Sector Handle (Server)";
+        class States
+        {
+                /*%FSM<STATE "INIT">*/
+                class INIT
+                {
+                        name = "INIT";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_paidOff = [];" \n
+"_guardSpawned = FALSE;" \n
+"if (_this getVariable [""BIS_WL_guardSpawned"", FALSE]) then {_guardSpawned = TRUE};" \n
+"" \n
+"_this setVariable [""BIS_WL_handleServerRunning"", TRUE];" \n
+"" \n
+"_sectorServerG = createTrigger [""EmptyDetector"", position _this];" \n
+"_sectorServerW = createTrigger [""EmptyDetector"", position _this];" \n
+"_sectorServerE = createTrigger [""EmptyDetector"", position _this];" \n
+"_sectorScanTrg = createTrigger [""EmptyDetector"", position _this];" \n
+"" \n
+"_sectorScanTrg setTriggerArea [0, 0, 0, FALSE];" \n
+"_this setVariable [""BIS_WL_sectorScanTrg"", _sectorScanTrg, TRUE];" \n
+"_this setVariable [""BIS_WL_sectorSeizeTrgGuer"", _sectorServerG];" \n
+"" \n
+"_trgSizeIndex = (((_this getVariable ""Size"") / 2) * ((_this getVariable ""Size"") / 2)) / 25e3;" \n
+"_customTimeout = _this getVariable [""SeizingTime"", 0];" \n
+"" \n
+"{" \n
+"	_x setVariable [""BIS_WL_parentSector"", _this];" \n
+"	_x setTriggerArea [(_this getVariable ""Size"") / 2, (_this getVariable ""Size"") / 2, 0, TRUE];" \n
+"	_triggerTimeout = _this getVariable ""BIS_WL_timeoutBase"";" \n
+"	_x setTriggerTimeout [_triggerTimeout / 3, _triggerTimeout / 1.5, _triggerTimeout, TRUE];" \n
+"	if (TRUE) then {" \n
+"		_x spawn {" \n
+"			scriptName ""WLSectorHandleServer (seizing handle)"";" \n
+"			_hub = _this getVariable ""BIS_WL_parentSector"";" \n
+"			_tmoutVarID = ""BIS_WL_timeoutCur_WEST"";" \n
+"			if (((triggeractivation _this) # 0) == ""EAST SEIZED"") then {_tmoutVarID = ""BIS_WL_timeoutCur_EAST""};" \n
+"			if (((triggeractivation _this) # 0) == ""GUER SEIZED"") then {_tmoutVarID = ""BIS_WL_timeoutCur_GUER""};" \n
+"			_side = [WEST, EAST, RESISTANCE] # ([""BIS_WL_timeoutCur_WEST"", ""BIS_WL_timeoutCur_EAST"", ""BIS_WL_timeoutCur_GUER""] find _tmoutVarID);" \n
+"			_fromReset = TRUE;" \n
+"			waitUntil {_hub getVariable ""BIS_WL_handleServerRunning""};" \n
+"			while {_side != RESISTANCE || (_hub getVariable ""BIS_WL_sectorSide"") == RESISTANCE} do {" \n
+"				sleep 3;" \n
+"				if (triggerTimeoutCurrent _this >= 0 && ((_this getVariable ""BIS_WL_parentSector"") getVariable ""BIS_WL_sectorSide"") != _side) then {" \n
+"					_hub setVariable [_tmoutVarID, triggerTimeoutCurrent _this, TRUE];" \n
+"					if (_fromReset) then {" \n
+"						_fromReset = FALSE;" \n
+"						_hub setVariable [""BIS_WL_timeoutBase"", triggerTimeoutCurrent _this, TRUE];" \n
+"					};" \n
+"				} else {" \n
+"					if ((_hub getVariable _tmoutVarID) != -1) then {" \n
+"						if (triggerActivated _this) then {" \n
+"							_hub setVariable [_tmoutVarID, -1, TRUE];" \n
+"						} else {" \n
+"							_hub setVariable [_tmoutVarID, -1, TRUE];" \n
+"							_fromReset = TRUE;" \n
+"						};" \n
+"					};" \n
+"				};" \n
+"			};" \n
+"		};" \n
+"	};" \n
+"} forEach [_sectorServerG, _sectorServerW, _sectorServerE];" \n
+"" \n
+"_sectorServerG setTriggerActivation [""GUER SEIZED"", ""PRESENT"", TRUE];" \n
+"_sectorServerG setTriggerStatements [" \n
+"	""this || (((thisTrigger getVariable 'BIS_WL_parentSector') getVariable 'BIS_WL_sectorSide') == RESISTANCE)""," \n
+"	""""," \n
+"	""""" \n
+"];" \n
+"_sectorServerW setTriggerActivation [""EAST SEIZED"", ""PRESENT"", TRUE];" \n
+"_sectorServerW setTriggerStatements [" \n
+"	""(this && ([(thisTrigger getVariable 'BIS_WL_parentSector'),EAST] call NeroAI_fnc_wlCaptureAllowed)) || ((thisTrigger getVariable 'BIS_WL_parentSector') getVariable 'BIS_WL_sectorSide') == EAST""," \n
+"	""(thisTrigger getVariable 'BIS_WL_parentSector') setVariable ['BIS_WL_sectorSide', EAST, TRUE]; missionNamespace setVariable ['NeroWL_frontlineFrame',[-1,createHashMap]];""," \n
+"	""""" \n
+"];" \n
+"_sectorServerE setTriggerActivation [""WEST SEIZED"", ""PRESENT"", TRUE];" \n
+"_sectorServerE setTriggerStatements [" \n
+"	""(this && ([(thisTrigger getVariable 'BIS_WL_parentSector'),WEST] call NeroAI_fnc_wlCaptureAllowed)) || ((thisTrigger getVariable 'BIS_WL_parentSector') getVariable 'BIS_WL_sectorSide') == WEST""," \n
+"	""(thisTrigger getVariable 'BIS_WL_parentSector') setVariable ['BIS_WL_sectorSide', WEST, TRUE]; missionNamespace setVariable ['NeroWL_frontlineFrame',[-1,createHashMap]];""," \n
+"	""""" \n
+"];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "always">*/
+                                class always
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="base_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "populate">*/
+                class populate
+                {
+                        name = "populate";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_this call BIS_fnc_WLsectorInit;" \n
+"" \n
+"_oldSide = _this getVariable ""BIS_WL_sectorSide"";" \n
+"_basePos = position _this;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "side_changed">*/
+                                class side_changed
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="reposition";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_sectorSide"") != _oldSide"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "preset_side_">*/
+                class preset_side_
+                {
+                        name = "preset_side_";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "yes">*/
+                                class yes
+                                {
+                                        itemno = 19;
+                                        priority = 1.000000;
+                                        to="nothing_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_sectorSide"") != RESISTANCE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "no">*/
+                                class no
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="nothing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"TRUE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setup_vars">*/
+                class setup_vars
+                {
+                        name = "setup_vars";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_mrkrNameBase = ""respawn_west"";" \n
+"if ((_this getVariable ""BIS_WL_sectorSide"") == EAST) then {_mrkrNameBase = ""respawn_east""};" \n
+"_mrkrName = _mrkrNameBase;" \n
+"_dist = ((_this getVariable ""Size"") / 2) + 300;" \n
+"_maxLoop = 100;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vulnerable">*/
+                                class vulnerable
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="move_respawn_mar";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this == BIS_WL_currentSector_EAST || _this == BIS_WL_currentSector_WEST"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "reposition">*/
+                class reposition
+                {
+                        name = "reposition";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_oldSide = _this getVariable ""BIS_WL_sectorSide"";" \n
+"_this setPos  [100,100,0];" \n
+"" \n
+"[_this, _basePos] spawn {" \n
+"	sleep 0.1;" \n
+"	(_this # 0) setPos (_this # 1);" \n
+"};" \n
+"" \n
+"BIS_WL_sectorsArrayWEST = [WEST] call BIS_fnc_WLSectorListing;" \n
+"BIS_WL_sectorsArrayEAST = [EAST] call BIS_fnc_WLSectorListing;" \n
+"" \n
+"if !(_oldSide in _paidOff) then {" \n
+"	_paidOff pushBack _oldSide;" \n
+"	{" \n
+"		if (side _x == _oldSide) then {" \n
+"			_x setVariable [""BIS_WL_funds"", ((_x getVariable ""BIS_WL_funds"") + (10 * (_this getVariable ""BIS_WL_value"") * BIS_WL_CPIncomeMult)) min BIS_WL_maxCP, TRUE];" \n
+"		};" \n
+"	} forEach BIS_WL_allWarlords;" \n
+"};" \n
+"" \n
+"_t = time + 5;" \n
+"" \n
+"_selectedAsCurrentBy = RESISTANCE;" \n
+"if (_this == BIS_WL_currentSector_EAST && ((_this getVariable ""BIS_WL_sectorSide"") != EAST)) then {_selectedAsCurrentBy = EAST};" \n
+"if (_this == BIS_WL_currentSector_WEST && ((_this getVariable ""BIS_WL_sectorSide"") != WEST)) then {_selectedAsCurrentBy = WEST};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "selected_by_other">*/
+                                class selected_by_other
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="spawn_guards";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_guardSpawned &&" \n
+                                         "(_this getVariable ""BIS_WL_sectorSide"") != RESISTANCE &&" \n
+                                         "time > _t &&" \n
+                                         "//if ({_x == _this} count [BIS_WL_currentSector_EAST, BIS_WL_currentSector_WEST] > 0) then {" \n
+                                         "if ([BIS_WL_currentSector_EAST, BIS_WL_currentSector_WEST] findIf {_x == _this} >= 0) then {" \n
+                                         "	if (_this == BIS_WL_currentSector_EAST) then {_selectedAsCurrentBy != EAST} else {_selectedAsCurrentBy != WEST};" \n
+                                         "};"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "side_changed">*/
+                                class side_changed
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="reposition";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_sectorSide"") != _oldSide"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "move_respawn_mar">*/
+                class move_respawn_mar
+                {
+                        name = "move_respawn_mar";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"{" \n
+"	_side = _x;" \n
+"	for [{_i = 0}, {_i < 15}, {_i = _i + 1}] do {" \n
+"		_postfix = ""_%2""; if (_i == 0) then {_postfix = """"};" \n
+"		_mrkrName = format [""respawn_%1"" + _postfix, _side, _i];" \n
+"		if ((markerType _mrkrName) == """") then {" \n
+"			_mrkr = createMarker [_mrkrName, (position _this) vectorAdd [-5 + random 10, -5 + random 10, 0]];" \n
+"			_mrkrName setMarkerType ""Empty"";" \n
+"		} else {" \n
+"			_mrkrName setMarkerPos ((position _this) vectorAdd [-5 + random 10, -5 + random 10, 0]);" \n
+"		};" \n
+"	};" \n
+"} forEach [_this getVariable ""BIS_WL_sectorSide""];" \n
+"" \n
+"_mrkrName = _mrkrNameBase;" \n
+"_j = 1;" \n
+"" \n
+"while {markerType _mrkrName != """"} do {" \n
+"	_newPos = [position _this, _dist, random 360] call BIS_fnc_relPos;" \n
+"	_newPos set [2, 0];" \n
+"	_intersects = lineIntersectsSurfaces [_newPos vectorAdd [0,0,1000], _newPos];" \n
+"	_intersect = if (count _intersects > 0) then {_intersects select 0 select 2} else {objNull};" \n
+"	_i = 0;" \n
+"	while {(surfaceIsWater _newPos || !isNull _intersect) && _i < _maxLoop} do {" \n
+"		_newPos = [position _this, _dist, random 360] call BIS_fnc_relPos;" \n
+"		_newPos set [2, 0];" \n
+"		_intersects = lineIntersectsSurfaces [_newPos vectorAdd [0,0,1000], _newPos];" \n
+"		_intersect = if (count _intersects > 0) then {_intersects select 0 select 2} else {objNull};" \n
+"		_i = _i + 1;" \n
+"	};" \n
+"	_mrkrName setMarkerPos _newPos;" \n
+"	_mrkrName = format [""%1_%2"", _mrkrNameBase, _j];" \n
+"	_j = _j + 1;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "safe">*/
+                                class safe
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="move_respawn_mar_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this != BIS_WL_currentSector_EAST && _this != BIS_WL_currentSector_WEST"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "nothing">*/
+                class nothing
+                {
+                        name = "nothing";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "selected_by_some">*/
+                                class selected_by_some
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="populate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this == BIS_WL_currentSector_EAST || _this == BIS_WL_currentSector_WEST"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "nothing_1">*/
+                class nothing_1
+                {
+                        name = "nothing_1";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_selectedAsCurrentBy = RESISTANCE;" \n
+"_oldSide = _this getVariable ""BIS_WL_sectorSide"";" \n
+"_basePos = position _this;" \n
+"_t = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "selected_by_other">*/
+                                class selected_by_other
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="spawn_guards";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_guardSpawned &&" \n
+                                         "(_this getVariable ""BIS_WL_sectorSide"") != RESISTANCE &&" \n
+                                         "time > _t &&" \n
+                                         "//if ({_x == _this} count [BIS_WL_currentSector_EAST, BIS_WL_currentSector_WEST] > 0) then {" \n
+                                         "if ([BIS_WL_currentSector_EAST, BIS_WL_currentSector_WEST] findIf {_x == _this} >= 0) then {" \n
+                                         "	if (_this == BIS_WL_currentSector_EAST) then {_selectedAsCurrentBy != EAST} else {_selectedAsCurrentBy != WEST};" \n
+                                         "};"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "spawn_guards">*/
+                class spawn_guards
+                {
+                        name = "spawn_guards";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"_guardSpawned = TRUE;" \n
+"_this setVariable [""BIS_WL_guardSpawned"", TRUE];" \n
+"" \n
+"_this call BIS_fnc_WLsectorInit;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "side_changed">*/
+                                class side_changed
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="reposition";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_this getVariable ""BIS_WL_sectorSide"") != _oldSide"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "base_">*/
+                class base_
+                {
+                        name = "base_";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "yes">*/
+                                class yes
+                                {
+                                        itemno = 17;
+                                        priority = 1.000000;
+                                        to="setup_vars";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"typeOf _this == ""ModuleWLBase_F"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "no">*/
+                                class no
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="preset_side_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"TRUE"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "move_respawn_mar_1">*/
+                class move_respawn_mar_1
+                {
+                        name = "move_respawn_mar_1";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"_mrkrName = _mrkrNameBase;" \n
+"_j = 1;" \n
+"" \n
+"while {markerType _mrkrName != """"} do {" \n
+"	_newPos = (position _this) vectorAdd [-5 + random 10, -5 + random 10, 0];" \n
+"	_mrkrName setMarkerPos _newPos;" \n
+"	_mrkrName = format [""%1_%2"", _mrkrNameBase, _j];" \n
+"	_j = _j + 1;" \n
+"};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "vulnerable">*/
+                                class vulnerable
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="move_respawn_mar";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_this == BIS_WL_currentSector_EAST || _this == BIS_WL_currentSector_WEST"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="INIT";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/

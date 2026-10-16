@@ -1,0 +1,34 @@
+author = "NeroAI";
+onLoadName = "Walzton, USA · компактный сухопутный фронт";
+onLoadMission = "Native Warlords on WINTERURBAN. AI commanders, CP requisition and host Zeus.";
+briefingName = "Walzton, USA · компактный сухопутный фронт";
+class Header { gameType="CTI"; minPlayers=1; maxPlayers=32; };
+respawn = 3;
+respawnDelay = 10;
+respawnOnStart = -1;
+disabledAI = 0;
+joinUnassigned = 1;
+enableDebugConsole = 2;
+NeroWL_devMode = 1;
+NeroWL_modShopEnabled = 1;
+NeroWL_customCatalog = 1;
+NeroWL_personalScenario = 1;
+corpseManagerMode = 1;
+corpseLimit = 20;
+corpseRemovalMinTime = 120;
+corpseRemovalMaxTime = 300;
+wreckManagerMode = 1;
+wreckLimit = 8;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 600;
+#include "neroWL\params.hpp"
+#include "neroWL\startPreset.hpp"
+class CfgFunctions { class NeroWL_Design { class Runtime { file="neroDesign"; class start {}; class spawnAsset {}; class observer {postInit=1;}; }; }; class NeroWL_Mission { class Runtime { file="neroWL"; class findOpenGround {}; class prepareBase {}; class placeCommander {}; class aiPurchases { ext=".fsm"; }; class configureNative { preInit=1; }; class waitReady { postInit=1; }; }; }; };
+class CfgNeroExperiments { transportDrop=1; vehicleCrew=1; fieldRepair=1; };
+NeroWL_useDesigner=1; NeroWL_threeSides=0; NeroWL_lethalZones=0; NeroWL_observer=0;
+class CfgNeroDesign { maxNPCs=160; maxVehicles=24; startCP=6000; income=100; greenFaction="rhsgref_faction_cdf_ng"; greenRole="defender"; garrisonLLM=0; garrisonLimit=4; class Bases { class p_0 { name="База синих · Jeffery University of Mathematics"; side="WEST"; position[]={446,2831,0}; radius=150; infantry=12; vehicles=0; vehicleClasses[]={}; };
+class p_1 { name="База красных · Schnock Harbor"; side="EAST"; position[]={736,871,0}; radius=150; infantry=12; vehicles=0; vehicleClasses[]={}; }; }; class Garrisons { class p_0 { name="1 · Jeffery University of Mathematics"; side="GUER"; position[]={1262,2426,0}; radius=100; infantry=4; vehicles=0; vehicleClasses[]={}; };
+class p_1 { name="2 · Walzton"; side="GUER"; position[]={1652,2156,0}; radius=100; infantry=4; vehicles=0; vehicleClasses[]={}; };
+class p_2 { name="3 · Walzton"; side="GUER"; position[]={2150,2321,0}; radius=388; infantry=4; vehicles=0; vehicleClasses[]={}; };
+class p_3 { name="4 · Walzton"; side="GUER"; position[]={2775,1958,0}; radius=100; infantry=4; vehicles=0; vehicleClasses[]={}; };
+class p_4 { name="5 · Walzton"; side="GUER"; position[]={2462,1114,0}; radius=100; infantry=4; vehicles=0; vehicleClasses[]={}; }; }; class Spawns {  }; class StartAssets {  }; };

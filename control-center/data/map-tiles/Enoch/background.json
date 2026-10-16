@@ -1,0 +1,28 @@
+{
+  "world": "Enoch",
+  "worldSize": 12800,
+  "strideX": 400.0000238418593,
+  "strideY": 400.0000238418595,
+  "columns": 32,
+  "rows": 32,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -13.333334128061978,
+      "worldTop": 12813.333283265429,
+      "extentX": 426.6666920979833,
+      "extentY": 426.6666920979833
+    }
+  },
+  "sourceSize": 207645044,
+  "sourceModified": 1790777529125.834,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 0.8333333830038736,
+  "tileCount": 1024,
+  "seconds": 10.12,
+  "coarsestPixelSize": 0.8333333830038736
+}

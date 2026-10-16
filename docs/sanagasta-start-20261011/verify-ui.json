@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "pbo": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\docs\\sanagasta-start-20261011\\ui-fix\\NeroAI_Designed_btrx_sngt_Three.btrx_sngt.pbo",
+  "source": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\missions\\NeroAI_Designed_btrx_sngt_Three.btrx_sngt",
+  "displayName": null,
+  "fileCount": 17,
+  "pboFileCount": 17,
+  "manifestMatchesSource": true,
+  "contentsMatchSource": true,
+  "missingFromPbo": [],
+  "unexpectedInPbo": [],
+  "changedFromSource": [],
+  "sizeBytes": 99165,
+  "sha1Body": "6183CA52BADC1C86159AF95DF8DD910A14AAC326",
+  "sha256": "A55A04F465F577A330023535E7CB2FD14F7C00C587458FCF081377E1129C833A"
+}

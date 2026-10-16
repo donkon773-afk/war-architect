@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "id": "980b832a-e581-5532-8469-357492c5daa0",
+  "name": "ВВС Чернаруси (RHS GREF, синие) · обеспечение",
+  "setup": {
+    "side": "west",
+    "faction": "rhsgref_faction_cdf_air_b",
+    "assets": [
+      "UK3CB_B_Antonov_An2_Armed_Bombs_CDF",
+      "UK3CB_B_Antonov_An2_Armed_CDF",
+      "UK3CB_B_Antonov_An2_Armed_Rockets_CDF",
+      "UK3CB_B_Antonov_An2_CDF",
+      "UK3CB_B_Mig21_CDF",
+      "UK3CB_B_Mig21_CDF_AA1",
+      "UK3CB_B_Mig21_CDF_AT1",
+      "UK3CB_B_MIG21_CDF_CAS1",
+      "UK3CB_B_UH1H_GUNSHIP_CDF",
+      "UK3CB_B_UH1H_M240_CDF",
+      "UK3CB_B_UH1H_MED_CDF",
+      "RHS_AN2_B",
+      "rhs_l159_cdf_b_CDF",
+      "rhs_l39_cdf_b_cdf",
+      "rhsgref_b_mi24g_CAS",
+      "rhsgref_cdf_b_Mi24D",
+      "rhsgref_cdf_b_Mi24D_Early",
+      "rhsgref_cdf_b_Mi35",
+      "rhsgref_cdf_b_mig29s",
+      "rhsgref_cdf_b_reg_Mi17Sh",
+      "rhsgref_cdf_b_reg_Mi8amt",
+      "rhsgref_cdf_b_su25"
+    ],
+    "infantry": [
+      "rhsgref_cdf_b_air_pilot"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.999Z",
+  "updatedAt": "2026-10-15T16:43:29.999Z"
+}

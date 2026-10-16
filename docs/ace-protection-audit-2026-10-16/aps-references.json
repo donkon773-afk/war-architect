@@ -1,0 +1,267 @@
+[
+  {
+    "mod": "@chelogach's Active Protection System",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@chelogach's Active Protection System\\addons\\chg_aps.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "isplayName\u0000APS Module: Standard\u0000\u0001\u0000category\u0000chg_aps_modules\u0000\u0001\u0000function\u0000chg_aps_fnc_initModule\u0000\u0001\u0002functionPriority\u0000\u0001\u0000\u0000\u0000\u0001\u0002isGlobal\u0000\u0001\u0000\u0000\u0000\u0001\u0002isTriggerActivated\u0000\u0000\u0000\u0000\u0000\u0001\u0002isDisposable\u0000\u0000\u0000\u0000\u0000\u0001"
+    ]
+  },
+  {
+    "mod": "@chelogach's Active Protection System",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@chelogach's Active Protection System\\addons\\chg_aps.pbo",
+    "entry": "functions\\fn_init.sqf",
+    "matches": [
+      "    chg_aps_fnc_init",
+      "esRight, sector, elevMin, elevMax, cooldown, radius, failChance] call chg_aps_fnc_init;"
+    ]
+  },
+  {
+    "mod": "@chelogach's Active Protection System",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@chelogach's Active Protection System\\addons\\chg_aps.pbo",
+    "entry": "functions\\fn_initModule.sqf",
+    "matches": [
+      "    chg_aps_fnc_initModule",
+      "s, _sector, _elevMin, _elevMax, _cooldown, _radius, _failChance] call chg_aps_fnc_init;"
+    ]
+  },
+  {
+    "mod": "@chelogach's Active Protection System",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@chelogach's Active Protection System\\addons\\chg_aps.pbo",
+    "entry": "functions\\fn_zenModule.sqf",
+    "matches": [
+      "s, _sector, _elevMin, _elevMax, _cooldown, _radius, _failChance] call chg_aps_fnc_init;"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_aps.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "\u0001\u0002scope\u0000\u0002\u0000\u0000\u0000\u0001\u0002scopeCurator\u0000\u0000\u0000\u0000\u0000\u0001\u0000displayName\u0000Shtora Dazzler\u0000\u0001\u0002timeToLive\u0000\u001e\u0000\u0000\u0000\u0001\u0002gravityFactor\u0000\u0000\u0000\u0000\u0000\u0001\u0000model\u0000\\rhsafrf\\addons\\rhs_aps\\data\\rhs_sht",
+      "\u0000\u0000u\u0005\u0000\u0000\u0000\u0001\u0000RHS_APS_EH\u0000g\u0005\u0000\u0000u\u0005\u0000\u0000\u0000\u0001\u0001\u0000init\u0000\u0000u\u0005\u0000\u0000\u0000\u0001\u0000RHS\u0000�\u0005\u0000\u0000\u0018\u0006\u0000\u0000\u0000\u0003\u0001\u0000tag\u0000RHS\u0000\u0000SHTORA\u0000�\u0005\u0000\u0000\u0000Afganit\u0000�\u0005\u0000\u0000\u0018\u0006\u0000\u0000\u0000\u0000�\u0005\u0000\u0000\u0000\u0001\u0000aps_missileFired\u0000�\u0005\u0000\u0000\u0018\u0006\u0000\u0000\u0000\u0001\u0001\u0000file\u0000rhsafrf\\addons\\rhs_aps\\sc",
+      "ripts\\rhs_fnc_aps_missileFired.sqf\u0000\u0018\u0006\u0000\u0000\u0000\u0005\u0000Default\u0000m\u0006\u0000\u0000\u0000MissileCore\u0000�\u0006\u0000\u0000\u0000MissileBase\u0000�\u0006\u0000\u0000\u0000RocketCore\u0000\u000e\u0007\u0000\u0000\u0000RocketBase\u0000\u001b\u0007\u0000\u0000",
+      "�\u0006\u0000\u0000\u000e\u0007\u0000\u0000EventHandlers\u0000\u0001\u0000RHS_APS_FiredEH\u0000�\u0006\u0000\u0000\u000e\u0007\u0000\u0000\u0000\u0001\u0001\u0000fired\u0000_this spawn rhs_fnc_aps_missileFired\u0000\u000e\u0007\u0000\u0000Default\u0000\u0000\u001b\u0007\u0000\u0000RocketCore\u0000\u0001\u0000EventHandlers\u0000>\u0007\u0000\u0000�\u0007\u0000\u0000EventHandlers\u0000\u0001\u0000RHS_APS_FiredEH\u0000f\u0007\u0000\u0000�",
+      "\u0007\u0000\u0000\u0000\u0001\u0001\u0000fired\u0000_this spawn rhs_fnc_aps_missileFired\u0000�\u0007\u0000\u0000\u0000\u0001\u0000RHS_APS_Warning\u0000�\u0007\u0000\u0000\u0013\b\u0000\u0000\u0000\u0003\u0001\u0000name\u0000APS_warning\u0000\u0002sound\u0000\u0003\u0000\\rhsafrf\\addons\\rhs_aps\\soun"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_aps.pbo",
+    "entry": "scripts\\rhs_fnc_aps_missileFired.sqf",
+    "matches": [
+      "\trhs_fnc_aps_missileFired",
+      "_aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "ps_vehicles = _aps_vehicles - _cleanup;missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles]};"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_heavyweapons.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "4\u0000e7\u0001\u0000\u0000rhs_mag_DIRCM_Vitebsk\u0000�7\u0001\u0000\u0000rhs_mag_DIRCM_Lipa\u0000$8\u0001\u0000\u0000rhs_mag_aps_afganit\u0000K8\u0001\u0000\u0003Laserbatteries\u0000\u0000rhs_LaserMag\u0000�8\u0001\u0000\u0000rhs_LaserFCSMag\u0000�8\u0001\u0000\u0000rhs_mag_bm_base\u0000.9\u0001\u0000\u0000rhs_mag_",
+      "26\u0000(�\u0001\u0000\u0000rhs_weap_DIRCM_Vitebsk\u0000\u0012�\u0001\u0000\u0000rhs_weap_DIRCM_Lipa\u0000��\u0001\u0000\u0000rhs_weap_afganit_base\u0000��\u0001\u0000\u0000rhs_weap_afganit_1\u00007�\u0001\u0000\u0000rhs_weap_afganit_2\u0000s�\u0001\u0000\u0000rhs_weap_afganit_3\u0000��\u0001\u0000\u0000rhs_wea",
+      "p_afganit_4\u0000��\u0001\u0000\u0000rhs_weap_afganit_5\u0000'�\u0001\u0000\u0000rhs_weap_afganit_6\u0000c�\u0001\u0000\u0000rhs_weap_afganit_7\u0000��\u0001\u0000\u0000rhs_weap_afganit_8\u0000��\u0001\u0000\u0000rhs_weap_afganit_9\u0000\u0017�\u0001\u0000\u0000rhs_weap_a",
+      "fganit_10\u0000S�\u0001\u0000\u0000rhs_weap_afganit_smoke\u0000��\u0001\u0000\u0000PKT\u0000u�\u0001\u0000\u0000rhs_weap_pkt\u0000��\u0001\u0000\u0000rhs_weap_pktm\u0000��\u0001\u0000\u0000rhs_weap_pkt_v1\u0000��\u0001\u0000\u0000rhs_weap_pk",
+      "\u0000\u0002sounds\u0000\u0001\u0000StandardSound\u0000\u0000StandardSound\u0000��\u0001\u0000��\u0001\u0000\u0000\u0001\u0002soundSetShot\u0000\u0002\u0000rhs_afganitAPS_soundset\u0000\u0000Launcher_Firefist_Tail_SoundSet\u0000��\u0001\u0000\u0000\u0001\u0000RHS_CM_EH\u0000\u0004�\u0001\u00007�\u0001\u0000\u0000\u0001\u0001\u0000fired\u0000_this cal",
+      "l rhs_fnc_aps_afganit_fired\u00007�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000s�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_ap",
+      "s_afganit\u0000��\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000��\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000'�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002m",
+      "agazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000c�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000��\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_ap",
+      "s_afganit\u0000��\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000\u0017�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002magazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000S�\u0001\u0000rhs_weap_afganit_base\u0000\u0001\u0002m",
+      "agazines\u0000\u0001\u0000rhs_mag_aps_afganit\u0000��\u0001\u0000rhs_weap_902a\u0000\u0007\u0001\u0000displayName\u0000Smoke Launcher\u0000\u0002magazines\u0000\u0001\u0000rhs_mag_afganit_smoke_12\u0000\u0002mo"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_heavyweapons.pbo",
+    "entry": "functions\\rhs_firedFCS.sqf",
+    "matches": [
+      "if(_lrf)then{ [_target, _v, objNull, \"LaserRangefinder\"] call rhs_fnc_shtoraDetect;};"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t14.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "?\u0001\u0001maxVerticalRotSpeed\u000033�?\u0002weapons\u0000\f\u0000rhs_weap_pktm_t14_RWS\u0000\u0000rhs_weap_afganit_1\u0000\u0000rhs_weap_afganit_2\u0000\u0000rhs_weap_afganit_3\u0000\u0000rhs_weap_afganit_4\u0000\u0000rhs_weap_afganit_5\u0000\u0000rhs_we",
+      "ap_afganit_6\u0000\u0000rhs_weap_afganit_7\u0000\u0000rhs_weap_afganit_8\u0000\u0000rhs_weap_afganit_9\u0000\u0000rhs_weap_afganit_10\u0000\u0000SmokeLauncher\u0000\u0002magazines\u0000\f\u0000rhs_mag_762x54mm_2000\u0000\u0000rhs_mag_aps_afg",
+      "anit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_",
+      "mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000SmokeLauncherMag\u0000\u0002soundServo\u0000\u0004\u0000A3\\Sounds_F\\vehicles\\armor\\noises\\servo_best\u0000\u0001",
+      "non\u0000\u0001\u0001\u0000weapon\u0000rhs_weap_kord\u0000��\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_1\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_2\u0000\u0001\u0000source\u0000ammo\u0000,�\u0000\u0000muz",
+      "zle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_3\u0000\u0001\u0000source\u0000ammo\u0000n�\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_4\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muz",
+      "zle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_5\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_6\u0000\u0001\u0000source\u0000ammo\u00004�\u0000\u0000muz",
+      "zle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_7\u0000\u0001\u0000source\u0000ammo\u0000v�\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_8\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muz",
+      "zle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_9\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle_hide_cannon\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_10\u0000\u0001\u0000source\u0000ammo\u0000=�\u0000\u0000\u0000\u0004"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t14.pbo",
+    "entry": "scripts\\rhs_fnc_t14_deleted.sqf",
+    "matches": [
+      "private _aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles - [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t14.pbo",
+    "entry": "scripts\\rhs_fnc_t14_destroyed.sqf",
+    "matches": [
+      "_aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles - [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t14.pbo",
+    "entry": "scripts\\rhs_fnc_t14_init.sqf",
+    "matches": [
+      "private _aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles + [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t15.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "\u0000rhs_weap_afganit_1\u0000\u0000rhs_weap_afganit_2\u0000\u0000rhs_weap_afganit_3\u0000\u0000rhs_weap_afganit_4\u0000\u0000rhs_weap_afganit_5\u0000\u0000rhs_weap_afganit_6\u0000\u0000rhs_weap_afganit_7\u0000\u0000rhs_weap_afganit_8\u0000\u0000rhs_we",
+      "ap_afganit_9\u0000\u0000rhs_weap_afganit_10\u0000\u0002magazines\u0000",
+      "\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_",
+      "mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0000rhs_mag_aps_afganit\u0000\u0002soundServo\u0000\u0004\u0000A3\\Sounds_F\\vehicles\\armor\\noises\\servo_best\u0000\u0001",
+      "morandom\u0000\u0001\u0000weapon\u0000rhs_weap_pkt\u0000*�\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_1\u0000\u0001\u0000source\u0000ammo\u0000i�\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_2\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle",
+      "_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_3\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_4\u0000\u0001\u0000source\u0000ammo\u0000&�\u0000\u0000muzzle",
+      "_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_5\u0000\u0001\u0000source\u0000ammo\u0000e�\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_6\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle",
+      "_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_7\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_8\u0000\u0001\u0000source\u0000ammo\u0000\"�\u0000\u0000muzzle",
+      "_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_9\u0000\u0001\u0000source\u0000ammo\u0000a�\u0000\u0000muzzle_hide_hmg\u0000\u0002\u0001\u0000weapon\u0000rhs_weap_afganit_10\u0000\u0001\u0000source\u0000ammo\u0000��\u0000\u0000\u0000\u0004\u0001\u0000d"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t15.pbo",
+    "entry": "scripts\\rhs_fnc_t15_deleted.sqf",
+    "matches": [
+      "private _aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles - [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t15.pbo",
+    "entry": "scripts\\rhs_fnc_t15_destroyed.sqf",
+    "matches": [
+      "_aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles - [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t15.pbo",
+    "entry": "scripts\\rhs_fnc_t15_init.sqf",
+    "matches": [
+      "private _aps_vehicles = missionNamespace getVariable [\"rhs_aps_vehicles\",[]];",
+      "missionNamespace setVariable [\"rhs_aps_vehicles\",_aps_vehicles + [_vehicle]];"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_t72.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "s\\rhs_decals\\Data\\Labels\\Misc\\no_ca.paa\u0000\u0000textureSources\u0000�{\u0003\u0000\u0001\u0002rhs_aps_shtora\u0000\u0001\u0000\u0000\u0000\u0001\u0000unitInfoType\u0000RHS_RscInfoT90\u0000\u0000EventHandlers\u0000�\u0003\u0000\u0001\u0002lockDetectionSystem\u0000\u0004\u0000\u0000\u0000\u0000Animation",
+      "\u0000reload_source\u0000�\u0003\u0000\u0000reload_magazine_source\u0000\"�\u0003\u0000\u0000muzzle_rot_cannon\u0000M�\u0003\u0000\u0000ShtoraTurn\u0000t�\u0003\u0000\u0000Unhide_vis_optic_d_driver\u0000��\u0003\u0000\u0000Unhide_vis_optic_d_gunperiscope\u0000ȃ\u0003\u0000\u0000Unhide_vis_op",
+      "�\u0003\u0000\u0000Hit_Shtora_L\u0000��\u0003\u0000\u0000Hit_Shtora_R\u0000\u000f�\u0003\u0000\u0000Hit_LWR_1\u0000��\u0003\u0000\u0000Hit_LWR_2\u0000��\u0003\u0000\u0000Hit_LWR_3\u0000h�\u0003\u0000\u0000Hit_LWR_4\u0000؏\u0003\u0000\u0000Hit_LWR_5\u0000H�\u0003\u0000\u0000Hit_LWR_",
+      "h\u0000\u0000\u0000\u0000\u0000��\u0003\u0000\u0000\u0006\u0001\u0002armor\u0000����\u0001\u0002explosionShielding\u0000\u0000\u0000\u0000\u0000\u0001\u0000name\u0000\u0000\u0001\u0000visual\u0000vis_shtora_l\u0000\u0001\u0000armorComponent\u0000Hit_Shtora_L\u0000\u0001\u0002passThrough\u0000\u0000\u0000\u0000\u0000\u000f�\u0003\u0000\u0000\u0006\u0001\u0002armor\u0000����\u0001\u0002explosionShielding\u0000",
+      "\u0000\u0000\u0000\u0000\u0001\u0000name\u0000\u0000\u0001\u0000visual\u0000vis_shtora_r\u0000\u0001\u0000armorComponent\u0000Hit_Shtora_R\u0000\u0001\u0002passThrough\u0000\u0000\u0000\u0000\u0000��\u0003\u0000\u0000\u0006\u0001\u0002armor\u0000����\u0001\u0002explosionShielding\u0000\u0000\u0000\u0000\u0000\u0001\u0000name\u0000\u0000\u0001\u0000visual\u0000vis_lwr_1",
+      "\u0000\u0001\u0000\u0000\u0000\u0001\u0002reportOwnPosition\u0000\u0001\u0000\u0000\u0000\u0001\u0000crew\u0000rhs_msv_emr_armoredcrew\u0000\u0001\u0002rhs_aps_shtora\u0000\u0001\u0000\u0000\u0000\u0000Turrets\u0000q�\u0003\u0000\u0000AnimationSources\u0000B�\u0003\u0000\u0000EventHandlers\u0000 �\u0003\u0000��\u0003\u0000\u0000\b\u0002GearboxRatios\u0000\u0012\u0000R1\u0000\u0001�̂�\u0000",
+      "xtureSources\u0000�\u0007\u0005\u0000\u0001\u0000crew\u0000rhs_msv_emr_armoredcrew\u0000\u0000Damage\u0000.\f\u0005\u0000\u0001\u0002rhs_aps_shtora\u0000\u0001\u0000\u0000\u0000\u0000Turrets\u0000�\u0015\u0005\u0000\u0000AnimationSources\u0000�\u001e\u0005\u0000\u0000HitPoints\u0000�0\u0005\u0000\u0000EventHandlers\u0000\u0011�\u0005\u0000��\u0005\u0000\u0000\b\u0002GearboxRa"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_c_tanks.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "80uk.paa\u0000\u0001\u0000author\u0000$STR_RHS_AUTHOR_FULL\u0000\u0001\u0000displayName\u0000T-80UK\u0000\u0001\u0002rhs_aps_shtora\u0000\u0001\u0000\u0000\u0000\u0000EventHandlers\u0000�q\u0002\u0000\u0001\u0002lockDetectionSystem\u0000\u0004\u0000\u0000\u0000\u0002hiddenSelections\u0000\t\u0000camo1\u0000\u0000camo2\u0000\u0000camo3\u0000",
+      "ventHandlers\u0000\u0002\u0001\u0000init\u0000_this call RHS_fnc_t80_init; _this spawn RHS_fnc_shtoraInit;\u0000\u0001\u0000incomingmissile\u0000_this call RHS_fnc_shtoraIncomingMissileEH;\u0000]r\u0002\u0000textureSources\u0000\u0007\u0000s",
+      "41,0.4,0,1)\u0000\u0000#(argb,8,8,3)color(00.41,0.4,0,1)\u0000@y\u0002\u0000AnimationSources\u0000\u0007\u0000ShtoraTurn\u0000�y\u0002\u0000\u0000smokecap_revolving_source\u0000 z\u0002\u0000\u0000era_36_source\u0000Pz\u0002\u0000\u0000smoketube_9_source\u0000~z\u0002\u0000\u0000smoket",
+      "optic_Agava\u0000\u0001\u0000armorComponent\u0000Hit_Optic_Agava\u0000\u0001\u0002passThrough\u0000\u0000\u0000\u0000\u0000��\u0002\u0000\u0000\u0004\u0000shtora_on\u0000#�\u0002\u0000\u0000shtora_semi\u0000��\u0002\u0000\u0000shtora_auto\u0000t�\u0002\u0000\u0000shtora_off\u0000#�\u0002\u0000}�\u0002\u0000\u0000\t\u0001\u0000displayName\u0000Shtora: Turn",
+      " on\u0000\u0001\u0000displayNameDefault\u0000Shtora: Turn on\u0000\u0001\u0002showWindow\u0000\u0000\u0000\u0000\u0000\u0001\u0000position\u0000camera\u0000\u0001\u0002priority\u0000\u0001\u0000\u0000\u0000\u0001\u0002radius\u0000\u0002\u0000\u0000\u0000\u0001\u0002onlyForplayer\u0000\u0000",
+      "\u0000\u0000\u0000\u0001\u0000condition\u0000(this getVariable ['RHS_SHTORA_ENABLED', false]) AND {(this getVariable ['RHS_SHTORA_MODE', 0] < 1)} AND {((call rhs_fnc",
+      " {!(isTurnedOut (commander this))}\u0000\u0001\u0000statement\u0000this setVariable ['RHS_SHTORA_MODE', 2, true];\u0000��\u0002\u0000shtora_on\u0000\u0004\u0001\u0000displayName\u0000Shtora: Switch to semi-auto mode\u0000\u0001\u0000displayN",
+      "ameDefault\u0000Shtora: Switch to semi-auto mode\u0000\u0001\u0000condition\u0000(this getVariable ['RHS_SHTORA_ENABLED', false]) AN",
+      "D {(this getVariable ['RHS_SHTORA_MODE', 0] > 0)} AND {(this getVariable ['RHS_SHTORA_MODE', 0] != 1)} AND {((call rhs_fnc_",
+      " {!(isTurnedOut (commander this))}\u0000\u0001\u0000statement\u0000this setVariable ['RHS_SHTORA_MODE', 1, true];\u0000t�\u0002\u0000shtora_on\u0000\u0004\u0001\u0000displayName\u0000Shtora: Switch to automatic mode\u0000\u0001\u0000displayN",
+      "ameDefault\u0000Shtora: Switch to automatic mode\u0000\u0001\u0000condition\u0000(this getVariable ['RHS_SHTORA_ENABLED', false]) AN",
+      "D {(this getVariable ['RHS_SHTORA_MODE', 0] > 0)} AND {(this getVariable ['RHS_SHTORA_MODE', 0] != 2)} AND {((call rhs_fnc_",
+      " {!(isTurnedOut (commander this))}\u0000\u0001\u0000statement\u0000this setVariable ['RHS_SHTORA_MODE', 2, true];\u0000#�\u0002\u0000shtora_on\u0000\u0004\u0001\u0000displayName\u0000Shtora: Turn off\u0000\u0001\u0000displayNameDefault\u0000Shtor",
+      "a: Turn off\u0000\u0001\u0000condition\u0000(this getVariable ['RHS_SHTORA_ENABLED', false]) AND {(this getVariable ['RHS_SHTORA_MODE', 0] > 0)} AND {((call rhs_fnc"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_main.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "AMMO\u0000A�\u0000\u0000\u0000RHS_AFRF_AUTOLOADER\u0000��\u0000\u0000\u0000RHS_AFRF_GROUNDRADAR\u0000\u0018�\u0000\u0000\u0000RHS_AFRF_SHTORA\u0000��\u0000\u0000\u0000RHS_AFRF_RETREAD\u0000\u0004�\u0000\u0000\u0000RHS_AFRF_KLENPS\u0000}�\u0000\u0000T�\u0000\u0000\u0000\u0005\u0001\u0000displayName\u0000Armed Forces of the Ru",
+      "\\ui_f\\data\\gui\\cfg\\hints\\Radar_ca.paa\u0000\u0002arguments\u0000\u0000��\u0000\u0000\u0000\u0005\u0001\u0000displayName\u0000SHTORA Protection System\u0000\u0001\u0000description\u0000The T-90/T-90A/T-80UK is equipped with the SHTORA-1 prote"
+    ]
+  },
+  {
+    "mod": "@RHSAFRF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSAFRF\\addons\\rhs_sounds.pbo",
+    "entry": "config.bin",
+    "matches": [
+      "ke_explosion_soundshader\u0000:�\u0000\u0000\u0000rhs_gp25_closeShot_SoundShader\u0000��\u0000\u0000\u0000rhs_afganitaps_closeShot_SoundShader\u0000w�\u0000\u0000\u0000rhs_afganitaps_distShot_SoundShader\u0000\u0012�\u0000\u0000��\u0000\u0000\u0000\u0004\u0002samples\u0000\u0003\u0003\u0002\u0000",
+      "angeCurve\u0000closeShotCurve\u0000w�\u0000\u0000\u0000\u0004\u0002samples\u0000\u0001\u0003\u0002\u0000rhsafrf\\addons\\rhs_sounds\\afganit\\afganitAPS_closeShot01\u0000\u0002\u0001\u0000\u0000\u0000\u0001\u0002volume\u0000\u0001\u0000\u0000\u0000\u0001\u0002range\u0000,\u0001\u0000\u0000\u0002rangeCurve\u0000\u0003\u0003\u0002\u0002\u0000\u0000\u0000\u0000\u0002\u0001\u0000\u0000\u0000\u0003\u0002\u0002\u001e\u0000\u0000\u0000\u0002\u0001\u0000\u0000",
+      "\u0000\u0003\u0002\u0002,\u0001\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0012�\u0000\u0000\u0000\u0004\u0002samples\u0000\u0001\u0003\u0002\u0000rhsafrf\\addons\\rhs_sounds\\afganit\\afganitAPS_distShot01\u0000\u0002\u0001\u0000\u0000\u0000\u0001\u0001volume\u0000�d�?\u0001\u0002range\u0000�\u000f\u0000\u0000\u0002rangeCurve\u0000\u0004\u0003\u0002\u0002\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0003\u0002\u0002\u001e\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0003\u0002\u0002,\u0001\u0000\u0000\u0002",
+      "undset\u0000L2\u0001\u0000\u0003Rifle_Shot_Base_SoundSet\u0000\u0000rhs_gp25_shot_SoundSet\u0000D3\u0001\u0000\u0000rhs_afganitAPS_soundset\u0000�3\u0001\u000055\u0001\u0000\u0000\u000b\u0002soundShaders\u0000\u0001\u0000RHS_AK74_Closure_SoundShader\u0000\u0001\u0001volumeFactor\u000033s?\u0001\u0000v",
+      "UGL_distShot_SoundShader\u0000\u0001\u0001volumeFactor\u000033�?�3\u0001\u0000\u0000\b\u0002soundShaders\u0000\u0004\u0000rhs_afganitaps_closeShot_SoundShader\u0000\u0000rhs_Afganitaps_distShot_SoundShader\u0000\u0000Launcher_Adds_Kick_SoundSh"
+    ]
+  },
+  {
+    "mod": "@RHSUSAF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF\\addons\\rhsusf_c_heavyweapons.pbo",
+    "entry": "functions\\rhs_firedFCS.sqf",
+    "matches": [
+      "if(_lrf)then{ [_target, _v, objNull, \"LaserRangefinder\"] call rhs_fnc_shtoraDetect;};"
+    ]
+  },
+  {
+    "mod": "@RHSUSAF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF\\addons\\rhsusf_optics.pbo",
+    "entry": "scripts\\rhs_ibas_CIV_handler.sqf",
+    "matches": [
+      "\t\t\t//Alert Shtora when laser is used"
+    ]
+  },
+  {
+    "mod": "@RHSUSAF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF\\addons\\rhsusf_optics.pbo",
+    "entry": "scripts\\rhs_ibas_handler.sqf",
+    "matches": [
+      "\t\t\t//Alert Shtora when laser is used"
+    ]
+  },
+  {
+    "mod": "@RHSUSAF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF\\addons\\rhsusf_optics.pbo",
+    "entry": "scripts\\rhs_LRAS3_handler.sqf",
+    "matches": [
+      "\t\t\t//On lase, update target and self position and notify shtora (RIP)"
+    ]
+  },
+  {
+    "mod": "@RHSUSAF",
+    "pbo": "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF\\addons\\rhsusf_optics.pbo",
+    "entry": "scripts\\rhs_ods_isu_handler.sqf",
+    "matches": [
+      "Notifies Shtora equiped tanks upon use of laser range finder.",
+      "\t//Lase key for triggering Shtora",
+      "\t\t\t\t//Alert Shtora when laser is used"
+    ]
+  }
+]

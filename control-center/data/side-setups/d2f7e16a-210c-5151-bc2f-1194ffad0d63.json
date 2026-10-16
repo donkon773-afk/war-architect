@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "id": "d2f7e16a-210c-5151-bc2f-1194ffad0d63",
+  "name": "ВВС США (RHS) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usaf",
+    "assets": [
+      "RHS_A10",
+      "rhsusf_f22",
+      "rhsusf_m1165_asv_m240_usaf_d"
+    ],
+    "infantry": [
+      "rhsusf_airforce_security_force_rifleman"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.956Z",
+  "updatedAt": "2026-10-15T16:43:29.956Z"
+}

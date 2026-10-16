@@ -1,0 +1,1351 @@
+// no respawn on mission start
+respawnOnStart = -1;
+
+
+///// WARLORDS CONFIG
+
+//ASSET LIST
+
+class CfgWLRequisitionPresets
+{
+	class MyWLAssetList // --- class name used in the Init module
+	{
+		class WEST // --- assets available for BLUFOR
+		{
+			class Infantry
+			{
+				class CUP_B_US_Pilot_Light // --- must be asset class name
+				{
+					cost = 75; // --- Command Points required
+					requirements[] = {}; // --- dispositions required ("A" = airstrip, "H" = helipad, "W" = water (harbor))
+				};
+				
+				class CUP_B_US_Crew_OCP 
+				{
+					cost = 100; 
+					requirements[] = {}; 
+				};				
+
+				class CUP_B_US_Soldier_Backpack_OCP 
+				{
+					cost = 100; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_GL_OCP 
+				{
+					cost = 175;
+					requirements[] = {}; 
+				};			
+
+				class CUP_B_US_Medic_OCP 
+				{
+					cost = 125; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_Engineer_OCP 
+				{
+					cost = 130;
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_AR_OCP 
+				{
+					cost = 250; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_Marksman_EBR_OCP 
+				{
+					cost = 250; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_LAT_OCP 
+				{
+					cost = 225; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_MG_OCP 
+				{
+					cost = 450; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_AA_OCP 
+				{
+					cost = 500; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Soldier_HAT_OCP 
+				{
+					cost = 650;
+					requirements[] = {}; 
+				};
+
+				class CUP_B_US_Sniper_M107_OCP 
+				{
+					cost = 500; 
+					requirements[] = {}; 
+				};			
+
+				class CUP_B_US_SpecOps_SD 
+				{
+					cost = 150;
+					requirements[] = {}; 
+				};	
+				
+				class CUP_B_US_SpecOps_Assault 
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};	
+
+				class CUP_B_US_SpecOps_Night 
+				{
+					cost = 325;
+					requirements[] = {}; 
+				};	
+				
+				
+				class CUP_B_GER_Soldier_GL 
+				{
+					cost = 175; 
+					requirements[] = {}; 
+				};
+				
+				class CUP_B_GER_Soldier_AT 
+				{
+					cost = 250; 
+					requirements[] = {}; 
+				};
+
+				class CUP_B_GER_Soldier_MG3 
+				{
+					cost = 500;
+					requirements[] = {}; 
+				};
+				
+				
+				class CUP_B_BAF_Soldier_Paratrooper_DDPM
+				{
+					cost = 100;
+					requirements[] = {}; 
+				};
+
+				class CUP_B_BAF_Soldier_Explosive_DDPM
+				{
+					cost = 130; 
+					requirements[] = {}; 
+				};					
+
+				class CUP_B_BAF_Soldier_RiflemanAT_DDPM
+				{
+					cost = 250;
+					requirements[] = {}; 
+				};
+		    };
+			
+			class Vehicles
+			{
+				class CUP_B_TowingTractor_USA
+				{
+					cost = 50;
+					requirements[] = {};
+				};
+				
+				class CUP_B_M1030_USA
+				{
+					cost = 75;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1151_USA
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1151_M2_USA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1151_Mk19_USA
+				{
+					cost = 1750;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1165_GMV_DSRT_USMC
+				{
+					cost = 1300;
+					requirements[] = {};
+				};
+
+				class CUP_B_RG31_Mk19_USMC
+				{
+					cost = 1850;
+					requirements[] = {};
+				};
+
+				class CUP_B_RG31E_M2_USMC
+				{
+					cost = 1350;
+					requirements[] = {};
+				};
+
+				class CUP_B_Dingo_GER_Des
+				{
+					cost = 1350;
+					requirements[] = {};
+				};
+
+				class CUP_B_Dingo_GL_GER_Des
+				{
+					cost = 1950;
+					requirements[] = {};
+				};
+
+				class CUP_B_M113_desert_USA
+				{
+					cost = 1450;
+					requirements[] = {};
+				};
+
+				class CUP_B_FV432_GB_Ambulance
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1130_CV_M2_Desert
+				{
+					cost = 2250;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1126_ICV_MK19_Desert
+				{
+					cost = 2650;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1135_ATGMV_Desert
+				{
+					cost = 3500;
+					requirements[] = {};
+				};
+
+				class CUP_B_M1128_MGS_Desert
+				{
+					cost = 5000;
+					requirements[] = {};
+				};
+
+				class CUP_B_FV432_GB_GPMG
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_M2Bradley_USA_D
+				{
+					cost = 5500;
+					requirements[] = {};
+				};	
+
+				class CUP_B_Leopard2A6DST_GER
+				{
+					cost = 7250;
+					requirements[] = {};
+				};
+				
+				class CUP_B_M1A2_TUSK_MG_DES_US_Army
+				{
+					cost = 9500;
+					requirements[] = {};
+				};
+
+				class CUP_B_MTVR_USA
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				
+				class CUP_B_MTVR_Repair_USA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_MTVR_Refuel_USA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_MTVR_Ammo_BAF_DES
+				{
+					cost = 12500;
+					requirements[] = {};
+				};		
+
+				class CUP_B_HMMWV_Avenger_USA
+				{
+					cost = 4500;
+					requirements[] = {};
+				};		
+
+				class CUP_B_M163_USA
+				{
+					cost = 4750;
+					requirements[] = {};
+				};		
+
+				class CUP_B_M6LineBacker_USA_D
+				{
+					cost = 6750;
+					requirements[] = {};
+				};		
+
+				class CUP_B_M270_HE_USA
+				{
+					cost = 25000;
+					requirements[] = {};
+				};	
+
+				class CUP_B_M270_DPICM_USA
+				{
+					cost = 26500;
+					requirements[] = {};
+				};					
+			};
+			
+			
+			class Aircraft
+			{			
+				
+				class CUP_B_MH6M_USA
+				{
+					cost = 2000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_UH60M_US
+				{
+					cost = 2500;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_MH47E_USA
+				{
+					cost = 3000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_AH6M_USA
+				{
+					cost = 8750;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_MH60L_DAP_2x_US
+				{
+					cost = 10000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_AH64D_DL_USA
+				{
+					cost = 16500;
+					requirements[] = { "H" };
+				};
+
+				class CUP_B_C130J_USMC
+				{
+					cost = 4000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_C130J_Cargo_USMC
+				{
+					cost = 4000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_MV22_USMC_RAMPGUN
+				{
+					cost = 6000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_MV22_VIV_USMC
+				{
+					cost = 7500;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_AC47_Spooky_USA
+				{
+					cost = 12000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_A10_DYN_USA
+				{
+					cost = 22500;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_GR9_DYN_GB
+				{
+					cost = 25000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_F35B_USMC
+				{
+					cost = 30000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_B_F35B_Stealth_USMC
+				{
+					cost = 30000;
+					requirements[] = { "A" };
+				};				
+			};
+			
+			
+			class Naval
+			{
+				class O_Boat_Transport_01_F
+				{
+					cost = 100;
+					requirements[] = {"W"};
+				};
+			};
+			
+			
+			class Gear
+			{
+				class CUP_BOX_USMC_Ammo_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_GB_Ammo_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_GER_Ammo_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_US_ARMY_Wps_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+				class CUP_BOX_GB_Wps_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+				
+				class CUP_BOX_GER_Wps_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+				
+				class CUP_BOX_US_ARMY_WpsSpecial_F
+				{
+					cost = 900;
+					requirements[] = {};
+				};
+				
+				class CUP_BOX_GB_WpsSpecial_F
+				{
+					cost = 900;
+					requirements[] = {};
+				};
+				
+				class CUP_BOX_GER_WpsSpecial_F
+				{
+					cost = 900;
+					requirements[] = {};
+				};
+				
+				class CUP_BOX_US_ARMY_Grenades_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_US_ARMY_AmmoOrd_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};				
+
+				class CUP_BOX_US_ARMY_WpsLaunch_F
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_B_M2StaticMG_MiniTripod_US
+				{
+					cost = 350;
+					requirements[] = {};
+				};				
+				
+				class CUP_B_L111A1_MiniTripod_BAF_MPT
+				{
+					cost = 650;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};				
+
+				class CUP_B_MK19_TriPod_US
+				{
+					cost = 850;
+					requirements[] = {};
+				};
+
+				class CUP_B_TOW2_TriPod_US
+				{
+					cost = 1650;
+					requirements[] = {};
+				};
+
+				class CUP_B_CUP_Stinger_AA_pod_US
+				{
+					cost = 2750;
+					requirements[] = {};
+				};		
+			};
+			
+			
+			class Defences
+			{
+				
+				class CUP_B_M2StaticMG_MiniTripod_US
+				{
+					cost = 350;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; // --- custom offset (optional)
+				};
+
+				class CUP_B_M2StaticMG_US
+				{
+					cost = 450;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_L111A1_MiniTripod_BAF_MPT
+				{
+					cost = 500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_L111A1_BAF_MPT
+				{
+					cost = 500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_MK19_TriPod_US
+				{
+					cost = 750;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_TOW2_TriPod_US
+				{
+					cost = 1450;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_CUP_Stinger_AA_pod_US
+				{
+					cost = 1750;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class B_Radar_System_01_F
+				{
+					cost = 7500;
+					requirements[] = {};
+					offset[] = { 0, 5, 0 }; 
+				};
+				
+				class B_SAM_System_03_F
+				{
+					cost = 10000;
+					requirements[] = {};
+					offset[] = { 0, 5, 0 }; 
+				};
+				
+				class CUP_B_M252_US
+				{
+					cost = 15500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_B_M119_US
+				{
+					cost = 19500;
+					requirements[] = {};
+					offset[] = { 0, 5, 0 }; 
+				};	
+
+				class Land_fortified_nest_small_EP1
+				{
+					cost = 500;
+					requirements[] = {};
+					offset[] = { 0, 0, 0 };
+				};	
+
+				class Land_Fort_Watchtower_EP1
+				{
+					cost = 750;
+					requirements[] = {};
+					offset[] = { 0, 9, 0 };
+				};	
+
+				class Land_fortified_nest_big_EP1
+				{
+					cost = 950;
+					requirements[] = {};
+					offset[] = { 0, 9, 0 };
+				};					
+
+				class CUP_BOX_US_ARMY_AmmoVeh_F
+				{
+					cost = 4500;
+					requirements[] = {};
+					offset[] = { 0, 3, 1 };
+				};			
+			};
+		};
+		
+		
+		
+		///////// OPFOR		
+		
+		class EAST // --- assets available for OPFOR
+		{
+			class Infantry
+			{
+				class CUP_O_RU_Pilot_VDV
+				{
+					cost = 100; 
+					requirements[] = {};
+				};
+		
+				class CUP_O_TK_Crew
+				{
+					cost = 100; 
+					requirements[] = {};
+				};
+				
+				class CUP_O_TK_Soldier_Backpack
+				{
+					cost = 100; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_GL
+				{
+					cost = 175; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Medic
+				{
+					cost = 125; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Engineer
+				{
+					cost = 120; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_AR
+				{
+					cost = 225; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_M
+				{
+					cost = 250; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_AT
+				{
+					cost = 250; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_MG
+				{
+					cost = 450; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_AA
+				{
+					cost = 500; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Soldier_HAT
+				{
+					cost = 650; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_Sniper_KSVK
+				{
+					cost = 500; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_INS_Soldier_Enfield
+				{
+					cost = 65; 
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_INS_Bomber
+				{
+					cost = 120;
+					requirements[] = {};
+				};
+
+				class CUP_O_TK_INS_Soldier_AT
+				{
+					cost = 185;
+					requirements[] = {};
+				};
+
+				class CUP_O_RU_Recon_Exp_Ratnik_BeigeDigital
+				{
+					cost = 175;
+					requirements[] = {};
+				};
+
+				class CUP_O_RU_Recon_LAT_Ratnik_BeigeDigital
+				{
+					cost = 225;
+					requirements[] = {};
+				};
+
+				class CUP_O_RU_Recon_Marksman_Ratnik_BeigeDigital
+				{
+					cost = 350;
+					requirements[] = {};
+				};	
+				
+				class CUP_O_RU_Soldier_MG_Ratnik_BeigeDigital
+				{
+					cost = 500;
+					requirements[] = {};
+				};					
+			};
+			
+			
+			class Vehicles
+			{
+				class CUP_O_Tractor_Old_TKA
+				{
+					cost = 50;
+					requirements[] = {};
+				};	
+				
+				class CUP_O_TT650_TKA
+				{
+					cost = 75;
+					requirements[] = {};
+				};				
+
+				class CUP_O_UAZ_Open_TKA
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_O_UAZ_MG_TKA
+				{
+					cost = 1000;
+					requirements[] = {};
+				};
+
+				class CUP_O_UAZ_AGS30_TKA
+				{
+					cost = 1500;
+					requirements[] = {};
+				};
+
+				class CUP_O_UAZ_METIS_TKA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+
+				class CUP_O_Hilux_M2_TK_INS
+				{
+					cost = 1000;
+					requirements[] = {};
+				};
+
+				class CUP_O_Hilux_SPG9_TK_INS
+				{
+					cost = 1500;
+					requirements[] = {};
+				};
+
+				class CUP_O_BMP2_AMB_TKA
+				{
+					cost = 500;
+					requirements[] = {};
+				};
+
+				class CUP_O_BRDM2_HQ_TKA
+				{
+					cost = 750;
+					requirements[] = {};
+				};
+
+				class CUP_O_BRDM2_TKA
+				{
+					cost = 1450;
+					requirements[] = {};
+				};
+
+				class CUP_O_BRDM2_ATGM_TKA
+				{
+					cost = 1750;
+					requirements[] = {};
+				};
+
+				class CUP_O_BTR60_TK
+				{
+					cost = 1850;
+					requirements[] = {};
+				};
+
+				class CUP_O_BTR80_TK
+				{
+					cost = 2250;
+					requirements[] = {};
+				};
+
+				class CUP_O_BTR80A_TK
+				{
+					cost = 2750;
+					requirements[] = {};
+				};
+
+				class CUP_O_BMP1P_TKA
+				{
+					cost = 3750;
+					requirements[] = {};
+				};
+
+				class CUP_O_BMP2_TKA
+				{
+					cost = 4500;
+					requirements[] = {};
+				};
+
+				class CUP_O_Hilux_zu23_TK_INS
+				{
+					cost = 2750;
+					requirements[] = {};
+				};
+
+				class CUP_O_Ural_ZU23_TKA
+				{
+					cost = 3250;
+					requirements[] = {};
+				};	
+
+				class CUP_O_ZSU23_TK
+				{
+					cost = 4450;
+					requirements[] = {};
+				};
+
+				class CUP_O_2S6M_RU
+				{
+					cost = 5450;
+					requirements[] = {};
+				};
+
+				class CUP_O_T55_TK
+				{
+					cost = 5000;
+					requirements[] = {};
+				};
+
+				class CUP_O_T72_TKA
+				{
+					cost = 6500;
+					requirements[] = {};
+				};
+
+				class CUP_O_Ural_Open_TKA
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+
+				class CUP_O_Ural_Repair_TKA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};		
+
+				class CUP_O_Ural_Refuel_TKA
+				{
+					cost = 1250;
+					requirements[] = {};
+				};		
+
+				class CUP_O_Ural_Reammo_TKA
+				{
+					cost = 12500;
+					requirements[] = {};
+				};		
+
+				class CUP_O_Hilux_UB32_TK_INS
+				{
+					cost = 20000;
+					requirements[] = {};
+				};		
+
+				class CUP_O_BM21_TKA
+				{
+					cost = 25000;
+					requirements[] = {};
+				};			
+			};
+
+		
+			class Aircraft
+			{
+
+				class CUP_O_UH1H_TKA
+				{
+					cost = 2000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Mi17_TK
+				{
+					cost = 3000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Mi17_VIV_TK
+				{
+					cost = 3000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_MI6T_TKA
+				{
+					cost = 4000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_MI6A_TKA
+				{
+					cost = 4000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_UH1H_gunship_TKA
+				{
+					cost = 10000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Mi8_RU
+				{
+					cost = 12000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Mi24_D_Dynamic_TK
+				{
+					cost = 14500;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Ka52_RU
+				{
+					cost = 15000;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_Ka50_DL_RU
+				{
+					cost = 15500;
+					requirements[] = { "H" };
+				};
+
+				class CUP_O_C130J_TKA
+				{
+					cost = 4000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_O_C130J_Cargo_TKA
+				{
+					cost = 4000;
+					requirements[] = { "A" };
+				};
+
+				class CUP_O_L39_TK
+				{
+					cost = 17500;
+					requirements[] = { "A" };
+				};
+
+				class CUP_O_Su25_Dyn_TKA
+				{
+					cost = 22000;
+					requirements[] = { "A" };
+				};
+				
+				class CUP_O_SU34_RU
+				{
+					cost = 26500;
+					requirements[] = { "A" };
+				};			
+			};
+			
+			
+			class Naval
+			{
+				class CUP_O_PBX_RU
+				{
+					cost = 50;
+					requirements[] = { "W" };
+				};
+			};
+			
+			
+			class Gear
+			{
+				class CUP_BOX_RU_Ammo_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_TK_Ammo_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_RU_Wps_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+
+				class CUP_BOX_TK_Wps_F
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+				class CUP_BOX_RU_WpsSpecial_F
+				{
+					cost = 900;
+					requirements[] = {};
+				};
+				class CUP_BOX_TK_WpsSpecial_F
+				{
+					cost = 900;
+					requirements[] = {};
+				};
+				class CUP_BOX_RU_Grenades_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+				class CUP_BOX_TK_Grenades_F
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+				class CUP_BOX_RU_AmmoOrd_F
+				{
+					cost = 500;
+					requirements[] = {};
+				};
+				class CUP_BOX_RU_WpsLaunch_F
+				{
+					cost = 1250;
+					requirements[] = {};
+				};				
+				
+				class CUP_O_KORD_TK
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				
+				class CUP_O_AGS_TK
+				{
+					cost = 850;
+					requirements[] = {};
+				};
+				
+				class CUP_O_SPG9_TK_INS
+				{
+					cost = 750;
+					requirements[] = {};
+				};				
+				
+				class CUP_O_Metis_TK
+				{
+					cost = 1200;
+					requirements[] = {};
+				};		
+
+				class CUP_O_Kornet_RU
+				{
+					cost = 1450;
+					requirements[] = {};
+				};				
+				
+				class CUP_O_Igla_AA_pod_TK
+				{
+					cost = 2750;
+					requirements[] = {};
+				};		
+			};
+			
+			
+			class Defences
+			{						
+				class CUP_O_DSHKM_TK_INS
+				{
+					cost = 350;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 };
+				};
+
+				class CUP_O_KORD_TK
+				{
+					cost = 350;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_KORD_high_TK
+				{
+					cost = 350;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_AGS_TK
+				{
+					cost = 750;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_SPG9_TK_INS
+				{
+					cost = 600;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_Metis_TK
+				{
+					cost = 950;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_Kornet_RU
+				{
+					cost = 1250;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_ZU23_TK
+				{
+					cost = 1250;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_Igla_AA_pod_TK
+				{
+					cost = 1500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class O_Radar_System_02_F
+				{
+					cost = 7500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+				
+				class O_SAM_System_04_F
+				{
+					cost = 10000;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 };
+				};
+				
+				class CUP_O_2b14_82mm_TK_INS
+				{
+					cost = 15500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_D30_AT_TK
+				{
+					cost = 10000;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};
+
+				class CUP_O_D30_TK
+				{
+					cost = 19500;
+					requirements[] = {};
+					offset[] = { 0, 4, 0 }; 
+				};				
+				
+				class Land_fortified_nest_small_EP1
+				{
+					cost = 500;
+					requirements[] = {};
+					offset[] = { 0, 6, -0.5 };
+				};	
+
+				class Land_Fort_Watchtower_EP1
+				{
+					cost = 750;
+					requirements[] = {};
+					offset[] = { 0, 9, 0 };
+				};	
+
+				class Land_fortified_nest_big_EP1
+				{
+					cost = 950;
+					requirements[] = {};
+					offset[] = { 0, 9, 0 };
+				};				
+
+				class CUP_BOX_TK_AmmoVeh_F
+				{
+					cost = 4500;
+					requirements[] = {};
+					offset[] = { 0, 3, 1 };
+				};				
+			};
+		};
+	};
+};
+
+
+
+
+//GARRISON UNITS
+
+class CfgWLFactionAssets
+{
+	class INDEP // --- Independent
+	{
+		class InfantryGroups // --- independent faction uses group configs to spawn garrisons; you can define various group types to be randomly used
+		{
+			groups[] = {
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Infantry' >> 'CUP_I_TK_GUE_AATeam'",
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Infantry' >> 'CUP_I_TK_GUE_Group'",
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Infantry' >> 'CUP_I_TK_GUE_GroupWeapons'"
+			};
+		};
+		class MotorizedGroups
+		{
+			groups[] = {
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Motorized' >> 'CUP_I_TK_GUE_MotorizedPatrol'"
+			};
+		};
+		class MechanizedGroups
+		{
+			groups[] = {
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Motorized' >> 'CUP_I_TK_GUE_MechanizedGroup'"
+			};
+		};
+		class ArmoredGroups
+		{
+			groups[] = {
+				"'Indep' >> 'CUP_I_TK_GUE' >> 'Armored' >> 'CUP_I_TK_GUE_T55Section'"
+			};
+		};
+	};
+};
+
+
+
+
+//AI PURCHASING BLACKLIST
+
+WLAIRequisitonBlacklist[] = {
+	"CUP_B_US_Crew_OCP",
+	"CUP_B_US_Pilot_Light",
+	"CUP_O_TK_Crew",
+	"CUP_O_RU_Pilot_VDV"
+};
+
+
+
+
+
+
+
+
+
+
+
+
+

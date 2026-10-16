@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "d08b5cab-faa5-5ae3-8eb8-7f96fac9bf70",
+  "name": "Морская пехота Турции (TMT) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "TMT_TR_DZKK",
+    "assets": [
+      "TMT_AH1W_DZKK_HIRSS",
+      "TMT_S70B"
+    ],
+    "infantry": [
+      "TMT_DZKK_Rifleman_AT",
+      "TMT_DZKK_Rifleman_Medic",
+      "TMT_DZKK_Soldier",
+      "TMT_DZKK_Soldier_Engineer",
+      "TMT_DZKK_Soldier_GL",
+      "TMT_DZKK_Soldier_Light",
+      "TMT_DZKK_Soldier_MG",
+      "TMT_DZKK_Soldier_Sharpshooter",
+      "TMT_DZKK_Soldier_SL"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.045Z",
+  "updatedAt": "2026-10-15T16:43:30.045Z"
+}

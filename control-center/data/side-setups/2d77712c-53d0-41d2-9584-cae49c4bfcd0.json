@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "2d77712c-53d0-41d2-9584-cae49c4bfcd0",
+  "name": "Из запуска · зелёные",
+  "setup": {
+    "side": "green",
+    "faction": "rhsgref_faction_cdf_ng",
+    "assets": [],
+    "infantry": null,
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-11T02:23:45.193Z",
+  "updatedAt": "2026-10-11T02:23:45.193Z"
+}

@@ -1,0 +1,69 @@
+{
+  "lmStudio": {
+    "baseUrl": "http://127.0.0.1:1234/v1",
+    "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive@q4_k_m",
+    "fallbackModel": "qwen/qwen3-vl-4b",
+    "apiKey": "lm-studio",
+    "timeoutMs": 85000,
+    "temperature": 0.35,
+    "maxTokens": 4096,
+    "reasoningEffort": "none",
+    "structuredOutput": true,
+    "sides": {
+      "ALLIED": {
+        "label": "Local LM Studio endpoint",
+        "baseUrl": "http://127.0.0.1:1234/v1",
+        "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive@q4_k_m",
+        "apiKey": "lm-studio"
+      },
+      "ENEMY": {
+        "label": "Second LM Studio endpoint",
+        "baseUrl": "http://127.0.0.1:1235/v1",
+        "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive-mlx",
+        "apiKey": "sk-lm-YOUR_TOKEN"
+      }
+    }
+  },
+  "transport": {
+    "iniFolder": "C:/SteamLibrary/steamapps/workshop/content/107410/1768992669/db",
+    "outboxDb": "NeroWL_out",
+    "inboxDb": "NeroWL_in",
+    "pollMs": 300,
+    "maxPending": 2
+  },
+  "limits": {
+    "maxSnapshotChars": 12000,
+    "maxPlayerCommandChars": 400,
+    "maxSpeechChars": 700,
+    "maxActions": 5,
+    "minAutonomousMoveMeters": 35,
+    "conversationTurns": 6
+  },
+  "autonomy": {
+    "planIntervalSeconds": 30,
+    "maxParallelPlans": 2,
+    "intergroupEnabled": true,
+    "intergroupMaxHops": 1,
+    "intergroupMaxConcurrent": 1,
+    "intergroupPairCooldown": 30
+  },
+  "vision": {
+    "enabled": false,
+    "baseUrl": "http://127.0.0.1:1234/v1",
+    "model": "qwen/qwen3-vl-4b",
+    "apiKey": "lm-studio",
+    "capturePath": "C:/Users/Admin/Documents/Arma 3/Screenshots/NeroAI_vision.png",
+    "preparedPath": "logs/vision-frame.jpg",
+    "pollMs": 1000,
+    "minIntervalMs": 45000,
+    "timeoutMs": 60000,
+    "maxTokens": 700,
+    "maxImageBytes": 4194304,
+    "maxObservations": 12,
+    "maxEvidenceChars": 160,
+    "minConfidence": 0.65,
+    "jpegWidth": 960,
+    "jpegHeight": 540,
+    "jpegQuality": 62
+  }
+}

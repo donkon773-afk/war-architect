@@ -1,0 +1,47 @@
+// BFX Warlords RHS + Zeus — Chernarus (CUP)
+author = "BlackFox";
+onLoadName = "Warlords RHS + Zeus: Chernarus (CUP)";
+onLoadMission = "США (RHS) против ВС РФ (RHS) — захват секторов, закупка техники, Зевс для админа.";
+briefingName = "[WL] RHS + Zeus — Chernarus (CUP)";
+overviewText = "Warlords на карте Chernarus (CUP) под RHS/CUP. Зевс: хост, залогиненный админ, белый список UID.";
+
+class Header
+{
+    gameType = Warlords;
+    minPlayers = 1;
+    maxPlayers = 32;
+};
+
+respawn = 3;
+respawnDelay = 15;
+respawnOnStart = -1;
+respawnTemplates[] = {"Counter"};
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+
+corpseManagerMode = 1;
+corpseLimit = 40;
+corpseRemovalMinTime = 120;
+corpseRemovalMaxTime = 600;
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 900;
+
+// Steam UID игроков, которым всегда доступен Зевс (кроме хоста и админа):
+// BFX_zeusUIDs[] = {"76561198000000000", "76561198000000001"};
+BFX_zeusUIDs[] = {};
+
+class Params
+{
+    class BFX_ZeusMode
+    {
+        title = "Доступ к Зевсу";
+        values[] = {0, 1};
+        texts[] = {"Хост / админ / белый список UID", "Все игроки"};
+        default = 0;
+    };
+};
+
+#include "bfx\presets.hpp"

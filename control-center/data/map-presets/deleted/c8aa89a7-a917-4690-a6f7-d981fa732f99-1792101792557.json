@@ -1,0 +1,119 @@
+{
+  "id": "c8aa89a7-a917-4690-a6f7-d981fa732f99",
+  "name": "Bastek · сухопутный фронт",
+  "createdAt": "2026-10-15T22:02:45.894Z",
+  "updatedAt": "2026-10-15T22:02:45.894Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "K9S_Bastek",
+    "title": "Bastek · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Karaj",
+        "side": "WEST",
+        "position": [
+          1057,
+          5293
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Al Tabruk",
+        "side": "EAST",
+        "position": [
+          3704,
+          967
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Karaj",
+        "side": "GUER",
+        "position": [
+          1738,
+          4588
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · FOB Bothell",
+        "side": "GUER",
+        "position": [
+          2884,
+          4910
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · FOB Bothell",
+        "side": "GUER",
+        "position": [
+          3476,
+          3954
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · FOB Bothell",
+        "side": "GUER",
+        "position": [
+          3596,
+          3471
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Al Tabruk",
+        "side": "GUER",
+        "position": [
+          3691,
+          1666
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

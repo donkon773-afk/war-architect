@@ -1,0 +1,15 @@
+params [["_unit",objNull,[objNull]]];
+if (!isServer || {isNull _unit} || {!alive _unit} || {NeroOP_campFinished} || {!NeroOP_campReady} || {!(isPlayer _unit || {_unit getVariable ["NeroOP_lobbySlot",false]})}) exitWith {};
+if (isRemoteExecuted && {!isPlayer _unit || {remoteExecutedOwner!=owner _unit}}) exitWith {};
+private _side=[west,east] find side group _unit;if (_side<0 || {group _unit getVariable ["NeroOP_campGroup",false]}) exitWith {};
+if (group _unit getVariable ["NeroOP_campFlight",false] && {vehicle _unit!=_unit || {([_unit,_side,0] call NeroOP_fnc_campaignWarehouse)<0}}) exitWith {};
+private _pending=_unit getVariable ["NeroOP_pendingGroup",grpNull];if (!isNull _pending && {serverTime-(_pending getVariable ["NeroOP_claimedAt",-100])<20}) exitWith {};
+if (serverTime-(_unit getVariable ["NeroOP_campRequestAt",-100])<3) exitWith {};_unit setVariable ["NeroOP_campRequestAt",serverTime];private _group=grpNull;
+isNil {private _available=NeroOP_campGroups select {(_x getVariable ["NeroOP_side",-1])==_side && {units _x findIf {alive _x}>=0} && {units _x findIf {alive _x && {isPlayer _x}}<0} && {!alive (_x getVariable ["NeroOP_slotCommander",objNull])} && {!(_x getVariable ["NeroOP_claimed",false])} && {_x getVariable ["NeroOP_hcUID",""]==""}};
+ if (count _available>0) then {_group=_available#0;} else {_group=[_side] call NeroOP_fnc_campaignSpawn;};
+ if (!isNull _group) then {_group setVariable ["NeroOP_claimed",true];_group setVariable ["NeroOP_claimedAt",serverTime];_group setVariable ["NeroOP_slotCommander",_unit,true];};
+};
+if (isNull _group) exitWith {_unit setVariable ["NeroOP_notice","Нет свободного отряда: дождитесь снабжения и подкреплений.",true];};
+if (!isPlayer _unit) exitWith {if (local _unit && {local _group}) then {_unit setPosATL getPosATL leader _group;[_unit] joinSilent _group;_group selectLeader _unit;_unit setCaptive false;diag_log format ["[NeroOP CAMPAIGN] LOBBY BOT READY side=%1 group=%2",_side,groupId _group];} else {_group setVariable ["NeroOP_claimed",false];_group setVariable ["NeroOP_slotCommander",objNull,true];};};
+if (groupOwner _group!=owner _unit && {!(_group setGroupOwner owner _unit)}) exitWith {_group setVariable ["NeroOP_claimed",false];_group setVariable ["NeroOP_slotCommander",objNull,true];};
+_unit setVariable ["NeroOP_pendingGroup",_group];[_unit,_group] remoteExecCall ["NeroOP_fnc_campaignBoard",owner _unit];

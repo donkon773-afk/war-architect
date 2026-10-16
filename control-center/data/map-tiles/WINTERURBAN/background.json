@@ -1,0 +1,28 @@
+{
+  "world": "WINTERURBAN",
+  "worldSize": 3328,
+  "strideX": 416,
+  "strideY": 416,
+  "columns": 8,
+  "rows": 8,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -48,
+      "worldTop": 3376,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 19940325,
+  "sourceModified": 1790780648897.876,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 64,
+  "seconds": 1.03,
+  "coarsestPixelSize": 1.0
+}

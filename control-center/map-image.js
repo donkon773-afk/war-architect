@@ -1,0 +1,4 @@
+'use strict';
+function dimensions(b){let width,height;if(b.length>=24&&b.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))&&b.toString('ascii',12,16)==='IHDR'){width=b.readUInt32BE(16);height=b.readUInt32BE(20);}else if(b.length>4&&b[0]===255&&b[1]===216){let p=2;while(p+4<b.length){if(b[p++]!==255)throw Error('Повреждённый JPEG.');let marker=b[p++];while(marker===255)marker=b[p++];if(marker===217||marker===218)break;const size=b.readUInt16BE(p);if(size<2||p+size>b.length)throw Error('Повреждённый JPEG.');if([192,193,194,195,197,198,199,201,202,203,205,206,207].includes(marker)){height=b.readUInt16BE(p+3);width=b.readUInt16BE(p+5);break;}p+=size;}}
+ if(!width||!height||width>8192||height>8192||width<256||height<256)throw Error('Карта: от 256 до 8192 пикселей по каждой стороне.');if(Math.abs(width/height-1)>.01)throw Error('Нужно квадратное изображение всей карты без рамок: иначе точки будут смещены.');return{width,height};}
+module.exports={dimensions};

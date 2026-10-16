@@ -1,0 +1,12 @@
+/* One atomic paid grant, valid at every controlled connected sector. */
+params ["_vehicle","_side",["_human",false]];
+if (!isServer || {!alive _vehicle} || {!_human && {[_vehicle] call NeroOP_fnc_campaignPlayerControl}} || {serverTime-(_vehicle getVariable ["NeroOP_serviceAt",-180])<180} || {speed _vehicle>5} || {(getPosATL _vehicle)#2>5}) exitWith {false};
+private _special=_vehicle getVariable ["NeroOP_specialKind",-1];
+if (_special==0 && {!_human} && {[_vehicle] call NeroOP_fnc_campaignAmmoEmpty} && {serverTime<(_vehicle getVariable ["NeroOP_fpReloadAt",serverTime+600])}) exitWith {false};
+if (_special==1 && {[_vehicle] call NeroOP_fnc_campaignCruiseEmpty || {_vehicle getVariable ["NeroOP_bomberReloadAt",0]>0}} && {(_vehicle getVariable ["NeroOP_bomberReloadAt",0])==0 || {serverTime<(_vehicle getVariable ["NeroOP_bomberReloadAt",0])}}) exitWith {false};
+private _cfg=missionConfigFile >> "CfgNeroOperation";private _cost=getNumber(_cfg >> "Gameplay" >> "serviceCost");private _reserve=if (_human) then {0} else {2*getNumber(_cfg >> "reinforcementCost")};
+private _graph=[NeroOP_campOwners,NeroOP_campLinks,NeroOP_campRoots#_side,_side] call NeroOP_fnc_campaignGraph;private _near=(_graph#0) findIf {_vehicle distance2D (NeroOP_campPositions#_x)<NeroOP_campRadii#_x && {(NeroOP_campStocks#_x)>=_cost+_reserve}};
+private _airSource=-1;if (_near<0 && {_vehicle isKindOf "Air"}) then {private _fields=(NeroOP_campAirfieldService#_side) select {_vehicle distance2D (_x#1)<(NeroOP_campAirfieldRadii param [_x#0,750]) && {(NeroOP_campStocks#(_x#2))>=_cost+_reserve}};if (count _fields>0) then {_airSource=(_fields#0)#2;};};
+if (_near<0 && {_airSource<0} || {allUnits findIf {alive _x && {!captive _x} && {([west,east]#_side) getFriend (side group _x)<.6} && {_x distance2D _vehicle<200}}>=0}) exitWith {false};
+private _source=if (_airSource>=0) then {_airSource} else {(_graph#0)#_near};NeroOP_campSeq=NeroOP_campSeq+1;private _result=[NeroOP_campStocks,NeroOP_campLedger,"spend","service:"+str NeroOP_campSeq,_source,-1,_cost] call NeroOP_fnc_campaignStock;
+if !(_result#2) exitWith {false};NeroOP_campStocks=_result#0;NeroOP_campLedger=_result#1;_vehicle setVariable ["NeroOP_serviceAt",serverTime];_vehicle setVariable ["NeroOP_bomberReloadAt",0,true];_vehicle setVariable ["NeroOP_fpReloadAt",0,true];_vehicle setVariable ["NeroOP_serviceGrant",NeroOP_campSeq,true];[_vehicle,NeroOP_campSeq] remoteExecCall ["NeroOP_fnc_campaignServiceLocal",0];true

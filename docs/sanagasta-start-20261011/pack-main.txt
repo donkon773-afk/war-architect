@@ -1,0 +1,8 @@
+Building PBO from 'C:\Users\Admin\Desktop\ИИ\NeroAI_Warlords_DualLLM\missions\NeroAI_Designed_btrx_sngt_Three.btrx_sngt' (17 files)...
+Note: No private key at .\docs\sanagasta-start-20261011\DCO-GPT-2.1.0.biprivatekey. PBO compiled clean for SP/MP development.
+==================================================
+PBO build complete: .\docs\sanagasta-start-20261011\NeroAI_Designed_btrx_sngt_Three.btrx_sngt.pbo
+Total Files: 17
+PBO Size: 98901 bytes
+SHA-256: 042cac48c0dce640ced7520fa217e0aab30776cdffd335d354558e9eabde013e
+==================================================

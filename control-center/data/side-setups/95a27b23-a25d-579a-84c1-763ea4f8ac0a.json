@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "id": "95a27b23-a25d-579a-84c1-763ea4f8ac0a",
+  "name": "ВМС США (RHS) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usn",
+    "assets": [],
+    "infantry": [
+      "rhsusf_navy_marpat_d_medic",
+      "rhsusf_navy_marpat_wd_medic",
+      "rhsusf_navy_sarc_w"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.976Z",
+  "updatedAt": "2026-10-15T16:43:29.976Z"
+}

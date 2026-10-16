@@ -1,0 +1,145 @@
+{
+  "id": "d9f73594-a3f5-4f56-8e72-5691e9c8f049",
+  "name": "Fjord · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:25.921Z",
+  "updatedAt": "2026-10-15T22:03:25.921Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "go_map_fjord",
+    "title": "Fjord · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · landing strip",
+        "side": "WEST",
+        "position": [
+          2805,
+          3390
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Rosta",
+        "side": "EAST",
+        "position": [
+          7101,
+          11646
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Skoganvarre",
+        "side": "GUER",
+        "position": [
+          5221,
+          3375
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · tunnel",
+        "side": "GUER",
+        "position": [
+          5820,
+          1728
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Helbotn",
+        "side": "GUER",
+        "position": [
+          8084,
+          1308
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Helbotn",
+        "side": "GUER",
+        "position": [
+          7629,
+          1375
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Skoganvarre",
+        "side": "GUER",
+        "position": [
+          7286,
+          4562
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          6609,
+          7397
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          7319,
+          9037
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

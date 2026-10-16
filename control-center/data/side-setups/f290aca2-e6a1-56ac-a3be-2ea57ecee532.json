@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "id": "f290aca2-e6a1-56ac-a3be-2ea57ecee532",
+  "name": "Партизаны FIA (Arma 3, синие) · каталог фракции",
+  "setup": {
+    "side": "west",
+    "faction": "BLU_G_F",
+    "assets": [],
+    "infantry": [
+      "B_G_engineer_F",
+      "B_G_medic_F",
+      "B_G_Sharpshooter_F",
+      "B_G_Soldier_A_F",
+      "B_G_Soldier_AR_F",
+      "B_G_Soldier_exp_F",
+      "B_G_Soldier_F",
+      "B_G_Soldier_GL_F",
+      "B_G_Soldier_LAT_F",
+      "B_G_Soldier_lite_F",
+      "B_G_Soldier_M_F",
+      "B_G_Soldier_SL_F",
+      "B_G_Soldier_TL_F"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.870Z",
+  "updatedAt": "2026-10-15T16:43:29.870Z"
+}

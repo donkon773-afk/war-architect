@@ -1,0 +1,145 @@
+{
+  "id": "1f3b785d-61f4-4a6d-9614-94921e390386",
+  "name": "Enoch · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:14.162Z",
+  "updatedAt": "2026-10-15T22:03:14.162Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "Enoch",
+    "title": "Enoch · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · $STR A3 C Zalesie0",
+        "side": "WEST",
+        "position": [
+          1517,
+          5872
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · $STR A3 C Wrzeszcz0",
+        "side": "EAST",
+        "position": [
+          9829,
+          5545
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · $STR A3 C Adamow0",
+        "side": "GUER",
+        "position": [
+          2688,
+          5838
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · $STR A3 C Adamow0",
+        "side": "GUER",
+        "position": [
+          3578,
+          5970
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · $STR A3 C Muratyn0",
+        "side": "GUER",
+        "position": [
+          4678,
+          6102
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · $STR A3 C drewniki0",
+        "side": "GUER",
+        "position": [
+          5773,
+          5791
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · $STR A3 C Radunin0",
+        "side": "GUER",
+        "position": [
+          7109,
+          5994
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · $STR A3 C Roztoka0",
+        "side": "GUER",
+        "position": [
+          7920,
+          5918
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · $STR A3 C Lembork0",
+        "side": "GUER",
+        "position": [
+          9064,
+          5918
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

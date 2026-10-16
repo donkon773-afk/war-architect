@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "7b2189b2-c32b-4803-87a6-7a504c330d87",
+  "name": "TEST — проверка сохранения пустого сетапа",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usarmy_d",
+    "assets": [],
+    "infantry": [],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-11T02:36:52.990Z",
+  "updatedAt": "2026-10-11T02:36:52.990Z"
+}

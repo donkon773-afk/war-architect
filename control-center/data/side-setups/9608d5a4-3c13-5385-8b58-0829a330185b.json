@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "id": "9608d5a4-3c13-5385-8b58-0829a330185b",
+  "name": "ВМС США (RHS) · лес",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usn",
+    "assets": [],
+    "infantry": [
+      "rhsusf_navy_marpat_wd_medic",
+      "rhsusf_navy_sarc_w"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.979Z",
+  "updatedAt": "2026-10-15T16:43:29.979Z"
+}

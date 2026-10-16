@@ -1,0 +1,27 @@
+{
+  "world": "Australia",
+  "worldSize": 40960,
+  "strideX": 960,
+  "strideY": 960,
+  "columns": 43,
+  "rows": 43,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "first": {
+      "worldLeft": -32,
+      "worldTop": 40992,
+      "extentX": 1024,
+      "extentY": 1024
+    }
+  },
+  "sourceSize": 660550692,
+  "sourceModified": 1790780648930.8447,
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 2.0,
+  "tileCount": 1849,
+  "seconds": 14.83,
+  "coarsestPixelSize": 2.0,
+  "missingTiles": []
+}

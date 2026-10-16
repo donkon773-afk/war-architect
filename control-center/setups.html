@@ -1,0 +1,243 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>War Architect — сетапы сторон</title>
+<style>
+:root{color-scheme:dark;--bg:#0d121b;--card:#151e2b;--border:#2a384d;--text:#e8eef7;--muted:#9badc5;--accent:#83aaff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 "Segoe UI",sans-serif}header{padding:20px 26px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:24px;margin:0}h2{font-size:20px;margin:0 0 12px}p{color:var(--muted);margin:6px 0 12px}a{color:var(--accent)}button,input,select{font:inherit;border:1px solid var(--border);background:#0f1723;color:var(--text);border-radius:7px;padding:9px;min-width:0}button{cursor:pointer;font-weight:600}button:hover{background:#263957}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus,select:focus{outline:2px solid var(--accent);outline-offset:2px}.primary{background:var(--accent);color:#101820}.danger{color:#ffb6ae}label{display:block;color:var(--muted);font-size:12px;margin:10px 0 5px}input,select{width:100%}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;max-width:1440px;margin:24px auto;padding:0 26px 100px}.library,.editor{border:1px solid var(--border);background:var(--card);border-radius:13px;padding:20px;min-width:0}.library{align-self:start;position:sticky;top:20px}.library-list{max-height:65vh;overflow:auto}.setup-card{width:100%;text-align:left;display:block;margin:8px 0;padding:12px}.setup-card strong{display:block}.setup-card span{font-size:12px;color:var(--muted);font-weight:400}.setup-card[aria-current=true]{border-color:var(--accent);background:#213553}.row{display:flex;gap:12px;align-items:end}.row>div{flex:1;min-width:0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.tabs{display:flex;gap:8px;margin:20px 0 10px}.tabs button[aria-selected=true]{border-color:var(--accent);background:#213553}.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.asset-list{max-height:48vh;overflow:auto;border:1px solid var(--border);border-radius:8px;padding:0 12px}.asset-row{display:flex;gap:10px;align-items:center;margin:0;padding:11px 0;border-bottom:1px solid var(--border);color:var(--text);font-size:14px}.asset-row:last-child{border-bottom:0}.asset-row input[type=checkbox]{width:auto}.asset-row .name{flex:1}.asset-row small{display:block;color:var(--muted);font-size:11px;overflow-wrap:anywhere}.asset-row input[type=number]{width:100px}.footer{position:fixed;bottom:0;left:0;right:0;z-index:5;background:#101927f2;border-top:1px solid var(--border);padding:13px 26px;display:flex;align-items:center;gap:12px}.footer #status{flex:1}.bad{color:#ffb6ae}.ok{color:#98e5c5}.counts{padding:10px 12px;background:#0f1723;border:1px solid var(--border);border-radius:8px;font-size:13px}.unsaved{color:#ffe0a8}section[hidden]{display:none!important}.inline-note{font-size:12px}.library-actions{display:grid;gap:8px}header a{white-space:nowrap}@media(max-width:850px){.layout{grid-template-columns:1fr;padding:0 15px 150px;margin:15px auto}.library{position:static}.library-list{max-height:240px}.filters{grid-template-columns:1fr 1fr}.footer{flex-wrap:wrap;padding:12px 15px}.footer #status{flex-basis:100%}.row{flex-wrap:wrap}.row>div{min-width:160px}header{padding:15px;align-items:start}h1{font-size:21px}}@media(max-width:480px){.filters{grid-template-columns:1fr}.editor,.library{padding:15px}.asset-row{font-size:12px}header{flex-wrap:wrap}}
+</style>
+<!-- military-ui:start -->
+<style>
+/* Shared operations-room theme, embedded in every launcher/editor document. */
+:root,body[data-color-theme]{--bg:#111613!important;--card:#1a211d!important;--input:#121915!important;--border:#3b473d!important;--text:#e2e6db!important;--muted:#a8b2a4!important;--accent:#b3bd89!important;--accent-hover:#c7d1a0!important;--on-accent:#172016!important;--hover:#29362a!important;--bar:#182019!important;--green:#a8c6a2!important;--success-bg:#263c2b!important;--success-text:#b5d5b2!important;--pending-bg:#473d24!important;--pending-text:#e3ce94!important;--error-text:#edb0a3!important;color-scheme:dark!important}
+body{background:#111613!important;color:var(--text);font-family:"Segoe UI",Arial,sans-serif;letter-spacing:.05px}
+button,input,select,textarea,.card,.message,.launch-summary,.preset-card,.preset-create,.param-group,.armyAssets,.editing-box,.preset-row,.ai-switch,.editor-link,.setup-card{border-radius:4px!important}
+button,input,select,textarea{background:var(--input)!important;color:var(--text)!important;border-color:var(--border)!important;min-height:36px}
+button:hover{background:var(--hover)!important;border-color:#78856c!important}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #c0ca9a!important;outline-offset:2px}
+button.primary,.primary,.app-tabs button[aria-selected=true]{background:#b3bd89!important;color:#172016!important;border-color:#b3bd89!important}
+button.primary:hover{background:#c7d1a0!important}
+.card,aside,header,.editor-tabs,.preset-create,.param-group,.preset-card{background:var(--card)!important;border-color:var(--border)!important}
+.tag,.save-status,.badge{border-radius:3px!important}
+header h1{font-size:24px;letter-spacing:1px;font-weight:650}
+header h1 span{color:#b3bd89!important}
+.eyebrow{color:#b3bd89!important;letter-spacing:1.8px}
+.app-tabs{gap:4px;padding:6px;background:#171f19;border:1px solid var(--border);border-radius:4px;position:sticky;top:0;z-index:8}
+.app-tabs button{background:transparent!important;border-color:transparent!important;min-height:43px;flex:1;padding:9px 12px;font-weight:600}
+.app-tabs button[aria-selected=true]{border-color:#727f5d!important;background:#29352a!important;color:#dfe9c3!important;box-shadow:inset 0 -2px #b3bd89}
+.setup-nav{gap:4px;top:72px}.setup-nav button{border-color:transparent!important;border-left:2px solid transparent!important;border-radius:0!important}
+.setup-nav button[aria-current=page]{border-left-color:#b3bd89!important;background:#283429!important}
+.launch-summary{background:#1c271e!important;border-color:#56624c!important;padding:16px 20px;box-shadow:none}
+.launch-summary h2{font-size:19px}.summary-facts{max-width:50%;line-height:1.5}
+.message{background:#172019!important;padding:9px 14px;max-height:90px;overflow:auto;font-size:13px}
+body>main{max-width:1560px;padding:20px 26px 150px}
+.workspace-shell>.bar{background:#151e17!important;border-top:1px solid #536049!important;box-shadow:none!important;display:grid!important;grid-template-columns:1fr auto auto;gap:8px 14px;padding:12px 26px 10px;z-index:12}
+.workspace-shell>.bar>#settingHelp{grid-column:1/-1;display:block;min-height:34px;max-height:54px;overflow:auto;color:#c5cfb9;border-top:1px solid var(--border);padding-top:7px;font-size:12px;line-height:1.4}
+.help-trigger{display:inline-flex;justify-content:center;align-items:center;min-height:18px!important;width:18px;padding:0!important;margin-left:7px;border:1px solid #68755a!important;border-radius:50%!important;color:#c5d2aa!important;font-size:11px;line-height:16px;vertical-align:middle;flex:none}
+.help-trigger:hover,.help-trigger:focus-visible{background:#384733!important}
+.context-help-inline{display:block;grid-column:1/-1;flex-basis:100%;width:100%;box-sizing:border-box;margin-top:8px;padding:10px 12px;border-left:3px solid #a6a074;background:#222c22;color:#e0e5d8;font-size:13px;font-weight:400;line-height:1.5;white-space:normal;overflow-wrap:anywhere;cursor:default}
+label:has(>.context-help-inline:not([hidden])){flex-wrap:wrap}
+label .help-trigger{float:none}.context-note{font-size:12px;color:var(--muted);padding:10px 0;line-height:1.5}
+.scenario-host>section{display:block!important}.scenario-host .tab-panel{border:0!important;padding:0!important}
+.scenario-host:empty{display:none!important}.scenario-host h3{margin-top:0}.scenario-host label{max-width:720px}
+.scenario-host input:not([type=checkbox]),.scenario-host select,.scenario-host textarea{width:100%}
+#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+#designResourcesHost h3{grid-column:1/-1;margin-bottom:0}
+.designed-scenario #mapArmyNotice,.designed-scenario #designerEntry{display:none!important}
+#mapPresetsPanel .designer-intro{padding:4px 0 8px;font-size:13px}
+#designerFrame,#setupsFrame,#operationsFrame{border:1px solid var(--border);border-radius:4px;width:100%;background:var(--bg);display:block;height:calc(100dvh - 280px);min-height:560px}
+body[data-workspace-tab=maps]>main,body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{max-width:none;padding:16px 20px 130px}
+body[data-workspace-tab=maps] #message:empty{display:none}
+body[data-workspace-tab=setups]>.bar,body[data-workspace-tab=operations]>.bar{display:none!important}
+body[data-workspace-tab=setups]>main,body[data-workspace-tab=operations]>main{padding-bottom:20px}
+body[data-workspace-tab=setups] #setupsFrame,body[data-workspace-tab=operations] #operationsFrame{height:calc(100dvh - 180px)}
+.workspace-editor{height:100dvh;overflow:hidden;display:grid!important;grid-template-rows:auto auto auto minmax(0,1fr)!important}
+.workspace-editor>header{padding:7px 12px;gap:8px;margin:0;min-height:46px}
+.workspace-editor header>strong{font-size:15px;margin-right:auto}
+.workspace-editor #world,.workspace-editor #save,.workspace-editor #openSetups,.workspace-editor #useOpenPreset,.workspace-editor .theme-control{display:none!important}
+.workspace-editor .editor-status{padding:6px 12px;min-height:32px;font-size:12px;gap:10px}
+.workspace-editor .editor-status #summary{margin-left:auto;white-space:nowrap}
+.workspace-editor .save-banner{margin:0;padding:3px 8px;font-size:12px;max-width:60%;max-height:46px;overflow:auto}
+.workspace-editor>.map-controls{position:static!important;display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:none;gap:4px;margin:0;padding:7px 10px;background:#1d271f;border-radius:0;backdrop-filter:none;border-width:1px 0;align-items:center}
+.workspace-editor>.map-controls button{flex:none;white-space:nowrap;padding:7px 10px;font-size:12px;min-height:32px}
+.workspace-editor>main{display:grid!important;grid-template-columns:minmax(0,1fr) clamp(280px,27vw,360px)!important;height:100%;min-height:0;padding:0;max-width:none}
+.workspace-editor aside{padding:10px 14px;min-height:0;border-left:1px solid var(--border)}
+.workspace-editor .editor-tabs{display:flex;gap:4px;position:sticky;top:-10px;z-index:3;padding:8px 0}
+.workspace-editor .editor-tabs button{flex:1;padding:8px 5px;font-size:12px;white-space:nowrap}
+.workspace-editor .editor-tabs button[hidden]{display:none!important}
+.workspace-editor .map-hint{display:none}.workspace-editor #quality{display:none}
+.workspace-editor #mapCoordinates{bottom:12px;left:12px;background:#131c15ed;border-radius:3px;font-size:11px}
+.workspace-editor .map-legend{bottom:12px;right:12px;padding:5px 8px;border-radius:3px;font-size:11px;gap:9px}
+.workspace-editor #viewport{height:100%;min-height:0;background:#151c17}
+.workspace-editor #map{cursor:grab}.workspace-editor #map:active{cursor:grabbing}
+.workspace-editor #helpBox{display:none}.workspace-editor #points{max-height:36vh;overflow:auto}
+.workspace-editor #panel-points>p:first-child{font-size:12px;line-height:1.5}
+.workspace-editor #garrison{border-top:1px solid var(--border);padding-top:6px}
+.workspace-editor.inspector-collapsed>main{grid-template-columns:1fr!important}.workspace-editor.inspector-collapsed aside{display:none}
+.workspace-setups>.top{padding:10px 18px}.workspace-setups>.top .back{display:none}
+.workspace-setups main{padding-bottom:100px}.workspace-setups .footer{background:#182019!important;border-color:var(--border)!important;box-shadow:none}
+@media(max-width:1000px){body>main{padding:16px 16px 160px}.setup-workspace{grid-template-columns:170px minmax(0,1fr)}.summary-facts{max-width:100%}.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}#designScenarioHost .tab-panel,#designResourcesHost .tab-panel{grid-template-columns:1fr}.workspace-editor>main{grid-template-columns:minmax(0,1fr) 290px!important}}
+@media(max-width:700px){.setup-workspace{grid-template-columns:1fr}.setup-nav{grid-template-columns:repeat(3,1fr)}.setup-nav button{padding:8px}.workspace-shell>.bar{padding:10px 12px;grid-template-columns:1fr 1fr}.workspace-shell>.bar>#launchState{grid-column:1/-1}header .header-tools{display:none}.workspace-editor>main{grid-template-columns:1fr!important;grid-template-rows:minmax(240px,55%) 1fr}.workspace-editor aside{border-left:0;border-top:1px solid var(--border)}#designerFrame{height:calc(100dvh - 270px);min-height:650px}.workspace-editor .map-legend{max-width:60%}}
+
+.theme-control{display:none!important}
+
+.designed-scenario [data-scenario-duplicate]{display:none!important}
+.workspace-setups .footer{flex-wrap:wrap}.workspace-setups .setups-help{flex-basis:100%;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:6px;min-height:30px}
+
+[hidden]{display:none!important}
+.workspace-shell{height:100dvh;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.workspace-shell>main{height:100%;min-height:0;overflow:auto;padding-bottom:24px!important;width:100%}
+.workspace-shell>.bar{position:static!important}
+.workspace-shell[data-workspace-tab=setups],.workspace-shell[data-workspace-tab=operations]{grid-template-rows:minmax(0,1fr)}
+.workspace-shell #designerFrame{height:calc(100dvh - 340px);min-height:430px}
+.ai-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 14px;padding:12px!important}
+.ai-switch .check{margin:4px 0!important;font-size:13px;align-items:center}
+.ai-switch #vanillaLambsRow{grid-column:1/-1;font-size:12px}
+.scenario-host label{margin-top:5px}.scenario-host{padding:20px!important}
+@media(max-width:700px){.ai-switch{grid-template-columns:1fr}.workspace-shell #designerFrame{height:calc(100dvh - 330px);min-height:620px}}
+
+.workspace-shell[data-workspace-tab=maps]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-top:10px!important;padding-bottom:10px!important}
+.workspace-shell[data-workspace-tab=maps]>main>header{min-height:44px;margin-bottom:8px}
+.workspace-shell[data-workspace-tab=maps]>main>header p{display:none}
+.workspace-shell[data-workspace-tab=maps] .app-tabs{position:static;margin-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] .app-tabs button{min-height:36px;padding-top:6px;padding-bottom:6px}
+.workspace-shell[data-workspace-tab=maps] #message{margin:4px 0 6px}
+.workspace-shell[data-workspace-tab=maps] #mapPresetsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell[data-workspace-tab=maps] #designerFrame{height:100%;min-height:0;flex:1}
+.workspace-shell[data-workspace-tab=maps] .designer-intro{font-size:12px;margin:0;padding:6px 0}
+.workspace-shell.map-focus>main>header,.workspace-shell.map-focus #message{display:none!important}
+.workspace-shell.map-focus[data-workspace-tab=maps]>main{grid-template-rows:auto minmax(0,1fr)}
+.map-focus-toggle{font-size:12px;padding:5px 10px;min-height:30px;flex:none}
+@media(max-width:700px){.workspace-shell[data-workspace-tab=maps]>main{overflow:auto}.workspace-shell[data-workspace-tab=maps] #designerFrame{min-height:620px}}
+
+.workspace-operations{--line:#3b473d;--blue:#b3bd89;--red:#edb0a3}
+.workspace-operations>header{padding:14px 24px}.workspace-operations>header p{font-size:13px;margin:6px 0}
+.workspace-operations>main{padding:18px 24px 80px;max-width:1560px}
+.workspace-operations .savebar{background:#182019!important;border-color:var(--border)!important;padding:12px 24px;margin:20px -24px -80px}
+.workspace-operations .operations-help{display:block;max-width:1444px;margin:8px auto 0;border-top:1px solid var(--border);padding-top:6px;min-height:30px;font-size:12px;color:var(--muted)}
+.workspace-operations .template-link{border-radius:4px!important;color:var(--accent);border-color:var(--border)}
+
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr);overflow:hidden;padding-bottom:12px!important}
+.workspace-shell #setupsPanel,.workspace-shell #operationsPanel{display:flex;flex-direction:column;min-height:0}
+.workspace-shell #setupsFrame,.workspace-shell #operationsFrame{flex:1;height:100%!important;min-height:0}
+
+.workspace-shell[data-workspace-tab=setups] #message,.workspace-shell[data-workspace-tab=operations] #message{display:none!important}
+.workspace-shell[data-workspace-tab=setups]>main,.workspace-shell[data-workspace-tab=operations]>main{grid-template-rows:auto auto minmax(0,1fr)}
+.workspace-shell>main>header #openSetups{display:none}
+.workspace-operations #status,.workspace-setups #counts{background:#203025!important;border-color:var(--border)!important}
+.workspace-setups .library,.workspace-setups .editor{border-radius:4px}
+.devmode-panel{max-width:1100px;margin:18px auto}.devmode-features{display:grid;gap:12px;margin:18px 0}.devmode-feature{display:flex;align-items:start;gap:14px;padding:18px;border:1px solid var(--border);border-left:3px solid #a99a64;background:var(--input);border-radius:4px;cursor:pointer}.devmode-feature input{margin:4px 0;width:20px;height:20px;flex:none}.devmode-feature>span{display:grid;gap:8px}.devmode-feature strong{color:var(--text)}.devmode-feature small{color:#c8bb87;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.devmode-feature:has(input:disabled){opacity:.65}.devmode-note{border-top:1px solid var(--border);padding-top:16px}#devModeStatus{min-height:28px;color:var(--accent)}
+
+/* Field equipment: graphite panels, muted sand markings, fine map grid. */
+:root,body[data-color-theme]{--bg:#101413!important;--card:#1b211e!important;--input:#111714!important;--border:#414a40!important;--line:#414a40!important;--text:#ebe9dc!important;--muted:#aeb6a7!important;--accent:#c2ba8a!important;--accent-hover:#d8cf9b!important;--on-accent:#182019!important;--blue:#c2ba8a!important;--hover:#2b342b!important;--bar:#171d18!important}
+body{background-color:var(--bg)!important;background-image:linear-gradient(#b2b89b05 1px,transparent 1px),linear-gradient(90deg,#b2b89b05 1px,transparent 1px)!important;background-size:40px 40px!important;font-size:14px}
+h1,h2,h3,button,.eyebrow{font-family:Bahnschrift,"Arial Narrow","Segoe UI",sans-serif}h1,h2,h3{color:var(--text);font-weight:600}h2{letter-spacing:.3px}a{color:var(--accent)!important;text-underline-offset:3px}
+header{background:#171e19!important;background-image:none!important;border-bottom:1px solid var(--border)}
+.workspace-shell>main>header{padding:18px 22px;border:1px solid var(--border);border-top:3px solid #a8a477;margin-bottom:16px;position:relative}
+header h1 span,.eyebrow{color:var(--accent)!important}.workspace-shell>main>header h1{font-size:25px;letter-spacing:1.3px}.workspace-shell>main>header p{margin:6px 0 0;font-size:12px;letter-spacing:.5px}.header-tools .tag{padding:9px 12px;border:1px solid #777c59;color:#d5cf9f!important;font:11px Consolas,monospace;letter-spacing:1px}
+.app-tabs{background:#171d18!important;border-radius:2px;gap:2px;padding:4px}.app-tabs button{font-size:13px;letter-spacing:.4px;min-height:45px;border-radius:1px!important}.app-tabs button[aria-selected=true]{background:#343d2f!important;color:#f0ebce!important;box-shadow:inset 0 -2px #c2ba8a!important;border-color:#6b7356!important}
+.card,.param-group,.preset-create,.preset-card,.mission-card,.editing-box,.setup-card,.workspace-setups .library,.workspace-setups .editor,.saved article{border:1px solid var(--border)!important;border-radius:2px!important;box-shadow:0 3px 12px #0002;background:var(--card)!important}
+.card>h2:first-child,.param-group>summary{padding-bottom:12px;border-bottom:1px solid var(--border)}
+button{font-weight:500;letter-spacing:.15px;transition:background-color .12s,border-color .12s}.primary,button.primary{background:#c2ba8a!important;border-color:#c2ba8a!important;color:#182019!important}.primary:hover,button.primary:hover{background:#d8cf9b!important}
+input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:2px!important;box-shadow:inset 0 1px 3px #0003;padding:9px 11px}input[type=checkbox],input[type=radio]{accent-color:#c2ba8a;min-height:0!important;width:17px!important;height:17px!important;box-shadow:none;flex:none}label{line-height:1.55}.check{gap:10px}.check input{margin-right:3px}
+.setup-nav button{padding:13px 12px!important;text-align:left;border-bottom:1px solid #414a4055!important}.setup-nav button[aria-current=page]{border-left-color:#c2ba8a!important;background:#30392d!important}.setup-nav button strong{color:var(--text)}.setup-nav button span{color:var(--muted)}
+.launch-summary{background:#222b21!important;border-left:3px solid #a6a074!important}.save-status,.tag,.badge,.pill{border-radius:2px!important}.message,#status,.editor-status{background:#1c271f!important;border:1px solid #495444!important;color:#cbd1c0}.message{border-left:3px solid #898f68!important}.help-trigger{color:#d1cca7!important;border-color:#7a805c!important}
+.workspace-operations .tabs,.workspace-operations .bar{gap:8px}.workspace-operations .tabs{padding:10px;background:#151c17;border:1px solid var(--border)}.workspace-operations .tabs button[aria-selected=true],.workspace-operations button.active{background:#35402e!important;border-color:#919968!important}.workspace-operations .template-link{padding:8px 12px;background:#222c22!important;border-color:#53604c!important;color:#d3d5b8!important}.workspace-operations .fleet,.armyAssets,.workspace-setups .list{background:#111714!important;border:1px solid var(--border)!important;border-radius:2px!important}.workspace-operations .fleet label{border-bottom-color:#343e33!important}.workspace-operations .fleet label:hover,.workspace-setups .item:hover{background:#2a3529!important}.workspace-operations .pill{background:#303d2d!important;color:#d6ddbb!important}.workspace-operations .summary{color:#dce0ca!important}.workspace-operations .saved article{border-top:2px solid #7d8662!important}.workspace-operations .blue{color:#a6c9dc!important}.workspace-operations .red{color:#dfa997!important}
+.workspace-editor .editor-tabs,.workspace-editor>.map-controls{background:#1c251d!important}.workspace-editor .editor-tabs button[aria-selected=true],.workspace-editor .map-controls button.active{background:#38432f!important;border-color:#969d70!important;color:#e6e9cd!important}.workspace-editor aside{background:#1a211b!important}.workspace-editor #points button.current{background:#303d2b!important;color:var(--text)!important;border-color:#9ea37a!important}.workspace-setups .footer,.workspace-operations .savebar,.workspace-shell>.bar{background:#171e18!important;border-top-color:#7b805c!important}.workspace-setups .item,.workspace-setups .editing-box,.workspace-setups .filterbar{background:#182019!important;border-color:var(--border)!important}
+.mission-brief{display:flex;justify-content:space-between;gap:20px;padding:28px 30px;background:linear-gradient(110deg,#30392b,#1a211b);border:1px solid #5c664d;border-left:4px solid #c2ba8a;margin:18px 0}.mission-brief h2{font-size:29px;margin:12px 0 10px}.mission-brief p{margin:0;max-width:700px}.brief-code{align-self:start;color:#a2ad8d;border:1px solid #616e50;padding:8px;font:11px Consolas,monospace;letter-spacing:1px;white-space:nowrap}
+.mission-modes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 24px}.mission-modes button{display:flex;flex-direction:column;align-items:start;text-align:left;gap:13px;padding:17px 15px!important;border-top:2px solid #7c8560!important;min-width:0;background:#1b241c!important}.mission-modes button small{font:10px Consolas,monospace;letter-spacing:1.4px;color:#a9b190}.mission-modes strong{font-size:17px;font-weight:500}.mission-modes span{font-size:12px;line-height:1.5;color:var(--muted)}.mission-modes button[aria-pressed=true]{background:#303c29!important;border-color:#c2ba8a!important}
+.mission-library{padding:24px}.mission-library-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.mission-library-head h2{margin:8px 0 20px}.mission-search{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:18px;max-width:900px}.mission-search label{display:grid;gap:6px}.mission-search input,.mission-search select{width:100%}.mission-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-top:18px}.mission-card{padding:20px;border-top:2px solid #79815e!important;display:flex;flex-direction:column;align-items:start;gap:8px;min-width:0}.mission-card small{font:10px Consolas,monospace;letter-spacing:1.1px;color:#aeb58e}.mission-card h3{font-size:18px;line-height:1.5;margin:3px 0;overflow-wrap:anywhere}.mission-card p{font-size:12px;line-height:1.5;margin:0}.mission-card .mission-world{color:#d9d7b8}.mission-card button{margin-top:auto;padding-top:9px}.mission-card button:first-of-type{margin-top:15px}#missionCount,#missionLibraryStatus{font-size:12px;color:var(--muted);line-height:1.5}#missionLibraryStatus{margin:20px 0 0}
+.workspace-shell[data-workspace-tab=missions]>.bar{display:none!important}.workspace-shell[data-workspace-tab=missions]{grid-template-rows:minmax(0,1fr)}.workspace-shell[data-workspace-tab=missions] #message{display:none!important}
+@media(max-width:1100px){.app-tabs{overflow-x:auto}.app-tabs button{white-space:nowrap;flex:none}.mission-modes{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.mission-modes{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-search{grid-template-columns:1fr}.mission-library{padding:16px}.mission-brief{padding:20px}.mission-brief h2{font-size:24px}.brief-code{display:none}.mission-library-head{flex-wrap:wrap}.workspace-shell>main>header{padding:14px}.mission-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+.workspace-operations .capability span,.workspace-operations .ground-badge{background:#293526!important;border-color:#667452!important;color:#d4dbbb!important;border-radius:2px!important}.workspace-operations .preview{background:#202c20!important;border-left-color:#9b9f70!important;color:var(--text)}.workspace-operations .equipment-list{border-color:var(--border)!important;background:var(--input);border-radius:2px!important}.workspace-operations .equipment-row{border-bottom-color:#354132!important}.workspace-operations .equipment-row small{color:var(--muted)!important}.workspace-operations .node-list button[aria-pressed=true]{background:#35422c!important;border-color:#9b9f70!important}
+.workspace-shell[data-workspace-tab=operations]>main>header,.workspace-shell[data-workspace-tab=setups]>main>header{padding:10px 18px;margin-bottom:10px}.workspace-shell[data-workspace-tab=operations]>main>header h1,.workspace-shell[data-workspace-tab=setups]>main>header h1{font-size:20px}.workspace-shell[data-workspace-tab=operations]>main>header p,.workspace-shell[data-workspace-tab=setups]>main>header p{display:none}
+.operations-embedded>header{padding:10px 16px!important}.operations-embedded>header h1{font-size:20px;margin:4px 0 6px}.operations-embedded>header>p,.operations-embedded>header .capability{display:none}.operations-embedded>header .eyebrow{font-size:10px}.operations-embedded>header .bar{margin:0}.operations-embedded .template-link{font-size:12px;padding:5px 9px!important;min-height:28px}.operations-embedded>main{padding:12px 16px 30px!important}.operations-embedded .tabs{margin-bottom:14px;padding:6px}.operations-embedded .tabs button{font-size:12px;min-height:32px;padding:6px 10px}.operations-embedded .savebar{margin:16px -16px -30px!important;padding:8px 12px!important}.operations-embedded .savebar .actions{padding:0;gap:6px}.operations-embedded .savebar button{font-size:12px;min-height:32px}.operations-embedded #status{padding:8px 12px;margin-bottom:12px;border-radius:2px}.operations-embedded .bar{margin-bottom:12px}.operations-embedded .operations-help{min-height:24px}
+
+.mission-brief{padding:20px 24px;margin:14px 0}.mission-brief h2{font-size:26px;margin:8px 0}.mission-modes{margin:14px 0 18px}.mission-modes button{padding:13px 14px!important;gap:8px}.mission-modes strong{font-size:16px}.mission-library-head h2{margin-bottom:12px}.mission-search label{display:block}.mission-search input,.mission-search select{display:block;margin-top:6px}.mission-search .help-trigger{display:inline-flex;margin-top:0}
+
+</style>
+<!-- military-ui:end --></head><body>
+<header><div><h1>Сетапы сторон</h1><p>Соберите армию один раз и применяйте её в разных картах и запусках.</p></div><a href="/" target="nero-control-launcher">Центр запуска ↗</a></header>
+<main class="layout"><aside class="library"><h2>Моя библиотека</h2><div class="library-actions"><button id="newSetup" class="primary">＋ Новый пустой сетап</button><button id="fromLaunch">Взять сторону из сохранённого запуска</button></div><label for="librarySearch">Найти сетап</label><input id="librarySearch" type="search" placeholder="Название или фракция"><label for="librarySide">Сторона</label><select id="librarySide"><option value="">Все стороны</option><option value="west">Синие</option><option value="east">Красные</option><option value="green">Зелёные</option></select><p id="libraryCount"></p><div id="libraryRows" class="library-list"></div></aside>
+<section class="editor"><div class="row"><div><h2 id="editorTitle">Новый сетап</h2><p id="dirtyState" class="unsaved">Черновик</p></div><div class="actions"><button id="duplicateSetup">Сделать копию</button><button id="deleteSetup" class="danger" disabled>Удалить из библиотеки</button></div></div>
+<div class="row"><div><label for="setupName">Название сетапа</label><input id="setupName" maxlength="80" placeholder="Например: ВСУ · механизированная сторона"></div><div><label for="setupSide">Сторона конфликта</label><select id="setupSide"><option value="west">Синие</option><option value="east">Красные</option><option value="green">Зелёные</option></select></div></div>
+<label for="setupFaction">Фракция</label><select id="setupFaction"></select><p class="inline-note">Сохраняются фракция, техника, пехота и её цены CP. Можно сохранять смешанный состав и классы временно отключённых модов. Проверка совместимости выполняется при запуске.</p>
+<div id="counts" class="counts"></div><div class="actions"><button id="clearAll" class="danger">Очистить весь состав</button><button id="undoClear" disabled>Отменить последнюю очистку</button></div>
+<nav class="tabs" role="tablist" aria-label="Состав сетапа"><button id="vehiclesTab" role="tab" aria-selected="true" aria-controls="vehiclesPanel">Техника</button><button id="infantryTab" role="tab" aria-selected="false" aria-controls="infantryPanel">Пехота и цены</button></nav>
+<section id="vehiclesPanel" role="tabpanel"><div class="actions"><button id="clearVehicles" class="danger">Снять выбор всей техники</button></div><div class="filters"><div><label for="vehicleKind">Категория</label><select id="vehicleKind"><option value="">Все категории</option><option value="CAR">Автомобили</option><option value="APC">БТР / БМП</option><option value="TANK">Танки</option><option value="HELICOPTER">Вертолёты</option><option value="PLANE">Самолёты</option><option value="STATIC">Установки</option><option value="SHIP">Флот</option></select></div><div><label for="vehicleMod">Мод техники</label><select id="vehicleMod"></select></div><div><label for="vehicleShow">Показывать</label><select id="vehicleShow"><option value="all">Всю технику всех сторон</option><option value="selected">Выбранную</option></select></div></div><label for="vehicleSearch">Поиск техники</label><input id="vehicleSearch" type="search" placeholder="Название, класс или мод"><p id="vehicleCount"></p><div id="vehicleRows" class="asset-list"></div><div class="actions"><button id="vehiclePrev">Назад</button><span id="vehiclePage"></span><button id="vehicleNext">Далее</button></div></section>
+<section id="infantryPanel" role="tabpanel" hidden><div class="row"><div><label for="infantryMode">Состав пехоты</label><select id="infantryMode"><option value="auto">Автоматически из фракции</option><option value="custom">Свой список, включая пустой</option></select></div><div><label for="infantryShow">Показывать</label><select id="infantryShow"><option value="all">Всех бойцов всех сторон</option><option value="selected">Выбранных</option></select></div></div><div class="actions"><button id="clearInfantry" class="danger">Снять выбор всей пехоты</button><button id="resetPrices">Цены по 100 CP</button></div><div class="filters"><div><label for="infantryMod">Мод пехоты</label><select id="infantryMod"></select></div><div><label for="infantryFaction">Фракция — фильтр</label><select id="infantryFaction"></select></div><div><label for="infantrySearch">Поиск бойца</label><input id="infantrySearch" type="search" placeholder="Медик, rifleman…"></div></div><p id="infantryCount"></p><div id="infantryRows" class="asset-list"></div><div class="actions"><button id="infantryPrev">Назад</button><span id="infantryPage"></span><button id="infantryNext">Далее</button></div><p class="inline-note">Очистка переводит пехоту в собственный пустой список. Автоматический состав включается вашим выбором. Цена: 60–50000 CP.</p></section>
+</section></main><footer class="footer"><span id="status" role="status">Загрузка каталога…</span><button id="saveAs">Сохранить как новый</button><button id="saveSetup" class="primary" disabled>Сохранить сетап</button></footer>
+<script>const SESSION="__SESSION_TOKEN__";</script><script src="/side-setup-client.js"></script><script src="/setups.js"></script><!-- context-help:start -->
+<script>
+/* Click opens an inline explanation; hover/focus also update the status strip. */
+const NeroHelp=(()=>{
+  let output=null,sequence=0;
+  function show(text){if(output)output(text||'Наведите на знак ? или выберите настройку — подсказка появится здесь.');}
+  function bind(doc,texts={},sink){
+    if(sink)output=sink;
+    else if(doc.getElementById('settingHelp'))output=text=>doc.getElementById('settingHelp').textContent=text;
+    function annotate(){
+      for(const label of doc.querySelectorAll('label')){
+        if(label.dataset.helpBound)continue;
+        const field=label.htmlFor?doc.getElementById(label.htmlFor):label.querySelector('input,select,textarea');
+        if(!field?.id || field.type==='search')continue;
+        label.dataset.helpBound='1';
+        const id=field.dataset.editorId||field.id;
+        const caption=label.cloneNode(true);for(const el of caption.querySelectorAll('input,select,textarea,button,.context-help-inline'))el.remove();
+        const title=caption.textContent.trim().replace(/\s+/g,' ')||field.getAttribute('aria-label')||id;
+        const help=texts[id]||field.dataset.help||field.getAttribute('title')||('«'+title+'». Изменения применятся после сохранения сценария.');
+        field.dataset.help=help;field.removeAttribute('title');
+        const button=doc.createElement('button');button.type='button';button.className='help-trigger';button.textContent='?';
+        button.setAttribute('aria-label','Подсказка: '+title);button.dataset.help=help;
+        const panel=doc.createElement('span');panel.className='context-help-inline';panel.id='context-help-'+(++sequence);panel.hidden=true;panel.setAttribute('role','note');
+        button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-expanded','false');
+        button.onclick=e=>{e.preventDefault();e.stopPropagation();const open=panel.hidden;
+          for(const other of doc.querySelectorAll('.context-help-inline'))other.hidden=true;
+          for(const other of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))other.setAttribute('aria-expanded','false');
+          panel.textContent=button.dataset.help;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));show(button.dataset.help);
+          if(open)panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+        };
+        panel.onclick=e=>{e.preventDefault();e.stopPropagation();};
+        if(field.parentElement===label&&!['checkbox','radio'].includes(field.type))label.insertBefore(button,field);else label.append(button);
+        label.append(panel);
+      }
+      for(const el of doc.querySelectorAll('button[title],input[title],select[title]')){el.dataset.help=el.getAttribute('title');el.removeAttribute('title');}
+      for(const [id,text] of Object.entries(texts)){
+        const el=doc.getElementById(id)||doc.getElementById('editor-'+id);if(!el)continue;el.dataset.help=text;
+        const label=el.closest('label')||doc.querySelector('label[for="'+el.id+'"]');const trigger=label?.querySelector('.help-trigger');if(trigger)trigger.dataset.help=text;
+      }
+    }
+    annotate();
+    if(!doc.documentElement.dataset.helpListening){
+      doc.documentElement.dataset.helpListening='1';
+      doc.addEventListener('keydown',e=>{if(e.key!=='Escape')return;for(const panel of doc.querySelectorAll('.context-help-inline'))panel.hidden=true;for(const trigger of doc.querySelectorAll('.help-trigger[aria-expanded="true"]'))trigger.setAttribute('aria-expanded','false');});
+      for(const name of ['focusin','pointerover'])doc.addEventListener(name,e=>{const el=e.target.closest?.('[data-help]');if(el)show(el.dataset.help);});
+      let queued=false;
+      new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;annotate();});}).observe(doc.body,{childList:true,subtree:true});
+    }
+    show();
+  }
+  return {bind,show};
+})();
+
+</script>
+<!-- context-help:end -->
+<!-- workspace-module:start -->
+<script>
+(() => {
+  if(new URLSearchParams(location.search).get('embedded')!=='1'){
+    location.replace('/?tab=setups');return;
+  }
+  document.body.classList.add('workspace-setups');
+  const back=document.querySelector('header a');if(back){back.textContent='К сценарию';back.removeAttribute('target');back.onclick=e=>{e.preventDefault();window.parent.postMessage({source:'nero-side-setups',type:'navigate'},location.origin);};}
+  const hint=document.createElement('output');hint.id='settingHelp';hint.className='setups-help';hint.setAttribute('aria-live','polite');document.querySelector('.footer').append(hint);
+  NeroHelp.bind(document,{
+    setupName:'Имя набора в общей библиотеке. Сохранённый набор можно применить к любой стороне сценария.',
+    setupSide:'Предпочитаемая сторона набора. Смена стороны сохраняет весь выбранный состав.',
+    setupFaction:'Фракция определяет автоматический состав пехоты. Свой состав можно собирать из любых установленных модов.',
+    infantryMode:'Автоматический состав берётся из фракции; собственный список может содержать любые выбранные типы бойцов.',
+    fromLaunch:'Скопировать сторону сохранённого сценария в новый набор. Исходный сценарий продолжит хранить свой состав.',
+    saveSetup:'Сохранить текущий набор. Ctrl+S выполняет то же действие.'
+  });
+})();
+
+</script>
+<!-- workspace-module:end -->
+</body></html>

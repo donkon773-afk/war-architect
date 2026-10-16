@@ -1,0 +1,35 @@
+/* Independent paid ground crew, never borrowed from the requesting squad. */
+params ["_side","_index","_parent","_buyer","_restore",["_empty",false]];
+private _loading=count _restore>0;private _cfg=missionConfigFile >> "CfgNeroOperation";private _rules=_cfg >> "Equipment";private _row=NeroOP_campShop#_side#_index;
+_row params ["_class","_kind","_price","_category"];private _root=NeroOP_campRoots#_side;
+if (_kind!=0 || {_category=="UAV"} || {!isClass(configFile >> "CfgVehicles" >> _class)}) exitWith {objNull};
+if (!_loading && {isNull _parent || {!(_parent getVariable ["NeroOP_campGroup",false])} || {isNull _buyer && {[_parent] call NeroOP_fnc_campaignPlayerControl}}}) exitWith {objNull};
+private _key=if (_loading) then {_restore#2} else {_parent getVariable ["NeroOP_groupKey",-1]};if (_key<1) exitWith {objNull};
+private _ai=isNull _buyer;private _source=if (_loading) then {_root} else {if (_ai) then {private _n=-1;private _g=[NeroOP_campOwners,NeroOP_campLinks,_root,_side] call NeroOP_fnc_campaignGraph;{if (leader _parent distance2D (NeroOP_campPositions#_x)<NeroOP_campRadii#_x+180) exitWith {_n=_x;};} forEach (_g#0);_n} else {[_buyer,_side,0,true] call NeroOP_fnc_campaignWarehouse}};
+if (_source<0) exitWith {objNull};private _pos=if (_loading) then {_restore#3} else {NeroOP_campPositions#_source};
+private _spawn=if (_loading) then {_pos} else {[_pos,15,100,6,if (_category=="SHIP") then {2} else {0},.35,0,[],[]] call BIS_fnc_findSafePos};
+if (count _spawn<2 || {(surfaceIsWater _spawn)!=(_category=="SHIP")}) exitWith {objNull};
+private _classActual=getText(configFile >> "CfgNeroAirDefense" >> _class >> "spawnClass");if (_classActual=="") then {_classActual=_class;};
+private _v=createVehicle [_classActual,_spawn,[],0,"NONE"];if (isNull _v) exitWith {objNull};
+private _seats=fullCrew [_v,"",true] select {!(_x#4) && {(_x#1) in ["driver","gunner","commander","turret"]}};
+private _meta=if (_loading) then {_restore param [11,[true,""]]} else {[!_empty,if (_ai) then {""} else {getPlayerUID _buyer}]};
+private _withCrew=_meta#0;private _classes=if (_loading) then {_restore#7} else {private _pool=getArray(_cfg >> (["WEST","EAST"]#_side) >> "classes");_seats apply {_pool#(_forEachIndex mod count _pool)}};
+if (!_withCrew) then {_classes=[];};
+private _crewPrice=if (_loading) then {0} else {count _classes*((ceil(getNumber(_cfg >> "reinforcementCost")/getNumber(_cfg >> (["WEST","EAST"]#_side) >> "groupSize"))) max 5)};
+_price=_price+_crewPrice;private _fleet={(_x#1)==_side && {(_x#3)==0} && {alive (_x#4)}} count NeroOP_campEquipment;
+private _reserve=if (_ai) then {2*getNumber(_cfg >> "reinforcementCost")+getNumber(_cfg >> "captureCost")} else {0};
+private _already=_ai && {NeroOP_campEquipment findIf {(_x#10)==_key && {(_x#3)==0} && {alive (_x#4)}}>=0};
+private _ready=serverTime-(_parent getVariable ["NeroOP_groundBuyAt",-10000])>=getNumber(_rules >> "cooldown") && {serverTime-(NeroOP_campBuyAt#_side)>=5};
+private _field=switch (_category) do {case "AAA":{"aaaLimit"};case "SAM":{"samLimit"};case "RADAR":{"radarLimit"};case "MLRS":{"mlrsLimit"};case "ARTILLERY_SP";case "ARTILLERY_STATIC":{"artilleryLimit"};default {""};};
+private _roleRoom=true;if (_ai && {!_loading} && {_field!=""}) then {_roleRoom=({(_x#1)==_side && {alive (_x#4)} && {private _cat=(_x#4) getVariable ["NeroOP_assetCategory",""];if (_field=="artilleryLimit") then {_cat in ["ARTILLERY_SP","ARTILLERY_STATIC"]} else {_cat==_category}}} count NeroOP_campEquipment)<getNumber(_rules >> _field);};
+private _ok=_roleRoom && {count _classes<=8} && {(!_withCrew) || {(count _classes==count _seats || {_loading && {count _classes<=count _seats}}) && {count _classes>0}}} && {(_loading) || {[_price,NeroOP_campStocks#_source,_reserve,NeroOP_campEquipmentIssued#_side,getNumber(_rules >> "totalPurchases"),_fleet,getNumber(_rules >> "groundLimit"),_already,_ready,false] call NeroOP_fnc_campaignBuyGate}};
+private _g=grpNull;if (_ok && {_withCrew}) then {_g=createGroup [[west,east]#_side,true];{private _u=_g createUnit [_x,_spawn,[],0,"NONE"];if (!isNull _u) then {_u setVariable ["NeroOP_campUnit",true,true];_u setSkill getNumber(_cfg >> (["WEST","EAST"]#_side) >> "skill");};} forEach _classes;_ok=count units _g==count _classes && {[_v,_g] call NeroOP_fnc_campaignCrew} && {_loading || {_seats findIf {(_x#1)=="driver" && {isNull driver _v} || {(_x#1)!="driver" && {isNull (_v turretUnit (_x#3))}}}<0}};};
+if (_ok && {!_loading}) then {NeroOP_campSeq=NeroOP_campSeq+1;private _r=[NeroOP_campStocks,NeroOP_campLedger,"spend","assetcrew:"+str NeroOP_campSeq,_source,-1,_price] call NeroOP_fnc_campaignStock;_ok=_r#2;if (_ok) then {NeroOP_campStocks=_r#0;NeroOP_campLedger=_r#1;NeroOP_campEquipmentIssued set [_side,(NeroOP_campEquipmentIssued#_side)+1];NeroOP_campBuyAt set [_side,serverTime];_parent setVariable ["NeroOP_groundBuyAt",serverTime];};};
+if (!_ok) exitWith {{deleteVehicle _x;} forEach units _g;deleteGroup _g;deleteVehicle _v;objNull};
+_v setVariable ["NeroOP_independentCrew",true,true];_v setVariable ["NeroOP_crewUID",_meta#1,true];_v setVariable ["NeroOP_side",_side,true];_v setVariable ["NeroOP_assetCategory",_category,true];_v setVariable ["NeroOP_campaignVehicle",true,true];_v setVariable ["NeroOP_detachedCrew",_withCrew,true];_v setVariable ["NeroOP_stationary",_v isKindOf "StaticWeapon" || {_category in ["SAM","RADAR"]},true];_v setVariable ["NeroOP_support",_category in ["SAM","AAA","RADAR","STATIC","ARTILLERY_SP","ARTILLERY_STATIC","MLRS"],true];_v setVariable ["NeroOP_artillery",_category in ["ARTILLERY_SP","ARTILLERY_STATIC","MLRS"],true];
+_g setVariable ["NeroOP_side",_side,true];_g setVariable ["NeroOP_campSupport",true,true];_g setVariable ["NeroOP_hcUID",_meta#1,true];_g setVariable ["NeroOP_groundVehicle",_v,true];
+NeroOP_campAssetSeq=NeroOP_campAssetSeq+1;_v setVariable ["NeroOP_assetId",NeroOP_campAssetSeq,true];NeroOP_campEquipment pushBack [NeroOP_campAssetSeq,_side,_class,0,_v,_parent,_g,_withCrew,serverTime,_source,_key];
+if (_withCrew && {_ai}) then {_parent setVariable ["NeroOP_groundVehicle",_v,true];};
+if (_loading) then {_v setDir (_restore#4);_v setDamage (_restore#5);_v setFuel (_restore#6);_v setVariable ["NeroOP_savedAmmo",[_restore#9,_restore#10],true];[_v] call NeroOP_fnc_campaignAmmoRestore;};
+if (_withCrew && {_meta#1!=""}) then {private _player=(allPlayers select {getPlayerUID _x==(_meta#1)}) param [0,objNull];if (!isNull _player) then {[_player,_g] call NeroOP_fnc_campaignAttachHC;};};
+diag_log format ["[NeroOP CREW] class=%1 independent=true count=%2 price=%3 empty=%4",_class,count units _g,_price,!_withCrew];_v

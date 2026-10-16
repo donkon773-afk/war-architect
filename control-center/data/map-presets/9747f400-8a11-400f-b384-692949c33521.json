@@ -1,0 +1,145 @@
+{
+  "id": "9747f400-8a11-400f-b384-692949c33521",
+  "name": "Posadkovo · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:26.909Z",
+  "updatedAt": "2026-10-15T22:03:26.909Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "m_36tuu484111s99",
+    "title": "Posadkovo · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · Akirovka",
+        "side": "WEST",
+        "position": [
+          1424,
+          5300
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Posadkovo",
+        "side": "EAST",
+        "position": [
+          7902,
+          4969
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Akirovka",
+        "side": "GUER",
+        "position": [
+          2324,
+          5293
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          3103,
+          5387
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          4013,
+          5612
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Ozerovka",
+        "side": "GUER",
+        "position": [
+          5244,
+          5363
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Ozerovka",
+        "side": "GUER",
+        "position": [
+          5297,
+          5069
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Posadkovo",
+        "side": "GUER",
+        "position": [
+          6661,
+          4661
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Posadkovo",
+        "side": "GUER",
+        "position": [
+          7470,
+          5337
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

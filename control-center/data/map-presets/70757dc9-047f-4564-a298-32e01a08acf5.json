@@ -1,0 +1,361 @@
+{
+  "id": "70757dc9-047f-4564-a298-32e01a08acf5",
+  "name": "Аргентиныч",
+  "createdAt": "2026-10-11T00:45:29.740Z",
+  "updatedAt": "2026-10-11T00:46:41.012Z",
+  "revision": 2,
+  "design": {
+    "version": 1,
+    "world": "btrx_sngt",
+    "title": "NeroAI — Sanagasta, Argentina",
+    "mode": "three",
+    "greenRole": "invader",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "d1a38552-6d20-44a8-9e27-df0727a1051c",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          13576,
+          5719
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "7f6f3bef-97a8-4453-9226-6553c65f1344",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          3453,
+          12584
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "6fc772d4-9c6b-4324-8308-99f9f29441a9",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          9267,
+          19601
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "sectors": [
+      {
+        "id": "969bf6ac-bea2-4270-b10f-f41f3087a79b",
+        "name": "з",
+        "side": "GUER",
+        "position": [
+          7036,
+          7964
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "76246523-856b-4768-a905-518c04c81f4a",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          15082,
+          9059
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "c7200497-78ed-4a4d-bbf0-39ee1d070202",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          14041,
+          14104
+        ],
+        "radius": 400,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "dc95b21e-4a1a-4e73-b5f7-e85d4b65db8d",
+        "name": "БЗ",
+        "side": "GUER",
+        "position": [
+          19828,
+          2037
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "ca2e6d14-9a91-4539-991e-8ef0db12a843",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          10988,
+          16470
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "3bcd4fb4-0285-4b0f-87f0-cbf6dd2cb9a5",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          8871,
+          3641
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "73d72af3-3a9f-40d0-b723-742ecc404f04",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          2754,
+          7003
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "ee520c70-1a4b-41bd-b38c-ec32aacd63d0",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          9185,
+          9080
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "97edbb25-7082-4e8d-8bab-1fa592453a49",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          17518,
+          18802
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "a2d61ae7-2015-41c0-a160-f71db58829f8",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          941,
+          19490
+        ],
+        "radius": 600,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "2476a311-55a2-4829-b978-4f9cb2aef878",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          2387,
+          1745
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "2ed90ec3-d8d4-4dcc-a017-1b238a2732a4",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          3618,
+          18242
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "8e46bfe7-ed9d-4dc9-8256-5c1042066abf",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          5710,
+          17076
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "10656015-a2a4-450e-a7d9-fde521e582f5",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          6047,
+          10275
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "a2fb9703-a676-4873-a879-15ca0f124443",
+        "name": "Новая точка",
+        "side": "GUER",
+        "position": [
+          4220,
+          11330
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "2e362faa-008a-49b4-8513-be0999603da9",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          16297,
+          6349
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "a47eee47-6a3c-4316-8b2f-3e2618085661",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          18085,
+          5502
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "566f6973-5fab-4611-8322-9dc23747fba9",
+        "name": "Новая точка",
+        "side": "WEST",
+        "position": [
+          15315,
+          2554
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "59df4e06-1137-472f-b815-66c76dbdd910",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          8819,
+          18055
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "a664d188-47e2-4599-9dc6-85328405ad4a",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          4729,
+          19571
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "3d4b7591-f9f2-423b-8267-283254d44851",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          5531,
+          18271
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "ef21eee4-08aa-474e-9763-fc29e2170656",
+        "name": "БЗ",
+        "side": "EAST",
+        "position": [
+          6414,
+          15209
+        ],
+        "radius": 200,
+        "infantry": 12,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "node": "mac",
+      "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive@q4_k_m",
+      "limit": 4,
+      "instructions": ""
+    },
+    "maxNPCs": 160,
+    "maxVehicles": 32,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "IND_G_F",
+    "playerRole": "commander"
+  }
+}

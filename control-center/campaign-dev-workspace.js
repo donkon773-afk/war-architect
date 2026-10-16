@@ -1,0 +1,8 @@
+(() => {
+ const button=document.createElement('button');button.dataset.tab='devmode';button.textContent='DevMode';button.type='button';button.setAttribute('aria-selected','false');document.querySelector('.tabs').append(button);
+ const page=document.createElement('section');page.dataset.page='devmode';page.hidden=true;page.className='card';page.innerHTML='<div class="eyebrow">Фронт и снабжение / испытания</div><h2>DevMode кампании</h2><p>Применяется после сохранения и сборки миссии. Старые сценарии сохраняют прежнее поведение, пока вы не включите обновления.</p><div id="campaignExperiments" class="devmode-features"></div><p>Десант требует истребитель в магазине стороны. При его отсутствии заказ вне базы отклоняется до списания снабжения. Одновременно допускаются два полёта на сторону. Во время доставки сохранение кампании ждёт её завершения.</p>';
+ document.querySelector('.savebar').before(page);
+ for(const e of NeroCampaignExperiments){const row=document.createElement('label');row.className='devmode-feature';const check=document.createElement('input');check.type='checkbox';check.dataset.experiment=e.id;const text=document.createElement('span'),title=document.createElement('strong'),description=document.createElement('span');title.textContent=e.title;description.textContent=e.description;text.append(title,description);row.append(check,text);page.querySelector('#campaignExperiments').append(row);check.onchange=()=>{draft.devMode={...draft.devMode,[e.id]:check.checked};mark();};}
+ const originalFill=fill;fill=function(){originalFill();for(const input of page.querySelectorAll('input'))input.checked=draft.devMode?.[input.dataset.experiment]??false;};
+ button.onclick=()=>tab('devmode');
+})();

@@ -1,0 +1,11 @@
+{
+  "output": "C:\\Users\\Admin\\Desktop\\ИИ\\NeroAI_Warlords_DualLLM\\docs\\sanagasta-start-20261011\\candidate\\NeroAI_Sanagasta_Three_StartupFix.btrx_sngt",
+  "name": "NeroAI_Sanagasta_Three_StartupFix",
+  "world": "btrx_sngt",
+  "title": "NeroAI — Sanagasta, Argentina [START FIX]",
+  "validation": {
+    "slots": 30,
+    "sectors": 22,
+    "mode": "three"
+  }
+}

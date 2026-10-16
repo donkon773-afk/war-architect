@@ -1,0 +1,46 @@
+if(!hasInterface)exitWith{};
+disableSerialization;waitUntil{sleep 1;!isNull player && {missionNamespace getVariable["NeroWL_CQready",false]} && {!isNull findDisplay 46}};
+private _actionId=-1;
+private _main=findDisplay 46;
+{_main displayRemoveEventHandler[_x#0,_x#1];}forEach(_main getVariable["NeroCQ_keyHandlers",[]]);
+private _down=_main displayAddEventHandler["KeyDown",{["DOWN",_this]call NeroWL_Design_fnc_cqKey;}];
+private _up=_main displayAddEventHandler["KeyUp",{["UP",_this]call NeroWL_Design_fnc_cqKey;}];
+_main setVariable["NeroCQ_keyHandlers",[["KeyDown",_down],["KeyUp",_up]]];
+missionNamespace setVariable["NeroWL_CQgearHeld",false];
+{private _old=_main displayCtrl _x;if(!isNull _old)then{ctrlDelete _old;};}forEach[87101,87110,87111,87112];
+private _hud=_main ctrlCreate["RscStructuredText",87101];_hud ctrlSetPosition[safeZoneX+safeZoneW*0.77,safeZoneY+safeZoneH*0.07,safeZoneW*0.22,safeZoneH*0.13];_hud ctrlSetBackgroundColor[0,0,0,0.65];_hud ctrlCommit 0;
+private _cards=[];
+{private _c=_main ctrlCreate["RscStructuredText",87110+_forEachIndex];_c ctrlSetPosition[safeZoneX+safeZoneW*(0.315+0.125*_forEachIndex),safeZoneY+safeZoneH*0.015,safeZoneW*0.12,safeZoneH*0.045];_c ctrlSetBackgroundColor _x;_c ctrlCommit 0;_cards pushBack _c;}forEach[[0.1,0.2,0.4,0.8],[0.4,0.1,0.1,0.8],[0.1,0.3,0.12,0.8]];
+private _outside=-1;private _lastPlayer=player;private _clientReadyLogged=false;private _markerAt=-100;
+while{true}do{
+ if(player!=_lastPlayer)then{if(_actionId>=0)then{_lastPlayer removeAction _actionId;};_actionId=-1;player setVariable["NeroWL_CQuiQueue",[]];player setVariable["NeroWL_CQuiPending",[]];_lastPlayer=player;};
+ private _s=side group player;private _target=missionNamespace getVariable[format["BIS_WL_currentSector_%1",_s],objNull];
+ private _combat=_s in [west,east,resistance];
+ if(_combat && {_actionId<0})then{_actionId=player addAction["Warlords: запросы, цели и перемещение",{[]call NeroWL_Design_fnc_cqMenu;}];};
+ if(!_combat && {_actionId>=0})then{player removeAction _actionId;_actionId=-1;};
+ private _sectors=missionNamespace getVariable["BIS_WL_sectors",[]];private _capturable=_sectors select{!(_x getVariable["NeroWL_isBase",false])};
+ private _owned={(_x getVariable["BIS_WL_sectorSide",sideUnknown])==_s}count _sectors;
+ private _income=_owned*getNumber(missionConfigFile >> "CfgNeroDesign" >> "income");
+ private _key=(actionKeysNamesArray "Gear")param[0,"I"];private _name=[_target getVariable["Name","Выбирается"]]call NeroWL_Design_fnc_cqText;
+ private _text=format["<t size='1.15'>%1 CP</t> · +%2 CP/мин<br/>Цель: %3<br/>Удерживайте %4: запросы",round(player getVariable["BIS_WL_funds",0]),_income,_name,[_key]call NeroWL_Design_fnc_cqText];
+ private _vote=missionNamespace getVariable[format["NeroWL_CQvote_%1",_s],[0,objNull,0,0]];
+ if((_vote#0)>serverTime)then{_text=_text+format["<br/>Голосование: %1 с · %2 голосов",ceil((_vote#0)-serverTime),_vote#3];};
+ if(!_combat)then{_text="<t size='1.15'>Warlords · наблюдатель</t>";{private _goal=missionNamespace getVariable[format["BIS_WL_currentSector_%1",_x],objNull];_text=_text+format["<br/>%1: %2",["Синие","Красные","Зелёные"]#_forEachIndex,[_goal getVariable["Name","Выбирается"]]call NeroWL_Design_fnc_cqText];}forEach[west,east,resistance];};
+ _hud ctrlSetStructuredText parseText _text;
+ private _visible=alive player && {!dialog} && {!visibleMap} && {isNull(uiNamespace getVariable["NeroWL_CQmenu",displayNull])};_hud ctrlShow _visible;
+ {private _side=_x;private _count={(_x getVariable["BIS_WL_sectorSide",sideUnknown])==_side}count _capturable;private _c=_cards#_forEachIndex;_c ctrlSetStructuredText parseText format["<t align='center'>%1 · %2/%3</t>",["Синие","Красные","Зелёные"]#_forEachIndex,_count,count _capturable];_c ctrlShow _visible;}forEach[west,east,resistance];
+ if(diag_tickTime-_markerAt>=2)then{_markerAt=diag_tickTime;{
+  private _id=format["NeroCQ_sector_%1",_forEachIndex];
+  if(markerShape _id=="")then{createMarkerLocal[_id,getPosATL _x];_id setMarkerShapeLocal "ELLIPSE";_id setMarkerSizeLocal[_x getVariable["Size",200],_x getVariable["Size",200]];_id setMarkerBrushLocal "Border";};
+  _id setMarkerColorLocal(switch(_x getVariable["BIS_WL_sectorSide",sideUnknown])do{case west:{"ColorWEST"};case east:{"ColorEAST"};default{"ColorGUER"};});
+  private _capture=_x getVariable["NeroWL_capture",0];
+  private _captureText=if(_capture>0)then{format[" (%1/60)",_capture]}else{""};
+  _id setMarkerTextLocal((_x getVariable["Name",""])+_captureText);
+ }forEach(missionNamespace getVariable["BIS_WL_sectors",[]]);};
+ if(!_clientReadyLogged)then{diag_log format["[NeroWL CQ] CLIENT READY side=%1 sectors=%2",_s,count(missionNamespace getVariable["BIS_WL_sectors",[]])];_clientReadyLogged=true;};
+ if(_combat && {getNumber(missionConfigFile >> "NeroWL_lethalZones")==1})then{
+  private _bad=(BIS_WL_sectors findIf{!(_x getVariable["NeroWL_isBase",false]) && {(_x getVariable["BIS_WL_sectorSide",sideUnknown])!=_s} && {_x!=_target} && {player distance2D _x<(_x getVariable["Size",200])}})>=0;
+  if(_bad && {alive player})then{if(_outside<0)then{_outside=diag_tickTime;};private _left=30-(diag_tickTime-_outside);hintSilent format["Сектор не выбран целью. Покиньте зону: %1 с",ceil _left];if(_left<=0)then{player setDamage 1;_outside=-1;};}else{_outside=-1;};
+ };
+ sleep 0.5;
+};

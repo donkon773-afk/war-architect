@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "id": "debf93f4-0c15-4db6-8051-1d88726c3c9c",
+  "name": "TEMP сохранение любой конфигурации 1792085560348",
+  "setup": {
+    "side": "green",
+    "faction": "Missing_Mod_Faction",
+    "assets": [
+      "B_MBT_01_cannon_F",
+      "O_MBT_02_cannon_F",
+      "Missing_Mod_Tank"
+    ],
+    "infantry": [
+      "B_Soldier_F",
+      "O_Soldier_F",
+      "Missing_Mod_Soldier"
+    ],
+    "infantryCosts": {
+      "Missing_Mod_Soldier": 200
+    }
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T17:32:40.415Z",
+  "updatedAt": "2026-10-15T17:32:40.415Z"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ea5782fe-526e-4517-a97d-08c9a26aa11c",
+    "name": "Из запуска · синие",
+    "side": "west",
+    "faction": "CUP_B_GB",
+    "assets": 79,
+    "infantry": 42,
+    "revision": 2,
+    "updatedAt": "2026-10-11T02:26:01.538Z"
+  },
+  {
+    "id": "2d77712c-53d0-41d2-9584-cae49c4bfcd0",
+    "name": "Из запуска · зелёные",
+    "side": "green",
+    "faction": "rhsgref_faction_cdf_ng",
+    "assets": 0,
+    "infantry": "auto",
+    "revision": 1,
+    "updatedAt": "2026-10-11T02:23:45.193Z"
+  },
+  {
+    "id": "ee1084f4-a4b3-44eb-ae3e-50c33062ec20",
+    "name": "Из запуска · красные",
+    "side": "east",
+    "faction": "rhs_faction_vdv_des",
+    "assets": 60,
+    "infantry": 41,
+    "revision": 1,
+    "updatedAt": "2026-10-11T02:23:45.151Z"
+  }
+]

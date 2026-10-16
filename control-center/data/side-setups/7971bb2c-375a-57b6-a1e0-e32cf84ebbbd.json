@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "id": "7971bb2c-375a-57b6-a1e0-e32cf84ebbbd",
+  "name": "Армия США — лес (RHS) · зима",
+  "setup": {
+    "side": "west",
+    "faction": "rhs_faction_usarmy_wd",
+    "assets": [],
+    "infantry": [
+      "rhsusf_army_ucp_arb_autorifleman",
+      "rhsusf_army_ucp_arb_autoriflemana",
+      "rhsusf_army_ucp_arb_engineer",
+      "rhsusf_army_ucp_arb_grenadier",
+      "rhsusf_army_ucp_arb_maaws",
+      "rhsusf_army_ucp_arb_machinegunner",
+      "rhsusf_army_ucp_arb_machinegunnera",
+      "rhsusf_army_ucp_arb_marksman",
+      "rhsusf_army_ucp_arb_medic",
+      "rhsusf_army_ucp_arb_rifleman",
+      "rhsusf_army_ucp_arb_rifleman_m590",
+      "rhsusf_army_ucp_arb_riflemanat",
+      "rhsusf_army_ucp_arb_riflemanl",
+      "rhsusf_army_ucp_arb_sniper_m107",
+      "rhsusf_army_ucp_arb_squadleader",
+      "rhsusf_army_ucp_arb_teamleader",
+      "rhsusf_army_ucp_rifleman_arb_m16"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:29.970Z",
+  "updatedAt": "2026-10-15T16:43:29.970Z"
+}

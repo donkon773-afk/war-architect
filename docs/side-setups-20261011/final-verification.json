@@ -1,0 +1,150 @@
+{
+  "checkedAt": "2026-10-11T02:39:09.332Z",
+  "settings": [
+    {
+      "file": "control-center/data/designs/Australia.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/designs/btrx_sngt.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/designs/Farabad.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/designs/m_36tuu484111s99.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/2825fecb-ee1d-4fc7-bdf1-f6a40759adc0.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/70757dc9-047f-4564-a298-32e01a08acf5.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/96885751-b599-47af-9d22-aa7a9fb8c57f.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/backups/45807142-17a9-48b0-8b5d-90db0af17eff.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/deleted/1c1964e7-e0bd-4c74-a364-9fc7b1910be5-1791484954298.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/deleted/5ac7404e-c893-4ba1-a663-22ac9a470a75-1791484957144.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/map-presets/ea48a391-613f-41d2-820e-52503f645cc6.json",
+      "unchanged": true
+    },
+    {
+      "file": "control-center/data/profiles.json",
+      "unchanged": true
+    }
+  ],
+  "installed": [
+    {
+      "name": "Warlords",
+      "path": "H:/SteamLibrary/steamapps/common/Arma 3/@NeroAI_Warlords/addons/NeroWL.pbo",
+      "sha256": "DB499E1E3A351F873DF2770A4246F357CE74B83ADA640B0B941A54D21480A3FD",
+      "unchanged": true
+    },
+    {
+      "name": "Antistasi",
+      "path": "H:/SteamLibrary/steamapps/common/Arma 3/@NeroAI_Antistasi/addons/NeroAI5.pbo",
+      "sha256": "C591CEC5D09B2B83E77CD3D5387E77FD4266EA3F3CB2376EAE7C3AA86AD5F749",
+      "unchanged": true
+    }
+  ],
+  "changedFiles": [
+    {
+      "file": "control-center/server.js",
+      "sha256": "B88AD72D025E82AA55DB9DA2E985A6ECF8D58EEEC6307A6795D8F05EEF1FA74B"
+    },
+    {
+      "file": "control-center/index.html",
+      "sha256": "3C759923BAFD1731B91B4658FB424A396FA6ACC6E0C0BE503A4D0D06DD93DE89"
+    },
+    {
+      "file": "control-center/designer.html",
+      "sha256": "96C78A030AEEB43590DE9D32204107B2F31463BC2DC81D8477318083B5EA1014"
+    },
+    {
+      "file": "control-center/warlords-editor.js",
+      "sha256": "ADF7B4083972A307E89F1C6146C7D9918FFB6916F2943B7CAA1DD9075AE74918"
+    },
+    {
+      "file": "control-center/side-setup-client.js",
+      "sha256": "719AECB2BCAA092BA2E6E1662BE04CA1C4339E75A55A6CA0A2B631540BEDCA9E"
+    },
+    {
+      "file": "control-center/side-setups.js",
+      "sha256": "A05EBB77CEC28FCDEAFAF08630C214F4740DA254FE8D9A63A4142E2B012ED470"
+    },
+    {
+      "file": "control-center/setups.html",
+      "sha256": "78EA599D6B8978C3184F5D87D4C3BBE8A7033AFE549377349B317CF4FF9C40B4"
+    },
+    {
+      "file": "control-center/setups.js",
+      "sha256": "C01DB9F55F719ADEBFC23BC227193BF89A54250196C1BDF5ADB74BB13FE564DF"
+    },
+    {
+      "file": "tests/side-setups.test.js",
+      "sha256": "DC3EE26D93ECC8F78ACBFF0CC823D887CD0E6D52AFCA252585E46D6438FEE300"
+    },
+    {
+      "file": "tests/designer-ui.test.js",
+      "sha256": "0C89EFA73309F146FD0AF0E5C617C47AEB4098BFAFA60D63764EC1B0829D0C64"
+    },
+    {
+      "file": "package.json",
+      "sha256": "7CFEA8F51F7082E07C0E8997EBEA388A04EB04A36C2EEAF4D57F8E47937E01D5"
+    }
+  ],
+  "setups": [
+    {
+      "name": "Из запуска · зелёные",
+      "side": "green",
+      "assets": 0,
+      "infantry": "auto",
+      "revision": 1
+    },
+    {
+      "name": "Из запуска · синие",
+      "side": "west",
+      "assets": 79,
+      "infantry": 42,
+      "revision": 2
+    },
+    {
+      "name": "Из запуска · красные",
+      "side": "east",
+      "assets": 60,
+      "infantry": 41,
+      "revision": 1
+    }
+  ],
+  "browserChecks": {
+    "hiddenSelectionsCleared": true,
+    "undoRestoresSavedState": true,
+    "launchApplyRestores79VehiclesAnd42InfantryTypes": true,
+    "greenMapApplyAndUndo": true,
+    "standaloneSaveReadback": true,
+    "temporarySetupRemoved": true
+  },
+  "tests": {
+    "control": 54,
+    "mod": 83
+  },
+  "gameLaunched": false,
+  "pboInstalled": false
+}

@@ -1,0 +1,28 @@
+{
+  "world": "m_36tuu484111s99",
+  "worldSize": 9984,
+  "strideX": 468,
+  "strideY": 468,
+  "columns": 22,
+  "rows": 22,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -22,
+      "worldTop": 10006,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 77332760,
+  "sourceModified": 1790780648914.7,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 484,
+  "seconds": 4.42,
+  "coarsestPixelSize": 1.0
+}

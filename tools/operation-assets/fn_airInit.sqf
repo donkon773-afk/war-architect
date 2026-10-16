@@ -1,0 +1,27 @@
+if (!isServer || {missionNamespace getVariable ["NeroOP_started",false]}) exitWith {};
+NeroOP_started=true;NeroOP_ready=false;NeroOP_finished=false;NeroOP_planes=[];
+NeroOP_account=[[[0,0,0],[0,0,0]],[]];
+private _cfg=missionConfigFile >> "CfgNeroOperation";
+NeroOP_budgets=["WEST","EAST"] apply {getNumber(_cfg >> _x >> "active")+getNumber(_cfg >> _x >> "reserve")};
+private _classes=(getArray(_cfg >> "WEST" >> "classes"))+(getArray(_cfg >> "EAST" >> "classes"));
+if (_classes findIf {!isClass(configFile >> "CfgVehicles" >> _x)}>=0) exitWith {diag_log "[NeroOP AIR] ERROR missing aircraft class";["ERROR","classes"] call NeroOP_fnc_airFinish;};
+west setFriend [east,0];east setFriend [west,0];
+setDate [2035,6,24,getNumber(_cfg >> "hour"),0];0 setOvercast getNumber(_cfg >> "overcast");0 setFog 0;forceWeatherChange;
+private _zone=getArray(_cfg >> "zone");
+createMarker ["NeroOP_airZone",_zone];"NeroOP_airZone" setMarkerShape "ELLIPSE";"NeroOP_airZone" setMarkerBrush "Border";"NeroOP_airZone" setMarkerColor "ColorOrange";"NeroOP_airZone" setMarkerSize [getNumber(_cfg >> "zoneRadius"),getNumber(_cfg >> "zoneRadius")];"NeroOP_airZone" setMarkerText "Район воздушного сражения";
+{private _name="respawn_"+toLower _x;createMarker [_name,getArray(_cfg >> _x >> "entry")];_name setMarkerType "mil_start";_name setMarkerColor (if (_x=="WEST") then {"ColorBLUFOR"} else {"ColorOPFOR"});_name setMarkerText (if (_x=="WEST") then {"Вход синих"} else {"Вход красных"});} forEach ["WEST","EAST"];
+addMissionEventHandler ["EntityKilled",{params ["_unit","_killer","_instigator"];if (_unit isKindOf "Plane") then {[_unit,_killer,_instigator] call NeroOP_fnc_airLoss;};}];
+NeroOP_startedAt=serverTime;NeroOP_ready=true;publicVariable "NeroOP_ready";
+NeroOP_state=["deployment",[[0,0,0],[0,0,0]],[0,0],NeroOP_budgets,getNumber(_cfg >> "duration"),"",""];
+publicVariable "NeroOP_state";
+diag_log format ["[NeroOP AIR] INIT world=%1 active=%2 reserves=%3",worldName,[getNumber(_cfg >> "WEST" >> "active"),getNumber(_cfg >> "EAST" >> "active")],NeroOP_budgets];
+sleep 3;
+{if (isPlayer _x && {side group _x in [west,east]}) then {[_x] call NeroOP_fnc_airRequest;};} forEach allPlayers;
+{if (!isPlayer _x && {alive _x} && {_x getVariable ["NeroOP_lobbySlot",false]} && {side group _x in [west,east]} && {local _x}) then {private _slot=_x;isNil {[[west,east] find side group _slot,_slot] call NeroOP_fnc_airSpawn;};};} forEach playableUnits;
+for "_i" from 0 to 1 do {
+ private _target=getNumber(_cfg >> (["WEST","EAST"]#_i) >> "active");
+ for "_n" from 1 to _target do {private _plane=objNull;isNil {_plane=[_i] call NeroOP_fnc_airSpawn;};sleep .6;};
+};
+diag_log format ["[NeroOP AIR] READY aircraft=%1",count NeroOP_planes];
+if ([0,1] findIf {private _side=_x;NeroOP_planes findIf {(_x getVariable ["NeroOP_side",-1])==_side}<0}>=0) exitWith {diag_log "[NeroOP AIR] ERROR no aircraft/crew for one side";["ERROR","spawn"] call NeroOP_fnc_airFinish;};
+[] spawn NeroOP_fnc_airLoop;

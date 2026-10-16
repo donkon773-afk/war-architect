@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "id": "1353788a-0fe0-5c26-9470-6dee5ccad606",
+  "name": "Украина · ССО UFP · лёгкая группа",
+  "setup": {
+    "side": "west",
+    "faction": "b_afousf",
+    "assets": [
+      "b_afousf_uav_bdzhmil",
+      "b_afousf_uav_hrusch"
+    ],
+    "infantry": [
+      "b_afougf_rifleman_sso_lsh_ak74",
+      "b_afougf_rifleman_sso_sard_ak74",
+      "b_sso_sniper_z10"
+    ],
+    "infantryCosts": {}
+  },
+  "revision": 1,
+  "createdAt": "2026-10-15T16:43:30.070Z",
+  "updatedAt": "2026-10-15T16:43:30.070Z"
+}

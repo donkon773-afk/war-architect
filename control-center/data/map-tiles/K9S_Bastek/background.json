@@ -1,0 +1,28 @@
+{
+  "world": "K9S_Bastek",
+  "worldSize": 8192,
+  "strideX": 384,
+  "strideY": 384,
+  "columns": 22,
+  "rows": 22,
+  "projectionEvidence": {
+    "material": "TexGen worldPos",
+    "wrpVersion": 25,
+    "first": {
+      "worldLeft": -64,
+      "worldTop": 8256,
+      "extentX": 512,
+      "extentY": 512
+    }
+  },
+  "sourceSize": 215989565,
+  "sourceModified": 1790780648955.2034,
+  "missingTiles": [],
+  "version": 1,
+  "ready": true,
+  "overviewWidth": 4096,
+  "detailPixelSize": 1.0,
+  "tileCount": 484,
+  "seconds": 3.92,
+  "coarsestPixelSize": 128.0
+}

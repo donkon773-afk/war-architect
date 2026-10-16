@@ -1,0 +1,3877 @@
+{
+  "version": 1,
+  "id": "07f35823-ac4e-45e4-9222-01be37dd35e0",
+  "design": {
+    "version": 1,
+    "type": "frontlineCampaign",
+    "campaignKey": "4916d0d5-bd2a-443e-8479-ca4bc8c1b26d",
+    "world": "Australia",
+    "title": "NeroAI — Australia: фронт и снабжение",
+    "playerRole": "commander",
+    "playerSide": "WEST",
+    "sides": [
+      {
+        "side": "WEST",
+        "base": "S13",
+        "classes": [
+          "B_Soldier_F"
+        ],
+        "truckClass": "B_Truck_01_transport_F",
+        "active": 20,
+        "reserve": 80,
+        "groupSize": 8,
+        "skill": 0.8,
+        "faction": "",
+        "shop": [
+          {
+            "class": "B_MRAP_01_gmg_F",
+            "price": 70
+          },
+          {
+            "class": "B_MRAP_01_hmg_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_ammo_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_Repair_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_box_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_fuel_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_medical_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_mover_F",
+            "price": 70
+          },
+          {
+            "class": "B_Truck_01_covered_F",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_Coyote_Passenger_L111A1_W",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_Coyote_Logistics_L111A1_D",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_Coyote_Logistics_L111A1_D2",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_Coyote_Logistics_L111A1_G",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_Husky_Passenger_HMG_Sand",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_A",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_BAF_LandRover_WMIK_HMG_Green_A",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_ANP_B_M1025_M2",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_ABP_B_M1025_M2",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_ANA_B_M1025_M2",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_M1025_M2",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_ION_O_Winter_M1025_M2",
+            "price": 70
+          },
+          {
+            "class": "C_Hatchback_01_F",
+            "price": 70
+          },
+          {
+            "class": "C_SUV_01_F",
+            "price": 70
+          },
+          {
+            "class": "B_T_AFV_Wheeled_01_up_cannon_F",
+            "price": 70
+          },
+          {
+            "class": "O_LSV_02_AT_F",
+            "price": 70
+          },
+          {
+            "class": "O_LSV_02_armed_F",
+            "price": 70
+          },
+          {
+            "class": "Unimog1550_Ammo",
+            "price": 70
+          },
+          {
+            "class": "Unimog1550_Ammo2",
+            "price": 70
+          },
+          {
+            "class": "Unimog1550_Fuel",
+            "price": 70
+          },
+          {
+            "class": "HAFM_VBL",
+            "price": 70
+          },
+          {
+            "class": "HAFM_VBL_M240",
+            "price": 70
+          },
+          {
+            "class": "HAFM_VBL_M50",
+            "price": 70
+          },
+          {
+            "class": "HAFM_VBL2_M50",
+            "price": 70
+          },
+          {
+            "class": "HAFM_VBL2_M240",
+            "price": 70
+          },
+          {
+            "class": "Unimog1550_Fuel2",
+            "price": 70
+          },
+          {
+            "class": "HAFM_GD240_Patrol2",
+            "price": 70
+          },
+          {
+            "class": "blx_M1117_GR",
+            "price": 130
+          },
+          {
+            "class": "blx_M1117_GR2",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV_M2",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV_TOW",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV_Milan",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV_MK19",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV_Kornet",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV1_M2",
+            "price": 130
+          },
+          {
+            "class": "HAFM_HMMWV1_TOW",
+            "price": 130
+          },
+          {
+            "class": "Unimog1550_Covered",
+            "price": 130
+          },
+          {
+            "class": "Leopard2A6HEL",
+            "price": 220
+          },
+          {
+            "class": "Leopard2A4",
+            "price": 220
+          },
+          {
+            "class": "Leopard1A4",
+            "price": 220
+          },
+          {
+            "class": "M60A3",
+            "price": 220
+          },
+          {
+            "class": "Leonidas2",
+            "price": 220
+          },
+          {
+            "class": "M113",
+            "price": 220
+          },
+          {
+            "class": "Leopard1A4_2",
+            "price": 220
+          },
+          {
+            "class": "A7BLU",
+            "price": 260
+          },
+          {
+            "class": "A7BLU_TIGER",
+            "price": 260
+          },
+          {
+            "class": "M2000C_BLU",
+            "price": 260
+          },
+          {
+            "class": "F4E_BLU",
+            "price": 260
+          },
+          {
+            "class": "F16C_BLU",
+            "price": 260
+          },
+          {
+            "class": "F4E_BLU_AG",
+            "price": 260
+          },
+          {
+            "class": "F16_B52_BLU",
+            "price": 260
+          },
+          {
+            "class": "A7",
+            "price": 260
+          },
+          {
+            "class": "A7_TIGER",
+            "price": 260
+          },
+          {
+            "class": "M2000C",
+            "price": 260
+          },
+          {
+            "class": "F16C",
+            "price": 260
+          },
+          {
+            "class": "C130H",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_BAF_Wildcat_AH1_HEL_8A",
+            "price": 230
+          },
+          {
+            "class": "CH_47F",
+            "price": 230
+          },
+          {
+            "class": "CH_47F_BLU",
+            "price": 230
+          },
+          {
+            "class": "HAFM_UH1H",
+            "price": 230
+          },
+          {
+            "class": "HAFM_AH64D",
+            "price": 230
+          },
+          {
+            "class": "HAFM_UH1H_GR",
+            "price": 230
+          },
+          {
+            "class": "HAFM_Kiowa_Green_AT",
+            "price": 230
+          },
+          {
+            "class": "HAFM_Kiowa_Green",
+            "price": 230
+          },
+          {
+            "class": "NH90_GR",
+            "price": 230
+          },
+          {
+            "class": "NH90Armed_GR",
+            "price": 230
+          },
+          {
+            "class": "HAFM_Naval_MEKO",
+            "price": 190
+          },
+          {
+            "class": "b_afougf_m119",
+            "price": 190
+          },
+          {
+            "class": "CUP_B_L16A2_BAF_WDL",
+            "price": 190
+          },
+          {
+            "class": "HAFM_Pegasus",
+            "price": 140
+          },
+          {
+            "class": "GX_B_THEMIS_UGV_HUNTER_LAUNCHER",
+            "price": 140
+          },
+          {
+            "class": "GX_O_MQ8B_UAV_ARMED",
+            "price": 140
+          },
+          {
+            "class": "UK3CB_BAF_MQ9_Reaper",
+            "price": 140
+          },
+          {
+            "class": "UK3CB_BAF_MQ9_Reaper_Generic",
+            "price": 140
+          },
+          {
+            "class": "CUP_B_nM1097_AVENGER_USMC_DES",
+            "price": 160
+          },
+          {
+            "class": "UK3CB_KRG_B_M270_Avenger",
+            "price": 160
+          },
+          {
+            "class": "B_static_AA_F",
+            "price": 160
+          },
+          {
+            "class": "CUP_I_M163_Vulcan_RACS",
+            "price": 160
+          },
+          {
+            "class": "I_E_SAM_System_03_F",
+            "price": 240
+          },
+          {
+            "class": "FMC_NASAMS_F",
+            "price": 240
+          },
+          {
+            "class": "B_Radar_System_01_F",
+            "price": 120
+          },
+          {
+            "class": "UK3CB_AAF_B_M270_MLRS_HE",
+            "price": 220
+          },
+          {
+            "class": "GR_MBT_mlrs",
+            "price": 220
+          },
+          {
+            "class": "B_static_AT_F",
+            "price": 70
+          },
+          {
+            "class": "B_HMG_01_F",
+            "price": 70
+          },
+          {
+            "class": "I_G_HMG_02_high_F",
+            "price": 70
+          },
+          {
+            "class": "I_E_Static_AT_F",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_M2_MiniTripod",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_M2_TriPod",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_RBS70",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_Milan_High",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_B_Milan_Low",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_I_M240_High",
+            "price": 70
+          }
+        ],
+        "gear": [
+          {
+            "class": "U_B_CombatUniform_mcam",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "V_PlateCarrier1_rgr",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "H_HelmetB",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "hgun_P07_F",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "ItemWatch",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemCompass",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemRadio",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemMap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "NVGoggles",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "arifle_MX_ACO_pointer_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "30Rnd_65x39_caseless_mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "HandGrenade",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "Chemlight_green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "B_UavTerminal",
+            "kind": "ITEM",
+            "price": 25
+          },
+          {
+            "class": "HAFM_M136",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_M136_hedp_Loaded",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_M136_hp_Loaded",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_fgm148",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_Gustav",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_M72_Loaded",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "HAFM_Colt1911_SD",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "HAFM_G17C",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "HAFM_M249_ACO",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M107_EMPTY",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M249",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M60E4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A4_Holo",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3_GL_CompM3Low",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3RIS_CompM3",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3_GL_ACO_grn",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3_SG_Scope",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK21_ACO",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4DD_M68",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK21_TAC",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_M68",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4DD_M68_FL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_CompM3",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_AcogRmr",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_EOTECH",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4DD_M320_ACOG",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4DD_Elcan_GL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4DD_Elcan_GL_FL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_Elcan_GL_FL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G36C_HOLO",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G36C_ACO",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G36C_ACO_GL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5_AIM_SD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5_EOT_SD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5_FL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5_SD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M14_EMPTY_AMS_FULL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M14_EMPTY_SD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5_EOD_AIM",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M14_Mk4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK416_CompM3",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK416_EOT",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK416GL_ACOG",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_EMPTY",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1_M203",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M4A1",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_m4ddv5_long",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_m4ddGL_short",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_m4ddGL320_short",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_m4dd_short",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK416",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G36C",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK416GL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_M110_EMPTY",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G36C_M320",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3_SG",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3RIS",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_G3A3_GL",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5A4",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_MP5A4_EOD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_HK21",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "HAFM_Crossbow",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "1Rnd_HE_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "3Rnd_HE_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "3Rnd_Smoke_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellPurple",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellBlue",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "300Rnd_25mm_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "2000Rnd_20mm_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "250Rnd_30mm_APDS_shells_Tracer_Yellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "140Rnd_30mm_MP_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "140Rnd_30mm_MP_shells_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells_Tracer_Green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "140Rnd_30mm_MP_shells_Tracer_Green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_R52",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_L52",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_ACE_Hellfire_AGM114K",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_ACE_Hellfire_AGM114N",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_ACE_Hellfire_AGM114L",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_A7L",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_A7R",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_1Rnd_Missile_AA_AIM9",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_AG_AGM65D_1x",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_AG_AGM65D_3x",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_AA_AIM120_1x",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_L",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_Missile_AIM9_R",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Bo_GBU12_1x",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonPod_1x_CMissile_F4",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_2x_Missile_F4L",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_2x_Missile_F4R",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "7Rnd_Rockets_HE",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "UK3CB_BAF_PylonRack_4Rnd_Hellfire_K",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "3Rnd_SmokeRed_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "1Rnd_SmokeRed_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellYellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellOrange",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_40mm_GPR_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_40mm_GPR_Tracer_Red_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "Greek_A_Helmet_Black",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_ess_bow",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_ess",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_bow",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_Pasgt_Helmet_ess_bow_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_ess_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt_bow_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_ISAF",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_cap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_P_cap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Pilot_Helmet",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "H_Booniehat_GR",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "H_Booniehat_ISAF",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_QRF_Beanie",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_Berret1",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_Berret",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_Cap_NAVY",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Officer_Hat",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_MYK_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Helmet_Pasgt",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_D_Ghilli",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_F_NRF",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_NAVY_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_SWAT_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_E_Wetsuit",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_AO_Frml_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_ISAF_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_A3_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_A4_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_A55_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_Soldier_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_AO_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_Medic_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_G_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_HeliPilot_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_A5_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_M110v2_scope",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Mk4_LRT",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_acog_rmr",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_acog_ard_rmr",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_G3A3_scope",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Mark_Scope",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_scope_optic_m107",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "hafm_nvg",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_A_Uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_M68",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_optic_ELCAN",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Elcan_Spectre_ARD",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Comp_m3",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Comp_m3_low",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Comp_m4",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Gem_762_muzzle",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_MP5_muzzle_snds_9mm",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_M249_muzzle",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_G3_762_muzzle",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Eotech_553_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Eotech_553",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_flashlight_trl",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_acc_PEQ15_side",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_B_USArmy_Soft",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Harris_Bipod",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_acc_flashlight_mp5",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_M4_muzzle_snds_556",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Mad_556_muzzle",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Colt1911_muzzle_snds_45",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Elcan_Spectre_ARD_RMR",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Elcan_Spectre",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_MYK_Helmet",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Elcan_Spectre_RMR",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_sealHelmet",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_sealHelmetCamo",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_sealHelmetCamoMC",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_tacticalHelmet",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_tacticalHelmet2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_PBR_Helmet_Bow",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_PBR_Helmet_Bow_Green",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_PBR_Helmet_Bow_tan",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_Chestrig_oli",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_A_Rig_Oil",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_TacChestrig_camo",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_TacVest_Police",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_Harness",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_PlateCarrier",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_PlateCarrier_B",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_PlateCarrier_SOF",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_PlateCarrier_P",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_PlateCarrier_camo_B",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "GR_RebreatherB",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "HAFM_Rebreather",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhsgref_helmet_M1_mit",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "tmt_kkk_combat_sfshell_uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "tmt_gendarme_combat_sfshell_uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "tmt_gendarme_combat_kn_sfshell_uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "tmt_navy_combat_kn_sfshell_uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "tmt_police_combat_sfshell_uniform",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "Greek_MedicPack_B",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_sabot_mcamo",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_sabot_Lizard",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_eng_Lizard",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_AT_Lizard",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_eng_mcamo",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_TacticalPack_AT_mcamo",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_MedicPack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_AssaultPack_Black",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_AssaultPack_LAT",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_CarryAll_mcamo_pack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_CarryAll_pack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_mcamo_Tactical_Respawn_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_Lizzard_Tactical_Respawn_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_Tactical_Medic_pack_MC",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_Tactical_Medic_pack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_Tactical_pack_MC",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_Tactical_pack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_AssaultPack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Sabot_Bergen",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Sabot_Bergen_Black",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "Greek_EngineerPack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_crossbow_mtp_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_crossbow_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_medic_mtp_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_medic_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_assault_mtp_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "hafm_heavy_assault_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "UAV1_backpack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "UAV_backpack",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "HAFM_Goggles_black",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Green",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Khaki",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Tan",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Clear",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Mask",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Balaclava",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_black",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_Khk",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_Tan",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_Grn",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_BlkClear",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_GrnClear",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_KhkClear",
+            "kind": "GLASSES",
+            "price": 4
+          },
+          {
+            "class": "HAFM_Goggles_Badana_TanClear",
+            "kind": "GLASSES",
+            "price": 4
+          }
+        ]
+      },
+      {
+        "side": "EAST",
+        "base": "S14",
+        "classes": [
+          "O_Soldier_F"
+        ],
+        "truckClass": "O_Truck_02_covered_F",
+        "active": 20,
+        "reserve": 80,
+        "groupSize": 8,
+        "skill": 0.8,
+        "faction": "",
+        "shop": [
+          {
+            "class": "CUP_O_Ural_RU",
+            "price": 70
+          },
+          {
+            "class": "CUP_O_BMP2_RU",
+            "price": 220
+          },
+          {
+            "class": "CUP_O_T72_RU",
+            "price": 220
+          },
+          {
+            "class": "JS_JC_SU35",
+            "price": 260
+          },
+          {
+            "class": "CUP_O_Mi24_V_Dynamic_RU",
+            "price": 230
+          },
+          {
+            "class": "rhs_2s3_tv",
+            "price": 190
+          },
+          {
+            "class": "CUP_O_D30_RU",
+            "price": 190
+          },
+          {
+            "class": "CUP_O_Pchela1T_RU",
+            "price": 140
+          },
+          {
+            "class": "O_APC_Tracked_02_AA_F",
+            "price": 160
+          },
+          {
+            "class": "O_SAM_System_04_F",
+            "price": 240
+          },
+          {
+            "class": "O_Radar_System_02_F",
+            "price": 120
+          },
+          {
+            "class": "UK3CB_AAF_O_BM21",
+            "price": 220
+          },
+          {
+            "class": "O_Plane_CAS_02_dynamicLoadout_F",
+            "price": 260
+          },
+          {
+            "class": "RHS_TU95MS_vvs_dubna",
+            "price": 260
+          },
+          {
+            "class": "RHS_TU95MS_vvs_irkutsk",
+            "price": 260
+          },
+          {
+            "class": "RHS_TU95MS_vvs_tambov",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_LATE_TU95MS",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_AAF_O_Su25SM_CAS",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_AAF_O_Su25SM_KH29",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_ADA_B_Su25SM",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_ADA_I_Su25SM_CAS",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_ADA_O_Su25SM_CAS",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_A_O_MIG29SM",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_G_O_MIG29S",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_F_O_MIG21_AT",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_F_O_MIG21",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_F_O_MIG21_AA",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_CSAT_F_O_MIG21_CAS",
+            "price": 260
+          },
+          {
+            "class": "UK3CB_ADA_B_L39_PYLON",
+            "price": 260
+          },
+          {
+            "class": "RHS_Mi8mt_vdv",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi24V_vdv",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8MTV3_vdv",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8mt_Cargo_vdv",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi24V_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8mt_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi24P_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8t_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8MTV3_heavy_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "RHS_Mi8AMTSh_vdv_des",
+            "price": 230
+          },
+          {
+            "class": "rhs_2s3_vdv_des",
+            "price": 190
+          },
+          {
+            "class": "rhs_prp3_vdv",
+            "price": 190
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_2b14_82mm",
+            "price": 190
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_D30",
+            "price": 190
+          },
+          {
+            "class": "rhs_2b14_82mm_vdv_des",
+            "price": 190
+          },
+          {
+            "class": "rhs_pchela1t_vdv_des",
+            "price": 140
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_EARLY_VDV_Gaz66_ZU23",
+            "price": 160
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_EARLY_VDV_Ural_Zu23",
+            "price": 160
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_Igla_AA_pod",
+            "price": 160
+          },
+          {
+            "class": "rhs_zsu234_vdv_des",
+            "price": 160
+          },
+          {
+            "class": "RHS_Ural_Zu23_VDV_01",
+            "price": 160
+          },
+          {
+            "class": "RHS_ZU23_VDV",
+            "price": 160
+          },
+          {
+            "class": "UK3CB_ARD_I_2S6M_Tunguska",
+            "price": 240
+          },
+          {
+            "class": "OFP_O_2S6_RU",
+            "price": 240
+          },
+          {
+            "class": "b_afougf_SAM_System_04_green_F",
+            "price": 240
+          },
+          {
+            "class": "UK3CB_CSAT_F_O_Bell412_Radar",
+            "price": 120
+          },
+          {
+            "class": "E22_O_JC_U_Radar_system_01_F",
+            "price": 120
+          },
+          {
+            "class": "b_afougf_lcmr_radar",
+            "price": 120
+          },
+          {
+            "class": "RHS_BM21_VDV_des_01",
+            "price": 220
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_NSV",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_DSHKM",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_DSHkM_Mini_TriPod",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_SPG9",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_PKM_nest_des",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_PKM_nest",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_PKM_Low",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_SearchlightAA",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_VDV_Searchlight",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_VDV_SPG9",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_VDV_Late_Metis",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_VDV_PKM_nest",
+            "price": 70
+          },
+          {
+            "class": "rhs_SPG9M_VDV_des",
+            "price": 70
+          },
+          {
+            "class": "rhs_Metis_9k115_2_vdv_des",
+            "price": 70
+          },
+          {
+            "class": "rhs_D30_at_vdv_des",
+            "price": 70
+          },
+          {
+            "class": "rhs_Kornet_9M133_2_vdv_des",
+            "price": 70
+          },
+          {
+            "class": "rhs_Kornet_9M133_2_vdv",
+            "price": 70
+          },
+          {
+            "class": "UK3CB_AAF_O_2S3",
+            "price": 190
+          },
+          {
+            "class": "rhs_2s1_tv",
+            "price": 190
+          },
+          {
+            "class": "RHS_BM21_VMF_01",
+            "price": 220
+          },
+          {
+            "class": "rhs_Igla_AA_pod_vmf",
+            "price": 160
+          },
+          {
+            "class": "rhs_D30_vdv",
+            "price": 190
+          },
+          {
+            "class": "rhs_t80bk",
+            "price": 220
+          },
+          {
+            "class": "rhs_bmp3mera_msv",
+            "price": 220
+          },
+          {
+            "class": "rhs_t90saa_tv",
+            "price": 220
+          },
+          {
+            "class": "rhs_bmd2k",
+            "price": 220
+          },
+          {
+            "class": "UK3CB_CSAT_N_O_BMD1R",
+            "price": 220
+          },
+          {
+            "class": "UK3CB_CSAT_N_O_BMD2",
+            "price": 220
+          },
+          {
+            "class": "UK3CB_CSAT_M_O_BMD1K",
+            "price": 220
+          },
+          {
+            "class": "rhs_bmd4ma_vdv",
+            "price": 220
+          },
+          {
+            "class": "rhs_bmd4m_vdv",
+            "price": 220
+          },
+          {
+            "class": "rhs_bmd4_vdv",
+            "price": 220
+          },
+          {
+            "class": "UK3CB_KDF_I_BMD1PK",
+            "price": 220
+          }
+        ],
+        "gear": [
+          {
+            "class": "U_O_CombatUniform_ocamo",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "V_HarnessO_brn",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "H_HelmetO_ocamo",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "hgun_Rook40_F",
+            "kind": "WEAPON",
+            "price": 8
+          },
+          {
+            "class": "ItemWatch",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemCompass",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemRadio",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "ItemMap",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "NVGoggles_OPFOR",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "arifle_Katiba_ACO_pointer_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "30Rnd_65x39_caseless_green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_65x39_caseless_green_mag_Tracer",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_9x21_Green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_red_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_green_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "16Rnd_9x21_yellow_Mag",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "HandGrenade",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "SmokeShellRed",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "Chemlight_red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "O_UavTerminal",
+            "kind": "ITEM",
+            "price": 25
+          },
+          {
+            "class": "launch_RPG32_F",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "CUP_launch_Metis",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "ace_compat_rhs_afrf3_metis_carry",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "Aegis_launch_RPG7M_F",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "CUP_launch_RPG7V",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "ace_compat_rhs_afrf3_2b14_carry",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "ace_compat_rhs_afrf3_nsv_carry",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "ace_compat_rhs_afrf3_kord_carry",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "ace_compat_rhs_afrf3_spg9m_carry",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_rpg7",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_rpg26",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_rpg18",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_igla",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_rpg75",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "rhs_weap_m80",
+            "kind": "WEAPON",
+            "price": 35
+          },
+          {
+            "class": "uk3cb_weap_svdp_wd_npz_dh5_sup",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_SVD_OLD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_srifle_SVD_wdl",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_srifle_SVD_des",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_weap_svds_pso1",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "arifle_RPK12_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "arifle_RPK12_lush_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "arifle_RPK12_lush_holo_snds_pointer_F",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_RPD",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_RPK_74N_BLK",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_RPK_74N",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "rhs_weap_rpk74m_npz",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_lmg_PKMN",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "CUP_lmg_PKM",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_aks74n_npz_ekp8_sup",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_aks74n_gp25_npz_ekp8",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_aks74n_gp25_npz_ekp8_sup",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_ak74mr_ekp8",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_akm_gp25_sup",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_akmn_gp25_1p29",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_ak74n_2_1p29",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_ak74n_2_gp25_1p29",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_ak74n_npz_aco_grn_sup",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "uk3cb_weap_aks74n_gp25_npz_aco_grn",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_AK12_grip_rk6",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_AK12_grip_rk2",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "UK3CB_AK12",
+            "kind": "WEAPON",
+            "price": 18
+          },
+          {
+            "class": "1Rnd_HE_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "3Rnd_HE_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "1Rnd_Smoke_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "3Rnd_Smoke_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "1Rnd_SmokeBlue_Grenade_shell",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells_Tracer_Red",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "60Rnd_30mm_APFSDS_shells",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "140Rnd_30mm_MP_shells_Tracer_Yellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "250Rnd_30mm_APDS_shells_Tracer_Yellow",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "250Rnd_30mm_APDS_shells_Tracer_Green",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "4Rnd_125mm_cannon_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "CUP_30Rnd_122mmILLUM_D30_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "rhs_mag_155mm_485_2",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "CUP_30Rnd_105mmILLUM_M119_M",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "TT_ZTZ99A_GP_125_5Rnd_125mm_cannon_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "6Rnd_155mm_Mo_AT_mine",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "6Rnd_155mm_Mo_AT_mine_O",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "RPG32_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "RPG32_HE_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "NLAW_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "24Rnd_PG_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "12Rnd_PG_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "24Rnd_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "12Rnd_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "Titan_AA",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "Titan_AP",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "Titan_AT",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "14Rnd_80mm_rockets",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "38Rnd_80mm_rockets",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "2Rnd_AAA_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "2Rnd_AAA_missiles_MI06",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "2Rnd_AAA_missiles_MI02",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "5Rnd_GAT_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "1Rnd_GAA_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "1Rnd_GAT_missiles",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "2Rnd_Missile_AA_04_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "6Rnd_Missile_AGM_02_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "7Rnd_Rocket_04_HE_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "7Rnd_Rocket_04_AP_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "2Rnd_Missile_AA_03_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "4Rnd_Missile_AGM_01_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "20Rnd_Rocket_03_HE_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "20Rnd_Rocket_03_AP_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_Missile_AA_03_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_1Rnd_Missile_AA_03_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_1Rnd_Missile_AGM_01_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_Bomb_03_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "magazine_Missile_rim116_x21",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Missile_AA_R77_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Missile_AA_R73_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Missile_AA_R77_INT_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Bomb_KAB250_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_Missile_HARM_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonRack_Missile_HARM_x1",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "PylonMissile_1Rnd_BombCluster_02_F",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "RPG7_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_BAF_PylonMissile_1Rnd_GBU12",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "UK3CB_Factions_PylonMissile_1Rnd_FAB250",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "ace_missile_gbu_1Rnd_FAB250",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "ace_missile_gbu_1_PylonMissile_1Rnd_FAB250",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "ace_missile_gbu_2Rnd_FAB250",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "ace_missile_gbu_PylonMissile_1Rnd_FAB250",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "magazine_Missile_9M311_x8",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "magazine_Missile_9M311_1M_x8",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "TT_Panzerfaust3_rocket_Magazine",
+            "kind": "MAGAZINE",
+            "price": 12
+          },
+          {
+            "class": "30rnd_762x39_AK12_Arid_Mag_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30rnd_762x39_AK12_Lush_Mag_Tracer_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "75rnd_762x39_AK12_Mag_Tracer_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "75rnd_762x39_AK12_Mag_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "75Rnd_762x39_Mag_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "75Rnd_762x39_Mag_Tracer_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_762x39_AK12_Mag_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_762x39_Mag_Tracer_Green_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "30Rnd_762x39_Mag_Tracer_F",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_AK47_30Rnd_Magazine_G",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_AK47_30Rnd_Magazine",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_AK12_30rnd_Magazine_G",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_AK12_30rnd_Magazine_RT",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_AK12_30rnd_Magazine_W",
+            "kind": "MAGAZINE",
+            "price": 2
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_U_VDV_CombatUniform_01_KLMK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_U_VDV_CombatUniform_02_KLMK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_U_VDV_Crew_Uniform_01_BLK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_U_VDV_Crew_Uniform_02_BLK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Early_U_VDV_Crew_Uniform_03_BLK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_U_VDV_CombatUniform_01_TTSKO",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_U_VDV_CombatUniform_02_TTSKO",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_U_VDV_CombatUniform_03_TTSKO",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_LATE_U_VDV_Crew_Uniform_01_TTSKO",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_EMR_1_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_EMR_2_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_EMR_VDV_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_EMR_VDV_rolled_up_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_BeigeDigital_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_BeigeDigital_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_BeigeDigital_VDV_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_BeigeDigital_VDV_rolled_up_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_KSOR_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_KSOR_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_KSOR_VDV_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_KSOR_VDV_rolled_up_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_ODKB_KSOR_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_ODKB_KSOR_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_ODKB_KSOR_VDV_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_ODKB_KSOR_VDV_rolled_up_gloves_pads",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_M88_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_M88_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_Flora_1_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_Flora_2_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_worn_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_VDV_rolled_up_gloves2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_worn_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_worn_VDV_rolled_up_gloves2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR93_worn_gloves_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_worn_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_VDV_rolled_up_gloves2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_worn_VDV_rolled_up",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_worn_VDV_rolled_up_gloves2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_U_O_RUS_VSR98_worn_gloves_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "CUP_H_RUS_Beret_VDV",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_vdv_emr",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_vdv_emr_des",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_vdv_flora",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_vdv_mflora",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_afghanka_para",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_afghanka_para_ttsko",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_afghanka_para_ttsko_2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_afghanka_para_vsr",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_uniform_afghanka_para_vsr_2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_beret_vdv1",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_beret_vdv2",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_beret_vdv3",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_fieldcap_m88_ttsko_vdv",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_fieldcap_m88_ttsko_vdv_back",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "rhs_beret_vdv_early",
+            "kind": "ITEM",
+            "price": 10
+          },
+          {
+            "class": "UK3CB_CW_SOV_O_EARLY_B_VDV_RIF",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "UK3CB_O_Static_PKM_Tripod_High_Bag_VDV",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "UK3CB_O_Static_PKM_Tripod_Low_Bag_VDV",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "O_UAV_01_backpack_F",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "B_Assault_Diver",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "O_UAV_06_medical_backpack_F",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "B_CivilianBackpack_01_Everyday_Vrana_F",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "B_ViperLightHarness_ghex_F",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_r148",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rpg_6b3",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_vest_flora2",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_flora2",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_emr1",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_vest_emr1",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_vest",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rd54_flora1",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_sidorMG",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_medic_bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_sidor",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_mg",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_medic",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_engineer_empty",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_olive",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_olive_engineer_empty",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_ammo",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_ammo_recon",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_assault_umbts_engineer_empty",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_assault_umbts",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Podnos_Bipod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_SPG9_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_SPG9_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_AGS30_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Podnos_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Metis_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Metis_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Kord_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Kornet_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_Kornet_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_AGS30_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_DShkM_TripodLow_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_DShkM_TripodHigh_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_DShkM_Gun_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "RHS_NSV_Tripod_Bag",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "CUP_B_Kombat_Autorfle_Olive",
+            "kind": "BACKPACK",
+            "price": 12
+          },
+          {
+            "class": "rhs_rk_sht_30_emr_engineer",
+            "kind": "BACKPACK",
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "sectors": [
+      {
+        "id": "S0",
+        "name": "Coober Pedy 1",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          22362,
+          19257
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S3",
+        "name": "Alice Springs 4",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          24313,
+          30371
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S4",
+        "name": "Darwin Port 5",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          14324,
+          30630
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 8
+      },
+      {
+        "id": "S5",
+        "name": "Perth 6",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          8025,
+          22886
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S6",
+        "name": "Perth 7",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          4235,
+          13645
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S8",
+        "name": "Cairns 9",
+        "kind": "town",
+        "owner": "EAST",
+        "position": [
+          33309,
+          27507
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S9",
+        "name": "Perth 10",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          13515,
+          14718
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 20
+      },
+      {
+        "id": "S10",
+        "name": "Adelaide 11",
+        "kind": "town",
+        "owner": "WEST",
+        "position": [
+          23537,
+          14118
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S11",
+        "name": "Cairns 12",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          29034,
+          36512
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 11
+      },
+      {
+        "id": "S13",
+        "name": "База синих",
+        "kind": "base",
+        "owner": "WEST",
+        "position": [
+          24276,
+          13997
+        ],
+        "radius": 180,
+        "stock": 4000,
+        "income": 60
+      },
+      {
+        "id": "S14",
+        "name": "База красных",
+        "kind": "base",
+        "owner": "EAST",
+        "position": [
+          16728,
+          33847
+        ],
+        "radius": 180,
+        "stock": 4000,
+        "income": 60
+      },
+      {
+        "id": "S17",
+        "name": "Pine Gap 18",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          14375,
+          22770
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S19",
+        "name": "Coober Pedy 20",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          18551,
+          16212
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 15
+      },
+      {
+        "id": "S20",
+        "name": "Perth 21",
+        "kind": "depot",
+        "owner": "WEST",
+        "position": [
+          8372,
+          16833
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 11
+      },
+      {
+        "id": "S22",
+        "name": "Cairns 23",
+        "kind": "depot",
+        "owner": "EAST",
+        "position": [
+          31136,
+          32002
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 18
+      },
+      {
+        "id": "S23",
+        "name": "Alice Springs 24",
+        "kind": "town",
+        "owner": "NONE",
+        "position": [
+          21713,
+          25833
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      },
+      {
+        "id": "S26",
+        "name": "Cairns 27",
+        "kind": "town",
+        "owner": "EAST",
+        "position": [
+          28891,
+          29819
+        ],
+        "radius": 180,
+        "stock": 0,
+        "income": 0
+      }
+    ],
+    "links": [
+      [
+        "S0",
+        "S3"
+      ],
+      [
+        "S3",
+        "S4"
+      ],
+      [
+        "S4",
+        "S5"
+      ],
+      [
+        "S5",
+        "S6"
+      ],
+      [
+        "S6",
+        "S9"
+      ],
+      [
+        "S3",
+        "S11"
+      ],
+      [
+        "S4",
+        "S14"
+      ],
+      [
+        "S0",
+        "S17"
+      ],
+      [
+        "S9",
+        "S19"
+      ],
+      [
+        "S6",
+        "S20"
+      ],
+      [
+        "S11",
+        "S22"
+      ],
+      [
+        "S8",
+        "S26"
+      ],
+      [
+        "S0",
+        "S19"
+      ],
+      [
+        "S8",
+        "S22"
+      ],
+      [
+        "S9",
+        "S20"
+      ],
+      [
+        "S10",
+        "S19"
+      ],
+      [
+        "S22",
+        "S26"
+      ],
+      [
+        "S10",
+        "S13"
+      ],
+      [
+        "S23",
+        "S17"
+      ],
+      [
+        "S17",
+        "S5"
+      ],
+      [
+        "S23",
+        "S3"
+      ]
+    ],
+    "playerSlots": 20,
+    "persistence": true,
+    "duration": 120,
+    "captureSeconds": 120,
+    "reinforcementCost": 35,
+    "captureCost": 0,
+    "reinforcementDelay": 274,
+    "convoyCargo": 90,
+    "convoyInterval": 95,
+    "convoyTimeout": 1800,
+    "convoyLimit": 8,
+    "hour": 9,
+    "overcast": 0.15,
+    "equipment": {
+      "aiPurchases": true,
+      "cooldown": 120,
+      "groundLimit": 35,
+      "airLimit": 5,
+      "totalPurchases": 150,
+      "pilots": 2,
+      "aaaLimit": 6,
+      "samLimit": 7,
+      "radarLimit": 5,
+      "artilleryLimit": 7,
+      "mlrsLimit": 3
+    },
+    "extraMods": [
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CTDL Lambs",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CUP Terrains - Core",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CUP Terrains - CWA",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CUP Terrains - Maps",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CUP Terrains - Maps 2.0",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@CUP Weapons",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@D-20 M1955",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@DCO GPT     ( Chat-GPT for ArmA 3 )",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Death and Hit reactions",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Deformer",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@DISMEMBERMENT+GORE [SP-MP]",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@DUI - Squad Radar",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@dzn eXtended Pointer Interactions",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@FMC PACK",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@FP-5 -Flamingo-",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@GX - Drones",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Hellenic Armed Forces Mod (HAFM)",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@INIDBI2 - Official extension",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@JCA - ADS-1 NASAMS",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@JCA - ADS-2 Skynex",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@JCA - Land Systems",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@JSRS SOUNDMOD 2025",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@LAMBS_Danger.fsm",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@LAMBS_Suppression",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Left 4 Dead Content pack",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Lybor",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@MT-LB - The Soviet Workhorse",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Pinned Down- Steel Rain - Autonomous Artillery, CAS & VLS",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Plane Reversing (Mod)",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@POSADKOVO",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Project America - Objects",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RE- RHS Escalation",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@QAV - Merkava",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSGREF",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSPKL",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSSAF",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSTERRACORE",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@RHSUSAF",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Sanagasta",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@SSD Death Screams 2.1",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Star Light",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Suppress",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@T-80BVM FIX",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@T-84-120 Yatagan",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@T80BVM",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TMT - Turkish Forces",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Armor system",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@ToH Dummy CUP",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Badger IFV",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT J10A",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Juggernaut",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Leopard 2RI",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Merkava Mk.4M",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT MGM-166 LOSAT",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Panzerfaust3",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Rooikat MTTD",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT RPG-7",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT Sturmtiger",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@TT ZTZ-99A",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Ukrainian Factions Project",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@VERESKOVO",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Virolahti - Valtatie 7",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Walzton, USA Objects",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Vision Guard AI",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Warlords RHS Edition Mod",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Walzton, USA [MDE]",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Zeus Enhanced",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] - Frontlines & Patrols (A3U v12.0)",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Archie, Summer",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Archie, Winter",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Australia",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Bastek",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] CL's Antistasi QoL Tweaks",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Posadkovo & Vereskovo",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@[A3UE] Sanagasta",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Commander Mod - Tactical AI Map Control [RU]",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@chelogach's Active Protection System",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Bulat UAV Detector by Nerexis",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@BM Oplot",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Blastcore Murr Edition(TT Version)",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Battle AI A3 v0.92",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Bastek",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Australia FIXED",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Australia",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Arma Realistic Map Assets V2",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Archie, Winter",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Archie, Summer",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Antistasi Ultimate - Mod",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@Aaren's Sound Core",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@A3UE Active-Anti-artillery-Defence-System",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@A3UE - Change Emplacement Vehicle",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@A3TI REAP-IR",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@A3-TTS (text to speech)",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@@Australia",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@3CB BAF Vehicles",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@3CB BAF Equipment",
+      "H:\\SteamLibrary\\steamapps\\common\\Arma 3\\!Workshop\\@120-PM-43"
+    ],
+    "gameplay": {
+      "truckSpeed": 90,
+      "vehicleSpeed": 100,
+      "infantrySpeed": 2,
+      "spotDistance": 0.8,
+      "spotTime": 0.7,
+      "courage": 0.95,
+      "commanding": 0.9,
+      "reloadSpeed": 0.85,
+      "serviceCost": 30,
+      "truckCost": 70,
+      "truckFleet": 6,
+      "supportGroups": 2,
+      "aiGforces": 1
+    }
+  },
+  "revision": 2,
+  "createdAt": "2026-10-12T19:52:36.776Z",
+  "updatedAt": "2026-10-12T20:24:42.734Z"
+}

@@ -1,0 +1,145 @@
+{
+  "id": "747f1252-088d-45c6-b4d6-51f097df6b77",
+  "name": "tanoa · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:27.804Z",
+  "updatedAt": "2026-10-15T22:03:27.804Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "tanoa",
+    "title": "tanoa · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · $STR A3 RailwayDepot010",
+        "side": "WEST",
+        "position": [
+          4217,
+          8379
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · $STR A3 Luganville010",
+        "side": "EAST",
+        "position": [
+          13504,
+          8531
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · $STR A3 Regina010",
+        "side": "GUER",
+        "position": [
+          5128,
+          8729
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · $STR A3 Lobaka010",
+        "side": "GUER",
+        "position": [
+          6260,
+          8803
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · $STR A3 Dpp010",
+        "side": "GUER",
+        "position": [
+          7545,
+          8772
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · $STR A3 Lakatoro010",
+        "side": "GUER",
+        "position": [
+          8760,
+          8753
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · $STR A3 Lakatoro010",
+        "side": "GUER",
+        "position": [
+          9998,
+          8756
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · $STR A3 TempleRuins010",
+        "side": "GUER",
+        "position": [
+          11252,
+          8757
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · $STR A3 Plantations020",
+        "side": "GUER",
+        "position": [
+          12354,
+          8742
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "a29c19a3-66e4-431b-bcab-5595e9a44006",
+  "name": "Sanagasta, Argentina · сухопутный фронт",
+  "createdAt": "2026-10-15T22:03:27.262Z",
+  "updatedAt": "2026-10-15T22:03:27.262Z",
+  "revision": 1,
+  "design": {
+    "version": 1,
+    "world": "btrx_sngt",
+    "title": "Sanagasta, Argentina · компактный сухопутный фронт",
+    "mode": "native",
+    "greenRole": "defender",
+    "playerSide": "WEST",
+    "lethalZones": false,
+    "bases": [
+      {
+        "id": "west",
+        "name": "База синих · La Viuda",
+        "side": "WEST",
+        "position": [
+          1909,
+          13864
+        ],
+        "radius": 150
+      },
+      {
+        "id": "east",
+        "name": "База красных · Los Escombros",
+        "side": "EAST",
+        "position": [
+          15149,
+          12481
+        ],
+        "radius": 150
+      }
+    ],
+    "sectors": [
+      {
+        "id": "sector_1",
+        "name": "1 · Campo Aereo Pampa",
+        "side": "GUER",
+        "position": [
+          4606,
+          13878
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_2",
+        "name": "2 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          6379,
+          15115
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_3",
+        "name": "3 · Узел маршрута",
+        "side": "GUER",
+        "position": [
+          10893,
+          13760
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_4",
+        "name": "4 · Mirador",
+        "side": "GUER",
+        "position": [
+          13135,
+          14089
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_5",
+        "name": "5 · Aguas Limpias",
+        "side": "GUER",
+        "position": [
+          14658,
+          16130
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_6",
+        "name": "6 · Los Bagres",
+        "side": "GUER",
+        "position": [
+          14549,
+          17878
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      },
+      {
+        "id": "sector_7",
+        "name": "7 · Los Colorados",
+        "side": "GUER",
+        "position": [
+          15364,
+          14799
+        ],
+        "radius": 100,
+        "infantry": 4,
+        "vehicles": 0,
+        "vehicleClasses": []
+      }
+    ],
+    "spawns": [],
+    "startAssets": [],
+    "garrisonLLM": {
+      "enabled": false,
+      "route": "shared",
+      "instructions": "",
+      "limit": 4
+    },
+    "playerRole": "commander",
+    "maxNPCs": 160,
+    "maxVehicles": 24,
+    "startCP": 6000,
+    "income": 100,
+    "greenFaction": "rhsgref_faction_cdf_ng"
+  }
+}
