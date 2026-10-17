@@ -9,3 +9,5 @@ War Architect взаимодействует с Arma 3, CBA, ACE, RHS, CUP, 3CB 
 - SQF-VM, Python-библиотеки и другие внешние инструменты имеют собственные условия использования. Их следует получать у соответствующих авторов; исходники War Architect не дают на них отдельной лицензии.
 
 Авторские изменения War Architect и сторонние исходники следует различать при дальнейшей публикации и выборе лицензии. Данный файл фиксирует происхождение компонентов, а не заменяет их лицензионные тексты.
+
+- BECTI adapter: pinned Kiyogitpy/becti_altis_1355.Altis at 2a883f7ab7f827eea1f7e060b05bf19f4bb96959; Benny, Zerty, HTom, Yoshi_E, Kiyogitpy; CC BY-NC-SA 4.0. Fetched separately by tools/fetch-becti.js. Generated derivatives retain upstream licence and attribution.

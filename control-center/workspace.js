@@ -36,7 +36,7 @@
   let operationsLoading=false;
   async function openOperations(routeOverride,id){
     if(operationsLoading)return;operationsLoading=true;const note=by('operationsPanel').querySelector('p');note.textContent='Открываем конструктор операций…';
-    try{const result=await api('/api/operations-panel',{});const requested=routeOverride||new URLSearchParams(location.search).get('operation');const route=['ground','campaign'].includes(requested)?requested:'operations';by('operationsFrame').src=result.origin+'/'+route+'?embedded=1'+(id?'&id='+encodeURIComponent(id):'');note.textContent='Воздушные операции, штурм и кампания — внутри одного центра.';return true;}
+    try{const result=await api('/api/operations-panel',{});const requested=routeOverride||new URLSearchParams(location.search).get('operation');const route=['ground','campaign','becti'].includes(requested)?requested:'operations';by('operationsFrame').src=result.origin+'/'+route+'?embedded=1'+(id?'&id='+encodeURIComponent(id):'');note.textContent='Воздушные операции, штурм и кампания — внутри одного центра.';return true;}
     catch(e){note.textContent=e.message+' Нажмите вкладку «Операции», чтобы повторить.';return false;}
     finally{operationsLoading=false;}
   }
@@ -52,7 +52,7 @@
     if(busy)return;
     if(p.kind==='operation'){
       if(!await canReplaceOperation())return;
-      if(!await openOperations({airBattle:'operations',assaultDefense:'ground',frontlineCampaign:'campaign'}[p.mode],p.id))throw Error('Не удалось открыть редактор операции. Повторите попытку.');displayTab('operations');return;
+      if(!await openOperations({airBattle:'operations',assaultDefense:'ground',frontlineCampaign:'campaign',becti:'becti'}[p.mode],p.id))throw Error('Не удалось открыть редактор операции. Повторите попытку.');displayTab('operations');return;
     }
     if((dirty||designerDirty)&&!confirm('Открыть сценарий «'+p.title+'» вместо несохранённых настроек и карты?'))return;
     busy=true;document.querySelector('main').inert=true;

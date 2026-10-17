@@ -1,0 +1,5 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{ensure}=require('../control-center/build-addon-artifact');
+test('verified existing addon is reused without attempting a write to a game-held PBO',async()=>{let writes=0,reads=0;const r=await ensure({pbo:'locked.pbo'},{exists:()=>true,verify:async()=>{reads++;},pack:async()=>{writes++;throw Error('locked');}});assert.deepEqual(r,{reused:true});assert.equal(writes,0);assert.equal(reads,1);});
+test('invalid existing addon fails verification and is never overwritten',async()=>{let writes=0;await assert.rejects(ensure({pbo:'wrong.pbo'},{exists:()=>true,verify:async()=>{throw Error('contents differ');},pack:async()=>{writes++;}}),/contents differ/);assert.equal(writes,0);});
+test('new addon is packed then verified before it can be used',async()=>{const events=[];const r=await ensure({pbo:'new.pbo'},{exists:()=>false,verify:async()=>events.push('verify'),pack:async()=>events.push('pack')});assert.deepEqual(events,['pack','verify']);assert.equal(r.reused,false);});

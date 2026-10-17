@@ -1,7 +1,9 @@
 {
-  "files": 1314,
-  "bytes": 208880842,
+  "version": "0.2.0",
+  "date": "2026-10-17",
+  "files": 1370,
+  "bytes": 209160892,
   "secretsDetected": 0,
-  "excludedFiles": 50583,
-  "manifestHash": "dcb20d59e2fa91e80596230b9790d0202dcb8ec2054c9331b91061f838c3780f"
+  "manifestHash": "692e39e90f51cd45562e60a5506b0731963ffa9cd99f237630912fb13679cc21",
+  "scope": "Tracked source files excluding this manifest; game/mod binaries, live profiles and personal runtime logs excluded"
 }

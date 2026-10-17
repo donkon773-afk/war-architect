@@ -165,7 +165,7 @@ input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:2px!i
 <section data-page="saved" hidden><div class="bar"><h2>Готовые операции</h2><input id="savedSearch" placeholder="Поиск операции" aria-label="Поиск операции"></div><div id="savedList" class="saved"></div></section>
 <footer>Свободные пилотские слоты можно заполнить ботами в лобби Arma. Zeus и ACE доступны во всех ролях. Первый выпуск использует штатный авиационный AI Arma. Вызов модели и мост не требуются. Проверка сборки подтверждает файлы миссии; воздушный бой и управление нужно проверить в Arma.</footer>
 <div class="savebar"><div class="actions"><button id="save" class="primary">Сохранить операцию</button><button id="build">Собрать PBO</button><button id="install">Добавить миссию в Arma</button><button id="launch">Запустить Arma с модами операции</button><span id="saveState" class="small">Черновик</span></div></div></main>
-<script>const API_SESSION="__SESSION_TOKEN__";const OPERATIONS_FEATURES="__OPERATIONS_FEATURES__";if(OPERATIONS_FEATURES!=="campaign-strategic-v6"&&["18786","18787","18788","18789","18790","18791"].includes(location.port))location.replace("http://127.0.0.1:18792"+location.pathname+location.search);</script><script src="/operations-ui.js"></script><script src="/operation-mods-ui.js"></script><!-- context-help:start -->
+<script>const API_SESSION="__SESSION_TOKEN__";const OPERATIONS_FEATURES="__OPERATIONS_FEATURES__";if(OPERATIONS_FEATURES!=="campaign-shop-becti-v7"&&["18786","18787","18788","18789","18790","18791"].includes(location.port))location.replace("http://127.0.0.1:18792"+location.pathname+location.search);</script><script src="/operations-ui.js"></script><script src="/operation-mods-ui.js"></script><!-- context-help:start -->
 <script>
 /* Click opens an inline explanation; hover/focus also update the status strip. */
 const NeroHelp=(()=>{
@@ -226,7 +226,7 @@ const NeroHelp=(()=>{
  'use strict';
  // Shared display/build policy; requirements are mandatory and cannot be disabled by extraMods.
  function requirements(design,mods){
-  const campaign=design.type==='frontlineCampaign',realistic=campaign&&design.devMode?.realisticMissiles;
+  const campaign=['frontlineCampaign','becti'].includes(design.type),realistic=campaign&&design.devMode?.realisticMissiles;
   const rules=[
    {key:'ace',label:'ACE',name:'@ace',patch:'ace_main',files:['ace_main.pbo',...(campaign?['ace_missileguidance.pbo','ace_missile_sam.pbo']:[])],reason:campaign?'Механики ACE, наведение ракет и Patriot':'Механики ACE'},
    {key:'cba',label:'CBA A3',name:'@CBA_A3',patch:'cba_main',files:['cba_main.pbo'],reason:'Зависимость ACE и обработчиков модов'}
@@ -241,6 +241,10 @@ const NeroHelp=(()=>{
    {key:'fmc',label:'FMC PACK',name:'@FMC PACK',files:['OFP_ATACMS.pbo'],reason:'ATACMS M57 и пусковая M270'},
    {key:'3cb',label:'3CB Factions',name:'@3CB Factions',files:['uk3cb_factions_vehicles_scud.pbo'],reason:'Scud и его пусковые'}
   );
+  if(design.type==='becti'){
+   rules.push({key:'rhsgref',label:'RHS GREF',name:'@RHSGREF',files:['rhsgref_main.pbo'],reason:'Нейтральные гарнизоны исходной BECTI'});
+   if(!realistic)rules.push({key:'rhsusaf',label:'RHS USAF',name:'@RHSUSAF',files:['rhsusf_main.pbo'],reason:'Штатные вспомогательные системы BECTI'});
+  }
   const rows=rules.map(r=>{const m=mods.find(m=>(m.label||m.name).toLowerCase()===r.name.toLowerCase())||mods.find(m=>r.patch&&(m.patches||[]).some(p=>p.toLowerCase()===r.patch.toLowerCase()));return {...r,id:m?.id||m?.path||null,installed:!!m};});
   if(campaign)rows.push(
    {key:'strategic',label:'NeroAI Strategic',generated:true,reason:'Совместимость спецоружия; собирается автоматически'},
@@ -291,6 +295,7 @@ const NeroHelp=(()=>{
     const url=new URL(link.href,location.href);
     if(window.parent!==window&&url.hostname==='127.0.0.1'&&Number(url.port)>=18775&&Number(url.port)<=18785)link.remove();
   }
+  const becti=document.createElement('a');becti.href='/becti'+(window.parent!==window?'?embedded=1':'');becti.textContent='BECTI';becti.className='button';(document.querySelector('nav')||document.querySelector('header')).append(becti);
   const build=document.getElementById('build');if(build)build.hidden=true;
   const install=document.getElementById('install');if(install)install.textContent='Сохранить и добавить в Arma';
   const launch=document.getElementById('launch');if(launch)launch.textContent='Сохранить и запустить Arma';

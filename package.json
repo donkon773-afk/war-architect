@@ -1,6 +1,6 @@
 {
   "name": "war-architect",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "War Architect for Arma 3: scenario editor, faction presets, tactical AI, logistics and the optional NeroAI LLM module.",
   "type": "commonjs",
@@ -18,7 +18,9 @@
     "bench:llm": "node tools/benchmark-local-llm.js",
     "test:control": "node --test control-center/core.test.js tests/control-options.test.js tests/control-launch.test.js tests/panel-connection.test.js tests/designer-ui.test.js tests/color-themes.test.js tests/control-editor-regressions.test.js tests/side-setups.test.js tests/three-side-startup.test.js tests/cq-interface.test.js",
     "test:cq": "node --test tests/cq-interface.test.js",
-    "test:operations": "node --test tests/operations.test.js tests/ground-operations.test.js tests/campaign-operations.test.js tests/campaign-equipment.test.js tests/air-defense-network.test.js"
+    "test:operations": "node --test tests/operations.test.js tests/ground-operations.test.js tests/campaign-operations.test.js tests/campaign-equipment.test.js tests/air-defense-network.test.js",
+    "prepare:becti": "node tools/fetch-becti.js",
+    "test:becti": "node tools/fetch-becti.js && node --test tests/becti-doctrine.test.js tests/shop-becti.test.js tests/build-addon-artifact.test.js"
   },
   "engines": {
     "node": ">=20"

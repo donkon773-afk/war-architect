@@ -2,7 +2,7 @@
 if (!isServer || {getNumber(missionConfigFile >> "CfgNeroOperation" >> "DevMode" >> "coordinatedAI")!=1}) exitWith {};
 for "_side" from 0 to 1 do {
  private _root=NeroOP_campRoots#_side;private _base=NeroOP_campPositions#_root;private _contacts=NeroOP_campIntel#_side;
- private _groups=NeroOP_campGroups select {local _x && {(_x getVariable ["NeroOP_side",-1])==_side} && {alive leader _x} && {!([_x] call NeroOP_fnc_campaignPlayerControl)} && {!(_x getVariable ["NeroOP_dropBusy",false])}};
+ private _groups=NeroOP_campGroups select {local _x && {(_x getVariable ["NeroOP_side",-1])==_side} && {alive leader _x} && {!([_x] call NeroOP_fnc_campaignPlayerControl)} && {!(_x getVariable ["NeroOP_dropBusy",false])} && {!(_x getVariable ["NeroOP_liftBusy",false])} && {!(_x getVariable ["NeroOP_rideBusy",false])}};
  private _baseThreat=_contacts findIf {!(_x#2) && {alive (_x#0)} && {(_x#1) distance2D _base<1200}}>=0;
  private _plan=[count _groups,_baseThreat,0,0,true] call NeroOP_fnc_campaignTeamPlan;private _rank=[];{_rank pushBack [leader _x distance2D _base,_forEachIndex];} forEach _groups;_rank sort true;
  private _defenders=(_rank select [0,_plan#0]) apply {_groups#(_x#1)};

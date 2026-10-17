@@ -4,7 +4,7 @@ private _side=_g getVariable ["NeroOP_side",-1];if !(_side in [0,1]) exitWith {f
 if (leader _g distance2D (NeroOP_campPositions#_root)>(NeroOP_campRadii#_root)+150 || {leader _g distance2D (NeroOP_campPositions#_target)<3500}) exitWith {false};
 private _graph=[NeroOP_campOwners,NeroOP_campLinks,_root,_side] call NeroOP_fnc_campaignGraph;private _rank=[];
 {private _p=NeroOP_campPositions#_x;private _enemy=allUnits findIf {alive _x && {([west,east]#_side) getFriend side group _x<.6} && {_x distance2D _p<500}}>=0;
- if (_x!=_root && {!_enemy} && {!surfaceIsWater _p} && {_p distance2D (NeroOP_campPositions#_target)<leader _g distance2D (NeroOP_campPositions#_target)-1500}) then {_rank pushBack [_p distance2D (NeroOP_campPositions#_target),_x];};
+ if (_x!=_root && {!_enemy} && {!surfaceIsWater _p} && {_p distance2D (NeroOP_campPositions#_target)<((leader _g distance2D (NeroOP_campPositions#_target))-1500)}) then {_rank pushBack [_p distance2D (NeroOP_campPositions#_target),_x];};
 } forEach (_graph#0);_rank sort true;if (count _rank==0) exitWith {false};private _p=NeroOP_campPositions#((_rank#0)#1);
 _g setVariable ["NeroOP_redeployAt",serverTime];_g setVariable ["NeroOP_dropBusy",true];_g setVariable ["NeroOP_campTarget",_target];
 {if (alive _x && {local _x} && {!isPlayer _x}) then {[_x,[_p#0+random 35,_p#1+random 35],false] call NeroOP_fnc_campaignDropLocal;};} forEach units _g;

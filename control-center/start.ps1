@@ -1,4 +1,4 @@
-param([ValidateSet('launcher','designer','operations','ground','campaign')][string]$View='launcher')
+param([ValidateSet('launcher','designer','operations','ground','campaign','becti')][string]$View='launcher')
 $ErrorActionPreference='Stop'
 & (Join-Path $PSScriptRoot 'operations-start.ps1') -NoBrowser
 $currentShell=Join-Path $PSHOME 'pwsh.exe'
@@ -40,6 +40,6 @@ if ($View -eq 'designer') {
     $worldId=[Uri]::EscapeDataString([string]$saved.selected.map)
     $url="http://127.0.0.1:$($session.port)/?tab=maps&world=$worldId&v=$revision"
 }
-if ($View -in @("operations","ground","campaign")) {$url="http://127.0.0.1:$($session.port)/?tab=operations&operation=$View&v=$revision"}
+if ($View -in @("operations","ground","campaign","becti")) {$url="http://127.0.0.1:$($session.port)/?tab=operations&operation=$View&v=$revision"}
 $edgePath=Join-Path ${env:ProgramFiles(x86)} 'Microsoft\Edge\Application\msedge.exe'
 if (Test-Path -LiteralPath $edgePath) {Start-Process -FilePath $edgePath -ArgumentList @('--app='+$url) -WindowStyle Normal | Out-Null} else {Start-Process $url | Out-Null}

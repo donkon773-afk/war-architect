@@ -2,11 +2,14 @@ params [["_mode","OPEN"]];
 if (!hasInterface) exitWith {};
 if (_mode in ["OPEN","TRAVEL","INFANTRY"]) exitWith {
  if (dialog) exitWith {};
+ private _context=[missionName,worldName,player,side group player];
+ if !(_context isEqualTo (uiNamespace getVariable ["NeroOP_cartContext",[]])) then {uiNamespace setVariable ["NeroOP_cartContext",_context];uiNamespace setVariable ["NeroOP_shopCart",[]];uiNamespace setVariable ["NeroOP_cartPending",-1];uiNamespace setVariable ["NeroOP_cartSent",[]];};
  uiNamespace setVariable ["NeroOP_shopTravel",_mode=="TRAVEL"];
  createDialog "NeroOPCampaignShop";private _display=findDisplay 88150;private _combo=_display displayCtrl 88152;
  {private _i=_combo lbAdd (_x#0);_combo lbSetData [_i,_x#1];} forEach (if (_mode=="TRAVEL") then {[["Свои безопасные секторы","TRAVEL"]]} else {[["Наземная техника","GROUND"],["Пехота в отряд","INFANTRY"],["Авиация","AIR"],["Артиллерия","ARTILLERY"],["ПВО / ЗРК / РЛС","AA"],["Беспилотники","UAV"],["Ручные ракетные комплексы","LAUNCHER"],["Винтовки","RIFLE"],["Автоматы / карабины","AUTOMATIC"],["Снайперские винтовки","SNIPER"],["Пулемёты","MACHINEGUN"],["Пистолеты-пулемёты","SMG"],["Пистолеты","PISTOL"],["Стрелковые магазины","SMALL_AMMO"],["Снаряды","SHELL"],["Ракеты","ROCKET"],["Гранаты / взрывчатка","EXPLOSIVE"],["Экипировка и снаряжение","GEAR"],["Снабжение и подкрепления","SUPPORT"],["Сесть в купленную авиацию","FLY"]]});
  (_display displayCtrl 88151) ctrlSetText (if (_mode=="TRAVEL") then {"Сброс с парашютом — 4500 м"} else {"Магазин снабжения"});
- (_display displayCtrl 88155) ctrlSetText (if (_mode=="TRAVEL") then {"Начать сброс"} else {"Купить за снабжение"});
+ (_display displayCtrl 88155) ctrlSetText (if (_mode=="TRAVEL") then {"Начать сброс"} else {"Добавить в заказ"});
+ (_display displayCtrl 88157) ctrlShow (_mode!="TRAVEL");(_display displayCtrl 88158) ctrlShow (_mode!="TRAVEL");(_display displayCtrl 88156) ctrlShow (_mode!="TRAVEL");
  _combo lbSetCurSel (if (_mode=="INFANTRY") then {1} else {0});
 };
 private _display=findDisplay 88150;if (isNull _display) exitWith {};private _list=_display displayCtrl 88153;private _combo=_display displayCtrl 88152;private _category=_combo lbData lbCurSel _combo;private _side=[west,east] find side group player;
@@ -44,6 +47,7 @@ if (_mode=="REFRESH") exitWith {
 };
 private _entries=uiNamespace getVariable ["NeroOP_shopEntries",[]];private _selected=lbCurSel _list;private _entry=if (_selected>=0 && {_selected<count _entries}) then {_entries#_selected} else {[]};
 if (_mode=="DETAIL") exitWith {
+ ["CART"] call NeroOP_fnc_campaignShopUI;
  private _state=missionNamespace getVariable ["NeroOP_campState",[]];private _supply=0;
  if (count _state>0) then {private _graph=[_state#0,getArray(_cfg >> "links"),getNumber(_army >> "base"),_side] call NeroOP_fnc_campaignGraph;{_supply=_supply+((_state#1)#_x);} forEach (_graph#0);};
  private _localStock=-1;private _localName="нет связанного склада рядом";private _warehouse=-1;
@@ -54,7 +58,28 @@ if (_mode=="DETAIL") exitWith {
  private _roster=({alive _x && {!isPlayer _x}} count units group player)+(group player getVariable ["NeroOP_pendingRecruits",0]);private _loans=0;private _key=group player getVariable ["NeroOP_groupKey",-1];private _fleet=missionNamespace getVariable ["NeroOP_campEquipmentState",[[]]];{if ((_x#1)==_side && {(_x#7)==_key} && {_x#5} && {!(_x param [8,false])} && {getNumber(configFile >> "CfgVehicles" >> (_x#2) >> "isUav")!=1}) then {_loans=_loans+(_x#4);};} forEach (_fleet#0);
  private _reserve=missionNamespace getVariable ["NeroOP_campRecruitState",[[0,0],[0,0]]];private _left=((_reserve#1)#_side)-((_reserve#0)#_side);
  if (_category=="INFANTRY") then {_canBuy=_canBuy && {leader group player==player} && {group player getVariable ["NeroOP_campGroup",false]} && {_roster+_loans<12} && {_left>0} && {!(player getVariable ["ACE_isUnconscious",false])};};
- (_display displayCtrl 88155) ctrlEnable _canBuy;
+ (_display displayCtrl 88155) ctrlEnable (_canBuy && {uiNamespace getVariable ["NeroOP_cartPending",-1]<0});
  (_display displayCtrl 88154) ctrlSetStructuredText parseText (if (_category=="TRAVEL") then {"Сброс с высоты 4500 м над своим сектором, вне контакта. Игрок открывает парашют вручную через действие. Бойцы AI открывают автоматически."} else {if (_category=="INFANTRY") then {format ["Склад: %1 · запас %2<br/>Бойцов AI: %3/12 · отдельно в экипажах: %4 · резерв пополнений стороны: %5<br/>Выбранный боец присоединится к вашему отряду. Нужны командование отрядом и безопасный связанный склад.",_localName,floor (_localStock max 0),_roster+_loans,_loans,_left max 0]} else {format ["Склад: %1 · запас %2 · сеть стороны %3<br/>Оружие и экипировка — в ящике рядом. UAV требует терминал.<br/>Техника ограничена активным парком и запасом заказов. При заказе с экипажем его стоимость добавляется к цене машины; группа отдельная.",_localName,floor (_localStock max 0),floor _supply]}});
 };
-if (_mode=="BUY" && {count _entry>0}) then {[player,_entry#1,_entry#2] remoteExecCall ["NeroOP_fnc_campaignEquipmentAction",2];closeDialog 0;};
+if (_mode=="CART") exitWith {
+ private _cart=uiNamespace getVariable ["NeroOP_shopCart",[]];private _pending=uiNamespace getVariable ["NeroOP_cartPending",-1];private _result=player getVariable ["NeroOP_cartResult",[[],0,0,false,-2]];
+ if (_pending>=0 && {(_result param [4,-2])==_pending}) then {
+  (_display displayCtrl 88160) ctrlSetText format ["Выполнено %1 из %2 · %3",_result#1,_result#2,if (count (_result#0)>0) then {((_result#0)#(count (_result#0)-1))#1} else {"Оформление заказа…"}];
+  if (_result#3) then {private _sent=uiNamespace getVariable ["NeroOP_cartSent",[]];private _settled=[_sent,_result#0] call NeroOP_fnc_campaignCartResult;_cart=_settled#0;(_display displayCtrl 88160) ctrlSetText format ["Куплено: %1 · осталось в заказе: %2. %3",_settled#1,_settled#2,if (count (_result#0)>0) then {((_result#0)#(count (_result#0)-1))#1} else {"Заказ прерван."}];uiNamespace setVariable ["NeroOP_shopCart",_cart];uiNamespace setVariable ["NeroOP_cartPending",-1];_pending=-1;};
+ };
+ private _queue=_display displayCtrl 88156;private _old=lbCurSel _queue;lbClear _queue;private _cost=0;{_queue lbAdd (_x#0);_cost=_cost+(_x#3);} forEach _cart;_queue lbSetCurSel ((_old max 0) min (count _cart-1));
+ (_display displayCtrl 88157) ctrlSetText format ["Заказать (%1) · от %2",count _cart,_cost];(_display displayCtrl 88157) ctrlEnable (count _cart>0 && {_pending<0} && {!(player getVariable ["NeroOP_cartBusy",false])});
+ (_display displayCtrl 88158) ctrlEnable (_pending<0);(_display displayCtrl 88155) ctrlEnable (_pending<0 && {count _entry>0});
+};
+if (_mode=="REMOVE") exitWith {private _cart=uiNamespace getVariable ["NeroOP_shopCart",[]];private _i=lbCurSel (_display displayCtrl 88156);if (_i>=0 && {uiNamespace getVariable ["NeroOP_cartPending",-1]<0}) then {_cart deleteAt _i;uiNamespace setVariable ["NeroOP_shopCart",_cart];};["CART"] call NeroOP_fnc_campaignShopUI;};
+if (_mode=="ORDER") exitWith {
+ private _cart=uiNamespace getVariable ["NeroOP_shopCart",[]];if (count _cart==0 || {uiNamespace getVariable ["NeroOP_cartPending",-1]>=0} || {player getVariable ["NeroOP_cartBusy",false]}) exitWith {};
+ private _request=floor random 1000000000;uiNamespace setVariable ["NeroOP_cartPending",_request];uiNamespace setVariable ["NeroOP_cartSent",+_cart];
+ (player) setVariable ["NeroOP_notice",""];(_display displayCtrl 88160) ctrlSetText "Заказ отправлен. Ожидание проверки склада…";
+ [player,_cart apply {[_x#1,_x#2]},_request] remoteExecCall ["NeroOP_fnc_campaignOrderCart",2];["CART"] call NeroOP_fnc_campaignShopUI;
+};
+if (_mode=="BUY" && {count _entry>0}) then {
+ if ((_entry#1) in ["TRAVEL","FLY","REARM"]) then {[player,_entry#1,_entry#2] remoteExecCall ["NeroOP_fnc_campaignEquipmentAction",2];(_display displayCtrl 88160) ctrlSetText "Запрос отправлен.";} else {
+  if (uiNamespace getVariable ["NeroOP_cartPending",-1]<0) then {private _cart=uiNamespace getVariable ["NeroOP_shopCart",[]];_cart pushBack (+_entry);uiNamespace setVariable ["NeroOP_shopCart",_cart];(_display displayCtrl 88160) ctrlSetText "Позиция добавлена. Выберите другие товары и нажмите «Заказать».";};
+ };["CART"] call NeroOP_fnc_campaignShopUI;
+};

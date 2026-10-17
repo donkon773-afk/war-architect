@@ -1,5 +1,9 @@
 # War Architect
 
+**v0.2.0 prerelease:** [Изменения, исправления и проверки / Changes, fixes and validation](docs/releases/v0.2.0.md).
+
+BECTI: перед первым запуском / before first use: `npm run prepare:becti`.
+
 [Русский](#russian) · [English](#english) · [Моды / Mod compatibility](docs/TESTED_MODS.md)
 
 <a id="russian"></a>

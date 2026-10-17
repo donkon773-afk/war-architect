@@ -17,3 +17,6 @@ tools/vendor/
 __pycache__/
 .env
 .env.*
+
+# Fetched third-party BECTI checkout; pinned by tools/fetch-becti.js
+research/becti-latest/

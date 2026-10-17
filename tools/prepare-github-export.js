@@ -2,7 +2,7 @@
 // Create a separate publication tree. Never edits local credentials or live data.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
-const indexes=new Set(['mod-assets.json','worlds.json','campaign-inventory.json','asset-names.json','faction-preset-config.json']);
+const indexes=new Set(['mod-assets.json','worlds.json','campaign-inventory.json','asset-names.json','faction-preset-config.json','curator-functions.json']);
 function allowed(rel){
  const parts=rel.split('/');
  if(parts.some(p=>['.git','node_modules','__pycache__'].includes(p)))return false;

@@ -7,6 +7,7 @@ private _order={params ["_p"];private _pad=createVehicle ["Land_HelipadEmpty_F",
 private _land={if (serverTime-(_v getVariable ["NeroOP_liftLandAt",-100])>=20) then {_v land "LAND";_v setVariable ["NeroOP_liftLandAt",serverTime];diag_log format ["[NeroOP LIFT] LAND REQUEST class=%1 state=%2 AGL=%3 result=%4",typeOf _v,_v getVariable ["NeroOP_liftState",""],(getPosATL _v)#2,landResult _v];};};
 private _expired=_state!="IDLE" && {_target!=(_v getVariable ["NeroOP_liftTarget",-1]) || {serverTime>(_v getVariable ["NeroOP_liftDeadline",0])}};
 if (_state!="RETURN" && {_forceReturn || {fuel _v<.25} || {damage _v>.65} || {_expired}}) then {
+ if (_state in ["PICKUP","BOARD"]) then {_parent setVariable ["NeroOP_liftRetryAt",serverTime+300];};
  _state="RETURN";if ((_v getVariable ["NeroOP_liftParty",[]]) findIf {alive _x && {vehicle _x==_v}}<0) then {call _release;[_parent,true] call NeroOP_fnc_campaignOrder;};[NeroOP_campPositions#(NeroOP_campRoots#_side)] call _order;_v setVariable ["NeroOP_liftState",_state];_v setVariable ["NeroOP_liftDeadline",serverTime+300];
  diag_log format ["[NeroOP LIFT] ABORT class=%1 target=%2",typeOf _v,_target];
 };
@@ -14,7 +15,7 @@ switch (_state) do {
  case "IDLE": {
   private _party=units _parent select {alive _x && {!isPlayer _x} && {vehicle _x==_x} && {!(_x getVariable ["ACE_isUnconscious",false])}};
   private _seats=count (fullCrew [_v,"cargo",true] select {isNull (_x#0)});
-  if (_target>=0 && {count _party>0} && {count _party<=_seats} && {leader _parent distance2D (NeroOP_campPositions#_target)>3500} && {!(_parent getVariable ["NeroOP_campGuard",false])} && {!(_parent getVariable ["NeroOP_rideBusy",false])} && {!(_parent getVariable ["NeroOP_liftBusy",false])}) then {
+  if (_target>=0 && {serverTime>=(_parent getVariable ["NeroOP_liftRetryAt",0])} && {count _party>0} && {count _party<=_seats} && {leader _parent distance2D (NeroOP_campPositions#_target)>3500} && {!(_parent getVariable ["NeroOP_campGuard",false])} && {!(_parent getVariable ["NeroOP_rideBusy",false])} && {!(_parent getVariable ["NeroOP_liftBusy",false])}) then {
    private _origin=getPosATL leader _parent;private _pickup=[_origin,10,70,12,0,.2,0,[],[_origin,_origin]] call BIS_fnc_findSafePos;
    if (count _pickup>=2 && {_pickup distance2D _origin<150} && {!surfaceIsWater _pickup} && {(NeroOP_campIntel#_side) findIf {!(_x#2) && {(_x#1) distance2D _pickup<700}}<0}) then {
     _v setVariable ["NeroOP_liftParty",_party];_v setVariable ["NeroOP_liftPickup",_pickup];_v setVariable ["NeroOP_liftTarget",_target];_v setVariable ["NeroOP_liftDeadline",serverTime+300];_v setVariable ["NeroOP_liftState","PICKUP"];_parent setVariable ["NeroOP_liftBusy",true];_parent setVariable ["NeroOP_liftVehicle",_v];{deleteWaypoint _x;} forEach +(waypoints _parent);private _hold=_parent addWaypoint [_pickup,15];_hold setWaypointType "HOLD";{unassignVehicle _x;_x assignAsCargo _v;_x doMove _pickup;} forEach _party;[_pickup] call _order;
@@ -24,11 +25,16 @@ switch (_state) do {
  };
  case "PICKUP": {
   if (_v distance2D (_v getVariable ["NeroOP_liftPickup",[0,0]])<180) then {call _land;};
-  if ((isTouchingGround _v || {(getPosATL _v)#2<3}) && {abs speed _v<5}) then {{if (alive _x && {local _x}) then {unassignVehicle _x;_x assignAsCargo _v;[_x] orderGetIn true;};} forEach (_v getVariable ["NeroOP_liftParty",[]]);diag_log format ["[NeroOP LIFT] LANDED class=%1 result=%2",typeOf _v,landResult _v];_v setVariable ["NeroOP_liftState","BOARD"];_v setVariable ["NeroOP_liftDeadline",serverTime+120];};
+  if ((isTouchingGround _v || {(getPosATL _v)#2<3}) && {abs speed _v<5}) then {{deleteWaypoint _x;} forEach +(waypoints _parent);{if (alive _x && {local _x}) then {unassignVehicle _x;_x assignAsCargo _v;[_x] orderGetIn true;};} forEach (_v getVariable ["NeroOP_liftParty",[]]);diag_log format ["[NeroOP LIFT] LANDED class=%1 result=%2",typeOf _v,landResult _v];_v setVariable ["NeroOP_liftState","BOARD"];_v setVariable ["NeroOP_liftDeadline",serverTime+120];};
  };
  case "BOARD": {
   call _land;
   private _party=(_v getVariable ["NeroOP_liftParty",[]]) select {alive _x};
+  if (serverTime-(_v getVariable ["NeroOP_boardRetryAt",-100])>=15) then {
+   _v setVariable ["NeroOP_boardRetryAt",serverTime];
+   {if (local _x && {!isPlayer _x} && {vehicle _x==_x} && {!(_x getVariable ["ACE_isUnconscious",false])}) then {_x enableAI "MOVE";_x assignAsCargo _v;[_x] orderGetIn true;};} forEach _party;
+   diag_log format ["[NeroOP LIFT] BOARD PROGRESS class=%1 group=%2 aboard=%3 expected=%4 AGL=%5",typeOf _v,_parent getVariable ["NeroOP_groupKey",-1],{vehicle _x==_v} count _party,count _party,(getPosATL _v)#2];
+  };
   private _gate=[count _party,{vehicle _x==_v} count _party,count fullCrew [_v,"cargo",true],serverTime>(_v getVariable ["NeroOP_liftDeadline",0]),_target!=(_v getVariable ["NeroOP_liftTarget",-1]),alive driver _v] call NeroOP_fnc_campaignBoardingGate;
   if (_gate=="ABORT") then {_v setVariable ["NeroOP_liftDeadline",0];};
   if (_gate=="READY") then {

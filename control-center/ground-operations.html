@@ -160,7 +160,7 @@ input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:2px!i
 <section data-page="map" hidden><div class="grid"><div class="card"><h2>Район штурма</h2><div class="actions map-tools"><label>Поставить на карте <select id="mapTarget"><option value="zone">Цель штурма</option><option value="WEST">Вход синих</option><option value="EAST">Вход красных</option></select></label><button id="focusArea">К цели</button><button id="resetView">Вся карта</button></div><canvas id="map" width="1000" height="1000" aria-label="Карта наземной операции"></canvas><p class="small">Клик — перенести точку. Колесо — масштаб. Перетаскивание — перемещение карты.</p></div><div class="card"><h2>Расположение цели и сторон</h2><label class="field">Перенести бой к населённому пункту<select id="town" class="town-select"></select></label><button id="useTown">Разместить цель и точки входа</button><div id="coordinates" style="margin-top:18px"></div><p class="small">Выбирайте сушу. Точки подкреплений должны быть вне района захвата и минимум в 1,5 км друг от друга. Защитники начинают у цели; последующие отряды приходят со своей точки входа. Безопасные места появления проверяются в Arma.</p></div></div></section>
 <section data-page="saved" hidden><div class="bar"><h2>Воздушные и наземные сценарии</h2><input id="savedSearch" placeholder="Название или карта" aria-label="Поиск сценария"></div><div id="savedList" class="saved"></div></section>
 <footer>В этой версии — пехотный штурм и оборона. Проверка сборки сверяет файлы; фактическое движение, захват, медицинские функции ACE и Zeus проверяются в Arma. Добавленные через Zeus сторонние отряды не пополняют штатный резерв операции и не учитываются в её захвате.</footer>
-<div class="savebar"><div class="actions"><button id="save" class="primary">Сохранить сценарий</button><button id="build">Собрать PBO</button><button id="install">Добавить миссию в Arma</button><button id="launch">Запустить Arma</button><span id="saveState" class="small">Черновик</span></div></div></main><script>const API_SESSION="__SESSION_TOKEN__";const OPERATIONS_FEATURES="__OPERATIONS_FEATURES__";if(OPERATIONS_FEATURES!=="campaign-strategic-v6"&&["18786","18787","18788","18789","18790","18791"].includes(location.port))location.replace("http://127.0.0.1:18792"+location.pathname+location.search);</script><script src="/ground-operations-ui.js"></script><script src="/operation-mods-ui.js"></script><!-- context-help:start -->
+<div class="savebar"><div class="actions"><button id="save" class="primary">Сохранить сценарий</button><button id="build">Собрать PBO</button><button id="install">Добавить миссию в Arma</button><button id="launch">Запустить Arma</button><span id="saveState" class="small">Черновик</span></div></div></main><script>const API_SESSION="__SESSION_TOKEN__";const OPERATIONS_FEATURES="__OPERATIONS_FEATURES__";if(OPERATIONS_FEATURES!=="campaign-shop-becti-v7"&&["18786","18787","18788","18789","18790","18791"].includes(location.port))location.replace("http://127.0.0.1:18792"+location.pathname+location.search);</script><script src="/ground-operations-ui.js"></script><script src="/operation-mods-ui.js"></script><!-- context-help:start -->
 <script>
 /* Click opens an inline explanation; hover/focus also update the status strip. */
 const NeroHelp=(()=>{
@@ -221,7 +221,7 @@ const NeroHelp=(()=>{
  'use strict';
  // Shared display/build policy; requirements are mandatory and cannot be disabled by extraMods.
  function requirements(design,mods){
-  const campaign=design.type==='frontlineCampaign',realistic=campaign&&design.devMode?.realisticMissiles;
+  const campaign=['frontlineCampaign','becti'].includes(design.type),realistic=campaign&&design.devMode?.realisticMissiles;
   const rules=[
    {key:'ace',label:'ACE',name:'@ace',patch:'ace_main',files:['ace_main.pbo',...(campaign?['ace_missileguidance.pbo','ace_missile_sam.pbo']:[])],reason:campaign?'Механики ACE, наведение ракет и Patriot':'Механики ACE'},
    {key:'cba',label:'CBA A3',name:'@CBA_A3',patch:'cba_main',files:['cba_main.pbo'],reason:'Зависимость ACE и обработчиков модов'}
@@ -236,6 +236,10 @@ const NeroHelp=(()=>{
    {key:'fmc',label:'FMC PACK',name:'@FMC PACK',files:['OFP_ATACMS.pbo'],reason:'ATACMS M57 и пусковая M270'},
    {key:'3cb',label:'3CB Factions',name:'@3CB Factions',files:['uk3cb_factions_vehicles_scud.pbo'],reason:'Scud и его пусковые'}
   );
+  if(design.type==='becti'){
+   rules.push({key:'rhsgref',label:'RHS GREF',name:'@RHSGREF',files:['rhsgref_main.pbo'],reason:'Нейтральные гарнизоны исходной BECTI'});
+   if(!realistic)rules.push({key:'rhsusaf',label:'RHS USAF',name:'@RHSUSAF',files:['rhsusf_main.pbo'],reason:'Штатные вспомогательные системы BECTI'});
+  }
   const rows=rules.map(r=>{const m=mods.find(m=>(m.label||m.name).toLowerCase()===r.name.toLowerCase())||mods.find(m=>r.patch&&(m.patches||[]).some(p=>p.toLowerCase()===r.patch.toLowerCase()));return {...r,id:m?.id||m?.path||null,installed:!!m};});
   if(campaign)rows.push(
    {key:'strategic',label:'NeroAI Strategic',generated:true,reason:'Совместимость спецоружия; собирается автоматически'},
@@ -286,6 +290,7 @@ const NeroHelp=(()=>{
     const url=new URL(link.href,location.href);
     if(window.parent!==window&&url.hostname==='127.0.0.1'&&Number(url.port)>=18775&&Number(url.port)<=18785)link.remove();
   }
+  const becti=document.createElement('a');becti.href='/becti'+(window.parent!==window?'?embedded=1':'');becti.textContent='BECTI';becti.className='button';(document.querySelector('nav')||document.querySelector('header')).append(becti);
   const build=document.getElementById('build');if(build)build.hidden=true;
   const install=document.getElementById('install');if(install)install.textContent='Сохранить и добавить в Arma';
   const launch=document.getElementById('launch');if(launch)launch.textContent='Сохранить и запустить Arma';

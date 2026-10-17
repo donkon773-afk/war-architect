@@ -423,7 +423,7 @@ const NeroDevCatalog=[{"id":"transportDrop","title":"Десант с транс�
   const panel=document.createElement('section');panel.id='missionsPanel';panel.hidden=true;
   panel.innerHTML='<section class="mission-brief"><div><div class="eyebrow">NERO / ЦЕНТР ОПЕРАЦИЙ</div><h2>Выбор боевой задачи</h2><p>Сохранённые сценарии, карты и пресеты запуска — в одной библиотеке.</p></div><span class="brief-code">OPORD / 01</span></section><div id="missionModes" class="mission-modes"></div><section class="card mission-library"><div class="mission-library-head"><div><div class="eyebrow">Архив операций</div><h2>Все сохранённые сценарии</h2></div><button id="refreshMissions" type="button">Обновить список</button></div><div class="mission-search"><label>Поиск по названию или карте<input id="missionSearch" type="search" placeholder="Аргентина, Farabad, Australia…"></label><label>Режим<select id="missionFilter"></select></label></div><p id="missionCount" role="status">Загружаем библиотеку…</p><div id="missionList" class="mission-list"></div><p id="missionLibraryStatus" role="status"></p></section>';
   document.querySelector('main').append(panel);
-  const modes=[['all','Все миссии','Общая библиотека'],['warlords','Warlords','Захват связанных секторов'],['airBattle','Воздушное сражение','Авиация и воздушные цели'],['assaultDefense','Штурм и оборона','Наземные боевые операции'],['frontlineCampaign','Фронт и снабжение','Кампания, склады и резервы'],['antistasi','Antistasi','Пресеты запуска кампании']];
+  const modes=[['all','Все миссии','Общая библиотека'],['warlords','Warlords','Захват связанных секторов'],['airBattle','Воздушное сражение','Авиация и воздушные цели'],['assaultDefense','Штурм и оборона','Наземные боевые операции'],['becti','BECTI','Фабрики, экономика и управление армией'],['frontlineCampaign','Фронт и снабжение','Кампания, склады и резервы'],['antistasi','Antistasi','Пресеты запуска кампании']];
   for(const [id,title,description] of modes){const option=document.createElement('option');option.value=id;option.textContent=title;by('missionFilter').append(option);if(id==='all')continue;const button=document.createElement('button');button.type='button';button.dataset.missionMode=id;const small=document.createElement('small'),strong=document.createElement('strong'),note=document.createElement('span');small.textContent=String(modes.findIndex(m=>m[0]===id)).padStart(2,'0')+' / РЕЖИМ';strong.textContent=title;note.textContent=description;button.append(small,strong,note);button.onclick=()=>{by('missionFilter').value=id;draw();};by('missionModes').append(button);}
   let items=[],loading=false;
   function draw(){
@@ -478,7 +478,7 @@ const NeroDevCatalog=[{"id":"transportDrop","title":"Десант с транс�
   let operationsLoading=false;
   async function openOperations(routeOverride,id){
     if(operationsLoading)return;operationsLoading=true;const note=by('operationsPanel').querySelector('p');note.textContent='Открываем конструктор операций…';
-    try{const result=await api('/api/operations-panel',{});const requested=routeOverride||new URLSearchParams(location.search).get('operation');const route=['ground','campaign'].includes(requested)?requested:'operations';by('operationsFrame').src=result.origin+'/'+route+'?embedded=1'+(id?'&id='+encodeURIComponent(id):'');note.textContent='Воздушные операции, штурм и кампания — внутри одного центра.';return true;}
+    try{const result=await api('/api/operations-panel',{});const requested=routeOverride||new URLSearchParams(location.search).get('operation');const route=['ground','campaign','becti'].includes(requested)?requested:'operations';by('operationsFrame').src=result.origin+'/'+route+'?embedded=1'+(id?'&id='+encodeURIComponent(id):'');note.textContent='Воздушные операции, штурм и кампания — внутри одного центра.';return true;}
     catch(e){note.textContent=e.message+' Нажмите вкладку «Операции», чтобы повторить.';return false;}
     finally{operationsLoading=false;}
   }
@@ -494,7 +494,7 @@ const NeroDevCatalog=[{"id":"transportDrop","title":"Десант с транс�
     if(busy)return;
     if(p.kind==='operation'){
       if(!await canReplaceOperation())return;
-      if(!await openOperations({airBattle:'operations',assaultDefense:'ground',frontlineCampaign:'campaign'}[p.mode],p.id))throw Error('Не удалось открыть редактор операции. Повторите попытку.');displayTab('operations');return;
+      if(!await openOperations({airBattle:'operations',assaultDefense:'ground',frontlineCampaign:'campaign',becti:'becti'}[p.mode],p.id))throw Error('Не удалось открыть редактор операции. Повторите попытку.');displayTab('operations');return;
     }
     if((dirty||designerDirty)&&!confirm('Открыть сценарий «'+p.title+'» вместо несохранённых настроек и карты?'))return;
     busy=true;document.querySelector('main').inert=true;

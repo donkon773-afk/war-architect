@@ -2,7 +2,7 @@
  'use strict';
  // Shared display/build policy; requirements are mandatory and cannot be disabled by extraMods.
  function requirements(design,mods){
-  const campaign=design.type==='frontlineCampaign',realistic=campaign&&design.devMode?.realisticMissiles;
+  const campaign=['frontlineCampaign','becti'].includes(design.type),realistic=campaign&&design.devMode?.realisticMissiles;
   const rules=[
    {key:'ace',label:'ACE',name:'@ace',patch:'ace_main',files:['ace_main.pbo',...(campaign?['ace_missileguidance.pbo','ace_missile_sam.pbo']:[])],reason:campaign?'Механики ACE, наведение ракет и Patriot':'Механики ACE'},
    {key:'cba',label:'CBA A3',name:'@CBA_A3',patch:'cba_main',files:['cba_main.pbo'],reason:'Зависимость ACE и обработчиков модов'}
@@ -17,6 +17,10 @@
    {key:'fmc',label:'FMC PACK',name:'@FMC PACK',files:['OFP_ATACMS.pbo'],reason:'ATACMS M57 и пусковая M270'},
    {key:'3cb',label:'3CB Factions',name:'@3CB Factions',files:['uk3cb_factions_vehicles_scud.pbo'],reason:'Scud и его пусковые'}
   );
+  if(design.type==='becti'){
+   rules.push({key:'rhsgref',label:'RHS GREF',name:'@RHSGREF',files:['rhsgref_main.pbo'],reason:'Нейтральные гарнизоны исходной BECTI'});
+   if(!realistic)rules.push({key:'rhsusaf',label:'RHS USAF',name:'@RHSUSAF',files:['rhsusf_main.pbo'],reason:'Штатные вспомогательные системы BECTI'});
+  }
   const rows=rules.map(r=>{const m=mods.find(m=>(m.label||m.name).toLowerCase()===r.name.toLowerCase())||mods.find(m=>r.patch&&(m.patches||[]).some(p=>p.toLowerCase()===r.patch.toLowerCase()));return {...r,id:m?.id||m?.path||null,installed:!!m};});
   if(campaign)rows.push(
    {key:'strategic',label:'NeroAI Strategic',generated:true,reason:'Совместимость спецоружия; собирается автоматически'},

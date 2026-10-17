@@ -4,12 +4,17 @@ class NeroOPShopList:NeroOPShopText {type=5;style=16;sizeEx=".022*safeZoneH";col
 class NeroOPShopCombo:NeroOPShopList {type=4;style=0;wholeHeight=".35*safeZoneH";arrowEmpty="\A3\ui_f\data\GUI\RscCommon\RscCombo\arrow_combo_ca.paa";arrowFull="\A3\ui_f\data\GUI\RscCommon\RscCombo\arrow_combo_active_ca.paa";soundExpand[]={"",0,1};soundCollapse[]={"",0,1};class ComboScrollBar:ListScrollBar {};};
 class NeroOPShopInfo:NeroOPShopText {type=13;style=0;size=".022*safeZoneH";class Attributes {font="RobotoCondensed";color="#ffffff";align="left";shadow=0;};};
 class NeroOPCampaignShop {idd=88150;movingEnable=0;enableSimulation=1;onLoad="uiNamespace setVariable ['NeroOP_shopDisplay',_this#0];";onUnload="uiNamespace setVariable ['NeroOP_shopDisplay',displayNull];";
- class controlsBackground {class Background:NeroOPShopText {x="safeZoneX+.25*safeZoneW";y="safeZoneY+.13*safeZoneH";w=".5*safeZoneW";h=".72*safeZoneH";colorBackground[]={.025,.04,.065,.97};};};
+ class controlsBackground {class Background:NeroOPShopText {x="safeZoneX+.12*safeZoneW";y="safeZoneY+.13*safeZoneH";w=".76*safeZoneW";h=".76*safeZoneH";colorBackground[]={.025,.04,.065,.97};};};
  class controls {
- class Title:NeroOPShopText {idc=88151;x="safeZoneX+.27*safeZoneW";y="safeZoneY+.15*safeZoneH";w=".46*safeZoneW";h=".05*safeZoneH";text="Магазин снабжения";sizeEx=".03*safeZoneH";};
- class Category:NeroOPShopCombo {idc=88152;x="safeZoneX+.27*safeZoneW";y="safeZoneY+.22*safeZoneH";w=".46*safeZoneW";h=".04*safeZoneH";onLBSelChanged="['REFRESH'] call NeroOP_fnc_campaignShopUI;";};
- class Items:NeroOPShopList {idc=88153;x="safeZoneX+.27*safeZoneW";y="safeZoneY+.28*safeZoneH";w=".46*safeZoneW";h=".35*safeZoneH";onLBSelChanged="['DETAIL'] call NeroOP_fnc_campaignShopUI;";};
- class Info:NeroOPShopInfo {idc=88154;x="safeZoneX+.27*safeZoneW";y="safeZoneY+.65*safeZoneH";w=".46*safeZoneW";h=".1*safeZoneH";};
- class Buy:NeroOPShopButton {idc=88155;x="safeZoneX+.27*safeZoneW";y="safeZoneY+.78*safeZoneH";w=".3*safeZoneW";h=".045*safeZoneH";text="Купить за снабжение";onButtonClick="['BUY'] call NeroOP_fnc_campaignShopUI;";};
- class Close:NeroOPShopButton {x="safeZoneX+.59*safeZoneW";y="safeZoneY+.78*safeZoneH";w=".14*safeZoneW";h=".045*safeZoneH";text="Закрыть";onButtonClick="closeDialog 0;";};
+ class Title:NeroOPShopText {idc=88151;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.15*safeZoneH";w=".42*safeZoneW";h=".05*safeZoneH";text="Магазин снабжения";sizeEx=".03*safeZoneH";};
+ class Category:NeroOPShopCombo {idc=88152;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.22*safeZoneH";w=".42*safeZoneW";h=".04*safeZoneH";onLBSelChanged="['REFRESH'] call NeroOP_fnc_campaignShopUI;";};
+ class Items:NeroOPShopList {idc=88153;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.28*safeZoneH";w=".42*safeZoneW";h=".35*safeZoneH";onLBSelChanged="['DETAIL'] call NeroOP_fnc_campaignShopUI;";};
+ class Info:NeroOPShopInfo {idc=88154;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.65*safeZoneH";w=".42*safeZoneW";h=".1*safeZoneH";};
+ class Buy:NeroOPShopButton {idc=88155;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.78*safeZoneH";w=".24*safeZoneW";h=".045*safeZoneH";text="Добавить в заказ";onButtonClick="['BUY'] call NeroOP_fnc_campaignShopUI;";};
+ class QueueTitle:NeroOPShopText {x="safeZoneX+.59*safeZoneW";y="safeZoneY+.22*safeZoneH";w=".27*safeZoneW";h=".04*safeZoneH";text="Ваш заказ · цена экипажа добавляется";};
+ class Queue:NeroOPShopList {idc=88156;x="safeZoneX+.59*safeZoneW";y="safeZoneY+.28*safeZoneH";w=".27*safeZoneW";h=".35*safeZoneH";};
+ class Order:NeroOPShopButton {idc=88157;x="safeZoneX+.59*safeZoneW";y="safeZoneY+.65*safeZoneH";w=".27*safeZoneW";h=".045*safeZoneH";text="Заказать";onButtonClick="['ORDER'] call NeroOP_fnc_campaignShopUI;";};
+ class Remove:NeroOPShopButton {idc=88158;x="safeZoneX+.59*safeZoneW";y="safeZoneY+.71*safeZoneH";w=".27*safeZoneW";h=".04*safeZoneH";text="Убрать выбранную позицию";onButtonClick="['REMOVE'] call NeroOP_fnc_campaignShopUI;";};
+ class Status:NeroOPShopText {idc=88160;style=16;x="safeZoneX+.14*safeZoneW";y="safeZoneY+.835*safeZoneH";w=".72*safeZoneW";h=".045*safeZoneH";sizeEx=".017*safeZoneH";text="Добавьте покупки в заказ. Результат появится здесь.";};
+ class Close:NeroOPShopButton {x="safeZoneX+.74*safeZoneW";y="safeZoneY+.78*safeZoneH";w=".12*safeZoneW";h=".045*safeZoneH";text="Закрыть";onButtonClick="closeDialog 0;";};
  };};

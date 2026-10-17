@@ -103,7 +103,7 @@ const server=http.createServer(async(req,res)=>{
     if(url.pathname==="/api/console"){await run(shell,["-NoProfile","-ExecutionPolicy","Bypass","-File",path.join(__dirname,"open-console.ps1")],{windowsHide:true,timeout:10000});return send(res,200,{opened:true});}
     if(url.pathname==='/api/operations-panel'){
       await run(shell,['-NoProfile','-ExecutionPolicy','Bypass','-File',path.join(__dirname,'operations-start.ps1'),'-NoBrowser'],{windowsHide:true,timeout:20000});
-      for(const port of [18792,18793,18794,18795,18796,18797,18798,18799,18786])try{const origin='http://127.0.0.1:'+port,health=await(await fetch(origin+'/health',{signal:AbortSignal.timeout(1000)})).json();if(health.application==='NeroAI Operations'&&health.features==='campaign-strategic-v6'&&health.workspaceEmbed===true)return send(res,200,{origin});}catch{}
+      for(const port of [18792,18793,18794,18795,18796,18797,18798,18799,18786])try{const origin='http://127.0.0.1:'+port,health=await(await fetch(origin+'/health',{signal:AbortSignal.timeout(1000)})).json();if(health.application==='NeroAI Operations'&&health.features==='campaign-shop-becti-v7'&&health.workspaceEmbed===true)return send(res,200,{origin});}catch{}
       throw Error('Конструктор операций не ответил. Повторите открытие вкладки.');
     }
     if(url.pathname==="/api/save")return send(res,200,core.saveSelected(data.selected,data.name,{revision:data.revision}));

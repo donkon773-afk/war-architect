@@ -1,11 +1,11 @@
-param([switch]$NoBrowser,[ValidateSet('operations','ground','campaign')][string]$Page='operations')
+param([switch]$NoBrowser,[ValidateSet('operations','ground','campaign','becti')][string]$Page='operations')
 $ErrorActionPreference='Stop'
 $ready=$false
 $operationsPort=18792
 $occupiedOperationsPorts=@(Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty LocalPort)
 foreach($candidatePort in @(18792,18793,18794,18795,18796,18797,18798,18799,18786)){
  if($candidatePort -notin $occupiedOperationsPorts){continue}
- try {$health=Invoke-RestMethod -Uri ('http://127.0.0.1:'+$candidatePort+'/health') -TimeoutSec 1;if($health.application -eq 'NeroAI Operations' -and $health.features -eq 'campaign-strategic-v6' -and $health.workspaceEmbed -eq $true){$operationsPort=$candidatePort;$ready=$true;break}} catch {}
+ try {$health=Invoke-RestMethod -Uri ('http://127.0.0.1:'+$candidatePort+'/health') -TimeoutSec 1;if($health.application -eq 'NeroAI Operations' -and $health.features -eq 'campaign-shop-becti-v7' -and $health.workspaceEmbed -eq $true){$operationsPort=$candidatePort;$ready=$true;break}} catch {}
 }
 if (-not $ready) {
     $availablePort=@(18792,18793,18794,18795,18796,18797,18798,18799,18786) | Where-Object {$_ -notin $occupiedOperationsPorts} | Select-Object -First 1

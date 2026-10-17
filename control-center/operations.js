@@ -7,6 +7,7 @@ function int(n,min,max,name){if(!Number.isInteger(n)||n<min||n>max)throw Error(`
 function finite(n,min,max,name){if(typeof n!=='number'||!Number.isFinite(n)||n<min||n>max)throw Error(`${name}: от ${min} до ${max}.`);return n;}
 function point(p,w,name){if(!Array.isArray(p)||p.length!==2)throw Error(`${name}: нужны X и Y.`);return p.map(n=>finite(n,3500,w.size-3500,name));}
 function validate(value){
+ if(value?.type==='becti')return require('./becti').validate(value);
  if(value?.type==='frontlineCampaign')return require('./campaign-operations').validate(value);
  if(value?.type==='assaultDefense')return require('./ground-operations').validate(value);
  if(!value||typeof value!=='object'||Array.isArray(value)||value.version!==1||value.type!=='airBattle')throw Error('Неизвестный тип операции.');
@@ -41,9 +42,9 @@ function modPaths(v){v=validate(v);const x=editor.inventory(),wanted=new Set([wo
  for(const r of require('./operation-required-mods').resolve(v,x))if(!r.generated)wanted.add(r.id);
  const ace=x.mods.find(m=>m.name==='@ace'&&m.patches.includes('ace_main'))||x.mods.find(m=>m.patches.includes('ace_main')),cba=x.mods.find(m=>m.patches.includes('cba_main'));
  if(!ace||!cba)throw Error('Для операций нужны установленные ACE и CBA A3.');wanted.add(ace.path);wanted.add(cba.path);
- if(v.type==='frontlineCampaign'){for(const name of ['@FP-5 -Flamingo-','@RHSAFRF']){const m=x.mods.find(m=>m.name===name);if(!m)throw Error('Не установлен обязательный мод спецоружия: '+name);wanted.add(m.path);}wanted.add(require('node:path').resolve(__dirname,'../dist/strategic-compat/@NeroAI_Strategic'));}
- for(const side of v.sides)for(const id of [...side.classes,...(side.truckClass?[side.truckClass]:[]),...(side.shop||[]).map(r=>r.class)])wanted.add((x.assets.find(a=>a.class===id&&a.side===numberSide[side.side])||(v.type==='frontlineCampaign'?[...require('./campaign-equipment').assets(),...require('./campaign-equipment').infantryCatalog()].find(a=>a.class===id):null))?.modPath);
- if(v.type==='frontlineCampaign'){const gear=require('./campaign-equipment').gearCatalog();for(const side of v.sides)for(const row of side.gear||[])wanted.add(gear.find(g=>g.class===row.class&&g.kind===row.kind)?.modPath);}
+ if(['frontlineCampaign','becti'].includes(v.type)){for(const name of ['@FP-5 -Flamingo-','@RHSAFRF']){const m=x.mods.find(m=>m.name===name);if(!m)throw Error('Не установлен обязательный мод спецоружия: '+name);wanted.add(m.path);}wanted.add(require('node:path').resolve(__dirname,'../dist/strategic-compat/@NeroAI_Strategic'));}
+ for(const side of v.sides)for(const id of [...side.classes,...(side.truckClass?[side.truckClass]:[]),...(side.shop||[]).map(r=>r.class)])wanted.add((x.assets.find(a=>a.class===id&&a.side===numberSide[side.side])||(['frontlineCampaign','becti'].includes(v.type)?[...require('./campaign-equipment').assets(),...require('./campaign-equipment').infantryCatalog()].find(a=>a.class===id):null))?.modPath);
+ if(['frontlineCampaign','becti'].includes(v.type)){const gear=require('./campaign-equipment').gearCatalog();for(const side of v.sides)for(const row of side.gear||[])wanted.add(gear.find(g=>g.class===row.class&&g.kind===row.kind)?.modPath);}
  // The ACE inventory includes optional compatibility packages. Its installed
  // ace_main requires cba_main; optional integrations must not pull every mod.
  let changed=true;while(changed){changed=false;for(const m of x.mods.filter(m=>wanted.has(m.path)&&m.path!==ace.path))for(const name of m.requires||[]){const dep=x.mods.find(m=>m.patches.some(p=>p.toLowerCase()===name.toLowerCase()));if(dep&&!wanted.has(dep.path)){wanted.add(dep.path);changed=true;}}}

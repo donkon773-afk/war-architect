@@ -13,13 +13,14 @@ private _classActual=getText(configFile >> "CfgNeroAirDefense" >> _class >> "spa
 private _v=createVehicle [_classActual,_spawn,[],0,"NONE"];if (isNull _v) exitWith {objNull};
 private _seats=fullCrew [_v,"",true] select {!(_x#4) && {(_x#1) in ["driver","gunner","commander","turret"]}};
 private _meta=if (_loading) then {_restore param [11,[true,""]]} else {[!_empty,if (_ai) then {""} else {getPlayerUID _buyer}]};
-private _withCrew=_meta#0;private _classes=if (_loading) then {_restore#7} else {private _pool=getArray(_cfg >> (["WEST","EAST"]#_side) >> "classes");_seats apply {_pool#(_forEachIndex mod count _pool)}};
+private _withCrew=_meta#0;private _classes=if (_loading) then {_restore#7} else {private _pool=getArray(_cfg >> (["WEST","EAST"]#_side) >> "classes");private _result=[];{_result pushBack (_pool#(_forEachIndex mod count _pool));} forEach _seats;_result};
 if (!_withCrew) then {_classes=[];};
+if (_classes findIf {!(_x isEqualType "") || {!isClass(configFile >> "CfgVehicles" >> _x)}}>=0) exitWith {deleteVehicle _v;diag_log format ["[NeroOP CREW] INVALID CLASS class=%1",_class];objNull};
 private _crewPrice=if (_loading) then {0} else {count _classes*((ceil(getNumber(_cfg >> "reinforcementCost")/getNumber(_cfg >> (["WEST","EAST"]#_side) >> "groupSize"))) max 5)};
 _price=_price+_crewPrice;private _fleet={(_x#1)==_side && {(_x#3)==0} && {alive (_x#4)}} count NeroOP_campEquipment;
 private _reserve=if (_ai) then {2*getNumber(_cfg >> "reinforcementCost")+getNumber(_cfg >> "captureCost")} else {0};
 private _already=_ai && {NeroOP_campEquipment findIf {(_x#10)==_key && {(_x#3)==0} && {alive (_x#4)}}>=0};
-private _ready=serverTime-(_parent getVariable ["NeroOP_groundBuyAt",-10000])>=getNumber(_rules >> "cooldown") && {serverTime-(NeroOP_campBuyAt#_side)>=5};
+private _ready=!_ai || {serverTime-(_parent getVariable ["NeroOP_groundBuyAt",-10000])>=getNumber(_rules >> "cooldown") && {serverTime-(NeroOP_campBuyAt#_side)>=5}};
 private _field=switch (_category) do {case "AAA":{"aaaLimit"};case "SAM":{"samLimit"};case "RADAR":{"radarLimit"};case "MLRS":{"mlrsLimit"};case "ARTILLERY_SP";case "ARTILLERY_STATIC":{"artilleryLimit"};default {""};};
 private _roleRoom=true;if (_ai && {!_loading} && {_field!=""}) then {_roleRoom=({(_x#1)==_side && {alive (_x#4)} && {private _cat=(_x#4) getVariable ["NeroOP_assetCategory",""];if (_field=="artilleryLimit") then {_cat in ["ARTILLERY_SP","ARTILLERY_STATIC"]} else {_cat==_category}}} count NeroOP_campEquipment)<getNumber(_rules >> _field);};
 private _ok=_roleRoom && {count _classes<=8} && {(!_withCrew) || {(count _classes==count _seats || {_loading && {count _classes<=count _seats}}) && {count _classes>0}}} && {(_loading) || {[_price,NeroOP_campStocks#_source,_reserve,NeroOP_campEquipmentIssued#_side,getNumber(_rules >> "totalPurchases"),_fleet,getNumber(_rules >> "groundLimit"),_already,_ready,false] call NeroOP_fnc_campaignBuyGate}};

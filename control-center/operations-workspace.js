@@ -10,6 +10,7 @@
     const url=new URL(link.href,location.href);
     if(window.parent!==window&&url.hostname==='127.0.0.1'&&Number(url.port)>=18775&&Number(url.port)<=18785)link.remove();
   }
+  const becti=document.createElement('a');becti.href='/becti'+(window.parent!==window?'?embedded=1':'');becti.textContent='BECTI';becti.className='button';(document.querySelector('nav')||document.querySelector('header')).append(becti);
   const build=document.getElementById('build');if(build)build.hidden=true;
   const install=document.getElementById('install');if(install)install.textContent='Сохранить и добавить в Arma';
   const launch=document.getElementById('launch');if(launch)launch.textContent='Сохранить и запустить Arma';
